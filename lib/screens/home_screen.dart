@@ -14,11 +14,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           'Learn Java in Shan',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
-        backgroundColor: kJavaMocha,
-        centerTitle: true,
-        elevation: 4,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),

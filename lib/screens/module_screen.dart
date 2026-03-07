@@ -63,8 +63,6 @@ class ModuleScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Module $moduleId"),
-        backgroundColor: kJavaMocha,
-        foregroundColor: Colors.white,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

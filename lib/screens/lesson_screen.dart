@@ -35,8 +35,6 @@ class LessonScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Lesson ${lesson.id}"),
-        backgroundColor: kJavaMocha,
-        foregroundColor: Colors.white,
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => _launchVideo(lesson.youtubeLink),
