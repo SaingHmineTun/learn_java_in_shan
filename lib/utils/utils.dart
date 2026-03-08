@@ -198,6 +198,9 @@ final Map<int, Lesson> lessons = {
   76: Lesson(7, 76),
   77: Lesson(7, 77),
   78: Lesson(7, 78),
+  79: Lesson(8, 79),
+  80: Lesson(8, 80),
+  81: Lesson(8, 81),
 };
 
 class Lesson {
