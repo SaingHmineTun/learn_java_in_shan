@@ -14,19 +14,12 @@ class LessonScreen extends StatelessWidget {
   LessonScreen({super.key, required this.lesson}) {
     final moduleLessons = modules[lesson.moduleId];
     startIndex = moduleLessons!.keys.first;
-    endIndex = moduleLessons!.keys.last;
+    endIndex = moduleLessons.keys.last;
     currentIndex = lesson.id;
   }
 
   Future<String> loadMarkdownData() async {
     return await rootBundle.loadString('assets/lessons/lesson${lesson.id}.md');
-  }
-
-  void _launchVideo(String url) async {
-    final Uri uri = Uri.parse(url);
-    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      throw 'Could not launch $url';
-    }
   }
 
   void _launchExternalUrl(String url) async {
@@ -81,16 +74,6 @@ class LessonScreen extends StatelessWidget {
                 : const SizedBox(width: 100),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => _launchVideo(lesson.youtubeLink),
-        label: const Text(
-          "တူၺ်းဝီႇတီႇဢူဝ်ႇ",
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        ),
-        icon: const Icon(Icons.video_library),
-        backgroundColor: kJavaGold,
-        foregroundColor: kJavaEspresso,
       ),
       body: FutureBuilder<String>(
         future: loadMarkdownData(),
