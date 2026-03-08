@@ -177,7 +177,11 @@ final Map<int, Lesson> lessons = {
   56: Lesson(4, 56, "https://youtu.be/8jnFVJKlCwE"),
   57: Lesson(4, 57, "https://youtu.be/Z6kVChio0TQ"),
   58: Lesson(4, 58, "https://youtu.be/7Qt4OI8rW4A"),
-  59: Lesson(4, 59, "https://youtu.be/XYsMx6HLMXc"),
+  59: Lesson(4, 59, "https://youtu.be/tuXdw2wQ3Yc"),
+  60: Lesson(5, 60, "https://youtu.be/RC6ExYJJdFI"),
+  61: Lesson(5, 61, "https://youtu.be/auHAau0OsSg"),
+  62: Lesson(5, 62, "https://youtu.be/Hmz_yiYos0Q"),
+  63: Lesson(5, 63, "https://youtu.be/tuXdw2wQ3Yc"),
 };
 
 class Lesson {
