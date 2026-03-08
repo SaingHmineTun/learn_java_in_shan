@@ -5,9 +5,9 @@
 
 Link - <https://youtu.be/03T6oRTs_I0>
 
-Ternary operator ၼႆႉပဵꧣ် operator ဢၼ်တေ ႁဵတ်ႉၵၢၼ်ၸွမ်း operand သၢမ်ဢၼ်ဢိူဝ်ႈ။ တီႈ Java တေႉ Ternary operator မီးဢၼ်လဵဝ်ၵူၺ်းလႄႈ ၸိုဝ်ႈၵေႃႈ ႁွင်ႉဝႃႈ Ternary operator ၼႆယဝ်ႉ။
+Ternary operator ၼႆႉပဵꧣ် operator ဢၼ်တေ ႁဵတ်းၵၢၼ်ၸွမ်း operand သၢမ်ဢၼ်ဢိူဝ်ႈ။ တီႈ Java တေႉ Ternary operator မီးဢၼ်လဵဝ်ၵူၺ်းလႄႈ ၸိုဝ်ႈၵေႃႈ ႁွင်ႉဝႃႈ Ternary operator ၼႆယဝ်ႉ။
 
-တီႈတေႉ မၼ်းၵူၺ်း ႁဵတ်ႉၵၢၼ်မိူၼ် Assignment operator ၵူၺ်း။ ၵႃႊၶၼ် ဢၼ်မၼ်းတေဢဝ်သႂ်ႇၼၼ်ႉသမ်ႉ ႁဝ်းၶိုၼ်း ၸႂ်ႉတိုဝ်း ၵႃႊၶၼ် boolean သေ တႅပ်းတတ်ႉယဝ်ႉ။
+တီႈတေႉ မၼ်းၵူၺ်း ႁဵတ်းၵၢၼ်မိူၼ် Assignment operator ၵူၺ်း။ ၵႃႊၶၼ် ဢၼ်မၼ်းတေဢဝ်သႂ်ႇၼၼ်ႉသမ်ႉ ႁဝ်းၶိုၼ်း ၸႂ်ႉတိုဝ်း ၵႃႊၶၼ် boolean သေ တႅပ်းတတ်ႉယဝ်ႉ။
 
 **var value = boolean ? value1 : value2;**
 

@@ -9,7 +9,7 @@ Abstraction ၼႆႉ ပွင်ႇဝႃႈ ႁဝ်းလပ်းဝႆႉ
 
 **Abstract method**
 
-Abstract method ၼႆႉပဵၼ် method ဢၼ်ဢမ်ႇမီး method body ဢိူဝ်ႈ။ body မၼ်းၼႆႉ ၵေႃႉဢၼ်ႁဵတ်ႉ inherit မၼ်းၼၼ်ႉ တေလႆႈသႂ်ႇပၼ်ယဝ်ႉ။
+Abstract method ၼႆႉပဵၼ် method ဢၼ်ဢမ်ႇမီး method body ဢိူဝ်ႈ။ body မၼ်းၼႆႉ ၵေႃႉဢၼ်ႁဵတ်း inherit မၼ်းၼၼ်ႉ တေလႆႈသႂ်ႇပၼ်ယဝ်ႉ။
 
 တႃႇတေ ၸွမ်းပိူင် Abstraction ၼႆတီး Java မီးဝႆႉယူႇ 2 လၢႆး။
 
@@ -20,7 +20,7 @@ Abstract method ၼႆႉပဵၼ် method ဢၼ်ဢမ်ႇမီး meth
 
 Abstract class ၼႆႉ ပဵၼ် class ဢၼ်လႆႈဢဝ် abstract keyword သေ တႅမ်ႈဝႆႉၵူၺ်းဢိူဝ်ႈ။ ၼႂ်းမၼ်းၼၼ်ႉ ႁဝ်းၶိုၼ်းတေတႅမ်ႈလႆႈ abstract method ယဝ်ႉ။ ပေႃးဢမ်ႇၸႂ် abstract class ၼႆ ဢမ်ႇတႅမ်ႈ abstract method လႆႈ။ ၵွပ်ႈမၼ်းၸွမ်းပိူင် abstraction ၼႆလႄႈ ႁဝ်းတေၶူင်သၢင်ႈ object မၼ်းဢမ်ႇလႆႈ။
 
-Child Class ဢၼ်ႁဵတ်ႉ inherit Abstract class ဝႆႉၼၼ်ႉ တေလႆႈ override ပၼ် abstract method ဢၼ်မီးတီႈၼႂ်းမၼ်း ၵမ်းလဵဝ်ယဝ်ႉ၊ ပေႃးဢမ်ႇၼၼ် တေၼႄ Error ပၼ်ဝႆႉယဝ်ႉ။
+Child Class ဢၼ်ႁဵတ်း inherit Abstract class ဝႆႉၼၼ်ႉ တေလႆႈ override ပၼ် abstract method ဢၼ်မီးတီႈၼႂ်းမၼ်း ၵမ်းလဵဝ်ယဝ်ႉ၊ ပေႃးဢမ်ႇၼၼ် တေၼႄ Error ပၼ်ဝႆႉယဝ်ႉ။
 
 ###### လၢႆးၶူင်သၢင်ႈ Abstract Class
 
@@ -34,7 +34,7 @@ public abstract class Animal {
 }
 ```
 
-###### လၢႆးႁဵတ်ႉ extend Abstract Class
+###### လၢႆးႁဵတ်း extend Abstract Class
 
 ```
 public class Dog extends Animal {

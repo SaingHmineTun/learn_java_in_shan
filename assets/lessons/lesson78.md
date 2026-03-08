@@ -46,13 +46,13 @@ northernCities.add("muse");
 northernCities.addAll(southernCities);
 ```
 
-###### လၢႆးႁဵတ်ႉ intersection
+###### လၢႆးႁဵတ်း intersection
 
 ```
 northernCities.retainAll(southernCities);
 ```
 
-###### လၢႆးႁဵတ်ႉ differentiation
+###### လၢႆးႁဵတ်း differentiation
 
 ```
 northernCities.removeAll(southernCities);
@@ -60,7 +60,7 @@ northernCities.removeAll(southernCities);
 
 **1\. Hash Set**
 
-မၼ်းၵေႃႈ တေၸႂ်ႉ Hash value သေ သိမ်းပၼ် ၵႃႊၶၼ်လႄႈ ၼႂ်းမၼ်းၼၼ်ႉ ဢမ်ႇထိင်းပၼ်ဝႆႉ Sorting သင်။ ၵူၺ်းသင်ၶႆႈႁဵတ်ႉ CRUD ၵူၺ်းၼႆတေႉ ၸႂ်ႉတိုဝ်း Hash Set z ၼႆႉ ၽႂ်းလိူဝ်ပိူၼ်ႈယဝ်ႉ။
+မၼ်းၵေႃႈ တေၸႂ်ႉ Hash value သေ သိမ်းပၼ် ၵႃႊၶၼ်လႄႈ ၼႂ်းမၼ်းၼၼ်ႉ ဢမ်ႇထိင်းပၼ်ဝႆႉ Sorting သင်။ ၵူၺ်းသင်ၶႆႈႁဵတ်း CRUD ၵူၺ်းၼႆတေႉ ၸႂ်ႉတိုဝ်း Hash Set z ၼႆႉ ၽႂ်းလိူဝ်ပိူၼ်ႈယဝ်ႉ။
 
 ###### လၢႆးၶူင်သၢင်ႈ
 

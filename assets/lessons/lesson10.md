@@ -11,9 +11,9 @@ Link - <https://youtu.be/WYkfUf5-I-4>
 - _|| ( Logical OR )_
 - _! ( Logical NOT )_
 
-Logical operator ၼႆႉသမ်ႉ မၼ်းတေ ႁဵတ်ႉၵၢၼ်ၸွမ်း boolean ၵူၺ်းလႄႈ မၼ်းပၼ်ၶိုၼ်း boolean ႁဝ်းၶိုၼ်းၵူၺ်း။
+Logical operator ၼႆႉသမ်ႉ မၼ်းတေ ႁဵတ်းၵၢၼ်ၸွမ်း boolean ၵူၺ်းလႄႈ မၼ်းပၼ်ၶိုၼ်း boolean ႁဝ်းၶိုၼ်းၵူၺ်း။
 
-လၢႆးႁဵတ်ႉၵၢၼ်
+လၢႆးႁဵတ်းၵၢၼ်
 
 ###### && ( Logical AND operator)
 

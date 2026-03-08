@@ -5,7 +5,7 @@
 
 Link - <https://youtu.be/0sBWuMAtwFc>
 
-String ၼႆႉ မၼ်းပဵၼ် Non-primitive ဢိူဝ်ႈ။ ၵူၺ်းၵႃႊ ပဵၼ် Data type ဢၼ်ၵူၼ်းၸႂ်ႉၼမ်ႁႅင်းဝႆႉလႄႈ Java ၸင်ႇႁဵတ်ႉပၼ်ႁႂ်ႈၸႂ်ႉၸွမ်းလႆႈ String literal ယဝ်ႉ။ လွင်ႈလီတိူဝ်း Reference ၼႆႉသမ်ႉ မၼ်းဢမ်ႇမီး Limit လႄႈႁဝ်းတေ ႁွင်ႉၸႂ်ႉလႆႈ method ဢမ်ႇၼၼ် variable ဢၼ်မီးဝႆႉ ၼႂ်းမၼ်းလႆႈယဝ်ႉ။
+String ၼႆႉ မၼ်းပဵၼ် Non-primitive ဢိူဝ်ႈ။ ၵူၺ်းၵႃႊ ပဵၼ် Data type ဢၼ်ၵူၼ်းၸႂ်ႉၼမ်ႁႅင်းဝႆႉလႄႈ Java ၸင်ႇႁဵတ်းပၼ်ႁႂ်ႈၸႂ်ႉၸွမ်းလႆႈ String literal ယဝ်ႉ။ လွင်ႈလီတိူဝ်း Reference ၼႆႉသမ်ႉ မၼ်းဢမ်ႇမီး Limit လႄႈႁဝ်းတေ ႁွင်ႉၸႂ်ႉလႆႈ method ဢမ်ႇၼၼ် variable ဢၼ်မီးဝႆႉ ၼႂ်းမၼ်းလႆႈယဝ်ႉ။
 
 တႃႇၶူင်သၢင်ႈ String ၼိုင်ႈဢၼ်ၼႆႉတေႉ ၵွပ်ႈၸႂ်ႉလႆႈ literal ၼႆလႄႈ မၼ်းၵေႃႈတေမိူၼ် ႁဝ်းၶူင်သၢင်ႈ primitive ၼိုင်ႈဢၼ်ယူႇ။ ၵူၺ်းၵႃႊ သင်ၶႆႈၸႂ်ႉၸွမ်း new keyword ၵေႃႈလႆႈယူႇ။ သင်ၸႂ်ႉၸွမ်း new keyword ၼႆတေႉ မၼ်းတေဝႄႈပၼ် String Pool ဢိူဝ်ႈ။
 
@@ -57,7 +57,7 @@ String small = myName.toLowerCase(); // sai mao from muse
 ```
 **String Concatenation**
 
-တႃႇတေ ႁူမ်ႈလေႃး String သွင်ဢၼ်ၼႆ မၼ်းၵေႃႈမီးဝႆႉ concat() method ယူႇ။ ၼႆႉပဵၼ် method ဢၼ်ၸႂ်ႉၼမ်ဝႆႉလႄႈ Java ၸင်ႇႁဵတ်ႉ operator overloading ပၼ်ႁဝ်း တႃႇၸႂ်ႉၸွမ်း + operator လႆႈယဝ်ႉ။
+တႃႇတေ ႁူမ်ႈလေႃး String သွင်ဢၼ်ၼႆ မၼ်းၵေႃႈမီးဝႆႉ concat() method ယူႇ။ ၼႆႉပဵၼ် method ဢၼ်ၸႂ်ႉၼမ်ဝႆႉလႄႈ Java ၸင်ႇႁဵတ်း operator overloading ပၼ်ႁဝ်း တႃႇၸႂ်ႉၸွမ်း + operator လႆႈယဝ်ႉ။
 
 ###### လၢႆးၸႂ်ႉတိုဝ်း
 

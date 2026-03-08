@@ -31,7 +31,7 @@ public static void speak(Animal animal) {
 
 **Functional Interface and Lambda Expression**
 
-သင်ၸိူဝ်ႉ interface ႁဝ်း မီးဝႆႉ abstract method ဢၼ်ၼိုင်ႈၵူၺ်းၼႆ ႁဝ်းႁွင်ႉမၼ်းဝႃႈ Functional Interface ၼႆသေ ႁဝ်းတေၸႂ်ႉၸွမ်း Lambda Expression လႆႈဢိူဝ်ႈ။ Lambda expression ဢၼ်ဝႃႈၼႆႉ ပဵၼ်လၢႆးငၢႆႊ၊ လၢႆးပွတ်း တႃႇၸႂ်ႉတိုဝ်း Anonymous class ၵူၺ်းၼင်ႇၵဝ်ႇ။ ၵွပ်ႈၼႆ code တီႈၼိူဝ် ဢၼ်ၶူင်သၢင်ႈ dog object ဝႆႉၼၼ်ႉ ႁဝ်းႁဵတ်ႉၼႆ တႅမ်ႈလႆႈဢိူဝ်ႈ။
+သင်ၸိူဝ်ႉ interface ႁဝ်း မီးဝႆႉ abstract method ဢၼ်ၼိုင်ႈၵူၺ်းၼႆ ႁဝ်းႁွင်ႉမၼ်းဝႃႈ Functional Interface ၼႆသေ ႁဝ်းတေၸႂ်ႉၸွမ်း Lambda Expression လႆႈဢိူဝ်ႈ။ Lambda expression ဢၼ်ဝႃႈၼႆႉ ပဵၼ်လၢႆးငၢႆႊ၊ လၢႆးပွတ်း တႃႇၸႂ်ႉတိုဝ်း Anonymous class ၵူၺ်းၼင်ႇၵဝ်ႇ။ ၵွပ်ႈၼႆ code တီႈၼိူဝ် ဢၼ်ၶူင်သၢင်ႈ dog object ဝႆႉၼၼ်ႉ ႁဝ်းႁဵတ်းၼႆ တႅမ်ႈလႆႈဢိူဝ်ႈ။
 ```
 Animal dog = () -> System.out.println("Woof Woof");
 ```

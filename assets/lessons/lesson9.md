@@ -14,7 +14,7 @@ Operator ၼႆႉသမ်ႉ ႁဝ်းၸႂ်ႉတိုဝ်း မိ
 - _< ( Less than )_
 - _<= ( Less than and Equal )_
 
-Relational operator ၼႆႉ မၼ်းတေႁဵတ်ႉၵၢၼ်ၸွမ်း int ဢမ်ႇၼၼ် float သေတႃႉ မၼ်းတေ ပၼ်ႁဝ်းၶိုၼ်း ၵႃႊၶၼ် boolean ၵူၺ်း။
+Relational operator ၼႆႉ မၼ်းတေႁဵတ်းၵၢၼ်ၸွမ်း int ဢမ်ႇၼၼ် float သေတႃႉ မၼ်းတေ ပၼ်ႁဝ်းၶိုၼ်း ၵႃႊၶၼ် boolean ၵူၺ်း။
 
 ###### လၢႆးၸႂ်ႉတိုဝ်း
 

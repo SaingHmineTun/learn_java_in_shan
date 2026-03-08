@@ -24,13 +24,13 @@ Mother aikKyaw = new AikKyaw();
 Mother nangTun = new NangTun();
 ```
 
-AikKyaw လႄႈ NangTun ၶဝ်သွင်ၵေႃႉၼႆႉ ၵွပ်ႈလႆႈႁဵတ်ႉ inherit ဝႆႉတီႈ Mother class ၼႆလႄႈ ၸင်ႇဢဝ် object ၶဝ်သိမ်းဝႆႉလႆႈၼႂ်း variable ဢၼ်လႆႈဢဝ် Mother class သေ ၶူင်ဝႆႉယဝ်ႉ။
+AikKyaw လႄႈ NangTun ၶဝ်သွင်ၵေႃႉၼႆႉ ၵွပ်ႈလႆႈႁဵတ်း inherit ဝႆႉတီႈ Mother class ၼႆလႄႈ ၸင်ႇဢဝ် object ၶဝ်သိမ်းဝႆႉလႆႈၼႂ်း variable ဢၼ်လႆႈဢဝ် Mother class သေ ၶူင်ဝႆႉယဝ်ႉ။
 
 **Method Overriding**
 
 ၼႂ်း Polymorphism ၼႆႉတေႉ ဢၼ်လမ်ႇလွင်ႈမၼ်းတေႉပဵၼ် Method Overriding ၼႆယဝ်ႉ။ Method Overwriting ဢၼ်ဝႃႈၼၼ်ႉ ၸိုဝ်ႈ method ဢၼ်မီးဝႆႉတီႈၼႂ်း Parent class ၼၼ်ႉ ႁဝ်းၶိုၼ်း မႃးတႅမ်ႈၶိုၼ်း တီႈ Child class သေ တီႈၼႂ်း body မၼ်းၼၼ်ႉ ႁဝ်းၶိုၼ်း ပိၼ်ႇတႅမ်ႈၶိုၼ်းမႂ်ႇယဝ်ႉ။ ၵမ်းၼႆႉ သင်ႁဝ်းႁွင်ႉ method ၼၼ်ႉၼႆၸိုင် မၼ်းတေႁွင်ႉပၼ် ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉတီႈ Child class ၵူၺ်းယဝ်ႉဢိူဝ်ႈ။
 
-တီႈၼႂ်း Mother class ၼၼ်ႉ မၼ်းတေမီးဝႆႉ sellGoods() method ဝႆႉသေ ဝၢႆးသေ inherit ယဝ်ႉ ႁဝ်းၶိုၼ်းမႄးတႅမ်ႈ sellGoods() ၼႆႉၶိုၼ်း တီႈ child class မၼ်းၼႆႉ ပဵၼ် method overriding ယဝ်ႉ။ ၵမ်းၼႆႉ သင်ႁဝ်း ၶူင်သၢင်ႈ child object သေ ႁွင်ႉတူၺ်း sellGoods() ၼႆၸိုင် ဢၼ်တႅမ်ႈဝႆႉ တီႈၼႂ်း child class ၼၼ်ႉၵူၺ်း မၼ်းတေႁဵတ်ႉၵၢၼ်ၵႂႃႇ။
+တီႈၼႂ်း Mother class ၼၼ်ႉ မၼ်းတေမီးဝႆႉ sellGoods() method ဝႆႉသေ ဝၢႆးသေ inherit ယဝ်ႉ ႁဝ်းၶိုၼ်းမႄးတႅမ်ႈ sellGoods() ၼႆႉၶိုၼ်း တီႈ child class မၼ်းၼႆႉ ပဵၼ် method overriding ယဝ်ႉ။ ၵမ်းၼႆႉ သင်ႁဝ်း ၶူင်သၢင်ႈ child object သေ ႁွင်ႉတူၺ်း sellGoods() ၼႆၸိုင် ဢၼ်တႅမ်ႈဝႆႉ တီႈၼႂ်း child class ၼၼ်ႉၵူၺ်း မၼ်းတေႁဵတ်းၵၢၼ်ၵႂႃႇ။
 
 ###### လၢႆးၶူင်သၢင်ႈ
 
