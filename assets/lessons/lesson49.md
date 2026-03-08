@@ -1,7 +1,7 @@
 
 ## **Java Basic 49**
 
-STATIC
+#### **STATIC**
 
 Link - <https://youtu.be/zjkeM-7fx_A>
 
@@ -25,22 +25,20 @@ static method ၼႆႉပဵၼ် method ဢၼ်ႁဝ်း ဢမ်ႇလ
 
 **static members** (variable and method) ၼႆႉ ပဵၼ်ၶွင် class လႄႈ ဢမ်ႇၵဵဝ်ႇၵၼ်တၢင်း object လႃးလႃး။ instance variable ၼႆႉ object ဢၼ်လႄႈဢၼ် ၵႃႊၶၼ်မၼ်း ဢမ်ႇမိူၼ်ၵၼ် သေတႃႉ static variable ၼႆႉသမ်ႉ object တၢင်းမူတ်း မီး static variable ဢၼ်လဵဝ်ၵူၺ်းလႄႈ ၵႃႊၶၼ်ၶဝ်ၵေႃႈ တေမိူၼ်ၵၼ်မူတ်းယဝ်ႉ။
 
-လၢႆးၶူင်သၢင်ႈ static variable လႄႈ static method
+###### လၢႆးၶူင်သၢင်ႈ static variable လႄႈ static method
 
-**public class Person {**
+```
+public class Person {
+    public static String name;
+    public static void printName() {
+        System.out.println("My name is " + name);
+    }
+}
+```
 
-**public static String _name_;**
+###### လၢႆးၸႂ်ႉတိုဝ်း
 
-**public static void printName() {**
-
-**System._out_.println("My name is " + _name_);**
-
-**}**
-
-**}**
-
-လၢႆးၸႂ်ႉတိုဝ်း
-
-**Person._name_ \= "Sai Mao";**
-
-**Person._printName_();**
+```
+Person.name = "Sai Mao";
+Person.printName();
+```

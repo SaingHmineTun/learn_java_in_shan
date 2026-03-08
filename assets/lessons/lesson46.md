@@ -1,7 +1,7 @@
 
 ## **Java Basic 46**
 
-ABSTRACTION AND ABSTRACT CLASS
+#### **ABSTRACTION AND ABSTRACT CLASS**
 
 Link - <https://youtu.be/GRuATUQEjEE>
 
@@ -22,56 +22,44 @@ Abstract class ၼႆႉ ပဵၼ် class ဢၼ်လႆႈဢဝ် abstract
 
 Child Class ဢၼ်ႁဵတ်ႉ inherit Abstract class ဝႆႉၼၼ်ႉ တေလႆႈ override ပၼ် abstract method ဢၼ်မီးတီႈၼႂ်းမၼ်း ၵမ်းလဵဝ်ယဝ်ႉ၊ ပေႃးဢမ်ႇၼၼ် တေၼႄ Error ပၼ်ဝႆႉယဝ်ႉ။
 
-လၢႆးၶူင်သၢင်ႈ Abstract Class
+###### လၢႆးၶူင်သၢင်ႈ Abstract Class
 
-**public abstract class Animal {**
+```
+public abstract class Animal {
+    abstract void makeSound(); // Abstract method
+    
+    public void print() { // Normal method
+        System.out.println("I'm Animal");
+    }
+}
+```
 
-**abstract void makeSound(); _// Abstract method_**
+###### လၢႆးႁဵတ်ႉ extend Abstract Class
 
-**public void print() { _// Normal method_**
+```
+public class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Woof Woof");
+    }
+}
 
-**System._out_.println("I'm Animal");**
+public class Cat extends Animal {
+    void makeSound() {
+        System.out.println("Meow Meow");
+    }
+}
+```
 
-**}**
+###### လၢႆးၸႂ်ႉတိုဝ်း
 
-**}**
+```
+public static void main(String[] args) {
+    Animal dog = new Dog();
+    makeSound(dog);
+    makeSound(new Cat());
+}
 
-လၢႆးႁဵတ်ႉ extend Abstract Class
-
-**public class Dog extends Animal {**
-
-**void makeSound() {**
-
-**System._out_.println("Woof Woof");**
-
-**}**
-
-**}**
-
-**public class Cat extends Animal {**
-
-**void makeSound() {**
-
-**System._out_.println("Meow Meow");**
-
-**}**
-
-**}**
-
-လၢႆးၸႂ်ႉတိုဝ်း
-
-**public static void main(String\[\] args) {**
-
-**Animal dog = new Dog();**
-
-**_makeSound_(dog);**
-
-**_makeSound_(new Cat());**
-
-**}**
-
-**private static void makeSound(Animal animal) {**
-
-**animal.makeSound();**
-
-**}**
+private static void makeSound(Animal animal) {
+    animal.makeSound();
+}
+```

@@ -2,13 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:learn_java_in_shan/utils/utils.dart';
-import 'package:learn_java_in_shan/utils/colors.dart'; // Import your coffee palette
+import 'package:learn_java_in_shan/utils/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LessonScreen extends StatelessWidget {
   final Lesson lesson;
+  late final int startIndex;
+  late final int endIndex;
+  late final int currentIndex;
 
-  const LessonScreen({super.key, required this.lesson});
+  LessonScreen({super.key, required this.lesson}) {
+    final moduleLessons = modules[lesson.moduleId];
+    startIndex = moduleLessons!.keys.first;
+    endIndex = moduleLessons!.keys.last;
+    currentIndex = lesson.id;
+  }
 
   Future<String> loadMarkdownData() async {
     return await rootBundle.loadString('assets/lessons/lesson${lesson.id}.md');
@@ -23,7 +31,6 @@ class LessonScreen extends StatelessWidget {
 
   void _launchExternalUrl(String url) async {
     final Uri uri = Uri.parse(url);
-    // LaunchMode.externalApplication opens the browser (Chrome/Safari)
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
       debugPrint('Could not launch $url');
     }
@@ -35,6 +42,45 @@ class LessonScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Lesson ${lesson.id}"),
+        backgroundColor: kJavaMocha,
+        foregroundColor: Colors.white,
+      ),
+      // --- NAV BUTTONS AT THE BOTTOM ---
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        elevation: 10,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Previous Button
+            currentIndex > startIndex
+                ? TextButton.icon(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (ctx) => LessonScreen(lesson: lessons[currentIndex - 1]!)),
+                );
+              },
+              icon: const Icon(Icons.arrow_back_ios, size: 16, color: kJavaMocha),
+              label: const Text("ဢွၼ်ၼႃႈ", style: TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold)),
+            )
+                : const SizedBox(width: 100), // Placeholder to keep spacing
+
+            // Next Button
+            currentIndex < endIndex
+                ? TextButton.icon(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (ctx) => LessonScreen(lesson: lessons[currentIndex + 1]!)),
+                );
+              },
+              icon: const Text("တၢင်းၼႃႈ", style: TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold)),
+              label: const Icon(Icons.arrow_forward_ios, size: 16, color: kJavaMocha),
+            )
+                : const SizedBox(width: 100),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => _launchVideo(lesson.youtubeLink),
@@ -43,8 +89,8 @@ class LessonScreen extends StatelessWidget {
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         icon: const Icon(Icons.video_library),
-        backgroundColor: kJavaGold, // Using your coffee gold
-        foregroundColor: kJavaEspresso, // Dark text on gold button
+        backgroundColor: kJavaGold,
+        foregroundColor: kJavaEspresso,
       ),
       body: FutureBuilder<String>(
         future: loadMarkdownData(),
@@ -54,14 +100,10 @@ class LessonScreen extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
               selectable: true,
               data: snapshot.data!,
-              // --- ADD THIS SECTION ---
               onTapLink: (text, href, title) {
-                if (href != null) {
-                  _launchExternalUrl(href);
-                }
+                if (href != null) _launchExternalUrl(href);
               },
               styleSheet: MarkdownStyleSheet(
-                // AJ05 inherited automatically from Theme
                 p: const TextStyle(fontSize: 17, height: 1.6, color: kJavaEspresso),
                 h1: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
                 h2: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
@@ -69,25 +111,20 @@ class LessonScreen extends StatelessWidget {
                 h4: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
                 h5: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
                 h6: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
-
                 codeblockPadding: const EdgeInsets.all(16),
                 codeblockDecoration: BoxDecoration(
-                  color: const Color(0xFF1E1E1E), // Professional VS Code Dark gray
+                  color: const Color(0xFF1E1E1E),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: kJavaGold.withOpacity(0.3), width: 1), // Subtle gold border
+                  border: Border.all(color: kJavaGold.withOpacity(0.3), width: 1),
                   boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 8,
-                      offset: const Offset(0, 4),
-                    ),
+                    BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 8, offset: const Offset(0, 4)),
                   ],
                 ),
                 code: const TextStyle(
                   fontFamily: 'AJ06',
                   fontSize: 17,
                   letterSpacing: 1.0,
-                  color: Color(0xFFEAB7A2), // Warm Java-string-like color
+                  color: Color(0xFFEAB7A2),
                   height: 2,
                 ),
               ),
@@ -95,9 +132,7 @@ class LessonScreen extends StatelessWidget {
           } else if (snapshot.hasError) {
             return const Center(child: Text("Error loading lesson."));
           } else {
-            return const Center(
-              child: CircularProgressIndicator(color: kJavaMocha),
-            );
+            return const Center(child: CircularProgressIndicator(color: kJavaMocha));
           }
         },
       ),

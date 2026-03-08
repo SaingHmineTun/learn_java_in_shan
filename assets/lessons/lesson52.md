@@ -1,7 +1,7 @@
 
 ## **Java Basic 52**
 
-SEALED CLASS
+#### **SEALED CLASS**
 
 Link - <https://youtu.be/ZvMoZ8Buz7g>
 
@@ -11,10 +11,14 @@ Sealed Class ၼႆႉတေႉ မၼ်းတေႁမ်ႉငၢႆးၵၼ
 
 sealed ၼႆႉ ၸႂ်ႉလႆႈၼိူဝ် class လၢႆလၢႆၵူၺ်း၊ ဢမ်ႇၸႂ်ႉလႆႈၼိူဝ် method လႄႈ global variable ။ ယဝ်ႉၵေႃႈ class ဢၼ်တေႁဵတ်ႉ extends sealed class ၼႆႉ တေလႆႈပဵၼ် final class ယဝ်ႉ။
 
-လၢႆးၶူင်သၢင်ႈ Sealed Class
+###### လၢႆးၶူင်သၢင်ႈ Sealed Class
 
-**public sealed class Parent permits Child { }**
+```
+public sealed class Parent permits Child { }
+```
 
-လၢႆးႁဵတ်ႉ inherit Sealed Class
+###### လၢႆးႁဵတ်း inherit Sealed Class
 
-**public final class Child extends Parent{ }**
+```
+public final class Child extends Parent{ }
+```

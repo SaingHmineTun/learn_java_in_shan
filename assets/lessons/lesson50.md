@@ -1,7 +1,7 @@
 
 ## **Java Basic 50**
 
-MATH CLASS
+#### **MATH CLASS**
 
 Link - <https://youtu.be/X_cLm0oXMqs>
 
@@ -20,23 +20,16 @@ Link - <https://youtu.be/X_cLm0oXMqs>
 - _floor_ \- ၸႂ်ႉၸွမ်း decimal value သေ ပၼ်ၶိုၼ်းၵႃႊၶၼ် ဢၼ်ယူႇတႅမ်ႇ (floor = ၽၢၵ်ႈ)
 - _round_ \- ၸႂ်ႉၸွမ်း decimal value သေ ပၼ်ၶိုၼ်းၵႃႊၶၼ် ဢၼ်ၸမ်သေပိူၼ်ႈ
 
-လၢႆးၸႂ်ႉတိုဝ်း
+###### လၢႆးၸႂ်ႉတိုဝ်း
 
-**Math._abs_(-5); _// 5_**
-
-**Math._min_(100, 50); _// 50_**
-
-**Math._max_(100, 50); _// 100_**
-
-**Math._sqrt_(25); _// 5_**
-
-**Math._pow_(5, 5); _// 25_**
-
-**Math._ceil_(1.9); _// 1.0_**
-
-**Math._floor_(1.1); _// 2.0_**
-
-**Math._round_(1.4); _// 1.0_**
-
-**Math._round_(1.6); _// 2.0_**
-
+```
+Math.abs(-5); // 5
+Math.min(100, 50); // 50
+Math.max(100, 50); // 100
+Math.sqrt(25); // 5
+Math.pow(5, 5); // 25
+Math.ceil(1.9); // 1.0
+Math.floor(1.1); // 2.0
+Math.round(1.4); // 1.0
+Math.round(1.6); // 2.0
+```
