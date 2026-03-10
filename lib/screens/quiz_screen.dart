@@ -25,7 +25,7 @@ class _QuizScreenState extends State<QuizScreen> {
   late String correctText;
 
   // for recording user selection
-  List<String?> userResults = List.filled(10, null);
+  late List<String?> userResults;
 
   @override
   void initState() {
@@ -41,10 +41,12 @@ class _QuizScreenState extends State<QuizScreen> {
       totalQuizNumber = 10;
     }
 
+    userResults = List.filled(totalQuizNumber, null);
+
     // Shuffle the source and take the required amount
-    sessionQuizzes = (List<Quiz>.from(sourceList)..shuffle())
-        .take(totalQuizNumber)
-        .toList();
+    sessionQuizzes = (List<Quiz>.from(
+      sourceList,
+    )..shuffle()).take(totalQuizNumber).toList();
     _prepareQuestion();
   }
 
@@ -62,6 +64,7 @@ class _QuizScreenState extends State<QuizScreen> {
       userResults[currentQuizIndex] = (currentOptions[index]);
     });
   }
+
   @override
   Widget build(BuildContext context) {
     Quiz currentQuiz = sessionQuizzes[currentQuizIndex];
@@ -69,7 +72,8 @@ class _QuizScreenState extends State<QuizScreen> {
     return Scaffold(
       backgroundColor: kJavaLatte,
       appBar: AppBar(
-        centerTitle: true, // Looks more balanced on desktop
+        centerTitle: true,
+        // Looks more balanced on desktop
         title: Text(
           "Java ${widget.moduleNumber == 0 ? "Final" : "Module ${widget.moduleNumber}"} Test",
           style: const TextStyle(
@@ -94,7 +98,10 @@ class _QuizScreenState extends State<QuizScreen> {
           child: Container(
             // --- This constrains the entire UI width to a max of 800px ---
             constraints: const BoxConstraints(maxWidth: 800),
-            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 24.0,
+              vertical: 16.0,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -157,19 +164,19 @@ class _QuizScreenState extends State<QuizScreen> {
                                 decoration: BoxDecoration(
                                   color: isAnswered
                                       ? (isCorrect
-                                      ? Colors.green.shade100
-                                      : (selectedIndex == index
-                                      ? Colors.red.shade100
-                                      : Colors.white))
+                                            ? Colors.green.shade100
+                                            : (selectedIndex == index
+                                                  ? Colors.red.shade100
+                                                  : Colors.white))
                                       : Colors.white,
                                   borderRadius: BorderRadius.circular(16),
                                   border: Border.all(
                                     color: isAnswered
                                         ? (isCorrect
-                                        ? Colors.green
-                                        : (selectedIndex == index
-                                        ? Colors.red
-                                        : Colors.transparent))
+                                              ? Colors.green
+                                              : (selectedIndex == index
+                                                    ? Colors.red
+                                                    : Colors.transparent))
                                         : kJavaGold.withOpacity(0.5),
                                     width: 2,
                                   ),
@@ -178,7 +185,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                       color: Colors.black.withOpacity(0.05),
                                       blurRadius: 10,
                                       offset: const Offset(0, 4),
-                                    )
+                                    ),
                                   ],
                                 ),
                                 child: Row(
@@ -186,10 +193,10 @@ class _QuizScreenState extends State<QuizScreen> {
                                     CircleAvatar(
                                       backgroundColor: isAnswered
                                           ? (isCorrect
-                                          ? Colors.green
-                                          : (selectedIndex == index
-                                          ? Colors.red
-                                          : kJavaLatte))
+                                                ? Colors.green
+                                                : (selectedIndex == index
+                                                      ? Colors.red
+                                                      : kJavaLatte))
                                           : kJavaLatte,
                                       radius: 14,
                                       child: Text(
