@@ -6,10 +6,8 @@ import '../utils/colors.dart';
 
 class QuizScreen extends StatefulWidget {
   final int moduleNumber;
-  final List<Quiz> quizzes;
 
-  QuizScreen({super.key, required this.moduleNumber})
-    : quizzes = allQuizzes[moduleNumber - 1];
+  QuizScreen({super.key, required this.moduleNumber});
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -32,10 +30,21 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
     super.initState();
-    // Pick 10 random quizzes and shuffle them once
-    sessionQuizzes = (List<Quiz>.from(
-      widget.quizzes,
-    )..shuffle()).take(totalQuizNumber).toList();
+    List<Quiz> sourceList;
+    if (widget.moduleNumber == 0) {
+      // FINAL TEST: Combine all module lists into one flat list
+      sourceList = allQuizzes.expand((module) => module).toList();
+      totalQuizNumber = 20; // Let's make the final exam 20 questions
+    } else {
+      // REGULAR MODULE: Pick from the specific module
+      sourceList = allQuizzes[widget.moduleNumber - 1];
+      totalQuizNumber = 10;
+    }
+
+    // Shuffle the source and take the required amount
+    sessionQuizzes = (List<Quiz>.from(sourceList)..shuffle())
+        .take(totalQuizNumber)
+        .toList();
     _prepareQuestion();
   }
 
@@ -62,7 +71,7 @@ class _QuizScreenState extends State<QuizScreen> {
       backgroundColor: kJavaLatte,
       appBar: AppBar(
         title: Text(
-          "Java Module ${widget.moduleNumber}",
+          "Java ${widget.moduleNumber == 0 ? "Final" : "Module ${widget.moduleNumber}"} Test",
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,

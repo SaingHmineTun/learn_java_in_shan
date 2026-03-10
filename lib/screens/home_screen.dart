@@ -1,11 +1,67 @@
 import 'package:flutter/material.dart';
 import 'package:learn_java_in_shan/screens/module_screen.dart';
+import 'package:learn_java_in_shan/screens/quiz_screen.dart';
 import 'package:learn_java_in_shan/utils/utils.dart';
 import '../utils/colors.dart';
 import 'about_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  Widget _buildFinalTest(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(16),
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (ctx) => QuizScreen(moduleNumber: 0), // 0 indicates Final Test
+          ),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          // Premium Dark Espresso Gradient
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [kJavaEspresso, kJavaMocha],
+          ),
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: kJavaGold.withOpacity(0.2),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.stars_rounded, color: kJavaGold, size: 40),
+            const SizedBox(height: 8),
+            const Text(
+              "Final Test",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              "All Modules Mix",
+              style: TextStyle(
+                fontSize: 12,
+                color: kJavaGold.withOpacity(0.8),
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +114,7 @@ class HomeScreen extends StatelessWidget {
                     return GridView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: topics.length,
+                      itemCount: topics.length + 1,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: crossAxisCount,
                         crossAxisSpacing: 16,
@@ -66,8 +122,12 @@ class HomeScreen extends StatelessWidget {
                         childAspectRatio: 1.0, // Keeps cards square
                       ),
                       itemBuilder: (context, index) {
-                        int id = topics.keys.elementAt(index);
-                        return _buildModuleCard(context, id, topics[id]!);
+                        if (index < topics.length) {
+                          int id = topics.keys.elementAt(index);
+                          return _buildModuleCard(context, id, topics[id]!);
+                        } else {
+                          return _buildFinalTest(context);
+                        }
                       },
                     );
                   },
