@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_java_in_shan/screens/lesson_screen.dart';
+import 'package:learn_java_in_shan/screens/quiz_screen.dart';
 import 'package:learn_java_in_shan/utils/colors.dart';
 import '../utils/utils.dart';
 
@@ -8,12 +9,12 @@ class ModuleScreen extends StatelessWidget {
   final Map<int, String> moduleLessons;
 
   ModuleScreen({super.key, required this.moduleId})
-      : moduleLessons = modules[moduleId] ?? {};
+    : moduleLessons = modules[moduleId] ?? {};
 
   void _gotoLesson(BuildContext context, Lesson lesson) {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (ctx) => LessonScreen(lesson: lesson)),
-    );
+    Navigator.of(
+      context,
+    ).push(MaterialPageRoute(builder: (ctx) => LessonScreen(lesson: lesson)));
   }
 
   @override
@@ -65,7 +66,8 @@ class ModuleScreen extends StatelessWidget {
 
                 return GridView.builder(
                   padding: const EdgeInsets.all(16),
-                  itemCount: moduleLessons.length,
+                  itemCount: moduleLessons.length + 1,
+                  // extra item for the Quiz
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: crossAxisCount,
                     crossAxisSpacing: 12,
@@ -73,14 +75,76 @@ class ModuleScreen extends StatelessWidget {
                     mainAxisExtent: 85, // Fixed height for lesson items
                   ),
                   itemBuilder: (context, index) {
-                    int lessonId = moduleLessons.keys.elementAt(index);
-                    return _lessonCard(context, lessons[lessonId]);
+                    if (index < moduleLessons.length) {
+                      int lessonId = moduleLessons.keys.elementAt(index);
+                      return _lessonCard(context, lessons[lessonId]);
+                    } else {
+                      return _quizCard(context);
+                    }
                   },
                 );
               },
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _quizCard(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: kJavaGold, // Gold to stand out
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: kJavaMocha.withOpacity(0.1),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (ctx) => QuizScreen(moduleNumber: moduleId),
+              ),
+            );
+          },
+          child: Center(
+            child: ListTile(
+              leading: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: kJavaMocha.withOpacity(0.15),
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(
+                  Icons.extension_rounded, // Puzzle/Quiz icon
+                  color: kJavaMocha,
+                  size: 24,
+                ),
+              ),
+              title: Text(
+                "Module $moduleId Quiz",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: kJavaMocha,
+                ),
+              ),
+              subtitle: const Text(
+                "လွင်ႈၸၢမ်းတူၺ်း", // Shan text
+                style: TextStyle(fontSize: 12, color: kJavaEspresso),
+              ),
+              trailing: const Icon(Icons.play_circle_fill, color: kJavaMocha),
+            ),
+          ),
+        ),
       ),
     );
   }
