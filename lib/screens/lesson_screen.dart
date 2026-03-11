@@ -11,13 +11,16 @@ class LessonScreen extends StatelessWidget {
   late final int startIndex;
   late final int endIndex;
   late final int currentIndex;
-  late final moduleLessons;
+  late final Map<int, String> moduleLessons;
+  late final Map<int, Lesson> lessonList;
 
   LessonScreen({super.key, required this.language, required this.lesson}) {
     if (language == "java") {
-      moduleLessons = javaModules[lesson.moduleId];
+      moduleLessons = javaModules[lesson.moduleId] ?? {};
+      lessonList = javaLessons;
     } else if (language == "python") {
-      moduleLessons = pythonModules[lesson.moduleId];
+      moduleLessons = pythonModules[lesson.moduleId] ?? {};
+      lessonList = pythonLessons;
     }
     startIndex = moduleLessons!.keys.first;
     endIndex = moduleLessons.keys.last;
@@ -25,7 +28,9 @@ class LessonScreen extends StatelessWidget {
   }
 
   Future<String> loadMarkdownData() async {
-    return await rootBundle.loadString('assets/lessons/$language/lesson${lesson.id}.md');
+    return await rootBundle.loadString(
+      'assets/lessons/$language/lesson${lesson.id}.md',
+    );
   }
 
   void _launchExternalUrl(String url) async {
@@ -54,29 +59,58 @@ class LessonScreen extends StatelessWidget {
             // Previous Button
             currentIndex > startIndex
                 ? TextButton.icon(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (ctx) => LessonScreen(language: language, lesson: javaLessons[currentIndex - 1]!)),
-                );
-              },
-              icon: const Icon(Icons.arrow_back_ios, size: 16, color: kJavaMocha),
-              label: const Text("ဢွၼ်ၼႃႈ", style: TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold)),
-            )
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (ctx) => LessonScreen(
+                            language: language,
+                            lesson: lessonList[currentIndex - 1]!,
+                          ),
+                        ),
+                      );
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back_ios,
+                      size: 16,
+                      color: kJavaMocha,
+                    ),
+                    label: const Text(
+                      "ဢွၼ်ၼႃႈ",
+                      style: TextStyle(
+                        color: kJavaMocha,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
                 : const SizedBox(width: 100), // Placeholder to keep spacing
-
             // Next Button
             currentIndex < endIndex
                 ? TextButton.icon(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (ctx) => LessonScreen(language: language, lesson: javaLessons[currentIndex + 1]!)),
-                );
-              },
-              icon: const Text("တၢင်းၼႃႈ", style: TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold)),
-              label: const Icon(Icons.arrow_forward_ios, size: 16, color: kJavaMocha),
-            )
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (ctx) => LessonScreen(
+                            language: language,
+                            lesson: lessonList[currentIndex + 1]!,
+                          ),
+                        ),
+                      );
+                    },
+                    icon: const Text(
+                      "တၢင်းၼႃႈ",
+                      style: TextStyle(
+                        color: kJavaMocha,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    label: const Icon(
+                      Icons.arrow_forward_ios,
+                      size: 16,
+                      color: kJavaMocha,
+                    ),
+                  )
                 : const SizedBox(width: 100),
           ],
         ),
@@ -93,20 +127,55 @@ class LessonScreen extends StatelessWidget {
                 if (href != null) _launchExternalUrl(href);
               },
               styleSheet: MarkdownStyleSheet(
-                p: const TextStyle(fontSize: 17, height: 1.6, color: kJavaEspresso),
-                h1: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
-                h2: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
-                h3: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
-                h4: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
-                h5: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
-                h6: const TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold, fontFamily: "AJ03"),
+                p: const TextStyle(
+                  fontSize: 17,
+                  height: 1.6,
+                  color: kJavaEspresso,
+                ),
+                h1: const TextStyle(
+                  color: kJavaMocha,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                ),
+                h2: const TextStyle(
+                  color: kJavaMocha,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                ),
+                h3: const TextStyle(
+                  color: kJavaMocha,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                ),
+                h4: const TextStyle(
+                  color: kJavaMocha,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                ),
+                h5: const TextStyle(
+                  color: kJavaMocha,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                ),
+                h6: const TextStyle(
+                  color: kJavaMocha,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                ),
                 codeblockPadding: const EdgeInsets.all(16),
                 codeblockDecoration: BoxDecoration(
                   color: const Color(0xFF1E1E1E),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: kJavaGold.withOpacity(0.3), width: 1),
+                  border: Border.all(
+                    color: kJavaGold.withOpacity(0.3),
+                    width: 1,
+                  ),
                   boxShadow: [
-                    BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 8, offset: const Offset(0, 4)),
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 8,
+                      offset: const Offset(0, 4),
+                    ),
                   ],
                 ),
                 code: const TextStyle(
@@ -121,7 +190,9 @@ class LessonScreen extends StatelessWidget {
           } else if (snapshot.hasError) {
             return const Center(child: Text("Error loading lesson."));
           } else {
-            return const Center(child: CircularProgressIndicator(color: kJavaMocha));
+            return const Center(
+              child: CircularProgressIndicator(color: kJavaMocha),
+            );
           }
         },
       ),
