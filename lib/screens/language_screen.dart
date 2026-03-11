@@ -181,7 +181,7 @@ class LanguageScreen extends StatelessWidget {
                 color: kJavaLatte,
                 shape: BoxShape.circle,
               ),
-              child: const Icon(Icons.coffee, color: kJavaMocha, size: 28),
+              child: const Icon(Icons.computer_rounded, color: kJavaMocha, size: 28),
             ),
             const SizedBox(height: 8),
             Text(

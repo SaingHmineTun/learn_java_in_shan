@@ -22,7 +22,7 @@ class LessonScreen extends StatelessWidget {
       moduleLessons = pythonModules[lesson.moduleId] ?? {};
       lessonList = pythonLessons;
     }
-    startIndex = moduleLessons!.keys.first;
+    startIndex = moduleLessons.keys.first;
     endIndex = moduleLessons.keys.last;
     currentIndex = lesson.id;
   }
