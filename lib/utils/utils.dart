@@ -151,13 +151,14 @@ const Map<int, Map<int, String>> pythonModules = {
     19: "Set Operations"
   },
   3: {
-    16: "Arithmetic",
-    17: "Assignment",
-    18: "Comparison",
-    19: "Logical",
-    20: "Identity",
-    21: "Membership",
-    22: "Operator precedence",
+    20: "Python Operators",
+    21: "Arithmetic Operators",
+    22: "Assignment Operators",
+    23: "Comparison Operators",
+    24: "Logical Operators",
+    25: "Identity Operators",
+    26: "Membership Operators",
+    27: "Operator Precedence"
   },
   4: {
     23: "If conditional statement",
@@ -219,6 +220,14 @@ final Map<int, Lesson> pythonLessons = {
   17: Lesson(2, 17),
   18: Lesson(2, 18),
   19: Lesson(2, 19),
+  20: Lesson(3, 20),
+  21: Lesson(3, 21),
+  22: Lesson(3, 22),
+  23: Lesson(3, 23),
+  24: Lesson(3, 24),
+  25: Lesson(3, 25),
+  26: Lesson(3, 26),
+  27: Lesson(3, 27),
 };
 final Map<int, Lesson> javaLessons = {
   1: Lesson(1, 1),
