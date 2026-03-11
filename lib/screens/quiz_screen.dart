@@ -33,11 +33,11 @@ class _QuizScreenState extends State<QuizScreen> {
     List<Quiz> sourceList;
     if (widget.moduleNumber == 0) {
       // FINAL TEST: Combine all module lists into one flat list
-      sourceList = allQuizzes.expand((module) => module).toList();
+      sourceList = allJavaQuizzes.expand((module) => module).toList();
       totalQuizNumber = 20; // Let's make the final exam 20 questions
     } else {
       // REGULAR MODULE: Pick from the specific module
-      sourceList = allQuizzes[widget.moduleNumber - 1];
+      sourceList = allJavaQuizzes[widget.moduleNumber - 1];
       totalQuizNumber = 10;
     }
 

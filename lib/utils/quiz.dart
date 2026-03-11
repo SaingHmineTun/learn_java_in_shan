@@ -10,33 +10,33 @@ class Quiz {
   ); // 1st index will always be the correct answer
 }
 
-final List<Quiz> quizzes1 = [
+final List<Quiz> javaQuizM1 = [
   // --- Topic 1 & 2: Installation & Basics ---
-  Quiz(1, "JDK မၢႆထိုင်သင်?", [
+  Quiz(1, "What does JDK stand for?", [
     "Java Development Kit",
     "Java Design Kit",
     "Java Deployment Kit",
     "Java Desktop Kit",
   ]),
-  Quiz(2, "တႃႇတေတႅမ်ႈ Java လႆႈ လူဝ်ႇမီးသင်?", [
+  Quiz(2, "What is required to write and compile Java code?", [
     "JDK",
     "JRE only",
     "JVM only",
     "Python SDK",
   ]),
-  Quiz(3, "IntelliJ IDEA ပဵၼ်သင်?", [
+  Quiz(3, "What is IntelliJ IDEA?", [
     "IDE",
     "Operating System",
     "Compiler",
     "Data type",
   ]),
-  Quiz(4, "JVM မၢႆထိုင်သင်?", [
+  Quiz(4, "What does JVM stand for?", [
     "Java Virtual Machine",
     "Java Variable Method",
     "Java Visual Machine",
     "Java Version Manager",
   ]),
-  Quiz(5, "Java source file extension ပဵၼ်သင်?", [
+  Quiz(5, "What is the file extension for Java source code?", [
     ".java",
     ".class",
     ".exe",
@@ -44,31 +44,31 @@ final List<Quiz> quizzes1 = [
   ]),
 
   // --- Topic 3: Variables & Data Types ---
-  Quiz(6, "Variable ပဵၼ်သင်?", [
-    "တီႈသိမ်း data",
-    "Method",
-    "Class",
-    "Operator",
+  Quiz(6, "What is a Variable?", [
+    "A container for storing data",
+    "A method",
+    "A class",
+    "An operator",
   ]),
-  Quiz(7, "Java ပဵၼ် Programming လၢႆးလႂ်?", [
+  Quiz(7, "Java is which type of programming language?", [
     "Strongly Typed",
     "Weakly Typed",
     "No Type",
     "Scripting",
   ]),
-  Quiz(8, "Data type လုၵ်ႉတီႈလႂ်မႃး?", [
-    "Keyword တီႈ Java",
-    "String",
-    "Variable name",
+  Quiz(8, "Where do data types come from?", [
+    "Keywords in Java",
+    "Strings",
+    "Variable names",
     "Comments",
   ]),
-  Quiz(9, "ဢၼ်လႂ်ပဵၼ် naming convention တႃႇ variable?", [
+  Quiz(9, "Which is the standard naming convention for variables in Java?", [
     "camelCase",
     "PascalCase",
     "UPPERCASE",
     "kebab-case",
   ]),
-  Quiz(10, "int x = 10; ၼႂ်းၼႆႉ x ပဵၼ်သင်?", [
+  Quiz(10, "In 'int x = 10;', what is 'x'?", [
     "Variable name",
     "Data type",
     "Value",
@@ -76,583 +76,634 @@ final List<Quiz> quizzes1 = [
   ]),
 
   // --- Topic 4: Integer Data Types ---
-  Quiz(11, "byte မီးပိုၼ်ႉတီႈလၢႆ bit?", [
+  Quiz(11, "How many bits is a 'byte' type?", [
     "8 bits",
     "16 bits",
     "32 bits",
     "64 bits",
   ]),
-  Quiz(12, "int မီးပိုၼ်ႉတီႈလၢႆ bit?", [
+  Quiz(12, "How many bits is an 'int' type?", [
     "32 bits",
     "8 bits",
     "16 bits",
     "64 bits",
   ]),
-  Quiz(13, "long မီးပိုၼ်ႉတီႈလၢႆ bit?", [
+  Quiz(13, "How many bits is a 'long' type?", [
     "64 bits",
     "32 bits",
     "16 bits",
     "8 bits",
   ]),
-  Quiz(14, "short မီးပိုၼ်ႉတီႈလၢႆ bit?", [
+  Quiz(14, "How many bits is a 'short' type?", [
     "16 bits",
     "32 bits",
     "64 bits",
     "8 bits",
   ]),
-  Quiz(15, "ဢၼ်လႂ်ပဵၼ် Integer type ဢၼ်ယႂ်ႇသေပိူၼ်ႈ?", [
+  Quiz(15, "Which is the largest Integer data type?", [
     "long",
     "int",
     "short",
     "byte",
   ]),
-  Quiz(16, "byte သိမ်းလႆႈၵႃႈလႂ်?", [
+  Quiz(16, "What is the range of a 'byte'?", [
     "-128 to 127",
     "0 to 255",
     "-32768 to 32767",
     "No limit",
   ]),
-  Quiz(17, "တႃႇတေတႅမ်ႈ long လူဝ်ႇသႂ်ႇတူဝ်လိၵ်ႈသင်တီႈၽၢႆႇလင်?", [
+  Quiz(17, "What letter is added to the end of a 'long' value?", [
     "L",
     "F",
     "D",
     "S",
   ]),
-  Quiz(18, "Integer type လႂ်ပဵၼ် default တႃႇတူဝ်ၼပ်ႉ?", [
+  Quiz(18, "Which Integer type is the default for whole numbers?", [
     "int",
     "long",
     "short",
     "byte",
   ]),
-  Quiz(19, "byte b = 130; ၼႆႉပဵၼ်သင်?", [
-    "Error",
+  Quiz(19, "What happens if you write 'byte b = 130;'?", [
+    "Compile Error",
     "Correct",
     "Warning",
     "Overflow",
   ]),
-  Quiz(20, "int မီးၵႃႈၶၼ် default ပဵၼ်လၢႆ?", ["0", "1", "null", "-1"]),
+  Quiz(20, "What is the default value of an 'int' instance variable?", [
+    "0",
+    "1",
+    "null",
+    "-1",
+  ]),
 
   // --- Topic 5: Floating, Char, Boolean, Comments ---
-  Quiz(21, "တႃႇသိမ်းတူဝ်ၼပ်ႉမီးၸူၵ်း (decimal) လူဝ်ႇၸႂ်ႉသင်?", [
+  Quiz(21, "Which type is used to store decimal numbers?", [
     "double",
     "int",
     "long",
     "boolean",
   ]),
-  Quiz(22, "float မီးပိုၼ်ႉတီႈလၢႆ bit?", [
+  Quiz(22, "How many bits is a 'float'?", [
     "32 bits",
     "64 bits",
     "128 bits",
     "16 bits",
   ]),
-  Quiz(23, "double မီးပိုၼ်ႉတီႈလၢႆ bit?", [
+  Quiz(23, "How many bits is a 'double'?", [
     "64 bits",
     "32 bits",
     "16 bits",
     "128 bits",
   ]),
-  Quiz(24, "boolean မီးၵႃႈၶၼ်သင်လၢႆလၢႆ?", [
+  Quiz(24, "What are the possible values for a 'boolean'?", [
     "true, false",
     "0, 1",
     "yes, no",
     "null",
   ]),
-  Quiz(25, "char သိမ်းတူဝ်လိၵ်ႈလႆႈလၢႆတူဝ်?", [
-    "1 တူဝ်",
-    "2 တူဝ်",
-    "10 တူဝ်",
-    "ဢမ်ႇမီးၶိတ်းၶႂၢၵ်ႈ",
+  Quiz(25, "How many characters can a 'char' store?", [
+    "1 character",
+    "2 characters",
+    "10 characters",
+    "No limit",
   ]),
-  Quiz(26, "တႃႇတႅမ်ႈ single-line comment လူဝ်ႇၸႂ်ႉသင်?", [
-    "//",
-    "/*",
-    "--",
-    "#",
-  ]),
-  Quiz(27, "တႃႇတႅမ်ႈ multi-line comment လူဝ်ႇၸႂ်ႉသင်?", [
-    "/* */",
-    "//",
-    "",
-    "##",
-  ]),
-  Quiz(28, "char ၸႂ်ႉ Symbol သင်ႁူမ်ႇဝႆႉ?", [
+  Quiz(26, "How do you write a single-line comment?", ["//", "/*", "--", "#"]),
+  Quiz(27, "How do you write a multi-line comment?", ["/* */", "//", "", "##"]),
+  Quiz(28, "What symbol is used to wrap a 'char' value?", [
     "' ' (Single quote)",
     "\" \" (Double quote)",
     "{ }",
     "[ ]",
   ]),
-  Quiz(29, "double d = 10.5; ၼႆႉမၢၼ်ႇမႅၼ်ႈယူႇႁႃႉ?", [
-    "မၢၼ်ႇမႅၼ်ႈ",
-    "ၽိတ်း",
+  Quiz(29, "Is 'double d = 10.5;' valid?", [
+    "Yes, it is valid",
+    "No, it is false",
     "Warning",
     "Error",
   ]),
-  Quiz(30, "boolean isJavaFun = \"true\"; ၼႆႉပဵၼ်သင်?", [
-    "Error",
+  Quiz(30, "What is the result of 'boolean isJavaFun = \"true\";'?", [
+    "Compile Error",
     "Correct",
     "Warning",
     "None",
   ]),
 
   // --- Topic 6: Arithmetic Operators ---
-  Quiz(31, "ဢၼ်လႂ်ပဵၼ် operator တႃႇၼပ်ႉဢဝ်ဢၼ်လိူဝ် (remainder)?", [
+  Quiz(31, "Which operator is used to find the remainder (modulo)?", [
     "%",
     "/",
     "*",
     "+",
   ]),
-  Quiz(32, "10 % 3 ၵႃႈၶၼ်ပဵၼ်လၢႆ?", ["1", "3", "0", "3.33"]),
-  Quiz(33, "5 + 2 * 3 ၵႃႈၶၼ်ပဵၼ်လၢႆ?", ["11", "21", "10", "15"]),
-  Quiz(34, "operator / ၸႂ်ႉတႃႇသင်?", [
-    "ၸၢႆႇ (Division)",
-    "လိူဝ် (Modulo)",
-    "တူၼ်း (Multiplication)",
-    "ထႅမ် (Addition)",
+  Quiz(32, "What is the result of '10 % 3'?", ["1", "3", "0", "3.33"]),
+  Quiz(33, "What is the result of '5 + 2 * 3'?", ["11", "21", "10", "15"]),
+  Quiz(34, "What is the '/' operator used for?", [
+    "Division",
+    "Modulo",
+    "Multiplication",
+    "Addition",
   ]),
-  Quiz(35, "10 / 4 ၼႂ်း int result ပဵၼ်လၢႆ?", ["2", "2.5", "3", "0"]),
+  Quiz(35, "What is the result of '10 / 4' in integer division?", [
+    "2",
+    "2.5",
+    "3",
+    "0",
+  ]),
 
   // --- Topic 7: Assignment Operators ---
-  Quiz(36, "= မၢႆထိုင်သင်?", [
+  Quiz(36, "What does '=' represent in Java?", [
     "Assignment",
     "Equal to",
     "Comparison",
     "Logical",
   ]),
-  Quiz(37, "x += 5; မၢႆထိုင်သင်?", [
+  Quiz(37, "What does 'x += 5;' mean?", [
     "x = x + 5",
     "x = 5",
     "x + 5 = x",
     "Error",
   ]),
-  Quiz(38, "x *= 2; မၢႆထိုင်သင်?", ["x = x * 2", "x = 2", "x * 2 = x", "None"]),
-  Quiz(39, "x -= 3; မၢႆထိုင်သင်?", [
+  Quiz(38, "What does 'x *= 2;' mean?", [
+    "x = x * 2",
+    "x = 2",
+    "x * 2 = x",
+    "None",
+  ]),
+  Quiz(39, "What does 'x -= 3;' mean?", [
     "x = x - 3",
     "x = 3",
     "x - 3 = x",
     "Error",
   ]),
-  Quiz(40, "x /= 2; မၢႆထိုင်သင်?", ["x = x / 2", "x = 2", "x / 2 = x", "None"]),
+  Quiz(40, "What does 'x /= 2;' mean?", [
+    "x = x / 2",
+    "x = 2",
+    "x / 2 = x",
+    "None",
+  ]),
 
   // --- Topic 8: Unary Operators ---
-  Quiz(41, "++x ပဵၼ်သင်?", [
+  Quiz(41, "What is '++x'?", [
     "Pre-increment",
     "Post-increment",
     "Decrement",
     "Addition",
   ]),
-  Quiz(42, "x++ ပဵၼ်သင်?", [
+  Quiz(42, "What is 'x++'?", [
     "Post-increment",
     "Pre-increment",
     "Decrement",
     "None",
   ]),
-  Quiz(43, "--x ပဵၼ်သင်?", [
+  Quiz(43, "What is '--x'?", [
     "Pre-decrement",
     "Post-decrement",
     "Increment",
     "Subtraction",
   ]),
-  Quiz(44, "int x=5; int y=++x; y ပဵၼ်လၢႆ?", ["6", "5", "4", "7"]),
-  Quiz(45, "int x=5; int y=x++; y ပဵၼ်လၢႆ?", ["5", "6", "4", "7"]),
+  Quiz(44, "If int x=5; int y=++x; what is y?", ["6", "5", "4", "7"]),
+  Quiz(45, "If int x=5; int y=x++; what is y?", ["5", "6", "4", "7"]),
 
   // --- Topic 9: Relational Operators ---
-  Quiz(46, "== ၸႂ်ႉတႃႇသင်?", [
-    "တႅၵ်ႈဝႃႈမိူၼ်ၵၼ်ႁႃႉ",
-    "Assign value",
+  Quiz(46, "What is '==' used for?", [
+    "Comparing if values are equal",
+    "Assigning a value",
     "Not equal",
     "Greater than",
   ]),
-  Quiz(47, "!= မၢႆထိုင်သင်?", [
-    "ဢမ်ႇမိူၼ်ၵၼ်",
-    "မိူၼ်ၵၼ်",
+  Quiz(47, "What does '!=' mean?", [
+    "Not equal to",
+    "Equal to",
     "Greater than",
     "Less than",
   ]),
-  Quiz(48, "Relational operator ပၼ် result ပဵၼ်သင်?", [
+  Quiz(48, "What result type do relational operators return?", [
     "boolean",
     "int",
     "String",
     "double",
   ]),
-  Quiz(49, "10 > 5 ပဵၼ်သင်?", ["true", "false", "null", "Error"]),
-  Quiz(50, "5 <= 5 ပဵၼ်သင်?", ["true", "false", "null", "Error"]),
+  Quiz(49, "What is the result of '10 > 5'?", [
+    "true",
+    "false",
+    "null",
+    "Error",
+  ]),
+  Quiz(50, "What is the result of '5 <= 5'?", [
+    "true",
+    "false",
+    "null",
+    "Error",
+  ]),
 
   // --- Topic 10: Logical Operators ---
-  Quiz(51, "&& မၢႆထိုင်သင်?", [
+  Quiz(51, "What does '&&' represent?", [
     "Logical AND",
     "Logical OR",
     "Logical NOT",
     "Assignment",
   ]),
-  Quiz(52, "|| မၢႆထိုင်သင်?", [
+  Quiz(52, "What does '||' represent?", [
     "Logical OR",
     "Logical AND",
     "Logical NOT",
     "Bitwise",
   ]),
-  Quiz(53, "! မၢႆထိုင်သင်?", [
+  Quiz(53, "What does '!' represent?", [
     "Logical NOT",
     "Logical AND",
     "Logical OR",
     "Factorial",
   ]),
-  Quiz(54, "(true && false) ပဵၼ်သင်?", ["false", "true", "null", "Error"]),
-  Quiz(55, "(true || false) ပဵၼ်သင်?", ["true", "false", "null", "Error"]),
+  Quiz(54, "What is the result of '(true && false)'?", [
+    "false",
+    "true",
+    "null",
+    "Error",
+  ]),
+  Quiz(55, "What is the result of '(true || false)'?", [
+    "true",
+    "false",
+    "null",
+    "Error",
+  ]),
 
   // --- Topic 11: Ternary Operator ---
-  Quiz(56, "Ternary operator မီးသင်လၢႆ?", [
+  Quiz(56, "What is the syntax for the Ternary operator?", [
     "? :",
     "if else",
     "switch",
     "&& ||",
   ]),
-  Quiz(57, "condition ? x : y; သင် condition ပဵၼ် true တေဢဝ်သင်?", [
+  Quiz(57, "In 'condition ? x : y;', if condition is true, what is returned?", [
     "x",
     "y",
     "true",
     "false",
   ]),
-  Quiz(58, "int x = (5 > 2) ? 10 : 20; x ပဵၼ်လၢႆ?", ["10", "20", "5", "2"]),
+  Quiz(58, "What is the result of 'int x = (5 > 2) ? 10 : 20;'?", [
+    "10",
+    "20",
+    "5",
+    "2",
+  ]),
 
   // --- Topic 12: String Class ---
-  Quiz(59, "String ၼႂ်း Java ပဵၼ်သင်?", [
+  Quiz(59, "What is a String in Java?", [
     "Class/Object",
     "Primitive type",
     "Operator",
     "Method",
   ]),
-  Quiz(60, "တႃႇတႅမ်ႈ String လူဝ်ႇၸႂ်ႉ Symbol သင်?", [
+  Quiz(60, "What symbols wrap a String value?", [
     "\" \" (Double quote)",
     "' ' (Single quote)",
     "{ }",
     "< >",
   ]),
-  Quiz(61, "String concatenation ၸႂ်ႉ operator သင်?", [
+  Quiz(61, "Which operator is used for String concatenation?", [
     "+",
     "*",
     "&",
     "concat",
   ]),
-  Quiz(62, "String s = \"Hi\"; s.length() ပဵၼ်လၢႆ?", ["2", "1", "0", "3"]),
-  Quiz(63, "String ပဵၼ် Immutable မၢႆထိုင်သင်?", [
-    "လႅၵ်ႈလၢႆႈဢမ်ႇလႆႈ",
-    "လႅၵ်ႈလၢႆႈလႆႈ",
-    "ပဵၼ်တူဝ်ၼပ်ႉ",
-    "Delete ဢမ်ႇလႆႈ",
+  Quiz(62, "What is the result of '\"Hi\".length()'?", ["2", "1", "0", "3"]),
+  Quiz(63, "What does it mean that Strings are 'Immutable'?", [
+    "They cannot be changed after creation",
+    "They can be changed",
+    "They are numbers",
+    "They cannot be deleted",
   ]),
 
   // --- Topic 13: Scanner (Input) ---
-  Quiz(64, "တႃႇႁပ်ႉ Input လူဝ်ႇၸႂ်ႉ Class သင်?", [
+  Quiz(64, "Which class is used to receive user input?", [
     "Scanner",
     "System",
     "String",
     "Input",
   ]),
-  Quiz(65, "Scanner မီးၼႂ်း package လႂ်?", [
+  Quiz(65, "In which package is the Scanner class located?", [
     "java.util",
     "java.lang",
     "java.io",
     "java.net",
   ]),
-  Quiz(66, "တႃႇႁပ်ႉ String (တူဝ်လိၵ်ႈ) လူဝ်ႇၸႂ်ႉ method လႂ်?", [
+  Quiz(66, "Which method reads a full line of text?", [
     "nextLine()",
     "nextInt()",
     "nextDouble()",
     "nextChar()",
   ]),
-  Quiz(67, "တႃႇႁပ်ႉ int လူဝ်ႇၸႂ်ႉ method လႂ်?", [
+  Quiz(67, "Which method reads an integer input?", [
     "nextInt()",
     "nextLine()",
     "nextFloat()",
     "next()",
   ]),
-  Quiz(68, "Scanner sc = new Scanner(____); လူဝ်ႇသႂ်ႇသင်?", [
-    "System.in",
-    "System.out",
-    "Runtime",
-    "File",
-  ]),
+  Quiz(
+    68,
+    "What goes in the parentheses of 'new Scanner(____)' for console input?",
+    ["System.in", "System.out", "Runtime", "File"],
+  ),
 
   // --- Mixed Logic (69 - 100) ---
-  Quiz(69, "Java keywords ဢၼ်လႂ်ပဵၼ်တူဝ်လိၵ်ႈလဵၵ်ႉတင်းသဵင်ႈ?", [
-    "မၼ်းၸႂ်ႉ lowercase",
-    "မၼ်းၸႂ်ႉ Uppercase",
-    "Mix",
-    "None",
+  Quiz(69, "Java keywords are written in which case?", [
+    "All lowercase",
+    "All Uppercase",
+    "Mixed case",
+    "PascalCase",
   ]),
-  Quiz(70, "int a = 10, b = 20; a == b ပဵၼ်သင်?", [
+  Quiz(70, "Result of 'int a = 10, b = 20; a == b'?", [
     "false",
     "true",
     "null",
     "Error",
   ]),
-  Quiz(71, "short s = 50; int i = s; ၼႆႉပဵၼ်သင်?", [
+  Quiz(71, "What is 'short s = 50; int i = s;' an example of?", [
     "Widening Casting",
     "Narrowing Casting",
     "Error",
     "None",
   ]),
-  Quiz(72, "int i = 10; short s = (short)i; ၼႆႉပဵၼ်သင်?", [
+  Quiz(72, "What is 'int i = 10; short s = (short)i;' an example of?", [
     "Narrowing Casting",
     "Widening Casting",
     "Error",
     "Implicit",
   ]),
-  Quiz(73, "တႃႇမၢႆထိုင် value ပဵၼ် 0 ၼႂ်း boolean?", [
-    "ဢမ်ႇမီး",
+  Quiz(73, "Does boolean represent a 0 value?", [
+    "No",
     "false",
     "true",
     "null",
   ]),
-  Quiz(74, "တႃႇတႅမ်ႈ Class name ၼႂ်း Java လူဝ်ႇၸႂ်ႉ?", [
+  Quiz(74, "What convention is used for Class names in Java?", [
     "PascalCase",
     "camelCase",
     "snake_case",
     "kebab-case",
   ]),
-  Quiz(75, "System.out.println() ၸႂ်ႉတႃႇသင်?", [
-    "Display output",
+  Quiz(75, "What is 'System.out.println()' used for?", [
+    "Displaying output",
     "Input",
-    "Comment",
-    "Variable",
+    "Comments",
+    "Variables",
   ]),
-  Quiz(76, "main method တေလႆႈယူႇၼႂ်းလႂ်?", [
-    "Class",
-    "Variable",
-    "Package",
-    "Library",
+  Quiz(76, "Where must the main method be located?", [
+    "Inside a Class",
+    "Inside a Variable",
+    "Inside a Package",
+    "Inside a Library",
   ]),
-  Quiz(77, "Java ပဵၼ် Platform Independent မၢႆထိုင်သင်?", [
-    "Run လႆႈၵူႈ OS",
-    "Run လႆႈ Windows ၵူၺ်း",
-    "Run လႆႈ Mac ၵူၺ်း",
-    "Error",
+  Quiz(77, "What does 'Platform Independent' mean?", [
+    "Runs on any Operating System",
+    "Runs on Windows only",
+    "Runs on Mac only",
+    "Compile error",
   ]),
-  Quiz(78, "JRE မၢႆထိုင်သင်?", [
+  Quiz(78, "What does JRE stand for?", [
     "Java Runtime Environment",
     "Java Real Environment",
     "Java Run Engine",
     "Java Rapid Entry",
   ]),
-  Quiz(79, "ဢၼ်လႂ်ဢမ်ႇၸႂ်ႉ Primitive Data Type?", [
+  Quiz(79, "Which of the following is NOT a Primitive Data Type?", [
     "String",
     "int",
     "char",
     "double",
   ]),
-  Quiz(80, "တူဝ်လိၵ်ႈ Java ပဵၼ် Case Sensitive ႁႃႉ?", [
-    "ပဵၼ်",
-    "ဢမ်ႇပဵၼ်",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(81, "Keyword ဢၼ်လႂ်ၸႂ်ႉတႃႇ constant (လႅၵ်ႈလၢႆႈဢမ်ႇလႆႈ)?", [
+  Quiz(80, "Is Java 'Case Sensitive'?", ["Yes", "No", "Sometimes", "None"]),
+  Quiz(81, "Which keyword creates a constant (unchangeable value)?", [
     "final",
     "static",
     "const",
     "fixed",
   ]),
-  Quiz(82, "String x = \"10\" + 20; x ပဵၼ်သင်?", [
+  Quiz(82, "What is the result of 'String x = \"10\" + 20;'?", [
     "1020",
     "30",
     "Error",
     "10 20",
   ]),
-  Quiz(83, "int x = 5; x = x + 1; မီးၵႃႈၶၼ်မိူၼ်သင်?", [
+  Quiz(83, "Which expression is equivalent to 'x = x + 1;'?", [
     "x++",
     "x--",
     "x",
     "x+1",
   ]),
-  Quiz(84, "Unicode ၼႂ်း Java ၸႂ်ႉ char လၢႆ bit?", [
+  Quiz(84, "How many bits does 'char' use for Unicode in Java?", [
     "16 bits",
     "8 bits",
     "32 bits",
     "64 bits",
   ]),
-  Quiz(85, "Naming variable ဢမ်ႇလႆႈတႄႇလူၺ်းသင်?", [
-    "တူဝ်ၼပ်ႉ (Number)",
-    "တူဝ်လိၵ်ႈ (Letter)",
-    "_",
-    "\$",
+  Quiz(85, "A variable name cannot start with what?", [
+    "A number",
+    "A letter",
+    "Underscore (_)",
+    "Dollar sign (\$)",
   ]),
-  Quiz(86, "int x = 10 / 3; x ပဵၼ်လၢႆ?", ["3", "3.33", "4", "0"]),
-  Quiz(87, "double y = 10 / 3; y ပဵၼ်လၢႆ?", ["3.0", "3.33", "3", "0.0"]),
-  Quiz(88, "တႃႇ print တူဝ်လိၵ်ႈယဝ်ႉ လူင်းထႅဝ်မႂ်ႇ ၸႂ်ႉသင်?", [
+  Quiz(86, "What is the result of 'int x = 10 / 3;'?", ["3", "3.33", "4", "0"]),
+  Quiz(87, "What is the result of 'double y = 10 / 3.0;'?", [
+    "3.3333333333333335",
+    "3.0",
+    "3",
+    "0.0",
+  ]),
+  Quiz(88, "Which method prints text and then moves to a new line?", [
     "println()",
     "print()",
     "printf()",
     "next()",
   ]),
-  Quiz(89, "Operator လႂ်ၸႂ်ႉတႃႇ Check type ၶွင် Object?", [
+  Quiz(89, "Which operator checks the type of an Object?", [
     "instanceof",
     "is",
     "typeof",
     "extends",
   ]),
-  Quiz(90, "byte a=10, b=20; byte c = a+b; ပဵၼ်သင်?", [
-    "Error (int results)",
+  Quiz(90, "What happens with 'byte a=10, b=20; byte c = a+b;'?", [
+    "Compile Error (result is int)",
     "30",
     "Correct",
     "None",
   ]),
-  Quiz(91, "String s = null; s.length(); ပဵၼ်သင်?", [
+  Quiz(91, "Result of 'String s = null; s.length();'?", [
     "NullPointerException",
     "0",
     "null",
     "Error",
   ]),
-  Quiz(92, "Variable ဢၼ်ယူႇၼႂ်း Method ႁွင်ႉဝႃႈသင်?", [
+  Quiz(92, "What is a variable defined inside a method called?", [
     "Local variable",
     "Global variable",
     "Instance variable",
     "Static variable",
   ]),
-  Quiz(93, "Java compiler ၸႂ်ႉ command သင်?", [
+  Quiz(93, "Which command is used to compile Java code?", [
     "javac",
     "java",
     "run",
     "compile",
   ]),
-  Quiz(94, "Java interpreter ၸႂ်ႉ command သင်?", [
+  Quiz(94, "Which command is used to run a Java class?", [
     "java",
     "javac",
     "run",
     "execute",
   ]),
-  Quiz(95, "ဢၼ်လႂ်ပဵၼ် valid character?", ["'A'", "\"A\"", "A", "65"]),
-  Quiz(96, "!(5 > 2) ပဵၼ်သင်?", ["false", "true", "Error", "5"]),
-  Quiz(97, "Scanner class လူဝ်ႇ import ႁႃႉ?", [
-    "လူဝ်ႇ",
-    "ဢမ်ႇလူဝ်ႇ",
+  Quiz(95, "Which is a valid character literal?", ["'A'", "\"A\"", "A", "65"]),
+  Quiz(96, "What is the result of '!(5 > 2)'?", [
+    "false",
+    "true",
+    "Error",
+    "5",
+  ]),
+  Quiz(97, "Does the Scanner class need to be imported?", [
+    "Yes",
+    "No",
     "Automatic",
     "Only in Windows",
   ]),
-  Quiz(98, "int x = 010; (Octal) x ပဵၼ်လၢႆ?", ["8", "10", "16", "Error"]),
-  Quiz(99, "int x = 0x10; (Hex) x ပဵၼ်လၢႆ?", ["16", "10", "8", "Error"]),
-  Quiz(100, "Java တႄႇဢွၵ်ႇပီလႂ်?", ["1995", "1991", "2000", "1985"]),
+  Quiz(98, "In 'int x = 010;', what is the decimal value of x (Octal)?", [
+    "8",
+    "10",
+    "16",
+    "Error",
+  ]),
+  Quiz(99, "In 'int x = 0x10;', what is the decimal value of x (Hex)?", [
+    "16",
+    "10",
+    "8",
+    "Error",
+  ]),
+  Quiz(100, "In what year was Java first released?", [
+    "1995",
+    "1991",
+    "2000",
+    "1985",
+  ]),
 ];
-final List<Quiz> quizzes2 = [
+final List<Quiz> javaQuizM2 = [
   // --- Topic 14, 15, 16: Arrays & Multi-Dimensional Arrays ---
-  Quiz(101, "Array ၼႂ်း Java တႄႇၼပ်ႉဢွင်ႈတီႈ (index) တီႈလၢႆ?", [
+  Quiz(101, "What is the starting index of an Array in Java?", [
     "0",
     "1",
     "-1",
-    "ဢမ်ႇမီးသေဢၼ်",
+    "None of the above",
   ]),
-  Quiz(102, "တႃႇႁူႉတၢင်းယၢဝ်း Array ၸႂ်ႉသင်?", [
+  Quiz(102, "Which property is used to find the length of an Array?", [
     "length",
     "size()",
     "count",
     "length()",
   ]),
-  Quiz(103, "int[] arr = new int[5]; arr သိမ်းလႆႈလၢႆတူဝ်?", [
+  Quiz(103, "How many elements can 'int[] arr = new int[5];' store?", [
     "5",
     "4",
     "6",
     "0",
   ]),
-  Quiz(104, "Array ၼႆႉသိမ်း Data type ဢမ်ႇမိူၼ်ၵၼ်လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "လႆႈသင်ပဵၼ် String",
+  Quiz(104, "Can an Array store different data types at once?", [
+    "No",
+    "Yes",
+    "Sometimes",
+    "Only if it is a String",
   ]),
-  Quiz(105, "Multi-dimensional array မၢႆထိုင်သင်?", [
-    "Array ၼႂ်း Array",
-    "Array ဢၼ်မီး String",
-    "Array ဢၼ်မီးတူဝ်ၼပ်ႉလၢႆလၢႆတူဝ်",
-    "Variable ธรรมดา",
+  Quiz(105, "What is a Multi-dimensional array?", [
+    "An Array within an Array",
+    "An Array containing Strings",
+    "An Array with multiple numbers",
+    "A normal variable",
   ]),
-  Quiz(106, "int[][] x = new int[2][3]; မီးလၢႆႁွင်ႈ (elements)?", [
+  Quiz(106, "How many elements are in 'int[][] x = new int[2][3];'?", [
     "6",
     "5",
     "2",
     "3",
   ]),
-  Quiz(107, "တႃႇတႄႇ Array လူၺ်ႈသႂ်ႇၵႃႈၶၼ်ၵမ်းလဵဝ် ၸႂ်ႉ Symbol သင်?", [
-    "{ }",
-    "[ ]",
-    "( )",
-    "< >",
-  ]),
-  Quiz(108, "String s = \"A,B,C\"; s.split(\",\"); တေလႆႈသင်?", [
-    "String Array",
-    "String 1 တူဝ်",
-    "int Array",
+  Quiz(
+    107,
+    "Which symbols are used to initialize an Array with values immediately?",
+    ["{ }", "[ ]", "( )", "< >"],
+  ),
+  Quiz(108, "What is the result of 'String s = \"A,B,C\"; s.split(\",\");'?", [
+    "A String Array",
+    "A single String",
+    "An int Array",
     "Error",
   ]),
-  Quiz(109, "Array index ဢၼ်ယႂ်ႇသေပိူၼ်ႈ ပဵၼ်လၢႆ?", [
+  Quiz(109, "What is the highest index in an Array?", [
     "length - 1",
     "length",
     "100",
     "0",
   ]),
-  Quiz(110, "သင်ၼပ်ႉ index ပူၼ်ႉတၢင်းယၢဝ်း Array တေပဵၼ်သင်?", [
+  Quiz(110, "What happens if you access an index beyond the Array's length?", [
     "ArrayIndexOutOfBoundsException",
     "null",
     "0",
-    "Error compile time",
+    "Compile time error",
   ]),
 
   // --- Topic 17, 18, 19: If Conditionals ---
-  Quiz(111, "Conditional Statement ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇလိူၵ်ႈတၢင်းႁဵတ်း",
-    "တႃႇၼပ်ႉတူဝ်ၼပ်ႉ",
-    "တႃႇသိမ်း data",
-    "တႃႇ loop",
+  Quiz(111, "What is a Conditional Statement used for?", [
+    "To choose a path of execution",
+    "To count numbers",
+    "To store data",
+    "To loop code",
   ]),
-  Quiz(112, "ၼႂ်း if (condition) ၼၼ်ႉ လူဝ်ႇမီး result ပဵၼ်သင်?", [
+  Quiz(112, "What result type is required inside an 'if (condition)'?", [
     "boolean",
     "int",
     "String",
     "double",
   ]),
-  Quiz(113, "သင် if false ဝႆႉ သမ်ႉၶႂ်ႈႁဵတ်းထႅင်ႈလၢႆးၼိုင်ႈ လူဝ်ႇၸႂ်ႉသင်?", [
-    "else",
-    "then",
-    "switch",
-    "while",
-  ]),
-  Quiz(114, "သင်မီးလၢႆ condition လူဝ်ႇၸႂ်ႉသင်?", [
-    "else if",
-    "if only",
-    "if else",
-    "while",
-  ]),
-  Quiz(115, "if (x = 10) ၼႂ်း Java ပဵၼ်သင်?", [
-    "Error (လူဝ်ႇၸႂ်ႉ ==)",
+  Quiz(
+    113,
+    "Which keyword is used to provide an alternative if the 'if' condition is false?",
+    ["else", "then", "switch", "while"],
+  ),
+  Quiz(
+    114,
+    "Which keyword is used to check another condition if the first 'if' is false?",
+    ["else if", "if only", "if else", "while"],
+  ),
+  Quiz(115, "What is the result of 'if (x = 10)' in Java?", [
+    "Error (should use ==)",
     "Correct",
     "True",
     "False",
   ]),
-  Quiz(116, "if (5 > 2) { ... } တေလႅၼ်ႈႁႃႉ?", [
-    "လႅၼ်ႈ (True)",
-    "ဢမ်ႇလႅၼ်ႈ (False)",
+  Quiz(116, "Will the block inside 'if (5 > 2) { ... }' execute?", [
+    "Yes (True)",
+    "No (False)",
     "Error",
     "None",
   ]),
 
   // --- Topic 20: Switch Statement ---
-  Quiz(117, "Switch ၸႂ်ႉတႅၼ်းသင်လႆႈ?", [
+  Quiz(117, "What can a Switch statement replace?", [
     "if-else-if",
     "for loop",
     "variable",
     "Array",
   ]),
-  Quiz(118, "ၼႂ်း switch လူဝ်ႇၸႂ်ႉ keyword သင် တႃႇၵတ်းယတ်း (stop)?", [
+  Quiz(118, "Which keyword stops the execution of a switch case?", [
     "break",
     "stop",
     "exit",
     "return",
   ]),
-  Quiz(119, "သင် case တင်းသဵင်ႈဢမ်ႇမိူၼ်ၵၼ် တေၵႂႃႇတီႈလႂ်?", [
+  Quiz(119, "Where does execution go if no switch cases match?", [
     "default",
     "else",
     "break",
     "Error",
   ]),
-  Quiz(120, "Data type လႂ်ၸႂ်ႉၼႂ်း switch လႆႈ?", [
+  Quiz(120, "Which data types are allowed in a switch statement?", [
     "String, int, char, enum",
     "boolean, double",
     "float only",
@@ -660,58 +711,63 @@ final List<Quiz> quizzes2 = [
   ]),
 
   // --- Topic 21, 22, 23: Looping (While, Do-While) ---
-  Quiz(121, "Loop ၸႂ်ႉတႃႇသင်?", [
-    "ႁဵတ်းၵၢၼ်သိုပ်ႇၵၼ်လၢႆပွၵ်ႈ",
-    "တႅၵ်ႈ condition",
-    "Input data",
-    "Display String",
+  Quiz(121, "What is a Loop used for?", [
+    "Executing tasks repeatedly",
+    "Testing conditions",
+    "Inputting data",
+    "Displaying Strings",
   ]),
-  Quiz(122, "While loop တေလႅၼ်ႈမိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ condition ပဵၼ် true",
-    "မိူဝ်ႈ condition ပဵၼ် false",
-    "1 ပွၵ်ႈၵူၺ်း",
-    "တေႃႇတေထိုင် 10",
+  Quiz(122, "When does a While loop execute?", [
+    "When the condition is true",
+    "When the condition is false",
+    "Only once",
+    "Until it reaches 10",
   ]),
-  Quiz(123, "Do-While loop လႅၼ်ႈဢူၼ်းသေပိူၼ်ႈလၢႆပွၵ်ႈ?", [
-    "1 ပွၵ်ႈ",
-    "0 ပွၵ်ႈ",
-    "ဢမ်ႇမီးတီႈသုတ်း",
-    "10 ပွၵ်ႈ",
+  Quiz(123, "What is the minimum number of times a Do-While loop executes?", [
+    "1 time",
+    "0 times",
+    "Infinitely",
+    "10 times",
   ]),
-  Quiz(124, "While လႄႈ Do-While ပႅၵ်ႇၵၼ်တီႈလႂ်?", [
-    "Do-While လႅၼ်ႈၵွၼ်ႇၸၢမ်း condition",
-    "While လႅၼ်ႈၵွၼ်ႇ",
-    "မိူၼ်ၵၼ်",
-    "While ဝႆးသေ",
+  Quiz(124, "What is the main difference between While and Do-While?", [
+    "Do-While runs before checking the condition",
+    "While runs first",
+    "They are identical",
+    "While is faster",
   ]),
-  Quiz(125, "Infinite loop မၢႆထိုင်သင်?", [
-    "Loop ဢမ်ႇယဝ်ႉဢမ်ႇဝၢႆး",
-    "Loop 10 ပွၵ်ႈ",
-    "Loop ဢၼ်မီး Error",
-    "Loop ဢၼ်ဢမ်ႇလႅၼ်ႈ",
+  Quiz(125, "What is an Infinite loop?", [
+    "A loop that never ends",
+    "A loop that runs 10 times",
+    "A loop with an error",
+    "A loop that does not run",
   ]),
 
   // --- Topic 24, 25: For Loop & Enhanced For ---
-  Quiz(126, "For loop မီးပုၼ်ႈသင်လၢႆ?", [
+  Quiz(126, "What are the parts of a For loop?", [
     "initialization, condition, update",
     "if, else, break",
     "start, stop",
     "only condition",
   ]),
-  Quiz(127, "Enhanced for loop (For-each) ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇဢဝ် data ၼႂ်း Array/Collection",
-    "တႃႇ loop တူဝ်ၼပ်ႉ",
-    "တႃႇ create array",
-    "တႃႇ break",
+  Quiz(127, "What is the Enhanced for loop (For-each) used for?", [
+    "Iterating through Arrays/Collections",
+    "Looping through numbers",
+    "Creating arrays",
+    "Breaking loops",
   ]),
-  Quiz(128, "for (int i=0; i<5; i++) တေလႅၼ်ႈလၢႆပွၵ်ႈ?", ["5", "4", "6", "0"]),
-  Quiz(129, "Syntax Enhanced for loop ပဵၼ်လၢႆးလႂ်?", [
+  Quiz(128, "How many times will 'for (int i=0; i<5; i++)' run?", [
+    "5",
+    "4",
+    "6",
+    "0",
+  ]),
+  Quiz(129, "What is the syntax for an Enhanced for loop?", [
     "for (Type item : array)",
     "for (Type item in array)",
     "for (array : item)",
     "for (i to array)",
   ]),
-  Quiz(130, "For loop ဢၼ်ဢမ်ႇမီးသင် for(;;) ပဵၼ်သင်?", [
+  Quiz(130, "What is a loop written as 'for(;;)'?", [
     "Infinite loop",
     "Error",
     "1 Loop",
@@ -719,63 +775,63 @@ final List<Quiz> quizzes2 = [
   ]),
 
   // --- Topic 26, 27: Nested If & Nested For ---
-  Quiz(131, "Nested If မၢႆထိုင်သင်?", [
-    "If ၼႂ်း If",
-    "If ၼႂ်း For",
-    "If လၢႆလၢႆဢၼ်",
+  Quiz(131, "What is a Nested If?", [
+    "An If statement inside another If",
+    "An If inside a For loop",
+    "Multiple If statements",
     "Else if",
   ]),
-  Quiz(132, "Nested For ၸႂ်ႉတႃႇသင်?", [
-    "Loop ၼႂ်း Loop (မိူၼ်ၼႂ်း Matrix)",
-    "Loop 1 ပွၵ်ႈ",
-    "Loop String",
-    "Loop constant",
+  Quiz(132, "What is a Nested For loop used for?", [
+    "Loops within loops (like a Matrix)",
+    "A single loop",
+    "Looping Strings",
+    "Looping constants",
   ]),
-  Quiz(133, "Nested for တေလႅၼ်ႈလၢႆးလႂ်?", [
-    "Inner loop လႅၼ်ႈယဝ်ႉၵွၼ်ႇ Outer loop ၸင်ႇ update",
-    "Outer loop လႅၼ်ႈယဝ်ႉၵွၼ်ႇ",
-    "လႅၼ်ႈပိုင်ႈၵၼ်",
+  Quiz(133, "How does a Nested for loop execute?", [
+    "Inner loop finishes before Outer loop updates",
+    "Outer loop runs first",
+    "They run independently",
     "Error",
   ]),
 
   // --- Topic 28, 29, 30: String Methods & Casting ---
-  Quiz(134, "s.toUpperCase() ၸႂ်ႉတႃႇသင်?", [
-    "လႅၵ်ႈပဵၼ်တူဝ်လိၵ်ႈယႂ်ႇ",
-    "လႅၵ်ႈပဵၼ်တူဝ်လိၵ်ႈလဵၵ်ႉ",
-    "ၼပ်ႉတၢင်းယၢဝ်း",
-    "Delete",
+  Quiz(134, "What is 's.toUpperCase()' used for?", [
+    "Converting to uppercase",
+    "Converting to lowercase",
+    "Counting length",
+    "Deleting",
   ]),
-  Quiz(135, "s.trim() ၸႂ်ႉတႃႇသင်?", [
-    "တတ်းပႅတ်ႈတီႈလၢတ်ႈ (space) ၽၢႆႇၼႃႈ/လင်",
-    "တတ်း String",
-    "Replace",
-    "Concat",
+  Quiz(135, "What is 's.trim()' used for?", [
+    "Removing spaces from both ends",
+    "Cutting a String",
+    "Replacing",
+    "Concatenating",
   ]),
-  Quiz(136, "s.replace('a', 'b') ၸႂ်ႉတႃႇသင်?", [
-    "လႅၵ်ႈ a ပဵၼ် b",
-    "Delete a",
-    "Add b",
-    "Find a",
+  Quiz(136, "What is 's.replace('a', 'b')' used for?", [
+    "Changing 'a' to 'b'",
+    "Deleting 'a'",
+    "Adding 'b'",
+    "Finding 'a'",
   ]),
-  Quiz(137, "တႃႇလႅၵ်ႈ String ပဵၼ် int ၸႂ်ႉသင်?", [
+  Quiz(137, "How do you convert a String to an int?", [
     "Integer.parseInt()",
     "String.toInt()",
     "(int)s",
     "parseInt.String()",
   ]),
-  Quiz(138, "s.substring(0, 2) တေဢဝ်တူဝ်လိၵ်ႈလႂ်?", [
-    "Index 0 ထိုင် 1",
-    "Index 0 ထိုင် 2",
-    "Index 1 ထိုင် 2",
-    "0 လႄႈ 2",
+  Quiz(138, "Which characters are returned by 's.substring(0, 2)'?", [
+    "Index 0 to 1",
+    "Index 0 to 2",
+    "Index 1 to 2",
+    "0 and 2",
   ]),
-  Quiz(139, "s.equals(s2) လႄႈ s == s2 ပႅၵ်ႇၵၼ်ႁႃႉ?", [
-    "ပႅၵ်ႇ (equals တႅၵ်ႈ value)",
-    "မိူၼ်ၵၼ်",
-    "== ဝႆးသေ",
-    "equals ၽိတ်း",
+  Quiz(139, "What is the difference between 's.equals(s2)' and 's == s2'?", [
+    "equals compares values; == compares references",
+    "They are identical",
+    "== is faster",
+    "equals is incorrect",
   ]),
-  Quiz(140, "s.contains(\"Java\") ပၼ် result ပဵၼ်သင်?", [
+  Quiz(140, "What is the result type of 's.contains(\"Java\")'?", [
     "boolean",
     "int",
     "String",
@@ -783,348 +839,363 @@ final List<Quiz> quizzes2 = [
   ]),
 
   // --- Mixed & Logic Questions (141-200) ---
-  Quiz(141, "int[] a = {1,2}; int[] b = a; b[0]=5; a[0] ပဵၼ်လၢႆ?", [
+  Quiz(141, "int[] a = {1,2}; int[] b = a; b[0]=5; What is a[0]?", [
     "5",
     "1",
     "0",
     "Error",
   ]),
-  Quiz(142, "Array initialization လႂ်မၢၼ်ႇမႅၼ်ႈ?", [
+  Quiz(142, "Which Array initialization is correct?", [
     "int[] a = {1, 2, 3};",
     "int a = {1, 2};",
     "int[] a = new int(3);",
     "int a[] = new int[3]()",
   ]),
-  Quiz(143, "String[] s = new String[2]; s[0] မီးၵႃႈၶၼ် default ပဵၼ်သင်?", [
-    "null",
-    "\"\"",
+  Quiz(
+    143,
+    "What is the default value of 'String[] s = new String[2]; s[0]'?",
+    ["null", "\"\"", "0", "Error"],
+  ),
+  Quiz(144, "Where can 'if (true) break;' be used?", [
+    "Inside any loop",
+    "Inside an If statement alone",
+    "Inside a Method",
+    "Inside a Variable",
+  ]),
+  Quiz(145, "What does the 'continue' keyword do?", [
+    "Skips the current loop iteration",
+    "Ends the loop",
+    "Exits the method",
+    "Error",
+  ]),
+  Quiz(146, "int i = 0; for(; i<3; i++); What is the final value of i?", [
+    "3",
+    "2",
     "0",
-    "Error",
+    "4",
   ]),
-  Quiz(144, "if (true) break; ၸႂ်ႉၼႂ်းလႂ်လႆႈ?", [
-    "Loop သေဢၼ်ဢၼ်",
-    "If တူဝ်လဵဝ်",
-    "Method",
-    "Variable",
-  ]),
-  Quiz(145, "Keyword continue ၸႂ်ႉတႃႇသင်?", [
-    "ၵျွၵ်းၶၢမ်ႈ loop ပွၵ်ႈၼႆႉ",
-    "ယဝ်ႉ loop",
-    "Exit method",
-    "Error",
-  ]),
-  Quiz(146, "int i = 0; for(; i<3; i++); i ပဵၼ်လၢႆ?", ["3", "2", "0", "4"]),
-  Quiz(147, "Switch ဢမ်ႇမီး break တေပဵၼ်သင်?", [
-    "Fall-through (လႅၼ်ႈလူင်းၵႂႃႇ case တႂ်ႈ)",
+  Quiz(147, "What happens if a Switch case has no 'break'?", [
+    "Fall-through (executes next cases)",
     "Error",
     "Stop",
     "Infinite loop",
   ]),
-  Quiz(148, "boolean b = true; switch(b) ပဵၼ်သင်?", [
-    "Error (boolean ၸႂ်ႉဢမ်ႇလႆႈ)",
+  Quiz(148, "What is the result of 'boolean b = true; switch(b)'?", [
+    "Error (boolean not allowed in switch)",
     "Correct",
     "True",
     "False",
   ]),
-  Quiz(149, "တႃႇတႅၵ်ႈဝႃႈ String ဢမ်ႇမီးသင် ၸႂ်ႉသင်?", [
+  Quiz(149, "How do you check if a String is empty?", [
+    "Both s.isEmpty() and s.length() == 0",
     "s.isEmpty()",
     "s.length() == 0",
-    "Both are correct",
     "s == \"\"",
   ]),
-  Quiz(150, "String index တႄႇတီႈလၢႆ?", ["0", "1", "-1", "None"]),
-  Quiz(151, "for(int i=10; i>0; i--) တေလႅၼ်ႈလၢႆပွၵ်ႈ?", [
+  Quiz(150, "What is the starting index of a String?", [
+    "0",
+    "1",
+    "-1",
+    "None",
+  ]),
+  Quiz(151, "How many times will 'for(int i=10; i>0; i--)' run?", [
     "10",
     "11",
     "9",
     "Infinite",
   ]),
-  Quiz(152, "String s = \"100\"; int i = Integer.valueOf(s); i ပဵၼ်သင်?", [
+  Quiz(152, "What is the result of 'Integer.valueOf(\"100\")'?", [
     "100 (Integer object)",
     "100 (primitive)",
     "Error",
     "null",
   ]),
-  Quiz(153, "int[][] x = {{1}, {2,3}}; x[1][1] ပဵၼ်လၢႆ?", [
+  Quiz(153, "int[][] x = {{1}, {2,3}}; What is x[1][1]?", [
     "3",
     "2",
     "1",
     "Error",
   ]),
-  Quiz(154, "Array ၼႂ်း Java ပဵၼ် Object ႁႃႉ?", [
-    "ပဵၼ်",
-    "ဢမ်ႇပဵၼ်",
+  Quiz(154, "Is an Array in Java considered an Object?", [
+    "Yes",
+    "No",
     "Primitive type",
     "None",
   ]),
-  Quiz(155, "s.charAt(0) ၸႂ်ႉတႃႇသင်?", [
-    "ဢဝ်တူဝ်လိၵ်ႈတီႈ index 0",
-    "Delete index 0",
-    "Find 0",
+  Quiz(155, "What does 's.charAt(0)' do?", [
+    "Returns the character at index 0",
+    "Deletes index 0",
+    "Finds 0",
     "None",
   ]),
-  Quiz(156, "s.toLowerCase() ပၼ် String မႂ်ႇႁႃႉ?", [
-    "ပၼ် (String is immutable)",
-    "ဢမ်ႇပၼ် (လႅၵ်ႈတီႈၵဝ်ႇ)",
+  Quiz(156, "Does 's.toLowerCase()' return a new String?", [
+    "Yes (Strings are immutable)",
+    "No (changes original)",
     "Error",
     "None",
   ]),
-  Quiz(157, "for (;;) { if(true) break; } တေလႅၼ်ႈလၢႆပွၵ်ႈ?", [
+  Quiz(157, "How many times will 'for (;;) { if(true) break; }' run?", [
     "1",
     "0",
     "Infinite",
     "Error",
   ]),
-  Quiz(158, "int x = 5; if(x > 0) { x = 10; } else { x = 0; } x ပဵၼ်လၢႆ?", [
+  Quiz(158, "int x = 5; if(x > 0) { x = 10; } else { x = 0; } What is x?", [
     "10",
     "5",
     "0",
     "Error",
   ]),
-  Quiz(159, "Array ဢၼ်မီးတၢင်းယၢဝ်း 0 မီးႁႃႉ?", [
-    "မီး (new int[0])",
-    "ဢမ်ႇမီး",
-    "Error compile",
+  Quiz(159, "Can an Array have a length of 0?", [
+    "Yes (new int[0])",
+    "No",
+    "Compile error",
     "None",
   ]),
-  Quiz(160, "s.indexOf('a') ပၼ်သင်?", [
-    "Index ဢွင်ႈတီႈ 'a'",
+  Quiz(160, "What does 's.indexOf('a')' return?", [
+    "The index of 'a'",
     "boolean",
     "String",
     "Error",
   ]),
-  Quiz(161, "တႃႇပဵၼ် int သမ်ႉၶႂ်ႈလႅၵ်ႈပဵၼ် String?", [
+  Quiz(161, "How do you convert an int to a String?", [
     "String.valueOf(i)",
     "i.toString()",
     "(String)i",
     "Integer.parseString(i)",
   ]),
-  Quiz(162, "if (true && false || true) result?", [
+  Quiz(162, "Result of '(true && false || true)'?", [
     "true",
     "false",
     "null",
     "Error",
   ]),
-  Quiz(163, "Loop လႂ်ၵူတ်ႇထတ်း condition တီႈၽၢႆႇလင်?", [
+  Quiz(163, "Which loop checks the condition at the end?", [
     "do-while",
     "while",
     "for",
     "for-each",
   ]),
-  Quiz(164, "Array length ပဵၼ် Variable ႁႃႉ Method?", [
-    "Variable (final)",
+  Quiz(164, "Is Array 'length' a variable or a method?", [
+    "Variable (final field)",
     "Method",
     "Class",
     "Constructor",
   ]),
-  Quiz(165, "String length() ပဵၼ် Variable ႁႃႉ Method?", [
+  Quiz(165, "Is String 'length()' a variable or a method?", [
     "Method",
     "Variable",
     "Class",
     "Field",
   ]),
-  Quiz(166, "s.concat(\" \") မိူၼ် operator လႂ်?", ["+", "*", "/", "=="]),
-  Quiz(167, "s.startsWith(\"J\") ပၼ်သင်?", [
+  Quiz(166, "Which operator is 's.concat(\" \")' equivalent to?", [
+    "+",
+    "*",
+    "/",
+    "==",
+  ]),
+  Quiz(167, "What is the result type of 's.startsWith(\"J\")'?", [
     "boolean",
     "int",
     "String",
     "char",
   ]),
-  Quiz(168, "Nested for ၼႂ်း Nested for (3 levels) လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ 2 levels ၵူၺ်း",
+  Quiz(168, "Are 3 levels of Nested For loops allowed?", [
+    "Yes",
+    "No",
+    "Only 2 levels allowed",
     "Error",
   ]),
-  Quiz(169, "int i = 5; do { i++; } while(i < 5); i ပဵၼ်လၢႆ?", [
+  Quiz(169, "int i = 5; do { i++; } while(i < 5); What is i?", [
     "6",
     "5",
     "0",
     "4",
   ]),
-  Quiz(170, "int[] n = new int[3]; n[3] = 10; ပဵၼ်သင်?", [
+  Quiz(170, "What happens with 'int[] n = new int[3]; n[3] = 10;'?", [
     "ArrayIndexOutOfBoundsException",
     "Correct",
     "n[2]=10",
-    "Error compile",
+    "Compile error",
   ]),
-  Quiz(171, "String s = \"Java\"; s.substring(2); တေလႆႈသင်?", [
+  Quiz(171, "What is the result of '\"Java\".substring(2)'?", [
     "\"va\"",
     "\"ja\"",
     "\"va\"",
     "\"a\"",
   ]),
-  Quiz(172, "String s = \"apple\"; s.replace(\"p\", \"b\"); s ပဵၼ်သင်?", [
-    "\"apple\" (Strings immutable)",
+  Quiz(172, "String s = \"apple\"; s.replace(\"p\", \"b\"); What is s?", [
+    "\"apple\" (Strings are immutable)",
     "\"abble\"",
     "\"p\"",
     "\"b\"",
   ]),
-  Quiz(173, "Switch expression ၸႂ်ႉ -> လႆႈမိူဝ်ႈလႂ်?", [
+  Quiz(173, "When can you use '->' in Switch expressions?", [
     "Java 12/14+",
     "Java 8",
     "Java 7",
-    "ဢမ်ႇလႆႈ",
+    "Not possible",
   ]),
-  Quiz(174, "တႃႇ loop တူဝ်ၼပ်ႉ 1 ထိုင် 10 ဢၼ်လႂ်ငၢႆႈသေပိူၼ်ႈ?", [
+  Quiz(174, "Which is the easiest way to loop from 1 to 10?", [
     "for loop",
     "while",
     "do-while",
     "if-else",
   ]),
-  Quiz(175, "while(true) { } ပဵၼ်သင်?", [
+  Quiz(175, "What is 'while(true) { }'?", [
     "Infinite loop",
     "Error",
     "1 Loop",
     "Stop",
   ]),
-  Quiz(176, "int x = 1; switch(x) { case 1: print(1); } result?", [
-    "1",
-    "Error",
-    "null",
-    "0",
-  ]),
-  Quiz(177, "String s = \" \"; s.isBlank() (Java 11) ပၼ်သင်?", [
+  Quiz(
+    176,
+    "Result of 'int x = 1; switch(x) { case 1: System.out.print(1); }'?",
+    ["1", "Error", "null", "0"],
+  ),
+  Quiz(177, "What does 's.isBlank()' return for a space \" \" (Java 11)?", [
     "true",
     "false",
     "Error",
     "null",
   ]),
-  Quiz(178, "String s = \" \"; s.isEmpty() ပၼ်သင်?", [
+  Quiz(178, "What does 's.isEmpty()' return for a space \" \"?", [
     "false",
     "true",
     "Error",
     "null",
   ]),
-  Quiz(179, "int[][] m = new int[2][]; လႆႈႁႃႉ?", [
-    "လႆႈ (Jagged array)",
-    "ဢမ်ႇလႆႈ",
-    "Error compile",
+  Quiz(179, "Is 'int[][] m = new int[2][];' allowed?", [
+    "Yes (Jagged array)",
+    "No",
+    "Compile error",
     "None",
   ]),
-  Quiz(180, "for(int i : array) i လႅၵ်ႈၵႃႈၶၼ်ၼႂ်း array လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (read only)",
-    "လႆႈ",
-    "လႆႈသင်ပဵၼ် Object",
+  Quiz(180, "Can you change Array values using 'for(int i : array)'?", [
+    "No (read only)",
+    "Yes",
+    "Only if it is an Object",
     "Error",
   ]),
-  Quiz(181, "int i=1; while(i <= 3) { i++; } i ပဵၼ်လၢႆ?", ["4", "3", "1", "2"]),
-  Quiz(
-    182,
-    "for(int i=0; i<2; i++) { for(int j=0; j<2; j++) { ... } } လႅၼ်ႈလၢႆပွၵ်ႈ?",
-    ["4", "2", "6", "8"],
-  ),
-  Quiz(183, "if (5 == 5.0) ပဵၼ်သင်?", ["true", "false", "Error", "None"]),
+  Quiz(181, "int i=1; while(i <= 3) { i++; } What is i?", ["4", "3", "1", "2"]),
+  Quiz(182, "How many times does a Nested 2x2 loop run?", ["4", "2", "6", "8"]),
+  Quiz(183, "What is the result of 'if (5 == 5.0)'?", [
+    "true",
+    "false",
+    "Error",
+    "None",
+  ]),
   Quiz(
     184,
-    "String s = \"ABC\"; char[] c = s.toCharArray(); c.length ပဵၼ်လၢႆ?",
+    "String s = \"ABC\"; char[] c = s.toCharArray(); What is c.length?",
     ["3", "2", "4", "0"],
   ),
-  Quiz(185, "int x = 10; if(x > 5) if(x > 8) x=1; else x=2; x ပဵၼ်လၢႆ?", [
+  Quiz(185, "int x = 10; if(x > 5) if(x > 8) x=1; else x=2; What is x?", [
     "1",
     "2",
     "10",
     "5",
   ]),
-  Quiz(186, "Keyword default ၼႂ်း switch လူဝ်ႇသႂ်ႇတီႈလင်သုတ်းတေႃႇ?", [
-    "ဢမ်ႇလူဝ်ႇ (ယူႇတီႈလႂ်ၵေႃႈလႆႈ)",
-    "လူဝ်ႇ",
-    "ယူႇၽၢႆႇၼႃႈၵူၺ်း",
+  Quiz(186, "Must the 'default' keyword be at the end of a switch?", [
+    "No (can be anywhere)",
+    "Yes",
+    "Must be at the front",
     "Error",
   ]),
-  Quiz(187, "s.lastIndexOf('a') ၼပ်ႉတီႈလႂ်?", [
-    "ၼပ်ႉတီႈလင်မႃး",
-    "ၼပ်ႉတီႈၼႃႈ",
-    "ၼပ်ႉ 1 တူဝ်ၵူၺ်း",
+  Quiz(187, "Where does 's.lastIndexOf('a')' start searching from?", [
+    "The end of the string",
+    "The beginning",
+    "Finds only 1 character",
     "Error",
   ]),
-  Quiz(188, "String s = null; if (s != null && s.length() > 0) result?", [
-    "false (no error)",
+  Quiz(188, "String s = null; if (s != null && s.length() > 0) What happens?", [
+    "false (no error due to short-circuit)",
     "Error",
     "true",
     "null",
   ]),
-  Quiz(189, "String s = null; if (s != null & s.length() > 0) result?", [
+  Quiz(189, "String s = null; if (s != null & s.length() > 0) What happens?", [
     "Error (NullPointerException)",
     "false",
     "true",
     "null",
   ]),
-  Quiz(190, "break label; ၸႂ်ႉတႃႇသင်?", [
-    "ယဝ်ႉ loop ဢၼ်မၢႆဝႆႉ (outer loop)",
-    "ယဝ်ႉ method",
-    "Exit app",
-    "Go to line",
+  Quiz(190, "What is 'break label;' used for?", [
+    "Breaking an outer loop",
+    "Exiting a method",
+    "Exiting the app",
+    "Going to a specific line",
   ]),
-  Quiz(191, "int[] n = {1, 2}; for(int x : n) System.out.print(x); result?", [
+  Quiz(191, "int[] n = {1, 2}; for(int x : n) System.out.print(x); Result?", [
     "12",
     "1 2",
     "Error",
     "n",
   ]),
-  Quiz(192, "Array length ဢမ်ႇလႆႈသႂ်ႇ ( ) ၸႂ်ႉႁႃႉ?", [
-    "ဢမ်ႇၸႂ်ႉ",
-    "ၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(192, "Does Array 'length' use parentheses ()?", [
+    "No",
+    "Yes",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(193, "String.join(\"-\", \"A\", \"B\") result?", [
+  Quiz(193, "What is the result of 'String.join(\"-\", \"A\", \"B\")'?", [
     "A-B",
     "AB",
     "A B",
     "Error",
   ]),
-  Quiz(194, "s.equalsIgnoreCase(s2) တႅၵ်ႈသင်?", [
-    "တႅၵ်ႈ value ဢမ်ႇဢဝ် Case ယႂ်ႇလဵၵ်ႉ",
-    "တႅၵ်ႈ Case",
-    "တႅၵ်ႈ length",
+  Quiz(194, "What does 's.equalsIgnoreCase(s2)' check?", [
+    "Value equality ignoring case",
+    "Case sensitivity",
+    "Length equality",
     "Error",
   ]),
-  Quiz(195, "for(int i=0; i<3; i++) { if(i==1) continue; print(i); } result?", [
+  Quiz(195, "Result of loop 0 to 3 with 'if(i==1) continue;'?", [
     "02",
     "012",
     "12",
     "0",
   ]),
-  Quiz(196, "do { print(1); } while(false); result?", [
+  Quiz(196, "Result of 'do { System.out.print(1); } while(false);'?", [
     "1",
     "0",
     "Infinite",
     "Error",
   ]),
-  Quiz(197, "Array elements တႄႇ Index 0 ပဵၼ် data type သင်?", [
-    "မိူၼ် Array type",
+  Quiz(197, "What data type are index 0 elements in an Array?", [
+    "Same as Array type",
     "int",
     "String",
     "Object",
   ]),
-  Quiz(
-    198,
-    "int[] a = new int[2]; a[0]=1; a[1]=2; a = new int[3]; a[0] ပဵၼ်လၢႆ?",
-    ["0 (reset new array)", "1", "2", "Error"],
-  ),
-  Quiz(199, "String s = \"Java\"; s = s + \"17\"; s ပဵၼ်သင်?", [
+  Quiz(198, "int[] a = new int[2]; a = new int[3]; What is a[0]?", [
+    "0 (reset by new array)",
+    "1",
+    "2",
+    "Error",
+  ]),
+  Quiz(199, "What is the result of '\"Java\" + \"17\"'?", [
     "Java17",
     "Java",
     "17",
     "Error",
   ]),
-  Quiz(200, "Java loop ဢၼ်လႂ်လႅၼ်ႈဝႆးသေပိူၼ်ႈ?", [
-    "မိူၼ်မိူၼ်ၵၼ်",
+  Quiz(200, "Which Java loop is the fastest?", [
+    "They are generally equal",
     "for",
     "while",
     "do-while",
   ]),
 ];
-final List<Quiz> quizzes3 = [
+final List<Quiz> javaQuizM3 = [
   // --- Topic 31, 32: Class & Objects ---
-  Quiz(201, "Class ၼႂ်း Java မၢႆထိုင်သင်?", [
-    "ပိူင်တႅင်ႇတႃႇသၢင်ႈ Object (Blueprint)",
-    "Variable ဢၼ်ၼိုင်ႈ",
-    "Method ဢၼ်ၼိုင်ႈ",
-    "Package ဢၼ်ၼိုင်ႈ",
+  Quiz(201, "What is a Class in Java?", [
+    "A blueprint for creating objects",
+    "A type of variable",
+    "A specific method",
+    "A package",
   ]),
-  Quiz(202, "တႃႇတေတႅမ်ႈ Class လူဝ်ႇၸႂ်ႉ Keyword သင်?", [
+  Quiz(202, "Which keyword is used to declare a Class?", [
     "class",
     "Object",
     "new",
@@ -1132,45 +1203,46 @@ final List<Quiz> quizzes3 = [
   ]),
   Quiz(
     203,
-    "တႃႇတေသၢင်ႈ Object (Instance) လုၵ်ႉတီႈ Class လူဝ်ႇၸႂ်ႉ Keyword သင်?",
+    "Which keyword is used to create an instance (Object) of a Class?",
     ["new", "create", "make", "instance"],
   ),
-  Quiz(
-    204,
-    "တႃႇႁွင်ႉၸႂ်ႉ Attribute (Field) ၼႂ်း Object လူဝ်ႇၸႂ်ႉ Symbol သင်?",
-    [". (Dot operator)", ", (Comma)", ": (Colon)", "-> (Arrow)"],
-  ),
-  Quiz(205, "Naming convention တႃႇ Class name ၼႂ်း Java လူဝ်ႇၸႂ်ႉပိူင်လႂ်?", [
+  Quiz(204, "Which symbol is used to access an Object's attribute or field?", [
+    ". (Dot operator)",
+    ", (Comma)",
+    ": (Colon)",
+    "-> (Arrow)",
+  ]),
+  Quiz(205, "What is the standard naming convention for Classes in Java?", [
     "PascalCase",
     "camelCase",
     "snake_case",
     "kebab-case",
   ]),
-  Quiz(206, "Object ဢၼ်ၼိုင်ႈမီးသင်ဝႆႉ?", [
-    "State (Fields) လႄႈ Behavior (Methods)",
-    "Method ၵူၺ်း",
-    "Variable ၵူၺ်း",
-    "Package ၵူၺ်း",
+  Quiz(206, "What are the two main components of an Object?", [
+    "State (Fields) and Behavior (Methods)",
+    "Only Methods",
+    "Only Variables",
+    "Only Packages",
   ]),
-  Quiz(207, "Class ၼိုင်ႈဢၼ်သၢင်ႈ Object လႆႈၵေႃႉဢၼ်?", [
-    "ဢမ်ႇမီးတီႈသုတ်း (Unlimited)",
-    "ဢၼ်လဵဝ်ၵူၺ်း",
-    "10 ဢၼ်",
-    "ၸွမ်းၼင်ႇ RAM",
+  Quiz(207, "How many objects can be created from a single Class?", [
+    "Unlimited (as much as RAM allows)",
+    "Only one",
+    "Exactly 10",
+    "Only 255",
   ]),
-  Quiz(208, "Java Class တင်းသဵင်ႈ လုၵ်ႉတီႈ Class လႂ်မႃး (Parent)?", [
+  Quiz(208, "Which class is the root (parent) of all classes in Java?", [
     "Object class",
     "String class",
     "Main class",
     "System class",
   ]),
-  Quiz(209, "Attribute ဢၼ်ယူႇၼႂ်း Class ႁွင်ႉဝႃႈသင်?", [
+  Quiz(209, "What are attributes declared inside a Class called?", [
     "Fields / Instance Variables",
     "Local variables",
     "Parameters",
     "Methods",
   ]),
-  Quiz(210, "Car myCar = new Car(); ၼႂ်းၼႆႉ myCar ပဵၼ်သင်?", [
+  Quiz(210, "In 'Car myCar = new Car();', what is 'myCar'?", [
     "Object Reference Variable",
     "Class name",
     "Method",
@@ -1178,59 +1250,58 @@ final List<Quiz> quizzes3 = [
   ]),
 
   // --- Topic 33, 34, 35: Methods & Return Types ---
-  Quiz(211, "Method မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ႁဵတ်းသၢင်ႈ (Behavior / Action)",
-    "တီႈသိမ်း data",
-    "ၸိုဝ်ႈ Class",
-    "တီႈမၢႆ Error",
+  Quiz(211, "What is a Method?", [
+    "A block of code representing a behavior/action",
+    "A storage for data",
+    "The name of a class",
+    "An error log",
   ]),
   Quiz(
     212,
-    "Method ဢၼ်ဢမ်ႇသူင်ႇၵႃႈၶၼ် (return value) ၶိုၼ်း လူဝ်ႇၸႂ်ႉ Keyword သင်?",
+    "Which keyword is used for a method that does not return a value?",
     ["void", "int", "null", "empty"],
   ),
-  Quiz(213, "တႃႇသူင်ႇၵႃႈၶၼ်ၶိုၼ်းလုၵ်ႉတီႈ Method လူဝ်ႇၸႂ်ႉ Keyword သင်?", [
+  Quiz(213, "Which keyword is used to send a value back from a method?", [
     "return",
     "get",
     "give",
     "back",
   ]),
-  Quiz(214, "Variable ဢၼ်ယူႇၼႂ်းဝူင်းလဵပ်ႈ () ၶွင် Method ႁွင်ႉဝႃႈသင်?", [
-    "Parameters",
-    "Arguments",
-    "Return type",
-    "Modifiers",
-  ]),
+  Quiz(
+    214,
+    "What are the variables defined inside a method's parentheses () called?",
+    ["Parameters", "Arguments", "Return type", "Modifiers"],
+  ),
   Quiz(
     215,
-    "ၵႃႈၶၼ်ဢၼ်သူင်ႇပၼ်မိူဝ်ႈႁွင်ႉၸႂ်ႉ Method (Call Method) ႁွင်ႉဝႃႈသင်?",
+    "What are the actual values passed to a method when it is called?",
     ["Arguments", "Parameters", "Fields", "Local variables"],
   ),
-  Quiz(216, "public int sum(int a, int b) ၼႂ်းၼႆႉ Return type ပဵၼ်သင်?", [
+  Quiz(216, "In 'public int sum(int a, int b)', what is the return type?", [
     "int",
     "sum",
     "public",
     "void",
   ]),
-  Quiz(217, "Method ၼိုင်ႈဢၼ် မီး Parameter လႆႈလၢႆဢၼ်?", [
-    "လၢႆဢၼ်ၵေႃႈလႆႈ",
-    "ဢၼ်လဵဝ်ၵူၺ်း",
-    "2 ဢၼ်ၵူၺ်း",
-    "ဢမ်ႇပၼ်မီး",
+  Quiz(217, "How many parameters can one method have?", [
+    "Multiple/As many as needed",
+    "Only one",
+    "Exactly two",
+    "None",
   ]),
-  Quiz(218, "ၼႂ်း void method သႂ်ႇ return; လႆႈႁႃႉ?", [
-    "လႆႈ (တႃႇဢွၵ်ႇလုၵ်ႉတီႈ method)",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈသင်ပဵၼ် return 0;",
-    "Error",
+  Quiz(218, "Can you use the 'return;' statement in a void method?", [
+    "Yes (to exit the method)",
+    "No",
+    "Only if it returns 0",
+    "Compile Error",
   ]),
-  Quiz(219, "Naming convention တႃႇ Method name ၼႂ်း Java လူဝ်ႇၸႂ်ႉပိူင်လႂ်?", [
+  Quiz(219, "What is the standard naming convention for Methods in Java?", [
     "camelCase",
     "PascalCase",
     "UPPERCASE",
     "snake_case",
   ]),
-  Quiz(220, "Method ဢၼ်ယူႇၼႂ်း Class ၼိုင်ႈဢၼ် ႁွင်ႉဝႃႈသင်?", [
+  Quiz(220, "What is a non-static method inside a class called?", [
     "Instance Method",
     "Static Variable",
     "Local Method",
@@ -1238,613 +1309,614 @@ final List<Quiz> quizzes3 = [
   ]),
 
   // --- Topic 36: Method Overloading ---
-  Quiz(221, "Method Overloading မၢႆထိုင်သင်?", [
-    "Method ၸိုဝ်ႈမိူၼ်ၵၼ် တူဝ်သူင်ႇ (Parameters) ပႅၵ်ႇၵၼ်",
-    "Method ၸိုဝ်ႈဢမ်ႇမိူၼ်ၵၼ်",
-    "Method ဢၼ်မီး Return type မိူၼ်ၵၼ်",
-    "ႁွင်ႉၸႂ်ႉ Method ထပ်းၵၼ်",
+  Quiz(221, "What is Method Overloading?", [
+    "Same method name with different parameters",
+    "Different method names",
+    "Methods with the same return type",
+    "Calling methods recursively",
   ]),
-  Quiz(222, "တႃႇႁဵတ်း Method Overloading လူဝ်ႇပႅၵ်ႇၵၼ်တီႈလႂ်?", [
-    "Parameter count / type",
-    "Return type ၵူၺ်း",
-    "Access modifier ၵူၺ်း",
-    "ဢမ်ႇလူဝ်ႇပႅၵ်ႇ",
+  Quiz(222, "What must be different to achieve Method Overloading?", [
+    "Parameter count or type",
+    "Only the return type",
+    "Only the access modifier",
+    "Nothing",
   ]),
   Quiz(
     223,
-    "သင် Return type ပႅၵ်ႇၵၼ်ၵူၺ်း (Parameter မိူၼ်ၵၼ်) တေပဵၼ် Overloading ႁႃႉ?",
-    ["ဢမ်ႇပဵၼ် (Error)", "ပဵၼ်", "မၢင်ပွၵ်ႈ", "လႆႈယူႇ"],
+    "If only the return type is different (parameters are same), does it count as Overloading?",
+    ["No (it causes a compile error)", "Yes", "Sometimes", "Only in old Java"],
   ),
-  Quiz(224, "Method Overloading ၼႆႉႁွင်ႉဝႃႈသင်ထႅင်ႈ?", [
+  Quiz(224, "What is Method Overloading also known as?", [
     "Compile-time Polymorphism",
     "Runtime Polymorphism",
     "Inheritance",
     "Abstraction",
   ]),
-  Quiz(225, "ႁဵတ်း Method Overloading တႃႇသင်?", [
-    "တႃႇႁႂ်ႈလူတ်းငၢႆႈ လႄႈ ၸိုဝ်ႈဢမ်ႇၼမ်",
-    "တႃႇႁႂ်ႈ RAM ဝႆး",
-    "တႃႇႁႂ်ႈ Code ယၢဝ်း",
-    "ပဵၼ်ပိူင် Java",
+  Quiz(225, "What is the main purpose of Method Overloading?", [
+    "Readability and using the same name for similar tasks",
+    "To make RAM faster",
+    "To make code longer",
+    "It is required by the JVM",
   ]),
 
   // --- Topic 37: Constructors ---
-  Quiz(226, "Constructor မၢႆထိုင်သင်?", [
-    "Method ဢၼ်ႁဵတ်းၵၢၼ်မိူဝ်ႈသၢင်ႈ Object မႂ်ႇ",
-    "Variable ဢၼ်ၼိုင်ႈ",
-    "Method ဢမ်ႇမီးၸိုဝ်ႈ",
-    "Loop ဢၼ်ၼိုင်ႈ",
+  Quiz(226, "What is a Constructor?", [
+    "A special method called when an object is created",
+    "A type of variable",
+    "An anonymous method",
+    "A loop structure",
   ]),
-  Quiz(227, "ၸိုဝ်ႈ Constructor လူဝ်ႇမိူၼ်သင်?", [
-    "Class name",
-    "Method name",
-    "Variable name",
-    "Package name",
+  Quiz(227, "What must the name of a Constructor match?", [
+    "The Class name",
+    "The Method name",
+    "The Variable name",
+    "The Package name",
   ]),
-  Quiz(228, "Constructor မီး Return type ႁႃႉ?", [
-    "ဢမ်ႇမီး (void ၵေႃႈဢမ်ႇသႂ်ႇ)",
-    "မီး void",
-    "မီး int",
-    "မီး String",
+  Quiz(228, "What is the return type of a Constructor?", [
+    "None (not even void)",
+    "void",
+    "int",
+    "String",
   ]),
-  Quiz(229, "သင်ႁဝ်းဢမ်ႇတႅမ်ႈ Constructor ဝႆႉ Java တေႁဵတ်းပၼ်သင်?", [
-    "သၢင်ႈ Default Constructor ပၼ်",
-    "Error",
-    "သၢင်ႈ Object ဢမ်ႇလႆႈ",
-    "ဢမ်ႇႁဵတ်းသင်",
+  Quiz(229, "What happens if you don't write a constructor in your class?", [
+    "Java provides a Default Constructor",
+    "Compile Error",
+    "Object cannot be created",
+    "Nothing",
   ]),
-  Quiz(230, "Constructor ဢၼ်မီး Parameter ႁွင်ႉဝႃႈသင်?", [
+  Quiz(230, "What is a constructor with parameters called?", [
     "Parameterized Constructor",
     "Default Constructor",
     "Method",
     "Overloaded Method",
   ]),
-  Quiz(231, "Constructor ၼမ်သေဢၼ်ၼႂ်း Class လဵဝ်ၵၼ် ႁွင်ႉဝႃႈသင်?", [
+  Quiz(231, "Having multiple constructors in the same class is called?", [
     "Constructor Overloading",
     "Method Overloading",
     "Inheritance",
-    "Object Copy",
+    "Object Copying",
   ]),
-  Quiz(232, "Constructor ႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈၸႂ်ႉ keyword 'new'",
-    "မိူဝ်ႈႁွင်ႉ method",
-    "မိူဝ်ႈ compile",
-    "မိူဝ်ႈပိၵ်ႉ program",
+  Quiz(232, "When is a constructor executed?", [
+    "When the 'new' keyword is used",
+    "When a method is called",
+    "During compilation",
+    "When the program closes",
   ]),
-  Quiz(233, "Default Constructor သႂ်ႇၵႃႈၶၼ်ပၼ် Variable ၸိူင်ႉႁိုဝ်?", [
-    "0 (int) / null (Object)",
+  Quiz(233, "What values does the Default Constructor assign to variables?", [
+    "0 (numbers) / null (Objects)",
     "1",
     "-1",
     "Error",
   ]),
-  Quiz(234, "Constructor ပဵၼ် static လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "ပဵၼ် default static",
+  Quiz(234, "Can a Constructor be declared as static?", [
+    "No",
+    "Yes",
+    "Sometimes",
+    "It is static by default",
   ]),
   Quiz(
     235,
-    "Constructor ၼိုင်ႈဢၼ် ႁွင်ႉၸႂ်ႉ Constructor ထႅင်ႈဢၼ်ၼိုင်ႈ ၼႂ်း Class လဵဝ်ၵၼ် ၸႂ်ႉ keyword သင်?",
+    "Which keyword is used to call one constructor from another in the same class?",
     ["this()", "super()", "new()", "constructor()"],
   ),
 
   // --- Topic 38: Global (Instance) vs Local Variables ---
-  Quiz(236, "Local Variable မၢႆထိုင်သင်?", [
-    "Variable ဢၼ်ယူႇၼႂ်း Method ၵူၺ်း",
-    "Variable ဢၼ်ယူႇၼႂ်း Class တင်းသဵင်ႈ",
-    "Variable ဢၼ်ယူႇၼႂ်း Package",
-    "Static variable",
+  Quiz(236, "What is a Local Variable?", [
+    "A variable defined inside a method",
+    "A variable defined across the whole class",
+    "A variable defined in a package",
+    "A static variable",
   ]),
-  Quiz(237, "Instance Variable (Global) မၢႆထိုင်သင်?", [
-    "Variable ဢၼ်ယူႇၼႂ်း Class သေ တႅမ်ႈဝႆႉၼွၵ်ႈ Method",
-    "Variable ယူႇၼႂ်း Method",
-    "Variable ယူႇၼႂ်း Loop",
-    "Constant",
+  Quiz(237, "What is an Instance Variable (Global)?", [
+    "A variable defined in a class but outside any method",
+    "A variable inside a method",
+    "A variable inside a loop",
+    "A constant",
   ]),
-  Quiz(238, "Local Variable လူဝ်ႇသႂ်ႇၵႃႈၶၼ် (Initialize) ၵွၼ်ႇၸႂ်ႉႁႃႉ?", [
-    "လူဝ်ႇ (ဢမ်ႇၼၼ် Error)",
-    "ဢမ်ႇလူဝ်ႇ",
-    "Java သႂ်ႇပၼ်ဢလိုတ်း",
-    "လူဝ်ႇသင်ပဵၼ် String",
+  Quiz(238, "Must a Local Variable be initialized before use?", [
+    "Yes (otherwise compile error)",
+    "No",
+    "Java initializes it automatically",
+    "Only if it is a String",
   ]),
-  Quiz(239, "Instance Variable မီးၵႃႈၶၼ် Default ႁႃႉ?", [
-    "မီး (0, false, null)",
-    "ဢမ်ႇမီး",
-    "လူဝ်ႇသႂ်ႇၵွၼ်ႇတူဝ်",
-    "Error",
+  Quiz(239, "Do Instance Variables have default values?", [
+    "Yes (0, false, null)",
+    "No",
+    "You must assign them first",
+    "Compile Error",
   ]),
-  Quiz(240, "Life cycle ၶွင် Local variable ယဝ်ႉတူဝ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈယဝ်ႉ Method",
-    "မိူဝ်ႈယဝ်ႉ Program",
-    "မိူဝ်ႈ Object တၢႆ",
-    "ဢမ်ႇမီးတီႈသုတ်း",
+  Quiz(240, "When does a Local Variable's life cycle end?", [
+    "When the method finishes execution",
+    "When the program ends",
+    "When the object is destroyed",
+    "Never",
   ]),
-  Quiz(241, "Life cycle ၶွင် Instance variable ယဝ်ႉတူဝ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Object ထုၵ်ႇယႃႉပႅတ်ႈ (GC)",
-    "မိူဝ်ႈယဝ်ႉ Method",
-    "မိူဝ်ႈပိၵ်ႉ Computer",
-    "မိူဝ်ႈ compile",
+  Quiz(241, "When does an Instance Variable's life cycle end?", [
+    "When the object is destroyed (Garbage Collected)",
+    "When the method finishes",
+    "When the computer shuts down",
+    "During compilation",
   ]),
   Quiz(
     242,
-    "သင် Local variable လႄႈ Instance variable ၸိုဝ်ႈမိူၼ်ၵၼ် တေၸႂ်ႉဢၼ်လႂ်?",
-    ["ၸႂ်ႉ Local (Shadowing)", "ၸႂ်ႉ Instance", "Error", "ၸႂ်ႉတင်းသွင်ဢၼ်"],
+    "What happens if a Local and Instance variable have the same name?",
+    [
+      "The Local variable takes priority (Shadowing)",
+      "The Instance variable takes priority",
+      "Compile Error",
+      "Both are used simultaneously",
+    ],
   ),
   Quiz(
     243,
-    "တႃႇႁွင်ႉၸႂ်ႉ Instance variable မိူဝ်ႈမီး Local variable ၸိုဝ်ႈမိူၼ်ၵၼ် လူဝ်ႇၸႂ်ႉ Keyword သင်?",
+    "Which keyword helps access an Instance variable when a Local variable has the same name?",
     ["this", "super", "static", "new"],
   ),
-  Quiz(244, "Local Variable သႂ်ႇ Access Modifier (public, private) လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႆႈသင်ပဵၼ် public",
-    "Error",
-  ]),
-  Quiz(245, "Local variable ယူႇၼႂ်း Stack ႁႃႉ Heap?", [
+  Quiz(
+    244,
+    "Can you apply Access Modifiers (public, private) to Local Variables?",
+    ["No", "Yes", "Only public", "Compile Error"],
+  ),
+  Quiz(245, "Where are Local Variables stored in memory?", [
     "Stack",
     "Heap",
     "Both",
     "Register",
   ]),
-  Quiz(246, "Instance variable ယူႇၼႂ်း Stack ႁႃႉ Heap?", [
-    "Heap (ယူႇၸွမ်း Object)",
+  Quiz(246, "Where are Instance Variables stored in memory?", [
+    "Heap (inside the Object)",
     "Stack",
     "Method Area",
     "Disk",
   ]),
 
   // --- Topic 39: Java Packages ---
-  Quiz(247, "Package ၼႂ်း Java မၢႆထိုင်သင်?", [
-    "တီႈၸုတုမ် Class ဢၼ်ၵတ်ႉၶႅၼ်ႇမိူၼ်ၵၼ် (Folder)",
-    "File ဢၼ်ၼိုင်ႈ",
-    "Method ဢၼ်ၼိုင်ႈ",
-    "Library တူဝ်လဵဝ်",
+  Quiz(247, "What is a Package in Java?", [
+    "A folder used to group related classes",
+    "A single file",
+    "A specific method",
+    "A standalone library",
   ]),
-  Quiz(248, "တႃႇၸႂ်ႉ Class လုၵ်ႉတီႈ Package ဢၼ်ၼိုင်ႈ လူဝ်ႇၸႂ်ႉ Keyword သင်?", [
+  Quiz(248, "Which keyword is used to use a class from another package?", [
     "import",
     "package",
     "include",
     "use",
   ]),
-  Quiz(249, "တႃႇမၢႆၸိုဝ်ႈ Package ၼႂ်း Code လူဝ်ႇတႅမ်ႈဝႆႉတီႈလႂ်?", [
-    "ထႅဝ်ၼိူဝ်သုတ်း (First line)",
-    "ထႅဝ်တႂ်ႈသုတ်း",
-    "ၼႂ်း Method",
-    "ၼွၵ်ႈ Class",
+  Quiz(249, "Where must the 'package' declaration be written in a code file?", [
+    "The very first line",
+    "The last line",
+    "Inside a method",
+    "Outside the class at the bottom",
   ]),
-  Quiz(250, "Package လႂ်ဢၼ် Java import ပၼ်ဢလိုတ်း (Default)?", [
+  Quiz(250, "Which package is automatically imported by Java by default?", [
     "java.lang",
     "java.util",
     "java.io",
     "java.net",
   ]),
-  Quiz(251, "တႃႇ import Class တင်းသဵင်ႈၼႂ်း Package လူဝ်ႇၸႂ်ႉ Symbol သင်?", [
+  Quiz(251, "Which symbol imports all classes within a package?", [
     "*",
     "#",
     "+",
     "&",
   ]),
-  Quiz(252, "ၸိုဝ်ႈ Package ၼႂ်း Java လူဝ်ႇတႅမ်ႈပဵၼ်?", [
-    "တူဝ်လိၵ်ႈလဵၵ်ႉတင်းသဵင်ႈ (lowercase)",
+  Quiz(252, "What is the naming convention for Packages?", [
+    "All lowercase",
     "PascalCase",
     "UPPERCASE",
-    "Mix",
-  ]),
-  Quiz(253, "တႃႇၸုတုမ် Class ၶွင်ႁဝ်း ၸႂ်ႉ Keyword သင်?", [
-    "package",
-    "import",
-    "class",
-    "namespace",
+    "Mixed case",
   ]),
   Quiz(
-    254,
-    "Java Standard Package တႃႇ Utility ၸိူင်ႉၼင်ႇ Scanner ယူႇၼႂ်းလႂ်?",
-    ["java.util", "java.lang", "java.io", "java.math"],
+    253,
+    "Which keyword is used to define which package a class belongs to?",
+    ["package", "import", "class", "namespace"],
   ),
+  Quiz(254, "In which package is the 'Scanner' class located?", [
+    "java.util",
+    "java.lang",
+    "java.io",
+    "java.math",
+  ]),
   Quiz(
     255,
-    "သင်မီး Class ၸိုဝ်ႈမိူၼ်ၵၼ် ၼႂ်း Package ပႅၵ်ႇၵၼ် လူဝ်ႇႁဵတ်းႁိုဝ်?",
+    "How do you handle two classes with the same name from different packages?",
     [
-      "ၸႂ်ႉ Fully Qualified Name (package.ClassName)",
-      "Error",
-      "Import တင်းသွင်ဢၼ်",
-      "လႅၵ်ႈၸိုဝ်ႈ Class",
+      "Use the Fully Qualified Name (package.ClassName)",
+      "Compile Error",
+      "Import both and pray",
+      "Rename the classes",
     ],
   ),
 
   // --- Mixed & Logic (256 - 300) ---
-  Quiz(256, "Class ၼိုင်ႈဢၼ် မီး Constructor လႆႈလၢႆဢၼ်?", [
-    "လၢႆဢၼ် (Overloading)",
-    "ဢၼ်လဵဝ်ၵူၺ်း",
-    "ဢမ်ႇပၼ်မီး",
-    "2 ဢၼ်ၵူၺ်း",
+  Quiz(256, "How many constructors can a class have?", [
+    "Multiple (through Overloading)",
+    "Only one",
+    "None",
+    "Exactly two",
   ]),
-  Quiz(257, "Static variable ႁွင်ႉဝႃႈသင်ထႅင်ႈ?", [
+  Quiz(257, "What is another name for a Static Variable?", [
     "Class variable",
     "Instance variable",
     "Local variable",
     "Constant",
   ]),
-  Quiz(258, "တႃႇသၢင်ႈ Constant (ၵႃႈၶၼ်ဢၼ်လႅၵ်ႈဢမ်ႇလႆႈ) ၸႂ်ႉ Keyword သင်?", [
+  Quiz(258, "Which keyword is used to create a constant value?", [
     "final",
     "static",
     "const",
     "fixed",
   ]),
-  Quiz(259, "Heap Memory မၢႆထိုင်သင်?", [
-    "တီႈသိမ်း Object ၼႂ်း RAM",
-    "တီႈသိမ်း Code",
-    "တီႈသိမ်း Method",
-    "တီႈသိမ်းတူဝ်ၼပ်ႉၵူၺ်း",
+  Quiz(259, "What is Heap Memory?", [
+    "RAM space used for storing Objects",
+    "Storage for source code",
+    "Storage for methods",
+    "Storage for integers only",
   ]),
-  Quiz(260, "Garbage Collection (GC) ၼႂ်း Java ႁဵတ်းသင်?", [
-    "ယႃႉပႅတ်ႈ Object ဢၼ်ဢမ်ႇၸႂ်ႉယဝ်ႉ တႃႇလႅၵ်ႈဢဝ် RAM",
-    "Compile code",
-    "Check error",
-    "Run program",
+  Quiz(260, "What is the role of Garbage Collection (GC) in Java?", [
+    "To destroy unused objects and free up RAM",
+    "To compile code",
+    "To check for syntax errors",
+    "To run the main program",
   ]),
-  Quiz(261, "this keyword မၢႆထိုင်သင်?", [
-    "မၢႆထိုင် Object ဢၼ်တိုၵ်ႉၸႂ်ႉဝႆႉယူႇယၢမ်းလဵဝ်",
-    "Class ဢူႈမၼ်း",
-    "Variable မႂ်ႇ",
-    "Method မႂ်ႇ",
+  Quiz(261, "What does the 'this' keyword refer to?", [
+    "The current instance of the object",
+    "The parent class",
+    "A new variable",
+    "A new method",
   ]),
-  Quiz(262, "null ၼႂ်း Java မၢႆထိုင်သင်?", [
-    "ဢမ်ႇမီး Object (ဢမ်ႇမီးၵႃႈၶၼ်)",
+  Quiz(262, "What does 'null' mean in Java?", [
+    "The reference does not point to any object",
     "0",
     "False",
     "Error",
   ]),
-  Quiz(263, "Object Reference ယူႇၼႂ်း Stack ႁႃႉ Heap?", [
+  Quiz(263, "Where is an Object Reference stored?", [
     "Stack",
     "Heap",
     "Disk",
     "Monitor",
   ]),
-  Quiz(264, "Data type ဢၼ်ပဵၼ် Class ႁွင်ႉဝႃႈသင်?", [
+  Quiz(264, "What is a data type that is based on a Class called?", [
     "Reference Type",
     "Primitive Type",
     "Basic Type",
     "Method Type",
   ]),
-  Quiz(265, "public class Main { ... } ၸိုဝ်ႈ File လူဝ်ႇပဵၼ်သင်?", [
+  Quiz(265, "If a class is 'public class Main', what must the file name be?", [
     "Main.java",
     "main.java",
     "Class.java",
     "File.java",
   ]),
-  Quiz(266, "Static method ႁွင်ႉၸႂ်ႉ Instance variable တိုက်ရိုက်လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႆႈသင်ပဵၼ် public",
-    "လႆႈသင်ပဵၼ် final",
+  Quiz(266, "Can a Static Method access an Instance Variable directly?", [
+    "No",
+    "Yes",
+    "Only if it is public",
+    "Only if it is final",
   ]),
-  Quiz(267, "Instance method ႁွင်ႉၸႂ်ႉ Static variable လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "Error",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(267, "Can an Instance Method access a Static Variable?", [
+    "Yes",
+    "No",
+    "Compile Error",
+    "Sometimes",
   ]),
-  Quiz(268, "Anonymous Object မၢႆထိုင်သင်?", [
-    "Object ဢၼ်ဢမ်ႇမီးၸိုဝ်ႈ Variable (new Class();)",
-    "Object ဢမ်ႇမီး Class",
-    "Object တၢႆ",
+  Quiz(268, "What is an Anonymous Object?", [
+    "An object created without a variable name",
+    "An object with no class",
+    "A destroyed object",
     "null",
   ]),
-  Quiz(269, "Encapsulation ၸႂ်ႉ Access Modifier လႂ်ပဵၼ်ပိုၼ်ႉထၢၼ်?", [
+  Quiz(269, "Which Access Modifier is fundamental for Encapsulation?", [
     "private",
     "public",
     "protected",
     "default",
   ]),
-  Quiz(270, "Abstraction မၢႆထိုင်သင်?", [
-    "ၼႄၵူၺ်းဢၼ်လူဝ်ႇ ဢမ်ႇၼႄလွင်ႈႁဵတ်းသၢင်ႈၼႂ်းမၼ်း",
-    "ၵၢၼ်သိုပ်ႇပိုင်ႈ Class",
-    "ၵၢၼ်သၢင်ႈ Object",
-    "ၵၢၼ် Import",
+  Quiz(270, "What is Abstraction?", [
+    "Hiding implementation details and showing only functionality",
+    "Class inheritance",
+    "Creating an object",
+    "Importing packages",
   ]),
-  Quiz(
-    271,
-    "တႃႇႁပ်ႉ Input လုၵ်ႉတီႈ Keyboard ၼႂ်း OOP လူဝ်ႇသၢင်ႈ Object လုၵ်ႉတီႈ Class လႂ်?",
-    ["Scanner", "System", "String", "PrintStream"],
-  ),
-  Quiz(272, "Method signature မီးသင်လၢႆ?", [
+  Quiz(271, "Which class provides the object needed to read keyboard input?", [
+    "Scanner",
+    "System",
+    "String",
+    "PrintStream",
+  ]),
+  Quiz(272, "What makes up a Method Signature?", [
     "Method name + Parameter list",
     "Return type + Name",
     "Modifier + Name",
-    "Code ၼႂ်း method",
+    "The code inside",
   ]),
-  Quiz(273, "တႃႇ Copy Object ၼိုင်ႈဢၼ်ၵႂႃႇထႅင်ႈဢၼ်ၼိုင်ႈ ၸႂ်ႉလၢႆးလႂ်?", [
-    "Copy Constructor ဢမ်ႇၼၼ် clone()",
-    "Operator =",
+  Quiz(273, "How can you copy one object's data to another?", [
+    "Copy Constructor or clone()",
+    "The = operator",
     "new Object()",
     "copy() method",
   ]),
-  Quiz(274, "Final class မၢႆထိုင်သင်?", [
-    "Class ဢၼ်သိုပ်ႇ (Inherit) ဢမ်ႇလႆႈယဝ်ႉ",
-    "Class ဢၼ်သၢင်ႈ Object ဢမ်ႇလႆႈ",
-    "Class ဢမ်ႇမီး method",
-    "Class သုတ်းယေႃႈ",
+  Quiz(274, "What is a Final Class?", [
+    "A class that cannot be inherited",
+    "A class that cannot create objects",
+    "A class with no methods",
+    "The last class in a file",
   ]),
-  Quiz(275, "Package structure မိူၼ်သင်?", [
+  Quiz(275, "What does a Package structure resemble?", [
     "Hierarchical folders",
-    "Linear list",
-    "Circular queue",
-    "Graph",
+    "A linear list",
+    "A circular queue",
+    "A graph",
   ]),
-  Quiz(276, "import java.util.*; ၼႆႉ import package java တင်းသဵင်ႈႁႃႉ?", [
-    "ဢမ်ႇၸႂ်ႉ (import ၵူၺ်း class ၼႂ်း util)",
-    "ၸႂ်ႉ",
+  Quiz(276, "Does 'import java.util.*;' import all sub-packages of java?", [
+    "No (it only imports classes in util)",
+    "Yes",
+    "Compile Error",
+    "None",
+  ]),
+  Quiz(277, "Is Java a Pure Object-Oriented language?", [
+    "No (due to primitive types like int, char)",
+    "Yes",
+    "Partially",
+    "None",
+  ]),
+  Quiz(278, "Which operator checks if an object belongs to a specific class?", [
+    "instanceof",
+    "typeof",
+    "is",
+    "equal",
+  ]),
+  Quiz(279, "Can a memory leak occur in Java?", [
+    "Yes (e.g., if static references aren't cleared)",
+    "No (due to GC)",
+    "Only in Strings",
+    "None",
+  ]),
+  Quiz(280, "What is the Method Body?", [
+    "The code inside the { } braces",
+    "The method name",
+    "The return type",
+    "The parameters",
+  ]),
+  Quiz(281, "What is Constructor Chaining?", [
+    "Calling one constructor from another",
+    "Using a loop in a constructor",
+    "Destroying an object",
     "Error",
-    "None",
   ]),
-  Quiz(277, "Java ပဵၼ် Pure Object Oriented Programming ႁႃႉ?", [
-    "ဢမ်ႇၸႂ်ႉ (ယွၼ်ႉမီး primitive types)",
-    "ၸႂ်ႉ",
-    "ပဵၼ်မၢင်တွၼ်ႈ",
-    "None",
+  Quiz(282, "What is the purpose of Getter and Setter methods?", [
+    "To access and update private fields safely",
+    "To compile code",
+    "To delete objects",
+    "To import packages",
   ]),
-  Quiz(
-    278,
-    "တႃႇ Check ဝႃႈ Object ၼႆႉ လုၵ်ႉတီႈ Class လႂ်မႃး ၸႂ်ႉ operator လႂ်?",
-    ["instanceof", "typeof", "is", "equal"],
-  ),
-  Quiz(279, "Memory leak ၼႂ်း Java ပဵၼ်လႆႈႁႃႉ?", [
-    "ပဵၼ်လႆႈ (သင်မီး static references ၼမ်)",
-    "ဢမ်ႇပဵၼ်လႆႈ (ယွၼ်ႉမီး GC)",
-    "ပဵၼ်လႆႈၼႂ်း String ၵူၺ်း",
-    "None",
-  ]),
-  Quiz(280, "Method body မၢႆထိုင်သင်?", [
-    "Code ဢၼ်ယူႇၼႂ်း { } ၶွင် method",
-    "ၸိုဝ်ႈ method",
-    "Return type",
-    "Parameters",
-  ]),
-  Quiz(281, "Constructor chaining မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ႁွင်ႉ Constructor တေႃႇၵၼ်",
-    "ၵၢၼ်ႁဵတ်း Loop ၼႂ်း constructor",
-    "ၵၢၼ်ယႃႉ Object",
-    "Error",
-  ]),
-  Quiz(282, "Getter / Setter ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇလူတ်း/သႂ်ႇ ၵႃႈၶၼ်ပၼ် private fields",
-    "တႃႇ compile",
-    "တႃႇ delete object",
-    "တႃႇ import",
-  ]),
-  Quiz(283, "POJO မၢႆထိုင်သင်?", [
+  Quiz(283, "What does POJO stand for?", [
     "Plain Old Java Object",
     "Public Object Java Only",
     "Private Object",
     "Package of Java Object",
   ]),
-  Quiz(284, "Variable shadowing ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Local variable ၸိုဝ်ႈမိူၼ် Instance variable",
-    "မိူဝ်ႈ Variable ႁၢႆ",
-    "မိူဝ်ႈ Error",
-    "မိူဝ်ႈသၢင်ႈ Object",
+  Quiz(284, "When does Variable Shadowing occur?", [
+    "When a local variable has the same name as an instance variable",
+    "When a variable disappears",
+    "During an error",
+    "When creating an object",
   ]),
-  Quiz(285, "this.name = name; ၼႂ်း constructor မၢႆထိုင်သင်?", [
-    "သႂ်ႇ parameter name ပၼ် instance variable name",
-    "သၢင်ႈ variable မႂ်ႇ",
-    "Error",
+  Quiz(285, "What does 'this.name = name;' inside a constructor do?", [
+    "Assigns the parameter value to the instance variable",
+    "Creates a new variable",
+    "Compile Error",
     "None",
   ]),
-  Quiz(286, "Argument သူင်ႇပၼ် Method လႆႈလၢႆလၢႆး?", [
+  Quiz(286, "How are arguments passed to methods in Java?", [
     "Pass by value",
     "Pass by reference",
     "Both",
     "None",
   ]),
-  Quiz(287, "ၼႂ်း Java မိူဝ်ႈသူင်ႇ Object ၵႂႃႇၼႂ်း Method မၼ်းသူင်ႇသင်?", [
-    "သူင်ႇ Reference value (Copy of address)",
-    "သူင်ႇ Object တူဝ်ဢမ်ႇလႅၼ်ႈ",
-    "သူင်ႇ String",
+  Quiz(287, "What is passed when an Object is sent to a Method?", [
+    "The reference value (copy of address)",
+    "The actual object itself",
+    "A string",
     "Error",
   ]),
-  Quiz(288, "Method ဢၼ်မီး 'static' ႁွင်ႉၸႂ်ႉလႆႈသင်?", [
+  Quiz(288, "How can you call a 'static' method?", [
     "ClassName.methodName()",
     "new Class()",
     "this.method()",
-    "ဢမ်ႇမီးလၢႆးႁွင်ႉ",
+    "You cannot",
   ]),
-  Quiz(289, "Access Modifier လႂ် ဢၼ်ပၼ်ၸႂ်ႉလႆႈၵူႈတီႈ?", [
+  Quiz(289, "Which Access Modifier allows access from anywhere?", [
     "public",
     "private",
-    "protected",
-    "default",
-  ]),
-  Quiz(290, "Access Modifier လႂ် ဢၼ်ပၼ်ၸႂ်ႉလႆႈၼႂ်း Class လဵဝ်ၵၼ်ၵူၺ်း?", [
-    "private",
-    "public",
     "protected",
     "default",
   ]),
   Quiz(
-    291,
-    "Access Modifier လႂ် ဢၼ်ပၼ်ၸႂ်ႉလႆႈၼႂ်း Package လဵဝ်ၵၼ် (Default)?",
-    ["default (no modifier)", "private", "public", "protected"],
+    290,
+    "Which Access Modifier restricts access to only within the same class?",
+    ["private", "public", "protected", "default"],
   ),
-  Quiz(292, "toString() method ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇၼႄၵႃႈၶၼ် Object ပဵၼ် String",
-    "တႃႇလႅၵ်ႈ int",
-    "တႃႇ delete",
-    "တႃႇ compile",
+  Quiz(291, "What is the access level if no modifier is specified?", [
+    "default (Package-private)",
+    "private",
+    "public",
+    "protected",
   ]),
-  Quiz(293, "Java Bean မၢႆထိုင်သင်?", [
-    "Class ဢၼ်မီး private fields, constructor လႄႈ getter/setter",
-    "ၵေႃႇၾီႇ",
-    "Library",
-    "Compiler",
+  Quiz(292, "What is the 'toString()' method used for?", [
+    "Representing an object as a String",
+    "Converting to int",
+    "Deleting objects",
+    "Compiling code",
   ]),
-  Quiz(294, "Class variable (static) ယူႇၼႂ်း Heap လၢႆဢၼ်?", [
-    "ဢၼ်လဵဝ်ၵူၺ်း (Shared)",
-    "ၸွမ်းၼင်ႇ Object",
-    "ဢမ်ႇယူႇၼႂ်း heap",
+  Quiz(293, "What is a Java Bean?", [
+    "A class with private fields, a no-arg constructor, and getters/setters",
+    "Coffee",
+    "A library",
+    "A compiler",
+  ]),
+  Quiz(294, "How many copies of a Static Variable exist in memory?", [
+    "Only one (Shared by all objects)",
+    "One per object",
+    "None",
     "Error",
   ]),
-  Quiz(295, "final variable (Constant) လႅၵ်ႈၵႃႈၶၼ်လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "လႆႈသင်ပဵၼ် int",
+  Quiz(295, "Can a 'final' variable be reassigned?", [
+    "No",
+    "Yes",
+    "Sometimes",
+    "Only if it is an int",
   ]),
-  Quiz(296, "Method ဢၼ်ဢမ်ႇမီး parameter ႁွင်ႉဝႃႈသင်?", [
+  Quiz(296, "What is a method with no parameters called?", [
     "No-arg method",
     "Empty method",
     "Void method",
     "Main method",
   ]),
-  Quiz(297, "တႃႇသၢင်ႈ Object ဢၼ်ပဵၼ် Constant ၸႂ်ႉ keyword သင်?", [
+  Quiz(297, "How do you define a constant object reference?", [
     "final",
     "static",
     "const",
     "None",
   ]),
-  Quiz(298, "String ၼႂ်း Java ပဵၼ် Primitive ႁႃႉ Object?", [
+  Quiz(298, "In Java, is a String a Primitive or an Object?", [
     "Object (Class)",
     "Primitive",
     "Array",
     "Method",
   ]),
-  Quiz(299, "Java Package naming ၵျၢင်ႉၵမ်ၸႂ်ႉလၢႆးလႂ်?", [
+  Quiz(299, "What is the recommended Java Package naming style?", [
     "Reverse domain name (com.example.app)",
     "app.example.com",
     "AppExample",
     "None",
   ]),
-  Quiz(300, "OOP ၸွႆႈသင်ၼမ်သေပိူၼ်ႈ?", [
-    "Code Reusability (ၸႂ်ႉ Code ၶိုၼ်းလႆႈ)",
-    "ဝႆး",
-    "RAM သႅၼ်ႈ",
-    "ဢမ်ႇမီး Error",
+  Quiz(300, "What is the biggest benefit of OOP?", [
+    "Code Reusability",
+    "Speed",
+    "RAM efficiency",
+    "Eliminating all errors",
   ]),
 ];
-final List<Quiz> quizzes4 = [
+final List<Quiz> javaQuizM4 = [
   // --- Inheritance (extends, super) ---
-  Quiz(301, "Inheritance ၼႂ်း Java ၸႂ်ႉ Keyword သင်?", [
+  Quiz(301, "Which keyword is used for Inheritance in Java?", [
     "extends",
     "implements",
     "inherits",
     "includes",
   ]),
-  Quiz(302, "Class ဢၼ်ပဵၼ်မႄႈ (Parent) ႁွင်ႉဝႃႈသင်?", [
+  Quiz(302, "What is the parent class in an inheritance relationship called?", [
     "Superclass",
     "Subclass",
     "Child class",
     "Base Object",
   ]),
-  Quiz(303, "Class ဢၼ်သိုပ်ႇလုၵ်ႉတီႈမႄႈ (Child) ႁွင်ႉဝႃႈသင်?", [
+  Quiz(303, "What is the class that inherits from a parent called?", [
     "Subclass",
     "Superclass",
     "Root class",
     "Main class",
   ]),
-  Quiz(
-    304,
-    "Java ပၼ်ႁဵတ်း Multiple Inheritance (သိုပ်ႇလၢႆမႄႈ) ၼႂ်း Class ႁႃႉ?",
-    [
-      "ဢမ်ႇပၼ် (Single inheritance ၵူၺ်း)",
-      "ပၼ်",
-      "ပၼ်သင်ပဵၼ် String",
-      "ပၼ်ၼႂ်း version မႂ်ႇ",
-    ],
-  ),
-  Quiz(305, "တႃႇႁွင်ႉၸႂ်ႉ Constructor ၶွင် Superclass လူဝ်ႇၸႂ်ႉသင်?", [
+  Quiz(304, "Does Java support Multiple Inheritance for classes?", [
+    "No (Only single inheritance for classes)",
+    "Yes",
+    "Only for String types",
+    "Supported in newer versions",
+  ]),
+  Quiz(305, "Which keyword is used to call the constructor of a Superclass?", [
     "super()",
     "this()",
     "parent()",
     "base()",
   ]),
-  Quiz(306, "super() တေလႆႈဝႆႉတီႈလႂ်ၼႂ်း Constructor?", [
-    "ထႅဝ်ၼိူဝ်သုတ်း (First statement)",
-    "ထႅဝ်တႂ်ႈသုတ်း",
-    "တီႈလႂ်ၵေႃႈလႆႈ",
-    "ၼွၵ်ႈ constructor",
+  Quiz(306, "Where must the super() call be placed inside a constructor?", [
+    "The first statement",
+    "The last statement",
+    "Anywhere",
+    "Outside the constructor",
+  ]),
+  Quiz(307, "Are private members of a Superclass inherited by the Subclass?", [
+    "No",
+    "Yes",
+    "Only if public",
+    "Only if protected",
   ]),
   Quiz(
-    307,
-    "Private members ၶွင် Superclass ၼၼ်ႉ Subclass သိုပ်ႇ (inherit) လႆႈႁႃႉ?",
-    ["ဢမ်ႇလႆႈ", "လႆႈ", "လႆႈသင်ပဵၼ် public", "လႆႈသင်ပဵၼ် protected"],
+    308,
+    "Which access modifier allows a subclass to access members even in a different package?",
+    ["protected", "private", "default", "none"],
   ),
-  Quiz(308, "Access modifier လႂ် ဢၼ်ပၼ် Subclass ၸႂ်ႉလႆႈ ၼွၵ်ႈ package?", [
-    "protected",
-    "private",
-    "default",
-    "none",
-  ]),
-  Quiz(309, "IS-A relationship မၢႆထိုင်သင်?", [
-    "Inheritance",
+  Quiz(309, "Inheritance represents which type of relationship?", [
+    "IS-A relationship",
     "Composition",
     "Aggregation",
     "Method",
   ]),
-  Quiz(310, "Object class ၼႆႉပဵၼ် Superclass ၶွင်ၵူႈ Class ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
-    "ပဵၼ်တႃႇ String ၵူၺ်း",
+  Quiz(310, "Is the 'Object' class the superclass of every class in Java?", [
+    "Yes",
+    "No",
+    "Sometimes",
+    "Only for String",
   ]),
 
   // --- Polymorphism & Overriding ---
-  Quiz(311, "Method Overriding မၢႆထိုင်သင်?", [
-    "Subclass တႅမ်ႈ Method ၸိုဝ်ႈမိူၼ် Superclass သေ လႅၵ်ႈၵၢၼ်ႁဵတ်းမၼ်း",
-    "Method ၸိုဝ်ႈမိူၼ်ၵၼ်ၼႂ်း Class လဵဝ်",
-    "ၵၢၼ်သၢင်ႈ Object",
-    "ၵၢၼ် delete method",
+  Quiz(311, "What is Method Overriding?", [
+    "Subclass provides a specific implementation for a method already defined in its Superclass",
+    "Same method name in the same class",
+    "Creating an Object",
+    "Deleting a method",
   ]),
-  Quiz(312, "တႃႇ Check ဝႃႈ Method ၼႆႉ Override မၢၼ်ႇမႅၼ်ႈႁႃႉ လူဝ်ႇၸႂ်ႉသင်?", [
-    "@Override annotation",
-    "@Overload",
-    "@Inherit",
-    "@Static",
+  Quiz(
+    312,
+    "Which annotation is used to ensure a method is correctly overridden?",
+    ["@Override", "@Overload", "@Inherit", "@Static"],
+  ),
+  Quiz(313, "Can a static method be overridden?", [
+    "No (This is called Method Hiding)",
+    "Yes",
+    "Only if public",
+    "Only in interfaces",
   ]),
-  Quiz(313, "Static method ၼႆႉ Override လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (မၼ်းပဵၼ် Method Hiding)",
-    "လႆႈ",
-    "လႆႈသင်ပဵၼ် public",
-    "လႆႈၼႂ်း interface",
+  Quiz(314, "Can a final method be overridden?", [
+    "No",
+    "Yes",
+    "Sometimes",
+    "Only in the same package",
   ]),
-  Quiz(314, "Final method Override လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "လႆႈယူႇ",
-  ]),
-  Quiz(315, "Dynamic Method Dispatch ၵွင်ႉၸွမ်းသင်?", [
+  Quiz(315, "Dynamic Method Dispatch is associated with which concept?", [
     "Runtime Polymorphism",
     "Compile-time Polymorphism",
     "Static binding",
     "Inheritance",
   ]),
-  Quiz(316, "သင် Subclass ဢမ်ႇ Override method မႄႈ မၼ်းတေၸႂ်ႉဢၼ်လႂ်?", [
-    "ၸႂ်ႉ Method ၶွင် Superclass",
-    "Error",
-    "null",
-    "ဢမ်ႇႁဵတ်းသင်",
+  Quiz(316, "What happens if a Subclass does not override a parent's method?", [
+    "It uses the Superclass's method",
+    "Compile Error",
+    "Returns null",
+    "Nothing happens",
   ]),
-  Quiz(317, "Method Overriding လူဝ်ႇမီး Parameter မိူၼ်ၵၼ်ႁႃႉ?", [
-    "လူဝ်ႇမိူၼ်ၵၼ်ပႅတ်ႈ (Same signature)",
-    "ဢမ်ႇလူဝ်ႇ",
-    "လႅၵ်ႈလႆႈ 1 တူဝ်",
-    "လူဝ်ႇပႅၵ်ႇၵၼ်",
+  Quiz(317, "Does Method Overriding require identical parameters?", [
+    "Yes (Same method signature)",
+    "No",
+    "Can change one type",
+    "Must be different",
   ]),
-  Quiz(318, "Private method Override လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (ယွၼ်ႉ Subclass ဢမ်ႇႁၼ်)",
-    "လႆႈ",
-    "လႆႈယူႇ",
-    "Error",
+  Quiz(318, "Can you override a private method?", [
+    "No (Because it is not visible to the subclass)",
+    "Yes",
+    "Maybe",
+    "Runtime Error",
   ]),
-  Quiz(319, "Polymorphism မၢႆထိုင်သင်?", [
-    "မီးလၢႆႁၢင်ႈ (One interface, many implementations)",
-    "မီး Class လဵဝ်",
-    "မီး Variable လဵဝ်",
-    "ၵၢၼ်သိုပ်ႇပိုင်ႈ",
+  Quiz(319, "What does Polymorphism mean?", [
+    "Many forms (One interface, many implementations)",
+    "One class",
+    "One variable",
+    "Inheritance only",
   ]),
-  Quiz(320, "Runtime Polymorphism ၸႂ်ႉလၢႆးလႂ်?", [
+  Quiz(320, "Which technique is used for Runtime Polymorphism?", [
     "Method Overriding",
     "Method Overloading",
     "Constructor",
@@ -1852,560 +1924,552 @@ final List<Quiz> quizzes4 = [
   ]),
 
   // --- Abstraction (Abstract Class) ---
-  Quiz(321, "Abstract Class မၢႆထိုင်သင်?", [
-    "Class ဢၼ်သၢင်ႈ Object ဢမ်ႇလႆႈ (လူဝ်ႇသိုပ်ႇၵွၼ်ႇ)",
-    "Class ဢၼ်ဝႆးသေပိူၼ်ႈ",
-    "Class ဢမ်ႇမီး method",
-    "Interface",
+  Quiz(321, "What is an Abstract Class?", [
+    "A class that cannot be instantiated (must be inherited)",
+    "A class that runs faster",
+    "A class with no methods",
+    "An Interface",
   ]),
-  Quiz(322, "Abstract Method မၢႆထိုင်သင်?", [
-    "Method ဢၼ်မီးၵူၺ်းၸိုဝ်ႈ ဢမ်ႇမီး body { }",
-    "Method ဢၼ်မီး code ၼမ်",
-    "Static method",
-    "Final method",
+  Quiz(322, "What is an Abstract Method?", [
+    "A method with only a signature and no body { }",
+    "A method with complex code",
+    "A static method",
+    "A final method",
   ]),
-  Quiz(323, "သင် Class ၼိုင်ႈဢၼ်မီး Abstract method မၼ်းလူဝ်ႇပဵၼ်သင်?", [
-    "Abstract Class",
-    "Normal Class",
-    "Interface",
-    "Final Class",
+  Quiz(
+    323,
+    "If a class contains at least one abstract method, what must the class be?",
+    ["Abstract Class", "Normal Class", "Interface", "Final Class"],
+  ),
+  Quiz(324, "Can you create an object using 'new' on an Abstract Class?", [
+    "No",
+    "Yes",
+    "Sometimes",
+    "Compile Error",
   ]),
-  Quiz(324, "Abstract Class သၢင်ႈ Object (new) လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႆႈယူႇ",
-    "Error compile",
-  ]),
-  Quiz(325, "Abstract Class မီး Constructor လႆႈႁႃႉ?", [
-    "လႆႈ (တႃႇၸႂ်ႉၼႂ်း subclass)",
-    "ဢမ်ႇလႆႈ",
-    "မီးလႆႈ 1 ဢၼ်ၵူၺ်း",
+  Quiz(325, "Can an Abstract Class have a constructor?", [
+    "Yes (Used by subclasses during instantiation)",
+    "No",
+    "Only one",
     "Error",
   ]),
-  Quiz(326, "Abstract Class မီး Normal Method (မီး body) လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "မီးလႆႈ static ၵူၺ်း",
-    "Error",
-  ]),
-  Quiz(327, "Subclass ဢၼ်သိုပ်ႇ Abstract class လူဝ်ႇႁဵတ်းသင်?", [
-    "လူဝ်ႇ Override ၵူႈ Abstract methods",
-    "ဢမ်ႇႁဵတ်းသင်ၵေႃႈလႆႈ",
-    "Delete ပႅတ်ႈ",
-    "Error",
-  ]),
-  Quiz(328, "Abstract method ပဵၼ် private လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (ယွၼ်ႉလူဝ်ႇ Override)",
-    "လႆႈ",
-    "ပဵၼ် default",
+  Quiz(
+    326,
+    "Can an Abstract Class contain normal (concrete) methods with a body?",
+    ["Yes", "No", "Only static ones", "Error"],
+  ),
+  Quiz(
+    327,
+    "What must a concrete subclass do when it inherits an Abstract Class?",
+    ["Override all abstract methods", "Nothing", "Delete the methods", "Error"],
+  ),
+  Quiz(328, "Can an abstract method be declared as private?", [
+    "No (Because it must be overridden)",
+    "Yes",
+    "Default only",
     "None",
   ]),
-  Quiz(329, "Abstract class ပဵၼ် final လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (ယွၼ်ႉ final သိုပ်ႇဢမ်ႇလႆႈ)",
-    "လႆႈ",
-    "လႆႈယူႇ",
+  Quiz(329, "Can an abstract class be declared as final?", [
+    "No (Because final prevents inheritance)",
+    "Yes",
+    "Maybe",
     "None",
   ]),
-  Quiz(330, "Abstraction ၸွႆႈသင်?", [
-    "လူတ်းလွင်ႈသုၵ်ႉယုင်ႈ (Reduce complexity)",
-    "ႁႂ်ႈ code ၼမ်",
-    "ႁႂ်ႈ RAM တဵမ်",
-    "Check error",
+  Quiz(330, "What is a major benefit of Abstraction?", [
+    "Reduces complexity by hiding details",
+    "Increases code length",
+    "Fills up RAM",
+    "Checks for syntax errors",
   ]),
 
   // --- Interfaces ---
-  Quiz(331, "Interface ၸႂ်ႉ Keyword သင်?", [
+  Quiz(331, "Which keyword is used to define an Interface?", [
     "interface",
     "class",
     "abstract",
     "extends",
   ]),
-  Quiz(332, "Class ၼိုင်ႈဢၼ် ၸႂ်ႉ Interface လူဝ်ႇၸႂ်ႉ Keyword သင်?", [
+  Quiz(332, "Which keyword is used by a class to use an Interface?", [
     "implements",
     "extends",
     "uses",
     "includes",
   ]),
-  Quiz(333, "Java ပၼ် implements လၢႆ Interface ႁႃႉ?", [
-    "ပၼ် (Multiple inheritance via interfaces)",
-    "ဢမ်ႇပၼ်",
-    "1 ဢၼ်ၵူၺ်း",
+  Quiz(333, "Can a class implement multiple interfaces?", [
+    "Yes (Multiple inheritance via interfaces)",
+    "No",
+    "Only one",
     "Error",
   ]),
-  Quiz(334, "Variable ၼႂ်း Interface ပဵၼ်ပိူင်လႂ်?", [
-    "public static final (Constant)",
+  Quiz(334, "Variables defined in an interface are implicitly?", [
+    "public static final (Constants)",
     "private",
     "local",
-    "instance",
+    "instance variables",
   ]),
-  Quiz(335, "Method ၼႂ်း Interface ပဵၼ် (Default) သင်?", [
+  Quiz(335, "Methods in an interface (by default) are?", [
     "public abstract",
     "private",
     "protected",
     "static",
   ]),
-  Quiz(336, "Interface သၢင်ႈ Object လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(336, "Can you instantiate an Interface directly?", [
+    "No",
+    "Yes",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(337, "Default method ၼႂ်း interface (Java 8) မီး body လႆႈႁႃႉ?", [
-    "လႆႈ (ၸႂ်ႉ keyword default)",
-    "ဢမ်ႇလႆႈ",
-    "Error",
+  Quiz(337, "As of Java 8, can interfaces have methods with a body?", [
+    "Yes (using the 'default' keyword)",
+    "No",
+    "Compile Error",
     "None",
   ]),
-  Quiz(338, "Marker Interface မၢႆထိုင်သင်?", [
-    "Interface ဢၼ်ဢမ်ႇမီး Method သေဢၼ် (Serializable)",
-    "Interface မီး method ၼမ်",
-    "Abstract class",
+  Quiz(338, "What is a Marker Interface?", [
+    "An interface with no methods (e.g., Serializable)",
+    "An interface with many methods",
+    "An abstract class",
     "None",
   ]),
-  Quiz(339, "Interface သိုပ်ႇ (extend) Interface ထႅင်ႈဢၼ်ၼိုင်ႈလႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "ၸႂ်ႉ implements",
+  Quiz(339, "Can an Interface extend another Interface?", [
+    "Yes",
+    "No",
+    "Only using implements",
     "Error",
   ]),
-  Quiz(340, "ၵၢၼ်ၸႂ်ႉ Interface ႁဵတ်းႁႂ်ႈပဵၼ်သင်?", [
+  Quiz(340, "The use of Interfaces helps achieve what in design?", [
     "Loose Coupling",
     "Tight Coupling",
-    "Error",
-    "Slow code",
+    "Runtime Error",
+    "Slower code",
   ]),
 
   // --- Encapsulation & Access Modifiers ---
-  Quiz(341, "Encapsulation မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ႁေႃႇ (wrap) data လႄႈ code ဝႆႉၸွမ်းၵၼ် (Data hiding)",
-    "ၵၢၼ်သိုပ်ႇပိုင်ႈ",
-    "ၵၢၼ်သၢင်ႈ object",
-    "ၵၢၼ် import",
+  Quiz(341, "What is Encapsulation?", [
+    "Wrapping data and code together (Data hiding)",
+    "Inheritance",
+    "Object creation",
+    "Importing",
   ]),
-  Quiz(342, "တႃႇႁဵတ်း Encapsulation လူဝ်ႇသႂ်ႇ variable ပဵၼ်သင်?", [
+  Quiz(342, "To achieve Encapsulation, variables should be declared as?", [
     "private",
     "public",
     "static",
     "final",
   ]),
-  Quiz(343, "တႃႇလူတ်း/သႂ်ႇ ၵႃႈၶၼ်ပၼ် private field လူဝ်ႇၸႂ်ႉသင်?", [
-    "Getter လႄႈ Setter methods",
-    "Operator =",
-    "Direct access",
-    "Constructor ၵူၺ်း",
-  ]),
-  Quiz(344, "Access Modifier လႂ် ဢၼ်ၵႅတ်ႇၶႄလီသေပိူၼ်ႈ?", [
+  Quiz(
+    343,
+    "How do you access or update a private field in an encapsulated class?",
+    [
+      "Getter and Setter methods",
+      "Directly with = operator",
+      "Direct access",
+      "Only via Constructor",
+    ],
+  ),
+  Quiz(344, "Which access modifier is the most restrictive?", [
     "private",
     "default",
     "protected",
     "public",
   ]),
-  Quiz(345, "Access Modifier လႂ် ဢၼ်ပၼ်ၸႂ်ႉလႆႈၵူႈတီႈ?", [
-    "public",
-    "private",
-    "protected",
-    "default",
-  ]),
-  Quiz(346, "Default access (no modifier) မၢႆထိုင်သင်?", [
-    "ၸႂ်ႉလႆႈၼႂ်း Package လဵဝ်ၵၼ်ၵူၺ်း",
-    "ၸႂ်ႉလႆႈၵူႈတီႈ",
-    "ၸႂ်ႉလႆႈၼႂ်း Class ၵူၺ်း",
+  Quiz(
+    345,
+    "Which access modifier allows access from any class in any package?",
+    ["public", "private", "protected", "default"],
+  ),
+  Quiz(346, "What is Default access (no modifier)?", [
+    "Accessible only within the same package",
+    "Accessible everywhere",
+    "Accessible only in class",
     "Error",
   ]),
-  Quiz(347, "Protected modifier ၸႂ်ႉလႆႈတီႈလႂ်?", [
-    "ၼႂ်း package လႄႈ Subclass ၼွၵ်ႈ package",
-    "ၼႂ်း package ၵူၺ်း",
-    "ၼွၵ်ႈ package ၵူၺ်း",
+  Quiz(347, "Where can 'protected' members be accessed?", [
+    "Inside the package and by subclasses in other packages",
+    "Only in the same package",
+    "Only in other packages",
     "Error",
   ]),
-  Quiz(348, "Encapsulation ၸွႆႈသင်?", [
+  Quiz(348, "What is the benefit of Encapsulation?", [
     "Data Security / Better control",
-    "Code faster",
-    "RAM less",
-    "No error",
+    "Faster code execution",
+    "Uses less RAM",
+    "No more errors",
   ]),
-  Quiz(349, "Read-only class ႁဵတ်းၸိူင်ႉႁိုဝ်?", [
-    "မီးၵူၺ်း Getter method (ဢမ်ႇမီး Setter)",
-    "မီး Setter ၵူၺ်း",
-    "သႂ်ႇ private ၵူၺ်း",
+  Quiz(349, "How do you create a read-only class?", [
+    "Provide only Getters (no Setters)",
+    "Provide only Setters",
+    "Make everything private only",
     "Error",
   ]),
-  Quiz(350, "Encapsulation ႁဵတ်းႁႂ်ႈ code ႁဝ်း?", [
-    "Maintainable (ၵုမ်းထိင်းငၢႆႈ)",
+  Quiz(350, "Encapsulation makes your code more?", [
+    "Maintainable",
     "Unsafe",
     "Complex",
     "None",
   ]),
 
   // --- Static Keyword ---
-  Quiz(351, "Static variable ယူႇၼႂ်းလႂ်?", [
-    "Memory ၵူင် (Shared memory / Method area)",
-    "Heap individual",
+  Quiz(351, "Where are Static variables stored in memory?", [
+    "Method area (Shared memory)",
+    "Individual Heap space",
     "Stack",
     "Disk",
   ]),
-  Quiz(352, "Static method ႁွင်ႉၸႂ်ႉလူၺ်ႈဢမ်ႇလူဝ်ႇသၢင်ႈ Object လႆႈႁႃႉ?", [
-    "လႆႈ (ClassName.method())",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(352, "Can a Static method be called without creating an object?", [
+    "Yes (ClassName.method())",
+    "No",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(353, "Static variable ႁွင်ႉဝႃႈသင်?", [
+  Quiz(353, "What is another name for a Static variable?", [
     "Class variable",
     "Instance variable",
     "Local variable",
-    "Global",
+    "Global variable",
   ]),
-  Quiz(354, "Static method ႁွင်ႉၸႂ်ႉ 'this' လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႆႈၼႂ်း constructor",
+  Quiz(354, "Can the 'this' keyword be used inside a static method?", [
+    "No",
+    "Yes",
+    "Only in constructor",
     "Error",
   ]),
-  Quiz(355, "Static block ၸႂ်ႉတႃႇသင်?", [
-    "Initialize static variables",
-    "Run loop",
-    "Delete object",
-    "Import",
+  Quiz(355, "What is a Static block used for?", [
+    "Initializing static variables",
+    "Running loops",
+    "Deleting objects",
+    "Importing classes",
   ]),
-  Quiz(356, "Static block ႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Class ထုၵ်ႇ Load ၶဝ်ႈ RAM",
-    "မိူဝ်ႈသၢင်ႈ Object",
-    "မိူဝ်ႈႁွင်ႉ method",
-    "မိူဝ်ႈပိၵ်ႉ",
+  Quiz(356, "When is a Static block executed?", [
+    "When the class is loaded into memory",
+    "When an object is created",
+    "When a method is called",
+    "When the program closes",
   ]),
-  Quiz(357, "Static variable မီးလၢႆဢၼ်ၼႂ်း Class?", [
-    "ဢၼ်လဵဝ်ၵူၺ်း တႃႇၵူႈ Object",
-    "ၸွမ်းၼင်ႇ Object",
-    "10 ဢၼ်",
+  Quiz(357, "How many copies of a static variable exist in a class?", [
+    "Only one (shared by all objects)",
+    "One per object",
+    "Exactly 10",
     "None",
   ]),
-  Quiz(358, "Main method လူဝ်ႇပဵၼ် Static တႃႇသင်?", [
-    "တႃႇႁႂ်ႈ JVM ႁွင်ႉလႆႈလူၺ်ႈဢမ်ႇသၢင်ႈ Object",
-    "ႁႂ်ႈမၼ်းဝႆး",
-    "ႁႂ်ႈမၼ်းလႅၵ်ႈလႆႈ",
+  Quiz(358, "Why must the main method be static?", [
+    "So the JVM can call it without creating an object instance",
+    "To make it faster",
+    "To make it changeable",
     "Error",
   ]),
-  Quiz(359, "Static method ႁွင်ႉၸႂ်ႉ Non-static variable တိုက်ရိုက်လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႆႈသင်ပဵၼ် public",
+  Quiz(359, "Can a static method access a non-static variable directly?", [
+    "No",
+    "Yes",
+    "Only if public",
     "Error",
   ]),
-  Quiz(360, "Instance method ႁွင်ႉၸႂ်ႉ Static method လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(360, "Can an instance method call a static method?", [
+    "Yes",
+    "No",
+    "Sometimes",
     "Error",
   ]),
 
   // --- Final Keyword ---
-  Quiz(361, "Final Variable မၢႆထိုင်သင်?", [
-    "ၵႃႈၶၼ်ဢၼ်လႅၵ်ႈဢမ်ႇလႆႈ (Constant)",
-    "Variable ဢၼ်ႁၢႆ",
-    "Variable ဢၼ်လႅၵ်ႈလႆႈ",
+  Quiz(361, "What is a Final Variable?", [
+    "A variable whose value cannot be changed (Constant)",
+    "A variable that disappears",
+    "A changeable variable",
     "Error",
   ]),
-  Quiz(362, "Final Method မၢႆထိုင်သင်?", [
-    "Method ဢၼ် Override ဢမ်ႇလႆႈ",
-    "Method ဢၼ်ပိၵ်ႉ",
-    "Method ဢၼ်ဝႆး",
+  Quiz(362, "What is a Final Method?", [
+    "A method that cannot be overridden by subclasses",
+    "A closed method",
+    "A fast method",
     "Error",
   ]),
-  Quiz(363, "Final Class မၢႆထိုင်သင်?", [
-    "Class ဢၼ်သိုပ်ႇ (Inherit) ဢမ်ႇလႆႈ",
-    "Class ဢၼ်သၢင်ႈ Object ဢမ်ႇလႆႈ",
-    "Abstract class",
+  Quiz(363, "What is a Final Class?", [
+    "A class that cannot be inherited",
+    "A class that cannot create objects",
+    "An abstract class",
     "None",
   ]),
-  Quiz(364, "Blank Final Variable လူဝ်ႇ Initialize ၼႂ်းလႂ်?", [
-    "Constructor",
-    "Main method",
-    "Static block",
+  Quiz(364, "Where must a Blank Final Variable be initialized?", [
+    "In the Constructor",
+    "In the Main method",
+    "In a static block",
     "None",
   ]),
-  Quiz(365, "Final parameter ၼႂ်း method လႅၵ်ႈၵႃႈၶၼ်လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "Error",
-  ]),
+  Quiz(
+    365,
+    "Can a final parameter in a method be modified inside that method?",
+    ["No", "Yes", "Sometimes", "Error"],
+  ),
 
   // --- Intermediate Mix (366 - 400) ---
-  Quiz(366, "Upcasting မၢႆထိုင်သင်?", [
-    "Subclass object ၵႂႃႇၸူး Superclass reference",
-    "Superclass ၵႂႃႇၸူး Subclass",
+  Quiz(366, "What is Upcasting?", [
+    "Casting a Subclass object to a Superclass reference",
+    "Superclass to Subclass",
     "Error",
     "None",
   ]),
-  Quiz(367, "Downcasting လူဝ်ႇႁဵတ်းသင်?", [
-    "Explicit casting (Subclass)obj",
-    "Implicit casting",
-    "ဢမ်ႇလူဝ်ႇႁဵတ်းသင်",
+  Quiz(367, "How is Downcasting performed?", [
+    "Explicitly using (Subclass)obj",
+    "Implicitly by Java",
+    "No action needed",
     "Error",
   ]),
-  Quiz(368, "Downcasting ဢၼ်ဢမ်ႇမႅၼ်ႈတေပဵၼ် Exception သင်?", [
+  Quiz(368, "What exception is thrown if Downcasting is invalid at runtime?", [
     "ClassCastException",
     "NullPointerException",
     "ArithmeticException",
     "None",
   ]),
-  Quiz(369, "Composition မၢႆထိုင်သင်?", [
+  Quiz(369, "What relationship does Composition represent?", [
     "HAS-A relationship",
     "IS-A relationship",
     "Inheritance",
     "Method",
   ]),
-  Quiz(370, "Aggregation မၢႆထိုင်သင်?", [
+  Quiz(370, "What relationship does Aggregation represent?", [
     "Weak HAS-A relationship",
     "Strong IS-A",
     "Inheritance",
     "Polymorphism",
   ]),
-  Quiz(371, "တႃႇ Check ဝႃႈ Object ပဵၼ် Instance ၶွင် Class လႂ် ၸႂ်ႉသင်?", [
-    "instanceof operator",
-    "==",
-    "equals()",
-    "typeof",
-  ]),
-  Quiz(372, "Method Overloading ပဵၼ် Polymorphism လၢႆးလႂ်?", [
+  Quiz(
+    371,
+    "Which operator is used to check if an object is an instance of a specific class?",
+    ["instanceof", "==", "equals()", "typeof"],
+  ),
+  Quiz(372, "Method Overloading is which type of Polymorphism?", [
     "Compile-time",
     "Runtime",
     "Dynamic",
     "None",
   ]),
-  Quiz(373, "Method Overriding ပဵၼ် Polymorphism လၢႆးလႂ်?", [
+  Quiz(373, "Method Overriding is which type of Polymorphism?", [
     "Runtime",
     "Compile-time",
     "Static",
     "None",
   ]),
-  Quiz(374, "Interface မီး Private method လႆႈႁႃႉ (Java 9+)?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
+  Quiz(374, "Can an Interface have private methods (Java 9+)?", [
+    "Yes",
+    "No",
     "Error",
     "None",
   ]),
-  Quiz(375, "Nested Class မၢႆထိုင်သင်?", [
-    "Class ၼႂ်း Class",
-    "Class ၼႂ်း Method",
-    "Package ၼႂ်း Package",
+  Quiz(375, "What is a Nested Class?", [
+    "A class declared inside another class",
+    "A class in a method",
+    "A package in a package",
     "None",
   ]),
-  Quiz(376, "Inner Class (Non-static) ၸွႆႈသင်?", [
-    "Access private members ၶွင် Outer class",
-    "ႁႂ်ႈ code ဝႆး",
-    "ႁႂ်ႈ RAM ၼမ်",
+  Quiz(376, "What is a benefit of an Inner Class (Non-static)?", [
+    "It can access private members of the Outer class",
+    "Faster code",
+    "Uses more RAM",
     "Error",
   ]),
-  Quiz(377, "Anonymous Inner Class ၸႂ်ႉမိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈၶႂ်ႈ Override method ၵမ်းလဵဝ်လူၺ်ႈဢမ်ႇသၢင်ႈ Class မႂ်ႇ",
-    "မိူဝ်ႈ compile",
-    "မိူဝ်ႈ delete",
+  Quiz(377, "When is an Anonymous Inner Class typically used?", [
+    "To override a method quickly without creating a named class",
+    "During compilation",
+    "During deletion",
     "None",
   ]),
-  Quiz(378, "Super keyword ၸႂ်ႉႁွင်ႉသင်?", [
-    "Field/Method/Constructor ၶွင် Superclass",
-    "Local variable",
-    "Static field",
+  Quiz(378, "What is the 'super' keyword used to access?", [
+    "Members or constructors of the Superclass",
+    "Local variables",
+    "Static fields",
     "None",
   ]),
-  Quiz(379, "this() လႄႈ super() ယူႇၸွမ်းၵၼ်ၼႂ်း Constructor လဵဝ်လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (တင်းသွင်လူဝ်ႇယူႇထႅဝ်ၼိူဝ်သုတ်း)",
-    "လႆႈ",
-    "Error",
-    "None",
-  ]),
-  Quiz(380, "Object Cloning ၸႂ်ႉ Interface သင်?", [
+  Quiz(
+    379,
+    "Can this() and super() be used together in the same constructor?",
+    ["No (Both must be the first statement)", "Yes", "Error", "None"],
+  ),
+  Quiz(380, "Which interface is used for Object Cloning?", [
     "Cloneable",
     "Serializable",
     "Remote",
     "None",
   ]),
-  Quiz(381, "clone() method ယူႇၼႂ်း Class လႂ်?", [
+  Quiz(381, "In which class is the clone() method defined?", [
     "Object class",
     "String class",
     "System class",
     "Clone class",
   ]),
-  Quiz(382, "Shallow Copy မၢႆထိုင်သင်?", [
-    "Copy ၵူၺ်း Reference ဢမ်ႇၸႂ်ႉ Object တႄႇ",
-    "Copy တင်းသဵင်ႈ",
+  Quiz(382, "What is a Shallow Copy?", [
+    "Copies only the reference, not the nested objects",
+    "Copies everything",
     "Error",
     "None",
   ]),
-  Quiz(383, "Deep Copy မၢႆထိုင်သင်?", [
-    "Copy တင်း Object တႄႇလႄႈ Reference",
-    "Copy ၵူၺ်း Reference",
+  Quiz(383, "What is a Deep Copy?", [
+    "Copies the object and all objects it references",
+    "Copies only the reference",
     "Error",
     "None",
   ]),
-  Quiz(384, "Access Modifier လႂ်ပဵၼ် Default ၼႂ်း Interface?", [
-    "public",
-    "private",
-    "protected",
-    "default",
-  ]),
-  Quiz(385, "Multiple inheritance တႃႇ Class ဢမ်ႇပၼ်ၸႂ်ႉ ယွၼ်ႉသင်?", [
-    "Diamond Problem",
-    "RAM limit",
+  Quiz(
+    384,
+    "What is the default access modifier for members in an Interface?",
+    ["public", "private", "protected", "default"],
+  ),
+  Quiz(385, "Why doesn't Java support multiple inheritance with classes?", [
+    "To avoid the Diamond Problem (ambiguity)",
+    "RAM limits",
     "Slow speed",
     "Complexity",
   ]),
-  Quiz(386, "Constructor သိုပ်ႇ (inherit) လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "Error",
-  ]),
-  Quiz(387, "Interface မီး Static method လႆႈႁႃႉ?", [
-    "လႆႈ (Java 8+)",
-    "ဢမ်ႇလႆႈ",
+  Quiz(386, "Are Constructors inherited?", ["No", "Yes", "Sometimes", "Error"]),
+  Quiz(387, "Can an Interface have static methods (Java 8+)?", [
+    "Yes",
+    "No",
     "Error",
     "None",
   ]),
-  Quiz(388, "Functional Interface မၢႆထိုင်သင်?", [
-    "Interface ဢၼ်မီး Abstract method ဢၼ်လဵဝ်ၵူၺ်း",
-    "Interface ဢမ်ႇမီး method",
-    "Abstract class",
+  Quiz(388, "What is a Functional Interface?", [
+    "An interface with exactly one abstract method",
+    "An interface with no methods",
+    "An abstract class",
     "None",
   ]),
-  Quiz(389, "@FunctionalInterface annotation ၸွႆႈသင်?", [
-    "Check ဝႃႈမၼ်းမီး Abstract method ဢၼ်လဵဝ်တႄႇႁႃႉ",
-    "ႁႂ်ႈ code ဝႆး",
+  Quiz(389, "What is the purpose of the @FunctionalInterface annotation?", [
+    "To check if the interface strictly has only one abstract method",
+    "Faster code",
     "Compile error",
     "None",
   ]),
-  Quiz(390, "Lambda Expression ၸႂ်ႉၸွမ်းသင်?", [
-    "Functional Interface",
-    "Abstract Class",
-    "Normal Class",
+  Quiz(390, "Lambda Expressions are used with what?", [
+    "Functional Interfaces",
+    "Abstract Classes",
+    "Normal Classes",
     "Method Overloading",
   ]),
   Quiz(
     391,
-    "Method Overriding ၼႂ်း Subclass လူဝ်ႇမီး Access level ၸိူင်ႉႁိုဝ်?",
+    "What must the access level of an overridden method in a Subclass be?",
     [
-      "မိူၼ်ၵၼ် ဢမ်ႇၼၼ် ပိုတ်ႇ (broader) သေ Superclass",
-      "ၵႅတ်ႇ (narrower) သေ Superclass",
-      "private ၵူၺ်း",
+      "Same as or broader than the Superclass",
+      "Narrower than the Superclass",
+      "private only",
       "None",
     ],
   ),
-  Quiz(392, "Inheritance ၸွႆႈသင်?", [
+  Quiz(392, "What is the main benefit of Inheritance?", [
     "Code Reusability",
     "Security",
     "Speed",
     "None",
   ]),
-  Quiz(393, "Inheritance မီးလၢႆသႅၼ်း?", [
+  Quiz(393, "What are types of Inheritance supported in Java?", [
     "Single, Multilevel, Hierarchical",
     "Multiple, Hybrid",
     "Only Single",
-    "All of above (except multiple class)",
+    "All of the above (except multiple with classes)",
   ]),
-  Quiz(394, "Class A extends B, Class B extends C ႁွင်ႉဝႃႈသင်?", [
-    "Multilevel Inheritance",
-    "Single Inheritance",
-    "Hierarchical",
-    "Multiple",
-  ]),
-  Quiz(395, "Class B extends A, Class C extends A ႁွင်ႉဝႃႈသင်?", [
-    "Hierarchical Inheritance",
-    "Multilevel",
-    "Single",
-    "Hybrid",
-  ]),
-  Quiz(396, "တႃႇတႅၵ်ႈ Object သွင်ဢၼ်ဝႃႈ Value မိူၼ်ၵၼ်ႁႃႉ ၸႂ်ႉသင်?", [
-    "equals() method",
-    "==",
-    "!=",
-    "instanceof",
-  ]),
-  Quiz(397, "Operator == တႅၵ်ႈသင်ၼႂ်း Object?", [
+  Quiz(
+    394,
+    "If Class A extends B, and Class B extends C, what is this called?",
+    [
+      "Multilevel Inheritance",
+      "Single Inheritance",
+      "Hierarchical",
+      "Multiple",
+    ],
+  ),
+  Quiz(
+    395,
+    "If Class B extends A, and Class C extends A, what is this called?",
+    ["Hierarchical Inheritance", "Multilevel", "Single", "Hybrid"],
+  ),
+  Quiz(
+    396,
+    "To compare if two objects have the same values, which should you use?",
+    ["equals() method", "==", "!=", "instanceof"],
+  ),
+  Quiz(397, "What does the == operator compare in objects?", [
     "Memory Address (Reference)",
     "Content / Value",
     "Class name",
     "None",
   ]),
-  Quiz(398, "String Class ပဵၼ် Final Class ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ (သိုပ်ႇဢမ်ႇလႆႈ)",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(398, "Is the String class a Final Class?", [
+    "Yes (It cannot be inherited)",
+    "No",
+    "Sometimes",
     "None",
   ]),
-  Quiz(399, "Abstract class တႅမ်ႈ Abstract method ဢမ်ႇသႂ်ႇၵေႃႈလႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
+  Quiz(399, "Can an Abstract class exist without any Abstract methods?", [
+    "Yes",
+    "No",
     "Error",
     "None",
   ]),
-  Quiz(400, "Method overriding ႁွင်ႉသင်ထႅင်ႈ?", [
-    "Late Binding",
+  Quiz(400, "What is Method Overriding also known as?", [
+    "Late Binding (Dynamic Binding)",
     "Early Binding",
     "Static Binding",
     "None",
   ]),
   // --- Interfaces & Advanced Abstraction (401-430) ---
-  Quiz(
-    401,
-    "Interface ၼိုင်ႈဢၼ် သိုပ်ႇ (extend) Interface တၢင်ႇဢၼ်လႆႈလၢႆဢၼ်?",
-    [
-      "လၢႆဢၼ် (Multiple inheritance for interfaces)",
-      "ဢၼ်လဵဝ်ၵူၺ်း",
-      "ဢမ်ႇလႆႈ",
-      "2 ဢၼ်ၵူၺ်း",
-    ],
-  ),
-  Quiz(402, "ၼႂ်း Java 8, Method လႂ်ၼႂ်း Interface ဢၼ်မီး body { } လႆႈ?", [
-    "Default လႄႈ Static methods",
+  Quiz(401, "How many interfaces can a single interface extend?", [
+    "Multiple (Interfaces support multiple inheritance)",
+    "Only one",
+    "None",
+    "Exactly two",
+  ]),
+  Quiz(402, "In Java 8, which methods in an interface can have a body { }?", [
+    "Default and Static methods",
     "Abstract methods",
-    "Private methods ၵူၺ်း",
-    "ဢမ်ႇမီး",
+    "Only private methods",
+    "None",
   ]),
-  Quiz(403, "Default method ၸႂ်ႉ Keyword သင်?", [
-    "default",
-    "static",
-    "void",
-    "public",
-  ]),
-  Quiz(404, "Static method ၼႂ်း Interface ႁွင်ႉၸႂ်ႉလၢႆးလႂ်?", [
+  Quiz(
+    403,
+    "Which keyword is used to define a default method in an interface?",
+    ["default", "static", "void", "public"],
+  ),
+  Quiz(404, "How do you call a static method defined within an interface?", [
     "InterfaceName.methodName()",
     "ClassName.methodName()",
     "new Interface()",
     "this.method()",
   ]),
-  Quiz(405, "Functional Interface မီး Abstract method လၢႆဢၼ်?", [
-    "1 ဢၼ်ၵူၺ်း",
-    "ဢမ်ႇမီးသေဢၼ်",
-    "2 ဢၼ်",
-    "လၢႆဢၼ်ၵေႃႈလႆႈ",
+  Quiz(405, "How many abstract methods does a Functional Interface have?", [
+    "Exactly one",
+    "None",
+    "Two",
+    "Unlimited",
   ]),
-  Quiz(406, "Annotation လႂ်ၸႂ်ႉတႃႇမၢႆ Functional Interface?", [
+  Quiz(406, "Which annotation is used to mark a Functional Interface?", [
     "@FunctionalInterface",
     "@Interface",
     "@Override",
     "@Abstract",
   ]),
-  Quiz(407, "Interface ၸွႆႈႁႂ်ႈ Code ႁဝ်းပဵၼ် Loose Coupling မၢႆထိုင်သင်?", [
-    "ၵွင်ႉၵၼ်ဝႆႉႁူမ်ႈႁူမ်ႈ (ဢမ်ႇပိုင်ႈၵၼ်ၼမ်)",
-    "ၵွင်ႉၵၼ်ဝႆႉၵႅၼ်ႇၵႅၼ်ႇ",
-    "Code ဝႆးသေ",
-    "Error ၼမ်သေ",
-  ]),
-  Quiz(408, "Interface မီး Constructor လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႆႈသင်ပဵၼ် static",
+  Quiz(
+    407,
+    "What does it mean when we say Interfaces achieve 'Loose Coupling'?",
+    [
+      "Classes are less dependent on specific implementations",
+      "Classes are tightly connected",
+      "Code runs faster",
+      "More errors occur",
+    ],
+  ),
+  Quiz(408, "Can an Interface have a constructor?", [
+    "No",
+    "Yes",
+    "Only if it is static",
     "Error",
   ]),
-  Quiz(409, "Tagging Interface ႁွင်ႉဝႃႈသင်ထႅင်ႈ?", [
+  Quiz(409, "What is another name for a Tagging Interface?", [
     "Marker Interface",
     "Functional Interface",
     "Default Interface",
     "None",
   ]),
-  Quiz(410, "Serializable ပဵၼ် Interface သႅၼ်းလႂ်?", [
+  Quiz(410, "The 'Serializable' interface is an example of what?", [
     "Marker Interface",
     "Functional Interface",
     "Abstract Interface",
@@ -2413,245 +2477,249 @@ final List<Quiz> quizzes4 = [
   ]),
 
   // --- Static vs Instance Memory (431-450) ---
-  Quiz(411, "Static field ၼိုင်ႈဢၼ် မီးတီႈသိမ်း (Copy) လၢႆဢၼ်?", [
-    "ဢၼ်လဵဝ်ၵူၺ်း တႃႇၵူႈ Object",
-    "10 ဢၼ်",
-    "ၸွမ်းၼင်ႇ Object",
-    "ဢမ်ႇမီး",
+  Quiz(411, "How many copies of a static field exist in memory?", [
+    "Only one (Shared by all instances)",
+    "Ten",
+    "One per object instance",
+    "None",
   ]),
-  Quiz(
-    412,
-    "သင် Object A လႅၵ်ႈၵႃႈၶၼ် Static variable, Object B တေႁၼ်ၸိူင်ႉႁိုဝ်?",
-    ["ႁၼ်ၵႃႈၶၼ်ဢၼ်လႅၵ်ႈယဝ်ႉ (Shared)", "ႁၼ်ၵႃႈၶၼ်ၵဝ်ႇ", "ဢမ်ႇႁၼ်", "Error"],
-  ),
-  Quiz(413, "Static method ႁွင်ႉၸႂ်ႉ 'super' keyword လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႆႈၼႂ်း constructor",
+  Quiz(412, "If Object A changes a static variable, what will Object B see?", [
+    "The updated value (Shared state)",
+    "The old value",
+    "Nothing",
     "Error",
   ]),
-  Quiz(414, "Method main() လူဝ်ႇပဵၼ် static တႃႇသင်?", [
-    "တႃႇႁႂ်ႈ JVM ႁွင်ႉလႆႈလူၺ်ႈဢမ်ႇသၢင်ႈ Object",
-    "တႃႇႁႂ်ႈ compile ဝႆး",
-    "ပဵၼ်ပိူင် Java ၵူၺ်း",
+  Quiz(413, "Can a static method use the 'super' keyword?", [
+    "No",
+    "Yes",
+    "Only in the constructor",
+    "Error",
+  ]),
+  Quiz(414, "Why is the main() method static?", [
+    "To allow the JVM to call it without creating a class instance",
+    "To speed up compilation",
+    "It is just a Java rule",
     "None",
   ]),
-  Quiz(415, "Static Import ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇႁွင်ႉၸႂ်ႉ Static members လူၺ်ႈဢမ်ႇသႂ်ႇ Class name",
-    "တႃႇ import package",
-    "တႃႇႁႂ်ႈ RAM ဝႆး",
+  Quiz(415, "What is the purpose of a Static Import?", [
+    "To use static members without the class name prefix",
+    "To import a whole package",
+    "To speed up RAM",
     "None",
   ]),
-  Quiz(416, "ၼႂ်း Class ၼိုင်ႈဢၼ် မီး Static block လႆႈလၢႆဢၼ်?", [
-    "ၼမ်လၢႆ (Multiple static blocks)",
-    "ဢၼ်လဵဝ်ၵူၺ်း",
-    "ဢမ်ႇပၼ်မီး",
-    "2 ဢၼ်ၵူၺ်း",
+  Quiz(416, "How many static blocks can a single class have?", [
+    "Multiple (They run in order)",
+    "Only one",
+    "None",
+    "Exactly two",
   ]),
-  Quiz(417, "Static block လႄႈ Constructor ဢၼ်လႂ်ႁဵတ်းၵၢၼ်ၵွၼ်ႇ?", [
+  Quiz(417, "Which runs first: a Static block or a Constructor?", [
     "Static block",
     "Constructor",
-    "ႁဵတ်းၸွမ်းၵၼ်",
+    "They run simultaneously",
     "None",
   ]),
-  Quiz(418, "Static variable ၵိၼ် Memory တီႈလႂ်?", [
-    "Method Area (Permanent Generation)",
+  Quiz(418, "In which memory area are static variables kept?", [
+    "Method Area (Permanent Generation/Metaspace)",
     "Stack",
-    "Heap individual",
+    "Individual Heap space",
     "Disk",
   ]),
-  Quiz(419, "Static method ႁွင်ႉၸႂ်ႉ Instance method လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (လူဝ်ႇသၢင်ႈ object ၵွၼ်ႇ)",
-    "လႆႈတိုက်ရိုက်",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(419, "Can a static method call an instance method directly?", [
+    "No (It must create an object first)",
+    "Yes, directly",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(420, "Instance method ႁွင်ႉၸႂ်ႉ Static variable လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
+  Quiz(420, "Can an instance method access a static variable?", [
+    "Yes",
+    "No",
     "Error",
     "None",
   ]),
 
   // --- Final Keyword Edge Cases (421-440) ---
-  Quiz(421, "Final Object Reference လႅၵ်ႈ Object မႂ်ႇလႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႅၵ်ႈလႆႈသင်ပဵၼ် String",
+  Quiz(421, "Can a final object reference be reassigned to a new object?", [
+    "No",
+    "Yes",
+    "Only if it's a String",
     "None",
   ]),
   Quiz(
     422,
-    "Final Object Reference လႅၵ်ႈၵႃႈၶၼ် (Data) ၼႂ်း Object ၼၼ်ႉလႆႈႁႃႉ?",
-    ["လႆႈ (လႅၵ်ႈလႆႈ state)", "ဢမ်ႇလႆႈ", "Error", "None"],
+    "Can you modify the data (state) inside an object pointed to by a final reference?",
+    [
+      "Yes (The state can change, only the reference cannot)",
+      "No",
+      "Error",
+      "None",
+    ],
   ),
-  Quiz(423, "Final variable ဢၼ်ဢမ်ႇပၼ်ၵႃႈၶၼ် (Blank final) လူဝ်ႇပၼ်ၼႂ်းလႂ်?", [
-    "Constructor ၵူၺ်း",
-    "Main method",
-    "Loop",
-    "Static block",
+  Quiz(423, "Where must a 'blank final' variable be initialized?", [
+    "In the Constructor",
+    "In the main method",
+    "In a loop",
+    "In a static block",
   ]),
-  Quiz(424, "Static Final variable (Constant) လူဝ်ႇပၼ်ၵႃႈၶၼ်ၼႂ်းလႂ်?", [
-    "Static block ဢမ်ႇၼၼ် တႅမ်ႈသႂ်ႇၵမ်းလဵဝ်",
+  Quiz(424, "Where must a static final variable (Constant) be initialized?", [
+    "Static block or at the time of declaration",
     "Constructor",
     "Method",
     "None",
   ]),
-  Quiz(425, "Final class သိုပ်ႇ (extend) Class တၢင်ႇဢၼ်လႆႈႁႃႉ?", [
-    "လႆႈ (မၼ်းပဵၼ် Subclass လႆႈ)",
-    "ဢမ်ႇလႆႈ",
+  Quiz(425, "Can a final class extend another (non-final) class?", [
+    "Yes (It can be a subclass)",
+    "No",
     "Error",
     "None",
   ]),
-  Quiz(426, "Final method ၼႂ်း interface မီးလႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (ယွၼ်ႉလူဝ်ႇ implements)",
-    "လႆႈ",
+  Quiz(426, "Can you have a final method in an interface?", [
+    "No (Because interface methods must be implemented/overridden)",
+    "Yes",
     "Error",
     "None",
   ]),
-  Quiz(427, "Abstract class မီး final method လႆႈႁႃႉ?", [
-    "လႆႈ (တႃႇဢမ်ႇပၼ် override)",
-    "ဢမ်ႇလႆႈ",
+  Quiz(427, "Can an abstract class have a final method?", [
+    "Yes (To prevent subclasses from overriding it)",
+    "No",
     "Error",
     "None",
   ]),
-  Quiz(428, "Constructor ပဵၼ် Final လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
+  Quiz(428, "Can a Constructor be declared as final?", [
+    "No",
+    "Yes",
     "Error",
     "None",
   ]),
-  Quiz(429, "Private method ပဵၼ် final လူၺ်ႈဢလိုတ်း (Implicitly final) ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ (ယွၼ်ႉ subclass ဢမ်ႇႁၼ်)",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(429, "Are private methods implicitly final?", [
+    "Yes (Because they are not visible for overriding)",
+    "No",
+    "Sometimes",
     "None",
   ]),
-  Quiz(430, "Final keyword ၸွႆႈသင်?", [
-    "ႁႂ်ႈ Code မၼ်ႈၼိမ် (Immutability / Security)",
-    "ႁႂ်ႈ Code ဝႆး",
-    "ႁႂ်ႈ RAM သႅၼ်ႈ",
+  Quiz(430, "What is the primary benefit of the final keyword?", [
+    "Security and Immutability (Consistency)",
+    "Faster execution",
+    "Less RAM usage",
     "None",
   ]),
 
   // --- Encapsulation & Access Control (431-450) ---
-  Quiz(431, "Access Modifier လႂ် ဢၼ် Subclass ၼႂ်း Package တၢင်ႇဢၼ်ၸႂ်ႉလႆႈ?", [
-    "protected",
-    "default",
-    "private",
-    "none",
-  ]),
-  Quiz(432, "Default Access (no keyword) ႁွင်ႉဝႃႈသင်ထႅင်ႈ?", [
+  Quiz(
+    431,
+    "Which access modifier allows a subclass in a different package to access a member?",
+    ["protected", "default", "private", "none"],
+  ),
+  Quiz(432, "What is another name for 'Default Access'?", [
     "Package-private",
     "Public-access",
     "Hidden",
     "Local",
   ]),
-  Quiz(433, "Class ၼိုင်ႈဢၼ် ပဵၼ် private လႆႈႁႃႉ (Outer class)?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "လႆႈၼႂ်း package ၵူၺ်း",
+  Quiz(433, "Can an outer class be declared as private?", [
+    "No",
+    "Yes",
+    "Only inside a package",
     "Error",
   ]),
-  Quiz(434, "Nested Class ပဵၼ် private လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(434, "Can a nested class be declared as private?", [
+    "Yes",
+    "No",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(435, "Encapsulation ႁဵတ်းႁႂ်ႈ Data ႁဝ်း?", [
-    "Hidden (သိပ်းဝႆႉ)",
-    "Public (ပိုတ်ႇဝႆႉ)",
+  Quiz(435, "Encapsulation ensures that data is?", [
+    "Hidden and protected",
+    "Publicly accessible",
     "Deleted",
     "None",
   ]),
-  Quiz(436, "Setter method ၸွႆႈသင်?", [
-    "Validate data (ၵူတ်ႇထတ်း data) ၵွၼ်ႇသိမ်း",
-    "Delete data",
-    "Compile",
+  Quiz(436, "What is a major advantage of using a Setter method?", [
+    "Validating data before storing it",
+    "Deleting data",
+    "Compiling",
     "None",
   ]),
-  Quiz(437, "Getter method ၸိုဝ်ႈမၼ်းတႄႇလူၺ်ႈသင်?", [
+  Quiz(437, "By convention, how does a getter method name start?", [
     "get",
     "set",
     "is",
-    "Both get and is",
+    "Both 'get' and 'is'",
   ]),
-  Quiz(438, "Boolean getter ၸိုဝ်ႈမၼ်းတႄႇလူၺ်ႈသင်?", [
+  Quiz(438, "For a boolean variable, what is the standard getter prefix?", [
     "is",
     "get",
     "has",
     "can",
   ]),
-  Quiz(439, "Data Hiding ပဵၼ်တွၼ်ႈၼိုင်ႈၶွင်သင်?", [
+  Quiz(439, "Data Hiding is a core part of which OOP pillar?", [
     "Encapsulation",
     "Inheritance",
     "Polymorphism",
     "Abstraction",
   ]),
-  Quiz(440, "Access modifier လႂ်ပဵၼ် default ၼႂ်း Class?", [
-    "default (package-private)",
-    "public",
-    "private",
-    "protected",
-  ]),
+  Quiz(
+    440,
+    "What is the default access modifier for a class member if none is specified?",
+    ["default (package-private)", "public", "private", "protected"],
+  ),
 
   // --- Polymorphism & Casting (441-460) ---
-  Quiz(441, "Casting လၢႆးလႂ် ဢၼ် Java ႁဵတ်းပၼ်ဢလိုတ်း?", [
+  Quiz(441, "Which type of casting is performed automatically by Java?", [
     "Upcasting",
     "Downcasting",
     "Both",
     "None",
   ]),
-  Quiz(442, "Casting လၢႆးလႂ် ဢၼ်လူဝ်ႇတႅမ်ႈသႂ်ႇ ( )?", [
+  Quiz(442, "Which type of casting requires manual syntax ( )?", [
     "Downcasting",
     "Upcasting",
     "None",
     "Both",
   ]),
-  Quiz(443, "Parent p = new Child(); ႁွင်ႉဝႃႈသင်?", [
+  Quiz(443, "What is 'Parent p = new Child();' an example of?", [
     "Upcasting",
     "Downcasting",
     "Error",
     "Overriding",
   ]),
-  Quiz(444, "Child c = (Child)p; ႁွင်ႉဝႃႈသင်?", [
+  Quiz(444, "What is 'Child c = (Child)p;' an example of?", [
     "Downcasting",
     "Upcasting",
     "Error",
     "Overriding",
   ]),
-  Quiz(445, "ClassCastException ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Downcasting ဢမ်ႇမႅၼ်ႈ Object တႄႇ",
-    "မိူဝ်ႈ Upcasting",
-    "မိူဝ်ႈ null",
+  Quiz(445, "When does a ClassCastException occur?", [
+    "During invalid downcasting to an incorrect type",
+    "During upcasting",
+    "When a variable is null",
     "None",
   ]),
-  Quiz(446, "Compile-time Polymorphism ၸႂ်ႉသင်?", [
-    "Method Overloading",
-    "Method Overriding",
+  Quiz(446, "Method Overloading is an example of what?", [
+    "Compile-time Polymorphism",
+    "Runtime Polymorphism",
     "Casting",
     "None",
   ]),
-  Quiz(447, "Runtime Polymorphism ၸႂ်ႉသင်?", [
-    "Method Overriding",
-    "Method Overloading",
+  Quiz(447, "Method Overriding is an example of what?", [
+    "Runtime Polymorphism",
+    "Compile-time Polymorphism",
     "Casting",
     "None",
   ]),
-  Quiz(448, "Operator 'instanceof' ပၼ် result ပဵၼ်သင်?", [
+  Quiz(448, "What is the result type of the 'instanceof' operator?", [
     "boolean",
     "int",
     "Class",
     "String",
   ]),
-  Quiz(449, "Early Binding မၢႆထိုင်သင်?", [
+  Quiz(449, "What does 'Early Binding' refer to?", [
     "Static Binding (Compile-time)",
     "Dynamic Binding (Runtime)",
     "Error",
     "None",
   ]),
-  Quiz(450, "Late Binding မၢႆထိုင်သင်?", [
+  Quiz(450, "What does 'Late Binding' refer to?", [
     "Dynamic Binding (Runtime)",
     "Static Binding",
     "Error",
@@ -2659,1810 +2727,589 @@ final List<Quiz> quizzes4 = [
   ]),
 
   // --- Inheritance Theory (461-480) ---
-  Quiz(461, "Diamond Problem ပဵၼ်တီႈလႂ်?", [
-    "Multiple Inheritance (Class)",
+  Quiz(461, "In which scenario does the 'Diamond Problem' occur?", [
+    "Multiple Inheritance with Classes",
     "Single Inheritance",
-    "Interface",
+    "Interface usage",
     "None",
   ]),
-  Quiz(462, "Java ၵႄ်း Diamond Problem လူၺ်ႈသင်?", [
-    "ၸႂ်ႉ Interface တႅၼ်း",
-    "ၸႂ်ႉ Abstract class",
-    "ၸႂ်ႉ keyword 'super'",
+  Quiz(462, "How does Java resolve the Diamond Problem?", [
+    "By using Interfaces instead of multiple classes",
+    "By using Abstract classes",
+    "By using 'super'",
     "None",
   ]),
-  Quiz(463, "Aggregation ပဵၼ် Relationship သႅၼ်းလႂ်?", [
-    "Weak HAS-A",
+  Quiz(463, "What type of relationship is Aggregation?", [
+    "Weak HAS-A (Independent life cycles)",
     "Strong HAS-A",
     "IS-A",
     "None",
   ]),
-  Quiz(464, "Composition ပဵၼ် Relationship သႅၼ်းလႂ်?", [
-    "Strong HAS-A",
+  Quiz(464, "What type of relationship is Composition?", [
+    "Strong HAS-A (Dependent life cycles)",
     "Weak HAS-A",
     "IS-A",
     "None",
   ]),
-  Quiz(465, "သင် Class A တၢႆ Class B ၵေႃႈတၢႆၸွမ်း ႁွင်ႉဝႃႈသင်?", [
+  Quiz(465, "If Class B cannot exist without Class A, this is called?", [
     "Composition",
     "Aggregation",
     "Inheritance",
     "None",
   ]),
-  Quiz(466, "သင် Class A တၢႆ Class B ယັງယူႇလႆႈ ႁွင်ႉဝႃႈသင်?", [
-    "Aggregation",
-    "Composition",
-    "Inheritance",
-    "None",
-  ]),
-  Quiz(467, "Inheritance ႁဵတ်းႁႂ်ႈ Code ပဵၼ်သင်?", [
+  Quiz(
+    466,
+    "If Class B can exist even if Class A is destroyed, this is called?",
+    ["Aggregation", "Composition", "Inheritance", "None"],
+  ),
+  Quiz(467, "Inheritance creates what kind of coupling between classes?", [
     "Tight Coupling",
     "Loose Coupling",
     "Error",
     "None",
   ]),
-  Quiz(468, "Object class ယူႇၼႂ်း package လႂ်?", [
+  Quiz(468, "In which package is the root 'Object' class located?", [
     "java.lang",
     "java.util",
     "java.io",
     "java.net",
   ]),
-  Quiz(469, "Subclass constructor ႁွင်ႉ super() ဢလိုတ်းႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ (Default super())",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(469, "Does a subclass constructor call super() by default?", [
+    "Yes (The default no-arg super() is called)",
+    "No",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(470, "Hierarchical Inheritance မၢႆထိုင်သင်?", [
-    "မႄႈၼိုင်ႈဢၼ် လုၵ်ႈလၢႆဢၼ်",
-    "လုၵ်ႈၼိုင်ႈဢၼ် မႄႈလၢႆဢၼ်",
-    "မႄႈလုၵ်ႈထႅဝ်လဵဝ်",
+  Quiz(470, "What is Hierarchical Inheritance?", [
+    "One superclass with multiple subclasses",
+    "One subclass with multiple superclasses",
+    "A single chain of classes",
     "None",
   ]),
 
   // --- Nested & Inner Classes (481-500) ---
-  Quiz(471, "Static Nested Class သၢင်ႈ Object လႆႈႁႃႉ?", [
-    "လႆႈ (ဢမ်ႇလူဝ်ႇ Outer object)",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈသင်ပဵၼ် private",
+  Quiz(
+    471,
+    "Can you instantiate a Static Nested Class without an outer class object?",
+    [
+      "Yes (Outer.Nested n = new Outer.Nested())",
+      "No",
+      "Only if it is private",
+      "Error",
+    ],
+  ),
+  Quiz(472, "How do you instantiate an Inner Class (Non-static)?", [
+    "You must create an Outer class object first",
+    "Directly with new",
+    "You cannot",
     "Error",
   ]),
-  Quiz(472, "Inner Class (Non-static) သၢင်ႈ Object လႆႈႁိုဝ်?", [
-    "လူဝ်ႇသၢင်ႈ Outer object ၵွၼ်ႇ",
-    "သၢင်ႈလႆႈတိုက်ရိုက်",
-    "ဢမ်ႇလႆႈ",
-    "Error",
-  ]),
-  Quiz(473, "Local Inner Class ယူႇၼႂ်းလႂ်?", [
-    "ယူႇၼႂ်း Method",
-    "ယူႇၼႂ်း Class ၵူၺ်း",
-    "ယူႇၼႂ်း Package",
+  Quiz(473, "Where is a Local Inner Class defined?", [
+    "Inside a Method",
+    "Inside a Class only",
+    "Inside a Package",
     "None",
   ]),
-  Quiz(474, "Anonymous Inner Class မီးၸိုဝ်ႈႁႃႉ?", [
-    "ဢမ်ႇမီး",
-    "မီး",
-    "မီးၼႂ်း compile ၵူၺ်း",
+  Quiz(474, "Does an Anonymous Inner Class have a name?", [
+    "No",
+    "Yes",
+    "Only during compilation",
     "None",
   ]),
-  Quiz(475, "Outer class ၸႂ်ႉ Private members ၶွင် Inner class လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(475, "Can an Outer class access private members of its Inner class?", [
+    "Yes",
+    "No",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(476, "Inner class ၸႂ်ႉ Private members ၶွင် Outer class လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "Error",
-    "None",
-  ]),
-  Quiz(477, "Nested Interface ပဵၼ် static လူၺ်ႈဢလိုတ်းႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
-    "Error",
-  ]),
-  Quiz(478, "Abstract Class မီး Inner class လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
+  Quiz(476, "Can an Inner class access private members of its Outer class?", [
+    "Yes",
+    "No",
     "Error",
     "None",
   ]),
-  Quiz(479, "Interface ၼႂ်း Class ပဵၼ် Access modifier သင်လႆႈ?", [
-    "လႆႈၵူႈဢၼ် (public, private, etc.)",
-    "public ၵူၺ်း",
-    "private ၵူၺ်း",
+  Quiz(477, "Are nested interfaces implicitly static?", [
+    "Yes",
+    "No",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(480, "တႃႇသၢင်ႈ Inner class object: Outer.Inner i = ___?", [
-    "outObj.new Inner()",
+  Quiz(478, "Can an Abstract Class contain an Inner class?", [
+    "Yes",
+    "No",
+    "Error",
+    "None",
+  ]),
+  Quiz(479, "What access modifiers can a nested interface have?", [
+    "Any (public, private, protected, default)",
+    "public only",
+    "private only",
+    "Error",
+  ]),
+  Quiz(480, "What is the syntax for creating an Inner class object?", [
+    "outerObj.new Inner()",
     "new Inner()",
     "Outer.new Inner()",
     "None",
   ]),
 
   // --- Final Wrap-up (481-500) ---
-  Quiz(481, "Method Overriding ၼႂ်း Java ပဵၼ်လၢႆးလႂ်?", [
+  Quiz(481, "Method Overriding in Java is an example of?", [
     "Late Binding",
     "Early Binding",
-    "Static",
+    "Static Binding",
     "None",
   ]),
-  Quiz(482, "Polymorphism ၸွႆႈသင်?", [
-    "Extensibility (မၢၵ်ႇၵႂၢင်ႈလႆႈငၢႆႈ)",
+  Quiz(482, "Which OOP concept best supports Extensibility?", [
+    "Polymorphism",
     "Security",
-    "RAM",
+    "RAM management",
     "None",
   ]),
-  Quiz(483, "Final variable ယူႇၼႂ်း interface ပဵၼ် static ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ (Implicitly static)",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(483, "Are variables in an interface implicitly static?", [
+    "Yes",
+    "No",
+    "Sometimes",
     "Error",
   ]),
-  Quiz(484, "Method hiding ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Override static method",
-    "မိူဝ်ႈ Override normal method",
-    "မိူဝ်ႈ Casting",
+  Quiz(484, "When does 'Method Hiding' occur?", [
+    "When a subclass defines a static method with the same signature as the superclass",
+    "When overriding a normal method",
+    "During casting",
     "None",
   ]),
-  Quiz(485, "Super.method() ၸႂ်ႉတႃႇသင်?", [
-    "ႁွင်ႉ method ၶွင်မႄႈ ၼႂ်း method ၶွင်လုၵ်ႈ",
-    "ႁွင်ႉ constructor",
-    "သၢင်ႈ object",
+  Quiz(485, "What is super.methodName() used for?", [
+    "To call the superclass version of a method from the subclass",
+    "To call a constructor",
+    "To create an object",
     "None",
   ]),
-  Quiz(486, "This() လႄႈ Super() ၸႂ်ႉၸွမ်းၵၼ်ၼႂ်း Constructor လဵဝ်လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(487, "Object class hashCode() ပၼ် result ပဵၼ်သင်?", [
-    "int (Address hash)",
-    "String",
-    "boolean",
-    "void",
-  ]),
-  Quiz(488, "တႃႇတႅၵ်ႈ Object 2 ဢၼ်ဝႃႈ ပဵၼ်တူဝ်လဵဝ်ၵၼ်ႁႃႉ ၸႂ်ႉသင်?", [
-    "==",
-    "equals()",
-    "instanceof",
-    "None",
-  ]),
-  Quiz(489, "Abstract class သိုပ်ႇ Abstract class လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
+  Quiz(
+    486,
+    "Can this() and super() be the first line in the same constructor?",
+    ["No (Only one can be first)", "Yes", "Sometimes", "None"],
+  ),
+  Quiz(
+    487,
+    "What is the return type of the hashCode() method in the Object class?",
+    ["int", "String", "boolean", "void"],
+  ),
+  Quiz(
+    488,
+    "How do you check if two object references point to the exact same memory location?",
+    ["==", "equals()", "instanceof", "None"],
+  ),
+  Quiz(489, "Can an Abstract class extend another Abstract class?", [
+    "Yes",
+    "No",
     "Error",
     "None",
   ]),
-  Quiz(490, "Interface သိုပ်ႇ Abstract class လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
+  Quiz(490, "Can an Interface extend an Abstract class?", [
+    "No (Interfaces can only extend interfaces)",
+    "Yes",
     "Error",
     "None",
   ]),
-  Quiz(491, "Method overriding လူဝ်ႇမီး covariant return type လႆႈႁႃႉ?", [
-    "လႆႈ (Return subclass type)",
-    "ဢမ်ႇလႆႈ",
+  Quiz(
+    491,
+    "Is it possible to have a different return type when overriding (Covariant Return Type)?",
+    [
+      "Yes (If the return type is a subclass of the original)",
+      "No",
+      "Error",
+      "None",
+    ],
+  ),
+  Quiz(492, "Can a normal (concrete) class have an abstract method?", [
+    "No",
+    "Yes",
     "Error",
     "None",
   ]),
-  Quiz(492, "Abstract method မီးၼႂ်း Normal class လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ",
-    "လႆႈ",
-    "Error",
+  Quiz(493, "What is the purpose of the 'finalize()' method?", [
+    "Cleanup activities before an object is garbage collected",
+    "To delete a class",
+    "To compile",
     "None",
   ]),
-  Quiz(493, "Finalizer (finalize method) ၸႂ်ႉတႃႇသင်?", [
-    "Clean up ၵွၼ်ႇ GC တေယႃႉ Object",
-    "Delete class",
-    "Compile",
+  Quiz(494, "What is a Native method?", [
+    "A method implemented in another language like C/C++",
+    "A standard Java method",
+    "A static method",
     "None",
   ]),
-  Quiz(494, "Native method မၢႆထိုင်သင်?", [
-    "Method ဢၼ်တႅမ်ႈလူၺ်ႈၽႃႇသႃႇတၢင်ႇဢၼ် (C/C++)",
-    "Method ၼႂ်း Java ၵူၺ်း",
-    "Static method",
-    "None",
-  ]),
-  Quiz(495, "Strictfp keyword ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇႁႂ်ႈ Floating point ၼိူဝ်ၵူႈ OS မိူၼ်ၵၼ်",
-    "ႁႂ်ႈ code ဝႆး",
+  Quiz(495, "What is the 'strictfp' keyword used for?", [
+    "Ensuring consistent floating-point results across different platforms",
+    "Speeding up code",
     "Security",
     "None",
   ]),
-  Quiz(496, "Variable Shadowing ပဵၼ်ၼႂ်း Inheritance ႁႃႉ?", [
-    "ပဵၼ် (Field hiding)",
-    "ဢမ်ႇပဵၼ်",
-    "မၢင်ပွၵ်ႈ",
+  Quiz(496, "Can Variable Shadowing (Field Hiding) occur in inheritance?", [
+    "Yes (If a subclass declares a field with the same name)",
+    "No",
+    "Sometimes",
     "None",
   ]),
-  Quiz(497, "တႃႇႁၢမ်ႈဢမ်ႇႁႂ်ႈ Class သိုပ်ႇလႆႈ ၸႂ်ႉသင်?", [
-    "final keyword",
-    "abstract",
-    "private",
+  Quiz(497, "How do you prevent a class from being inherited?", [
+    "Use the 'final' keyword",
+    "Use 'abstract'",
+    "Use 'private'",
     "None",
   ]),
-  Quiz(498, "Abstract class ပဵၼ်သႅၼ်း Relationship လႂ်?", [
+  Quiz(498, "What relationship type does an Abstract class represent?", [
     "IS-A",
     "HAS-A",
     "PART-OF",
     "None",
   ]),
-  Quiz(499, "Interface ပဵၼ်သႅၼ်း Relationship လႂ်?", [
-    "CAN-DO (Behavior)",
+  Quiz(499, "What relationship type does an Interface typically represent?", [
+    "CAN-DO (Behavioral)",
     "IS-A",
     "HAS-A",
     "None",
   ]),
-  Quiz(500, "OOP Pillar လႂ်ဢၼ်ၼၼ်ႉလွင်ႈ Data Security?", [
+  Quiz(500, "Which OOP pillar is mainly responsible for Data Security?", [
     "Encapsulation",
     "Inheritance",
     "Polymorphism",
     "Abstraction",
   ]),
 ];
-final List<Quiz> quizzes5 = [
+final List<Quiz> javaQuizM5 = [
   // --- Topic 60: Java Exceptions ---
-  Quiz(501, "Exception ၼႂ်း Java မၢႆထိုင်သင်?", [
-    "လွင်ႈတုမ်ႉတိူဝ်ႉဢၼ်ႁဵတ်းႁႂ်ႈ Program ၵတ်းယတ်း (Runtime error)",
-    "လွင်ႈတႅမ်ႈ Code ၽိတ်း",
-    "Variable ဢၼ်ၼိုင်ႈ",
-    "Method ဢၼ်ၼိုင်ႈ",
-  ]),
-  Quiz(502, "Exception တင်းသဵင်ႈ လုၵ်ႉတီႈ Class လႂ်မႃး (Root)?", [
-    "Throwable",
-    "Error",
-    "Exception",
-    "RuntimeException",
-  ]),
-  Quiz(503, "Checked Exception မၢႆထိုင်သင်?", [
-    "Exception ဢၼ် Compiler ၸႅတ်ႈထတ်း (လူဝ်ႇ handle)",
-    "Exception ဢၼ်ပဵၼ်မိူဝ်ႈ runtime ၵူၺ်း",
-    "Error ၶွင် RAM",
-    "None",
-  ]),
-  Quiz(504, "Unchecked Exception ပဵၼ်တွၼ်ႈၼိုင်ႈၶွင် Class လႂ်?", [
-    "RuntimeException",
-    "IOException",
-    "SQLException",
-    "Error",
-  ]),
-  Quiz(505, "Error လႄႈ Exception ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "Error ၵုမ်းဢမ်ႇလႆႈ (RAM တဵမ်), Exception ၵုမ်းလႆႈ",
-    "မိူၼ်ၵၼ်",
-    "Error ဝႆးသေ",
-    "None",
-  ]),
-  Quiz(506, "NullPointerException ပဵၼ် Exception သႅၼ်းလႂ်?", [
-    "Unchecked Exception",
-    "Checked Exception",
-    "Error",
-    "Compile error",
-  ]),
-  Quiz(507, "ArithmeticException ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈဢဝ်တူဝ်ၼပ်ႉႁၢၼ်တူဝ်သူၼ် ( / 0)",
-    "မိူဝ်ႈ String ဢမ်ႇမီးၵႃႈၶၼ်",
-    "မိူဝ်ႈ Array တဵမ်",
-    "None",
-  ]),
-  Quiz(508, "ArrayIndexOutOfBoundsException မၢႆထိုင်သင်?", [
-    "ၸႂ်ႉ index ဢၼ်ပူၼ်ႉတၢင်းယၢဝ်း Array",
-    "Array မီးၵႃႈၶၼ် null",
-    "သၢင်ႈ array ဢမ်ႇလႆႈ",
-    "None",
-  ]),
-  Quiz(509, "IOException ပဵၼ် Exception သႅၼ်းလႂ်?", [
-    "Checked Exception",
-    "Unchecked Exception",
-    "Error",
-    "None",
-  ]),
-  Quiz(
-    510,
-    "တႃႇႁၢမ်ႈဢမ်ႇႁႂ်ႈ Program ၵတ်းယတ်း (Stop) မိူဝ်ႈမီး Error လူဝ်ႇႁဵတ်းႁိုဝ်?",
-    ["Exception Handling", "Restart computer", "Delete code", "None"],
-  ),
+  Quiz(501, "What does an Exception in Java represent?", ["An event that disrupts the normal flow of the program (Runtime error)", "A syntax error in code", "A type of variable", "A specific method"]),
+  Quiz(502, "Which class is the root of the Java Exception hierarchy?", ["Throwable", "Error", "Exception", "RuntimeException"]),
+
+
+
+  Quiz(503, "What is a Checked Exception?", ["An exception checked by the compiler at compile-time (Must be handled)", "An exception that only occurs at runtime", "A memory-related error", "None"]),
+  Quiz(504, "Unchecked Exceptions are subclasses of which class?", ["RuntimeException", "IOException", "SQLException", "Error"]),
+  Quiz(505, "What is the difference between Error and Exception?", ["Errors are irrecoverable (like OutOfMemory), while Exceptions can be caught and handled", "They are exactly the same", "Errors execute faster", "None"]),
+  Quiz(506, "What type of exception is NullPointerException?", ["Unchecked Exception", "Checked Exception", "Error", "Compile-time error"]),
+  Quiz(507, "When does an ArithmeticException occur?", ["When an integer is divided by zero ( / 0)", "When a String is null", "When an Array is full", "None"]),
+  Quiz(508, "What does ArrayIndexOutOfBoundsException mean?", ["Accessing an array with an index that is outside its range", "The array value is null", "The array cannot be created", "None"]),
+  Quiz(509, "What type of exception is IOException?", ["Checked Exception", "Unchecked Exception", "Error", "None"]),
+  Quiz(510, "To prevent a program from crashing when an error occurs, what should you use?", ["Exception Handling", "Restart the computer", "Delete the code", "None"]),
 
   // --- Topic 61: Try - Catch - Finally ---
-  Quiz(511, "Try block ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇဝၢင်း Code ဢၼ်ၸၢင်ႈမီး Exception",
-    "တႃႇတႅမ်ႈ method",
-    "တႃႇသၢင်ႈ object",
-    "None",
-  ]),
-  Quiz(512, "Catch block ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇၵုမ်းထိင်း (handle) မိူဝ်ႈမီး Exception",
-    "တႃႇ loop",
-    "တႃႇ restart",
-    "None",
-  ]),
-  Quiz(513, "Try block ၼိုင်ႈဢၼ် မီး Catch block လၢႆဢၼ်လႆႈႁႃႉ?", [
-    "လၢႆဢၼ် (Multi-catch)",
-    "ဢၼ်လဵဝ်ၵူၺ်း",
-    "ဢမ်ႇပၼ်မီး",
-    "2 ဢၼ်ၵူၺ်း",
-  ]),
-  Quiz(514, "Finally block ႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
-    "ႁဵတ်းၵူႈပွၵ်ႈ (သေႃႉမီး Exception ဢမ်ႇၼၼ် ဢမ်ႇမီး)",
-    "မိူဝ်ႈမီး Exception ၵူၺ်း",
-    "မိူဝ်ႈဢမ်ႇမီး Exception ၵူၺ်း",
-    "None",
-  ]),
-  Quiz(515, "Catch block ဢၼ်ၵႂၢင်ႈ (Exception e) လူဝ်ႇဝႆႉတီႈလႂ်?", [
-    "ဝႆႉတႂ်ႈသုတ်း (Last catch)",
-    "ဝႆႉၼိူဝ်သုတ်း",
-    "ဝႆႉတီႈလႂ်ၵေႃႈလႆႈ",
-    "None",
-  ]),
-  Quiz(516, "Try block ဢၼ်ဢမ်ႇမီး Catch လႄႈ Finally လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (လူဝ်ႇမီးဢၼ်ၼိုင်ႈ)",
-    "လႆႈ",
-    "လႆႈသင်ပဵၼ် static",
-    "None",
-  ]),
-  Quiz(517, "Try-with-resources (Java 7+) ၸွႆႈသင်?", [
-    "ပိၵ်ႉ Resource (File/Stream) ပၼ်ဢလိုတ်း",
-    "ႁႂ်ႈ code ဝႆး",
-    "ႁႂ်ႈ RAM ၼမ်",
-    "None",
-  ]),
-  Quiz(518, "Exception e ၼႂ်း catch, e.getMessage() ပၼ်သင်?", [
-    "ၶေႃႈၵႂၢမ်းဝႃႈမၼ်းၽိတ်းသင်",
-    "StackTrace",
-    "ၸိုဝ်ႈ Class",
-    "None",
-  ]),
-  Quiz(519, "e.printStackTrace() ၼႄသင်?", [
-    "ၼႄၸိုဝ်ႈ Exception လႄႈ ထႅဝ် Code ဢၼ်ၽိတ်း",
-    "ၼႄၵႃႈၶၼ် Variable",
-    "Delete code",
-    "None",
-  ]),
-  Quiz(520, "System.exit(0) ၼႂ်း try ႁဵတ်းႁႂ်ႈ finally ႁဵတ်းၵၢၼ်ႁႃႉ?", [
-    "ဢမ်ႇႁဵတ်း (Program ပိၵ်ႉၵမ်းလဵဝ်)",
-    "ႁဵတ်း",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
+  Quiz(511, "What is the purpose of the 'try' block?", ["To enclose code that might throw an exception", "To define a method", "To create an object", "None"]),
+  Quiz(512, "What is the purpose of the 'catch' block?", ["To handle the exception thrown in the try block", "To create a loop", "To restart the app", "None"]),
+
+
+
+  Quiz(513, "Can a single try block have multiple catch blocks?", ["Yes (Multi-catch functionality)", "No, only one", "No, it's not allowed", "Only up to two"]),
+  Quiz(514, "When does the 'finally' block execute?", ["Every time (regardless of whether an exception occurred or not)", "Only when an exception occurs", "Only when no exception occurs", "None"]),
+  Quiz(515, "Where should a general Exception catch block (Exception e) be placed?", ["At the end (Last catch block)", "At the very top", "Anywhere", "None"]),
+  Quiz(516, "Is a try block without a catch or finally block valid?", ["No (It must have at least one)", "Yes", "Only if it is static", "None"]),
+  Quiz(517, "What is the benefit of Try-with-resources (Java 7+)?", ["It automatically closes resources like Files or Streams", "It makes code run faster", "It increases RAM efficiency", "None"]),
+  Quiz(518, "In 'catch(Exception e)', what does e.getMessage() return?", ["A string describing the error", "The full stack trace", "The name of the class", "None"]),
+  Quiz(519, "What does e.printStackTrace() display?", ["The exception name and the specific line number where it occurred", "The values of all variables", "It deletes the code", "None"]),
+  Quiz(520, "Does the finally block execute if System.exit(0) is called in the try block?", ["No (The program shuts down immediately)", "Yes", "Sometimes", "None"]),
 
   // --- Topic 62: Throws ---
-  Quiz(521, "Keyword 'throws' ၸႂ်ႉတီႈလႂ်?", [
-    "ဝႆႉတီႈ Method Signature",
-    "ၼႂ်း Method Body",
-    "ၼႂ်း Class",
-    "ၼႂ်း Loop",
-  ]),
-  Quiz(522, "Throws ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇမၢႆဝႆႉဝႃႈ Method ၼႆႉ ၸၢင်ႈမီး Exception လႄႈ ႁႂ်ႈၵူၼ်းႁွင်ႉ handle ဢဝ်",
-    "တႃႇ handle exception",
-    "တႃႇသၢင်ႈ error",
-    "None",
-  ]),
-  Quiz(
-    523,
-    "Method ဢၼ် throws Checked Exception, ၵူၼ်းႁွင်ႉၸႂ်ႉလူဝ်ႇႁဵတ်းႁိုဝ်?",
-    [
-      "လူဝ်ႇသႂ်ႇ try-catch ဢမ်ႇၼၼ် throws သိုပ်ႇ",
-      "ဢမ်ႇႁဵတ်းသင်ၵေႃႈလႆႈ",
-      "Restart program",
-      "None",
-    ],
-  ),
-  Quiz(524, "Throws ၸႂ်ႉၸွမ်း Unchecked Exception (Runtime) လူဝ်ႇႁႃႉ?", [
-    "ဢမ်ႇလူဝ်ႇ (သႂ်ႇၵေႃႈလႆႈ ဢမ်ႇသႂ်ႇၵေႃႈလႆႈ)",
-    "လူဝ်ႇ",
-    "Error",
-    "None",
-  ]),
-  Quiz(525, "Throws သႂ်ႇလႆႈလၢႆ Exception ႁႃႉ?", [
-    "လႆႈ (ၸႂ်ႉ Comma ၶၼ်ႈ)",
-    "ဢၼ်လဵဝ်ၵူၺ်း",
-    "ဢမ်ႇလႆႈ",
-    "None",
-  ]),
+  Quiz(521, "Where is the 'throws' keyword used?", ["In the Method Signature", "Inside the Method Body", "In the Class declaration", "Inside a Loop"]),
+  Quiz(522, "What is 'throws' used for?", ["To declare that a method might throw specific exceptions for the caller to handle", "To handle an exception", "To create a manual error", "None"]),
+  Quiz(523, "If a method throws a Checked Exception, what must the caller do?", ["Use a try-catch block or declare the exception with throws", "Nothing", "Restart the program", "None"]),
+  Quiz(524, "Is 'throws' required for Unchecked (Runtime) Exceptions?", ["No (It is optional)", "Yes, always", "It causes an error", "None"]),
+  Quiz(525, "Can you list multiple exceptions in a 'throws' clause?", ["Yes (Separated by commas)", "Only one is allowed", "No", "None"]),
 
   // --- Topic 63: Throw New Exception ---
-  Quiz(526, "Keyword 'throw' ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇသၢင်ႈ (Force) Exception ဢွၵ်ႇမႃးတိုက်ရိုက်",
-    "တႃႇ handle error",
-    "တႃႇပိၵ်ႉ program",
-    "None",
-  ]),
-  Quiz(527, "Syntax ၶွင် throw ပဵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "throw new ExceptionName();",
-    "throws Exception;",
-    "throw Exception;",
-    "new throw Exception();",
-  ]),
-  Quiz(528, "Throw လႄႈ Throws ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "Throw ၸႂ်ႉသၢင်ႈ Exception, Throws ၸႂ်ႉမၢႆဝႆႉတီႈ method",
-    "မိူၼ်ၵၼ်",
-    "Throw ၸႂ်ႉၼွၵ်ႈ method",
-    "None",
-  ]),
-  Quiz(529, "Custom Exception သၢင်ႈလႆႈႁိုဝ်?", [
-    "သိုပ်ႇ (Extend) Class Exception",
-    "သိုပ်ႇ Class String",
-    "တႅမ်ႈ method မႂ်ႇ",
-    "None",
-  ]),
-  Quiz(530, "တႃႇသၢင်ႈ Unchecked Custom Exception လူဝ်ႇသိုပ်ႇ Class လႂ်?", [
-    "RuntimeException",
-    "Exception",
-    "Throwable",
-    "Error",
-  ]),
+  Quiz(526, "What is the 'throw' keyword used for?", ["To explicitly throw an exception from code", "To handle an error", "To close the program", "None"]),
+  Quiz(527, "What is the correct syntax for 'throw'?", ["throw new ExceptionName();", "throws Exception;", "throw Exception;", "new throw Exception();"]),
+  Quiz(528, "What is the difference between throw and throws?", ["Throw is used to trigger an exception; Throws is used to declare it in the method signature", "They are the same", "Throw is used outside methods", "None"]),
+  Quiz(529, "How do you create a Custom Exception?", ["By extending the Exception class", "By extending the String class", "By writing a new method", "None"]),
+  Quiz(530, "To create an Unchecked Custom Exception, which class should you extend?", ["RuntimeException", "Exception", "Throwable", "Error"]),
 
   // --- Mixed Logic (531-550) ---
-  Quiz(531, "RuntimeException ၸႂ်ႉ Try-Catch ႁႃႉ?", [
-    "ၸႂ်ႉၵေႃႈလႆႈ ဢမ်ႇၸႂ်ႉၵေႃႈလႆႈ (Optional)",
-    "လူဝ်ႇၸႂ်ႉဢလိုတ်း",
-    "ဢမ်ႇပၼ်ၸႂ်ႉ",
-    "None",
-  ]),
-  Quiz(532, "NumberFormatException ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈလႅၵ်ႈ String ဢၼ်ဢမ်ႇပဵၼ်တူဝ်ၼပ်ႉ ၵႂႃႇပဵၼ် int",
-    "မိူဝ်ႈႁၢၼ်တူဝ်သူၼ်",
-    "မိူဝ်ႈ null",
-    "None",
-  ]),
-  Quiz(533, "Error (ၸိူင်ႉၼင်ႇ OutOfMemoryError) handle လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (Program လူဝ်ႇပိၵ်ႉၵမ်းလဵဝ်)",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(534, "StackOverflowError ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈႁွင်ႉ Recursive method ဢမ်ႇယဝ်ႉ",
-    "မိူဝ်ႈ RAM တဵမ်",
-    "မိူဝ်ႈ String ယၢဝ်း",
-    "None",
-  ]),
-  Quiz(535, "Try block ၼိုင်ႈဢၼ် မီး Finally block လၢႆဢၼ်လႆႈႁႃႉ?", [
-    "ဢၼ်လဵဝ်ၵူၺ်း",
-    "လၢႆဢၼ်",
-    "ဢမ်ႇပၼ်မီး",
-    "2 ဢၼ်ၵူၺ်း",
-  ]),
-  Quiz(536, "Catch(Exception e) ပၼ် handle RuntimeException ႁႃႉ?", [
-    "ပၼ် (Exception ပဵၼ်မႄႈ)",
-    "ဢမ်ႇပၼ်",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(537, "Throw ၸႂ်ႉၼႂ်း catch block လႆႈႁႃႉ?", [
-    "လႆႈ (Re-throwing Exception)",
-    "ဢမ်ႇလႆႈ",
-    "Error",
-    "None",
-  ]),
-  Quiz(538, "Checked Exception တေလႅၼ်ႈမိူဝ်ႈလႂ်?", [
-    "Compile-time",
-    "Runtime",
-    "Installation",
-    "None",
-  ]),
-  Quiz(539, "Unchecked Exception တေလႅၼ်ႈမိူဝ်ႈလႂ်?", [
-    "Runtime",
-    "Compile-time",
-    "Coding",
-    "None",
-  ]),
-  Quiz(540, "InputMismatchException ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Scanner ႁပ်ႉ data ဢမ်ႇမိူၼ် Data type",
-    "မိူဝ်ႈ String ဢမ်ႇမီး",
-    "မိူဝ်ႈ file ႁၢႆ",
-    "None",
-  ]),
-  Quiz(541, "တႃႇသၢင်ႈ Custom Exception လူဝ်ႇမီး Constructor ႁႃႉ?", [
-    "လူဝ်ႇ (တႃႇသူင်ႇ message ၵႂႃႇၸူး super)",
-    "ဢမ်ႇလူဝ်ႇ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(542, "ClassNotFoundException ပဵၼ် Exception သႅၼ်းလႂ်?", [
-    "Checked Exception",
-    "Unchecked Exception",
-    "Error",
-    "None",
-  ]),
-  Quiz(543, "Multi-catch block (catch (Ex1 | Ex2 e)) မီးပၵ်းပိူင်သင်?", [
-    "Exception ၸိူဝ်းၼၼ်ႉ တေဢမ်ႇလႆႈပဵၼ် ပီႈၼွင်ႉ (Parent-Child) ၵၼ်",
-    "လူဝ်ႇပဵၼ်ပီႈၼွင်ႉၵၼ်",
-    "ၸႂ်ႉလႆႈ String ၵူၺ်း",
-    "None",
-  ]),
-  Quiz(544, "finally block တေဢမ်ႇႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ JVM crash ဢမ်ႇၼၼ် System.exit()",
-    "မိူဝ်ႈမီး error",
-    "မိူဝ်ႈဢမ်ႇမီး error",
-    "None",
-  ]),
-  Quiz(545, "Throwable class ယူႇၼႂ်း package လႂ်?", [
-    "java.lang",
-    "java.util",
-    "java.io",
-    "None",
-  ]),
-  Quiz(546, "SQLException ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Database မီးလွင်ႈၽိတ်းပႅၵ်ႇ",
-    "မိူဝ်ႈ String ၽိတ်း",
-    "မိူဝ်ႈ Array တဵမ်",
-    "None",
-  ]),
-  Quiz(547, "Exception Propagation မၢႆထိုင်သင်?", [
-    "ၵၢၼ်သူင်ႇ Exception ၶိုၼ်းၸူး ၵူၼ်းႁွင်ႉ method",
-    "ၵၢၼ် delete exception",
-    "ၵၢၼ် compile",
-    "None",
-  ]),
-  Quiz(548, "Unchecked Exception propagation ပဵၼ်ဢလိုတ်းႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ",
-    "ဢမ်ႇၸႂ်ႉ",
-    "လူဝ်ႇ throws ၵွၼ်ႇ",
-    "None",
-  ]),
-  Quiz(549, "Checked Exception propagation လူဝ်ႇသင်?", [
-    "လူဝ်ႇ keyword 'throws'",
-    "ဢမ်ႇလူဝ်ႇသင်",
-    "လူဝ်ႇ static",
-    "None",
-  ]),
-  Quiz(550, "Java Exception Handling ၸွႆႈသင်?", [
-    "ႁႂ်ႈ Program သိုပ်ႇလႅၼ်ႈလႆႈ (Normal flow) မိူဝ်ႈမီးလွင်ႈၽိတ်း",
-    "ႁႂ်ႈ Code ဝႆး",
-    "ႁႂ်ႈ RAM သႅၼ်ႈ",
-    "None",
-  ]),
+  Quiz(531, "Is it mandatory to use Try-Catch for RuntimeExceptions?", ["No, it is optional", "Yes, it is mandatory", "It is not allowed", "None"]),
+  Quiz(532, "When does NumberFormatException occur?", ["When attempting to convert a non-numeric String into a number", "During division by zero", "When a variable is null", "None"]),
+  Quiz(533, "Can an Error (like OutOfMemoryError) be realistically handled?", ["No (The program usually must terminate)", "Yes", "Sometimes", "None"]),
+  Quiz(534, "When does a StackOverflowError occur?", ["During infinite recursion (method calls itself forever)", "When RAM is full", "When a String is too long", "None"]),
+  Quiz(535, "Can a single try block have multiple finally blocks?", ["No, only one", "Yes, multiple", "It's not allowed", "Up to two"]),
+  Quiz(536, "Does catch(Exception e) handle RuntimeExceptions?", ["Yes (Because Exception is the parent class)", "No", "Only sometimes", "None"]),
+  Quiz(537, "Can you use 'throw' inside a catch block?", ["Yes (This is called re-throwing)", "No", "It causes a compiler error", "None"]),
+  Quiz(538, "When are Checked Exceptions detected?", ["Compile-time", "Runtime", "During installation", "None"]),
+  Quiz(539, "When are Unchecked Exceptions detected?", ["Runtime", "Compile-time", "During coding", "None"]),
+  Quiz(540, "When does InputMismatchException occur?", ["When Scanner receives data that doesn't match the expected type", "When a String is missing", "When a file is not found", "None"]),
+  Quiz(541, "Should a Custom Exception have a constructor?", ["Yes (To pass the error message to the superclass)", "No", "Optional", "None"]),
+  Quiz(542, "What type of exception is ClassNotFoundException?", ["Checked Exception", "Unchecked Exception", "Error", "None"]),
+  Quiz(543, "What is the rule for multi-catch (catch (Ex1 | Ex2 e))?", ["The exceptions cannot have a Parent-Child relationship", "They must have a Parent-Child relationship", "It only works for Strings", "None"]),
+  Quiz(544, "When might the finally block NOT execute?", ["If the JVM crashes or System.exit() is called", "When there is an error", "When there is no error", "None"]),
+  Quiz(545, "Which package is the Throwable class located in?", ["java.lang", "java.util", "java.io", "None"]),
+  Quiz(546, "When does SQLException occur?", ["When there is an error related to database access", "When a String is wrong", "When an array is full", "None"]),
+  Quiz(547, "What is Exception Propagation?", ["The process of passing an exception up the call stack to the caller", "Deleting an exception", "Compiling an exception", "None"]),
+  Quiz(548, "Does Unchecked Exception propagation happen automatically?", ["Yes", "No", "Only if 'throws' is used", "None"]),
+  Quiz(549, "What is required for Checked Exception propagation?", ["The 'throws' keyword in the method signature", "Nothing is required", "A static modifier", "None"]),
+  Quiz(550, "What is the main goal of Java Exception Handling?", ["To maintain the normal flow of the program even if errors occur", "To make code run faster", "To save RAM", "None"]),
 ];
-final List<Quiz> quizzes6 = [
+final List<Quiz> javaQuizM6 = [
   // --- Topic 64: Multi-Threaded Programming ---
-  Quiz(551, "Thread ၼႂ်း Java မၢႆထိုင်သင်?", [
-    "သဵၼ်ႈတၢင်းၵၢၼ်ႁဵတ်းသၢင်ႈဢၼ်လဵၵ်ႉသုတ်း (Lightweight process)",
-    "Variable ဢၼ်ၼိုင်ႈ",
-    "Class ဢၼ်ၼိုင်ႈ",
-    "Memory ဢၼ်ၼိုင်ႈ",
-  ]),
-  Quiz(552, "Multi-threading ၸွႆႈသင်ၼမ်သေပိူၼ်ႈ?", [
-    "ႁႂ်ႈ CPU ႁဵတ်းၵၢၼ်လႆႈတဵမ်ထီႇ (Maximize CPU utilization)",
-    "ႁႂ်ႈ Code သႅၼ်ႈ",
-    "ႁႂ်ႈ RAM ၼမ်",
-    "None",
-  ]),
-  Quiz(553, "Main Thread မၢႆထိုင်သင်?", [
-    "Thread ဢၼ်တႄႇလႅၼ်ႈမိူဝ်ႈ Program တႄႇ (Main method)",
-    "Thread ဢၼ်ယႃႉ Program",
-    "Thread ဢၼ်ပဵၼ် private",
-    "None",
-  ]),
-  Quiz(554, "Thread ၼိုင်ႈဢၼ် မီး Stack Memory ၶွင်တူဝ်မၼ်းႁႃႉ?", [
-    "မီး",
-    "ဢမ်ႇမီး (Shared)",
-    "မၢင်ပွၵ်ႈ",
-    "Error",
-  ]),
-  Quiz(555, "Java Thread ၸွႆႈႁႂ်ႈႁဵတ်းသင်လႆႈ?", [
-    "Asynchronous Programming",
-    "Synchronous Only",
-    "Compile faster",
-    "None",
-  ]),
+  Quiz(551, "What is a Thread in Java?", ["The smallest unit of execution (Lightweight process)", "A type of variable", "A class name", "A memory segment"]),
+  Quiz(552, "What is the primary benefit of Multi-threading?", ["To maximize CPU utilization", "To make code cleaner", "To increase available RAM", "None"]),
+
+
+
+  Quiz(553, "What is the Main Thread?", ["The thread that starts when the program begins (executes main method)", "A thread that crashes the program", "A private system thread", "None"]),
+  Quiz(554, "Does each thread have its own Stack Memory?", ["Yes", "No (It is shared)", "Sometimes", "Error"]),
+  Quiz(555, "Java Threads allow for which type of programming?", ["Asynchronous Programming", "Synchronous Only", "Faster Compiling", "None"]),
 
   // --- Topic 65: Extending Thread Class ---
-  Quiz(
-    556,
-    "တႃႇသၢင်ႈ Thread လူၺ်ႈၸႂ်ႉ Class လူဝ်ႇသိုပ်ႇ (extend) လုၵ်ႉတီႈ Class လႂ်?",
-    ["Thread", "Runnable", "Process", "Object"],
-  ),
-  Quiz(557, "Method လႂ်ဢၼ်ပဵၼ်တီႈတႄႇႁဵတ်းၵၢၼ် (Entry point) ၶွင် Thread?", [
-    "run()",
-    "start()",
-    "main()",
-    "init()",
-  ]),
-  Quiz(558, "တႃႇတႄႇ (Start) ႁႂ်ႈ Thread ႁဵတ်းၵၢၼ် လူဝ်ႇႁွင်ႉ Method လႂ်?", [
-    "start()",
-    "run()",
-    "execute()",
-    "begin()",
-  ]),
-  Quiz(559, "သင်ႁဝ်းႁွင်ႉ run() တိုက်ရိုက် (ဢမ်ႇၸႂ်ႉ start()) တေပဵၼ်သင်?", [
-    "မၼ်းတေလႅၼ်ႈၼႂ်း Current Thread (ဢမ်ႇပဵၼ် Thread မႂ်ႇ)",
-    "Error",
-    "Infinite loop",
-    "None",
-  ]),
-  Quiz(560, "Thread class ယူႇၼႂ်း package လႂ်?", [
-    "java.lang",
-    "java.util",
-    "java.io",
-    "None",
-  ]),
+  Quiz(556, "To create a thread by extending a class, which class must you inherit from?", ["Thread", "Runnable", "Process", "Object"]),
+  Quiz(557, "Which method serves as the entry point for thread execution?", ["run()", "start()", "main()", "init()"]),
+  Quiz(558, "Which method is called to actually start a new thread?", ["start()", "run()", "execute()", "begin()"]),
+  Quiz(559, "What happens if you call run() directly instead of start()?", ["It executes in the current thread (no new thread is created)", "A compiler error occurs", "It causes an infinite loop", "None"]),
+  Quiz(560, "Which package is the Thread class located in?", ["java.lang", "java.util", "java.io", "None"]),
 
   // --- Topic 66: Implementing Runnable Interface ---
-  Quiz(561, "တႃႇသၢင်ႈ Thread လူၺ်ႈၸႂ်ႉ Interface လူဝ်ႇၸႂ်ႉ Keyword သင်?", [
-    "implements Runnable",
-    "extends Thread",
-    "uses Runnable",
-    "None",
-  ]),
-  Quiz(562, "Runnable Interface မီး method လၢႆဢၼ်?", [
-    "1 ဢၼ် (run)",
-    "2 ဢၼ်",
-    "ဢမ်ႇမီး",
-    "10 ဢၼ်",
-  ]),
-  Quiz(
-    563,
-    "သင် Class ႁဝ်းသိုပ်ႇ (extend) Class တၢင်ႇဢၼ်ဝႆႉယဝ်ႉ လူဝ်ႇၸႂ်ႉလၢႆးလႂ်သၢင်ႈ Thread?",
-    ["Implementing Runnable", "Extending Thread", "Both", "None"],
-  ),
-  Quiz(564, "တႃႇလႅၼ်ႈ Runnable လူဝ်ႇႁဵတ်းႁိုဝ်?", [
-    "သၢင်ႈ Object Thread သေသူင်ႇ Runnable ၶဝ်ႈၵႂႃႇ",
-    "ႁွင်ႉ run()",
-    "ႁွင်ႉ main()",
-    "None",
-  ]),
-  Quiz(565, "Runnable ပဵၼ် Functional Interface ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ (ၸႂ်ႉ Lambda လႆႈ)",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
+  Quiz(561, "To create a thread using an interface, which syntax is used?", ["implements Runnable", "extends Thread", "uses Runnable", "None"]),
+  Quiz(562, "How many methods does the Runnable interface contain?", ["1 (the run method)", "2", "None", "10"]),
+  Quiz(563, "If your class already extends another class, how should you create a Thread?", ["By implementing Runnable", "By extending Thread", "Both are equally valid", "None"]),
+  Quiz(564, "How do you run a Runnable object?", ["Create a Thread object and pass the Runnable to its constructor", "Call run() directly", "Call main()", "None"]),
+  Quiz(565, "Is Runnable a Functional Interface?", ["Yes (It can be used with Lambda expressions)", "No", "Sometimes", "None"]),
 
   // --- Topic 67: Join Thread & States ---
-  Quiz(566, "Thread method 'join()' ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇပႂ်ႉႁႂ်ႈ Thread ၼိုင်ႈဢၼ်ယဝ်ႉၵွၼ်ႇ ၸင်ႇသိုပ်ႇႁဵတ်း",
-    "တႃႇပိၵ်ႉ Thread",
-    "တႃႇသၢင်ႈ Thread",
-    "None",
-  ]),
-  Quiz(567, "Thread.sleep(1000) မၢႆထိုင်သင်?", [
-    "ၵတ်းယတ်း (Pause) Thread ဝႆႉ 1 ၸႅၵ်ႉ (1000ms)",
-    "ပိၵ်ႉ Thread",
-    "ယႃႉ Object",
-    "None",
-  ]),
-  Quiz(568, "Thread State 'NEW' မၢႆထိုင်သင်?", [
-    "Thread သၢင်ႈယဝ်ႉသေတႃႉ ယັງဢမ်ႇလႆႈ start()",
-    "Thread တိုၵ်ႉလႅၼ်ႈယူႇ",
-    "Thread တၢႆယဝ်ႉ",
-    "None",
-  ]),
-  Quiz(569, "Thread State 'TERMINATED' မၢႆထိုင်သင်?", [
-    "Thread ႁဵတ်းၵၢၼ်ယဝ်ႉတူဝ် (တၢႆ)",
-    "Thread တိုၵ်ႉတႄႇ",
-    "Thread တိုၵ်ႉပႂ်ႉ",
-    "None",
-  ]),
-  Quiz(570, "Join() method ၸၢင်ႈမီး Exception သင်?", [
-    "InterruptedException",
-    "IOException",
-    "NullPointerException",
-    "None",
-  ]),
+  Quiz(566, "What is the purpose of the join() method?", ["To wait for a thread to complete before moving to the next line", "To terminate a thread", "To create a thread", "None"]),
+  Quiz(567, "What does Thread.sleep(1000) do?", ["Pauses the current thread for 1 second (1000ms)", "Closes the thread", "Deletes the object", "None"]),
+
+
+
+  Quiz(568, "What does the thread state 'NEW' mean?", ["The thread is created but start() has not been called yet", "The thread is currently running", "The thread has finished execution", "None"]),
+  Quiz(569, "What does the thread state 'TERMINATED' mean?", ["The thread has completed its execution (dead)", "The thread is just starting", "The thread is waiting", "None"]),
+  Quiz(570, "Which exception must be handled when using join() or sleep()?", ["InterruptedException", "IOException", "NullPointerException", "None"]),
 
   // --- Topic 68: Thread Synchronization ---
-  Quiz(571, "Synchronization ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇႁၢမ်ႈဢမ်ႇႁႂ်ႈလၢႆ Thread ၶဝ်ႈၸႂ်ႉ Resource လဵဝ်ၵၼ် ၼႂ်းၶၢဝ်းယၢမ်းလဵဝ်ၵၼ်",
-    "ႁႂ်ႈ Thread ဝႆး",
-    "ႁႂ်ႈ RAM ၼမ်",
-    "None",
-  ]),
-  Quiz(572, "Keyword လႂ်ၸႂ်ႉတႃႇႁဵတ်း Synchronization?", [
-    "synchronized",
-    "lock",
-    "volatile",
-    "static",
-  ]),
-  Quiz(573, "Race Condition မၢႆထိုင်သင်?", [
-    "မိူဝ်ႈလၢႆ Thread တႅၵ်ႈၵၼ်ၶဝ်ႈၸႂ်ႉ Data သေႁဵတ်းႁႂ်ႈ Data ၽိတ်း",
-    "Thread လႅၼ်ႈဝႆး",
-    "Thread တၢႆ",
-    "None",
-  ]),
-  Quiz(574, "Synchronized Method မၢႆထိုင်သင်?", [
-    "Method ဢၼ်ပၼ် Thread ၶဝ်ႈလႆႈပွၵ်ႈၵေႃႉ (One at a time)",
-    "Method ဢၼ်လႅၼ်ႈဝႆး",
-    "Static method",
-    "None",
-  ]),
-  Quiz(575, "Deadlock ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Thread သွင်ဢၼ်ပႂ်ႉ Lock ၵၼ်သေ ဢမ်ႇမီးဢၼ်လႂ်ၶိုတ်းလႆႈ",
-    "Thread ယဝ်ႉဝႆး",
-    "Memory တဵမ်",
-    "None",
-  ]),
-  Quiz(576, "Keyword 'volatile' ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇႁႂ်ႈ Thread ၵူႈဢၼ် ႁၼ်ၵႃႈၶၼ် Variable ၼႂ်း Main Memory မိူၼ်ၵၼ်",
-    "တႃႇ lock thread",
-    "တႃႇ delete thread",
-    "None",
-  ]),
-  Quiz(577, "Synchronized Block လႄႈ Method ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "Block ၸွႆႈ Lock ၵူၺ်းတွၼ်ႈဢၼ်လူဝ်ႇ (ပိုၼ်ႉတီႈလဵၵ်ႉသေ)",
-    "မိူၼ်ၵၼ်",
-    "Method ဝႆးသေ",
-    "None",
-  ]),
-  Quiz(578, "Wait() လႄႈ Notify() ယူႇၼႂ်း Class လႂ်?", [
-    "Object class",
-    "Thread class",
-    "String class",
-    "None",
-  ]),
-  Quiz(579, "Wait(), Notify(), NotifyAll() လူဝ်ႇႁွင်ႉၼႂ်းလႂ်?", [
-    "Synchronized context",
-    "Static method",
-    "Main method",
-    "None",
-  ]),
-  Quiz(580, "NotifyAll() ၸႂ်ႉတႃႇသင်?", [
-    "ပူၵ်း (Wake up) ၵူႈ Thread ဢၼ်တိုၵ်ႉပႂ်ႉဝႆႉယူႇ",
-    "ပူၵ်း Thread ဢၼ်လဵဝ်",
-    "ပိၵ်ႉ Thread",
-    "None",
-  ]),
+  Quiz(571, "What is Synchronization used for?", ["To prevent multiple threads from accessing a shared resource simultaneously", "To speed up threads", "To increase RAM usage", "None"]),
+  Quiz(572, "Which keyword is used to implement synchronization in Java?", ["synchronized", "lock", "volatile", "static"]),
+  Quiz(573, "What is a Race Condition?", ["When multiple threads compete for shared data, leading to inconsistent results", "When a thread runs too fast", "When a thread terminates unexpectedly", "None"]),
+  Quiz(574, "What is a Synchronized Method?", ["A method that allows only one thread to enter at a time", "A method that runs faster", "A static method", "None"]),
+  Quiz(575, "When does a Deadlock occur?", ["When two threads are waiting for each other to release locks, causing a freeze", "When a thread finishes early", "When memory is full", "None"]),
+
+
+
+  Quiz(576, "What is the purpose of the 'volatile' keyword?", ["To ensure all threads read the latest value from Main Memory", "To lock a thread", "To delete a thread", "None"]),
+  Quiz(577, "What is the difference between a Synchronized Block and a Method?", ["A Block locks only a specific section of code (more efficient)", "They are identical", "Methods are faster", "None"]),
+  Quiz(578, "In which class are wait(), notify(), and notifyAll() defined?", ["Object class", "Thread class", "String class", "None"]),
+  Quiz(579, "Where must wait(), notify(), and notifyAll() be called?", ["Inside a synchronized context (method or block)", "Inside a static method", "Inside the main method", "None"]),
+  Quiz(580, "What does notifyAll() do?", ["Wakes up all threads currently waiting on the object's monitor", "Wakes up only one thread", "Closes the thread", "None"]),
 
   // --- Mixed & Advanced Multi-threading (581-600) ---
-  Quiz(581, "Daemon Thread မၢႆထိုင်သင်?", [
-    "Thread ဢၼ်ၸွႆႈယူႇၽၢႆႇလင် (Background thread)",
-    "Thread ဢၼ်လမ်ႇလွင်ႈသေပိူၼ်ႈ",
-    "Main thread",
-    "None",
-  ]),
-  Quiz(582, "Thread Priority မီးၵႃႈၶၼ်လၢႆတေႃႇလၢႆ?", [
-    "1 တေႃႇ 10",
-    "0 တေႃႇ 100",
-    "1 တေႃႇ 5",
-    "None",
-  ]),
-  Quiz(583, "Default Priority ၶွင် Thread ပဵၼ်လၢႆ?", [
-    "5 (NORM_PRIORITY)",
-    "1",
-    "10",
-    "0",
-  ]),
-  Quiz(584, "Method လႂ်ဢၼ်ၸႂ်ႉတႃႇယွၼ်ႇ (yield) CPU ပၼ် Thread တၢင်ႇဢၼ်?", [
-    "Thread.yield()",
-    "Thread.stop()",
-    "Thread.sleep()",
-    "None",
-  ]),
-  Quiz(585, "Thread.currentThread() ပၼ်သင်?", [
-    "Object ၶွင် Thread ဢၼ်တိုၵ်ႉလႅၼ်ႈယူႇယၢမ်းလဵဝ်",
-    "Thread တင်းသဵင်ႈ",
-    "null",
-    "None",
-  ]),
-  Quiz(586, "တႃႇပၼ်ၸိုဝ်ႈ Thread ၸႂ်ႉ Method လႂ်?", [
-    "setName()",
-    "getName()",
-    "changeName()",
-    "None",
-  ]),
-  Quiz(587, "isAlive() method ၸွႆႈသင်?", [
-    "Check ဝႃႈ Thread ယဝ်ႉတူဝ် (တၢႆ) ယဝ်ႉႁႃႉ",
-    "Check ဝႃႈ Thread သၢင်ႈယဝ်ႉႁႃႉ",
-    "Start thread",
-    "None",
-  ]),
-  Quiz(588, "တႃႇပိၵ်ႉ (Stop) Thread ဢၼ်လႅၼ်ႈယူႇ ၸႂ်ႉလၢႆးလႂ်လီသေပိူၼ်ႈ?", [
-    "ၸႂ်ႉ Flag variable (boolean)",
-    "Thread.stop()",
-    "Thread.destroy()",
-    "None",
-  ]),
-  Quiz(589, "Thread.stop() method ပဵၼ်သင်ဝႆႉယဝ်ႉ?", [
-    "Deprecated (ဢမ်ႇပၼ်ၸႂ်ႉယဝ်ႉ ယွၼ်ႉဢမ်ႇလွတ်ႈၽေး)",
-    "Final",
-    "Private",
-    "None",
-  ]),
-  Quiz(590, "Thread starvation ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Thread ဢၼ် Priority တႅမ်ႇ ဢမ်ႇလႆႈ CPU သေပွၵ်ႈ",
-    "မိူဝ်ႈ Thread ဝႆး",
-    "မိူဝ်ႈ RAM တဵမ်",
-    "None",
-  ]),
-  Quiz(591, "Intrinsic Lock (Monitor) မၢႆထိုင်သင်?", [
-    "Lock ဢၼ်မီးၼႂ်းၵူႈ Object ၼႂ်း Java",
-    "Lock ၶွင် CPU",
-    "Private lock",
-    "None",
-  ]),
-  Quiz(592, "Static Synchronized method တေ lock တီႈလႂ်?", [
-    "Lock တီႈ Class object",
-    "Lock တီႈ Instance object",
-    "ဢမ်ႇ lock",
-    "None",
-  ]),
-  Quiz(593, "Inter-thread communication မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ၸႂ်ႉ wait(), notify() တႃႇႁႂ်ႈ Thread ဢုပ်ႇၵၼ်",
-    "ၵၢၼ်သူင်ႇ SMS",
-    "ၵၢၼ် compile",
-    "None",
-  ]),
-  Quiz(594, "Yield() method ႁဵတ်းႁႂ်ႈ Thread ၵႂႃႇယူႇၼႂ်း State လႂ်?", [
-    "Runnable",
-    "Blocked",
-    "Waiting",
-    "None",
-  ]),
-  Quiz(595, "Thread Local Variable မၢႆထိုင်သင်?", [
-    "Variable ဢၼ်မီးၵႃႈၶၼ်ပႅၵ်ႇၵၼ် တႃႇၵူႈ Thread",
-    "Static variable",
-    "Global variable",
-    "None",
-  ]),
-  Quiz(596, "တႃႇ Check ဝႃႈ Thread ၼႆႉပဵၼ် Daemon ႁႃႉ ၸႂ်ႉသင်?", [
-    "isDaemon()",
-    "setDaemon()",
-    "checkDaemon()",
-    "None",
-  ]),
-  Quiz(597, "Thread group ၸွႆႈသင်?", [
-    "တႃႇၵုမ်းထိင်း လၢႆလၢႆ Thread ႁူမ်ႈၵၼ်",
-    "တႃႇ delete thread",
-    "တႃႇသၢင်ႈ class",
-    "None",
-  ]),
-  Quiz(598, "Multiprocessing လႄႈ Multithreading ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "Multitasking ပဵၼ် Process, Multithreading ပဵၼ် Thread ၼႂ်း process လဵဝ်",
-    "မိူၼ်ၵၼ်",
-    "Thread ဝႆးသေ Process",
-    "None",
-  ]),
-  Quiz(599, "သင် Thread ၼိုင်ႈဢၼ်ပဵၼ် Exception သေ ဢမ်ႇ handle တေပဵၼ်သင်?", [
-    "Thread ၼၼ်ႉတေတၢႆ (ၵူၺ်း Thread တၢင်ႇဢၼ်ယັງလႅၼ်ႈယူႇ)",
-    "Program ပိၵ်ႉတင်းသဵင်ႈ",
-    "Error compile",
-    "None",
-  ]),
-  Quiz(600, "Java Thread Model ပိုင်ႈဢိင်ၼိူဝ်သင်?", [
-    "Native OS threads",
-    "Green threads",
-    "Virtual threads ၵူၺ်း",
-    "None",
-  ]),
+  Quiz(581, "What is a Daemon Thread?", ["A background thread that provides services to user threads", "The most important thread", "The Main thread", "None"]),
+  Quiz(582, "What is the range for Thread Priority in Java?", ["1 to 10", "0 to 100", "1 to 5", "None"]),
+  Quiz(583, "What is the default priority of a thread?", ["5 (NORM_PRIORITY)", "1", "10", "0"]),
+  Quiz(584, "Which method is used to hint to the CPU to let other threads run?", ["Thread.yield()", "Thread.stop()", "Thread.sleep()", "None"]),
+  Quiz(585, "What does Thread.currentThread() return?", ["The object of the thread currently executing", "A list of all threads", "null", "None"]),
+  Quiz(586, "Which method is used to assign a name to a Thread?", ["setName()", "getName()", "changeName()", "None"]),
+  Quiz(587, "What is the purpose of the isAlive() method?", ["Checks if the thread has started and not yet terminated", "Checks if the thread was created", "Starts the thread", "None"]),
+  Quiz(588, "What is the best way to stop a running thread?", ["Using a Flag variable (boolean)", "Thread.stop()", "Thread.destroy()", "None"]),
+  Quiz(589, "What is the current status of the Thread.stop() method?", ["Deprecated (Unsafe and no longer recommended)", "Final", "Private", "None"]),
+  Quiz(590, "What is Thread Starvation?", ["When a low-priority thread never gets CPU time because of high-priority threads", "When a thread runs too fast", "When RAM is full", "None"]),
+  Quiz(591, "What is an Intrinsic Lock (Monitor)?", ["A lock built into every object in Java", "A CPU-level lock", "A private lock", "None"]),
+  Quiz(592, "Where does a Static Synchronized method apply its lock?", ["On the Class object", "On the Instance object", "It does not lock", "None"]),
+  Quiz(593, "What does Inter-thread communication refer to?", ["Using wait() and notify() so threads can signal each other", "Sending SMS", "Compiling code", "None"]),
+  Quiz(594, "The yield() method moves a thread into which state?", ["Runnable", "Blocked", "Waiting", "None"]),
+  Quiz(595, "What is a Thread Local Variable?", ["A variable that has a unique value for each thread", "A static variable", "A global variable", "None"]),
+  Quiz(596, "How do you check if a thread is a Daemon thread?", ["isDaemon()", "setDaemon()", "checkDaemon()", "None"]),
+  Quiz(597, "What is the purpose of a Thread Group?", ["To manage multiple threads as a single unit", "To delete threads", "To create classes", "None"]),
+  Quiz(598, "What is the difference between Multiprocessing and Multithreading?", ["Multiprocessing involves multiple processes; Multithreading is multiple threads within one process", "They are the same", "Threads are faster than processes", "None"]),
+  Quiz(599, "What happens if a thread throws an unhandled exception?", ["That specific thread dies (others keep running)", "The whole program closes", "A compiler error occurs", "None"]),
+  Quiz(600, "What does the Java Thread Model rely on?", ["Native OS threads", "Green threads", "Virtual threads only", "None"]),
 ];
-final List<Quiz> quizzes7 = [
+final List<Quiz> javaQuizM7 = [
   // --- Topic 69: Introduction to Collections ---
-  Quiz(601, "Collections Framework ၼႂ်း Java မၢႆထိုင်သင်?", [
-    "Architecture တႃႇသိမ်းလႄႈၸတ်းၵၢၼ် Group ၶွင် Object",
-    "Variable တူဝ်လဵဝ်",
-    "Method ဢၼ်ၼိုင်ႈ",
-    "Package တႃႇ String",
-  ]),
-  Quiz(602, "Collection Interface ယူႇၼႂ်း Package လႂ်?", [
-    "java.util",
-    "java.lang",
-    "java.io",
-    "java.net",
-  ]),
-  Quiz(603, "Root Interface ၶွင် Collection Hierarchy ပဵၼ်သင်?", [
-    "Collection",
-    "List",
-    "Set",
-    "Map",
-  ]),
-  Quiz(
-    604,
-    "Interface လႂ်ဢၼ်ဢမ်ႇသိုပ်ႇ (extend) လုၵ်ႉတီႈ Collection Interface?",
-    ["Map", "List", "Set", "Queue"],
-  ),
-  Quiz(605, "Collections ၸွႆႈသင်ၼမ်သေပိူၼ်ႈ?", [
-    "လူတ်းလွင်ႈတႅမ်ႈ Code (Reduces programming effort)",
-    "ႁႂ်ႈ RAM ၼမ်",
-    "ႁႂ်ႈ Program ဝႆး",
-    "None",
-  ]),
+  Quiz(601, "What is the Collections Framework in Java?", ["An architecture for storing and manipulating a group of objects", "A single variable type", "A specific method", "A package for String manipulation"]),
+  Quiz(602, "Which package contains the Collection Interface?", ["java.util", "java.lang", "java.io", "java.net"]),
+
+
+
+  Quiz(603, "What is the root interface of the Collection hierarchy?", ["Collection", "List", "Set", "Map"]),
+  Quiz(604, "Which interface does NOT extend the Collection interface?", ["Map", "List", "Set", "Queue"]),
+  Quiz(605, "What is the main advantage of using Collections?", ["Reduces programming effort by providing data structures", "Increases total RAM", "Makes the program run faster", "None"]),
 
   // --- Topic 70: Generic Class and Method ---
-  Quiz(606, "Generics ၼႂ်း Java (Java 5) ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇႁႂ်ႈပဵၼ် Type-safety (ၸႅတ်ႈ Type မိူဝ်ႈ compile)",
-    "တႃႇႁႂ်ႈ code ၼမ်",
-    "တႃႇ delete object",
-    "None",
-  ]),
-  Quiz(607, "တူဝ်လိၵ်ႈ <T> ၼႂ်း Generics မၢႆထိုင်သင်?", [
-    "Type Parameter (Type ဢၼ်ဢမ်ႇပႆႇတႅတ်ႈၼႅတ်ႈ)",
-    "Table",
-    "Thread",
-    "True",
-  ]),
-  Quiz(608, "Generics ၸွႆႈႁၢမ်ႈသင်?", [
-    "ClassCastException",
-    "NullPointerException",
-    "ArithmeticException",
-    "None",
-  ]),
-  Quiz(
-    609,
-    "Generics ၸႂ်ႉၸွမ်း Primitive types (int, double) လႆႈတိုက်ရိုက်ႁႃႉ?",
-    ["ဢမ်ႇလႆႈ (လူဝ်ႇၸႂ်ႉ Wrapper class)", "လႆႈ", "မၢင်ပွၵ်ႈ", "None"],
-  ),
-  Quiz(610, "Generic Method တႅမ်ႈၸိူင်ႉႁိုဝ်?", [
-    "public <E> void printArray(E[] elements)",
-    "public void printArray(T elements)",
-    "public void <T> print()",
-    "None",
-  ]),
+  Quiz(606, "What is the purpose of Generics in Java (introduced in Java 5)?", ["To provide Type-safety (checking types at compile-time)", "To increase code volume", "To delete objects", "None"]),
+  Quiz(607, "What does the symbol <T> represent in Generics?", ["Type Parameter (A placeholder for a type to be specified later)", "Table", "Thread", "True"]),
+  Quiz(608, "What common error do Generics help prevent?", ["ClassCastException", "NullPointerException", "ArithmeticException", "None"]),
+  Quiz(609, "Can Generics be used directly with primitive types (int, double)?", ["No (You must use Wrapper classes like Integer)", "Yes", "Sometimes", "None"]),
+  Quiz(610, "How do you define a Generic Method?", ["public <E> void printArray(E[] elements)", "public void printArray(T elements)", "public void <T> print()", "None"]),
 
   // --- Topic 71: List Interface and ArrayList ---
-  Quiz(611, "List Interface ပၼ်သိမ်း Data ၸိူင်ႉႁိုဝ်?", [
-    "သိမ်းၸွမ်းထႅဝ် (Ordered) လႄႈ သိမ်းတူဝ်မိူၼ် (Duplicate) လႆႈ",
-    "သိမ်းဢမ်ႇၸွမ်းထႅဝ်",
-    "ဢမ်ႇပၼ်သိမ်းတူဝ်မိူၼ်",
-    "None",
-  ]),
-  Quiz(612, "ArrayList ပိုင်ႈဢင်ၼိူဝ်သင်တႃႇသိမ်း Data?", [
-    "Dynamic Array",
-    "Linked List",
-    "Hash Table",
-    "Stack",
-  ]),
-  Quiz(613, "ArrayList သႂ်ႇ (Add) Data လႆႈၵေႃႉဢၼ်?", [
-    "ဢမ်ႇမီးတီႈသုတ်း (Resizable)",
-    "10 ဢၼ်ၵူၺ်း",
-    "100 ဢၼ်",
-    "None",
-  ]),
-  Quiz(614, "တႃႇဢဝ်ၵႃႈၶၼ်လုၵ်ႉတီႈ ArrayList ၸႂ်ႉ Method လႂ်?", [
-    "get(index)",
-    "fetch()",
-    "retrieve()",
-    "add()",
-  ]),
-  Quiz(615, "ArrayList ဝႆးသေပိူၼ်ႈတီႈလႂ်?", [
-    "ၵၢၼ်ႁႃ Data (Search / Random access)",
-    "ၵၢၼ်သႂ်ႇ Data ၼႂ်းၵາງ",
-    "ၵၢၼ် Delete Data",
-    "None",
-  ]),
-  Quiz(616, "Default capacity ၶွင် ArrayList ပဵၼ်လၢႆ?", [
-    "10",
-    "16",
-    "0",
-    "100",
-  ]),
-  Quiz(617, "ArrayList ၸွႆႈသိမ်း null value လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "Error",
-  ]),
-  Quiz(618, "တႃႇႁူႉတၢင်းၼမ် Data ၼႂ်း ArrayList ၸႂ်ႉ method လႂ်?", [
-    "size()",
-    "length()",
-    "capacity()",
-    "count()",
-  ]),
-  Quiz(619, "ArrayList ပဵၼ် Synchronized ႁႃႉ?", [
-    "ဢမ်ႇၸႂ်ႉ (Thread-unsafe)",
-    "ၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(620, "တႃႇလႅၵ်ႈ ArrayList ႁႂ်ႈပဵၼ် Synchronized ၸႂ်ႉသင်?", [
-    "Collections.synchronizedList()",
-    "ArrayList.sync()",
-    "synchronized keyword",
-    "None",
-  ]),
+  Quiz(611, "How does the List interface store data?", ["Ordered collection that allows duplicate elements", "Unordered collection", "Does not allow duplicates", "None"]),
+  Quiz(612, "What does ArrayList use internally to store data?", ["Dynamic Array", "Linked List", "Hash Table", "Stack"]),
+  Quiz(613, "How many elements can be added to an ArrayList?", ["Unlimited (It is resizable)", "Exactly 10", "Exactly 100", "None"]),
+  Quiz(614, "Which method is used to retrieve an element from an ArrayList?", ["get(index)", "fetch()", "retrieve()", "add()"]),
+  Quiz(615, "In which operation is ArrayList most efficient?", ["Searching for data / Random access", "Inserting data in the middle", "Deleting data", "None"]),
+  Quiz(616, "What is the default initial capacity of an ArrayList?", ["10", "16", "0", "100"]),
+  Quiz(617, "Can an ArrayList store a null value?", ["Yes", "No", "Sometimes", "Error"]),
+  Quiz(618, "Which method returns the number of elements in an ArrayList?", ["size()", "length()", "capacity()", "count()"]),
+  Quiz(619, "Is ArrayList synchronized by default?", ["No (It is thread-unsafe)", "Yes", "Sometimes", "None"]),
+  Quiz(620, "How can you get a synchronized version of an ArrayList?", ["Collections.synchronizedList()", "ArrayList.sync()", "Using the synchronized keyword", "None"]),
 
   // --- Topic 72, 73: Vector and Stack ---
-  Quiz(621, "Vector ပႅၵ်ႇၵၼ်တင်း ArrayList ၸိူင်ႉႁိုဝ်?", [
-    "Vector ပဵၼ် Synchronized (Thread-safe)",
-    "Vector ဝႆးသေ",
-    "Vector သိမ်း null ဢမ်ႇလႆႈ",
-    "None",
-  ]),
-  Quiz(622, "Vector တေမၢၵ်ႇ (Grow) လၢႆပၼ်ႇမိူဝ်ႈမၼ်းတဵမ်?", [
-    "100% (Double size)",
-    "50%",
-    "10%",
-    "None",
-  ]),
-  Quiz(623, "Stack သိုပ်ႇ (extend) လုၵ်ႉတီႈ Class လႂ်?", [
-    "Vector",
-    "ArrayList",
-    "LinkedList",
-    "None",
-  ]),
-  Quiz(624, "Stack ၸႂ်ႉပိူင်လႂ် (Algorithm)?", [
-    "LIFO (Last In First Out)",
-    "FIFO (First In First Out)",
-    "Random",
-    "None",
-  ]),
-  Quiz(625, "တႃႇသႂ်ႇ Data ၶဝ်ႈ Stack ၸႂ်ႉ method လႂ်?", [
-    "push()",
-    "add()",
-    "put()",
-    "insert()",
-  ]),
-  Quiz(626, "တႃႇဢဝ် Data ဢၼ်ယူႇၼိူဝ်သုတ်းဢွၵ်ႇလႄႈ Delete ၸႂ်ႉ method လႂ်?", [
-    "pop()",
-    "peek()",
-    "remove()",
-    "poll()",
-  ]),
-  Quiz(627, "peek() ၼႂ်း Stack ႁဵတ်းသင်?", [
-    "တူၺ်းတူဝ်ၼိူဝ်သုတ်း ၵူၺ်းဢမ်ႇ Delete",
-    "Delete တူဝ်ၼိူဝ်သုတ်း",
-    "Search",
-    "None",
-  ]),
-  Quiz(628, "EmptyStackException ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ pop() ၼႂ်း Stack ဢၼ်ပဝ်ႇ",
-    "မိူဝ်ႈ push()",
-    "မိူဝ်ႈ stack တဵမ်",
-    "None",
-  ]),
-  Quiz(629, "Vector ပဵၼ် Legacy Class (Class ၵဝ်ႇ) ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(630, "Stack ၸွႆႈ search Data လႆႈႁႃႉ?", [
-    "လႆႈ (ၸႂ်ႉ search() method)",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
+  Quiz(621, "What is the main difference between Vector and ArrayList?", ["Vector is Synchronized (Thread-safe)", "Vector is faster", "Vector cannot store null", "None"]),
+  Quiz(622, "By how much does a Vector grow when it is full?", ["100% (It doubles in size)", "50%", "10%", "None"]),
+  Quiz(623, "The Stack class extends which class?", ["Vector", "ArrayList", "LinkedList", "None"]),
+
+
+
+  Quiz(624, "Which algorithm does the Stack class follow?", ["LIFO (Last In First Out)", "FIFO (First In First Out)", "Random Access", "None"]),
+  Quiz(625, "Which method is used to add data to a Stack?", ["push()", "add()", "put()", "insert()"]),
+  Quiz(626, "Which method removes and returns the top element of a Stack?", ["pop()", "peek()", "remove()", "poll()"]),
+  Quiz(627, "What does the peek() method do in a Stack?", ["Returns the top element without removing it", "Deletes the top element", "Searches the stack", "None"]),
+  Quiz(628, "When does an EmptyStackException occur?", ["When calling pop() on an empty stack", "When calling push()", "When the stack is full", "None"]),
+  Quiz(629, "Is Vector considered a Legacy Class?", ["Yes", "No", "Only in Java 8", "None"]),
+  Quiz(630, "Can you search for an item's position in a Stack?", ["Yes (Using the search() method)", "No", "Only if it is sorted", "None"]),
 
   // --- Topic 74: LinkedList ---
-  Quiz(631, "LinkedList ၼႂ်း Java ပဵၼ်သႅၼ်းလႂ်?", [
-    "Doubly Linked List",
-    "Singly Linked List",
-    "Circular List",
-    "None",
-  ]),
-  Quiz(632, "LinkedList သိုပ်ႇ (implement) Interface လႂ်လၢႆ?", [
-    "List လႄႈ Deque",
-    "List ၵူၺ်း",
-    "Set",
-    "Map",
-  ]),
-  Quiz(633, "LinkedList ဝႆးသေ ArrayList တီႈလႂ်?", [
-    "ၵၢၼ်သႂ်ႇ လႄႈ Delete Data (Manipulation)",
-    "ၵၢၼ် Search Data",
-    "Memory optimization",
-    "None",
-  ]),
-  Quiz(634, "LinkedList သိမ်း Data ၸိူင်ႉႁိုဝ်?", [
-    "သိမ်းပဵၼ် Nodes (ၵွင်ႉၵၼ်ဝႆႉ)",
-    "သိမ်းပဵၼ် Array",
-    "သိမ်းၼႂ်း Stack",
-    "None",
-  ]),
-  Quiz(635, "တႃႇသႂ်ႇ Data တီႈတႄႇသုတ်း (First) ၼႂ်း LinkedList ၸႂ်ႉသင်?", [
-    "addFirst()",
-    "push()",
-    "insertFirst()",
-    "None",
-  ]),
-  Quiz(636, "LinkedList ၵိၼ် Memory ၼမ်သေ ArrayList ယွၼ်ႉသင်?", [
-    "ယွၼ်ႉလူဝ်ႇသိမ်း Address (Next/Prev pointers)",
-    "ယွၼ်ႉမၼ်းယႂ်ႇ",
-    "ယွၼ်ႉမၼ်းဝႆး",
-    "None",
-  ]),
-  Quiz(637, "LinkedList ၸွႆႉႁဵတ်း Queue လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(638, "LinkedList ပဵၼ် Synchronized ႁႃႉ?", [
-    "ဢမ်ႇၸႂ်ႉ",
-    "ၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(639, "တႃႇ Remove တူဝ်သုတ်းသုတ်း ၸႂ်ႉသင်?", [
-    "removeLast()",
-    "pop()",
-    "clear()",
-    "None",
-  ]),
-  Quiz(640, "LinkedList သိုပ်ႇ Queue interface ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
+  Quiz(631, "What type of list is the Java LinkedList class?", ["Doubly Linked List", "Singly Linked List", "Circular List", "None"]),
+  Quiz(632, "Which interfaces does LinkedList implement?", ["List and Deque", "List only", "Set", "Map"]),
+  Quiz(633, "Where is LinkedList faster than ArrayList?", ["Adding and Deleting data (Manipulation)", "Searching for data", "Memory optimization", "None"]),
+  Quiz(634, "How does LinkedList store its elements?", ["As Nodes connected by pointers", "In a contiguous Array", "Inside a Stack", "None"]),
+  Quiz(635, "Which method adds an element to the beginning of a LinkedList?", ["addFirst()", "push()", "insertFirst()", "None"]),
+  Quiz(636, "Why does LinkedList use more memory than ArrayList?", ["Because it stores pointers to the next and previous nodes", "Because it is larger", "Because it is faster", "None"]),
+  Quiz(637, "Can LinkedList be used to implement a Queue?", ["Yes", "No", "Only for Strings", "None"]),
+  Quiz(638, "Is LinkedList synchronized?", ["No", "Yes", "Sometimes", "None"]),
+  Quiz(639, "Which method removes the last element of a LinkedList?", ["removeLast()", "pop()", "clear()", "None"]),
+  Quiz(640, "Does LinkedList implement the Queue interface?", ["Yes", "No", "Sometimes", "None"]),
 
   // --- Topic 78, 79, 80: Map Interface (HashMap, LinkedHashMap, TreeMap) ---
-  Quiz(641, "Map Interface သိမ်း Data ၸိူင်ႉႁိုဝ်?", [
-    "Key-Value pairs",
-    "Single elements",
-    "Only Strings",
-    "Index based",
-  ]),
-  Quiz(642, "HashMap ပၼ်သိမ်း Key မိူၼ်ၵၼ် (Duplicate Key) ႁႃႉ?", [
-    "ဢမ်ႇပၼ် (Key လူဝ်ႇ Unique)",
-    "ပၼ်",
-    "မၢင်ပွၵ်ႈ",
-    "Error",
-  ]),
-  Quiz(643, "HashMap ပၼ်သိမ်း Value မိူၼ်ၵၼ်လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(644, "HashMap သိမ်း Data ၸွမ်းလႅၼ် (Order) ႁႃႉ?", [
-    "ဢမ်ႇၸွမ်းလႅၼ် (Unordered)",
-    "ၸွမ်းလႅၼ်",
-    "Sorting",
-    "None",
-  ]),
-  Quiz(645, "LinkedHashMap ပႅၵ်ႇၵၼ်တင်း HashMap ၸိူင်ႉႁိုဝ်?", [
-    "LinkedHashMap သိမ်းၸွမ်းထႅဝ်ဢၼ်သႂ်ႇ (Insertion order)",
-    "LinkedHashMap ဝႆးသေ",
-    "HashMap သိမ်း null ဢမ်ႇလႆႈ",
-    "None",
-  ]),
-  Quiz(646, "TreeMap သိမ်း Data ၸိူင်ႉႁိုဝ်?", [
-    "ၸွမ်းလႅၼ် (Sorted Order / Natural order)",
-    "ၸွမ်း Insertion order",
-    "Unordered",
-    "None",
-  ]),
-  Quiz(647, "TreeMap ပၼ်သိမ်း 'null' Key ႁႃႉ?", [
-    "ဢမ်ႇပၼ် (Error)",
-    "ပၼ် 1 ဢၼ်",
-    "ပၼ်လၢႆဢၼ်",
-    "None",
-  ]),
-  Quiz(648, "HashMap ပၼ်သိမ်း 'null' Key ႁႃႉ?", [
-    "ပၼ် 1 ဢၼ်",
-    "ဢမ်ႇပၼ်",
-    "ပၼ်လၢႆဢၼ်",
-    "None",
-  ]),
-  Quiz(649, "တႃႇသႂ်ႇ Data ၶဝ်ႈ Map ၸႂ်ႉ method လႂ်?", [
-    "put(key, value)",
-    "add()",
-    "push()",
-    "set()",
-  ]),
-  Quiz(650, "တႃႇဢဝ် Value လုၵ်ႉတီႈ Key ၸႂ်ႉ method လႂ်?", [
-    "get(key)",
-    "fetch()",
-    "find()",
-    "None",
-  ]),
-  Quiz(651, "HashMap ၸႂ်ႉ Algorithm သင်?", [
-    "Hashing",
-    "Binary Tree",
-    "Linear Search",
-    "None",
-  ]),
-  Quiz(652, "တႃႇ Check ဝႃႈ Map မီး Key ၼႆႉႁႃႉ ၸႂ်ႉသင်?", [
-    "containsKey(key)",
-    "hasKey()",
-    "find()",
-    "None",
-  ]),
-  Quiz(653, "Map.Entry မၢႆထိုင်သင်?", [
-    "တွၼ်ႈၼိုင်ႈၶွင် Map (Key+Value pair)",
-    "Key ၵူၺ်း",
-    "Value ၵူၺ်း",
-    "None",
-  ]),
-  Quiz(654, "တႃႇဢဝ် Key တင်းသဵင်ႈ ၸႂ်ႉ method လႂ်?", [
-    "keySet()",
-    "keys()",
-    "entrySet()",
-    "None",
-  ]),
-  Quiz(655, "TreeMap ၸႂ်ႉ Algorithm သင်?", [
-    "Red-Black Tree",
-    "Hashing",
-    "Dynamic Array",
-    "None",
-  ]),
+  Quiz(641, "How does the Map Interface store data?", ["As Key-Value pairs", "As single elements", "Only as Strings", "Based on numeric index"]),
+  Quiz(642, "Does HashMap allow duplicate keys?", ["No (Keys must be unique)", "Yes", "Sometimes", "Error"]),
+  Quiz(643, "Does HashMap allow duplicate values?", ["Yes", "No", "Only if static", "None"]),
+  Quiz(644, "Is the order of elements preserved in a HashMap?", ["No (It is unordered)", "Yes (Insertion order)", "Yes (Sorted order)", "None"]),
+  Quiz(645, "What is the main difference between LinkedHashMap and HashMap?", ["LinkedHashMap maintains insertion order", "LinkedHashMap is faster", "HashMap cannot store null", "None"]),
+  Quiz(646, "How does TreeMap store its data?", ["In sorted order (Natural or specified order)", "In insertion order", "In unordered fashion", "None"]),
+  Quiz(647, "Does TreeMap allow a 'null' key?", ["No (Throws NullPointerException)", "Yes, one", "Yes, multiple", "None"]),
+  Quiz(648, "Does HashMap allow a 'null' key?", ["Yes, one", "No", "Yes, multiple", "None"]),
+  Quiz(649, "Which method is used to add data to a Map?", ["put(key, value)", "add()", "push()", "set()"]),
+  Quiz(650, "Which method is used to retrieve a value using its key?", ["get(key)", "fetch()", "find()", "None"]),
+  Quiz(651, "Which algorithm does HashMap use internally?", ["Hashing", "Binary Tree", "Linear Search", "None"]),
+  Quiz(652, "How do you check if a Map contains a specific key?", ["containsKey(key)", "hasKey()", "find()", "None"]),
+  Quiz(653, "What does Map.Entry represent?", ["A single key-value pair in a Map", "The Key only", "The Value only", "None"]),
+  Quiz(654, "Which method returns a Set of all keys in a Map?", ["keySet()", "keys()", "entrySet()", "None"]),
+  Quiz(655, "Which algorithm does TreeMap use?", ["Red-Black Tree", "Hashing", "Dynamic Array", "None"]),
 
   // --- Topic 81: Set Interface (HashSet, LinkedHashSet, TreeSet) ---
-  Quiz(656, "Set Interface ပၼ်သိမ်း Data မိူၼ်ၵၼ် (Duplicate) ႁႃႉ?", [
-    "ဢမ်ႇပၼ်",
-    "ပၼ်",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(657, "HashSet သိမ်း Data ၸွမ်းလႅၼ် (Order) ႁႃႉ?", [
-    "ဢမ်ႇၸွမ်း (Unordered)",
-    "ၸွမ်းလႅၼ်",
-    "Sorted",
-    "None",
-  ]),
-  Quiz(658, "LinkedHashSet သိမ်း Data ၸိူင်ႉႁိုဝ်?", [
-    "ၸွမ်းလႅၼ်ဢၼ်သႂ်ႇ (Insertion order)",
-    "Unordered",
-    "Sorted",
-    "None",
-  ]),
-  Quiz(659, "TreeSet သိမ်း Data ၸိူင်ႉႁိုဝ်?", [
-    "Sorting Order (တူဝ်ၼပ်ႉလဵၵ်ႉၵႂႃႇယႂ်ႇ)",
-    "Unordered",
-    "Insertion order",
-    "None",
-  ]),
-  Quiz(660, "HashSet ၸွႆႈသိမ်း 'null' ႁႃႉ?", [
-    "လႆႈ 1 ဢၼ်",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈလၢႆဢၼ်",
-    "None",
-  ]),
-  Quiz(661, "တႃႇသႂ်ႇ Data ၶဝ်ႈ Set ၸႂ်ႉ method လႂ်?", [
-    "add()",
-    "put()",
-    "push()",
-    "None",
-  ]),
-  Quiz(662, "HashSet ၼႂ်းမၼ်း (Internally) ၸႂ်ႉသင်သိမ်း Data?", [
-    "HashMap",
-    "ArrayList",
-    "LinkedList",
-    "None",
-  ]),
-  Quiz(663, "TreeSet သိုပ်ႇ (implement) Interface လႂ်?", [
-    "SortedSet",
-    "List",
-    "Map",
-    "None",
-  ]),
-  Quiz(664, "HashSet ဝႆးသေ TreeSet ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ (ယွၼ်ႉ HashMap ဝႆးသေ Tree)",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မိူၼ်ၵၼ်",
-    "None",
-  ]),
-  Quiz(665, "Set ၸွႆႉႁဵတ်းသင်လႆႈလီသုတ်း?", [
-    "တႃႇလူတ်းလွင်ႈ Data ထပ်းၵၼ် (Remove duplicates)",
-    "တႃႇ Sorting",
-    "တႃႇ Indexing",
-    "None",
-  ]),
+  Quiz(656, "Does the Set interface allow duplicate elements?", ["No", "Yes", "Only for integers", "None"]),
+  Quiz(657, "Does HashSet maintain any order of elements?", ["No (Unordered)", "Yes (Insertion order)", "Yes (Sorted order)", "None"]),
+  Quiz(658, "How does LinkedHashSet store elements?", ["In insertion order", "Unordered", "Sorted", "None"]),
+  Quiz(659, "How does TreeSet store elements?", ["In sorted order (Ascending)", "Unordered", "Insertion order", "None"]),
+  Quiz(660, "Does HashSet allow null values?", ["Yes, one", "No", "Yes, multiple", "None"]),
+  Quiz(661, "Which method is used to add data to a Set?", ["add()", "put()", "push()", "None"]),
+  Quiz(662, "What does HashSet use internally to store its data?", ["A HashMap", "An ArrayList", "A LinkedList", "None"]),
+  Quiz(663, "Which interface does TreeSet implement?", ["SortedSet", "List", "Map", "None"]),
+  Quiz(664, "Is HashSet generally faster than TreeSet?", ["Yes (Because hashing is faster than tree traversal)", "No", "They are identical", "None"]),
+  Quiz(665, "What is the best use case for a Set?", ["To remove or prevent duplicate data", "For sorting", "For indexing", "None"]),
 
   // --- Intermediate & Logic (666 - 700) ---
-  Quiz(666, "Iterator ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇပၼ်ႇ (Traverse) ၸႅတ်ႈ Data ၼႂ်း Collection",
-    "တႃႇ Delete Collection",
-    "တႃႇ Compile",
-    "None",
-  ]),
-  Quiz(667, "ListIterator ပႅၵ်ႇၵၼ်တင်း Iterator ၸိူင်ႉႁိုဝ်?", [
-    "ListIterator ပၼ်ႇလႆႈတင်း ၼႃႈလႄႈ လင် (Bi-directional)",
-    "Iterator ဝႆးသေ",
-    "ListIterator ၸႂ်ႉလႆႈၵူႈ Collection",
-    "None",
-  ]),
-  Quiz(668, "တႃႇပၼ်ႇ Collection လူၺ်ႈဢမ်ႇၸႂ်ႉ Iterator ၸႂ်ႉသင်လႆႈ?", [
-    "For-each loop",
-    "While loop ၵူၺ်း",
-    "If else",
-    "None",
-  ]),
-  Quiz(669, "Collections.sort() ၸႂ်ႉလႆႈတင်း Interface လႂ်?", [
-    "List",
-    "Map",
-    "Set",
-    "None",
-  ]),
-  Quiz(670, "Comparable Interface မီး method သင်?", [
-    "compareTo()",
-    "compare()",
-    "equals()",
-    "None",
-  ]),
-  Quiz(671, "Comparator Interface မီး method သင်?", [
-    "compare()",
-    "compareTo()",
-    "sort()",
-    "None",
-  ]),
-  Quiz(672, "Comparable လႄႈ Comparator ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "Comparable ယူႇၼႂ်း Class တူဝ်မၼ်း, Comparator ယူႇၼွၵ်ႈ",
-    "မိူၼ်ၵၼ်",
-    "Comparable ဝႆးသေ",
-    "None",
-  ]),
-  Quiz(673, "Fail-fast Iterator မၢႆထိုင်သင်?", [
-    "Exception တေတက်သင်လႅၵ်ႈ Data မိူဝ်ႈတိုၵ်ႉပၼ်ႇ (Iterate) ယူႇ",
-    "Iterator ဢၼ်ဢမ်ႇၽိတ်း",
-    "Error compile",
-    "None",
-  ]),
-  Quiz(674, "ConcurrentModificationException ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈလႅၵ်ႈ Data ၼႂ်း Collection ၽွင်း Iterator တိုၵ်ႉႁဵတ်းၵၢၼ်",
-    "မိူဝ်ႈ null",
-    "မိူဝ်ႈ RAM တဵမ်",
-    "None",
-  ]),
-  Quiz(675, "Enumeration ၸႂ်ႉတင်း Class လႂ်?", [
-    "Vector / Stack (Legacy)",
-    "ArrayList",
-    "HashMap",
-    "None",
-  ]),
-  Quiz(676, "Properties Class သိုပ်ႇလုၵ်ႉတီႈလႂ်?", [
-    "Hashtable",
-    "HashMap",
-    "TreeMap",
-    "None",
-  ]),
-  Quiz(677, "Properties file သိမ်း Data ပိူင်လႂ်?", [
-    "Key=Value (String)",
-    "Binary",
-    "JSON",
-    "None",
-  ]),
-  Quiz(678, "PriorityQueue ၸႂ်ႉပိူင်လႂ်?", [
-    "Sorting order / Priority",
-    "LIFO",
-    "FIFO",
-    "None",
-  ]),
-  Quiz(679, "Array ၼိုင်ႈဢၼ် လႅၵ်ႈပဵၼ် List လႆႈႁိုဝ်?", [
-    "Arrays.asList(array)",
-    "List.of(array)",
-    "add()",
-    "None",
-  ]),
-  Quiz(680, "List ၼိုင်ႈဢၼ် လႅၵ်ႈပဵၼ် Array လႆႈႁိုဝ်?", [
-    "list.toArray()",
-    "Arrays.fromList()",
-    "convert()",
-    "None",
-  ]),
-  Quiz(681, "HashCode() ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇႁႃ Address/Index ၼႂ်း Hashing",
-    "တႃႇ Sorting",
-    "တႃႇ delete",
-    "None",
-  ]),
-  Quiz(
-    682,
-    "သင် Object သွင်ဢၼ် equals() ပဵၼ် true, hashCode() လူဝ်ႇမိူၼ်ၵၼ်ႁႃႉ?",
-    ["လူဝ်ႇမိူၼ်ၵၼ်", "ဢမ်ႇလူဝ်ႇ", "မၢင်ပွၵ်ႈ", "None"],
-  ),
-  Quiz(683, "Collection Class လႂ်ပဵၼ် Thread-safe (Synchronized)?", [
-    "Vector, Stack, Hashtable",
-    "ArrayList, HashMap",
-    "HashSet",
-    "None",
-  ]),
-  Quiz(684, "Deque မၢႆထိုင်သင်?", [
-    "Double Ended Queue (သႂ်ႇ/ဢဝ်ဢွၵ်ႇလႆႈတင်း ၼႃႈလႄႈ လင်)",
-    "Default Queue",
-    "String Queue",
-    "None",
-  ]),
-  Quiz(685, "Collections.emptyList() ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇသၢင်ႈ List ဢၼ်ပဝ်ႇသေ လႅၵ်ႈၵႃႈၶၼ်ဢမ်ႇလႆႈ (Immutable)",
-    "တႃႇ Delete list",
-    "Error",
-    "None",
-  ]),
-  Quiz(686, "Map ၼိုင်ႈဢၼ် မီး Value မိူၼ်ၵၼ် (Duplicate Value) လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(687, "TreeSet ၸႂ်ႉၸွမ်း Object ဢၼ်ဢမ်ႇသိုပ်ႇ Comparable လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (ClassCastException)",
-    "လႆႈ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(688, "Wrapper Classes (Integer, Double) ၸွႆႈသင်?", [
-    "တႃႇဢဝ် Primitive type ၶဝ်ႈၼႂ်း Collection",
-    "ႁႂ်ႈ code ဝႆး",
-    "Security",
-    "None",
-  ]),
-  Quiz(689, "Autoboxing မၢႆထိုင်သင်?", [
-    "Java လႅၵ်ႈ Primitive ပဵၼ် Wrapper Object ပၼ်ဢလိုတ်း",
-    "လႅၵ်ႈ Object ပဵၼ် Primitive",
-    "Error",
-    "None",
-  ]),
-  Quiz(690, "Unboxing မၢႆထိုင်သင်?", [
-    "Java လႅၵ်ႈ Wrapper Object ပဵၼ် Primitive ပၼ်ဢလိုတ်း",
-    "လႅၵ်ႈ Primitive ပဵၼ် Object",
-    "None",
-    "None",
-  ]),
-  Quiz(691, "Collection interface မီး method removeAll() ႁႃႉ?", [
-    "မီး",
-    "ဢမ်ႇမီး",
-    "မီးၼႂ်း List ၵူၺ်း",
-    "None",
-  ]),
-  Quiz(692, "Dictionary ပဵၼ် Class မႄႈၶွင်လႂ်?", [
-    "Hashtable",
-    "HashMap",
-    "TreeMap",
-    "None",
-  ]),
-  Quiz(693, "Set interface မီး get(index) method ႁႃႉ?", [
-    "ဢမ်ႇမီး (ယွၼ်ႉ Set ဢမ်ႇမီး index)",
-    "မီး",
-    "Error",
-    "None",
-  ]),
-  Quiz(694, "Queue interface method 'poll()' ပၼ်သင်?", [
-    "ဢဝ်တူဝ်ၼႃႈသုတ်းဢွၵ်ႇ လႄႈ Delete (သင်ပဝ်ႇ ပၼ် null)",
-    "Error",
-    "Delete ၵူၺ်း",
-    "None",
-  ]),
-  Quiz(695, "Queue interface method 'remove()' ပၼ်သင်မိူဝ်ႈ Queue ပဝ်ႇ?", [
-    "Throw Exception",
-    "null",
-    "0",
-    "None",
-  ]),
-  Quiz(696, "Iterable interface ပဵၼ် Parent ၶွင် Collection ႁႃႉ?", [
-    "ၸႂ်ႉယဝ်ႉ",
-    "ဢမ်ႇၸႂ်ႉ",
-    "မၢင်ပွၵ်ႈ",
-    "None",
-  ]),
-  Quiz(697, "တႃႇ Clear Data တင်းသဵင်ႈၼႂ်း Collection ၸႂ်ႉသင်?", [
-    "clear()",
-    "delete()",
-    "reset()",
-    "None",
-  ]),
-  Quiz(698, "HashMap ၸိူဝ်းမီး Key မိူၼ်ၵၼ် တေပဵၼ်သင်?", [
-    "Value မႂ်ႇ တေၵႂႃႇသမ် (Overwrite) Value ၵဝ်ႇ",
-    "Error",
-    "သိမ်းတင်းသွင်ဢၼ်",
-    "None",
-  ]),
-  Quiz(699, "Synchronized Collection ဝႆးသေ Non-synchronized ႁႃႉ?", [
-    "ဢမ်ႇဝႆး (ၸိူတ်ႉသေ ယွၼ်ႉလူဝ်ႇပႂ်ႉ Lock)",
-    "ဝႆးသေ",
-    "မိူၼ်ၵၼ်",
-    "None",
-  ]),
-  Quiz(700, "Java Collections Framework ၸွႆႈႁဵတ်းသင်?", [
-    "Interoperability (ႁႂ်ႈ API တၢင်ႇဢၼ်ၸႂ်ႉ Data ႁူမ်ႈၵၼ်လႆႈ)",
-    "Security",
-    "RAM",
-    "None",
-  ]),
+  Quiz(666, "What is an Iterator used for?", ["To traverse and check data within a Collection", "To delete a Collection", "To compile code", "None"]),
+  Quiz(667, "How does ListIterator differ from Iterator?", ["ListIterator allows bi-directional traversal (forward and backward)", "Iterator is faster", "ListIterator works for all collections", "None"]),
+  Quiz(668, "What can be used to traverse a collection without an explicit Iterator?", ["Enhanced For-each loop", "While loop only", "If-else statements", "None"]),
+  Quiz(669, "Collections.sort() works with which interface?", ["List", "Map", "Set", "None"]),
+  Quiz(670, "Which method is defined in the Comparable interface?", ["compareTo()", "compare()", "equals()", "None"]),
+  Quiz(671, "Which method is defined in the Comparator interface?", ["compare()", "compareTo()", "sort()", "None"]),
+  Quiz(672, "What is the difference between Comparable and Comparator?", ["Comparable is within the class itself; Comparator is an external class", "They are the same", "Comparable is faster", "None"]),
+  Quiz(673, "What is a Fail-fast Iterator?", ["An iterator that throws an exception if the collection is modified during iteration", "An iterator that never fails", "A compiler error", "None"]),
+  Quiz(674, "When is ConcurrentModificationException thrown?", ["When modifying a collection while an iterator is traversing it", "When an object is null", "When RAM is full", "None"]),
+  Quiz(675, "The Enumeration interface is used with which classes?", ["Vector / Stack (Legacy classes)", "ArrayList", "HashMap", "None"]),
+  Quiz(676, "The Properties class extends which class?", ["Hashtable", "HashMap", "TreeMap", "None"]),
+  Quiz(677, "How does a Properties file store data?", ["Key=Value pairs (as Strings)", "Binary format", "JSON format", "None"]),
+  Quiz(678, "How does a PriorityQueue order its elements?", ["By natural order or a custom priority", "LIFO", "FIFO", "None"]),
+  Quiz(679, "How can you convert an Array into a List?", ["Arrays.asList(array)", "List.of(array)", "add()", "None"]),
+  Quiz(680, "How can you convert a List into an Array?", ["list.toArray()", "Arrays.fromList()", "convert()", "None"]),
+  Quiz(681, "What is the purpose of hashCode()?", ["To find the address/index in Hashing data structures", "For sorting", "To delete objects", "None"]),
+  Quiz(682, "If two objects are equal according to equals(), must their hashCode() be the same?", ["Yes", "No", "Sometimes", "None"]),
+  Quiz(683, "Which collection classes are Thread-safe (Synchronized)?", ["Vector, Stack, Hashtable", "ArrayList, HashMap", "HashSet", "None"]),
+  Quiz(684, "What is a Deque?", ["A Double Ended Queue (elements can be added/removed from both ends)", "A Default Queue", "A String Queue", "None"]),
+  Quiz(685, "What is the purpose of Collections.emptyList()?", ["To create an immutable empty list", "To delete a list", "To cause an error", "None"]),
+  Quiz(686, "Can a Map contain duplicate values?", ["Yes", "No", "Sometimes", "None"]),
+  Quiz(687, "Can TreeSet be used with objects that do not implement Comparable?", ["No (Throws ClassCastException)", "Yes", "Sometimes", "None"]),
+  Quiz(688, "What do Wrapper Classes (Integer, Double) allow?", ["Storing primitive types in Collections", "Faster execution", "Security", "None"]),
+  Quiz(689, "What is Autoboxing?", ["The automatic conversion of a primitive to its corresponding Wrapper object", "Converting an object to a primitive", "A compiler error", "None"]),
+  Quiz(690, "What is Unboxing?", ["The automatic conversion of a Wrapper object to its corresponding primitive", "Converting a primitive to an object", "None", "None"]),
+  Quiz(691, "Does the Collection interface have a removeAll() method?", ["Yes", "No", "Only in the List interface", "None"]),
+  Quiz(692, "The Dictionary class is the parent of which class?", ["Hashtable", "HashMap", "TreeMap", "None"]),
+  Quiz(693, "Does the Set interface have a get(index) method?", ["No (Because Sets are not indexed)", "Yes", "It causes an error", "None"]),
+  Quiz(694, "What does the poll() method in the Queue interface return?", ["The head of the queue and removes it (returns null if empty)", "An error", "Deletes only", "None"]),
+  Quiz(695, "What does remove() in a Queue do if the queue is empty?", ["Throws an Exception", "Returns null", "Returns 0", "None"]),
+  Quiz(696, "Is the Iterable interface the parent of the Collection interface?", ["Yes", "No", "Sometimes", "None"]),
+  Quiz(697, "Which method clears all data from a Collection?", ["clear()", "delete()", "reset()", "None"]),
+  Quiz(698, "What happens in a HashMap if a duplicate key is added?", ["The new value overwrites the old value", "An error occurs", "Both values are saved", "None"]),
+  Quiz(699, "Are Synchronized Collections faster than Non-synchronized ones?", ["No (They are slower due to locking overhead)", "Yes", "They are the same", "None"]),
+  Quiz(700, "What is a key feature of the Java Collections Framework?", ["Interoperability (allowing different APIs to share data)", "Security", "RAM management", "None"]),
 ];
-final List<Quiz> quizzes8 = [
+final List<Quiz> javaQuizM8 = [
   // --- Topic 75: Read File from Text ---
-  Quiz(701, "Java File I/O ယူႇၼႂ်း Package လႂ်?", [
-    "java.io",
-    "java.util",
-    "java.lang",
-    "java.net",
-  ]),
-  Quiz(702, "Class လႂ်ဢၼ်ၸႂ်ႉတႃႇလူတ်း (Read) Character-based files?", [
-    "FileReader",
-    "FileWriter",
-    "FileStream",
-    "FileInputStream",
-  ]),
-  Quiz(703, "BufferedReader ၸွႆႈသင်?", [
-    "လူတ်း Data ပဵၼ်ထႅဝ် (Read line by line) သေ ႁႂ်ႈမၼ်းဝႆး",
-    "တႅမ်ႈ file",
-    "Delete file",
-    "None",
-  ]),
-  Quiz(704, "Method လႂ်ၼႂ်း BufferedReader ဢၼ်ၸႂ်ႉလူတ်း Text ၼိုင်ႈထႅဝ်?", [
-    "readLine()",
-    "read()",
-    "getNextLine()",
-    "readText()",
-  ]),
-  Quiz(705, "InputStreamReader ၸွႆႈလႅၵ်ႈသင်?", [
-    "လႅၵ်ႈ Byte Stream ပဵၼ် Character Stream",
-    "လႅၵ်ႈ String ပဵၼ် int",
-    "လႅၵ်ႈ File ပဵၼ် Object",
-    "None",
-  ]),
-  Quiz(706, "File class ၼႂ်း Java ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇၸတ်းၵၢၼ် Metadata (ၸိုဝ်ႈ, တီႈယူႇ, လွင်ႈမီး/ဢမ်ႇမီး) ၶွင် File",
-    "တႃႇလူတ်း data ၼႂ်း file ၵမ်းလဵဝ်",
-    "တႃႇ compile code",
-    "None",
-  ]),
-  Quiz(707, "Method လႂ်ၸႂ်ႉ Check ဝႃႈ File ၼၼ်ႉမီးတႄႇႁႃႉ?", [
-    "exists()",
-    "isAvailable()",
-    "check()",
-    "hasFile()",
-  ]),
-  Quiz(708, "Scanner class လူတ်း File လႆႈႁႃႉ?", [
-    "လႆႈ (ၸႂ်ႉ new Scanner(file))",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈတႃႇ String ၵူၺ်း",
-    "None",
-  ]),
-  Quiz(709, "FileNotFoundException ပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈႁွင်ႉ File ဢၼ်ဢမ်ႇမီးယူႇတႄႇ",
-    "မိူဝ်ႈ File တဵမ်",
-    "မိူဝ်ႈ RAM ဢမ်ႇၵုမ်ႇ",
-    "None",
-  ]),
-  Quiz(710, "တႃႇပိၵ်ႉ (Close) File Stream ၸႂ်ႉ method လႂ်?", [
-    "close()",
-    "stop()",
-    "exit()",
-    "finish()",
-  ]),
+  Quiz(701, "Which package contains Java File I/O classes?", ["java.io", "java.util", "java.lang", "java.net"]),
+  Quiz(702, "Which class is used specifically for reading character-based files?", ["FileReader", "FileWriter", "FileStream", "FileInputStream"]),
+  Quiz(703, "What is the primary benefit of using BufferedReader?", ["It reads data line-by-line and uses buffering to increase efficiency", "It is used for writing files", "It deletes files", "None"]),
+  Quiz(704, "Which method in BufferedReader is used to read a full line of text?", ["readLine()", "read()", "getNextLine()", "readText()"]),
+  Quiz(705, "What does InputStreamReader bridge?", ["It converts Byte Streams to Character Streams", "It converts String to int", "It converts a File into an Object", "None"]),
+
+
+
+  Quiz(706, "What is the purpose of the File class in Java?", ["To manage file metadata (name, path, existence) rather than the content", "To read data inside the file directly", "To compile code", "None"]),
+  Quiz(707, "Which method is used to check if a file actually exists on the disk?", ["exists()", "isAvailable()", "check()", "hasFile()"]),
+  Quiz(708, "Can the Scanner class be used to read from a file?", ["Yes (by passing a File object to its constructor)", "No", "Only for Strings", "None"]),
+  Quiz(709, "When is a FileNotFoundException thrown?", ["When an attempt to access a non-existent file is made", "When a file is full", "When RAM is insufficient", "None"]),
+  Quiz(710, "Which method should be called to release system resources after using a file stream?", ["close()", "stop()", "exit()", "finish()"]),
 
   // --- Topic 76: Write File to Text ---
-  Quiz(711, "Class လႂ်ၸႂ်ႉတႃႇတႅမ်ႈ Character ၶဝ်ႈၼႂ်း File?", [
-    "FileWriter",
-    "FileReader",
-    "FileInputStream",
-    "FilePrinter",
-  ]),
-  Quiz(712, "BufferedWriter ၸွႆႈသင်?", [
-    "တႃႇ Buffer data သေ တႅမ်ႈၶဝ်ႈ File ႁူမ်ႈၵၼ် ႁႂ်ႈမၼ်းဝႆး",
-    "တႃႇလူတ်း file",
-    "တႃႇ delete file",
-    "None",
-  ]),
-  Quiz(713, "Method လႂ်ၸႂ်ႉတႃႇတႅမ်ႈ String ၶဝ်ႈၼႂ်း File?", [
-    "write()",
-    "print()",
-    "save()",
-    "insert()",
-  ]),
-  Quiz(714, "တႃႇလူင်းထႅဝ်မႂ်ႇ (New Line) ၼႂ်း BufferedWriter ၸႂ်ႉသင်?", [
-    "newLine()",
-    "next()",
-    "line()",
-    "\n ၵူၺ်း",
-  ]),
-  Quiz(
-    715,
-    "သင်တႅမ်ႈ File လူၺ်ႈဢမ်ႇသႂ်ႇ Append mode (true), Data ၵဝ်ႇတေပဵၼ်သင်?",
-    [
-      "Data ၵဝ်ႇတေထုၵ်ႇယႃႉ (Overwritten)",
-      "Data ၵဝ်ႇယັງမီးယူႇ",
-      "Error",
-      "None",
-    ],
-  ),
-  Quiz(716, "တႃႇသိုပ်ႇတႅမ်ႈ Data ၼိူဝ် File ၵဝ်ႇ (Append) လူဝ်ႇႁဵတ်းႁိုဝ်?", [
-    "new FileWriter('file.txt', true)",
-    "new FileWriter('file.txt')",
-    "ၸႂ်ႉ append() method",
-    "None",
-  ]),
-  Quiz(717, "Method 'flush()' ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇသူင်ႇ Data ဢၼ်ၵိုတ်းၼႂ်း Buffer ၵႂႃႇၸူး File ၵမ်းလဵဝ်",
-    "တႃႇပိၵ်ႉ file",
-    "တႃႇ delete buffer",
-    "None",
-  ]),
-  Quiz(718, "PrintWriter ပႅၵ်ႇၵၼ်တင်း FileWriter ၸိူင်ႉႁိုဝ်?", [
-    "PrintWriter မီး method ၸိူင်ႉၼင်ႇ print() လႄႈ println()",
-    "FileWriter ဝႆးသေ",
-    "မိူၼ်ၵၼ်",
-    "None",
-  ]),
-  Quiz(719, "FileOutputStream ၸႂ်ႉတႃႇတႅမ်ႈ Data သႅၼ်းလႂ်?", [
-    "Byte-based (Image, Video, etc.)",
-    "Character-based",
-    "Only String",
-    "None",
-  ]),
-  Quiz(720, "တႃႇသၢင်ႈ Directory (Folder) မႂ်ႇ ၸႂ်ႉ method လႂ်?", [
-    "mkdir()",
-    "createDir()",
-    "newFolder()",
-    "None",
-  ]),
+  Quiz(711, "Which class is used to write characters to a file?", ["FileWriter", "FileReader", "FileInputStream", "FilePrinter"]),
+  Quiz(712, "What is the main purpose of BufferedWriter?", ["To buffer output to minimize the number of write operations to the disk", "To read files", "To delete files", "None"]),
+  Quiz(713, "Which method is used to write a String into a file?", ["write()", "print()", "save()", "insert()"]),
+  Quiz(714, "How do you insert a platform-independent new line using BufferedWriter?", ["newLine()", "next()", "line()", "Using \n only"]),
+  Quiz(715, "By default, what happens to existing data if you write to a file without 'append' mode?", ["The existing data is overwritten", "The new data is added to the end", "A compiler error occurs", "None"]),
+  Quiz(716, "How do you enable 'Append mode' when creating a FileWriter?", ["new FileWriter('file.txt', true)", "new FileWriter('file.txt')", "Using the append() method", "None"]),
+  Quiz(717, "What does the 'flush()' method do?", ["It forces any buffered output bytes to be written to the destination immediately", "It closes the file", "It deletes the buffer", "None"]),
+  Quiz(718, "How does PrintWriter differ from FileWriter?", ["PrintWriter includes methods like print() and println() for easier formatting", "FileWriter is faster", "They are identical", "None"]),
+  Quiz(719, "What type of data is FileOutputStream primarily used for?", ["Byte-based data (Images, Videos, etc.)", "Character-based text", "Only Strings", "None"]),
+  Quiz(720, "Which method is used to create a new directory (folder)?", ["mkdir()", "createDir()", "newFolder()", "None"]),
 
   // --- Topic 77: Notepad Project Logic & General I/O ---
-  Quiz(721, "တႃႇသၢင်ႈ UI Notepad ၼႂ်း Java ၸႂ်ႉ Package လႂ်?", [
-    "javax.swing",
-    "java.io",
-    "java.util",
-    "java.sql",
-  ]),
-  Quiz(722, "Component လႂ်ဢၼ် Notepad ၸႂ်ႉတႃႇတႅမ်ႈလိၵ်ႈလၢႆလၢႆထႅဝ်?", [
-    "JTextArea",
-    "JTextField",
-    "JLabel",
-    "JButton",
-  ]),
-  Quiz(723, "JFileChooser ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇပိုၼ်တ်ႇ Dialog ႁႂ်ႈ User လိူၵ်ႈ Open/Save File",
-    "တႃႇတႅမ်ႈလိၵ်ႈ",
-    "တႃႇ edit text",
-    "None",
-  ]),
-  Quiz(724, "Serialization မၢႆထိုင်သင်?", [
-    "ၵၢၼ်လႅၵ်ႈ Object ႁႂ်ႈပဵၼ် Byte Stream တႃႇသိမ်းၼႂ်း File",
-    "ၵၢၼ်လူတ်း file",
-    "ၵၢၼ် delete object",
-    "None",
-  ]),
-  Quiz(725, "Deserialization မၢႆထိုင်သင်?", [
-    "ၵၢၼ်လႅၵ်ႈ Byte Stream ၶိုၼ်းပဵၼ် Object",
-    "ၵၢၼ်သိမ်း file",
-    "ၵၢၼ် compile",
-    "None",
-  ]),
-  Quiz(726, "တႃႇႁဵတ်း Serialization လူဝ်ႇ Implement Interface လႂ်?", [
-    "Serializable",
-    "Cloneable",
-    "Remote",
-    "None",
-  ]),
-  Quiz(727, "Keyword 'transient' ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇမၢႆဝႆႉဝႃႈ Variable ၼႆႉ ဢမ်ႇလူဝ်ႇႁဵတ်း Serialization",
-    "တႃႇသိမ်း file",
-    "တႃႇ static",
-    "None",
-  ]),
-  Quiz(728, "ObjectOutputStream ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇတႅမ်ႈ Object ၶဝ်ႈၼႂ်း File",
-    "တႃႇလူတ်း object",
-    "တႃႇတႅမ်ႈ String",
-    "None",
-  ]),
-  Quiz(729, "Externalizable Interface ပႅၵ်ႇၵၼ်တင်း Serializable ၸိူင်ႉႁိုဝ်?", [
-    "Externalizable ပၼ်ႁဝ်းၵုမ်းၵၢၼ် Serialization ႁင်းၵူၺ်း (Custom)",
-    "မိူၼ်ၵၼ်",
-    "Serializable ဝႆးသေ",
-    "None",
-  ]),
-  Quiz(730, "File.delete() ပၼ် Result ပဵၼ်သင်?", [
-    "boolean (true သင် delete ယဝ်ႉ)",
-    "void",
-    "String",
-    "int",
-  ]),
+  Quiz(721, "Which package is used to create the UI for a Notepad application in Java?", ["javax.swing", "java.io", "java.util", "java.sql"]),
+  Quiz(722, "Which Swing component is best for entering multiple lines of text in a Notepad app?", ["JTextArea", "JTextField", "JLabel", "JButton"]),
+  Quiz(723, "What is the purpose of JFileChooser?", ["To provide a GUI dialog for opening or saving files", "To write text", "To edit text fonts", "None"]),
+
+
+
+  Quiz(724, "What is Serialization?", ["The process of converting an object into a byte stream to save to a file", "The process of reading a text file", "The process of deleting an object", "None"]),
+  Quiz(725, "What is Deserialization?", ["The process of converting a byte stream back into an object", "The process of saving a file", "The process of compiling code", "None"]),
+  Quiz(726, "Which interface must a class implement to be serializable?", ["Serializable", "Cloneable", "Remote", "None"]),
+  Quiz(727, "What is the 'transient' keyword used for?", ["To indicate that a field should not be serialized", "To save a file to disk", "To make a variable static", "None"]),
+  Quiz(728, "Which class is used to write an object to a file?", ["ObjectOutputStream", "ObjectInputStream", "StringWriter", "None"]),
+  Quiz(729, "How does Externalizable differ from Serializable?", ["Externalizable gives the developer full control over the serialization process (custom)", "They are identical", "Serializable is always faster", "None"]),
+  Quiz(730, "What is the return type of File.delete()?", ["boolean (true if successful)", "void", "String", "int"]),
 
   // --- Mixed File I/O (731-750) ---
-  Quiz(731, "Path ၶွင် File မီးလၢႆသႅၼ်း?", [
-    "Absolute Path လႄႈ Relative Path",
-    "Only Absolute",
-    "Only Relative",
-    "None",
-  ]),
-  Quiz(732, "Absolute Path မၢႆထိုင်သင်?", [
-    "တႄႇလုၵ်ႉတီႈ Root (C:\...) တေႃႇပေႃးထိုင် File",
-    "တႄႇလုၵ်ႉတီႈ Folder ဢၼ်တိုၵ်ႉယူႇ",
-    "ၸိုဝ်ႈ file ၵူၺ်း",
-    "None",
-  ]),
-  Quiz(733, "canRead() လႄႈ canWrite() ပၼ်သင်?", [
-    "Check ဝႃႈ File ၼၼ်ႉ လူတ်း/တႅမ်ႈ လႆႈႁႃႉ",
-    "Delete file",
-    "Copy file",
-    "None",
-  ]),
-  Quiz(734, "File.length() ပၼ်သင်?", [
-    "တၢင်းယႂ်ႇ File (Size in Bytes)",
-    "တၢင်းယၢဝ်း String",
-    "တၢင်းၼမ်ထႅဝ်",
-    "None",
-  ]),
-  Quiz(735, "Standard I/O Stream ၶွင် System.out ပဵၼ်သင်?", [
-    "PrintStream",
-    "InputStream",
-    "Scanner",
-    "None",
-  ]),
-  Quiz(736, "System.in ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇႁပ်ႉ Input လုၵ်ႉတီႈ Keyboard",
-    "တႃႇ Print",
-    "တႃႇ Error",
-    "None",
-  ]),
-  Quiz(737, "System.err ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇၼႄၶေႃႈၵႂၢမ်း Error (Standard Error Stream)",
-    "တႃႇ Input",
-    "တႃႇ Output ธรรมดา",
-    "None",
-  ]),
-  Quiz(738, "RandomAccessFile ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇလူတ်း/တႅမ်ႈ File တီႈလႂ်ၵေႃႈလႆႈ (Random position)",
-    "တႃႇလူတ်းၸွမ်းထႅဝ်",
-    "တႃႇ delete",
-    "None",
-  ]),
-  Quiz(739, "File.list() ပၼ် Result ပဵၼ်သင်?", [
-    "String array (ၸိုဝ်ႈ File ၼႂ်း Directory)",
-    "File array",
-    "int",
-    "None",
-  ]),
-  Quiz(740, "တႃႇလႅၵ်ႈ File ၼိုင်ႈဢၼ် ၵႂႃႇပဵၼ်ၸိုဝ်ႈမႂ်ႇ ၸႂ်ႉသင်?", [
-    "renameTo(newFile)",
-    "changeName()",
-    "move()",
-    "None",
-  ]),
-  Quiz(741, "Character Streams ၸႂ်ႉ Memory လၢႆ bits တႃႇ 1 တူဝ်?", [
-    "16 bits (Unicode)",
-    "8 bits",
-    "32 bits",
-    "64 bits",
-  ]),
-  Quiz(742, "Byte Streams ၸႂ်ႉ Memory လၢႆ bits တႃႇ 1 တူဝ်?", [
-    "8 bits",
-    "16 bits",
-    "32 bits",
-    "None",
-  ]),
-  Quiz(743, "Class မႄႈၶွင် Byte Streams တင်းသဵင်ႈ?", [
-    "InputStream / OutputStream",
-    "Reader / Writer",
-    "File",
-    "None",
-  ]),
-  Quiz(744, "Class မႄႈၶွင် Character Streams တင်းသဵင်ႈ?", [
-    "Reader / Writer",
-    "InputStream / OutputStream",
-    "File",
-    "None",
-  ]),
-  Quiz(745, "Try-with-resources ၸွႆႈသင်ၼႂ်း File I/O?", [
-    "ပိၵ်ႉ Stream ပၼ်ဢလိုတ်း ဢမ်ႇလူဝ်ႇႁွင်ႉ close()",
-    "ႁႂ်ႈ file ဝႆး",
-    "Delete file",
-    "None",
-  ]),
-  Quiz(746, "Separator ၶွင် Path ၼႂ်း Windows ပဵၼ်သင်?", [
-    "\\ (Backslash)",
-    "/ (Forward slash)",
-    ":",
-    ";",
-  ]),
-  Quiz(747, "Separator ၶွင် Path ၼႂ်း Linux/Mac ပဵၼ်သင်?", [
-    "/ (Forward slash)",
-    "\\",
-    ":",
-    ";",
-  ]),
-  Quiz(748, "File.isHidden() ၸွႆႈသင်?", [
-    "Check ဝႃႈ File ၼၼ်ႉ ထုၵ်ႇသိပ်း (Hidden) ဝႆႉႁႃႉ",
-    "Delete file",
-    "Open file",
-    "None",
-  ]),
-  Quiz(749, "တႃႇ Check ဝႃႈ Path ၼၼ်ႉ ပဵၼ် Directory ႁႃႉ ပဵၼ် File ႁႃႉ?", [
-    "isDirectory() လႄႈ isFile()",
-    "check()",
-    "exists()",
-    "None",
-  ]),
-  Quiz(750, "Java NIO (New I/O) မီးၼႂ်း Java version လႂ်?", [
-    "Java 1.4 လႄႈ 7 (NIO.2)",
-    "Java 1.0",
-    "Java 8",
-    "Java 17",
-  ]),
+  Quiz(731, "What are the two main types of file paths?", ["Absolute Path and Relative Path", "Only Absolute", "Only Relative", "None"]),
+  Quiz(732, "What is an Absolute Path?", ["A path that starts from the root directory (e.g., C:\\...)", "A path relative to the current working directory", "Just the file name", "None"]),
+  Quiz(733, "What do the methods canRead() and canWrite() check?", ["The file's permissions for reading and writing", "If the file can be deleted", "If the file can be copied", "None"]),
+  Quiz(734, "What does File.length() return?", ["The size of the file in bytes", "The length of the string name", "The number of lines in the file", "None"]),
+  Quiz(735, "What is the standard output stream for System.out?", ["PrintStream", "InputStream", "Scanner", "None"]),
+  Quiz(736, "What is System.in used for?", ["To receive input from the keyboard (standard input)", "To print to console", "To show errors", "None"]),
+  Quiz(737, "What is System.err used for?", ["To display error messages (Standard Error Stream)", "For standard user input", "For standard text output", "None"]),
+  Quiz(738, "What is the unique feature of RandomAccessFile?", ["It allows reading and writing at any specific position within the file", "It only reads sequentially", "It is used for deleting files", "None"]),
+  Quiz(739, "What does File.list() return?", ["A String array containing the names of files in a directory", "An array of File objects", "An integer count", "None"]),
+  Quiz(740, "Which method is used to rename or move a file?", ["renameTo(newFile)", "changeName()", "move()", "None"]),
+  Quiz(741, "How many bits does a Character Stream use per character?", ["16 bits (Unicode support)", "8 bits", "32 bits", "64 bits"]),
+  Quiz(742, "How many bits does a Byte Stream use per unit of data?", ["8 bits", "16 bits", "32 bits", "None"]),
+  Quiz(743, "Which classes are the parents of all Byte-based streams?", ["InputStream / OutputStream", "Reader / Writer", "File", "None"]),
+  Quiz(744, "Which classes are the parents of all Character-based streams?", ["Reader / Writer", "InputStream / OutputStream", "File", "None"]),
+  Quiz(745, "How does Try-with-resources benefit File I/O?", ["It automatically closes streams, preventing resource leaks", "It makes files read faster", "It deletes temporary files", "None"]),
+  Quiz(746, "What is the path separator character for Windows?", ["\\ (Backslash)", "/ (Forward slash)", ":", ";"]),
+  Quiz(747, "What is the path separator character for Linux and Mac?", ["/ (Forward slash)", "\\", ":", ";"]),
+  Quiz(748, "What does File.isHidden() do?", ["Checks if the file is marked as hidden by the operating system", "Deletes the file", "Opens the file", "None"]),
+  Quiz(749, "How do you distinguish if a path is a directory or a regular file?", ["Using isDirectory() and isFile()", "Using check()", "Using exists()", "None"]),
+  Quiz(750, "When was Java NIO (New I/O) introduced?", ["Java 1.4 (and updated in Java 7 as NIO.2)", "Java 1.0", "Java 8", "Java 17"]),
 ];
-final List<List<Quiz>> allQuizzes = [
-  quizzes1,
-  quizzes2,
-  quizzes3,
-  quizzes4,
-  quizzes5,
-  quizzes6,
-  quizzes7,
-  quizzes8,
+final List<List<Quiz>> allJavaQuizzes = [
+  javaQuizM1,
+  javaQuizM2,
+  javaQuizM3,
+  javaQuizM4,
+  javaQuizM5,
+  javaQuizM6,
+  javaQuizM7,
+  javaQuizM8,
 ];
