@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_java_in_shan/screens/home_screen.dart';
+import 'package:learn_java_in_shan/screens/language_screen.dart';
 import 'package:learn_java_in_shan/utils/colors.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           primary: const Color(0xFF3E2723),
         ),
       ),
-      title: "Learn Java in Shan",
+      title: "Learn Programming in Shan",
       home: HomeScreen(),
     );
   }

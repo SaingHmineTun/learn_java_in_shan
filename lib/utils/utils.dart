@@ -1,4 +1,4 @@
-const Map<int, String> topics = {
+const Map<int, String> javaTopics = {
   1: "Introduction to Java Programming",
 
   2: "Array, Conditional and Looping",
@@ -17,7 +17,17 @@ const Map<int, String> topics = {
       "Working with File"
       "Module 8 Test",
 };
-const Map<int, Map<int, String>> modules = {
+const Map<int, String> pythonTopics = {
+  1: "Introduction to Python",
+  2: "Built-in Data Types",
+  3: "Python Operators",
+  4: "Statements",
+  5: "Functions",
+  6: "Modules, Classes and Objects",
+  7: "File input and output",
+  8: "Web Requests in Python",
+};
+const Map<int, Map<int, String>> javaModules = {
   1: {
     1: "Installing Java Development Kit",
     2: "Installing IntelliJ IDE",
@@ -116,8 +126,88 @@ const Map<int, Map<int, String>> modules = {
     81: "Notepad Project",
   },
 };
-
-final Map<int, Lesson> lessons = {
+const Map<int, Map<int, String>> pythonModules = {
+  1: {
+    1: "What is Python",
+    2: "Installing Python",
+    3: "Run Python on Terminal",
+    4: "Running python as a python program",
+    5: "Installing PyCharm Community Edition",
+    6: "Running Hello World with Pycharm",
+    7: "Python Comments",
+    8: "Variable in Python",
+  },
+  2: {
+    7: "Numeric",
+    8: "Boolean",
+    9: "Strings",
+    10: "Type Casting",
+    11: "None",
+    12: "List",
+    13: "Tuple",
+    14: "Dictionaries",
+    15: "Sets",
+  },
+  3: {
+    16: "Arithmetic",
+    17: "Assignment",
+    18: "Comparison",
+    19: "Logical",
+    20: "Identity",
+    21: "Membership",
+    22: "Operator precedence",
+  },
+  4: {
+    23: "If conditional statement",
+    24: "Match conditional statement",
+    25: "While loop statement",
+    26: "For loop statement",
+    27: "try: except: statement",
+    28: "Raise an exception",
+  },
+  5: {
+    29: "Create a functions",
+    30: "Calling a function",
+    31: "Function arguments",
+    32: "Returning values",
+    33: "User Input",
+    34: "Lambda",
+    35: "Scope",
+  },
+  6: {
+    36: "Create a module",
+    37: "Use a module",
+    38: "Variables in module",
+    39: "Renaming a module",
+    40: "from – import module",
+    41: "Create a class",
+    42: "Create objects from a class",
+    43: "The __init__() function",
+    44: "The __str__() function",
+    45: "Object methods",
+    46: "Inheritance",
+    47: "Polymorphism",
+    48: "Iterator",
+  },
+  7: {
+    49: "Read a file",
+    50: "Write to a file",
+    51: "Creating a new file",
+    52: "Delete a file or folder",
+  },
+  8: {53: "What is an api?", 54: "Installing and importing requests"},
+};
+final Map<int, Lesson> pythonLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(1, 5),
+  6: Lesson(1, 6),
+  7: Lesson(1, 7),
+  8: Lesson(1, 8),
+};
+final Map<int, Lesson> javaLessons = {
   1: Lesson(1, 1),
   2: Lesson(1, 2),
   3: Lesson(1, 3),

@@ -6,20 +6,26 @@ import 'package:learn_java_in_shan/utils/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LessonScreen extends StatelessWidget {
+  final String language;
   final Lesson lesson;
   late final int startIndex;
   late final int endIndex;
   late final int currentIndex;
+  late final moduleLessons;
 
-  LessonScreen({super.key, required this.lesson}) {
-    final moduleLessons = modules[lesson.moduleId];
+  LessonScreen({super.key, required this.language, required this.lesson}) {
+    if (language == "java") {
+      moduleLessons = javaModules[lesson.moduleId];
+    } else if (language == "python") {
+      moduleLessons = pythonModules[lesson.moduleId];
+    }
     startIndex = moduleLessons!.keys.first;
     endIndex = moduleLessons.keys.last;
     currentIndex = lesson.id;
   }
 
   Future<String> loadMarkdownData() async {
-    return await rootBundle.loadString('assets/lessons/lesson${lesson.id}.md');
+    return await rootBundle.loadString('assets/lessons/$language/lesson${lesson.id}.md');
   }
 
   void _launchExternalUrl(String url) async {
@@ -51,7 +57,7 @@ class LessonScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (ctx) => LessonScreen(lesson: lessons[currentIndex - 1]!)),
+                  MaterialPageRoute(builder: (ctx) => LessonScreen(language: language, lesson: javaLessons[currentIndex - 1]!)),
                 );
               },
               icon: const Icon(Icons.arrow_back_ios, size: 16, color: kJavaMocha),
@@ -65,7 +71,7 @@ class LessonScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (ctx) => LessonScreen(lesson: lessons[currentIndex + 1]!)),
+                  MaterialPageRoute(builder: (ctx) => LessonScreen(language: language, lesson: javaLessons[currentIndex + 1]!)),
                 );
               },
               icon: const Text("တၢင်းၼႃႈ", style: TextStyle(color: kJavaMocha, fontWeight: FontWeight.bold)),

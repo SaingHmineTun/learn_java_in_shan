@@ -6,15 +6,26 @@ import '../utils/utils.dart';
 
 class ModuleScreen extends StatelessWidget {
   final int moduleId;
-  final Map<int, String> moduleLessons;
+  final String language;
+  late final String title;
+  late final Map<int, String> moduleLessons;
 
-  ModuleScreen({super.key, required this.moduleId})
-    : moduleLessons = modules[moduleId] ?? {};
+  ModuleScreen({super.key, required this.language, required this.moduleId}) {
+    if (language == "java") {
+      moduleLessons = javaModules[moduleId] ?? {};
+      title = javaTopics[moduleId] ?? "";
+    } else if (language == "python") {
+      moduleLessons = pythonModules[moduleId] ?? {};
+      title = pythonTopics[moduleId] ?? "";
+    }
+    print(moduleLessons);
+
+  }
 
   void _gotoLesson(BuildContext context, Lesson lesson) {
     Navigator.of(
       context,
-    ).push(MaterialPageRoute(builder: (ctx) => LessonScreen(lesson: lesson)));
+    ).push(MaterialPageRoute(builder: (ctx) => LessonScreen(language: language, lesson: lesson)));
   }
 
   @override
@@ -41,7 +52,7 @@ class ModuleScreen extends StatelessWidget {
               ),
             ),
             child: Text(
-              topics[moduleId] ?? "",
+              title,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 20,
@@ -77,7 +88,7 @@ class ModuleScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     if (index < moduleLessons.length) {
                       int lessonId = moduleLessons.keys.elementAt(index);
-                      return _lessonCard(context, lessons[lessonId]);
+                      return _lessonCard(context, javaLessons[lessonId]);
                     } else {
                       return _quizCard(context);
                     }
