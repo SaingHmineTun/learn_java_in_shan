@@ -192,10 +192,10 @@ const Map<int, Map<int, String>> pythonModules = {
     52: "Method Polymorphism",
   },
   7: {
-    49: "Read a file",
-    50: "Write to a file",
-    51: "Creating a new file",
-    52: "Delete a file or folder",
+    53: "File Input/Output",
+    54: "Read a file",
+    55: "Create or Write to a file",
+    56: "Delete a file or folder",
   },
   8: {53: "What is an api?", 54: "Installing and importing requests"},
 };
@@ -252,6 +252,10 @@ final Map<int, Lesson> pythonLessons = {
   50: Lesson(6, 50),
   51: Lesson(6, 51),
   52: Lesson(6, 52),
+  53: Lesson(7, 53),
+  54: Lesson(7, 54),
+  55: Lesson(7, 55),
+  56: Lesson(7, 56),
 };
 final Map<int, Lesson> javaLessons = {
   1: Lesson(1, 1),
