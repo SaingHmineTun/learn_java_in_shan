@@ -148,7 +148,7 @@ const Map<int, Map<int, String>> pythonModules = {
     16: "Tuple Type",
     17: "Dictionary Type",
     18: "Set Type",
-    19: "Set Operations"
+    19: "Set Operations",
   },
   3: {
     20: "Python Operators",
@@ -158,7 +158,7 @@ const Map<int, Map<int, String>> pythonModules = {
     24: "Logical Operators",
     25: "Identity Operators",
     26: "Membership Operators",
-    27: "Operator Precedence"
+    27: "Operator Precedence",
   },
   4: {
     28: "If conditional statement",
@@ -197,7 +197,13 @@ const Map<int, Map<int, String>> pythonModules = {
     55: "Create or Write to a file",
     56: "Delete a file or folder",
   },
-  8: {53: "What is an api?", 54: "Installing and importing requests"},
+  8: {
+    57: "What is an api?",
+    58: "Installing and importing requests dependency",
+    59: "Getting a random joke",
+    60: "Understanding JSON",
+    61: "Joke and Cat Fact Generator",
+  },
 };
 final Map<int, Lesson> pythonLessons = {
   1: Lesson(1, 1),
@@ -256,6 +262,11 @@ final Map<int, Lesson> pythonLessons = {
   54: Lesson(7, 54),
   55: Lesson(7, 55),
   56: Lesson(7, 56),
+  57: Lesson(8, 57),
+  58: Lesson(8, 58),
+  59: Lesson(8, 59),
+  60: Lesson(8, 60),
+  61: Lesson(8, 61),
 };
 final Map<int, Lesson> javaLessons = {
   1: Lesson(1, 1),
