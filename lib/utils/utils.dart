@@ -161,12 +161,12 @@ const Map<int, Map<int, String>> pythonModules = {
     27: "Operator Precedence"
   },
   4: {
-    23: "If conditional statement",
-    24: "Match conditional statement",
-    25: "While loop statement",
-    26: "For loop statement",
-    27: "try: except: statement",
-    28: "Raise an exception",
+    28: "If conditional statement",
+    29: "Match conditional statement",
+    30: "While loop statement",
+    31: "For loop statement",
+    32: "try: except: statement",
+    33: "Raise an exception",
   },
   5: {
     29: "Create a functions",
@@ -228,6 +228,12 @@ final Map<int, Lesson> pythonLessons = {
   25: Lesson(3, 25),
   26: Lesson(3, 26),
   27: Lesson(3, 27),
+  28: Lesson(4, 28),
+  29: Lesson(4, 29),
+  30: Lesson(4, 30),
+  31: Lesson(4, 31),
+  32: Lesson(4, 32),
+  33: Lesson(4, 33),
 };
 final Map<int, Lesson> javaLessons = {
   1: Lesson(1, 1),
