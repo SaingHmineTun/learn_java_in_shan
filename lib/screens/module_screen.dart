@@ -11,21 +11,23 @@ class ModuleScreen extends StatelessWidget {
   late final Map<int, String> moduleLessons;
 
   ModuleScreen({super.key, required this.language, required this.moduleId}) {
-    if (language == "java") {
-      moduleLessons = javaModules[moduleId] ?? {};
-      title = javaTopics[moduleId] ?? "";
-    } else if (language == "python") {
-      moduleLessons = pythonModules[moduleId] ?? {};
-      title = pythonTopics[moduleId] ?? "";
-    }
-    print(moduleLessons);
-
+    // if (language == "java") {
+    //   moduleLessons = javaModules[moduleId] ?? {};
+    //   title = javaTopics[moduleId] ?? "";
+    // } else if (language == "python") {
+    //   moduleLessons = pythonModules[moduleId] ?? {};
+    //   title = pythonTopics[moduleId] ?? "";
+    // }
+    moduleLessons = modules[language]![moduleId] ?? {};
+    title = topics[language]![moduleId] ?? "";
   }
 
   void _gotoLesson(BuildContext context, Lesson lesson) {
-    Navigator.of(
-      context,
-    ).push(MaterialPageRoute(builder: (ctx) => LessonScreen(language: language, lesson: lesson)));
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => LessonScreen(language: language, lesson: lesson),
+      ),
+    );
   }
 
   @override
@@ -88,7 +90,7 @@ class ModuleScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     if (index < moduleLessons.length) {
                       int lessonId = moduleLessons.keys.elementAt(index);
-                      return _lessonCard(context, javaLessons[lessonId]);
+                      return _lessonCard(context, lessons[language]![lessonId]);
                     } else {
                       return _quizCard(context);
                     }

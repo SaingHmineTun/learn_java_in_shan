@@ -6,13 +6,11 @@ import '../utils/colors.dart';
 import 'about_screen.dart';
 
 class LanguageScreen extends StatelessWidget {
-  String language;
-  Map<int, String> topics;
+  final String language;
+  final Map<int, String> currentTopics;
 
   LanguageScreen({super.key, required this.language})
-    : topics = language == "java" ? javaTopics : pythonTopics {
-    print(topics);
-  }
+    : currentTopics = topics[language] ?? {};
 
   Widget _buildFinalTest(BuildContext context) {
     return InkWell(
@@ -123,7 +121,7 @@ class LanguageScreen extends StatelessWidget {
                     return GridView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: topics.length + 1,
+                      itemCount: currentTopics.length + 1,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: crossAxisCount,
                         crossAxisSpacing: 16,
@@ -131,9 +129,13 @@ class LanguageScreen extends StatelessWidget {
                         childAspectRatio: 1.0, // Keeps cards square
                       ),
                       itemBuilder: (context, index) {
-                        if (index < topics.length) {
-                          int id = topics.keys.elementAt(index);
-                          return _buildModuleCard(context, id, topics[id]!);
+                        if (index < currentTopics.length) {
+                          int id = currentTopics.keys.elementAt(index);
+                          return _buildModuleCard(
+                            context,
+                            id,
+                            currentTopics[id]!,
+                          );
                         } else {
                           return _buildFinalTest(context);
                         }
@@ -181,7 +183,11 @@ class LanguageScreen extends StatelessWidget {
                 color: kJavaLatte,
                 shape: BoxShape.circle,
               ),
-              child: const Icon(Icons.computer_rounded, color: kJavaMocha, size: 28),
+              child: const Icon(
+                Icons.computer_rounded,
+                color: kJavaMocha,
+                size: 28,
+              ),
             ),
             const SizedBox(height: 8),
             Text(

@@ -1,3 +1,4 @@
+// TOPIC SECTION (Module 1 - Introduction)
 const Map<int, String> javaTopics = {
   1: "Introduction to Java Programming",
 
@@ -27,6 +28,9 @@ const Map<int, String> pythonTopics = {
   7: "File input and output",
   8: "Web Requests in Python",
 };
+const Map<String, Map<int, String>> topics = {"java": javaTopics, "python": pythonTopics};
+
+// MODULE SECTION (Module 1: Lesson 1, Lesson 2)
 const Map<int, Map<int, String>> javaModules = {
   1: {
     1: "Installing Java Development Kit",
@@ -205,6 +209,12 @@ const Map<int, Map<int, String>> pythonModules = {
     61: "Joke and Cat Fact Generator",
   },
 };
+const Map<String, Map<int, Map<int, String>>> modules = {
+  "java": javaModules,
+  "python": pythonModules,
+};
+
+// LESSON SECTION (Lesson 1: Content)
 final Map<int, Lesson> pythonLessons = {
   1: Lesson(1, 1),
   2: Lesson(1, 2),
@@ -351,10 +361,21 @@ final Map<int, Lesson> javaLessons = {
   80: Lesson(8, 80),
   81: Lesson(8, 81),
 };
+final Map<String, Map<int, Lesson>> lessons = {
+  "python": pythonLessons,
+  "java": javaLessons,
+};
 
 class Lesson {
   final int moduleId;
   final int id;
 
   Lesson(this.moduleId, this.id);
+
+  @override
+  String toString() {
+    return 'Lesson{moduleId: $moduleId, id: $id}';
+  }
+
+
 }

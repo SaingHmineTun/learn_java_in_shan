@@ -15,16 +15,21 @@ class LessonScreen extends StatelessWidget {
   late final Map<int, Lesson> lessonList;
 
   LessonScreen({super.key, required this.language, required this.lesson}) {
-    if (language == "java") {
-      moduleLessons = javaModules[lesson.moduleId] ?? {};
-      lessonList = javaLessons;
-    } else if (language == "python") {
-      moduleLessons = pythonModules[lesson.moduleId] ?? {};
-      lessonList = pythonLessons;
-    }
+    // if (language == "java") {
+    //   moduleLessons = javaModules[lesson.moduleId] ?? {};
+    //   lessonList = javaLessons;
+    // } else if (language == "python") {
+    //   moduleLessons = pythonModules[lesson.moduleId] ?? {};
+    //   lessonList = pythonLessons;
+    // }
+    moduleLessons = modules[language]![lesson.moduleId] ?? {};
+    lessonList = lessons[language] ?? {};
     startIndex = moduleLessons.keys.first;
     endIndex = moduleLessons.keys.last;
     currentIndex = lesson.id;
+    print("Lesson: ${lesson.toString()}");
+    print("Module Lessons: ${moduleLessons.toString()}");
+    print("Start: $startIndex\nEnd: $endIndex\nCurrent: $currentIndex");
   }
 
   Future<String> loadMarkdownData() async {
