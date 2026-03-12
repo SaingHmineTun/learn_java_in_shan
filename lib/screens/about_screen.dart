@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:learn_java_in_shan/utils/colors.dart'; // Using your palette
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -14,7 +14,10 @@ class AboutScreen extends StatelessWidget {
   }
 
   Future<void> _sendEmail() async {
-    final Uri emailLaunchUri = Uri(scheme: 'mailto', path: 'tmk.muse@gmail.com');
+    final Uri emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: 'tmk.muse@gmail.com',
+    );
     await launchUrl(emailLaunchUri);
   }
 
@@ -24,7 +27,8 @@ class AboutScreen extends StatelessWidget {
       backgroundColor: Colors.white, // Clean background
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: kJavaMocha, // Deep Coffee
+        backgroundColor: kJavaMocha,
+        // Deep Coffee
         centerTitle: true,
         iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
@@ -58,7 +62,7 @@ class AboutScreen extends StatelessWidget {
                         color: Colors.black.withOpacity(0.1),
                         blurRadius: 20,
                         offset: const Offset(0, 10),
-                      )
+                      ),
                     ],
                   ),
                   child: Image.asset(
@@ -87,7 +91,10 @@ class AboutScreen extends StatelessWidget {
               child: Container(
                 constraints: const BoxConstraints(maxWidth: 600),
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 24,
+                  ),
                   child: Column(
                     children: [
                       _buildContactCard(
@@ -99,17 +106,22 @@ class AboutScreen extends StatelessWidget {
                       ),
                       _buildContactCard(
                         icon: FontAwesomeIcons.facebook,
-                        iconColor: const Color(0xFF1877F2), // Keep FB Blue for recognition
+                        iconColor: const Color(0xFF1877F2),
+                        // Keep FB Blue for recognition
                         label: "Facebook",
                         value: "ထုင်ႉမၢဝ်းၶမ်း",
-                        onTap: () => _launchUrl("https://www.facebook.com/100377671433172"),
+                        onTap: () => _launchUrl(
+                          "https://www.facebook.com/100377671433172",
+                        ),
                       ),
                       _buildContactCard(
                         icon: FontAwesomeIcons.github,
                         iconColor: kJavaEspresso,
                         label: "GitHub",
                         value: "Get Source Code",
-                        onTap: () => _launchUrl("https://github.com/SaingHmineTun/learn_java_in_shan"),
+                        onTap: () => _launchUrl(
+                          "https://github.com/SaingHmineTun/learn_java_in_shan",
+                        ),
                       ),
                       _buildContactCard(
                         icon: FontAwesomeIcons.earthAsia,
@@ -201,7 +213,11 @@ class AboutScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Icon(Icons.arrow_forward_ios, size: 14, color: kJavaLatte),
+                const Icon(
+                  Icons.arrow_forward_ios,
+                  size: 14,
+                  color: kJavaLatte,
+                ),
               ],
             ),
           ),
