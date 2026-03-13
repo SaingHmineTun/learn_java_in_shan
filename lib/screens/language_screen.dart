@@ -2,41 +2,94 @@ import 'package:flutter/material.dart';
 import 'package:learn_java_in_shan/screens/module_screen.dart';
 import 'package:learn_java_in_shan/screens/quiz_screen.dart';
 import 'package:learn_java_in_shan/utils/utils.dart';
-import '../utils/colors.dart';
-import 'about_screen.dart';
+import '../utils/colors.dart'; // Using the TMK Brand Colors
 
 class LanguageScreen extends StatelessWidget {
   final String language;
   final Map<int, String> currentTopics;
 
   LanguageScreen({super.key, required this.language})
-    : currentTopics = topics[language] ?? {};
+      : currentTopics = topics[language] ?? {};
 
+  // --- Final Test Card (Golden/Orange Theme) ---
   Widget _buildFinalTest(BuildContext context) {
     return InkWell(
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(20),
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (ctx) => QuizScreen(
               language: language,
-              moduleNumber: 0,
-            ), // 0 indicates Final Test
+              moduleNumber: 0, // 0 indicates Final Test
+            ),
           ),
         );
       },
       child: Container(
         decoration: BoxDecoration(
-          // Premium Dark Espresso Gradient
+          // Gradient from Orange to Dark for a "Premium" look
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [kJavaEspresso, kJavaMocha],
+            colors: [kBrandOrange, kBrandDark],
           ),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: kJavaGold.withOpacity(0.2),
+              color: kBrandOrange.withOpacity(0.3),
+              blurRadius: 12,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.emoji_events_rounded, color: kBrandGold, size: 42),
+            const SizedBox(height: 8),
+            const Text(
+              "Final Test",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Colors.white,
+                letterSpacing: 1.1,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              "All Modules Mix",
+              style: TextStyle(
+                fontSize: 12,
+                color: kBrandGold.withOpacity(0.9),
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // --- Module Card (Surface Dark Theme) ---
+  Widget _buildModuleCard(BuildContext context, int id, String content) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (ctx) => ModuleScreen(language: language, moduleId: id),
+          ),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: kBrandSurface,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: kBrandBlue.withOpacity(0.2), width: 1.5),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -45,23 +98,41 @@ class LanguageScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.stars_rounded, color: kJavaGold, size: 40),
-            const SizedBox(height: 8),
-            const Text(
-              "Final Test",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-                color: Colors.white,
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: kBrandBlue.withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.menu_book_rounded,
+                color: kBrandBlue,
+                size: 30,
               ),
             ),
-            const SizedBox(height: 4),
+            const SizedBox(height: 12),
             Text(
-              "All Modules Mix",
-              style: TextStyle(
-                fontSize: 12,
-                color: kJavaGold.withOpacity(0.8),
-                fontWeight: FontWeight.w500,
+              "Module $id",
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+                color: kBrandGold,
+                letterSpacing: 1.2,
+              ),
+            ),
+            const SizedBox(height: 6),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12.0),
+              child: Text(
+                content,
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 11,
+                  color: kBrandWhite,
+                  height: 1.3,
+                ),
               ),
             ),
           ],
@@ -72,52 +143,44 @@ class LanguageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Use LayoutBuilder to decide how many columns to show
     return Scaffold(
-      backgroundColor: const Color(0xFFFDFCFB),
+      backgroundColor: kBrandDark,
       appBar: AppBar(
-        backgroundColor: kJavaMocha,
-        foregroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        centerTitle: true,
+        iconTheme: const IconThemeData(color: kBrandWhite),
         title: Text(
-          'Learn ${language[0].toUpperCase() + language.substring(1)} in Shan',
+          'Learn ${language[0].toUpperCase() + language.substring(1)}',
+          style: const TextStyle(color: kBrandGold, fontWeight: FontWeight.bold),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.of(
-                context,
-              ).push(MaterialPageRoute(builder: (ctx) => const AboutScreen()));
-            },
-            icon: const Icon(Icons.info_outline),
-            tooltip: "လွင်ႈၽူႈၶူင်ႊသၢင်ႈ",
-          ),
-          const SizedBox(width: 8),
-        ],
       ),
       body: Center(
-        // This centers the entire column on wide screens
         child: Container(
-          // Limits the width on PC so it doesn't look stretched
           constraints: const BoxConstraints(maxWidth: 1000),
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+            padding: const EdgeInsets.all(24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 8.0, bottom: 16),
-                  child: Text(
-                    "လိူၵ်ႈၵၢၼ်ႁဵၼ်း / Modules",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: kJavaMocha,
+                // Section Title in Shan/English
+                Row(
+                  children: [
+                    Container(width: 4, height: 24, color: kBrandOrange),
+                    const SizedBox(width: 12),
+                    const Text(
+                      "လိူၵ်ႈၵၢၼ်ႁဵၼ်း / Modules",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: kBrandWhite,
+                      ),
                     ),
-                  ),
+                  ],
                 ),
+                const SizedBox(height: 24),
                 LayoutBuilder(
                   builder: (context, constraints) {
-                    // Decide column count: Phone = 2, Tablet/PC = 4 max
                     int crossAxisCount = constraints.maxWidth < 600 ? 2 : 4;
 
                     return GridView.builder(
@@ -126,9 +189,9 @@ class LanguageScreen extends StatelessWidget {
                       itemCount: currentTopics.length + 1,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: crossAxisCount,
-                        crossAxisSpacing: 16,
-                        mainAxisSpacing: 16,
-                        childAspectRatio: 1.0, // Keeps cards square
+                        crossAxisSpacing: 20,
+                        mainAxisSpacing: 20,
+                        childAspectRatio: 0.9,
                       ),
                       itemBuilder: (context, index) {
                         if (index < currentTopics.length) {
@@ -148,74 +211,6 @@ class LanguageScreen extends StatelessWidget {
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildModuleCard(BuildContext context, int id, String content) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(16),
-      onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (ctx) => ModuleScreen(language: language, moduleId: id),
-          ),
-        );
-      },
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: kJavaLatte, width: 1),
-          boxShadow: [
-            BoxShadow(
-              color: kJavaMocha.withOpacity(0.08),
-              blurRadius: 12,
-              offset: const Offset(0, 5),
-            ),
-          ],
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              padding: const EdgeInsets.all(12),
-              decoration: const BoxDecoration(
-                color: kJavaLatte,
-                shape: BoxShape.circle,
-              ),
-              child: const Icon(
-                Icons.computer_rounded,
-                color: kJavaMocha,
-                size: 28,
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              "Module $id",
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-                color: kJavaGold,
-              ),
-            ),
-            const SizedBox(height: 4),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: Text(
-                content,
-                textAlign: TextAlign.center,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: kJavaEspresso,
-                  height: 1.2,
-                ),
-              ),
-            ),
-          ],
         ),
       ),
     );

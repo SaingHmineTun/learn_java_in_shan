@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:learn_java_in_shan/screens/result_screen.dart';
 import 'package:learn_java_in_shan/utils/quiz.dart';
-import '../utils/colors.dart';
+import '../utils/colors.dart'; // Brand Palette
 
 class QuizScreen extends StatefulWidget {
   final int moduleNumber;
@@ -23,13 +23,10 @@ class _QuizScreenState extends State<QuizScreen> {
   int currentQuizIndex = 0;
   late List<Quiz> sessionQuizzes;
 
-  // Logic Variables
   bool isAnswered = false;
   int? selectedIndex;
   late List<String> currentOptions;
   late String correctText;
-
-  // for recording user selection
   late List<String?> userResults;
 
   @override
@@ -37,23 +34,17 @@ class _QuizScreenState extends State<QuizScreen> {
     super.initState();
     List<Quiz> sourceList;
     if (widget.moduleNumber == 0) {
-      // FINAL TEST: Combine all module lists into one flat list
       sourceList = quizzes[widget.language]!
           .expand((module) => module)
           .toList();
-      totalQuizNumber = 20; // Let's make the final exam 20 questions
+      totalQuizNumber = 20;
     } else {
-      // REGULAR MODULE: Pick from the specific module
       sourceList = quizzes[widget.language]![widget.moduleNumber - 1];
       totalQuizNumber = 10;
     }
 
     userResults = List.filled(totalQuizNumber, null);
-
-    // Shuffle the source and take the required amount
-    sessionQuizzes = (List<Quiz>.from(
-      sourceList,
-    )..shuffle()).take(totalQuizNumber).toList();
+    sessionQuizzes = (List<Quiz>.from(sourceList)..shuffle()).take(totalQuizNumber).toList();
     _prepareQuestion();
   }
 
@@ -77,214 +68,170 @@ class _QuizScreenState extends State<QuizScreen> {
     Quiz currentQuiz = sessionQuizzes[currentQuizIndex];
 
     return Scaffold(
-      backgroundColor: kJavaLatte,
+      backgroundColor: kBrandDark,
       appBar: AppBar(
         centerTitle: true,
-        // Looks more balanced on desktop
         title: Text(
-          "${widget.language[0].toUpperCase() + widget.language.substring(1)} ${widget.moduleNumber == 0 ? "Final" : "Module ${widget.moduleNumber}"} Test",
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+          "${widget.language.toUpperCase()} ${widget.moduleNumber == 0 ? "Final" : "Module ${widget.moduleNumber}"}",
+          style: const TextStyle(fontWeight: FontWeight.bold, color: kBrandGold),
         ),
-        backgroundColor: kJavaEspresso,
-        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: Colors.transparent,
+        iconTheme: const IconThemeData(color: kBrandWhite),
         elevation: 0,
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [kJavaEspresso.withOpacity(0.05), kJavaLatte],
-          ),
-        ),
-        // --- Added Center to allow the ConstrainedBox to work ---
-        child: Center(
-          child: Container(
-            // --- This constrains the entire UI width to a max of 800px ---
-            constraints: const BoxConstraints(maxWidth: 800),
-            padding: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 16.0,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                // --- Progress Bar ---
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Brewing Question ${currentQuizIndex + 1}/$totalQuizNumber",
-                      style: const TextStyle(
-                        color: kJavaMocha,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const Icon(Icons.coffee, color: kJavaMocha, size: 20),
-                  ],
-                ),
-                const SizedBox(height: 8),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: LinearProgressIndicator(
-                    value: (currentQuizIndex + 1) / totalQuizNumber,
-                    backgroundColor: Colors.white.withOpacity(0.5),
-                    valueColor: const AlwaysStoppedAnimation<Color>(kJavaGold),
-                    minHeight: 8,
+      body: Center(
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 800),
+          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // --- TMK Progress Section ---
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Question ${currentQuizIndex + 1} of $totalQuizNumber",
+                    style: const TextStyle(color: kBrandBlue, fontWeight: FontWeight.bold),
                   ),
+                  const Icon(Icons.psychology_rounded, color: kBrandGold, size: 24),
+                ],
+              ),
+              const SizedBox(height: 12),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: LinearProgressIndicator(
+                  value: (currentQuizIndex + 1) / totalQuizNumber,
+                  backgroundColor: kBrandSurface,
+                  valueColor: const AlwaysStoppedAnimation<Color>(kBrandOrange),
+                  minHeight: 10,
                 ),
-                const SizedBox(height: 32),
+              ),
+              const SizedBox(height: 40),
 
-                // --- Question Section ---
-                Expanded(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Text(
-                          currentQuiz.question,
-                          style: const TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w800,
-                            color: kJavaEspresso,
-                            height: 1.4,
-                          ),
-                          textAlign: TextAlign.center,
+              // --- Question Section ---
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Text(
+                        currentQuiz.question,
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: kBrandWhite,
+                          height: 1.5,
                         ),
-                        const SizedBox(height: 32),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 40),
 
-                        // --- Options List ---
-                        ...List.generate(currentOptions.length, (index) {
-                          String optionText = currentOptions[index];
-                          bool isCorrect = optionText == correctText;
+                      // --- Options List ---
+                      ...List.generate(currentOptions.length, (index) {
+                        String optionText = currentOptions[index];
+                        bool isCorrect = optionText == correctText;
 
-                          return Padding(
-                            padding: const EdgeInsets.only(bottom: 16.0),
-                            child: InkWell(
-                              onTap: () => checkAnswer(index),
-                              borderRadius: BorderRadius.circular(16),
-                              child: AnimatedContainer(
-                                duration: const Duration(milliseconds: 300),
-                                padding: const EdgeInsets.all(18),
-                                decoration: BoxDecoration(
-                                  color: isAnswered
-                                      ? (isCorrect
-                                            ? Colors.green.shade100
-                                            : (selectedIndex == index
-                                                  ? Colors.red.shade100
-                                                  : Colors.white))
-                                      : Colors.white,
-                                  borderRadius: BorderRadius.circular(16),
-                                  border: Border.all(
-                                    color: isAnswered
-                                        ? (isCorrect
-                                              ? Colors.green
-                                              : (selectedIndex == index
-                                                    ? Colors.red
-                                                    : Colors.transparent))
-                                        : kJavaGold.withOpacity(0.5),
-                                    width: 2,
+                        // Color Logic for brand alignment
+                        Color cardColor = kBrandSurface;
+                        Color borderColor = kBrandBlue.withOpacity(0.2);
+
+                        if (isAnswered) {
+                          if (isCorrect) {
+                            cardColor = Colors.green.withOpacity(0.2);
+                            borderColor = Colors.green;
+                          } else if (selectedIndex == index) {
+                            cardColor = Colors.red.withOpacity(0.2);
+                            borderColor = Colors.red;
+                          }
+                        }
+
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 16.0),
+                          child: InkWell(
+                            onTap: () => checkAnswer(index),
+                            borderRadius: BorderRadius.circular(16),
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 250),
+                              padding: const EdgeInsets.all(20),
+                              decoration: BoxDecoration(
+                                color: cardColor,
+                                borderRadius: BorderRadius.circular(16),
+                                border: Border.all(color: borderColor, width: 2),
+                              ),
+                              child: Row(
+                                children: [
+                                  CircleAvatar(
+                                    backgroundColor: isAnswered && isCorrect ? Colors.green : kBrandDark,
+                                    radius: 16,
+                                    child: Text(
+                                      "${index + 1}",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          color: isAnswered && isCorrect ? Colors.white : kBrandGold
+                                      ),
+                                    ),
                                   ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.05),
-                                      blurRadius: 10,
-                                      offset: const Offset(0, 4),
+                                  const SizedBox(width: 15),
+                                  Expanded(
+                                    child: Text(
+                                      optionText,
+                                      style: const TextStyle(fontSize: 17, color: kBrandWhite),
                                     ),
-                                  ],
-                                ),
-                                child: Row(
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: isAnswered
-                                          ? (isCorrect
-                                                ? Colors.green
-                                                : (selectedIndex == index
-                                                      ? Colors.red
-                                                      : kJavaLatte))
-                                          : kJavaLatte,
-                                      radius: 14,
-                                      child: Text(
-                                        "${index + 1}",
-                                        style: const TextStyle(
-                                          fontSize: 12,
-                                          color: kJavaMocha,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(width: 15),
-                                    Expanded(
-                                      child: Text(
-                                        optionText,
-                                        style: const TextStyle(
-                                          fontSize: 17,
-                                          color: kJavaMocha,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
-                          );
-                        }),
-                      ],
+                          ),
+                        );
+                      }),
+                    ],
+                  ),
+                ),
+              ),
+
+              // --- Action Button ---
+              if (isAnswered)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: kBrandOrange,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(vertical: 18),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                      elevation: 8,
+                      shadowColor: kBrandOrange.withOpacity(0.4),
+                    ),
+                    onPressed: () {
+                      if (currentQuizIndex < totalQuizNumber - 1) {
+                        setState(() {
+                          currentQuizIndex++;
+                          isAnswered = false;
+                          selectedIndex = null;
+                          _prepareQuestion();
+                        });
+                      } else {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ResultScreen(
+                              language: widget.language,
+                              moduleNumber: widget.moduleNumber,
+                              sessionQuizzes: sessionQuizzes,
+                              userResults: userResults.cast<String>(),
+                            ),
+                          ),
+                        );
+                      }
+                    },
+                    child: Text(
+                      currentQuizIndex < totalQuizNumber - 1 ? "Next Question" : "View Final Results",
+                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
-
-                // --- Next Button ---
-                if (isAnswered)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 16.0),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: kJavaMocha,
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        elevation: 4,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          if (currentQuizIndex < totalQuizNumber - 1) {
-                            currentQuizIndex++;
-                            isAnswered = false;
-                            selectedIndex = null;
-                            _prepareQuestion();
-                          } else {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => ResultScreen(
-                                  language: widget.language,
-                                  moduleNumber: widget.moduleNumber,
-                                  sessionQuizzes: sessionQuizzes,
-                                  userResults: userResults.cast<String>(),
-                                ),
-                              ),
-                            );
-                          }
-                        });
-                      },
-                      child: Text(
-                        currentQuizIndex < totalQuizNumber - 1
-                            ? "Refill Next Question ☕"
-                            : "See your results ☕",
-                        style: const TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-              ],
-            ),
+            ],
           ),
         ),
       ),
