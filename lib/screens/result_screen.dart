@@ -277,7 +277,7 @@ class ResultScreen extends StatelessWidget {
                                 ),
                                 pw.SizedBox(height: 10),
                                 pw.Text(
-                                  "CHIEF INSTRUCTOR",
+                                  "COURSE INSTRUCTOR",
                                   style: pw.TextStyle(
                                     font: defaultFont,
                                     fontSize: 14,
