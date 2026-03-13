@@ -773,6 +773,13 @@ final Map<int, Lesson> htmlLessons = {
   29: Lesson(4, 29),
   30: Lesson(4, 30),
   31: Lesson(4, 31),
+  32: Lesson(5, 32),
+  33: Lesson(5, 33),
+  34: Lesson(5, 34),
+  35: Lesson(5, 35),
+  36: Lesson(5, 36),
+  37: Lesson(5, 37),
+  38: Lesson(5, 38),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
