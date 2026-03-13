@@ -1,1 +1,2 @@
-const languages = ["java", "python"];
+const languages = ["basic", "python", "java"];
+

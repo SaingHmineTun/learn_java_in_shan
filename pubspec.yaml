@@ -59,6 +59,7 @@ flutter:
   assets:
     - assets/lessons/java/
     - assets/lessons/python/
+    - assets/lessons/basic/
     - assets/images/
   #   - images/a_dot_ham.jpeg
   fonts:
