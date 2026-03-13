@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_java_in_shan/screens/module_screen.dart';
 import 'package:learn_java_in_shan/screens/quiz_screen.dart';
+import 'package:learn_java_in_shan/utils/language.dart';
 import 'package:learn_java_in_shan/utils/utils.dart';
 import '../utils/colors.dart'; // Using the TMK Brand Colors
 
@@ -151,7 +152,7 @@ class LanguageScreen extends StatelessWidget {
         centerTitle: true,
         iconTheme: const IconThemeData(color: kBrandWhite),
         title: Text(
-          'Learn ${language[0].toUpperCase() + language.substring(1)}',
+          'Learn ${fullName[language]}',
           style: const TextStyle(color: kBrandGold, fontWeight: FontWeight.bold),
         ),
       ),
