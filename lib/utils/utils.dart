@@ -45,7 +45,6 @@ const Map<int, String> htmlTopics = {
   5: "The Collector", // Data: Lists <ul>, <ol> and Tables <table>
   6: "The Input", // Interaction: Forms <form>, <input>, and Labels
   7: "The Publisher", // Deployment: GitHub & Vercel
-  8: "The Architect", // Integration: Connecting CSS, JS, and Frameworks
 };
 const Map<int, String> dartTopics = {
   1: "Introduction to Dart & Development Environment Setup",
@@ -383,16 +382,6 @@ const Map<int, Map<int, String>> htmlModules = {
     52: "Vercel: Connecting and Zero-Config Deploy",
     53: "Custom Domains: Naming Your Digital Library",
     54: "Performance Check: Optimizing Assets for Speed",
-  },
-  8: {
-    55: "The External Link: Inviting CSS to the Party",
-    56: "Selectors & IDs: Giving Names to Your Tags",
-    57: "The Script Tag: Where Logic Meets Layout",
-    58: "The DOM Tree: How Browsers Read Your Code",
-    59: "Mobile-First: The Viewport Meta Tag Secret",
-    60: "Social Previews: Crafting Open Graph Tags",
-    61: "Web Fonts: Ensuring Shan Script Renders Beautifully",
-    62: "The Final Checklist: Preparing for Your First User",
   },
 };
 const Map<int, Map<int, String>> dartModules = {
@@ -789,6 +778,13 @@ final Map<int, Lesson> htmlLessons = {
   45: Lesson(6, 45),
   46: Lesson(6, 46),
   47: Lesson(6, 47),
+  48: Lesson(7, 48),
+  49: Lesson(7, 49),
+  50: Lesson(7, 50),
+  51: Lesson(7, 51),
+  52: Lesson(7, 52),
+  53: Lesson(7, 53),
+  54: Lesson(7, 54),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
