@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:learn_java_in_shan/screens/home_screen.dart';
-import 'package:learn_java_in_shan/screens/language_screen.dart';
 import 'package:learn_java_in_shan/utils/colors.dart';
 
 void main() {

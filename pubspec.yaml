@@ -59,7 +59,7 @@ flutter:
   assets:
     - assets/lessons/java/
     - assets/lessons/python/
-    - assets/images/tmklogo.png
+    - assets/images/
   #   - images/a_dot_ham.jpeg
   fonts:
     - family: AJ05

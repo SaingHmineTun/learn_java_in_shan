@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
@@ -56,6 +57,7 @@ class ResultScreen extends StatelessWidget {
                     ? "Java Learner"
                     : nameController.text,
                 score,
+                "Learn ${language.toUpperCase()} in Shan",
               );
             },
             child: const Text(
@@ -68,103 +70,238 @@ class ResultScreen extends StatelessWidget {
     );
   }
 
-  Future<void> _printCertificate(String name, int score) async {
+
+  Future<void> _printCertificate(
+      String name,
+      int score,
+      String courseName,
+      ) async {
     final pdf = pw.Document();
     final date = DateTime.now().toString().split(' ')[0];
 
-    // 1. Load the Shan font from assets
     final shanFont = await fontFromAssetBundle('assets/fonts/aj03.ttf');
     final defaultFont = await fontFromAssetBundle('assets/fonts/aj06.ttf');
 
-    // 2. Load a Bold version if you want bold Shan text
-    // final shanFontBold = await fontFromAssetBundle('assets/fonts/NamKhoneWeb-Bold.ttf');
+    final imageBytes = await rootBundle.load('assets/images/tmklogo.png');
+    final logoImage = pw.MemoryImage(imageBytes.buffer.asUint8List());
 
     pdf.addPage(
       pw.Page(
         pageFormat: PdfPageFormat.a4.landscape,
+        margin: const pw.EdgeInsets.all(0), // Full bleed design
         build: (pw.Context context) {
-          return pw.FullPage(
-            ignoreMargins: true,
-            child: pw.Container(
-              margin: const pw.EdgeInsets.all(20),
-              decoration: pw.BoxDecoration(
-                border: pw.Border.all(
-                  color: PdfColor.fromInt(0xFF3E2723),
-                  width: 10,
-                ),
-              ),
-              child: pw.Container(
-                margin: const pw.EdgeInsets.all(5),
-                child: pw.Center(
-                  child: pw.Column(
-                    mainAxisAlignment: pw.MainAxisAlignment.center,
-                    children: [
-                      pw.Text(
-                        "CERTIFICATE OF COMPLETION",
-                        style: pw.TextStyle(
-                          fontSize: 34,
-                          font: defaultFont,
-                          fontWeight: pw.FontWeight.bold,
-                          color: PdfColor.fromInt(0xFF3C2A21),
-                        ),
+          return pw.Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: pw.BoxDecoration(
+              // Deep Navy/Charcoal background for a premium feel
+              color: PdfColor.fromInt(0xFF1A1A1B),
+            ),
+            child: pw.Stack(
+              children: [
+                // Decorative Corner Accent (Top Left)
+                pw.Positioned(
+                  top: 0,
+                  left: 0,
+                  child: pw.Container(
+                    width: 150,
+                    height: 150,
+                    decoration: pw.BoxDecoration(
+                      color: PdfColors.orange800,
+                      borderRadius: const pw.BorderRadius.only(
+                        bottomRight: pw.Radius.circular(150),
                       ),
-                      pw.SizedBox(height: 20),
-                      pw.Text(
-                        "This is to certify that",
-                        style: pw.TextStyle(fontSize: 18, font: defaultFont),
-                      ),
-                      pw.SizedBox(height: 15),
-                      pw.Text(
-                        name,
-                        style: pw.TextStyle(
-                          font: defaultFont,
-                          fontSize: 50,
-                          fontWeight: pw.FontWeight.bold,
-                          color: PdfColor.fromInt(0xFF634133),
-                        ),
-                      ),
-                      pw.SizedBox(height: 15),
-                      pw.Text(
-                        "has successfully completed the Learn ${language[0].toUpperCase() + language.substring(1)} in Shan course",
-                        style: pw.TextStyle(fontSize: 18, font: defaultFont),
-                      ),
-                      pw.SizedBox(height: 10),
-                      pw.Text(
-                        "with a score of $score / ${userResults.length}",
-                        style: pw.TextStyle(
-                          font: defaultFont,
-                          fontSize: 20,
-                          fontWeight: pw.FontWeight.bold,
-                        ),
-                      ),
-                      pw.SizedBox(height: 30),
-                      pw.Text(
-                        "Date: $date",
-                        style: pw.TextStyle(fontSize: 14, font: defaultFont),
-                      ),
-                      pw.SizedBox(height: 20),
-                      pw.Text(
-                        "ၽူႈပူင်သွၼ် - ၸၢႆးမၢဝ်း (ထုင်ႉမၢဝ်းၶမ်း)",
-                        style: pw.TextStyle(
-                          font: shanFont,
-                          fontSize: 14,
-                          color: PdfColors.brown,
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+
+                // Main Inner Border
+                pw.Padding(
+                  padding: const pw.EdgeInsets.all(20),
+                  child: pw.Container(
+                    decoration: pw.BoxDecoration(
+                      border: pw.Border.all(
+                        color: PdfColors.orange300,
+                        width: 2,
+                      ),
+                    ),
+                    padding: const pw.EdgeInsets.all(30),
+                    child: pw.Column(
+                      mainAxisAlignment: pw.MainAxisAlignment.center,
+                      children: [
+                        // 1. Large School Logo (Centered & Prominent)
+                        pw.Center(child: pw.Image(logoImage, width: 180)),
+
+                        pw.SizedBox(height: 20),
+
+                        // 2. Certificate Header
+                        pw.Text(
+                          "CERTIFICATE OF ACHIEVEMENT",
+                          style: pw.TextStyle(
+                            fontSize: 34,
+                            font: defaultFont,
+                            fontWeight: pw.FontWeight.bold,
+                            color: PdfColors.white,
+                            letterSpacing: 3,
+                          ),
+                        ),
+
+                        pw.SizedBox(height: 10),
+                        pw.Text(
+                          "THIS CERTIFICATE IS PROUDLY AWARDED TO",
+                          style: pw.TextStyle(
+                            fontSize: 12,
+                            font: defaultFont,
+                            color: PdfColors.orange200,
+                            letterSpacing: 2,
+                          ),
+                        ),
+
+                        // 3. Recipient Name in High Contrast
+                        pw.SizedBox(height: 15),
+                        pw.Text(
+                          name.toUpperCase(),
+                          style: pw.TextStyle(
+                            font: defaultFont,
+                            fontSize: 48,
+                            fontWeight: pw.FontWeight.bold,
+                            color: PdfColors.yellow400, // Matches logo text
+                          ),
+                        ),
+
+                        pw.Padding(
+                          padding: const pw.EdgeInsets.symmetric(
+                            horizontal: 140,
+                          ),
+                          child: pw.Divider(
+                            color: PdfColors.orange300,
+                            thickness: 1,
+                          ),
+                        ),
+
+                        pw.SizedBox(height: 15),
+
+                        // 4. Course Details
+                        pw.Text(
+                          "in recognition of their successful completion of",
+                          style: pw.TextStyle(
+                            fontSize: 14,
+                            font: defaultFont,
+                            color: PdfColors.white,
+                          ),
+                        ),
+                        pw.SizedBox(height: 5),
+                        pw.Text(
+                          courseName,
+                          style: pw.TextStyle(
+                            font: defaultFont,
+                            fontSize: 24,
+                            fontWeight: pw.FontWeight.bold,
+                            color: PdfColors
+                                .lightBlue300, // Matches logo river color
+                          ),
+                        ),
+
+                        pw.SizedBox(height: 5),
+                        pw.Text(
+                          "Final Assessment Score: $score / ${userResults.length}",
+                          style: pw.TextStyle(
+                            font: defaultFont,
+                            fontSize: 13,
+                            color: PdfColors.grey300,
+                          ),
+                        ),
+
+                        pw.Spacer(),
+
+                        // 5. Signatures and Date
+                        pw.Row(
+                          mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: pw.CrossAxisAlignment.end,
+                          children: [
+                            // Date
+                            pw.Column(
+                              children: [
+                                pw.Text(
+                                  date,
+                                  style: pw.TextStyle(
+                                    font: defaultFont,
+                                    fontSize: 18,
+                                    color: PdfColors.white,
+                                  ),
+                                ),
+                                pw.SizedBox(height: 5),
+                                pw.Container(
+                                  width: 140,
+                                  decoration: const pw.BoxDecoration(
+                                    border: pw.Border(
+                                      top: pw.BorderSide(
+                                        color: PdfColors.orange300,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                pw.SizedBox(height: 10),
+                                pw.Text(
+                                  "DATE ISSUED",
+                                  style: pw.TextStyle(
+                                    font: defaultFont,
+                                    fontSize: 14,
+                                    color: PdfColors.orange200,
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            // Signature
+                            pw.Column(
+                              children: [
+                                pw.Text(
+                                  "ၸၢႆးမၢဝ်း (ထုင်ႉမၢဝ်းၶမ်း)",
+                                  style: pw.TextStyle(
+                                    font: shanFont,
+                                    fontSize: 18,
+                                    color: PdfColors.yellow400,
+                                  ),
+                                ),
+                                pw.SizedBox(height: 5),
+                                pw.Container(
+                                  width: 200,
+                                  decoration: const pw.BoxDecoration(
+                                    border: pw.Border(
+                                      top: pw.BorderSide(
+                                        color: PdfColors.orange300,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                pw.SizedBox(height: 10),
+                                pw.Text(
+                                  "CHIEF INSTRUCTOR",
+                                  style: pw.TextStyle(
+                                    font: defaultFont,
+                                    fontSize: 14,
+                                    color: PdfColors.orange200,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           );
         },
       ),
     );
 
-    await Printing.layoutPdf(
-      onLayout: (PdfPageFormat format) async => pdf.save(),
-    );
+    await Printing.layoutPdf(onLayout: (format) async => pdf.save());
   }
+
 
   @override
   Widget build(BuildContext context) {
