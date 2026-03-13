@@ -8,12 +8,14 @@ import '../utils/quiz.dart';
 import 'quiz_screen.dart';
 
 class ResultScreen extends StatelessWidget {
+  final String language;
   final int moduleNumber;
   final List<Quiz> sessionQuizzes;
   final List<String> userResults;
 
   const ResultScreen({
     super.key,
+    required this.language,
     required this.moduleNumber,
     required this.sessionQuizzes,
     required this.userResults,
@@ -123,7 +125,7 @@ class ResultScreen extends StatelessWidget {
                       ),
                       pw.SizedBox(height: 15),
                       pw.Text(
-                        "has successfully completed the Learn Java in Shan course",
+                        "has successfully completed the Learn ${language[0].toUpperCase() + language.substring(1)} in Shan course",
                         style: pw.TextStyle(fontSize: 18, font: defaultFont),
                       ),
                       pw.SizedBox(height: 10),
@@ -349,8 +351,10 @@ class ResultScreen extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  QuizScreen(moduleNumber: moduleNumber),
+                              builder: (context) => QuizScreen(
+                                language: language,
+                                moduleNumber: moduleNumber,
+                              ),
                             ),
                           );
                         },

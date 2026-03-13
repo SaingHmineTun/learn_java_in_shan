@@ -18,8 +18,10 @@ class LanguageScreen extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (ctx) =>
-                QuizScreen(moduleNumber: 0), // 0 indicates Final Test
+            builder: (ctx) => QuizScreen(
+              language: language,
+              moduleNumber: 0,
+            ), // 0 indicates Final Test
           ),
         );
       },

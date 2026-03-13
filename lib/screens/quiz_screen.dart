@@ -6,8 +6,13 @@ import '../utils/colors.dart';
 
 class QuizScreen extends StatefulWidget {
   final int moduleNumber;
+  final String language;
 
-  QuizScreen({super.key, required this.moduleNumber});
+  const QuizScreen({
+    super.key,
+    required this.language,
+    required this.moduleNumber,
+  });
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -33,11 +38,13 @@ class _QuizScreenState extends State<QuizScreen> {
     List<Quiz> sourceList;
     if (widget.moduleNumber == 0) {
       // FINAL TEST: Combine all module lists into one flat list
-      sourceList = allJavaQuizzes.expand((module) => module).toList();
+      sourceList = quizzes[widget.language]!
+          .expand((module) => module)
+          .toList();
       totalQuizNumber = 20; // Let's make the final exam 20 questions
     } else {
       // REGULAR MODULE: Pick from the specific module
-      sourceList = allJavaQuizzes[widget.moduleNumber - 1];
+      sourceList = quizzes[widget.language]![widget.moduleNumber - 1];
       totalQuizNumber = 10;
     }
 
@@ -254,6 +261,7 @@ class _QuizScreenState extends State<QuizScreen> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => ResultScreen(
+                                  language: widget.language,
                                   moduleNumber: widget.moduleNumber,
                                   sessionQuizzes: sessionQuizzes,
                                   userResults: userResults.cast<String>(),

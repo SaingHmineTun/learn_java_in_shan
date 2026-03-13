@@ -124,7 +124,8 @@ class ModuleScreen extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (ctx) => QuizScreen(moduleNumber: moduleId),
+                builder: (ctx) =>
+                    QuizScreen(language: language, moduleNumber: moduleId),
               ),
             );
           },
