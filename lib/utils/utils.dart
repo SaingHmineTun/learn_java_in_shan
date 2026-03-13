@@ -37,10 +37,39 @@ const Map<int, String> basicTopics = {
   6: "The Connected World", // Networking, IP Addresses, and DNS
   7: "The AI Partner", // Using Gemini/ChatGPT/Copilot
 };
+const Map<int, String> htmlTopics = {
+  1: "The Skeleton", // Structure: <!DOCTYPE>, <html>, <head>, <body>
+  2: "The Semantics", // Meaning: <header>, <nav>, <main>, <section>, <footer>
+  3: "The Scribe", // Text: Typography, Headings, <p>, <strong>, <em>
+  4: "The Navigator", // Links: Hyperlinks <a> and Navigation Logic
+  5: "The Collector", // Data: Lists <ul>, <ol> and Tables <table>
+  6: "The Input", // Interaction: Forms <form>, <input>, and Labels
+  7: "The Publisher", // Deployment: GitHub & Vercel
+  8: "The Architect", // Integration: Connecting CSS, JS, and Frameworks
+};
+const Map<int, String> dartTopics = {
+  1: "Introduction to Dart & Development Environment Setup",
+  2: "Variables, Built-in Data Types, and Type Inference",
+  3: "Operators, Expressions, and String Interpolation",
+  4: "Control Flow: If-Else, Switch, and Loops (For, While)",
+  5: "Functions: Parameters, Return Types, and Lexical Scope",
+  6: "Collections: Lists, Sets, and Maps with Generics",
+  7: "OOP I: Classes, Objects, and Constructors",
+  8: "OOP II: Encapsulation, Getters, and Setters",
+  9: "OOP III: Inheritance, Abstract Classes, and Interfaces",
+  10: "OOP IV: Mixins, Extensions, and Enum Classes",
+  11: "Sound Null Safety: Nullable Types and Null-aware Operators",
+  12: "Error Handling: Exceptions, Try-Catch, and Custom Errors",
+  13: "Asynchronous Programming: Futures, Async, and Await",
+  14: "Reactive Programming: Streams and Sinks",
+  15: "Dart Packages, Libraries, and Project Architecture",
+};
 const Map<String, Map<int, String>> topics = {
   "java": javaTopics,
   "python": pythonTopics,
-  "basic": basicTopics
+  "basic": basicTopics,
+  "html": htmlTopics,
+  "dart": dartTopics
 };
 
 // MODULE SECTION (Module 1: Lesson 1, Lesson 2)
@@ -286,10 +315,225 @@ const Map<int, Map<int, String>> basicModules = {
     48: "The Future: Living with your AI Partner",
   },
 };
+const Map<int, Map<int, String>> htmlModules = {
+  1: {
+    1: "The Doctype: Declaring the Version",
+    2: "The HTML Tag: The Root and Lang Attributes",
+    3: "The Head: The Invisible Brain of the Page",
+    4: "The Meta Charset: Unlocking Shan Script (UTF-8)",
+    5: "The Title: Giving Your Book a Name",
+    6: "The Body: Where the Content Lives",
+    7: "Comments: Leaving Notes for the Scribe",
+    8: "The Meta Viewport: Making it Mobile-Ready",
+  },
+  2: {
+    9: "Semantic Layout: Using Header and Nav",
+    10: "Main and Section: Organizing Chapters",
+    11: "Articles: Independent Pieces of Content",
+    12: "Aside: Adding Marginalia and Notes",
+    13: "Footer: The Colophon and Copyright",
+    14: "The Div Tag: The Generic Container",
+    15: "The Span Tag: Targeting Small Text Segments",
+  },
+  3: {
+    16: "Hierarchy: H1 through H6",
+    17: "The Paragraph: Writing in Shan Blocks",
+    18: "Strong vs. Bold: Importance vs. Appearance",
+    19: "Em vs. Italic: Stress vs. Style",
+    20: "Underline and Strikethrough Tags",
+    21: "Line Breaks and Horizontal Rules",
+    22: "Preformatted Text and Code Snippets",
+    23: "Blockquotes: Citing External Wisdom",
+    24: "Superscript and Subscript",
+  },
+  4: {
+    25: "The Anchor Tag: Creating Hyperlinks",
+    26: "Relative vs. Absolute Paths (Linking Modules)",
+    27: "The Target Attribute: Control How Links Open",
+    28: "ID Attributes: Linking to Sections on One Page",
+    29: "The Download Attribute: Sharing Files",
+    30: "Email and Phone Links (mailto and tel)",
+    31: "Building a Navigation Menu in Pure HTML",
+  },
+  5: {
+    32: "The Image Tag: src, alt, and title",
+    33: "Image Sizing and Aspect Ratios",
+    34: "The Video Tag: Bringing the Page to Life",
+    35: "The Audio Tag: Adding Music and Voices",
+    36: "Figure and Figcaption: Labeling Media",
+    37: "The Picture Element: Responsive Image Sources",
+    38: "Embedding Iframes: Maps and External Content",
+  },
+  6: {
+    39: "Unordered Lists: Creating Bullet Points",
+    40: "Ordered Lists: Step-by-Step Instructions",
+    41: "Description Lists: Terms and Definitions",
+    42: "Tables: Rows, Headers, and Data Cells",
+    43: "Table Caption, Thread, Tbody, and Tfoot",
+    44: "Forms: Creating the Input Field",
+    45: "Labels, Fieldsets, and Legends",
+    46: "Input Types: Text, Password, and Email",
+    47: "The Textarea: For Long Shan Descriptions",
+  },
+  7: {
+    48: "W3C Validation: Checking for Broken Ink",
+    49: "The Favicon: Adding a Digital Seal to the Tab",
+    50: "SEO Basics: Meta Descriptions and Open Graph",
+    51: "GitHub: Uploading the Manuscript Folder",
+    52: "Vercel: Connecting and Zero-Config Deploy",
+    53: "Custom Domains: Naming Your Digital Library",
+    54: "Performance Check: Optimizing Assets for Speed",
+  },
+  8: {
+    55: "The External Link: Inviting CSS to the Party",
+    56: "Selectors & IDs: Giving Names to Your Tags",
+    57: "The Script Tag: Where Logic Meets Layout",
+    58: "The DOM Tree: How Browsers Read Your Code",
+    59: "Mobile-First: The Viewport Meta Tag Secret",
+    60: "Social Previews: Crafting Open Graph Tags",
+    61: "Web Fonts: Ensuring Shan Script Renders Beautifully",
+    62: "The Final Checklist: Preparing for Your First User",
+  },
+};
+const Map<int, Map<int, String>> dartModules = {
+  1: { // Intro & Setup
+    1: "What is Dart? (JIT vs AOT)",
+    2: "The Dart SDK & Runtime Environment",
+    3: "Setting up the IDE (VS Code / Android Studio)",
+    4: "Creating your first Console App",
+    5: "The main() function & Basic Syntax",
+    6: "Comments and Documentation Best Practices",
+  },
+  2: { // Variables & Types
+    7: "Variable Declaration: Type vs Name",
+    8: "Numbers: int and double",
+    9: "Strings and Booleans",
+    10: "Type Inference with 'var'",
+    11: "The 'dynamic' type: When to use it",
+    12: "Constants: final vs const",
+    13: "Type Conversion (Parsing & Casting)",
+  },
+  3: { // Operators & Expressions
+    14: "Arithmetic and Assignment Operators",
+    15: "Equality and Relational Operators",
+    16: "Logical Operators (&&, ||, !)",
+    17: "Type Test Operators (is, as)",
+    18: "String Interpolation & Multi-line Strings",
+    19: "Operator Precedence and Expressions",
+  },
+  4: { // Control Flow
+    20: "The If-Else Statement",
+    21: "Conditional Expressions (Ternary ? :)",
+    22: "Switch Statements & Patterns (Dart 3.0)",
+    23: "Standard For Loops",
+    24: "While and Do-While Loops",
+    25: "For-in and forEach Basics",
+    26: "Break and Continue",
+  },
+  5: { // Functions
+    27: "Defining and Calling Functions",
+    28: "Return Types and the void keyword",
+    29: "Positional Parameters (Required vs Optional)",
+    30: "Named Parameters and {required}",
+    31: "Default Parameter Values",
+    32: "Arrow Syntax (=>)",
+    33: "Lexical Scope and Variable Lifetime",
+    34: "Introduction to Anonymous Functions",
+  },
+  6: { // Collections
+    35: "Lists: Indexing and Growable Lists",
+    36: "Essential List Methods (add, remove, sort)",
+    37: "Sets: Unique Values and Set Math",
+    38: "Maps: Key-Value Pairs",
+    39: "Generics <T> for Type Safety",
+    40: "Spread Operators (...) and Collection If",
+    41: "Transforming Collections (map, where, toList)",
+  },
+  7: { // OOP I: Classes & Constructors
+    42: "Classes: Blueprints for Objects",
+    43: "Instance Variables and Fields",
+    44: "Methods and 'this' keyword",
+    45: "The Default Constructor",
+    46: "Parameterized and Named Constructors",
+    47: "Initializer Lists",
+    48: "Constant Constructors (Flutter Optimization)",
+    49: "Factory Constructors",
+  },
+  8: { // OOP II: Encapsulation
+    50: "Privacy with the Underscore (_)",
+    51: "Creating Getters for Controlled Reading",
+    52: "Creating Setters for Validation",
+    53: "Computed Properties",
+    54: "The 'late' keyword in Classes",
+    55: "Final vs Private Fields",
+  },
+  9: { // OOP III: Inheritance & Abstracts
+    56: "Inheritance: The 'extends' keyword",
+    57: "The 'super' keyword",
+    58: "Method Overriding and @override",
+    59: "Abstract Classes: Rules and Usage",
+    60: "Abstract Methods",
+    61: "Implementing Interfaces",
+    62: "Polymorphism in Action",
+  },
+  10: { // OOP IV: Mixins & Enums
+    63: "Mixins: Code Reuse with 'with'",
+    64: "Extension Methods on Existing Types",
+    65: "Basic Enums for State",
+    66: "Enhanced Enums with Fields (Dart 3.0)",
+    67: "Comparing Mixins vs Inheritance",
+  },
+  11: { // Null Safety
+    68: "The Principle of Null Safety",
+    69: "Nullable Types (?)",
+    70: "The Null-aware Operator (?.)",
+    71: "The If-Null Operator (??)",
+    72: "Null-aware Assignment (??=)",
+    73: "The Bang (!) Operator: When to avoid it",
+    74: "Type Promotion and Flow Analysis",
+  },
+  12: { // Error Handling
+    75: "Exceptions vs Errors",
+    76: "Try-Catch Blocks",
+    77: "Catching Specific Exceptions with 'on'",
+    78: "The Finally Clause",
+    79: "Throwing Exceptions Manually",
+    80: "Creating Custom Exception Classes",
+  },
+  13: { // Async Programming
+    81: "The Event Loop Concept",
+    82: "Futures: States and Results",
+    83: "Using .then() vs async/await",
+    84: "The 'await' keyword and pausing",
+    85: "Handling Async Errors with try-catch",
+    86: "Future.wait() for Parallel Tasks",
+    87: "Future.delayed() and Timeouts",
+  },
+  14: { // Reactive (Streams)
+    88: "What is a Stream?",
+    89: "Single Subscription vs Broadcast",
+    90: "The .listen() method and Subscriptions",
+    91: "StreamControllers and Sinks",
+    92: "Async Generators (async* and yield)",
+    93: "Transforming Streams (map/where)",
+    94: "Closing Streams and Memory Leaks",
+  },
+  15: { // Packages & Project
+    95: "The pubspec.yaml File",
+    96: "Importing Local and External Packages",
+    97: "Library Visibility and 'export'",
+    98: "Introduction to Unit Testing",
+    99: "Dart CLI: format and analyze",
+    100: "Capstone: Final Logic Integration",
+  },
+};
+
 const Map<String, Map<int, Map<int, String>>> modules = {
   "java": javaModules,
   "python": pythonModules,
   "basic": basicModules,
+  "dart": dartModules,
+  "html": htmlModules,
 };
 
 // LESSON SECTION (Lesson 1: Content)
@@ -489,10 +733,31 @@ final Map<int, Lesson> basicLessons = {
   47: Lesson(7, 47),
   48: Lesson(7, 48),
 };
+final Map<int, Lesson> dartLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(1, 5),
+  6: Lesson(1, 6),
+};
+final Map<int, Lesson> htmlLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(1, 5),
+  6: Lesson(1, 6),
+  7: Lesson(1, 7),
+  8: Lesson(1, 8),
+};
+
 final Map<String, Map<int, Lesson>> lessons = {
   "python": pythonLessons,
   "java": javaLessons,
   "basic": basicLessons,
+  "dart": dartLessons,
+  "html": htmlLessons,
 };
 
 class Lesson {

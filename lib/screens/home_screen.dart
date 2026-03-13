@@ -25,6 +25,16 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFF00E5FF), // Retro Cyan
           'icon': Icons.terminal_rounded, // Classic coding feel
         };
+      case 'dart':
+        return {
+          'color': const Color(0xFF00B0FF), // Dart Sky Blue
+          'icon': Icons.speed_rounded, // Dart is optimized for speed
+        };
+      case 'html':
+        return {
+          'color': const Color(0xFFE44D26), // HTML5 Deep Orange
+          'icon': Icons.html_rounded,
+        };
       default:
         return {
           'color': kBrandGold,

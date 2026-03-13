@@ -60,6 +60,8 @@ flutter:
     - assets/lessons/java/
     - assets/lessons/python/
     - assets/lessons/basic/
+    - assets/lessons/dart/
+    - assets/lessons/html/
     - assets/images/
   #   - images/a_dot_ham.jpeg
   fonts:
