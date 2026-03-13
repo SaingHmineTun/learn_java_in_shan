@@ -77,28 +77,32 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              "လိူၵ်ႈပၢႆးလိၵ်ႈဢၼ်တေသွၼ်",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 20),
-            Expanded(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 200,
-                  crossAxisSpacing: 15,
-                  mainAxisSpacing: 15,
-                  childAspectRatio: 0.85,
-                ),
-                itemCount: languages.length,
-                itemBuilder: (context, index) =>
-                    _buildLanguageCard(context, languages[index]),
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Center( // Wrap with Center
+                  child: SingleChildScrollView(
+                    child: Wrap(
+                      alignment: WrapAlignment.center, // Horizontal centering
+                      runAlignment: WrapAlignment.center, // Vertical centering
+                      spacing: 15,
+                      runSpacing: 15,
+                      children: languages.map((lang) => SizedBox(
+                        width: 180, // Approximate your maxCrossAxisExtent
+                        child: AspectRatio(
+                          aspectRatio: 0.85,
+                          child: _buildLanguageCard(context, lang),
+                        ),
+                      )).toList(),
+                    ),
+                  ),
+                )
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

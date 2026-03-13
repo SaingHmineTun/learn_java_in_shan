@@ -82,7 +82,7 @@ class _QuizScreenState extends State<QuizScreen> {
         centerTitle: true,
         // Looks more balanced on desktop
         title: Text(
-          "Java ${widget.moduleNumber == 0 ? "Final" : "Module ${widget.moduleNumber}"} Test",
+          "${widget.language[0].toUpperCase() + widget.language.substring(1)} ${widget.moduleNumber == 0 ? "Final" : "Module ${widget.moduleNumber}"} Test",
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
