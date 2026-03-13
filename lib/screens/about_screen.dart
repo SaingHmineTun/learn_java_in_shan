@@ -80,7 +80,7 @@ class AboutScreen extends StatelessWidget {
                   ),
                 ),
                 const Text(
-                  "TAI MAU KHON ACADEMY",
+                  "THUNG MAO KHAM ACADEMY",
                   style: TextStyle(
                     fontSize: 12,
                     color: kBrandGold,
@@ -121,7 +121,7 @@ class AboutScreen extends StatelessWidget {
                       _buildContactCard(
                         icon: FontAwesomeIcons.github,
                         iconColor: kBrandWhite,
-                        label: "OPEN SOURCE",
+                        label: "PROJECT REPOSITORY",
                         value: "Get GitHub Source Code",
                         onTap: () => _launchUrl(
                           "https://github.com/SaingHmineTun/learn_java_in_shan",
@@ -130,7 +130,7 @@ class AboutScreen extends StatelessWidget {
                       _buildContactCard(
                         icon: FontAwesomeIcons.earthAsia,
                         iconColor: kBrandBlue,
-                        label: "OFFICIAL WEBSITE",
+                        label: "DEVELOPER WEBSITE",
                         value: "www.saimao.top",
                         onTap: () => _launchUrl("https://www.saimao.top"),
                       ),
