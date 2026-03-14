@@ -15,7 +15,7 @@ const Map<int, String> javaTopics = {
   7: "Collections Framework",
 
   8:
-  "Working with File"
+      "Working with File"
       "Module 8 Test",
 };
 const Map<int, String> pythonTopics = {
@@ -61,7 +61,6 @@ const Map<int, String> dartTopics = {
   12: "Error Handling: Exceptions, Try-Catch, and Custom Errors",
   13: "Asynchronous Programming: Futures, Async, and Await",
   14: "Reactive Programming: Streams and Sinks",
-  15: "Dart Packages, Libraries, and Project Architecture",
 };
 const Map<String, Map<int, String>> topics = {
   "java": javaTopics,
@@ -475,14 +474,16 @@ const Map<int, Map<int, String>> dartModules = {
     62: "Implementing Interfaces",
     63: "Polymorphism in Action",
   },
-  10: { // OOP IV: Mixins & Enums
+  10: {
+    // OOP IV: Mixins & Enums
     64: "Mixins: Code Reuse with 'with'",
     65: "Extension Methods on Existing Types",
     66: "Basic Enums for State",
     67: "Enhanced Enums with Fields (Dart 3.0)",
     68: "Comparing Mixins vs Inheritance",
   },
-  11: { // Null Safety
+  11: {
+    // Null Safety
     69: "The Principle of Null Safety",
     70: "Nullable Types (?)",
     71: "The Null-aware Operator (?.)",
@@ -507,7 +508,15 @@ const Map<int, Map<int, String>> dartModules = {
     85: "Declaring Future-Returning Functions",
     86: "Future.wait() and Iterable Futures",
     87: "Handling Future Errors and Timeouts",
-  }
+  },
+  14: {
+    88: "Stream Theory: The Continuous Data Pipe",
+    89: "The StreamController: Managing the Flow",
+    90: "Listening to Streams: Subscription and Cancellation",
+    91: "Single vs Broadcast: One Listener vs Many",
+    92: "Stream Transformations: map, where, and expand",
+    93: "Async Generators: Using the 'yield' keyword",
+  },
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -803,6 +812,12 @@ final Map<int, Lesson> dartLessons = {
   85: Lesson(13, 85),
   86: Lesson(13, 86),
   87: Lesson(13, 87),
+  88: Lesson(14, 88),
+  89: Lesson(14, 89),
+  90: Lesson(14, 90),
+  91: Lesson(14, 91),
+  92: Lesson(14, 92),
+  93: Lesson(14, 93),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),
