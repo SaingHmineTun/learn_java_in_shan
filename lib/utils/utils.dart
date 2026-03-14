@@ -609,6 +609,15 @@ const Map<int, Map<int, String>> jsModules = {
     13: "Arrow Functions (ES6)",
     14: "Scope & Closures",
     15: "Higher-Order Functions"
+  },
+  4: {
+    16: "The this Keyword & Binding",
+    17: "Constructors & New Keyword",
+    18: "Prototypes & Inheritance",
+    19: "Modern ES6 Classes",
+    20: "Encapsulation & Private Fields",
+    21: "Inheritance & Polymorphism",
+    22: "Object Composition vs Inheritance"
   }
 };
 
@@ -1015,6 +1024,13 @@ final Map<int, Lesson> jsLessons = {
   13: Lesson(3, 13),
   14: Lesson(3, 14),
   15: Lesson(3, 15),
+  16: Lesson(4, 16),
+  17: Lesson(4, 17),
+  18: Lesson(4, 18),
+  19: Lesson(4, 19),
+  20: Lesson(4, 20),
+  21: Lesson(4, 21),
+  22: Lesson(4, 22),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
