@@ -551,6 +551,12 @@ const Map<int, Map<int, String>> cssModules = {
     11: "Color Theory & Systems", // Hex, RGB, HSL and choosing "Shan" palettes.
     12: "Backgrounds & Gradients", // Solid colors vs. smooth transitions.
   },
+  4: {
+    13: "Static vs. Relative", // Staying in the flow vs. slight nudges.
+    14: "Absolute & Fixed",    // Breaking free from the flow and "sticky" elements.
+    15: "Flexbox Basics",      // The Parent (Flex Container) and its children.
+    16: "Flex Alignment",      // Centering everything perfectly (The Holy Grail).
+  }
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -922,6 +928,10 @@ final Map<int, Lesson> cssLessons = {
   10: Lesson(3, 10),
   11: Lesson(3, 11),
   12: Lesson(3, 12),
+  13: Lesson(4, 13),
+  14: Lesson(4, 14),
+  15: Lesson(4, 15),
+  16: Lesson(4, 16),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
