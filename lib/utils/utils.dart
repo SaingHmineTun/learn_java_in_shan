@@ -607,7 +607,7 @@ const Map<int, Map<int, String>> jsModules = {
     12: "Parameters & Arguments",
     13: "Arrow Functions (ES6)",
     14: "Scope & Closures",
-    15: "Higher-Order Functions"
+    15: "Higher-Order Functions",
   },
   4: {
     16: "The this Keyword & Binding",
@@ -616,7 +616,7 @@ const Map<int, Map<int, String>> jsModules = {
     19: "Modern ES6 Classes",
     20: "Encapsulation & Private Fields",
     21: "Inheritance & Polymorphism",
-    22: "Object Composition vs Inheritance"
+    22: "Object Composition vs Inheritance",
   },
   5: {
     23: "Arrays & Arrays Methods",
@@ -627,8 +627,15 @@ const Map<int, Map<int, String>> jsModules = {
     28: "Maps",
     29: "Destructuring",
     30: "Spread & Rest Operator",
-    31: "JSON (JavaScrip Object Notation"
-
+    31: "JSON (JavaScrip Object Notation",
+  },
+  6: {
+    32: "Synchronous vs. Asynchronous",
+    33: "The Event Loop & Call Stack",
+    34: "Callbacks & Callback Hell",
+    35: "Promises: resolve, reject",
+    36: "Async / Await",
+    37: "Fetch API & JSON Handling",
   },
 };
 
@@ -1051,6 +1058,12 @@ final Map<int, Lesson> jsLessons = {
   29: Lesson(5, 29),
   30: Lesson(5, 30),
   31: Lesson(5, 31),
+  32: Lesson(6, 32),
+  33: Lesson(6, 33),
+  34: Lesson(6, 34),
+  35: Lesson(6, 35),
+  36: Lesson(6, 36),
+  37: Lesson(6, 37),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
