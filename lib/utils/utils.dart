@@ -475,13 +475,12 @@ const Map<int, Map<int, String>> dartModules = {
     62: "Implementing Interfaces",
     63: "Polymorphism in Action",
   },
-  10: {
-    // OOP IV: Mixins & Enums
-    63: "Mixins: Code Reuse with 'with'",
-    64: "Extension Methods on Existing Types",
-    65: "Basic Enums for State",
-    66: "Enhanced Enums with Fields (Dart 3.0)",
-    67: "Comparing Mixins vs Inheritance",
+  10: { // OOP IV: Mixins & Enums
+    64: "Mixins: Code Reuse with 'with'",
+    65: "Extension Methods on Existing Types",
+    66: "Basic Enums for State",
+    67: "Enhanced Enums with Fields (Dart 3.0)",
+    68: "Comparing Mixins vs Inheritance",
   },
   11: {
     // Null Safety
@@ -802,6 +801,11 @@ final Map<int, Lesson> dartLessons = {
   61: Lesson(9, 61),
   62: Lesson(9, 62),
   63: Lesson(9, 63),
+  64: Lesson(10, 64),
+  65: Lesson(10, 65),
+  66: Lesson(10, 66),
+  67: Lesson(10, 67),
+  68: Lesson(10, 68),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),
