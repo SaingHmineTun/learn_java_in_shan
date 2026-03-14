@@ -72,12 +72,11 @@ const Map<int, String> cssTopics = {
   7: "Animations & Effects",
 };
 const Map<int, String> jsTopics = {
-  1: "The Core (The DNA of JS)",
+  1: "Introduction",
   2: "Control & Logic",
-  3: "Functions (The Heart of JS)",
-  4: "Objects & Prototypes (OOP)",
-  5: "Asynchronous JavaScript (The Powerhouse)",
-  6: "Modern Tooling & Beyond",
+  3: "Functions",
+  4: "Objects & Prototypes",
+  5: "Data Mastery",
 };
 const Map<String, Map<int, String>> topics = {
   "java": javaTopics,
@@ -618,7 +617,19 @@ const Map<int, Map<int, String>> jsModules = {
     20: "Encapsulation & Private Fields",
     21: "Inheritance & Polymorphism",
     22: "Object Composition vs Inheritance"
-  }
+  },
+  5: {
+    23: "Arrays & Arrays Methods",
+    24: "Array Iteration Methods",
+    25: "Sorting & Reversing",
+    26: "Array Methods: map, filter, reduce",
+    27: "Sets",
+    28: "Maps",
+    29: "Destructuring",
+    30: "Spread & Rest Operator",
+    31: "JSON (JavaScrip Object Notation"
+
+  },
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -1031,6 +1042,15 @@ final Map<int, Lesson> jsLessons = {
   20: Lesson(4, 20),
   21: Lesson(4, 21),
   22: Lesson(4, 22),
+  23: Lesson(5, 23),
+  24: Lesson(5, 24),
+  25: Lesson(5, 25),
+  26: Lesson(5, 26),
+  27: Lesson(5, 27),
+  28: Lesson(5, 28),
+  29: Lesson(5, 29),
+  30: Lesson(5, 30),
+  31: Lesson(5, 31),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {

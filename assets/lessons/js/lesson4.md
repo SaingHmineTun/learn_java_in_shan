@@ -1,4 +1,4 @@
-# Lesson 1.4: Template Literals (လၢႆးတႅမ်ႈလိၵ်ႈ ES6)
+# Lesson 4: Template Literals (လၢႆးတႅမ်ႈလိၵ်ႈ ES6)
 
 **Template Literals** provide a modern way to work with Strings. Instead of using single quotes `' '` or double quotes `" "`, we use the **Backtick** symbol ( ``` ).
 
