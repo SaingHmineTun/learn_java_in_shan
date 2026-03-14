@@ -64,17 +64,12 @@ const Map<int, String> dartTopics = {
 };
 const Map<int, String> cssTopics = {
   1: "Foundations of Style",
-  // Selectors, Properties, and the three ways to link CSS.
   2: "The Box Model",
-  // Margin, Border, Padding, and the 'everything is a box' philosophy.
   3: "Shan Typography & Color",
-  // Mastering Shan Unicode fonts, line-heights, and color theory.
   4: "Positioning & Flexbox",
-  // Moving elements and modern alignment with Flexbox.
-  5: "Responsive Design",
-  // Media Queries and making sites look great on mobile devices.
-  6: "Effects & Final Project",
-  // Animations, shadows, and building a real Shan News Template.
+  5: "Grid Master",
+  6: "Responsive Design",
+  7: "Effects & Final Project",
 };
 const Map<String, Map<int, String>> topics = {
   "java": javaTopics,
@@ -540,10 +535,14 @@ const Map<int, Map<int, String>> cssModules = {
     4: "The Cascade", // Specificity and Inheritance logic.
   },
   2: {
-    5: "Box Model Core", // Content, Padding, Border, and Margin.
-    6: "Box Sizing", // Content-box vs. Border-box (The "Broken" vs. "Fixed" box).
-    7: "Display Property", // Block, Inline, and Inline-block behaviors.
-    8: "Units of Measurement", // Fixed (px) vs. Relative (em, rem, %) sizing.
+    5: "Box Model Core",
+    // Content, Padding, Border, and Margin.
+    6: "Box Sizing",
+    // Content-box vs. Border-box (The "Broken" vs. "Fixed" box).
+    7: "Display Property",
+    // Block, Inline, and Inline-block behaviors.
+    8: "Units of Measurement",
+    // Fixed (px) vs. Relative (em, rem, %) sizing.
   },
   3: {
     9: "Web Fonts for Shan", // Importing Unicode fonts (NamKhone, PangLong).
@@ -552,10 +551,20 @@ const Map<int, Map<int, String>> cssModules = {
     12: "Backgrounds & Gradients", // Solid colors vs. smooth transitions.
   },
   4: {
-    13: "Static vs. Relative", // Staying in the flow vs. slight nudges.
-    14: "Absolute & Fixed",    // Breaking free from the flow and "sticky" elements.
-    15: "Flexbox Basics",      // The Parent (Flex Container) and its children.
-    16: "Flex Alignment",      // Centering everything perfectly (The Holy Grail).
+    13: "Static vs. Relative",
+    // Staying in the flow vs. slight nudges.
+    14: "Absolute & Fixed",
+    // Breaking free from the flow and "sticky" elements.
+    15: "Flexbox Basics",
+    // The Parent (Flex Container) and its children.
+    16: "Flex Alignment",
+    // Centering everything perfectly (The Holy Grail).
+  },
+  5: {
+    17: "Grid Fundamentals",     // Defining the Grid (Rows & Columns).
+    18: "Fractional Units (fr)", // The magic unit for flexible layouts.
+    19: "Grid Areas",           // Naming areas like 'header', 'sidebar', 'footer'.
+    20: "Gap & Alignment",      // Managing spacing and item placement.
   }
 };
 
@@ -932,6 +941,10 @@ final Map<int, Lesson> cssLessons = {
   14: Lesson(4, 14),
   15: Lesson(4, 15),
   16: Lesson(4, 16),
+  17: Lesson(5, 17),
+  18: Lesson(5, 18),
+  19: Lesson(5, 19),
+  20: Lesson(5, 20),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
