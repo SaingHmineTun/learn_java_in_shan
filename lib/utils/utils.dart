@@ -538,6 +538,12 @@ const Map<int, Map<int, String>> cssModules = {
     2: "Linking Methods",    // Inline, Internal, and External Stylesheets.
     3: "Selectors & ID/Class", // Targeting elements with precision.
     4: "The Cascade",        // Specificity and Inheritance logic.
+  },
+  2: {
+    5: "Box Model Core",       // Content, Padding, Border, and Margin.
+    6: "Box Sizing",           // Content-box vs. Border-box (The "Broken" vs. "Fixed" box).
+    7: "Display Property",     // Block, Inline, and Inline-block behaviors.
+    8: "Units of Measurement", // Fixed (px) vs. Relative (em, rem, %) sizing.
   }
 };
 
@@ -902,6 +908,10 @@ final Map<int, Lesson> cssLessons = {
   2: Lesson(1, 2),
   3: Lesson(1, 3),
   4: Lesson(1, 4),
+  5: Lesson(2, 5),
+  6: Lesson(2, 6),
+  7: Lesson(2, 7),
+  8: Lesson(2, 8),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
