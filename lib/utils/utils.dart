@@ -431,13 +431,13 @@ const Map<int, Map<int, String>> dartModules = {
     35: "Higher-Order Functions"
   },
   6: { // Collections
-    35: "Lists: Indexing and Growable Lists",
-    36: "Essential List Methods (add, remove, sort)",
-    37: "Sets: Unique Values and Set Math",
-    38: "Maps: Key-Value Pairs",
-    39: "Generics <T> for Type Safety",
-    40: "Spread Operators (...) and Collection If",
-    41: "Transforming Collections (map, where, toList)",
+    36: "Lists: Indexing and Growable Lists",
+    37: "Essential List Methods (add, remove, sort)",
+    38: "Sets: Unique Values and Set Math",
+    39: "Maps: Key-Value Pairs",
+    40: "Generics <T> for Type Safety",
+    41: "Spread Operators (...) and Collection If",
+    42: "Transforming Collections (map, where, toList)",
   },
   7: { // OOP I: Classes & Constructors
     42: "Classes: Blueprints for Objects",
@@ -759,6 +759,13 @@ final Map<int, Lesson> dartLessons = {
   33: Lesson(5, 33),
   34: Lesson(5, 34),
   35: Lesson(5, 35),
+  36: Lesson(6, 36),
+  37: Lesson(6, 37),
+  38: Lesson(6, 38),
+  39: Lesson(6, 39),
+  40: Lesson(6, 40),
+  41: Lesson(6, 41),
+  42: Lesson(6, 42),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),
