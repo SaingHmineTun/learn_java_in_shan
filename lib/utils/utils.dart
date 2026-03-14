@@ -482,15 +482,13 @@ const Map<int, Map<int, String>> dartModules = {
     67: "Enhanced Enums with Fields (Dart 3.0)",
     68: "Comparing Mixins vs Inheritance",
   },
-  11: {
-    // Null Safety
-    68: "The Principle of Null Safety",
-    69: "Nullable Types (?)",
-    70: "The Null-aware Operator (?.)",
-    71: "The If-Null Operator (??)",
-    72: "Null-aware Assignment (??=)",
-    73: "The Bang (!) Operator: When to avoid it",
-    74: "Type Promotion and Flow Analysis",
+  11: { // Null Safety
+    69: "The Principle of Null Safety",
+    70: "Nullable Types (?)",
+    71: "The Null-aware Operator (?.)",
+    72: "The If-Null Operator (??)",
+    73: "Null-aware Assignment (??=)",
+    74: "The Bang (!) Operator: When to avoid it",
   },
   12: {
     // Error Handling
@@ -510,25 +508,6 @@ const Map<int, Map<int, String>> dartModules = {
     85: "Handling Async Errors with try-catch",
     86: "Future.wait() for Parallel Tasks",
     87: "Future.delayed() and Timeouts",
-  },
-  14: {
-    // Reactive (Streams)
-    88: "What is a Stream?",
-    89: "Single Subscription vs Broadcast",
-    90: "The .listen() method and Subscriptions",
-    91: "StreamControllers and Sinks",
-    92: "Async Generators (async* and yield)",
-    93: "Transforming Streams (map/where)",
-    94: "Closing Streams and Memory Leaks",
-  },
-  15: {
-    // Packages & Project
-    95: "The pubspec.yaml File",
-    96: "Importing Local and External Packages",
-    97: "Library Visibility and 'export'",
-    98: "Introduction to Unit Testing",
-    99: "Dart CLI: format and analyze",
-    100: "Capstone: Final Logic Integration",
   },
 };
 
@@ -806,6 +785,12 @@ final Map<int, Lesson> dartLessons = {
   66: Lesson(10, 66),
   67: Lesson(10, 67),
   68: Lesson(10, 68),
+  69: Lesson(11, 69),
+  70: Lesson(11, 70),
+  71: Lesson(11, 71),
+  72: Lesson(11, 72),
+  73: Lesson(11, 73),
+  74: Lesson(11, 74),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),
