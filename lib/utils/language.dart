@@ -1,4 +1,4 @@
-const languages = ["basic", "python", "java", "dart", "html", "css"];
+const languages = ["basic", "python", "java", "dart", "html", "css", "js"];
 const fullName = {
   "basic": "Computer Basic",
   "python": "Python in Shan",
@@ -6,4 +6,5 @@ const fullName = {
   "dart": "Dart in Shan",
   "html": "HTML in Shan",
   "css": "CSS in Shan",
+  "js": "Javascript in Shan"
 };

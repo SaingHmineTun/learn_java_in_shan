@@ -17,23 +17,36 @@ class HomeScreen extends StatelessWidget {
         };
       case 'python':
         return {
-          'color': const Color(0xFF4CAF50), // Python Green
-          'icon': Icons.auto_awesome_rounded, // AI/Modern feel
+          'color': const Color(0xFF4CAF50),
+          'icon': Icons.auto_awesome_rounded,
         };
       case 'basic':
         return {
-          'color': const Color(0xFF00E5FF), // Retro Cyan
-          'icon': Icons.terminal_rounded, // Classic coding feel
+          'color': const Color(0xFFAA00FF), // Retro Purple
+          'icon': Icons.terminal_rounded,
         };
       case 'dart':
         return {
-          'color': const Color(0xFF00B0FF), // Dart Sky Blue
-          'icon': Icons.speed_rounded, // Dart is optimized for speed
+          'color': const Color(0xFF00B0FF),
+          'icon': Icons.speed_rounded,
         };
       case 'html':
         return {
-          'color': const Color(0xFFE44D26), // HTML5 Deep Orange
+          'color': const Color(0xFFE44D26), // HTML5 Crimson
           'icon': Icons.html_rounded,
+        };
+    // --- NEW: CSS DESIGN ---
+      case 'css':
+        return {
+          'color': const Color(0xFF264DE4), // Official CSS Blue
+          'icon': Icons.style_rounded, // Represents styling
+        };
+    // --- NEW: JAVASCRIPT DESIGN ---
+      case 'js':
+      case 'javascript':
+        return {
+          'color': const Color(0xFFF7DF1E), // JavaScript Yellow
+          'icon': Icons.javascript_rounded, // Built-in JS icon
         };
       default:
         return {

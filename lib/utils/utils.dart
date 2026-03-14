@@ -85,6 +85,7 @@ const Map<String, Map<int, String>> topics = {
   "html": htmlTopics,
   "dart": dartTopics,
   "css": cssTopics,
+  "js": jsTopics
 };
 
 // MODULE SECTION (Module 1: Lesson 1, Lesson 2)
@@ -646,6 +647,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "dart": dartModules,
   "html": htmlModules,
   "css": cssModules,
+  "js": jsModules
 };
 
 // LESSON SECTION (Lesson 1: Content)
@@ -1073,6 +1075,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "dart": dartLessons,
   "html": htmlLessons,
   "css": cssLessons,
+  "js": jsLessons
 };
 
 class Lesson {
