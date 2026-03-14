@@ -69,7 +69,7 @@ const Map<int, String> cssTopics = {
   4: "Positioning & Flexbox",
   5: "Grid Master",
   6: "Responsive Design",
-  7: "Effects & Final Project",
+  7: "Animations & Effects",
 };
 const Map<String, Map<int, String>> topics = {
   "java": javaTopics,
@@ -561,11 +561,17 @@ const Map<int, Map<int, String>> cssModules = {
     // Centering everything perfectly (The Holy Grail).
   },
   5: {
-    17: "Grid Fundamentals",     // Defining the Grid (Rows & Columns).
+    17: "Grid Fundamentals", // Defining the Grid (Rows & Columns).
     18: "Fractional Units (fr)", // The magic unit for flexible layouts.
-    19: "Grid Areas",           // Naming areas like 'header', 'sidebar', 'footer'.
-    20: "Gap & Alignment",      // Managing spacing and item placement.
-  }
+    19: "Grid Areas", // Naming areas like 'header', 'sidebar', 'footer'.
+    20: "Gap & Alignment", // Managing spacing and item placement.
+  },
+  6: {
+    21: "The Viewport Meta Tag", // Telling the phone how to behave.
+    22: "Media Query Syntax", // The "If" statement of CSS.
+    23: "Mobile-First Design", // Building for the small screen first.
+    24: "Breakpoints & Strategy", // Deciding when the layout should change.
+  },
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -945,6 +951,10 @@ final Map<int, Lesson> cssLessons = {
   18: Lesson(5, 18),
   19: Lesson(5, 19),
   20: Lesson(5, 20),
+  21: Lesson(6, 21),
+  22: Lesson(6, 22),
+  23: Lesson(6, 23),
+  24: Lesson(6, 24),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
