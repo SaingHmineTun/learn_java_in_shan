@@ -450,12 +450,12 @@ const Map<int, Map<int, String>> dartModules = {
     50: "Factory Constructors",
   },
   8: { // OOP II: Encapsulation
-    50: "Privacy with the Underscore (_)",
-    51: "Creating Getters for Controlled Reading",
-    52: "Creating Setters for Validation",
-    53: "Computed Properties",
-    54: "The 'late' keyword in Classes",
-    55: "Final vs Private Fields",
+    51: "Privacy with the Underscore (_)",
+    52: "Creating Getters for Controlled Reading",
+    53: "Creating Setters for Validation",
+    54: "Computed Properties",
+    55: "The 'late' keyword in Classes",
+    56: "Final vs Private Fields",
   },
   9: { // OOP III: Inheritance & Abstracts
     56: "Inheritance: The 'extends' keyword",
@@ -774,6 +774,12 @@ final Map<int, Lesson> dartLessons = {
   48: Lesson(7, 48),
   49: Lesson(7, 49),
   50: Lesson(7, 50),
+  51: Lesson(8, 51),
+  52: Lesson(8, 52),
+  53: Lesson(8, 53),
+  54: Lesson(8, 54),
+  55: Lesson(8, 55),
+  56: Lesson(8, 56),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),
