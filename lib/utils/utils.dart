@@ -603,6 +603,13 @@ const Map<int, Map<int, String>> jsModules = {
     9: "Loops: for, while, and do...while",
     10: "Modern Looping: for...of and for...in",
   },
+  3: {
+    11: "Function Declarations & Expressions",
+    12: "Parameters & Arguments",
+    13: "Arrow Functions (ES6)",
+    14: "Scope & Closures",
+    15: "Higher-Order Functions"
+  }
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -1003,6 +1010,11 @@ final Map<int, Lesson> jsLessons = {
   8: Lesson(2, 8),
   9: Lesson(2, 9),
   10: Lesson(2, 10),
+  11: Lesson(3, 11),
+  12: Lesson(3, 12),
+  13: Lesson(3, 13),
+  14: Lesson(3, 14),
+  15: Lesson(3, 15),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
