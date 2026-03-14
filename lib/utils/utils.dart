@@ -534,17 +534,23 @@ const Map<int, Map<int, String>> dartModules = {
 };
 const Map<int, Map<int, String>> cssModules = {
   1: {
-    1: "CSS Anatomy",        // Selectors, Properties, and Values.
-    2: "Linking Methods",    // Inline, Internal, and External Stylesheets.
+    1: "CSS Anatomy", // Selectors, Properties, and Values.
+    2: "Linking Methods", // Inline, Internal, and External Stylesheets.
     3: "Selectors & ID/Class", // Targeting elements with precision.
-    4: "The Cascade",        // Specificity and Inheritance logic.
+    4: "The Cascade", // Specificity and Inheritance logic.
   },
   2: {
-    5: "Box Model Core",       // Content, Padding, Border, and Margin.
-    6: "Box Sizing",           // Content-box vs. Border-box (The "Broken" vs. "Fixed" box).
-    7: "Display Property",     // Block, Inline, and Inline-block behaviors.
+    5: "Box Model Core", // Content, Padding, Border, and Margin.
+    6: "Box Sizing", // Content-box vs. Border-box (The "Broken" vs. "Fixed" box).
+    7: "Display Property", // Block, Inline, and Inline-block behaviors.
     8: "Units of Measurement", // Fixed (px) vs. Relative (em, rem, %) sizing.
-  }
+  },
+  3: {
+    9: "Web Fonts for Shan", // Importing Unicode fonts (NamKhone, PangLong).
+    10: "Shan Text Styling", // Line-height, Letter-spacing, and Alignment.
+    11: "Color Theory & Systems", // Hex, RGB, HSL and choosing "Shan" palettes.
+    12: "Backgrounds & Gradients", // Solid colors vs. smooth transitions.
+  },
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -912,6 +918,10 @@ final Map<int, Lesson> cssLessons = {
   6: Lesson(2, 6),
   7: Lesson(2, 7),
   8: Lesson(2, 8),
+  9: Lesson(3, 9),
+  10: Lesson(3, 10),
+  11: Lesson(3, 11),
+  12: Lesson(3, 12),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
