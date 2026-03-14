@@ -58,45 +58,59 @@ class LessonScreen extends StatelessWidget {
               // Previous Button
               currentIndex > startIndex
                   ? TextButton.icon(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (ctx) => LessonScreen(
-                        language: language,
-                        lesson: lessonList[currentIndex - 1]!,
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (ctx) => LessonScreen(
+                              language: language,
+                              lesson: lessonList[currentIndex - 1]!,
+                            ),
+                          ),
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.arrow_back_ios_new,
+                        size: 16,
+                        color: kBrandOrange,
                       ),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.arrow_back_ios_new, size: 16, color: kBrandOrange),
-                label: const Text(
-                  "ဢွၼ်ၼႃႈ",
-                  style: TextStyle(color: kBrandWhite, fontWeight: FontWeight.bold),
-                ),
-              )
+                      label: const Text(
+                        "ဢွၼ်ၼႃႈ",
+                        style: TextStyle(
+                          color: kBrandWhite,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    )
                   : const SizedBox(width: 100),
 
               // Next Button
               currentIndex < endIndex
                   ? TextButton.icon(
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (ctx) => LessonScreen(
-                        language: language,
-                        lesson: lessonList[currentIndex + 1]!,
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (ctx) => LessonScreen(
+                              language: language,
+                              lesson: lessonList[currentIndex + 1]!,
+                            ),
+                          ),
+                        );
+                      },
+                      label: const Text(
+                        "တၢင်းၼႃႈ",
+                        style: TextStyle(
+                          color: kBrandWhite,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                  );
-                },
-                label: const Text(
-                  "တၢင်းၼႃႈ",
-                  style: TextStyle(color: kBrandWhite, fontWeight: FontWeight.bold),
-                ),
-                icon: const Icon(Icons.arrow_forward_ios, size: 16, color: kBrandOrange),
-              )
+                      icon: const Icon(
+                        Icons.arrow_forward_ios,
+                        size: 16,
+                        color: kBrandOrange,
+                      ),
+                    )
                   : const SizedBox(width: 100),
             ],
           ),
@@ -120,16 +134,34 @@ class LessonScreen extends StatelessWidget {
                   height: 1.7,
                   color: kBrandWhite, // Light text on dark background
                 ),
-                h1: const TextStyle(color: kBrandGold, fontWeight: FontWeight.bold, fontFamily: "AJ03", fontSize: 24),
-                h2: const TextStyle(color: kBrandGold, fontWeight: FontWeight.bold, fontFamily: "AJ03", fontSize: 22),
-                h3: const TextStyle(color: kBrandOrange, fontWeight: FontWeight.bold, fontFamily: "AJ03", fontSize: 20),
+                h1: const TextStyle(
+                  color: kBrandGold,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                  fontSize: 24,
+                ),
+                h2: const TextStyle(
+                  color: kBrandGold,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                  fontSize: 22,
+                ),
+                h3: const TextStyle(
+                  color: kBrandOrange,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "AJ03",
+                  fontSize: 20,
+                ),
 
                 // Code Block Styling (IDE Look)
                 codeblockPadding: const EdgeInsets.all(16),
                 codeblockDecoration: BoxDecoration(
                   color: const Color(0xFF0D0D0E), // Pure dark for code
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: kBrandBlue.withOpacity(0.3), width: 1),
+                  border: Border.all(
+                    color: kBrandBlue.withOpacity(0.3),
+                    width: 1,
+                  ),
                 ),
                 code: const TextStyle(
                   fontFamily: 'AJ06',
@@ -137,15 +169,46 @@ class LessonScreen extends StatelessWidget {
                   color: kBrandBlue, // Cyan/Blue for code text
                   backgroundColor: Colors.transparent,
                 ),
+                // / --- IMPROVED BLOCKQUOTE (the > text) ---
+                blockquotePadding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
+                ),
+                blockquoteDecoration: BoxDecoration(
+                  color: kBrandGold.withOpacity(0.05), // Subtle gold tint
+                  borderRadius: BorderRadius.circular(8),
+                  border: const Border(
+                    left: BorderSide(
+                      color: kBrandGold,
+                      width: 4,
+                    ), // Bold gold accent line
+                  ),
+                ),
+                blockquote: const TextStyle(
+                  color: kBrandGold,
+                  fontStyle: FontStyle.italic,
+                  fontSize: 14,
+                  height: 1.5,
+                ),
 
                 // Horizontal Rule
                 horizontalRuleDecoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: kBrandWhite.withOpacity(0.1), width: 1)),
+                  border: Border(
+                    bottom: BorderSide(
+                      color: kBrandWhite.withOpacity(0.1),
+                      width: 1,
+                    ),
+                  ),
                 ),
               ),
             );
           } else if (snapshot.hasError) {
-            return const Center(child: Text("Error loading lesson.", style: TextStyle(color: kBrandWhite)));
+            return const Center(
+              child: Text(
+                "Error loading lesson.",
+                style: TextStyle(color: kBrandWhite),
+              ),
+            );
           } else {
             return const Center(
               child: CircularProgressIndicator(color: kBrandOrange),
