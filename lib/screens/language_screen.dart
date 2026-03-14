@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:learn_java_in_shan/screens/module_screen.dart';
-import 'package:learn_java_in_shan/screens/quiz_screen.dart';
-import 'package:learn_java_in_shan/utils/language.dart';
-import 'package:learn_java_in_shan/utils/utils.dart';
+import 'package:tmkacademy/screens/module_screen.dart';
+import 'package:tmkacademy/screens/quiz_screen.dart';
+import 'package:tmkacademy/utils/language.dart';
+import 'package:tmkacademy/utils/utils.dart';
 import '../utils/colors.dart'; // Using the TMK Brand Colors
 
 class LanguageScreen extends StatelessWidget {

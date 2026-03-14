@@ -68,7 +68,7 @@ const Map<String, Map<int, String>> topics = {
   "python": pythonTopics,
   "basic": basicTopics,
   "html": htmlTopics,
-  "dart": dartTopics
+  "dart": dartTopics,
 };
 
 // MODULE SECTION (Module 1: Lesson 1, Lesson 2)
@@ -385,7 +385,8 @@ const Map<int, Map<int, String>> htmlModules = {
   },
 };
 const Map<int, Map<int, String>> dartModules = {
-  1: { // Intro & Setup
+  1: {
+    // Intro & Setup
     1: "What is Dart? (JIT vs AOT)",
     2: "The Dart SDK & Runtime Environment",
     3: "Setting up the IDE (VS Code / Android Studio)",
@@ -393,7 +394,8 @@ const Map<int, Map<int, String>> dartModules = {
     5: "The main() function & Basic Syntax",
     6: "Comments and Documentation Best Practices",
   },
-  2: { // Variables & Types
+  2: {
+    // Variables & Types
     7: "Variable Declaration: Type vs Name",
     8: "Numbers: int and double",
     9: "Strings and Booleans",
@@ -402,7 +404,8 @@ const Map<int, Map<int, String>> dartModules = {
     12: "Constants: final vs const",
     13: "Type Conversion (Parsing & Casting)",
   },
-  3: { // Operators & Expressions
+  3: {
+    // Operators & Expressions
     14: "Arithmetic and Assignment Operators",
     15: "Equality and Relational Operators",
     16: "Logical Operators (&&, ||, !)",
@@ -410,7 +413,8 @@ const Map<int, Map<int, String>> dartModules = {
     18: "String Interpolation & Multi-line Strings",
     19: "Operator Precedence and Expressions",
   },
-  4: { // Control Flow
+  4: {
+    // Control Flow
     20: "The If-Else Statement",
     21: "Conditional Expressions (Ternary ? :)",
     22: "Switch Statements & Patterns (Dart 3.0)",
@@ -419,7 +423,8 @@ const Map<int, Map<int, String>> dartModules = {
     25: "For-in and forEach Basics",
     26: "Break and Continue",
   },
-  5: { // Functions
+  5: {
+    // Functions
     27: "Defining and Calling Functions",
     28: "Return Types and the void keyword",
     29: "Positional Parameters (Required vs Optional)",
@@ -428,9 +433,10 @@ const Map<int, Map<int, String>> dartModules = {
     32: "Arrow Syntax (=>)",
     33: "Lexical Scope and Variable Lifetime",
     34: "Introduction to Anonymous Functions",
-    35: "Higher-Order Functions"
+    35: "Higher-Order Functions",
   },
-  6: { // Collections
+  6: {
+    // Collections
     36: "Lists: Indexing and Growable Lists",
     37: "Essential List Methods (add, remove, sort)",
     38: "Sets: Unique Values and Set Math",
@@ -439,7 +445,8 @@ const Map<int, Map<int, String>> dartModules = {
     41: "Spread Operators (...) and Collection If",
     42: "Transforming Collections (map, where, toList)",
   },
-  7: { // OOP I: Classes & Constructors
+  7: {
+    // OOP I: Classes & Constructors
     43: "Classes: Blueprints for Objects",
     44: "Instance Variables and Fields",
     45: "Methods and 'this' keyword",
@@ -449,7 +456,8 @@ const Map<int, Map<int, String>> dartModules = {
     49: "Constant Constructors (Flutter Optimization)",
     50: "Factory Constructors",
   },
-  8: { // OOP II: Encapsulation
+  8: {
+    // OOP II: Encapsulation
     51: "Privacy with the Underscore (_)",
     52: "Creating Getters for Controlled Reading",
     53: "Creating Setters for Validation",
@@ -457,23 +465,26 @@ const Map<int, Map<int, String>> dartModules = {
     55: "The 'late' keyword in Classes",
     56: "Final vs Private Fields",
   },
-  9: { // OOP III: Inheritance & Abstracts
-    56: "Inheritance: The 'extends' keyword",
-    57: "The 'super' keyword",
-    58: "Method Overriding and @override",
-    59: "Abstract Classes: Rules and Usage",
-    60: "Abstract Methods",
-    61: "Implementing Interfaces",
-    62: "Polymorphism in Action",
+  9: {
+    // OOP III: Inheritance & Abstracts
+    57: "Inheritance: The 'extends' keyword",
+    58: "The 'super' keyword",
+    59: "Method Overriding and @override",
+    60: "Abstract Classes: Rules and Usage",
+    61: "Abstract Methods",
+    62: "Implementing Interfaces",
+    63: "Polymorphism in Action",
   },
-  10: { // OOP IV: Mixins & Enums
+  10: {
+    // OOP IV: Mixins & Enums
     63: "Mixins: Code Reuse with 'with'",
     64: "Extension Methods on Existing Types",
     65: "Basic Enums for State",
     66: "Enhanced Enums with Fields (Dart 3.0)",
     67: "Comparing Mixins vs Inheritance",
   },
-  11: { // Null Safety
+  11: {
+    // Null Safety
     68: "The Principle of Null Safety",
     69: "Nullable Types (?)",
     70: "The Null-aware Operator (?.)",
@@ -482,7 +493,8 @@ const Map<int, Map<int, String>> dartModules = {
     73: "The Bang (!) Operator: When to avoid it",
     74: "Type Promotion and Flow Analysis",
   },
-  12: { // Error Handling
+  12: {
+    // Error Handling
     75: "Exceptions vs Errors",
     76: "Try-Catch Blocks",
     77: "Catching Specific Exceptions with 'on'",
@@ -490,7 +502,8 @@ const Map<int, Map<int, String>> dartModules = {
     79: "Throwing Exceptions Manually",
     80: "Creating Custom Exception Classes",
   },
-  13: { // Async Programming
+  13: {
+    // Async Programming
     81: "The Event Loop Concept",
     82: "Futures: States and Results",
     83: "Using .then() vs async/await",
@@ -499,7 +512,8 @@ const Map<int, Map<int, String>> dartModules = {
     86: "Future.wait() for Parallel Tasks",
     87: "Future.delayed() and Timeouts",
   },
-  14: { // Reactive (Streams)
+  14: {
+    // Reactive (Streams)
     88: "What is a Stream?",
     89: "Single Subscription vs Broadcast",
     90: "The .listen() method and Subscriptions",
@@ -508,7 +522,8 @@ const Map<int, Map<int, String>> dartModules = {
     93: "Transforming Streams (map/where)",
     94: "Closing Streams and Memory Leaks",
   },
-  15: { // Packages & Project
+  15: {
+    // Packages & Project
     95: "The pubspec.yaml File",
     96: "Importing Local and External Packages",
     97: "Library Visibility and 'export'",
@@ -780,6 +795,13 @@ final Map<int, Lesson> dartLessons = {
   54: Lesson(8, 54),
   55: Lesson(8, 55),
   56: Lesson(8, 56),
+  57: Lesson(9, 57),
+  58: Lesson(9, 58),
+  59: Lesson(9, 59),
+  60: Lesson(9, 60),
+  61: Lesson(9, 61),
+  62: Lesson(9, 62),
+  63: Lesson(9, 63),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),

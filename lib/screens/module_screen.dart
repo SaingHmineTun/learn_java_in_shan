@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:learn_java_in_shan/screens/lesson_screen.dart';
-import 'package:learn_java_in_shan/screens/quiz_screen.dart';
-import 'package:learn_java_in_shan/utils/colors.dart'; // Brand Colors
+import 'package:tmkacademy/screens/lesson_screen.dart';
+import 'package:tmkacademy/screens/quiz_screen.dart';
+import 'package:tmkacademy/utils/colors.dart'; // Brand Colors
 import '../utils/utils.dart';
 
 class ModuleScreen extends StatelessWidget {

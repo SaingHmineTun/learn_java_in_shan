@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:learn_java_in_shan/utils/colors.dart'; // Brand Palette
+import 'package:tmkacademy/utils/colors.dart'; // Brand Palette
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutScreen extends StatelessWidget {

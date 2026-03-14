@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_java_in_shan/screens/language_screen.dart';
-import 'package:learn_java_in_shan/utils/language.dart';
+import 'package:tmkacademy/screens/language_screen.dart';
+import 'package:tmkacademy/utils/language.dart';
 import '../utils/colors.dart';
 import 'about_screen.dart';
 

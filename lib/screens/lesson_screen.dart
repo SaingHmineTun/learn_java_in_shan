@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:learn_java_in_shan/utils/utils.dart';
-import 'package:learn_java_in_shan/utils/colors.dart'; // Brand Colors
+import 'package:tmkacademy/utils/utils.dart';
+import 'package:tmkacademy/utils/colors.dart'; // Brand Colors
 import 'package:url_launcher/url_launcher.dart';
 
 class LessonScreen extends StatelessWidget {

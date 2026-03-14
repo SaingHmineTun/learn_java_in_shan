@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:learn_java_in_shan/screens/result_screen.dart';
-import 'package:learn_java_in_shan/utils/quiz.dart';
+import 'package:tmkacademy/screens/result_screen.dart';
+import 'package:tmkacademy/utils/quiz.dart';
 import '../utils/colors.dart'; // Brand Palette
 
 class QuizScreen extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learn_java_in_shan/screens/home_screen.dart';
-import 'package:learn_java_in_shan/utils/colors.dart'; // Brand Palette
+import 'package:tmkacademy/screens/home_screen.dart';
+import 'package:tmkacademy/utils/colors.dart'; // Brand Palette
 
 void main() {
   runApp(const MyApp());
