@@ -71,13 +71,21 @@ const Map<int, String> cssTopics = {
   6: "Responsive Design",
   7: "Animations & Effects",
 };
+const Map<int, String> jsTopics = {
+  1: "The Core (The DNA of JS)",
+  2: "Control & Logic",
+  3: "Functions (The Heart of JS)",
+  4: "Objects & Prototypes (OOP)",
+  5: "Asynchronous JavaScript (The Powerhouse)",
+  6: "Modern Tooling & Beyond",
+};
 const Map<String, Map<int, String>> topics = {
   "java": javaTopics,
   "python": pythonTopics,
   "basic": basicTopics,
   "html": htmlTopics,
   "dart": dartTopics,
-  "css": cssTopics
+  "css": cssTopics,
 };
 
 // MODULE SECTION (Module 1: Lesson 1, Lesson 2)
@@ -574,11 +582,20 @@ const Map<int, Map<int, String>> cssModules = {
     24: "Breakpoints & Strategy", // Deciding when the layout should change.
   },
   7: {
-    25: "CSS Transitions",     // Smooth changes (hover effects).
+    25: "CSS Transitions", // Smooth changes (hover effects).
     26: "Transforms (2D & 3D)", // Rotating, Scaling, and Moving.
-    27: "Keyframe Animations",  // Creating custom loops and movements.
+    27: "Keyframe Animations", // Creating custom loops and movements.
     28: "Shadows & Glassmorphism", // Depth, blur, and modern visual flair.
-  }
+  },
+};
+const Map<int, Map<int, String>> jsModules = {
+  1: {
+    1: "How JS Runs",
+    2: "Variable & Scope",
+    3: "Data Types",
+    4: "Template Literals",
+    5: "Hoisting & The Temporal Dead Zone",
+  },
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -967,6 +984,12 @@ final Map<int, Lesson> cssLessons = {
   26: Lesson(7, 26),
   27: Lesson(7, 27),
   28: Lesson(7, 28),
+};
+final Map<int, Lesson> jsLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(2, 1),
+  3: Lesson(3, 1),
+  4: Lesson(4, 1),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
