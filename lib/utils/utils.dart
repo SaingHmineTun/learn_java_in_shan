@@ -594,7 +594,14 @@ const Map<int, Map<int, String>> jsModules = {
     2: "Variable & Scope",
     3: "Data Types",
     4: "Template Literals",
-    5: "Hoisting & The Temporal Dead Zone",
+  },
+  2: {
+    5: "Conditionals: if, else if, else",
+    6: "The Switch Statement",
+    7: "Logical Operators & Short-circuiting (&&, ||, !)",
+    8: "The Ternary Operator & Nullish Coalescing (??)",
+    9: "Loops: for, while, and do...while",
+    10: "Modern Looping: for...of and for...in",
   },
 };
 
@@ -987,9 +994,15 @@ final Map<int, Lesson> cssLessons = {
 };
 final Map<int, Lesson> jsLessons = {
   1: Lesson(1, 1),
-  2: Lesson(2, 1),
-  3: Lesson(3, 1),
-  4: Lesson(4, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(2, 5),
+  6: Lesson(2, 6),
+  7: Lesson(2, 7),
+  8: Lesson(2, 8),
+  9: Lesson(2, 9),
+  10: Lesson(2, 10),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
