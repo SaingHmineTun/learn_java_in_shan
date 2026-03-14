@@ -15,7 +15,7 @@ const Map<int, String> javaTopics = {
   7: "Collections Framework",
 
   8:
-      "Working with File"
+  "Working with File"
       "Module 8 Test",
 };
 const Map<int, String> pythonTopics = {
@@ -500,15 +500,14 @@ const Map<int, Map<int, String>> dartModules = {
     80: "Creating Custom Exception Classes",
   },
   13: {
-    // Async Programming
-    81: "The Event Loop Concept",
-    82: "Futures: States and Results",
-    83: "Using .then() vs async/await",
-    84: "The 'await' keyword and pausing",
-    85: "Handling Async Errors with try-catch",
-    86: "Future.wait() for Parallel Tasks",
-    87: "Future.delayed() and Timeouts",
-  },
+    81: "Event Loop and Single-Threaded Execution",
+    82: "Future States: Uncompleted vs Completed",
+    83: "The .then() Callback vs async/await",
+    84: "The await Mechanism and Function Suspension",
+    85: "Declaring Future-Returning Functions",
+    86: "Future.wait() and Iterable Futures",
+    87: "Handling Future Errors and Timeouts",
+  }
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -797,6 +796,13 @@ final Map<int, Lesson> dartLessons = {
   78: Lesson(12, 78),
   79: Lesson(12, 79),
   80: Lesson(12, 80),
+  81: Lesson(13, 81),
+  82: Lesson(13, 82),
+  83: Lesson(13, 83),
+  84: Lesson(13, 84),
+  85: Lesson(13, 85),
+  86: Lesson(13, 86),
+  87: Lesson(13, 87),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),
