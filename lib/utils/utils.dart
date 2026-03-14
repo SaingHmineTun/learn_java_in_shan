@@ -62,6 +62,20 @@ const Map<int, String> dartTopics = {
   13: "Asynchronous Programming: Futures, Async, and Await",
   14: "Reactive Programming: Streams and Sinks",
 };
+const Map<int, String> cssTopics = {
+  1: "Foundations of Style",
+  // Selectors, Properties, and the three ways to link CSS.
+  2: "The Box Model",
+  // Margin, Border, Padding, and the 'everything is a box' philosophy.
+  3: "Shan Typography & Color",
+  // Mastering Shan Unicode fonts, line-heights, and color theory.
+  4: "Positioning & Flexbox",
+  // Moving elements and modern alignment with Flexbox.
+  5: "Responsive Design",
+  // Media Queries and making sites look great on mobile devices.
+  6: "Effects & Final Project",
+  // Animations, shadows, and building a real Shan News Template.
+};
 const Map<String, Map<int, String>> topics = {
   "java": javaTopics,
   "python": pythonTopics,
@@ -518,6 +532,14 @@ const Map<int, Map<int, String>> dartModules = {
     93: "Async Generators: Using the 'yield' keyword",
   },
 };
+const Map<int, Map<int, String>> cssModules = {
+  1: {
+    1: "CSS Anatomy",        // Selectors, Properties, and Values.
+    2: "Linking Methods",    // Inline, Internal, and External Stylesheets.
+    3: "Selectors & ID/Class", // Targeting elements with precision.
+    4: "The Cascade",        // Specificity and Inheritance logic.
+  }
+};
 
 const Map<String, Map<int, Map<int, String>>> modules = {
   "java": javaModules,
@@ -874,6 +896,12 @@ final Map<int, Lesson> htmlLessons = {
   52: Lesson(7, 52),
   53: Lesson(7, 53),
   54: Lesson(7, 54),
+};
+final Map<int, Lesson> cssLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
