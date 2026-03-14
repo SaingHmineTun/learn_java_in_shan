@@ -77,6 +77,7 @@ const Map<String, Map<int, String>> topics = {
   "basic": basicTopics,
   "html": htmlTopics,
   "dart": dartTopics,
+  "css": cssTopics
 };
 
 // MODULE SECTION (Module 1: Lesson 1, Lesson 2)
@@ -572,6 +573,12 @@ const Map<int, Map<int, String>> cssModules = {
     23: "Mobile-First Design", // Building for the small screen first.
     24: "Breakpoints & Strategy", // Deciding when the layout should change.
   },
+  7: {
+    25: "CSS Transitions",     // Smooth changes (hover effects).
+    26: "Transforms (2D & 3D)", // Rotating, Scaling, and Moving.
+    27: "Keyframe Animations",  // Creating custom loops and movements.
+    28: "Shadows & Glassmorphism", // Depth, blur, and modern visual flair.
+  }
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -580,6 +587,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "basic": basicModules,
   "dart": dartModules,
   "html": htmlModules,
+  "css": cssModules,
 };
 
 // LESSON SECTION (Lesson 1: Content)
@@ -955,6 +963,10 @@ final Map<int, Lesson> cssLessons = {
   22: Lesson(6, 22),
   23: Lesson(6, 23),
   24: Lesson(6, 24),
+  25: Lesson(7, 25),
+  26: Lesson(7, 26),
+  27: Lesson(7, 27),
+  28: Lesson(7, 28),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -963,6 +975,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "basic": basicLessons,
   "dart": dartLessons,
   "html": htmlLessons,
+  "css": cssLessons,
 };
 
 class Lesson {
