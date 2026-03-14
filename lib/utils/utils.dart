@@ -428,6 +428,7 @@ const Map<int, Map<int, String>> dartModules = {
     32: "Arrow Syntax (=>)",
     33: "Lexical Scope and Variable Lifetime",
     34: "Introduction to Anonymous Functions",
+    35: "Higher-Order Functions"
   },
   6: { // Collections
     35: "Lists: Indexing and Growable Lists",
@@ -749,6 +750,15 @@ final Map<int, Lesson> dartLessons = {
   24: Lesson(4, 24),
   25: Lesson(4, 25),
   26: Lesson(4, 26),
+  27: Lesson(5, 27),
+  28: Lesson(5, 28),
+  29: Lesson(5, 29),
+  30: Lesson(5, 30),
+  31: Lesson(5, 31),
+  32: Lesson(5, 32),
+  33: Lesson(5, 33),
+  34: Lesson(5, 34),
+  35: Lesson(5, 35),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),
