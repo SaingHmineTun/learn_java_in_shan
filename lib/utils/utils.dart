@@ -742,6 +742,13 @@ final Map<int, Lesson> dartLessons = {
   17: Lesson(3, 17),
   18: Lesson(3, 18),
   19: Lesson(3, 19),
+  20: Lesson(4, 20),
+  21: Lesson(4, 21),
+  22: Lesson(4, 22),
+  23: Lesson(4, 23),
+  24: Lesson(4, 24),
+  25: Lesson(4, 25),
+  26: Lesson(4, 26),
 };
 final Map<int, Lesson> htmlLessons = {
   1: Lesson(1, 1),
