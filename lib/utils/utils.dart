@@ -1135,7 +1135,6 @@ final Map<int, Lesson> jsLessons = {
   51: Lesson(6, 51),
   52: Lesson(6, 52),
   53: Lesson(6, 53),
-  54: Lesson(6, 54),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
