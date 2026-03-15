@@ -1,75 +1,67 @@
-# Lesson 7: Logical Operators & Short-circuiting (&&, ||, !)
 
-**Logical Operators** ၸွႆႈႁႂ်ႈႁဝ်းဢဝ်သၢႆငၢႆလၢႆဢၼ် မႃး "မတ်ႉ" ၸွမ်းၵၼ် ပိူဝ်ႈတေတႅပ်းတတ်းၸႂ် ႁႂ်ႈမၼ်းသုပ်ႉသေႃႉလႆႈလိူဝ်ၵဝ်ႇ။
+# Lesson 07: Essential String Methods
 
-### 1. Logical Operators (တူဝ်မတ်ႉသၢႆငၢႆ)
+Methods ၵေႃႈပဵၼ် Function ဢၼ်ႁဵတ်းၵၢၼ်ပၼ် String ၼၼ်ႉၶႃႈ။ လွင်ႈလမ်ႇလွင်ႈဢၼ်လူဝ်ႇတွၼ်းဝႆႉတႄႉ **Strings are Immutable** (လႅၵ်ႈလၢႆႈဢမ်ႇလႆႈ)။ ပွင်ႇဝႃႈ Method တေဢမ်ႇၵႂႃႇမႄး String တူဝ်ၵဝ်ႇ၊ မၼ်းတေ **သၢင်ႈ String တူဝ်မႂ်ႇ** ဢၼ်မႄးယဝ်ႉၼၼ်ႉဢွၵ်ႇမႃးပၼ်ၶႃႈ။
 
-မၼ်းမီး 3 မဵဝ်းပၼ်ႇပၼ်ႇ ဢၼ်ႁဝ်းၸႂ်ႉၼမ်သုတ်း:
+### 1. ၵၢၼ်လႅၵ်ႈတူဝ်လိၵ်ႈ ယႂ်ႇ/ဢွၼ်ႇ
 
-| Operator      | Name | Shan Meaning                           | Example                   |
-|---------------| --- |----------------------------------------|---------------------------|
-| **`&&`**      | AND | လႄႈ (တေလႆႈမႅၼ်ႈ တင်းသွင်ၽၢႆႇ) | `if (isRich && isKind)`   |
-| **` \|\| `** | OR | ဢမ်ႇၼၼ် (မႅၼ်ႈၽၢႆႇလဵဝ်ၵေႃႈလႆႈ) | `if (isRich \|\| isKind)` |                              
-| **`!`**       | NOT | ဢမ်ႇၸႂ်ႈ (ပိၼ်ႇၵႃႈၶၼ်)                 | `if (!isRaining)`         |
-
-#### တူဝ်ယၢင်ႇ (Example):
+* **`.toUpperCase()`**: လႅၵ်ႈပဵၼ်တူဝ်ယႂ်ႇတင်းမူတ်း။
+* **`.toLowerCase()`**: လႅၵ်ႈပဵၼ်တူဝ်ဢွၼ်ႇတင်းမူတ်း။
 
 ```javascript
-const hasMoney = true;
-const hasTime = true;
+let greeting = "Hello Shan State";
+console.log(greeting.toUpperCase()); // "HELLO SHAN STATE"
+console.log(greeting.toLowerCase()); // "hello shan state"
 
-// သင်မီးငွေ လႄႈ မီးၶၢဝ်းယၢမ်း တင်းသွင်ယၢင်ႇ
-if (hasMoney && hasTime) {
-  console.log("ၵႂႃႇလဵၼ်ႈမိူင်းၼွၵ်ႈလႆႈယဝ်ႉ!"); 
-}
+```
+
+### 2. ၵၢၼ်ထႅတ်ႈ (Trim) လႄႈ ၵၢၼ်ႁႃ (Search)
+
+* **`.trim()`**: ထႅတ်ႈပႅတ်ႈ "ပိုၼ်ႉတီႈပဝ်ႇ" (Spaces) ဢၼ်ယူႇၽၢႆႇၼႃႈ လႄႈ ၽၢႆႇလင်လိၵ်ႈ။
+* **`.includes()`**: ၵူတ်ႇထတ်းဝႃႈ မီးတူဝ်လိၵ်ႈဢၼ်ႁဝ်းႁႃၼၼ်ႉယူႇၼႂ်းၼၼ်ႉႁႃႉ? (ဢွၵ်ႇ `true/false`)။
+
+```javascript
+let email = "  myemail@gmail.com  ";
+console.log(email.trim()); // "myemail@gmail.com"
+
+let text = "JavaScript is fun";
+console.log(text.includes("fun")); // true
+
+```
+
+### 3. ၵၢၼ်တတ်း (Slicing) လႄႈ ၵၢၼ်လႅၵ်ႈ (Replace)
+
+* **`.slice(start, end)`**: တတ်းဢဝ်လိၵ်ႈတွၼ်ႈၼိုင်ႈ (တႄႇတီႈ index ဢၼ်ၼိုင်ႈ တေႃႇထိုင် ဢၼ်ၼိုင်ႈ)။
+* **`.replace(old, new)`**: လႅၵ်ႈတူဝ်လိၵ်ႈၵဝ်ႇ ပဵၼ်တူဝ်လိၵ်ႈမႂ်ႇ။
+
+```javascript
+let fruit = "Apple, Banana, Kiwi";
+console.log(fruit.slice(7, 13)); // "Banana" (တႄႇၼပ်ႉတီႈ 0)
+
+let message = "I love Java";
+console.log(message.replace("Java", "JavaScript")); // "I love JavaScript"
 
 ```
 
 ---
 
-### 2. Short-circuiting (ၵၢၼ်တတ်းတၢင်း)
+### 4. Method Chaining (ၵၢၼ်ႁွင်ႉၸႂ်ႉသိုပ်ႇၵၼ်)
 
-JavaScript မီးလွၵ်းလၢႆး "လၵ်းလႅမ်" ဢၼ်ၼိုင်ႈ။ သင်ဝႃႈမၼ်းႁူႉၽၼ်ၽွၼ်း ယဝ်ႉတူဝ်ႈဢွၼ်တၢင်း၊ မၼ်းတေဢမ်ႇလူၵူတ်ႉတူဝ်ဢၼ်ၵိုတ်းဝႆႉၶႃႈ။
-
-* **`&&` (AND):** သင်ဝႃႈတူဝ်ၼႃႈသုတ်းပဵၼ် **False**၊ မၼ်းတေတတ်းၵၢၼ်ၵမ်းလဵဝ် (ၵွပ်ႈဝႃႈသၢႆငၢႆတင်းမူတ်း တေဢမ်ႇၸၢင်ႈပဵၼ် True လႆႈယဝ်ႉ)။
-* **`||` (OR):** သင်ဝႃႈတူဝ်ၼႃႈသုတ်းပဵၼ် **True**၊ မၼ်းတေတတ်းၵၢၼ်ၵမ်းလဵဝ် (ၵွပ်ႈဝႃႈတူဝ်ၼိုင်ႈတေႉယဝ်ႉလႄႈ မၼ်းၵုမ်ႇထူၼ်ႈယဝ်ႉ)။
-
-#### ၵၢၼ်ၸႂ်ႉတူဝ်တေႉ (Practical Use):
-
-ႁဝ်းၵႆႉၸႂ်ႉ `||` တႃႇဝႆႉၵႃႈၶၼ် Default (ၵႃႈၶၼ်ပိုၼ်ႉထၢၼ်)။
+ႁဝ်းၸၢင်ႈဢဝ် Method လၢႆလၢႆဢၼ် မႃးသိုပ်ႇၵၼ်လႆႈၼႂ်းထႅဝ်လဵဝ်ၶႃႈ:
 
 ```javascript
-let userName = ""; 
-let displayName = userName || "Guest"; // သင် userName ပဵၼ်လိၵ်ႈလၢႆ (Falsy)၊ မၼ်းတေဢဝ် "Guest" မႃးၸႂ်ႉ။
-
-console.log(displayName); // "Guest"
+let username = "  SaiKham  ";
+let cleanName = username.trim().toLowerCase();
+console.log(cleanName); // "saikham"
 
 ```
 
 ---
 
-### 3. Logical NOT (`!`)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-တူဝ်ၼႆႉၸႂ်ႉတႃႇ "ပိၼ်ႇ" (Invert) ၵႃႈၶၼ် Boolean ၶႃႈ။
-
-* `!true` တေပဵၼ် `false`
-* `!false` တေပဵၼ် `true`
-
-```javascript
-let isRaining = false;
-
-if (!isRaining) {
-  console.log("ဢမ်ႇလူဝ်ႇဢဝ်ၸွင်ႈၵႂႃႇ။");
-}
-
-```
-
----
-
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 7)
-
-* **`&&`**: လူဝ်ႇတေႉ တင်းသွင်ၽၢႆႇ။
-* **`||`**: တေႉ ၽၢႆႇလႂ်ၽၢႆႇၼိုင်ႈၵေႃႈလႆႈ။
-* **Short-circuiting**: ၸွႆႈႁႂ်ႈၵူတ်ႉႁဝ်း ႁဵတ်းၵၢၼ်ၽႂ်းၶိုၼ်ႈ ၵွပ်ႈဢမ်ႇလူၵူတ်ႉ ဢၼ်ဢမ်ႇၸမ်ပဵၼ်။
+* **Methods** ၸွႆႈႁႂ်ႈႁဝ်းၸတ်းၵၢၼ် String လႆႈၽႂ်း။
+* String တူဝ်ၵဝ်ႇတေဢမ်ႇလႅၵ်ႈလၢႆႈ၊ Method တေပၼ် **String တူဝ်မႂ်ႇ** မႃးတႃႇသေႇ။
+* ၸႂ်ႉ **`.includes()`** တႃႇၵူတ်ႇထတ်းၶေႃႈမုၼ်း လႄႈ **`.trim()`** တႃႇႁဵတ်းႁႂ်ႈ Data ႁဝ်းသႅၼ်ႈသႂ်ၶႃႈ။
 
 ---

@@ -1,87 +1,54 @@
-# Lesson 3: Data Types (မဵဝ်းၶေႃႈမုၼ်း)
 
-JavaScript divides data into two main families: **Primitives** (Simple) and **Objects** (Complex).
+# Lesson 03: Variables (let, const & var)
 
-### 1. Primitives (မဵဝ်းငၢႆႈ - ၵဵပ်းၵၼ်လဵဝ်)
+Variable (တူဝ်လႅၵ်ႈလၢႆႈ) ၼႆႉ ႁႂ်ႈၸဝ်ႈၵဝ်ႇဝူၼ်ႉဝႃႈ မၼ်းမိူၼ် **"ၵွၵ်း" (Box)** ဢၼ်ႁဝ်းသႂ်ႇၶေႃႈမုၼ်းဝႆႉ သေပၼ်ၸိုဝ်ႈမၼ်းဝႆႉၼၼ်ႉၶႃႈ။ မိူဝ်ႈႁဝ်းလူဝ်ႇၸႂ်ႉ၊ ႁဝ်းၵေႃႈႁွင်ႉၸိုဝ်ႈၵွၵ်းၼၼ်ႉမႃးၶႃႈ။
 
-Primitives are immutable (cannot be changed once created) and stored by value.
+ၼႂ်း JavaScript မၼ်းမီး Keyword 3 တူဝ် တႃႇသၢင်ႈ Variable ၶႃႈ:
 
-* **String (လိၵ်ႈ):** Text wrapped in quotes.
-* `const name = "ၸၢႆးသႅင်";`
+### 1. `const` (The Constant)
 
+* **မၼ်းပဵၼ်သင်:** ၸႂ်ႉတႃႇသိမ်းၵႃႈၶၼ်ဢၼ် **"ဢမ်ႇလႅၵ်ႈလၢႆႈ"**။
+* **မိူဝ်ႈလႂ်ၸႂ်ႉ:** ၸႂ်ႉမိူဝ်ႈႁဝ်းႁူႉဝႃႈ ၶေႃႈမုၼ်းၼၼ်ႉ တေယူႇၸိူင်ႉၼၼ်ၵႂႃႇတႃႇသေႇ (မိူၼ်ၼင်ႇ ဝၼ်းၵိူတ်ႇ၊ ၸိုဝ်ႈမိူင်း)။
+* **ၶေႃႈႁႄႉၵင်ႈ:** သင်ၸဝ်ႈၵဝ်ႇပၼ်ၵႃႈၶၼ်ယဝ်ႉသေ ၵႂႃႇမႄးမၼ်းထႅင်ႈ၊ JavaScript တေ Error ၵမ်းလဵဝ်ၶႃႈ။
 
-* **Number (သဵၼ်ႈမၢႆ):** Integers and decimals. JS doesn't distinguish between them.
-* `const price = 1500;`
+> *Developer ၶဝ်ၵႆႉလေႇၸႂ်ႉ `const` ပဵၼ်ပိူင်လူင် (90%+) တႃႇႁႄႉၵင်ႈ Bug ၶႃႈ။*
 
+### 2. `let` (The Variable)
 
-* **Boolean (ၸႂ်ႈ/ဢမ်ႇၸႂ်ႈ):** Logical values.
-* `const isCoding = true;`
+* **မၼ်းပဵၼ်သင်:** ၸႂ်ႉတႃႇသိမ်းၵႃႈၶၼ်ဢၼ် **"လႅၵ်ႈလၢႆႈလႆႈ"**။
+* **မိူဝ်ႈလႂ်ၸႂ်ႉ:** ၸႂ်ႉမိူဝ်ႈႁဝ်းလူဝ်ႇလႅၵ်ႈၵႃႈၶၼ်မၼ်းၵမ်းၵမ်း (မိူၼ်ၼင်ႇ Score ၼႂ်း Game ႁိုဝ် တူဝ်ၼပ်ႉ Loop)။
 
+### 3. `var` (The Legacy)
 
-* **Undefined:** A variable that has been declared but not assigned a value.
-* `let x; // value is undefined`
-
-
-* **Null:** Intentional absence of any value. It's like an empty box you labeled "Empty."
-* `const partner = null;`
-
-
-* **BigInt:** For very large integers that regular Numbers cannot handle.
-* **Symbol:** Unique identifiers (mostly used in advanced JS).
+* **မၼ်းပဵၼ်သင်:** ၼႆႉပဵၼ်လၢႆးၵဝ်ႇ (Old way) ဢၼ်ၸႂ်ႉမႃးၸဵမ်မိူဝ်ႈပီ 1995-2015။
+* **လွင်ႈတၢင်းဢၼ်ဢမ်ႇထုၵ်ႇၸႂ်ႉ:** မၼ်းမီးပၼ်ႁႃလွင်ႈ **Scope** (ပိုၼ်ႉတီႈႁဵတ်းၵၢၼ်) ဢၼ်ၸၢင်ႈႁဵတ်းႁႂ်ႈၵူတ်ႉႁဝ်းယုင်ႈလႄႈမီး Bug ငၢႆႈ။
+* **Rule:** ၼႂ်းၵၢၼ်တႅမ်ႈၵူတ်ႉ Modern JS ယၢမ်းလဵဝ် **"ယႃႇၸႂ်ႉ `var` တိၵ်းတိၵ်း"** ၶႃႈ။
 
 ---
 
-### 2. Objects (မဵဝ်းသုပ်ႉသေႃႉ - ၵဵပ်းဝႆႉလၢႆယၢင်ႇ)
-
-Objects are collections of data. Unlike primitives, they are stored by **Reference**.
-
-* **Object Literals:** Key-value pairs.
-* `const car = { brand: "Toyota", color: "white" };`
-
-
-* **Arrays:** Lists of data.
-* `const fruits = ["လိၼ်းၸီႈ", "မၢၵ်ႇမူင်ႈ"];`
-
-
-
----
-
-### 3. Value vs. Reference (လွင်ႈပႅၵ်ႇပရီႇမိထိပ်ႉ လႄႈ ဢေႃးၵျႅၵ်ႉ)
-
-This is the most important "Pro" concept in this lesson.
-
-* **Value (Primitives):** When you copy a primitive, you make a real copy. If you change the second one, the first one stays the same.
-* **Reference (Objects):** When you copy an object, you are actually just copying the "Address" (တီႈယူႇ) to that object in memory. If you change the copy, the original changes too!
+### 💻 တူဝ်ယၢင်ႇ (Code Example)
 
 ```javascript
-// Primitive Example
-let a = 10;
-let b = a; 
-b = 20;
-console.log(a); // 10 (Safe!)
+// ၸႂ်ႉ const တႃႇၶေႃႈမုၼ်းဢၼ်ၼိူင်ႈ
+const birthYear = 2000;
+// birthYear = 2005; // ❌ Error! (မႄးဢမ်ႇလႆႈ)
 
-// Object Example
-let user1 = { name: "Sai" };
-let user2 = user1;
-user2.name = "Kyaw";
-console.log(user1.name); // "Kyaw" (Original changed! Both point to the same house)
+// ၸႂ်ႉ let တႃႇၶေႃႈမုၼ်းဢၼ်တေလႅၵ်ႈလၢႆႈ
+let currentScore = 10;
+currentScore = 20; // ✅ Works! (မႄးလႆႈ)
+
+console.log(birthYear);
+console.log(currentScore);
 
 ```
 
 ---
 
-### 4. Dynamic Typing (လွင်ႈလႅၵ်ႈလၢႆႈမဵဝ်းၶေႃႈမုၼ်း)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-JavaScript is a **loosely typed** language. This means you don't have to tell JS what type of data you are storing; it figures it out automatically. You can also change the type of a variable later (though you should be careful with this!).
-
-* *Metaphor:* It's like a **Magic Box**. Today it holds a cat (String), tomorrow it can hold an apple (Number).
-
----
-
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 1.3)
-
-* **Primitives**: မီး 7 မဵဝ်း (String, Number, Boolean, etc.) ၵဵပ်းဝႆႉၸွမ်း တူဝ်မၼ်း (Value).
-* **Objects**: ၵဵပ်းၶေႃႈမုၼ်းၼမ်ၼမ်ၸွမ်းၵၼ်၊ ၵဵပ်းဝႆႉၸွမ်း တီႈယူႇၼႂ်း Memory (Reference).
-* **typeof**: ၸႂ်ႉ Keyword ၼႆႉ တူၺ်းဝႃႈ မၼ်းပဵၼ် Data Type မဵဝ်းလႂ် (e.g., `typeof "Hello"` returns `"string"`).
+* **`const`**: သိမ်းဝႆႉ ဢမ်ႇလႅၵ်ႈ (Safe သုတ်း)။
+* **`let`**: လႅၵ်ႈလၢႆႈလႆႈ ၸွမ်းၼင်ႇလူဝ်ႇ။
+* **`var`**: ပဵၼ်ၶွင်ၵဝ်ႇ ဢမ်ႇလူဝ်ႇၸႂ်ႉယဝ်ႉ။
+* **Default Rule**: ၸႂ်ႉ `const` ဝႆႉဢွၼ်တၢင်း၊ သင်လူဝ်ႇလႅၵ်ႈၵႃႈၶၼ်မၼ်းတေႉတေႉ ၸင်ႇပိၼ်ႇပဵၼ် `let` ၶႃႈ။
 
 ---

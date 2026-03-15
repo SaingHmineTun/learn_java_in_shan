@@ -1,82 +1,45 @@
-# Lesson 4: Template Literals (လၢႆးတႅမ်ႈလိၵ်ႈ ES6)
+# Lesson 04: Internal Hoisting & TDZ
 
-**Template Literals** provide a modern way to work with Strings. Instead of using single quotes `' '` or double quotes `" "`, we use the **Backtick** symbol ( ``` ).
+### 1. Hoisting ပဵၼ်သင်?
 
-### 1. String Interpolation (ၵၢၼ်သႂ်ႇၶေႃႈမုၼ်းၼႂ်းလိၵ်ႈ)
+**Hoisting** ၼႆႉ ႁႂ်ႈဝူၼ်ႉဝႃႈ JavaScript Engine တေ "ယုၵ်ႉ" (Hoist) ၵၢၼ်ပိုၼ်ေၽၢဝ်ႇ Variable လႄႈ Function တင်းမူတ်း မိူဝ်းဝႆႉၽၢႆႇၼိူဝ်သုတ်း ဢွၼ်တၢင်းတေတႄႇ Run ၵူတ်ႉၶႃႈ။
 
-The biggest benefit is being able to insert variables directly into your text using the `${ }` syntax.
+ၵူၺ်းၵႃႈ လွင်ႈယုၵ်ႉၼႆႉ မၼ်းႁဵတ်းၵၢၼ်ပႅၵ်ႇၵၼ် ၸွမ်းၼင်ႇ Keyword ဢၼ်ႁဝ်းၸႂ်ႉၶႃႈ:
 
-* **The Old Way (Concatenation):** You had to use the `+` sign.
-```javascript
-const name = "ၼၢင်းမူဝ်";
-const greeting = "မႂ်ႇသုင်ၶႃႈ " + name + "၊ ၵိၼ်ၶဝ်ႈယဝ်ႉႁိုဝ်?";
-
-```
-
-
-*Problem:* It is hard to read and easy to forget a space.
-* **The New Way (Template Literals):**
-```javascript
-const name = "ၼၢင်းမူဝ်";
-const greeting = `မႂ်ႇသုင်ၶႃႈ ${name}၊ ၵိၼ်ၶဝ်ႈယဝ်ႉႁိုဝ်?`;
-
-```
-
-
-*Benefit:* It looks exactly like the final sentence.
+* **`var` Hoisting:** သင်ၸဝ်ႈၵဝ်ႇၸႂ်ႉ `var` ဢွၼ်တၢင်းတႅမ်ႈ၊ မၼ်းတေဢမ်ႇ Error၊ မၼ်းတေဢွၵ်ႇၵႃႈၶၼ်ပဵၼ် `undefined`။ ၼႆႉပဵၼ်လွင်ႈဢၼ်လီၵူဝ်၊ ယွၼ်ႉမၼ်းၸၢင်ႈႁဵတ်းႁႂ်ႈႁဝ်း Bug ၵႂႃႇလူၺ်ႈဢမ်ႇႁူႉတူဝ်ၶႃႈ။
+* **`let` & `const` Hoisting:** မၼ်းၵေႃႈထုၵ်ႇ Hoist (ယုၵ်ႉ) ယူႇ၊ ၵူၺ်းၵႃႈ မၼ်းတေယူႇၼႂ်း **TDZ (Temporal Dead Zone)** ၶႃႈ။
 
 ---
 
-### 2. Multi-line Strings (လိၵ်ႈလၢႆထႅဝ်)
+### 2. TDZ (Temporal Dead Zone) ပဵၼ်သင်?
 
-In the old days, if you wanted to start a new line, you had to use `\n`. With Template Literals, you just press **Enter**.
+**TDZ** ၼႆႉပဵၼ် "ပိုၼ်ႉတီႈဢၼ်တၢႆဝႆႉ" ၶႃႈ။ မၼ်းတႄႇတႄႇတီႈ ၽၢႆႇၼိူဝ်သုတ်း ၵႂႃႇတေႃႇထိုင် တီႈဢၼ်ႁဝ်းတႅမ်ႈ Variable ၼၼ်ႉတေႉတေႉၶႃႈ။
 
-**Example:**
-
-```javascript
-const poem = `လိၵ်ႈတႆးတႅမ်ႈငၢႆႈ
-လူတ်ႉလႆႈၽႂ်းၽႂ်း
-JS ၵေႃႈမိူၼ်ၵၼ်။`;
-
-```
-
-JavaScript will keep the spaces and new lines exactly as you typed them. This is perfect for generating HTML or long messages in your Shan app.
-
----
-
-### 3. Expressions inside `${ }` (ၵၢၼ်ၼပ်ႉသဵၼ်ႈမၢႆၼႂ်းလိၵ်ႈ)
-
-You aren't limited to just variables. You can put math or logic inside the curly braces too!
+သင်ၸဝ်ႈၵဝ်ႇ ၵႂႃႇႁွင်ႉၸႂ်ႉ Variable ၼႂ်းတွၼ်ႈ TDZ ၼႆႉ၊ JavaScript တေ **Error** ၵမ်းလဵဝ်။ ၼႆႉပဵၼ်လွင်ႈလီၶႃႈ! ယွၼ်ႉမၼ်းႁႄႉၵင်ႈပၼ် ႁႂ်ႈႁဝ်းယႃႇပေၸႂ်ႉ Variable ပႅတ်ႉလႅတ်ႉ ဢွၼ်တၢင်းတေပိုၼ်ေၽၢဝ်ႇမၼ်းၶႃႈ။
 
 ```javascript
-const price = 500;
-const tax = 0.05;
-console.log(`သဵၼ်ႈမၢႆတင်းသဵင်ႈပဵၼ်: ${price * (1 + tax)} ၸတ်း`);
+// --- Start of Temporal Dead Zone (TDZ) for 'age' ---
+console.log(age); // ❌ ReferenceError: Cannot access 'age' before initialization
+let age = 25;     // --- End of TDZ for 'age' ---
 
 ```
 
 ---
 
-### 4. Tagged Templates (ၵၢၼ်ၸႂ်ႉ Function ၵုမ်းလိၵ်ႈ)
+### 💻 တူဝ်ယၢင်ႇပဵၼ်တွၼ်ႈ (Comparison)
 
-This is an advanced feature. You can attach a function to a template literal to "clean" or "format" the text before it is displayed. This is very useful for security (preventing XSS) or automatic translation.
-
-```javascript
-function highlight(strings, ...values) {
-  return `${strings[0]}<span style="color: yellow">${values[0]}</span>${strings[1]}`;
-}
-
-const user = "ၸၢႆးၵႅဝ်ႈ";
-const msg = highlight`ႁူမ်ၸူမ်းႁပ်ႉတွၼ်ႈ ${user} ၶႃႈ!`;
-
-```
+| Keyword | Hoisted? | Initial Value | Result if accessed before declaration |
+| --- | --- | --- | --- |
+| **`var`** | Yes | `undefined` | `undefined` (No Error) |
+| **`let`** | Yes | <none> | **ReferenceError** (Safe) |
+| **`const`** | Yes | <none> | **ReferenceError** (Safe) |
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 1.4)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Backticks (```)**: ၸႂ်ႉတႅမ်ႈတႅမ်ႇပလဵတ်ႉ (Template).
-* **`${ }`**: ၸႂ်ႉတႃႇသႂ်ႇ Variable ႁမ်ႉ Expression ၼႂ်းၵၢင်လိၵ်ႈ။
-* **Multi-line**: တႅမ်ႈလိၵ်ႈလၢႆထႅဝ်လႆႈငၢႆႈငၢႆႈ ဢမ်ႇလူဝ်ႇၸႂ်ႉ `+` ႁမ်ႉ `\n`။
+* **Hoisting** ၶိုၼ်ႈၵႂႃႇယူႇၽၢႆႇၼိူဝ် ၵူၺ်းၵႃႈ `var` ဢဝ် `undefined` ၵႂႃႇၸွမ်း၊ တူဝ်တၢင်ႇၸိူဝ်းဢမ်ႇဢဝ်ၵႂႃႇ။
+* **TDZ** ၸွႆႈႁႄႉၵင်ႈ Bug ၸွမ်းၼင်ႇလွၵ်းလၢႆး JavaScript မႂ်ႇ (Modern JS)။
+* **Rule:** လူဝ်ႇတႅမ်ႈ Variable ဝႆႉၽၢႆႇၼိူဝ်သေ ၸင်ႇၸႂ်ႉမၼ်းၽၢႆႇတႂ်ႈ တႃႇသေႇၶႃႈ။
 
 ---
