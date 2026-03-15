@@ -1,80 +1,69 @@
-# Lesson 37: Fetch API & JSON Handling
+# Lesson 37: For Loops: Traditional Iteration
 
-**Fetch API** ပဵၼ် Interface ဢၼ်မီးၼႂ်း Browser တႃႇႁႂ်ႈ JavaScript ၸၢင်ႈသူင်ႇ Request ၵႂႃႇၸူး Server (မိူၼ်ၼင်ႇ ၵႂႃႇယွၼ်းဢဝ်ၶေႃႈမုၼ်းလုၵ်ႉတီႈ Database)။
+**Loop** ပဵၼ်ၵၢၼ်သင်ႇႁႂ်ႈၵူတ်ႉတွၼ်ႈၼိုင်ႈ "လႅၼ်ႈသမ်ႉ" တိၵ်းတိၵ်း တေႃႇထိုင်ၶေႃႈၵၢတ်ႇ (Condition) ဢၼ်ႁဝ်းပၼ်ဝႆႉၼၼ်ႉ တေပဵၼ် `false` ၶႃႈ။ **For Loop** ပဵၼ်ပိူင်ဢၼ်ၵႆႉၸႂ်ႉသုတ်း ယွၼ်ႉမၼ်းၵုမ်းၵမ်လႆႈတင်းမူတ်း 3 တွၼ်ႈ။
 
-### 1. ၵၢၼ်ၸႂ်ႉ `fetch()`
+### 1. ပိူင်တႅမ်ႈ (Anatomy of a For Loop)
 
-မိူဝ်ႈႁဝ်းႁွင်ႉ `fetch(url)`၊ မၼ်းတေ Return ပဵၼ် **Promise** တႃႇသေႇ။
+ၼႂ်း `for` loop မီးတွၼ်ႈလမ်ႇလွင်ႈ 3 ဢၼ် ဢၼ်ၸႅၵ်ႇၵၼ်လူၺ်ႈ **Semicolon (`;`)** ၶႃႈ:
 
 ```javascript
-// လၢႆးၸႂ်ႉပိုၼ်ႉထၢၼ်
-fetch('https://api.example.com/data')
-  .then(response => response.json()) // လႅၵ်ႈ Response ႁႂ်ႈပဵၼ် JSON Object
-  .then(data => console.log(data))
-  .catch(error => console.log('Error:', error));
+for (initialization; condition; increment) {
+  // ၵူတ်ႉဢၼ်ၶႂ်ႈႁႂ်ႈလႅၼ်ႈသမ်ႉ
+}
+
+```
+
+1. **Initialization:** တႄႇပိုၼ်ေၽၢဝ်ႇ Variable (မိူၼ်ၼင်ႇ `let i = 0`)။ တွၼ်ႈၼႆႉတေႁဵတ်းၵၢၼ် **ပွၵ်ႈလဵဝ်ၵူၺ်း** မိူဝ်ႈတႄႇ loop။
+2. **Condition:** ၵူတ်ႇထတ်း "ၶေႃႈၵၢတ်ႇ" တႃႇသေႇဢွၼ်တၢင်းတေလႅၼ်ႈ။ သင်ပဵၼ် `true` မၼ်းတေလႅၼ်ႈသိုပ်ႇ၊ သင်ပဵၼ် `false` မၼ်းတေၵိုတ်း။
+3. **Increment:** လႅၵ်ႈလၢႆႈၵႃႈၶၼ် Variable (မိူၼ်ၼင်ႇ `i++`) ၵူႈပွၵ်ႈဢၼ်လႅၼ်ႈယဝ်ႉ။
+
+---
+
+### 💻 တူဝ်ယၢင်ႇပိုၼ်ႉထၢၼ်
+
+```javascript
+for (let i = 1; i <= 5; i++) {
+  console.log("Iteration number: " + i);
+}
+
+// Result:
+// Iteration number: 1
+// Iteration number: 2
+// Iteration number: 3
+// Iteration number: 4
+// Iteration number: 5
 
 ```
 
 ---
 
-### 2. Fetch ၸွမ်း Async / Await (Modern Way)
+### 2. ၸႂ်ႉ For Loop တႃႇတူၺ်း Array
 
-ၼႆႉပဵၼ်လၢႆးဢၼ် "ၵတ်ႉ" သုတ်း လႄႈ ၸႂ်ႉၼမ်သုတ်းၼႂ်းၵၢၼ်တႅမ်ႈၵူတ်ႉဝၼ်းမိူဝ်ႈၼႆႉၶႃႈ။
+ၼႆႉပဵၼ်လၢႆးဢၼ်ၵႆႉၸႂ်ႉသုတ်းၶႃႈ။ ႁဝ်းၸႂ်ႉ `.length` တႃႇႁူႉဝႃႈ လူဝ်ႇလႅၼ်ႈသမ်ႉၵႃႈႁိုင်။
 
 ```javascript
-async function getUserData() {
-  try {
-    // 1. သူင်ႇ Request ၵႂႃႇ (ပႂ်ႉ Server တွပ်ႇ)
-    const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+const animals = ["Tiger", "Lion", "Elephant", "Bear"];
 
-    // 2. ၵူတ်ႇထတ်းဝႃႈ Request ဢွင်ႇမႅၼ်ႈႁႃႉ? (Status 200-299)
-    if (!response.ok) {
-      throw new Error("ဢမ်ႇၸၢင်ႈတိတ်းတေႃႇ Server လႆႈ!");
-    }
-
-    // 3. လႅၵ်ႈၶေႃႈမုၼ်းပဵၼ် JSON
-    const data = await response.json();
-
-    console.log(data.name); // ၼႄၸိုဝ်ႈ User
-  } catch (error) {
-    console.log("မီးပၼ်ႁႃ:", error.message);
-  }
+for (let i = 0; i < animals.length; i++) {
+  console.log(`Animal at index ${i} is: ${animals[i]}`);
 }
-
-getUserData();
 
 ```
 
 ---
 
-### 3. HTTP Methods ဢၼ်လမ်ႇလွင်ႈ
+### 3. Breaking & Continuing (ၵၢၼ်ၵုမ်းၵမ် Loop)
 
-မိူဝ်ႈႁဝ်းတိတ်းတေႃႇ Server၊ ႁဝ်းဢမ်ႇၵူၺ်း "ယွၼ်း" (Get) ၶေႃႈမုၼ်း၊ ႁဝ်းယင်းၸၢင်ႈ "သူင်ႇ" (Post) ၶေႃႈမုၼ်းၵႂႃႇလႆႈၶႃႈ။
-
-* **GET**: ယွၼ်းဢဝ်ၶေႃႈမုၼ်း (Default)။
-* **POST**: သူင်ႇၶေႃႈမုၼ်းမႂ်ႇၵႂႃႇသိမ်း (မိူၼ်ၼင်ႇ သၢင်ႈ User မႂ်ႇ)။
-* **PUT/PATCH**: မႄးၶေႃႈမုၼ်းဢၼ်မီးဝႆႉယဝ်ႉ။
-* **DELETE**: မၢတ်ႇၶေႃႈမုၼ်းဢွၵ်ႇ။
-
-**တူဝ်ယၢင်ႇ ၵၢၼ်သူင်ႇၶေႃႈမုၼ်း (POST Request):**
+* **`break`:** ၸႂ်ႉတႃႇ "ထွၼ်တူဝ်" ဢွၵ်ႇၼႂ်း Loop ၵမ်းလဵဝ် (ၵိုတ်းၵၢၼ်ႁဵတ်းၵၢၼ်)။
+* **`continue`:** ၸႂ်ႉတႃႇ "ၶၢမ်ႇ" ပွၵ်ႈၼႆႉသေ ၵႂႃႇတႄႇပွၵ်ႈၼႃႈ (Next iteration) ၵမ်းလဵဝ်။
 
 ```javascript
-async function createPost() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-      title: 'မႂ်ႇသုင်',
-      body: 'ၼႆႉပဵၼ် Post မႂ်ႇၶႃႈ',
-      userId: 1
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-
-  const data = await response.json();
-  console.log("သၢင်ႈယဝ်ႉယဝ်ႉ:", data);
+for (let i = 1; i <= 10; i++) {
+  if (i === 3) continue; // ၶၢမ်ႇမၢႆ 3 
+  if (i === 7) break;    // ၵိုတ်းတင်းမူတ်းမိူဝ်ႈၽႅဝ် 7
+  console.log(i); 
 }
+// Result: 1, 2, 4, 5, 6
 
 ```
 
@@ -82,9 +71,8 @@ async function createPost() {
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **`fetch()`**: ပဵၼ်ၶေႃႈၵႂၢမ်း (Function) တႃႇလၢတ်ႈတေႃႇတင်း Server။
-* **Two-step Await**: လူဝ်ႇ `await` 2 ပွၵ်ႈ (1. တႃႇ Response၊ 2. တႃႇလႅၵ်ႈပဵၼ် JSON)။
-* **Error Handling**: လူဝ်ႇၵူတ်ႇထတ်းတင်း `response.ok` လႄႈ `try...catch`။
+* **For Loop** လီသုတ်းမိူဝ်ႈႁဝ်းႁူႉဝႃႈ လူဝ်ႇလႅၼ်ႈသမ်ႉ "ၵႃႈႁိုင်" (တႅတ်ႉတေႃး)။
+* သတိဝႆႉလွင်ႈ **Infinite Loop** (Loop ဢမ်ႇသုတ်း) — သင်ၶေႃႈၵၢတ်ႇပဵၼ် `true` တႃႇသေႇ၊ Computer ၸဝ်ႈၵဝ်ႇတေ "ၶၢင်း" (Hang) လႆႈၶႃႈ။
+* တွၼ်းဝႆႉဝႃႈ Index တႄႇတီႈ `0` ၵွပ်ႈၼၼ် ၶေႃႈၵၢတ်ႇၵႆႉပဵၼ် `i < array.length` ၶႃႈ။
 
 ---
-
