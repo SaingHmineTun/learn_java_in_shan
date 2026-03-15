@@ -1,84 +1,56 @@
-# Lesson 21: Inheritance & Polymorphism (ၵၢၼ်သိုပ်ႇပူၺ်ႈၸၼ်ႉသုင်)
 
-မိူဝ်ႈႁဝ်းမီး Class လၢႆဢၼ်ဢၼ်မီးၵၢၼ်ႁဵတ်းမိူၼ်ၵၼ်၊ ႁဝ်းဢမ်ႇလူဝ်ႇတႅမ်ႈမႂ်ႇၵူႈဢၼ်ၶႃႈ။ ႁဝ်းၸၢင်ႈသၢင်ႈ Class "ပေႃႈမႄႈ" (Parent Class) သေ ႁႂ်ႈ Class "လုၵ်ႈ" (Child Class) သိုပ်ႇဢဝ်ၵႂႃႇၸႂ်ႉလႆႈၶႃႈ။
+# Lesson 21: Parameters vs. Arguments & Default Values
 
-### 1. Inheritance (ၵၢၼ်သိုပ်ႇပူၺ်ႈလူၺ်ႈ `extends`)
+### 1. Parameters vs. Arguments (မၼ်းပႅၵ်ႇၵၼ်ၸိူင်ႉၼိုင်?)
 
-ႁဝ်းၸႂ်ႉ Keyword `extends` ပိူဝ်ႈတေသိုပ်ႇဢဝ် Properties လႄႈ Methods လုၵ်ႉတီႈ Class တၢင်ႇဢၼ်။
+ၵူၼ်းတႅမ်ႈၵူတ်ႉမႂ်ႇမႂ်ႇၵႆႉလူင်ၵၼ်၊ ၵူၺ်းၵႃႈလွင်ႈပႅၵ်ႇမၼ်းငၢႆႈငၢႆႈၵူၺ်းၶႃႈ:
+
+* **Parameters:** ပဵၼ် "ၸိုဝ်ႈတူဝ်တႅၼ်း" ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉၼႂ်းတွၼ်ႈ **ပိုၼ်ေၽၢဝ်ႇ (Define)** Function။ (မိူၼ်ၼင်ႇ ၵွၵ်းပဝ်ႇဢၼ်ပႂ်ႉႁပ်ႉၶေႃႈမုၼ်း)။
+* **Arguments:** ပဵၼ် "ၵႃႈၶၼ်တေႉတေႉ" ဢၼ်ႁဝ်းသူင်ႇၶဝ်ႈၵႂႃႇမိူဝ်ႈႁဝ်း **ႁွင်ႉၸႂ်ႉ (Call)** Function။
 
 ```javascript
-// Class ပေႃႈမႄႈ (Parent)
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }
-  eat() {
-    console.log(`${this.name} တိုၵ်ႉၵိၼ်ဢႃႇႁႃႇရယူႇ...`);
-  }
+// 'name' လႄႈ 'role' ပဵၼ် Parameters
+function welcomeUser(name, role) {
+  console.log(`Hello ${name}, you are a ${role}.`);
 }
 
-// Class လုၵ်ႈ (Child)
-class Dog extends Animal {
-  bark() {
-    console.log("ဝူင်ႇ! ဝူင်ႇ!");
-  }
-}
-
-const myDog = new Dog("ၵျႅတ်ႉၵီႇ");
-myDog.eat();  // သိုပ်ႇဢဝ်လုၵ်ႉတီႈ Animal မႃးၸႂ်ႉ
-myDog.bark(); // ၵၢၼ်ႁဵတ်းၶွင်တူဝ်မၼ်းႁင်းၵူၺ်း
+// "Sai Kham" လႄႈ "Developer" ပဵၼ် Arguments
+welcomeUser("Sai Kham", "Developer");
 
 ```
 
 ---
 
-### 2. The `super` Keyword
+### 2. Default Parameters (ၵႃႈၶၼ်ပိုၼ်ႉထၢၼ်)
 
-သင်ဝႃႈၼႂ်း Class လုၵ်ႈ မီး `constructor` ၶွင်တူဝ်မၼ်း၊ ႁဝ်းတေလႆႈႁွင်ႉ `super()` ဢွၼ်တၢင်းသေယၢင်ႇ ပိူဝ်ႈတေသူင်ႇၶေႃႈမုၼ်းၵႂႃႇပၼ် Class ပေႃႈမႄႈၶႃႈ။
+မိူဝ်ႈၵွၼ်ႇ၊ သင်ႁဝ်းႁွင်ႉ Function သေဢမ်ႇသူင်ႇ Argument ၶဝ်ႈၵႂႃႇ၊ Parameter ၼၼ်ႉတေပဵၼ် `undefined` ၵမ်းလဵဝ်။ ၵူၺ်းၵႃႈ ယၢမ်းလဵဝ်ႁဝ်းၸၢင်ႈသႂ်ႇ **Default Value** ဝႆႉလႆႈယဝ်ႉၶႃႈ။
 
 ```javascript
-class Cat extends Animal {
-  constructor(name, color) {
-    super(name); // ႁွင်ႉ constructor ၶွင် Animal
-    this.color = color;
-  }
+function greet(name = "Guest", time = "Day") {
+  return `Good ${time}, ${name}!`;
 }
+
+console.log(greet());               // "Good Day, Guest!" (ၸႂ်ႉ Default တင်းသွင်)
+console.log(greet("Sai Kham"));      // "Good Day, Sai Kham!" (ၸႂ်ႉ Default တီႈ time)
+console.log(greet("Sai Kham", "Morning")); // "Good Morning, Sai Kham!" (ဢမ်ႇၸႂ်ႉ Default)
 
 ```
 
 ---
 
-### 3. Polymorphism (ၵၢၼ်လႅၵ်ႈလၢႆႈလၢႆႁၢင်ႈ)
+### 3. ၵၢၼ်သူင်ႇ Arguments လၢႆလၢႆမဵဝ်း
 
-**Polymorphism** မၢႆထိုင်ဝႃႈ "လၢႆႁၢင်ႈ"။ ၼႂ်း OOP၊ မၼ်းမၢႆထိုင်ဝႃႈ Class လုၵ်ႈ ၸၢင်ႈမႄးလႅၵ်ႈလၢႆႈ (Override) Method ဢၼ်သိုပ်ႇဢဝ်မႃးတီႈပေႃႈမႄႈ ႁႂ်ႈမၼ်းပႅၵ်ႇပိူင်ႈၵႂႃႇ ၸွမ်းၼင်ႇၵၢၼ်ၸႂ်ႉတိုဝ်းၶွင်တူဝ်မၼ်းၶႃႈ။
+Function ၼႂ်း JavaScript ၼႆႉမၼ်း "ၸႂ်လီ" ၼႃႇၶႃႈ။ ၸဝ်ႈၵဝ်ႇၸၢင်ႈသူင်ႇ Argument ၶဝ်ႈၵႂႃႇ တူဝ်ၼပ်ႉ၊ တူဝ်လိၵ်ႈ၊ Boolean၊ ႁိုဝ် ပႃးတင်း Function ထႅင်ႈတူဝ်ၼိုင်ႈၵေႃႈလႆႈၶႃႈ။
 
-```javascript
-class Bird extends Animal {
-  // Override Method: မႄးလႅၵ်ႈလၢႆႈၵၢၼ်ႁဵတ်း 'eat' ၶွင် Animal
-  eat() {
-    console.log(`${this.name} တိုၵ်ႉၸိတ်းၵိၼ်မၢၵ်ႇမႆႉယူႇ...`);
-  }
-}
-
-const myBird = new Bird("ၼၵ်ႉၶမ်း");
-myBird.eat(); // တေဢမ်ႇဢွၵ်ႇမိူၼ် Animal ယဝ်ႉ၊ တေဢွၵ်ႇၸွမ်းၼင်ႇ Bird တႅမ်ႈဝႆႉ
-
-```
+* **Too many arguments:** သင်သူင်ႇ Argument ၼမ်လိူဝ် Parameter၊ JavaScript တေဢမ်ႇ Error၊ မၼ်းတေသိမ်းဝႆႉၼႂ်း Object ဢၼ်ႁွင်ႉဝႃႈ `arguments` (ၵူၺ်းၵႃႈ ႁဝ်းဢမ်ႇၵႆႉၸႂ်ႉယဝ်ႉ၊ ႁဝ်းၸႂ်ႉ Rest Parameters တႅၼ်း)။
+* **Too few arguments:** Parameter ဢၼ်ဢမ်ႇလႆႈၵႃႈၶၼ် တေပဵၼ် `undefined` (သင်ဢမ်ႇမီး Default Value)။
 
 ---
 
-### 4. Why Use Inheritance? (ယွၼ်ႉသင်ထိုင်လီၸႂ်ႉ?)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Reusability**: တႅမ်ႈၵူတ်ႉတီႈလဵဝ်၊ ၸႂ်ႉလႆႈလၢႆတီႈ။
-* **Organization**: ႁဵတ်းႁႂ်ႈၵူတ်ႉႁဝ်းမီးလမ်ႇတပ်ႉ (Hierarchy) ဢၼ်ပွင်ႇၸႂ်ငၢႆႈ။
-* **Flexibility**: ၸၢင်ႈမႄးလႅၵ်ႈလၢႆႈၵၢၼ်ႁဵတ်းလုၵ်ႈလၢၼ် လႆႈငၢႆႈငၢႆႈလူၺ်ႈဢမ်ႇတုမ်ႉတိူဝ်ႉပေႃႈမႄႈ။
-
----
-
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 21)
-
-* **`extends`**: ၸႂ်ႉတႃႇသိုပ်ႇပူၺ်ႈလုၵ်ႉတီႈ Class တၢင်ႇဢၼ်။
-* **`super()`**: ၸႂ်ႉတႃႇႁွင်ႉ constructor ႁိုဝ် methods ၶွင် Class ပေႃႈမႄႈ။
-* **Method Overriding**: ၵၢၼ်တႅမ်ႈ Method ၸိုဝ်ႈမိူၼ်ပေႃႈမႄႈ ၼႂ်း Class လုၵ်ႈ ပိူဝ်ႈတေလႅၵ်ႈလၢႆႈၵၢၼ်ႁဵတ်းမၼ်း။
+* **Parameters** ယူႇတီႈၵူတ်ႉပိုၼ်ေၽၢဝ်ႇ၊ **Arguments** ယူႇတီႈၵူတ်ႉႁွင်ႉၸႂ်ႉ။
+* ၸႂ်ႉ **Default Parameters** တႃႇႁႄႉၵင်ႈပၼ်ႁႃ `undefined` ၼႂ်း Function ႁဝ်း။
+* လၢႆးတႅမ်ႈၼႆႉ ၸွႆႈႁႂ်ႈ Function ႁဝ်းမီးလွင်ႈလွတ်ႈလႅဝ်း (Flexible) လႄႈ ၸႂ်ႉလႆႈလၢႆငဝ်းလၢႆးၶႃႈ။
 
 ---

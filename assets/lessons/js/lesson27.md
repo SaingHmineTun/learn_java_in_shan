@@ -1,65 +1,61 @@
 
-# Lesson 27: Sets (ၸုမ်းၶေႃႈမုၼ်းဢၼ်ဢမ်ႇသမ်ႉၵၼ်)
+# Lesson 27: Higher-Order Functions (HOF)
 
-**Set** ပဵၼ် Object မဵဝ်းၼိုင်ႈ ဢၼ်ၵဵပ်းၶေႃႈမုၼ်းလႆႈၵူႈမဵဝ်း၊ ၵူၺ်းၵႃႈ ပၵ်းပိူင်လူင်မၼ်းၵေႃႈပဵၼ် **"ၵႃႈၶၼ်ၵူႈတူဝ် တေလႆႈပႅၵ်ႇပိူင်ႈၵၼ်"** (Every value must be unique)။ သင်ႁဝ်းသႂ်ႇၶေႃႈမုၼ်းဢၼ်သမ်ႉၵၼ်ၶဝ်ႈၵႂႃႇ၊ မၼ်းတေသိမ်းဝႆႉပၼ် တူဝ်လဵဝ်ၵူၺ်းၶႃႈ။
+ၼႂ်း JavaScript၊ Function ၼႆႉထုၵ်ႇၼပ်ႉပဵၼ် **"First-Class Citizens"** ၶႃႈ။ ပွင်ႇဝႃႈ ႁဝ်းၸၢင်ႈဢဝ် Function ႁဵတ်းလႆႈၵူႈယၢင်ႇ မိူၼ်ၼင်ႇ Variable ယူဝ်းယူဝ်း—ၸၢင်ႈဢဝ်သိမ်းၼႂ်း Variable၊ ၸၢင်ႈသူင်ႇၶဝ်ႈပဵၼ် Argument၊ လႄႈ ၸၢင်ႈသူင်ႇဢွၵ်ႇ (Return) မႃးၶိုၼ်းလႆႈၶႃႈ။
 
-### 1. ၵၢၼ်သၢင်ႈ Set (Creating a Set)
+### 1. Higher-Order Function ပဵၼ်သင်?
+
+**Higher-Order Function** ပဵၼ် Function ဢၼ်မီးၵုၼ်းလၵ်ႉသၼႃႉ ၼိုင်ႈၼႂ်းသွင်ယၢင်ႇၼႆႉ (ႁိုဝ် တင်းသွင်ယၢင်ႇ) ၶႃႈ:
+
+1. ႁပ်ႉဢဝ် Function ထႅင်ႈတူဝ်ၼိုင်ႈ မႃးပဵၼ် **Argument** (ႁွင်ႉဝႃႈ Callback Function)။
+2. သူင်ႇ **Return** ဢွၵ်ႇမႃးပဵၼ် Function ထႅင်ႈတူဝ်ၼိုင်ႈ။
+
+---
+
+### 2. တူဝ်ယၢင်ႇ: ႁပ်ႉ Function ပဵၼ် Argument
+
+မိူဝ်ႈႁဝ်းသူင်ႇ Function A ၶဝ်ႈၵႂႃႇၼႂ်း Function B၊ Function B ၼၼ်ႉႁွင်ႉဝႃႈ Higher-Order Function ၶႃႈ။
 
 ```javascript
-// သၢင်ႈ Set ပဝ်ႇ
-const mySet = new Set();
+// 1. Callback Function (Function ယူဝ်းယူဝ်း)
+const whisper = (msg) => msg.toLowerCase() + "...";
 
-// သၢင်ႈ Set လုၵ်ႉတီႈ Array
-const numbers = new Set([1, 2, 2, 3, 4, 4]);
-console.log(numbers); // Set(4) {1, 2, 3, 4} (တူဝ်သမ်ႉထုၵ်ႇတတ်းဢွၵ်ႇ)
+// 2. Higher-Order Function (Function ဢၼ်ႁပ်ႉ Function တၢင်ႇတူဝ်)
+function transformMessage(message, fn) {
+  return fn(message);
+}
+
+console.log(transformMessage("HELLO WORLD", whisper)); // "hello world..."
 
 ```
 
 ---
 
-### 2. Methods ဢၼ်ၸႂ်ႉၼႂ်း Set
+### 3. ယွၼ်ႉသင်ႁဝ်းၸင်ႇလူဝ်ႇၸႂ်ႉ HOF?
 
-Set ဢမ်ႇၸႂ်ႉ Index (မိူၼ်ၼင်ႇ `set[0]`) တႃႇၶဝ်ႈထိုင်ၶေႃႈမုၼ်းၶႃႈ။ မၼ်းမီး Methods ၶွင်တူဝ်မၼ်းၸိူင်ႉၼႆ:
-
-* **`.add(value)`**: ထႅမ်ၶေႃႈမုၼ်းမႂ်ႇ။
-* **`.delete(value)`**: မၢတ်ႇၶေႃႈမုၼ်းဢွၵ်ႇ။
-* **`.has(value)`**: ၵူတ်ႇထတ်းဝႃႈ မီးၶေႃႈမုၼ်းၼၼ်ႉယူႇႁႃႉ? (Return ပဵၼ် `true/false`)။
-* **`.clear()`**: မၢတ်ႇၶေႃႈမုၼ်းတင်းမူတ်းပႅတ်ႈ။
-* **`.size`**: တူဝ်ၼပ်ႉၶေႃႈမုၼ်းတင်းမူတ်း (မိူၼ်ၼင်ႇ `.length` ၼႂ်း Array)။
-
-```javascript
-const tags = new Set();
-
-tags.add("js");
-tags.add("coding");
-tags.add("js"); // တေဢမ်ႇထႅမ်သႂ်ႇထႅင်ႈ ၵွပ်ႈမီးဝႆႉယဝ်ႉ
-
-console.log(tags.has("js")); // true
-console.log(tags.size); // 2
-
-```
+* **Abstraction:** ၸွႆႈႁႂ်ႈႁဝ်းတႅမ်ႈ Logic ဢၼ်ၸႂ်ႉလႆႈၵူႈလွင်ႈ (General Logic) သေ ဢဝ် Detail (Callback) မႃးလႅၵ်ႈလၢႆႈၸွမ်းၼင်ႇၵၢင်ၸႂ်ၶႃႈ။
+* **Code Reusability:** ဢမ်ႇလူဝ်ႇတႅမ်ႈၵူတ်ႉသမ်ႉၵၼ် ၼမ်ၼမ်။
+* **Modern Methods:** Function ၸိုဝ်ႈดังၼႂ်း JavaScript မိူၼ်ၼင်ႇ `.map()`, `.filter()`, `.reduce()` တင်းမူတ်းပဵၼ် Higher-Order Functions ၶႃႈ။
 
 ---
 
-### 3. ပၵ်းပိူင်လၢၵ်ႇလၢႆး (Unique Features)
+### 4. တူဝ်ယၢင်ႇ: သူင်ႇ Function ဢွၵ်ႇမႃး (Return a Function)
 
-1. **High Performance**: ၵၢၼ်ၵူတ်ႇထတ်းၶေႃႈမုၼ်းလူၺ်ႈ `.has()` ၼႂ်း Set မၼ်း **ၽႂ်းလိူဝ်** ၵၢၼ်ၸႂ်ႉ `.includes()` ၼႂ်း Array တင်းၼမ် မိူဝ်ႈၶေႃႈမုၼ်းမီးၼပ်ႉႁဵင်ၼပ်ႉမိုၼ်ႇ။
-2. **No Index**: ႁဝ်းဢမ်ႇၸၢင်ႈႁွင်ႉဢဝ်ၶေႃႈမုၼ်းလူၺ်ႈ Index လႆႈ။ သင်ၶႂ်ႈလႅၵ်ႈပဵၼ် Array ႁဝ်းလူဝ်ႇၸႂ်ႉ Spread Operator `[...]` ၶႃႈ။
-
----
-
-### 4. တူဝ်ယၢင်ႇ ဢၼ်ၸႂ်ႉတေႉ (Practical Use Case)
-
-လၢႆးဢၼ် "ၵတ်ႉ" သုတ်း တႃႇတတ်းတူဝ်သမ်ႉ (Duplicates) ဢွၵ်ႇၼႂ်း Array ၶႃႈ:
+ၼႆႉၵႆႉၸႂ်ႉႁူမ်ႈၵၼ်တင်း Closures ဢၼ်ႁဝ်းႁဵၼ်းမႃးၼႂ်း Lesson 26 ၶႃႈ။
 
 ```javascript
-const members = ["Sai", "Nan", "Sai", "Kham", "Nan"];
+function multiplier(factor) {
+  // သူင်ႇ Function မႂ်ႇဢွၵ်ႇၵႂႃႇ
+  return function(num) {
+    return num * factor;
+  };
+}
 
-// 1. လႅၵ်ႈ Array ပဵၼ် Set (ပိူဝ်ႈတေတတ်းတူဝ်သမ်ႉ)
-// 2. လႅၵ်ႈ Set ၶိုၼ်းပဵၼ် Array (လူၺ်ႈ Spread Operator)
-const uniqueMembers = [...new Set(members)];
+const double = multiplier(2);
+console.log(double(10)); // 20
 
-console.log(uniqueMembers); // ["Sai", "Nan", "Kham"]
+const triple = multiplier(3);
+console.log(triple(10)); // 30
 
 ```
 
@@ -67,8 +63,8 @@ console.log(uniqueMembers); // ["Sai", "Nan", "Kham"]
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Set** ၵဵပ်းၶေႃႈမုၼ်းဢၼ် "ဢမ်ႇသမ်ႉၵၼ်" (Unique) ၵူၺ်း။
-* ၸႂ်ႉ **`.has()`** တႃႇၵူတ်ႇထတ်းၶေႃႈမုၼ်းလႆႈၽႂ်းၽၢႆ။
-* လီသုတ်း တႃႇၸႂ်ႉတတ်းတူဝ်သမ်ႉ (Remove duplicates) ဢွၵ်ႇၼႂ်း Array။
+* **Higher-Order Function** ပဵၼ် "Function ဢၼ်ၵုမ်းၵမ် Function"။
+* မၼ်းၸွႆႈႁႂ်ႈၵူတ်ႉႁဝ်းမီးလွင်ႈလွတ်ႈလႅဝ်း (Flexible) လႄႈ သႅၼ်ႈသႂ် (Clean)။
+* ပဵၼ်ပိုၼ်ႉထၢၼ်ဢၼ်လမ်ႇလွင်ႈသုတ်း တႃႇၸဝ်ႈၵဝ်ႇတေၵႂႃႇႁဵၼ်းလွင်ႈ **Array Methods** လႄႈ **Asynchronous JavaScript** ၶႃႈ။
 
 ---

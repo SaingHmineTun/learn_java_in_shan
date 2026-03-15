@@ -1,80 +1,71 @@
-# Lesson 20: Encapsulation & Private Fields (ၵၢၼ်ႁေႃႇႁုမ်ႉ)
+# Lesson 20: Arrow Functions
 
-ၼႂ်းၵၢၼ်တႅမ်ႈ Software ယႂ်ႇယႂ်ႇ၊ ႁဝ်းဢမ်ႇၶႂ်ႈႁႂ်ႈၽႂ်ၵေႃႈယႃႇ မႃးလႅၵ်ႈလၢႆႈၶေႃႈမုၼ်း (မိူၼ်ၼင်ႇ ၵႃႈၶၼ်ငိၼ်းၼႂ်းယေး) လႆႈၵမ်းလဵဝ်။ ႁဝ်းတေလႆႈႁဵတ်းႁႂ်ႈမၼ်းပဵၼ် "လွင်ႈလပ်ႉ" (Private) ဝႆႉၶႃႈ။
+Arrow Function ထုၵ်ႇသႂ်ႇမႃးၼႂ်း ES6 တႃႇႁႂ်ႈႁဝ်းတႅမ်ႈ Function လႆႈပွတ်းလိူဝ်ၵဝ်ႇ။ မၼ်းၸႂ်ႉၶိူင်ႈမၢႆ **`=>`** (ဢၼ်မိူၼ်ၼင်ႇ တူဝ်ယိုဝ်း/Arrow) တႅၼ်းတၢင် Keyword `function` ၶႃႈ။
 
-### 1. Private Fields (ၸႂ်ႉ `#`)
+### 1. ပႅၵ်ႇပိူင်ႈၵၼ်ၸိူင်ႉၼိုင်?
 
-ၼႂ်း JavaScript မႂ်ႇ (ES2022)၊ ႁဝ်းၸၢင်ႈသၢင်ႈ Property ဢၼ်ပဵၼ်လွင်ႈလပ်ႉလႆႈ လူၺ်ႈၵၢၼ်သႂ်ႇၶႅပ်း **`#`** ဝႆႉၽၢႆႇၼႃႈၸိုဝ်ႈမၼ်းၶႃႈ။
+**Function Expression (လၢႆးၵဝ်ႇ):**
 
 ```javascript
-class BankAccount {
-  // Private field (ၽႂ်ၵေႃႈႁၼ်ဢမ်ႇလႆႈ လုၵ်ႉတီႈၽၢႆႇၼွၵ်ႈ)
-  #balance;
+const add = function(a, b) {
+  return a + b;
+};
 
-  constructor(owner, amount) {
-    this.owner = owner;
-    this.#balance = amount;
-  }
+```
 
-  deposit(amount) {
-    this.#balance += amount;
-    console.log(`သႂ်ႇငိၼ်းယဝ်ႉ၊ ၵိုတ်းယူႇ: ${this.#balance}`);
-  }
-}
+**Arrow Function (လၢႆးမႂ်ႇ):**
 
-const myAcc = new BankAccount("ၸၢႆးသႅင်", 1000);
-myAcc.deposit(500); // ႁဵတ်းၵၢၼ်လႆႈ
-// console.log(myAcc.#balance); // Error! ၶဝ်ႈထိုင်ဢမ်ႇလႆႈ ၵွပ်ႈမၼ်းပဵၼ် Private
+```javascript
+const add = (a, b) => {
+  return a + b;
+};
 
 ```
 
 ---
 
-### 2. Getters & Setters (ၵၢၼ်ၶဝ်ႈထိုင် လႄႈ ၵၢၼ်မႄးထတ်း)
+### 2. လၢႆးတႅမ်ႈႁႂ်ႈပွတ်း (Shorthand Rules)
 
-မိူဝ်ႈႁဝ်းႁဵတ်းႁႂ်ႈၶေႃႈမုၼ်းပဵၼ် Private ယဝ်ႉ၊ သင်ႁဝ်းၶႂ်ႈ "လူ" ႁိုဝ် "မႄး" ၵႃႈၶၼ်မၼ်း ႁဝ်းတေၸႂ်ႉ Keyword `get` လႄႈ `set` ၶႃႈ။ ၼႆႉၸွႆႈႁႂ်ႈႁဝ်းၵူတ်ႇထတ်း (Validate) ၶေႃႈမုၼ်းလႆႈ ဢွၼ်တၢင်းတေမႄးမၼ်း။
+Arrow Function မီး "တၢင်းလႅတ်း" ဢၼ်ႁဵတ်းႁႂ်ႈၵူတ်ႉႁဝ်းပွတ်းလႆႈထႅင်ႈၶႃႈ:
+
+* **Rule 1: သင်မီး Parameter တူဝ်လဵဝ်** — ဢမ်ႇလူဝ်ႇသႂ်ႇၵွင်းၸိၵ်း `( )`။
+* **Rule 2: သင်မီးၵူတ်ႉထႅဝ်လဵဝ် (Implicit Return)** — ဢမ်ႇလူဝ်ႇသႂ်ႇ `{ }` လႄႈ ဢမ်ႇလူဝ်ႇတႅမ်ႈ Keyword `return`။
+
+**တူဝ်ယၢင်ႇ Pro:**
 
 ```javascript
-class User {
-  constructor(name) {
-    this._name = name; // ၸႂ်ႉ '_' ပဵၼ် Convention ဝႃႈမၼ်းပဵၼ် Internal
-  }
+// ပွတ်းသုတ်း (One-liner)
+const square = n => n * n;
 
-  // Getter: တႃႇဢဝ်ၵႃႈၶၼ်ဢွၵ်ႇမႃး
-  get name() {
-    return this._name.toUpperCase();
-  }
-
-  // Setter: တႃႇမႄးၵႃႈၶၼ် (မီး Validation)
-  set name(newName) {
-    if (newName.length > 2) {
-      this._name = newName;
-    } else {
-      console.log("ၸိုဝ်ႈတေလႆႈယၢဝ်းလိူဝ် 2 တူဝ်!");
-    }
-  }
-}
-
-const user1 = new User("Sai");
-console.log(user1.name); // "SAI" (ႁွင်ႉၸႂ်ႉမိူၼ် Property ၵူၺ်း)
-user1.name = "A"; // "ၸိုဝ်ႈတေလႆႈယၢဝ်းလိူဝ် 2 တူဝ်!"
+console.log(square(5)); // 25
 
 ```
 
 ---
 
-### 3. Why Encapsulation? (ယွၼ်ႉသင်ထိုင်လမ်ႇလွင်ႈ?)
+### 3. မိူဝ်ႈလႂ်တေၸႂ်ႉ Arrow Functions?
 
-1. **Security**: ႁႄႉၵင်ႈၶေႃႈမုၼ်းလမ်ႇလွင်ႈ။
-2. **Validation**: ၵူတ်ႇထတ်းၶေႃႈမုၼ်း ဢွၼ်တၢင်းတေသိမ်း (မိူၼ်ၼင်ႇ ဢမ်ႇပၼ်သႂ်ႇ တူဝ်ၼပ်ႉထႅတ်း `-` ၼႂ်း Balance)။
-3. **Maintenance**: မိူဝ်ႈႁဝ်းမႄးၵူတ်ႉၼႂ်း Class၊ ၵူတ်ႉတီႈတၢင်ႇဢၼ် ဢၼ်ႁွင်ႉၸႂ်ႉယူႇၼၼ်ႉ တေဢမ်ႇလႆႈမႄးၸွမ်း (ၵွပ်ႈမၼ်းႁွင်ႉၸႂ်ႉ ၸွမ်းၼင်ႇ Interface ဢၼ်ႁဝ်းပၼ်ဝႆႉၵူၺ်း)။
+* ၸႂ်ႉမိူဝ်ႈလူဝ်ႇ Function ဢွၼ်ႇဢၼ်ႁဵတ်းၵၢၼ်ငၢႆႈငၢႆႈ။
+* ၸႂ်ႉၼႂ်း **Callback Functions** (မိူၼ်ၼင်ႇ ၸႂ်ႉၼႂ်း `.map()`, `.filter()`, `.forEach()`)။
+* **သတိ:** Arrow Function ဢမ်ႇမီး `this` တူဝ်မၼ်း (မၼ်းတေၸႂ်ႉ `this` ၶွင်ပိုၼ်ႉတီႈဢၼ်မၼ်းယူႇဝႆႉ)။ ပွင်ႇဝႃႈ မၼ်းဢမ်ႇလီၸႂ်ႉတႃႇသၢင်ႈ **Object Methods** ၶႃႈ။
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 20)
+### 💻 တႅၵ်ႈၼိူဝ် (Comparison Table)
 
-* **Encapsulation**: ၵၢၼ်ႁေႃႇႁုမ်ႉၶေႃႈမုၼ်းဝႆႉၼႂ်း Class။
-* **`#` (Private Fields)**: ၸႂ်ႉတႃႇႁႄႉၵင်ႈ ဢမ်ႇႁႂ်ႈၶဝ်ႈထိုင်လႆႈ လုၵ်ႉတီႈၽၢႆႇၼွၵ်ႈ။
-* **Getters/Setters**: ၸႂ်ႉတႃႇလူ လႄႈ မႄးၶေႃႈမုၼ်း ၼႂ်းပၵ်းပိူင်ဢၼ်ႁဝ်းၵုမ်းထိူင်းလႆႈ။
+| Feature | Regular Function | Arrow Function |
+| --- | --- | --- |
+| **Syntax** | ယၢဝ်းလိူဝ် (`function`) | ပွတ်းလိူဝ် (`=>`) |
+| **Implicit Return** | ဢမ်ႇမီး (လူဝ်ႇတႅမ်ႈ `return`) | မီး (သင်မီးထႅဝ်လဵဝ်) |
+| **`this` Keyword** | မီး `this` တူဝ်မၼ်း | ဢဝ် `this` တီႈ Parent Scope မႃးၸႂ်ႉ |
+| **Hoisting** | မီး (သင်ပဵၼ် Declaration) | ဢမ်ႇမီး (ပဵၼ် Variable) |
+
+---
+
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
+
+* **Arrow Functions** ႁဵတ်းႁႂ်ႈၵူတ်ႉသႅၼ်ႈသႂ် လႄႈ လူယႃႇငၢႆႈ။
+* သင်မီးထႅဝ်လဵဝ်၊ ဢမ်ႇလူဝ်ႇတႅမ်ႈ `{ }` လႄႈ `return` (မၼ်းတေသူင်ႇၵႃႈၶၼ်ဢွၵ်ႇပၼ်ၵမ်းလဵဝ်)။
+* ပဵၼ်ၶိူင်ႈမိုဝ်းဢၼ်လမ်ႇလွင်ႈသုတ်း တႃႇတႅမ်ႈ Modern JavaScript လႄႈ React ၶႃႈ။
 
 ---

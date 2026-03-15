@@ -1,83 +1,55 @@
-# Lesson 24: Array Iteration Methods (ၵၢၼ်ပၼ်ႇလူၶေႃႈမုၼ်း)
 
-မိူဝ်ႈႁဝ်းမီးၶေႃႈမုၼ်းၼပ်ႉႁဵင်၊ ႁဝ်းဢမ်ႇၸၢင်ႈႁွင်ႉ `array[0]`, `array[1]` ၵႂႃႇၸိူင်ႉၼၼ်လႆႈ။ ႁဝ်းလူဝ်ႇၸႂ်ႉ Methods ဢၼ်ၸွႆႈႁဝ်း "ပၼ်ႇ" တူၺ်းၶေႃႈမုၼ်းၵူႈတူဝ်ႁင်းၵူၺ်းမၼ်းၶႃႈ။
+# Lesson 24: Scope Chain & Lexical Environment
 
-### 1. `.forEach()`
+### 1. Lexical Environment (ဢွင်ႈတီႈပိုၼ်ေၽၢဝ်ႇ)
 
-ၼႆႉပဵၼ်လၢႆးဢၼ်ငၢႆႈသုတ်း တႃႇတႅၼ်းၵၢၼ်ၸႂ်ႉ `for` loop။ မၼ်းတေပၼ်ႇႁဵတ်းၵၢၼ် (Callback Function) တေႃႇၶေႃႈမုၼ်းၵူႈတူဝ်ၼႂ်း Array ၶႃႈ။
+ၼႂ်း JavaScript၊ "Lexical" ပွင်ႇဝႃႈ **"ဢွင်ႈတီႈဢၼ်တႅမ်ႈဝႆႉ"** ၶႃႈ။
+**Lexical Environment** ၵေႃႈပဵၼ် "ထူင်ၶေႃႈမုၼ်း" ဢၼ်သိမ်းဝႆႉ Variable လႄႈ Function ဢၼ်မီးယူႇၼႂ်းတွၼ်ႈၵူတ်ႉၼၼ်ႉၶႃႈ။ မၼ်းတေတႅပ်းတတ်းၸွမ်း **ဢွင်ႈတီႈဢၼ်ၸဝ်ႈၵဝ်ႇတႅမ်ႈၵူတ်ႉဝႆႉ** (ဢမ်ႇၸႂ်ႈတီႈဢၼ်ႁွင်ႉၸႂ်ႉ) ၶႃႈ။
 
-```javascript
-const students = ["ၸၢႆးၶမ်း", "ၼၢင်းမူဝ်", "ၸၢႆးလၢဝ်"];
+### 2. The Scope Chain (ၵၢၼ်ၸွပ်ႇႁႃ Variable)
 
-students.forEach(function(item, index) {
-  console.log(`${index + 1}. မႂ်ႇသုင် ${item}`);
-});
-/* ဢွၵ်ႇ:
-1. မႂ်ႇသုင် ၸၢႆးၶမ်း
-2. မႂ်ႇသုင် ၼၢင်းမူဝ်
-3. မႂ်ႇသုင် ၸၢႆးလၢဝ်
-*/
+မိူဝ်ႈ JavaScript ႁႃ Variable ၼိုင်ႈဢၼ်:
 
-```
+1. မၼ်းတေတႄႇႁႃတီႈ **Current Scope** (Scope ဢၼ်မၼ်းတိုၵ်ႉယူႇဝႆႉ) ၼၼ်ႉဢွၼ်တၢင်း။
+2. သင်ဢမ်ႇႁၼ်၊ မၼ်းတေ **"တႆႇၶိုၼ်ႈ (Look up)"** ၵႂႃႇႁႃတီႈ Parent Scope (Scope ၽၢႆႇၼိူဝ်မၼ်း) တိၵ်းတိၵ်း။
+3. လွင်ႈတႆႇၶိုၼ်ႈၼႆႉ တေၵႂႃႇသုတ်းတီႈ **Global Scope** ၶႃႈ။
 
-> **မၢႆတွၼ်း:** `.forEach()` ဢမ်ႇ Return ၵႃႈၶၼ်သင်ဢွၵ်ႇမႃး (undefined)။ မၼ်းၸႂ်ႉတႃႇ "ႁဵတ်းၵၢၼ်သင်ဝႆႉၼိုင်ႈယၢင်ႇ" ၵူၺ်း။
+လွင်ႈတႆႇၶိုၼ်ႈသိုပ်ႇၵၼ်ၼႆႉ ႁဝ်းႁွင်ႉဝႃႈ **Scope Chain** ၶႃႈ။
 
 ---
 
-### 2. `.indexOf()` & `.lastIndexOf()`
-
-ၸႂ်ႉတႃႇႁႃ "မၢႆထႅဝ်" (Index) ၶွင်ၶေႃႈမုၼ်းဢၼ်ႁဝ်းၶႂ်ႈႁႃ။
-
-* **`.indexOf()`**: ႁႃလုၵ်ႉၽၢႆႇၼႃႈ။
-* **`.lastIndexOf()`**: ႁႃလုၵ်ႉၽၢႆႇလင်။
+### 💻 တူဝ်ယၢင်ႇ (Code Example)
 
 ```javascript
-const tools = ["Hammer", "Saw", "Hammer", "Drill"];
+const userName = "Sai Kham"; // Global Scope
 
-console.log(tools.indexOf("Hammer"));     // 0
-console.log(tools.lastIndexOf("Hammer")); // 2
-console.log(tools.indexOf("Axe"));        // -1 (သင်ဢမ်ႇမီး)
+function first() {
+  const age = 25; // Local to first()
 
-```
+  function second() {
+    const job = "Developer"; // Local to second()
 
----
+    // Scope Chain တေႁဵတ်းၵၢၼ်ၼႆႉ:
+    console.log(job);      // ✅ ႁၼ် (ယူႇၼႂ်း Scope မၼ်းၵမ်းလဵဝ်)
+    console.log(age);      // ✅ ႁၼ် (တႆႇၶိုၼ်ႈၵႂႃႇႁႃတီႈ first)
+    console.log(userName); // ✅ ႁၼ် (တႆႇၶိုၼ်ႈၵႂႃႇႁႃတီႈ Global)
+  }
 
-### 3. `.includes()`
-
-ၼႆႉပဵၼ်လၢႆးၵူတ်ႇထတ်းဢၼ်ငၢႆႈသုတ်း ဝႃႈၼႂ်း Array မီးၶေႃႈမုၼ်းၼၼ်ႉယူႇႁႃႉ? မၼ်းတေ Return ပဵၼ် `true` ႁိုဝ် `false` ၶႃႈ။
-
-```javascript
-const guestList = ["Sai", "Nan", "Lon"];
-
-if (guestList.includes("Nan")) {
-  console.log("ၶဝ်ႈမႃးလႆႈၶႃႈ!");
+  second();
 }
 
-```
-
----
-
-### 4. `.find()` & `.findIndex()` (ES6)
-
-ၸႂ်ႉတႃႇႁႃၶေႃႈမုၼ်းဢၼ် "မႅၼ်ႈၸွမ်းပၵ်းပိူင်" ဢၼ်ႁဝ်းတႅပ်းတတ်း။
-
-* **`.find()`**: Return ဢဝ် "တူဝ်ၶေႃႈမုၼ်း" တူဝ်ဢွၼ်တၢင်းသုတ်းဢၼ်မႅၼ်ႈ။
-* **`.findIndex()`**: Return ဢဝ် "မၢႆထႅဝ်" (Index) ၶွင်မၼ်း။
-
-```javascript
-const ages = [12, 18, 25, 30];
-
-const adult = ages.find(age => age >= 18); 
-console.log(adult); // 18 (မၼ်းတေဢဝ်တူဝ်ဢွၼ်တၢင်းသုတ်းၵူၺ်း)
+first();
 
 ```
+
+> ⚠️ **လွင်ႈလမ်ႇလွင်ႈ:** Scope Chain မၼ်းတေတႆႇၶိုၼ်ႈ **"ၽၢႆႇလဵဝ်"** ၵူၺ်း။ Parent Scope တေဢမ်ႇၸၢင်ႈ "တႆႇလူင်း" မႃးဢဝ် Variable တီႈ Child Scope လႆႈၶႃႈ။
 
 ---
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* ၸႂ်ႉ **`.forEach`** မိူဝ်ႈၶႂ်ႈပၼ်ႇႁဵတ်းၵၢၼ်သင်ဝႆႉၼိုင်ႈယၢင်ႇ။
-* ၸႂ်ႉ **`.includes`** မိူဝ်ႈၶႂ်ႈၵူတ်ႇထတ်းဝႃႈ "မီး/ဢမ်ႇမီး"။
-* ၸႂ်ႉ **`.find`** မိူဝ်ႈၶႂ်ႈႁႃၶေႃႈမုၼ်း ဢၼ်မီးပၵ်းပိူင် (မိူၼ်ၼင်ႇ ႁႃ User ID)။
+* **Lexical Environment** ပွင်ႇဝႃႈ Scope မၼ်းထုၵ်ႇတႅပ်းတတ်း ၸွမ်းၼင်ႇဢွင်ႈတီႈဢၼ်ႁဝ်း "တႅမ်ႈ" ၵူတ်ႉဝႆႉ။
+* **Scope Chain** ပဵၼ်လၢႆးႁႃ Variable ဢၼ်တႆႇၶိုၼ်ႈၸွမ်းၸၼ်ႉ Parent Scope။
+* Variable ဢၼ်ယူႇၼႃႈၼိူဝ် ၸၢင်ႈထုၵ်ႇႁွင်ႉၸႂ်ႉလႆႈတီႈၼႃႈတႂ်ႈ၊ ၵူၺ်းၵႃႈ Variable တီႈၼႃႈတႂ်ႈ တေ "လပ်ႉ" ဝႆႉတႃႇၼႃႈၼိူဝ် (Hidden from outer scope)။
 
 ---

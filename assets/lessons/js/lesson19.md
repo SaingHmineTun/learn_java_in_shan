@@ -1,95 +1,70 @@
-# Lesson 19: Modern ES6 Classes (ပၵ်းပိူင် Class)
 
-ၼႂ်း JavaScript၊ **Class** ဢၼ်တေႃႉတေႉပဵၼ် "သႅၼ်းသႃႇ" (Syntactic Sugar) ၶွင် Prototypes ၵူၺ်းၶႃႈ။ မၼ်းမၢႆထိုင်ဝႃႈ ၽၢႆႇတႂ်ႈမၼ်းတိုၵ်ႉၸႂ်ႉ Prototypes ယူႇ၊ ၵူၺ်းၵႃႈလၢႆးတႅမ်ႈမၼ်း မိူၼ် Programming languages တၢင်ႇမဵဝ်း (မိူၼ် Java, C#) လိူဝ်ၵဝ်ႇၶႃႈ။
+# Lesson 19: Function Declarations vs. Expressions
 
-### 1. လၢႆးသၢင်ႈ Class (Class Syntax)
+ၼႂ်း JavaScript၊ ႁဝ်းၸၢင်ႈသၢင်ႈ Function လႆႈလၢႆလၢႆလၢႆး။ 2 လၢႆး ဢၼ်ၵႆႉၸႂ်ႉလိူဝ်ပိူၼ်ႈတႄႉပဵၼ် **Declaration** (ၵၢၼ်ပိုၼ်ေၽၢဝ်ႇ) လႄႈ **Expression** (ၵၢၼ်ပၼ်ၵႃႈၶၼ်) ၶႃႈ။
 
-ႁဝ်းၸႂ်ႉ Keyword `class` လႄႈ `constructor` ပိူဝ်ႈတေဝႆႉၵႃႈၶၼ်ပိုၼ်ႉထၢၼ်။
+### 1. Function Declaration
+
+ၼႆႉပဵၼ်လၢႆးတႅမ်ႈ "ယူဝ်းယူဝ်း" ဢၼ်ႁဝ်းၵႆႉႁၼ်ၶႃႈ။ မၼ်းတႄႇလူၺ်ႈ Keyword `function` သေ ၸွမ်းလူၺ်ႈ "ၸိုဝ်ႈ" မၼ်းၶႃႈ။
 
 ```javascript
-class User {
-  // 1. Constructor: တေႁဵတ်းၵၢၼ်ၵမ်းလဵဝ် မိူဝ်ႈႁဝ်းၸႂ်ႉ 'new'
-  constructor(name, email) {
-    this.name = name;
-    this.email = email;
-  }
-
-  // 2. Methods: တႅမ်ႈဝႆႉလႆႈၵမ်းလဵဝ် (မၼ်းတေၵႂႃႇယူႇၼႂ်း Prototype ႁင်းၵူၺ်း)
-  sayHi() {
-    console.log(`မႂ်ႇသုင်၊ ၶႃႈၸိုဝ်ႈ ${this.name}`);
-  }
-
-  logout() {
-    console.log(`${this.email} လႆႈဢွၵ်ႇသတ်ႉႉပတ်ႉယဝ်ႉ`);
-  }
+function sayHello(name) {
+  return `မႂ်ႇသုင်ၶႃႈ ${name}!`;
 }
 
-const user1 = new User("ၸၢႆးသႅင်", "sai@email.com");
-user1.sayHi(); // "မႂ်ႇသုင်၊ ၶႃႈၸိုဝ်ႈ ၸၢႆးသႅင်"
+// ၵၢၼ်ႁွင်ႉၸႂ်ႉ (Calling)
+console.log(sayHello("Sai Kham")); 
 
 ```
 
+* **လွင်ႈၶႅၼ်ႇမၼ်း:** မၼ်းမီး **Hoisting** ၶႃႈ။ ပွင်ႇဝႃႈ ၸဝ်ႈၵဝ်ႇၸၢင်ႈ "ႁွင်ႉၸႂ်ႉ" Function ၼႆႉ ဢွၼ်တၢင်းတေတႅမ်ႈမၼ်းၵေႃႈလႆႈၶႃႈ။
+
 ---
 
-### 2. Method Chaining (ၵၢၼ်ႁွင်ႉ Method သိုပ်ႇၵၼ်)
+### 2. Function Expression
 
-မၢင်ၵမ်းႁဝ်းၶႂ်ႈႁွင်ႉ `user1.login().update().logout()` သိုပ်ႇၵၼ်။ ပိူဝ်ႈတေႁဵတ်းလႆႈၼၼ်ႉ၊ ၼႂ်း Method ႁဝ်းလူဝ်ႇ `return this;` ၶိုၼ်းၶႃႈ။
+ၼႆႉပဵၼ်ၵၢၼ်သၢင်ႈ Function သေ ဢဝ်မၼ်းၵႂႃႇသိမ်းဝႆႉၼႂ်း **Variable** ၶႃႈ။
 
 ```javascript
-class Account {
-  constructor(balance) {
-    this.balance = balance;
-  }
-  deposit(amount) {
-    this.balance += amount;
-    return this; // သူင်ႇတူဝ် Object ၼႆႉၶိုၼ်း
-  }
-  withdraw(amount) {
-    this.balance -= amount;
-    return this;
-  }
-}
+const sayHello = function(name) {
+  return `မႂ်ႇသုင်ၶႃႈ ${name}!`;
+};
 
-const myAcc = new Account(100);
-myAcc.deposit(50).withdraw(20); 
-console.log(myAcc.balance); // 130
+// ၵၢၼ်ႁွင်ႉၸႂ်ႉ
+console.log(sayHello("Sai Kham"));
 
 ```
 
----
-
-### 3. Static Methods (Method ၶွင် Class)
-
-**Static Method** ပဵၼ် Function ဢၼ်မတ်ႉဝႆႉၸွမ်း "တူဝ် Class" ၵူၺ်း၊ ဢမ်ႇၸႂ်ႈၶွင် Object ဢၼ်သၢင်ႈဢွၵ်ႇမႃး (Instance)။ ႁဝ်းၵႆႉၸႂ်ႉမၼ်းတႃႇႁဵတ်း Helper functions။
-
-```javascript
-class Helper {
-  static logTime() {
-    console.log(new Date().toLocaleTimeString());
-  }
-}
-
-Helper.logTime(); // ႁွင်ႉလႆႈၵမ်းလဵဝ် လုၵ်ႉတီႈၸိုဝ်ႈ Class
-// const h = new Helper(); h.logTime(); // Error! ႁွင်ႉလုၵ်ႉတီႈ Object ဢမ်ႇလႆႈ
-
-```
+* **လွင်ႈၶႅၼ်ႇမၼ်း:** မၼ်းဢမ်ႇမီး Hoisting။ ၸဝ်ႈၵဝ်ႇတေလႆႈ "တႅမ်ႈမၼ်းယဝ်ႉ" ၸင်ႇတေႁွင်ႉၸႂ်ႉလႆႈၶႃႈ။ ၼႆႉႁဵတ်းႁႂ်ႈၵူတ်ႉႁဝ်းမီးပိူင် (Structure) လီလိူဝ်ၶႃႈ။
 
 ---
 
-### 4. Class vs Constructor Function
+### 3. လွင်ႈပႅၵ်ႇပိူင်ႈ ဢၼ်လမ်ႇလွင်ႈ (Key Differences)
 
-| Feature | Constructor Function | ES6 Class |
+| Feature | Function Declaration | Function Expression |
 | --- | --- | --- |
-| **Hoisting** | Hoisted (ႁွင်ႉဢွၼ်တၢင်းလႆႈ) | Not Hoisted (တေလႆႈတႅမ်ႈဢွၼ်တၢင်း) |
-| **Methods** | တေလႆႈထႅမ်သႂ်ႇ `.prototype` | တႅမ်ႈဝႆႉၼႂ်း `{ }` လႆႈၵမ်းလဵဝ် |
-| **Strict Mode** | ပဝ်ႇဝႆႉ (Optional) | ႁဵတ်းၵၢၼ်ၼႂ်း Strict Mode တႃႇသေႇ |
+| **Hoisting** | လႆႈ (ႁွင်ႉၸႂ်ႉဢွၼ်တၢင်းလႆႈ) | ဢမ်ႇလႆႈ (လူဝ်ႇတႅမ်ႈယဝ်ႉၸင်ႇၸႂ်ႉ) |
+| **ၸိုဝ်ႈ (Name)** | လူဝ်ႇမီးၸိုဝ်ႈတႃႇသေႇ | ၸၢင်ႈပဵၼ် Anonymous (ဢမ်ႇပၼ်ၸိုဝ်ႈ) |
+| **လွင်ႈၸႂ်ႉတိုဝ်း** | ၸႂ်ႉတႃႇ Logic ပိုၼ်ႉထၢၼ် | ၸႂ်ႉတႃႇ Logical Flow ဢၼ်သုၵ်ႉယုင်ႈ လႄႈ Callback |
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 19)
+### 4. Anatomy of a Function (တွၼ်ႈၵေႃႇသၢင်ႈ Function)
 
-* **Class**: ပဵၼ်လၢႆးတႅမ်ႈ OOP ဢၼ်သႅၼ်းသႃႇ လႄႈ ႁၢင်ႈလီ (Modern syntax)။
-* **Constructor**: ပဵၼ်တီႈသၢင်ႈ Properties မိူဝ်ႈတႄႇသၢင်ႈ Object။
-* **Static**: ၸႂ်ႉတႃႇသၢင်ႈ Methods ဢၼ်ၸႂ်ႉလႆႈလူၺ်ႈဢမ်ႇလူဝ်ႇ `new` Object။
+မိူဝ်ႈႁဝ်းသၢင်ႈ Function ၼိုင်ႈဢၼ် မၼ်းမီးတွၼ်ႈလမ်ႇလွင်ႈ 3 ယၢင်ႇ:
+
+1. **Parameters**: ၶေႃႈမုၼ်းဢၼ်ႁဝ်း "ႁပ်ႉၶဝ်ႈ" (Input)။
+2. **Function Body**: ၵူတ်ႉဢၼ်တေႁဵတ်းၵၢၼ်ၼႂ်း `{ }`။
+3. **Return Statement**: ၵႃႈၶၼ်ဢၼ်ႁဝ်း "သူင်ႇဢွၵ်ႇ" (Output)။
+
+> ⚠️ **သတိ:** သင် Function ဢမ်ႇမီး `return`၊ မၼ်းတေသူင်ႇၵႃႈၶၼ် `undefined` ဢွၵ်ႇမႃးပၼ်တႃႇသေႇၶႃႈ။
+
+---
+
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
+
+* **Function Declaration** လီတႃႇသၢင်ႈ Function ဢၼ်တေၸႂ်ႉၵူႈတီႈၼႂ်း File။
+* **Function Expression** လီတႃႇၵုမ်းၵမ် Logic ႁႂ်ႈသႅၼ်ႈသႂ် (Clean) လႄႈ ၸွႆႈႁႄႉၵင်ႈပၼ်ႁႃ Hoisting။
+* ၵူႈပွၵ်ႈဢၼ်ႁွင်ႉၸႂ်ႉ Function၊ JavaScript တေ "သၢင်ႈပိုၼ်ႉတီႈမႂ်ႇ" တႃႇၼပ်ႉသွၼ်ႇၵူတ်ႉၼၼ်ႉၶႃႈ။
 
 ---

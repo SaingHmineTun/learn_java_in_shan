@@ -1,83 +1,65 @@
-# Lesson 22: Object Composition vs. Inheritance
 
-ၼႂ်း Lesson ဢၼ်ပူၼ်ႉမႃး၊ ႁဝ်းႁဵၼ်းလွင်ႈ `extends` (Inheritance) ဢၼ်ပဵၼ်ၵၢၼ်သၢင်ႈပၵ်းပိူင် "Is-A" (ပဵၼ်မဵဝ်းၼိုင်ႈ)။ မိူၼ်ၼင်ႇ: *Dog **is an** Animal*.
-ၵူၺ်းၵႃႈ၊ မၢင်ၵမ်း Inheritance မၼ်းႁဵတ်းႁႂ်ႈၵူတ်ႉႁဝ်း "ၵႅၼ်ႇၶႅင်" (Rigid) လိူဝ်လႅတ်း။ ႁဝ်းၸင်ႇမီးထႅင်ႈလၢႆးၼိုင်ႈ ဢၼ်ႁွင်ႉဝႃႈ **Composition** ဢၼ်ပဵၼ်ပၵ်းပိူင် "Has-A" (မီးၵၢၼ်ႁဵတ်း) ၶႃႈ။
+# Lesson 22: The Return Keyword & Execution Flow
 
-### 1. ပၼ်ႁႃၶွင် Inheritance (The Fragile Base Class)
+ၼႂ်း JavaScript၊ Function တေႃႉမိူၼ်ၼင်ႇ "ၶိူင်ႈၸၢၵ်ႈ" ဢၼ်ႁဝ်းသႂ်ႇၶေႃႈမုၼ်းၶဝ်ႈၵႂႃႇ သေမၼ်းတေ "သူင်ႇ" (Return) သင်မဵဝ်းမဵဝ်းဢွၵ်ႇမႃးပၼ်ႁဝ်းၶႃႈ။
 
-မိူဝ်ႈႁဝ်းသိုပ်ႇပူၺ်ႈၸၼ်ႉလိုၵ်ႉလိူဝ်ၵဝ်ႇ (မိူၼ်ၼင်ႇ RobotDog extends Dog extends Animal)၊ သင်ႁဝ်းမႄးၵူတ်ႉၼႂ်း `Animal`၊ မၼ်းတေတုမ်ႉတိူဝ်ႉလုၵ်ႈလၢၼ်မၼ်းတင်းမူတ်း။ ၼႆႉႁွင်ႉဝႃႈ **Tight Coupling** ၶႃႈ။
+### 1. The `return` Keyword
 
----
+Keyword `return` မီးၼႃႈတီႈလမ်ႇလွင်ႈ 2 ယၢင်ႇ:
 
-### 2. Composition ပဵၼ်သင်?
-
-**Composition** မၢႆထိုင် ၵၢၼ်ဢဝ် "ၵၢၼ်ႁဵတ်း" (Behaviors) လၢႆလၢႆဢၼ် မႃးပၼ်ႇႁူမ်ႈၵၼ် ၼႂ်း Object ၼိုင်ႈဢၼ်။ တႅၼ်းၵၢၼ်ဢၼ်ဝႃႈ မၼ်း "ပဵၼ်" သင်၊ ႁဝ်းတူၺ်းဝႃႈ မၼ်း "ႁဵတ်း" သင်လႆႈ။
-
-**တူဝ်ယၢင်ႇ (Example):**
-ႁဝ်းမီး Robot (ၸၢၵ်ႈ) လႄႈ User (ၵူၼ်း)။ သွင်ဢၼ်ၼႆႉ ပႅၵ်ႇပိူင်ႈၵၼ်၊ ၵူၺ်းၵႃႈ သွင်ဢၼ်ၼႆႉ "လၢတ်ႈလႆႈ" (can speak) မိူၼ်ၵၼ်။
+1. **သူင်ႇၵႃႈၶၼ် (Output):** ဢဝ်ၵႃႈၶၼ်ဢၼ်ၼပ်ႉသွၼ်ႇယဝ်ႉ သူင်ႇဢွၵ်ႇမႃးပၼ်တီႈဢၼ်ႁဝ်းႁွင်ႉၸႂ်ႉ (Caller)။
+2. **ၵိုတ်းၵၢၼ်ႁဵတ်းၵၢၼ် (Terminate):** မိူဝ်ႈ JavaScript ႁဵတ်းၵၢၼ်မႃးထူပ်း `return` ယဝ်ႉ၊ မၼ်းတေ **"ၵိုတ်း"** ၵမ်းလဵဝ်။ ၵူတ်ႉဢၼ်တႅမ်ႈဝႆႉၽၢႆႇတႂ်ႈ `return` ၼၼ်ႉ တေဢမ်ႇထုၵ်ႇလႅၼ်ႈ (Unreachable code) ၶႃႈ။
 
 ```javascript
-// 1. သၢင်ႈၵၢၼ်ႁဵတ်း (Behaviors) ဝႆႉႁင်းၽႂ်ၽႂ်
-const canSpeak = (state) => ({
-  speak: () => console.log(`မႂ်ႇသုင်၊ ၶႃႈၸိုဝ်ႈ ${state.name}`)
-});
+function checkAge(age) {
+  if (age < 18) {
+    return "You are too young!"; // ၵိုတ်းတီႈၼႆႈ သင် age < 18
+  }
+  
+  // ၵူတ်ႉတွၼ်ႈၼႆႉတေႁဵတ်းၵၢၼ် မိူဝ်ႈ age >= 18 ၵူၺ်း
+  return "Welcome to the club!";
+}
 
-const canDrive = (state) => ({
-  drive: () => console.log(`${state.name} တိုၵ်ႉၶပ်းရူတ်ႉယူႇ...`)
-});
-
-// 2. ဢဝ်ၵၢၼ်ႁဵတ်းၸိူဝ်းၼၼ်ႉ မႃးႁူမ်ႈၵၼ် (Compose)
-const Person = (name) => {
-  let state = { name };
-  return Object.assign(
-    state,
-    canSpeak(state),
-    canDrive(state)
-  );
-};
-
-const Robot = (name) => {
-  let state = { name };
-  return Object.assign(
-    state,
-    canSpeak(state)
-  );
-};
-
-const sai = Person("ၸၢႆးၶမ်း");
-sai.speak(); // ႁဵတ်းလႆႈ
-sai.drive(); // ႁဵတ်းလႆႈ
-
-const bot = Robot("R2D2");
-bot.speak(); // ႁဵတ်းလႆႈ
-// bot.drive(); // Error! (ၵွပ်ႈႁဝ်းဢမ်ႇလႆႈထႅမ်သႂ်ႇပၼ်မၼ်း)
+console.log(checkAge(15)); // "You are too young!"
+console.log(checkAge(20)); // "Welcome to the club!"
 
 ```
 
 ---
 
-### 3. တႅၵ်ႈၼိူင်း Inheritance လႄႈ Composition
+### 2. Execution Flow (လၢႆးလႅၼ်ႈၶွင်ၵူတ်ႉ)
 
-| Feature | Inheritance (သိုပ်ႇပူၺ်ႈ) | Composition (ႁူမ်ႈၵၼ်) |
-| --- | --- | --- |
-| **Relationship** | **Is-A** (မိူၼ်ၼင်ႇ မႃ ပဵၼ် သတ်း) | **Has-A** (မိူၼ်ၼင်ႇ ရူတ်ႉ မီး ၵွင်ႉ) |
-| **Flexibility** | ၵႅၼ်ႇၶႅင်၊ မႄးယၢပ်ႇ (Rigid) | လႅတ်းသႅဝ်း၊ မႄးငၢႆႈ (Flexible) |
-| **Structure** | Hierarchy (ပဵၼ်ၸၼ်ႉပဵၼ်ထႅဝ်) | Flat (ပဵၼ်လွၵ်းၽႂ်ႇလွၵ်းမၼ်း) |
-| **Reuse** | သိုပ်ႇဢဝ်တင်းမူတ်း (တင်းလီတင်းႁၢႆႉ) | လိူၵ်ႈဢဝ်ၵူၺ်း ဢၼ်လူဝ်ႇၸႂ်ႉ |
+မိူဝ်ႈႁဝ်းႁွင်ႉၸႂ်ႉ Function:
 
----
+1. JavaScript တေ **"ၵျေႃႇ"** ၶဝ်ႈၵႂႃႇၼႂ်း Function ၼၼ်ႉ။
+2. လႅၼ်ႈၵူတ်ႉထႅဝ်ပၼ်ထႅဝ်။
+3. မိူဝ်ႈထူပ်း `return`၊ မၼ်းတေ **"ၵျေႃႇဢွၵ်ႇ"** မႃးၶိုၼ်း တီႈဢၼ်မၼ်းထုၵ်ႇႁွင်ႉၸႂ်ႉၼၼ်ႉ ဢိၵ်ႇတင်းၵႃႈၶၼ်ဢၼ်လႆႈမႃးၶႃႈ။
 
-### 4. မိူဝ်ႈလႂ်ထိုင်လီၸႂ်ႉသင်?
-
-* **ၸႂ်ႉ Inheritance:** မိူဝ်ႈ Object ၼၼ်ႉ ပဵၼ်မဵဝ်းလဵဝ်ၵၼ်တေႉတေႉ လႄႈ ပၵ်းပိူင်မၼ်းၼိမ်ဝႆႉယဝ်ႉ (မိူၼ်ၼင်ႇ UI Component -> Button)။
-* **ၸႂ်ႉ Composition:** မိူဝ်ႈၸဝ်ႈၵဝ်ႇလူဝ်ႇၵၢၼ်ႁဵတ်း ဢၼ်လႅၵ်ႈလၢႆႈလႆႈငၢႆႈ လႄႈ ၶႂ်ႈဢဝ်ၵၢၼ်ႁဵတ်းလၢႆလၢႆမဵဝ်း မႃးလေႃးၵၼ် (မိူၼ်ၼင်ႇ ၵူၼ်းလဵၼ်ႈၵဵမ်း ဢၼ်ပဵၼ်လႆႈတင်း ၵူၼ်းယိုဝ်း လႄႈ ၵူၼ်းႁဵတ်းယႃ)။
+> ⚠️ **သတိ:** သင်ၸဝ်ႈၵဝ်ႇဢမ်ႇတႅမ်ႈ `return` ဝႆႉ၊ Function ၼၼ်ႉတေသူင်ႇၵႃႈၶၼ် **`undefined`** ဢွၵ်ႇမႃးပၼ်ႁဝ်းလူၺ်ႈသၽႃႇဝမၼ်းၶႃႈ။
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 22)
+### 3. Returning Multiple Values?
 
-* **Inheritance**: လီတႃႇသၢင်ႈပၵ်းပိူင်လူင် (Taxonomy)။
-* **Composition**: လီတႃႇသၢင်ႈၵၢၼ်ႁဵတ်းဢၼ်လႅတ်းသႅဝ်း (Plug-and-play behavior)။
-* **Rule of Thumb**: "Favor object composition over class inheritance" (လိူၵ်ႈၸႂ်ႉ Composition ဢွၼ်တၢင်း Inheritance သင်ပဵၼ်လႆႈ)။
+တေႉတေႉမၼ်း `return` သူင်ႇလႆႈၵႃႈၶၼ် "ဢၼ်လဵဝ်" ၵူၺ်း။ ၵူၺ်းၵႃႈ သင်ႁဝ်းၶႂ်ႈသူင်ႇလၢႆလၢႆယၢင်ႇ ႁဝ်းၸၢင်ႈဢဝ်ၶဝ်သႂ်ႇဝႆႉၼႂ်း **Array** ႁိုဝ် **Object** လႆႈၶႃႈ။
+
+```javascript
+function getStats(scores) {
+  const sum = scores.reduce((a, b) => a + b, 0);
+  return {
+    total: sum,
+    average: sum / scores.length
+  }; // သူင်ႇ Object ဢွၵ်ႇၵႂႃႇ
+}
+
+```
+
+---
+
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
+
+* `return` ၸွႆႈႁႂ်ႈ Function မီးၵႃႈၶၼ် (Result) ဢၼ်ႁဝ်းၸၢင်ႈဢဝ်ၵႂႃႇသိမ်းၼႂ်း Variable လႆႈ။
+* ၵူတ်ႉဢၼ်ယူႇၽၢႆႇတႂ်ႈ `return` တေဢမ်ႇႁဵတ်းၵၢၼ်။
+* သင်ဢမ်ႇမီး `return`၊ ၵႃႈၶၼ်မၼ်းတေပဵၼ် `undefined`။
 
 ---
