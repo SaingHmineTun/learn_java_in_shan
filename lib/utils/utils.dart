@@ -689,7 +689,6 @@ const Map<int, Map<int, String>> jsModules = {
     77: "Environment Variables (.env)",
     78: "Debugging with Browser DevTools",
     79: "Performance Profiling Basics",
-    80: "Final Capstone Project & Deployment",
   },
 };
 
@@ -1153,6 +1152,14 @@ final Map<int, Lesson> jsLessons = {
   69: Lesson(8, 69),
   70: Lesson(8, 70),
   71: Lesson(8, 71),
+  72: Lesson(9, 72),
+  73: Lesson(9, 73),
+  74: Lesson(9, 74),
+  75: Lesson(9, 75),
+  76: Lesson(9, 76),
+  77: Lesson(9, 77),
+  78: Lesson(9, 78),
+  79: Lesson(9, 79),
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
