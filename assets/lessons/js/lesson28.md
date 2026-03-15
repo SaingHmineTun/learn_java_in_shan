@@ -1,67 +1,67 @@
-# Lesson 28: Maps (ၵၢၼ်ၵွင်ႉ Key ၸူး Value)
+# Lesson 28: Array Basics & Storing Data
 
-**Map** ပဵၼ် Object မဵဝ်းၼိုင်ႈ ဢၼ်ၸွႆႈႁဝ်းၵဵပ်းၶေႃႈမုၼ်း မိူၼ်ၼင်ႇ "ဝတ်ႉထု" (Key) လႄႈ "ၵႃႈၶၼ်" (Value) မၼ်း။
+**Array** ပဵၼ် "ၵူတ်ႇၶေႃႈမုၼ်း" (Data Structure) ဢၼ်လမ်ႇလွင်ႈသုတ်းၼႂ်း JavaScript။ မၼ်းပဵၼ် "သဵၼ်ႈမၢႆ" (List) ဢၼ်ၸၢင်ႈသိမ်းၵႃႈၶၼ် (Values) လၢႆလၢႆဢၼ်ႁူမ်ႈၵၼ်ဝႆႉၼႂ်း Variable တူဝ်လဵဝ်ၵူၺ်းၶႃႈ။
 
-### 1. ယွၼ်ႉသင်လူဝ်ႇၸႂ်ႉ Map? (Map vs Object)
+### 1. လၢႆးသၢင်ႈ Array
 
-ပႅၵ်ႇသေ Object၊ Map မီးလွင်ႈလၢၵ်ႇလၢႆး 3 ယၢင်ႇ:
-
-1. **Key Type**: ၼႂ်း Object၊ Key တေလႆႈပဵၼ် String ၵူၺ်း။ ၵူၺ်းၵႃႈၼႂ်း Map၊ **ၸဝ်ႈၵဝ်ႇဢဝ် Number, Array, ႁိုဝ် Object ႁဵတ်းပဵၼ် Key ၵေႃႈလႆႈ**။
-2. **Size**: ႁဝ်းၸၢင်ႈႁူႉတူဝ်ၼပ်ႉၶေႃႈမုၼ်းလႆႈငၢႆႈငၢႆႈလူၺ်ႈ `.size`။
-3. **Order**: Map တေတွၼ်းမၢႆလမ်ႇတပ်ႉ (Order) ဢၼ်ႁဝ်းသႂ်ႇၶေႃႈမုၼ်းၶဝ်ႈၵႂႃႇ။
-
----
-
-### 2. Methods ဢၼ်ၸႂ်ႉၼႂ်း Map
-
-ၵၢၼ်ၸတ်းၵၢၼ် Map တေၸႂ်ႉ Methods ၸိူင်ႉၼႆၶႃႈ:
-
-* **`.set(key, value)`**: ထႅမ်ၶေႃႈမုၼ်းမႂ်ႇ (ႁိုဝ် မႄးၵႃႈၶၼ်ၵဝ်ႇ)။
-* **`.get(key)`**: ႁွင်ႉဢဝ်ၵႃႈၶၼ် (Value) လုၵ်ႉတီႈ Key။
-* **`.has(key)`**: ၵူတ်ႇထတ်းဝႃႈ မီး Key ၼႆႉယူႇႁႃႉ?
-* **`.delete(key)`**: မၢတ်ႇၶေႃႈမုၼ်းဢွၵ်ႇ။
-* **`.size`**: တူဝ်ၼပ်ႉၶေႃႈမုၼ်းတင်းမူတ်း။
+ႁဝ်းၸႂ်ႉၶိူင်ႈမၢႆ **Square Brackets `[ ]**` သေ ၸႅၵ်ႇ Element တူဝ်ၼိုင်ႈ လႄႈ တူဝ်ၼိုင်ႈလူၺ်ႈၶိူင်ႈမၢႆ **Comma (`,`)** ၶႃႈ။
 
 ```javascript
-const userRoles = new Map();
+// Array ဢၼ်သိမ်း String
+const students = ["Sai Kham", "Nan Shwe", "Aung Aung"];
 
-// ထႅမ်ၶေႃႈမုၼ်း
-userRoles.set("sai", "admin");
-userRoles.set("nan", "editor");
-userRoles.set(101, "guest"); // ၸႂ်ႉ Number ပဵၼ် Key ၵေႃႈလႆႈ
+// Array ဢၼ်သိမ်း Number
+const scores = [85, 92, 78, 100];
 
-console.log(userRoles.get("sai")); // "admin"
-console.log(userRoles.size); // 3
+// Array ဢၼ်သိမ်းၶေႃႈမုၼ်းလၢႆမဵဝ်း (Mixed Data)
+const mixed = ["Apple", 25, true, null];
 
 ```
 
 ---
 
-### 3. ၵၢၼ်ပၼ်ႇလူ Map (Iterating)
+### 2. Zero-Based Indexing (ၵၢၼ်ၼပ်ႉဢွင်ႈတီႈ)
 
-ႁဝ်းၸၢင်ႈၸႂ်ႉ `for...of` loop တႃႇလူတူၺ်းၶေႃႈမုၼ်းၼႂ်း Map လႆႈငၢႆႈငၢႆႈၶႃႈ:
+လွင်ႈလမ်ႇလွင်ႈသုတ်းတႄႉပဵၼ် JavaScript တႄႇၼပ်ႉဢွင်ႈတီႈ Element ဢွၼ်တၢင်းသုတ်း တီႈ **0** (ဢမ်ႇၸႂ်ႈ 1) ၶႃႈ။
+
+* **Index 0**: Element တူဝ်တီႈ 1
+* **Index 1**: Element တူဝ်တီႈ 2
+* **Index n**: Element တူဝ်တီႈ n+1
 
 ```javascript
-for (const [name, role] of userRoles) {
-  console.log(`${name} ပဵၼ် ${role}`);
-}
+const fruits = ["Mango", "Banana", "Orange"];
+
+console.log(fruits[0]); // "Mango"
+console.log(fruits[2]); // "Orange"
+
+// ၵၢၼ်လႅၵ်ႈလၢႆႈၶေႃႈမုၼ်း (Modifying)
+fruits[1] = "Apple";
+console.log(fruits); // ["Mango", "Apple", "Orange"]
 
 ```
 
 ---
 
-### 4. မိူဝ်ႈလႂ်ထိုင်လီၸႂ်ႉ Map?
+### 3. The `.length` Property
 
-* မိူဝ်ႈ Key ၶွင်ၸဝ်ႈၵဝ်ႇ ဢမ်ႇၸႂ်ႈ String (မိူၼ်ၼင်ႇ ဢဝ် Object ၵွင်ႉၸူး ၶေႃႈမုၼ်းတၢင်ႇဢၼ်)။
-* မိူဝ်ႈၸဝ်ႈၵဝ်ႇလူဝ်ႇထႅမ် လႄႈ မၢတ်ႇၶေႃႈမုၼ်း "ၼမ်ၼႃႇ လႄႈ ၽႂ်းၽၢႆ"။
-* မိူဝ်ႈလူဝ်ႇၵုမ်းထိူင်း လမ်ႇတပ်ႉ (Order) ၶေႃႈမုၼ်း။
+ႁဝ်းၸၢင်ႈတူၺ်းဝႃႈ ၼႂ်း Array မီးၶေႃႈမုၼ်းတင်းမူတ်းၵႃႈႁိုင် လူၺ်ႈၸႂ်ႉ `.length` ၶႃႈ။
+
+```javascript
+const colors = ["Red", "Green", "Blue", "Yellow"];
+
+console.log(colors.length); // 4
+
+// တူဝ်ယၢင်ႇ: ဢဝ်တူဝ်လင်သုတ်း (Last Element)
+console.log(colors[colors.length - 1]); // "Yellow"
+
+```
 
 ---
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Map** လႅတ်းလိူဝ် Object ၵွပ်ႈ Key ပဵၼ်လႆႈၵူႈမဵဝ်း။
-* ၸႂ်ႉ **`.set()`** လႄႈ **`.get()`** တႃႇၸတ်းၵၢၼ်ၶေႃႈမုၼ်း။
-* လီသုတ်း တႃႇၸႂ်ႉႁဵတ်း **Dictionary** ႁိုဝ် **Lookup Table** ဢၼ်လူဝ်ႇ Performance သုင်။
+* **Array** ၸွႆႈႁႂ်ႈႁဝ်းဢမ်ႇလူဝ်ႇသၢင်ႈ Variable ၼမ်ၼႃႇ (မိူၼ်ၼင်ႇ student1, student2, student3)။
+* တွၼ်းဝႆႉတႃႇသေႇဝႃႈ **Index တႄႇတီႈ 0**။
+* ႁဝ်းၸၢင်ႈသိမ်း Array ဝႆႉၼႂ်း `const` ၵူၺ်းၵႃႈ ယင်းတိုၵ်ႉ "လႅၵ်ႈလၢႆႈ" ၶေႃႈမုၼ်းၽၢႆႇၼႂ်းမၼ်းလႆႈယူႇ (ယွၼ်ႉ Array ပဵၼ် Reference Type)။
 
 ---

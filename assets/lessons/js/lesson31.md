@@ -1,62 +1,67 @@
+# Lesson 31: Searching: indexOf, includes, findIndex** ၶႃႈ။
 
-# Lesson 31: JSON (JavaScript Object Notation)
 
-**JSON** ပဵၼ် "ၽႃႇသႃႇၵၢင်" ဢၼ်ၸႂ်ႉတႃႇၵဵပ်း လႄႈ သူင်ႇၶေႃႈမုၼ်း (Data Exchange)။ မၼ်းမီးပိုၼ်ႉထၢၼ်မႃးလုၵ်ႉတီႈ JavaScript Object ၵူၺ်းၵႃႈ မၼ်းပဵၼ် **String (လိၵ်ႈ)** ၶႃႈ။
+### 1. `indexOf()` (ႁႃဢွင်ႈတီႈ/Index)
 
-### 1. ပႅၵ်ႇပိူင်ႈတင်း JS Object ၸိူင်ႉႁိုဝ်?
+ႁဝ်းၸႂ်ႉ `indexOf` တႃႇႁႃဝႃႈ ၶေႃႈမုၼ်းၼိုင်ႈဢၼ် ယူႇတီႈ **Index** မၢႆၵႃႈႁိုင်ၶႃႈ။
 
-ၼႂ်း JSON၊ ပၵ်းပိူင်မၼ်းတေ "ၵႅၼ်ႇၶႅင်" လိူဝ် JS Object:
-
-1. **Keys**: တေလႆႈယူႇၼႂ်း Double Quotes (`" "`) တႃႇသေႇ။
-2. **Strings**: တေလႆႈၸႂ်ႉ Double Quotes (`" "`) ၵူၺ်း (ၸႂ်ႉ `' '` ဢမ်ႇလႆႈ)။
-3. **Functions**: JSON ဢမ်ႇၵဵပ်း Function, Method, ႁိုဝ် `undefined` လႆႈ။
-4. **Trailing Commas**: တူဝ်လိုၼ်းသုတ်း ဢမ်ႇပၼ်ႁႂ်ႈမီး "," ၶႃႈ။
-
----
-
-### 2. Methods တႃႇၸတ်းၵၢၼ် JSON
-
-JavaScript မီး Object ဢၼ်ၸိုဝ်ႈဝႃႈ `JSON` ဝႆႉႁင်းၵူၺ်း ပိူဝ်ႈတေလႅၵ်ႈလၢႆႈၶေႃႈမုၼ်းၶႃႈ။
-
-#### A. `JSON.stringify()` (လႅၵ်ႈ Object ႁႂ်ႈပဵၼ် String)
-
-ၸႂ်ႉမိူဝ်ႈႁဝ်းၶႂ်ႈ "သူင်ႇ" ၶေႃႈမုၼ်းၵႂႃႇၸူး Server ႁိုဝ် သိမ်းဝႆႉၼႂ်း Browser (LocalStorage)။
+* သင်ႁၼ်: မၼ်းတေသူင်ႇ Index (0, 1, 2, ...) ဢွၵ်ႇမႃး။
+* သင်ဢမ်ႇႁၼ်: မၼ်းတေသူင်ႇ **`-1`** ဢွၵ်ႇမႃးတႃႇသေႇၶႃႈ။
 
 ```javascript
-const user = { name: "Sai Kham", age: 25 };
-const jsonString = JSON.stringify(user);
+const beasts = ["Lion", "Tiger", "Elephant", "Tiger"];
 
-console.log(jsonString); // '{"name":"Sai Kham","age":25}'
-console.log(typeof jsonString); // "string"
-
-```
-
-#### B. `JSON.parse()` (လႅၵ်ႈ String ၶိုၼ်းပဵၼ် Object)
-
-ၸႂ်ႉမိူဝ်ႈႁဝ်း "ႁပ်ႉ" ၶေႃႈမုၼ်းလုၵ်ႉတီႈ Server မႃး သေ ၶႂ်ႈဢဝ်မႃးၸႂ်ႉၼႂ်းၵူတ်ႉ JavaScript။
-
-```javascript
-const response = '{"status":"success", "id": 101}';
-const data = JSON.parse(response);
-
-console.log(data.status); // "success"
-console.log(typeof data); // "object"
+console.log(beasts.indexOf("Tiger"));    // 1 (မၼ်းတေဢဝ်တူဝ်ဢွၼ်တၢင်းသုတ်းဢၼ်ႁၼ်)
+console.log(beasts.indexOf("Giraffe"));  // -1 (ယွၼ်ႉဢမ်ႇမီးၼႂ်း Array)
 
 ```
 
 ---
 
-### 3. ယွၼ်ႉသင် JSON ထိုင်လမ်ႇလွင်ႈ?
+### 2. `includes()` (ၵူတ်ႇထတ်းဝႃႈ "မီးႁႃႉ?")
 
-ယွၼ်ႉဝႃႈ JSON ပဵၼ် Text-based (ပဵၼ်တူဝ်လိၵ်ႈ)၊ မၼ်းၸင်ႇမီးၼမ်ႉၼၵ်း "မဝ်" လႄႈ ၸၢင်ႈၸႂ်ႉလႆႈတင်း ၵူႈၽႃႇသႃႇ (Python, PHP, Java, Ruby)။ ၼႆႉၸင်ႇႁဵတ်းႁႂ်ႈ Browser လၢတ်ႈတေႃႇတင်း Server လႆႈငၢႆႈငၢႆႈၶႃႈ။
+ၼႆႉပဵၼ်လၢႆးဢၼ်ငၢႆႈသုတ်း တႃႇၵူတ်ႇထတ်းဝႃႈ ၶေႃႈမုၼ်းၼၼ်ႉ "မီး" ႁိုဝ် "ဢမ်ႇမီး" ၼႂ်း Array ၶႃႈ။ မၼ်းတေသူင်ႇၵႃႈၶၼ်ပဵၼ် **Boolean** ဢွၵ်ႇမႃး။
+
+```javascript
+const shelf = ["Book", "Pen", "Laptop"];
+
+console.log(shelf.includes("Pen"));    // true
+console.log(shelf.includes("Phone"));  // false
+
+```
+
+---
+
+### 3. `findIndex()` (ႁႃ Index လူၺ်ႈမီး "ၶေႃႈၵၢတ်ႇ")
+
+တွၼ်ႈၼႆႉသမ်ႉပဵၼ် **Higher-Order Function** ၶႃႈ။ ႁဝ်းၸႂ်ႉမၼ်းမိူဝ်ႈႁဝ်းဢမ်ႇႁႃ "ၵႃႈၶၼ်တႅတ်ႉတေႃး" ၵူၺ်း၊ ၵူၺ်းၵႃႈႁဝ်းႁႃ "ၶေႃႈမုၼ်း ဢၼ်ၵျႃႉၸွမ်းၼင်ႇၶေႃႈၵၢတ်ႇ (Condition)" ႁဝ်းၶႃႈ။
+
+```javascript
+const ages = [10, 15, 22, 18, 30];
+
+// ႁႃ Index ၶွင်ၵူၼ်းၵေႃႉဢွၼ်တၢင်းသုတ်း ဢၼ်ဢႃႇယု 20 ၶိုၼ်ႈၼိူဝ်
+const result = ages.findIndex(age => age > 20);
+
+console.log(result); // 2 (ယွၼ်ႉ 22 ယူႇတီႈ Index 2)
+
+```
+
+---
+
+### 💡 တႅၵ်ႈၼိူဝ် (Comparison Table)
+
+| Method | ၵႃႈၶၼ်ဢၼ်သူင်ႇဢွၵ်ႇ (Returns) | မိူဝ်ႈလႂ်တေၸႂ်ႉ? |
+| --- | --- | --- |
+| **`indexOf`** | Index (Number) | မိူဝ်ႈႁူႉ "ၵႃႈၶၼ်" တႅတ်ႉတေႃး သေၶႂ်ႈလႆႈဢွင်ႈတီႈမၼ်း။ |
+| **`includes`** | True / False | မိူဝ်ႈၶႂ်ႈႁူႉဝႃႈ "မီးႁိုဝ်ဢမ်ႇမီး" ၵူၺ်း။ |
+| **`findIndex`** | Index (Number) | မိူဝ်ႈလူဝ်ႇႁႃလူၺ်ႈၸႂ်ႉ "Logic" (မိူၼ်ၼင်ႇ ႁႃတူဝ်ဢၼ်ယႂ်ႇလိူဝ် 100)။ |
 
 ---
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **JSON** ပဵၼ်လိၵ်ႈ (String)၊ ဢမ်ႇၸႂ်ႈ Object တေႉတေႉ။
-* **`JSON.stringify()`**: Object -> JSON String (တႃႇသူင်ႇ/သိမ်း)။
-* **`JSON.parse()`**: JSON String -> Object (တႃႇဢဝ်မႃးၸႂ်ႉ)။
-* **Double Quotes** လမ်ႇလွင်ႈၼႃႇၼႂ်း JSON။
+* သင်တေၸႂ်ႉၼႂ်း `if` statement ယူဝ်းယူဝ်း၊ **`includes`** တေလူယႃႇငၢႆႈလိူဝ်ပိူၼ်ႈ။
+* တွၼ်းဝႆႉဝႃႈ **`indexOf`** သူင်ႇ `-1` သင်ဢမ်ႇႁၼ် (ၼႆႉပဵၼ် Bug ဢၼ်ၵႆႉၵိူတ်ႇသုတ်း တႃႇၵူၼ်းတႅမ်ႈၵူတ်ႉမႂ်ႇၶႃႈ)။
+* **`findIndex`** ၸွႆႈႁႂ်ႈႁဝ်းႁႃၶေႃႈမုၼ်း ဢၼ်သုၵ်ႉယုင်ႈလိူဝ်ၵဝ်ႇလႆႈ။
 
 ---

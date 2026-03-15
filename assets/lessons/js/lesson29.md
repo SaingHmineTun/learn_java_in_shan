@@ -1,83 +1,70 @@
-# Lesson 29: Destructuring (ၵၢၼ်ထွတ်ႇဢဝ်ၶေႃႈမုၼ်း)
+# Lesson 29: Adding/Removing Elements
 
-မိူဝ်ႈၵွၼ်ႇ၊ သင်ႁဝ်းၶႂ်ႈဢဝ်ၶေႃႈမုၼ်းၼႂ်း Object မႃးၸႂ်ႉ၊ ႁဝ်းတေလႆႈတႅမ်ႈယၢဝ်းၼႃႇ။ ၵူၺ်းၵႃႈ Destructuring ၸွႆႈႁႂ်ႈၵူတ်ႉႁဝ်း "သႅၼ်ႈသႂ်" (Clean) လိူဝ်ၵဝ်ႇၶႃႈ။
+ၼႂ်း JavaScript မီး Method ပိုၼ်ႉထၢၼ် 4 ဢၼ် ဢၼ်ႁဝ်းတေလႆႈၸႂ်ႉၵႆလိူဝ်ပိူၼ်ႈ တႃႇၸတ်းၵၢၼ်တင်း ႁူဝ် (Front) လႄႈ ႁၢင် (End) ၶွင် Array ၶႃႈ။
 
-### 1. Object Destructuring
+### 1. ၵၢၼ်ၸတ်းၵၢၼ်တီႈ "ႁၢင်" (The End)
 
-ၸႂ်ႉတွၵ်ႇပိၵ်ႉ `{ }` တႃႇထွတ်ႇဢဝ် Properties ၸွမ်းၼင်ႇ "ၸိုဝ်ႈ" မၼ်း။
+လၢႆးၼႆႉပဵၼ်ဢၼ်ၽႂ်းသုတ်း လႄႈ ၵႆႉၸႂ်ႉသုတ်းၶႃႈ။
 
-```javascript
-const user = {
-  name: "ၸၢႆးၶမ်း",
-  age: 25,
-  city: "တႃႈၵုင်ႈ"
-};
-
-// လၢႆးၵဝ်ႇ:
-// const name = user.name;
-// const age = user.age;
-
-// လၢႆးမႂ်ႇ (Destructuring):
-const { name, age, city } = user;
-
-console.log(name); // "ၸၢႆးၶမ်း"
-console.log(city); // "တႃႈၵုင်ႈ"
-
-```
-
-* **ၵၢၼ်လႅၵ်ႈၸိုဝ်ႈ (Renaming):** သင်ႁဝ်းၶႂ်ႈလႅၵ်ႈၸိုဝ်ႈတူဝ်လႅၵ်ႈမႂ်ႇ ၸႂ်ႉ `:` ၶႃႈ။
-  `const { name: userName } = user;` -> ၵမ်းၼႆႉၸႂ်ႉ `userName` တႅၼ်း။
-
----
-
-### 2. Array Destructuring
-
-ၸႂ်ႉတွၵ်ႇၵႅတ်း `[ ]` တႃႇထွတ်ႇဢဝ်ၶေႃႈမုၼ်းၸွမ်းၼင်ႇ "လမ်ႇတပ်ႉ" (Position) မၼ်း။
+* **`push()`**: ထႅမ်ၶေႃႈမုၼ်းသႂ်ႇ **ၽၢႆႇလင်သုတ်း** ၶွင် Array။
+* **`pop()`**: ထွၼ်ဢဝ်ၶေႃႈမုၼ်း **တူဝ်လင်သုတ်း** ဢွၵ်ႇပႅတ်ႈ (သေမၼ်းတေသူင်ႇ Return ၵႃႈၶၼ်ဢၼ်ထွၼ်ဢွၵ်ႇၼၼ်ႉမႃးပၼ်ႁဝ်းၶႃႈ)။
 
 ```javascript
-const colors = ["Red", "Green", "Blue"];
+let sports = ["Football", "Tennis"];
 
-// ထွတ်ႇဢဝ်တူဝ်ဢွၼ်တၢင်း လႄႈ တူဝ်ထႅၼ်ႈသွင်
-const [firstColor, secondColor] = colors;
+sports.push("Basketball"); 
+// ["Football", "Tennis", "Basketball"]
 
-console.log(firstColor);  // "Red"
-console.log(secondColor); // "Green"
-
-// သင်ၶႂ်ႈၶၢမ်ႈ (Skip) တူဝ်လႂ်တူဝ်ၼိုင်ႈ ၸႂ်ႉ "," ပဝ်ႇဝႆႉ
-const [primary, , tertiary] = colors;
-console.log(tertiary); // "Blue"
+let removedSport = sports.pop(); 
+// sports ပဵၼ် ["Football", "Tennis"]
+// removedSport ပဵၼ် "Basketball"
 
 ```
 
 ---
 
-### 3. Function Parameter Destructuring
+### 2. ၵၢၼ်ၸတ်းၵၢၼ်တီႈ "ႁူဝ်" (The Front)
 
-ၼႆႉပဵၼ်လၢႆးဢၼ်ၸႂ်ႉၼမ်သုတ်း ၼႂ်းၵၢၼ်တႅမ်ႈ **React** ႁိုဝ် Modern Frameworks ၶႃႈ။
+လၢႆးၼႆႉတေၸႂ်ႉၶိင်ႇၼမ်လိူဝ်ဢိတ်းၼိုင်ႈ ယွၼ်ႉ JavaScript တေလႆႈ "ၶၢႆႉ" (Re-index) ၶေႃႈမုၼ်းတူဝ်တၢင်ႇၸိူဝ်းၵႂႃႇၽၢႆႇလင်ၶႃႈ။
+
+* **`unshift()`**: ထႅမ်ၶေႃႈမုၼ်းသႂ်ႇ **ၽၢႆႇၼႃႈသုတ်း**။
+* **`shift()`**: ထွၼ်ဢဝ်ၶေႃႈမုၼ်း **တူဝ်ၼႃႈသုတ်း** ဢွၵ်ႇပႅတ်ႈ။
 
 ```javascript
-const person = { name: "ၼၢင်းမူဝ်", role: "Developer" };
+let cats = ["Persian", "Siamese"];
 
-// ထွတ်ႇဢဝ် Properties တီႈၼႂ်း Parameter ၵမ်းလဵဝ်
-function greet({ name, role }) {
-  console.log(`မႂ်ႇသုင်ၶႃႈ ${name}၊ ၸဝ်ႈၵဝ်ႇပဵၼ် ${role} ႁႃႉ?`);
-}
+cats.unshift("Maine Coon");
+// ["Maine Coon", "Persian", "Siamese"]
 
-greet(person);
+cats.shift();
+// ["Persian", "Siamese"]
 
 ```
 
 ---
 
-### 4. Default Values (ၵႃႈၶၼ်ပိုၼ်ႉထၢၼ်)
+### 💡 တွၼ်းငၢႆႈငၢႆႈ (Memory Aid)
 
-သင်ဝႃႈၶေႃႈမုၼ်းၼၼ်ႉဢမ်ႇမီး (undefined)၊ ႁဝ်းၸၢင်ႈသႂ်ႇၵႃႈၶၼ်ပိုၼ်ႉထၢၼ်ဝႆႉလႆႈၶႃႈ။
+တႃႇႁႂ်ႈဢမ်ႇလူင်ၵၼ် ႁႂ်ႈတွၼ်းဝႆႉၼႆၶႃႈ:
+
+* **Push & Pop**: ၸတ်းၵၢၼ်တီႈ **End** (ႁၢင်)။
+* **Unshift & Shift**: ၸတ်းၵၢၼ်တီႈ **Start** (ႁူဝ်)။
+* **Pop & Shift**: ပဵၼ်ၵၢၼ် **Remove** (ထွၼ်ဢွၵ်ႇ) — သွင်တူဝ်ၼႆႉၸိုဝ်ႈမၼ်း "ပွတ်း" လိူဝ်။
+* **Push & Unshift**: ပဵၼ်ၵၢၼ် **Add** (ထႅမ်သႂ်ႇ) — သွင်တူဝ်ၼႆႉၸိုဝ်ႈမၼ်း "ယၢဝ်း" လိူဝ်။
+
+---
+
+### 💻 တူဝ်ယၢင်ႇပွင်း (Combined Example)
 
 ```javascript
-const settings = { theme: "dark" };
-const { theme, fontSize = 16 } = settings;
+const todoList = ["Eat", "Sleep"];
 
-console.log(fontSize); // 16 (ၵွပ်ႈၼႂ်း Object ဢမ်ႇမီး fontSize)
+todoList.push("Code");      // ["Eat", "Sleep", "Code"]
+todoList.unshift("Pray");   // ["Pray", "Eat", "Sleep", "Code"]
+todoList.pop();             // ["Pray", "Eat", "Sleep"]
+todoList.shift();           // ["Eat", "Sleep"]
+
+console.log(todoList);      // ["Eat", "Sleep"]
 
 ```
 
@@ -85,8 +72,7 @@ console.log(fontSize); // 16 (ၵွပ်ႈၼႂ်း Object ဢမ်ႇမ
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Object Destructuring**: ထွတ်ႇၸွမ်း **"ၸိုဝ်ႈ"** (Key)။
-* **Array Destructuring**: ထွတ်ႇၸွမ်း **"လမ်ႇတပ်ႉ"** (Index)။
-* ၸွႆႈႁႂ်ႈၵူတ်ႉသိုဝ်ႈငၢႆႈ၊ လူယႃႇငၢႆႈ လႄႈ ဢမ်ႇလူဝ်ႇတႅမ်ႈၸိုဝ်ႈ Object သမ်ႉၵၼ်ၼမ်။
+* **`push`** လႄႈ **`pop`** ႁဵတ်းၵၢၼ်ၽႂ်းလိူဝ် (Faster) ယွၼ်ႉဢမ်ႇလူဝ်ႇလႅၵ်ႈလၢႆႈ Index တူဝ်တၢင်ႇၸိူဝ်း။
+* Method တင်း 4 ဢၼ်ၼႆႉ တေ **လႅၵ်ႈလၢႆႈ (Mutate)** Array တူဝ်တေႉမၼ်းၵမ်းလဵဝ်ၶႃႈ။
 
 ---

@@ -1,77 +1,72 @@
-# Lesson 30: Spread & Rest Operator (`...`)
+# Lesson 30: Modifying: splice, slice, and concat
 
-တူဝ်လႅၵ်ႈ `...` ၼႆႉ ၸွႆႈႁႂ်ႈႁဝ်းၸတ်းၵၢၼ် Array လႄႈ Object လႆႈလႅတ်းၽႂ်းၼႃႇ။
+### 1. `slice()` (ၵၢၼ်ထုတ်ႇဢဝ်/ၵေႃႇပီႇ)
 
-### 1. Spread Operator (ၵၢၼ်ၽႅၼ်ႇဢွၵ်ႇ)
+`slice` ပွင်ႇဝႃႈ "တတ်းဢဝ်ပွတ်းၼိုင်ႈ" ၶႃႈ။ မၼ်းတေ **ဢမ်ႇလႅၵ်ႈလၢႆႈ** Array တူဝ်တေႉ၊ ၵူၺ်းၵႃႈ မၼ်းတေသူင်ႇ Array ဢၼ်မႂ်ႇဢွၵ်ႇမႃးပၼ်ၶႃႈ။
 
-ၸႂ်ႉမိူဝ်ႈႁဝ်းၶႂ်ႈ "ၽႅၼ်ႇ" (Unpack) ၶေႃႈမုၼ်းလုၵ်ႉၼႂ်း Array ႁိုဝ် Object ဢွၵ်ႇမႃး တႃႇသႂ်ႇၼႂ်းဢွင်ႈတီႈမႂ်ႇ။
+* **Syntax**: `array.slice(start, end)` (ၼပ်ႉတႄႇတီႈ start တေႃႇထိုင် **ဢွၼ်တၢင်း** end)။
 
-* **ၵၢၼ်ႁူမ်ႈ Array:**
 ```javascript
-const meat = ["မူႇ", "ၵႆႇ"];
-const veg = ["ၽၵ်းၵတ်း", "ၶဝ်ႈโพတ်း"];
+const colors = ["Red", "Green", "Blue", "Yellow", "Pink"];
+const favorite = colors.slice(1, 4); 
 
-const food = [...meat, ...veg, "ၼမ်ႉၽိၵ်ႉ"]; 
-// ["မူႇ", "ၵႆႇ", "ၽၵ်းၵတ်း", "ၶဝ်ႈโพတ်း", "ၼမ်ႉၽိၵ်ႉ"]
+console.log(favorite); // ["Green", "Blue", "Yellow"]
+console.log(colors);   // ["Red", "Green", "Blue", "Yellow", "Pink"] (တူဝ်တေႉဢမ်ႇလႅၵ်ႈလၢႆႈ)
 
 ```
-
-
-* **ၵၢၼ် Copy Object:**
-```javascript
-const user = { name: "Sai", age: 20 };
-const updatedUser = { ...user, city: "Taunggyi" }; 
-// { name: "Sai", age: 20, city: "Taunggyi" }
-
-```
-
-
 
 ---
 
-### 2. Rest Operator (ၵၢၼ်ၵဵပ်းႁူမ်ႈ)
+### 2. `splice()` (ၵၢၼ်တတ်းဢွၵ်ႇ/ထႅမ်သႂ်ႇ)
 
-ၸႂ်ႉမိူဝ်ႈႁဝ်းၶႂ်ႈ "ၵဵပ်း" (Pack) ၶေႃႈမုၼ်းတင်းၼမ် မႃးဝႆႉၼႂ်း Array တူဝ်လဵဝ်။ မၼ်းတေယူႇၽၢႆႇသၢႆႉ (Left-hand side) ၶွင်ၵၢၼ်တႅမ်ႈၵူတ်ႉၶႃႈ။
+`splice` ပဵၼ် "မိတ်ႈၽႃႇတတ်း" ၶႃႈ။ မၼ်းတေ **လႅၵ်ႈလၢႆႈ** Array တူဝ်တေႉၵမ်းလဵဝ်။ ႁဝ်းၸႂ်ႉမၼ်းတႃႇ "ထွၼ်" ႁိုဝ် "ထႅမ်" ၶေႃႈမုၼ်းတီႈ Index ဢၼ်ႁဝ်းၶႂ်ႈလႆႈၼၼ်ႉၶႃႈ။
 
-* **ၸႂ်ႉၼႂ်း Function (Rest Parameters):**
-  ၸွႆႈႁႂ်ႈ Function ႁပ်ႉဢဝ် Argument လႆႈလၢႆလၢႆတူဝ် ဢမ်ႇၵၼ်ႉၶေႃပ်ႇ။
+* **Syntax**: `array.splice(start, deleteCount, item1, item2, ...)`
+
 ```javascript
-function sum(...numbers) {
-  return numbers.reduce((acc, curr) => acc + curr, 0);
-}
+const months = ["Jan", "March", "April", "June"];
 
-console.log(sum(1, 2, 3, 4, 5)); // 15
+// တီႈ Index 1, ထွၼ်ဢွၵ်ႇ 0 တူဝ်, သေထႅမ် "Feb" သႂ်ႇ
+months.splice(1, 0, "Feb"); 
+console.log(months); // ["Jan", "Feb", "March", "April", "June"]
+
+// တီႈ Index 3, ထွၼ်ဢွၵ်ႇ 2 တူဝ်
+months.splice(3, 2); 
+console.log(months); // ["Jan", "Feb", "March"]
 
 ```
-
-
-* **ၸႂ်ႉၸွမ်း Destructuring:**
-```javascript
-const [first, second, ...others] = [10, 20, 30, 40, 50];
-
-console.log(first);  // 10
-console.log(others); // [30, 40, 50] (ၵဵပ်းဢၼ်ၵိုတ်းတင်းမူတ်း)
-
-```
-
-
 
 ---
 
-### 3. ပႅၵ်ႇပိူင်ႈၵၼ်ၸိူင်ႉႁိုဝ်? (Spread vs Rest)
+### 3. `concat()` (ၵၢၼ်ဢဝ်မႃးၵပ်းၵၼ်)
 
-| Feature | **Spread** | **Rest** |
+`concat` (Concatenate) ၸႂ်ႉတႃႇဢဝ် Array 2 ဢၼ် (ႁိုဝ်ၼမ်လိူဝ်ၼၼ်ႉ) မႃးၵပ်းၵၼ် ႁႂ်ႈပဵၼ် Array လဵဝ်ၵၼ်။ မၼ်းတေ **ဢမ်ႇလႅၵ်ႈလၢႆႈ** Array တူဝ်တေႉၶႃႈ။
+
+```javascript
+const arr1 = ["a", "b"];
+const arr2 = ["c", "d"];
+const combined = arr1.concat(arr2);
+
+console.log(combined); // ["a", "b", "c", "d"]
+
+```
+
+---
+
+### 💡 လွင်ႈပႅၵ်ႇပိူင်ႈ ဢၼ်လမ်ႇလွင်ႈ
+
+| Method | လႅၵ်ႈလၢႆႈ Array တူဝ်တေႉ? (Mutate) | ၼႃႈတီႈ |
 | --- | --- | --- |
-| **ၵၢၼ်ႁဵတ်း** | ၽႅၼ်ႇဢွၵ်ႇ (Unpacks) | ၵဵပ်းႁူမ်ႈ (Packs) |
-| **ဢွင်ႈတီႈ** | ယူႇတီႈ Array/Object literal | ယူႇတီႈ Parameter/Destructuring |
-| **တူဝ်ယၢင်ႇ** | `[...arr]` | `(...args) => {}` |
+| **`slice`** | ဢမ်ႇလႅၵ်ႈ (No) | ၵေႃႇပီႇဢဝ်ပွတ်းၼိုင်ႈဢွၵ်ႇမႃး |
+| **`splice`** | လႅၵ်ႈ (Yes) | ထွၼ်ဢွၵ်ႇ ႁိုဝ် ထႅမ်သႂ်ႇ တီႈၵၢင် Array |
+| **`concat`** | ဢမ်ႇလႅၵ်ႈ (No) | ဢဝ်သွင်ဢၼ်မႃးၸပ်းၵၼ် |
 
 ---
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Spread** ၸွႆႈႁႂ်ႈၵၢၼ် Copy လႄႈ ၵၢၼ်ႁူမ်ႈ (Merge) ၶေႃႈမုၼ်းငၢႆႈလိူဝ်ၵဝ်ႇ။
-* **Rest** ၸွႆႈႁႂ်ႈႁဝ်းၵဵပ်းၶေႃႈမုၼ်းဢၼ်ၵိုတ်း (Remaining items) မႃးဝႆႉၼႂ်းၸုမ်းလဵဝ်ၵၼ်။
-* **Immutability**: ၵၢၼ်ၸႂ်ႉ Spread တႃႇ Copy ၸွႆႈႁႂ်ႈႁဝ်းဢမ်ႇလႆႈၵႂႃႇမႄး (Mutate) ၶေႃႈမုၼ်းတူဝ်ၵဝ်ႇ။
+* ၸႂ်ႉ **`slice`** မိူဝ်ႈၶႂ်ႈလႆႈၶေႃႈမုၼ်းပွတ်းၼိုင်ႈ လူၺ်ႈဢမ်ႇၶႂ်ႈယုင်ႈတင်း Array ငဝ်ႈတိုၼ်း။
+* ၸႂ်ႉ **`splice`** မိူဝ်ႈလူဝ်ႇ "တတ်းပႅတ်ႈ" ႁိုဝ် "သႂ်ႇၶဝ်ႈ" တီႈဢွင်ႈတီႈတႅတ်ႉတေႃး။
+* တွၼ်းဝႆႉဝႃႈ `slice` (မီးတူဝ် 'c' မိူၼ် Copy) — မၼ်းတေ Copy ဢွၵ်ႇမႃးၵူၺ်းၶႃႈ။
 
 ---

@@ -1,56 +1,77 @@
-# Lesson 33: The Event Loop & Call Stack
+# Lesson 33: Object Methods & 'this' keyword
 
-ၼႂ်း JavaScript၊ ႁဝ်းမီးပၵ်းပိူင်လင်လၢႆး (Mechanism) ဢၼ်ၸွႆႈႁႂ်ႈမၼ်း "တွၼ်းမၢႆ" ဝႃႈ—ၵူတ်ႉထႅဝ်လႂ်လူဝ်ႇႁဵတ်းၵၢၼ်ၵမ်းလဵဝ်၊ ဢၼ်လႂ်လူဝ်ႇပႂ်ႉဝႆႉၶႃႈ။
+### 1. Object Method ပဵၼ်သင်?
 
-### 1. The Call Stack (ထႅဝ်ပႂ်ႉႁဵတ်းၵၢၼ်)
-
-**Call Stack** ပဵၼ်ဢွင်ႈတီႈဢၼ် JavaScript ၸႂ်ႉတႃႇမၢႆဝႆႉဝႃႈ "တိုၵ်ႉႁဵတ်းၵၢၼ်သင်ယူႇ?"။ မၼ်းႁဵတ်းၵၢၼ်ၸွမ်းပၵ်းပိူင် **LIFO (Last In, First Out)** — တူဝ်ၶဝ်ႈလိုၼ်းသုတ်း တေလႆႈဢွၵ်ႇၵွၼ်ႇပိူၼ်ႈၶႃႈ။
-
-* မိူဝ်ႈႁဝ်းႁွင်ႉ Function၊ မၼ်းတေထုၵ်ႇယွၼ်းသႂ်ႇ (Push) ၶဝ်ႈၼႂ်း Stack။
-* မိူဝ်ႈ Function ႁဵတ်းၵၢၼ်ယဝ်ႉ၊ မၼ်းတေထုၵ်ႇထွၼ်ဢွၵ်ႇ (Pop) ပႅတ်ႈၶႃႈ။
-
----
-
-### 2. Web APIs (ၶိူင်ႈၸွႆႈထႅမ်လုၵ်ႉတီႈ Browser)
-
-ယွၼ်ႉ JavaScript မီးမိုဝ်းၶွင်ႈလဵဝ်၊ မိူဝ်ႈမီးၵၢၼ်ဢၼ်လူဝ်ႇ "ပႂ်ႉ" (မိူၼ်ၼင်ႇ `setTimeout` ႁိုဝ် `fetch`)၊ JavaScript တေဢမ်ႇပႂ်ႉႁင်းၵူၺ်း။ မၼ်းတေသူင်ႇၵၢၼ်ၼၼ်ႉ ၵႂႃႇပၼ် **Web APIs** ဢၼ်မီးၼႂ်း Browser ၸွႆႈႁဵတ်းပၼ်ၶႃႈ။
-
----
-
-### 3. Callback Queue & Event Loop
-
-* **Callback Queue**: မိူဝ်ႈ Web APIs ႁဵတ်းၵၢၼ်ယဝ်ႉ (မိူၼ်ၼင်ႇ ပႂ်ႉယဝ်ႉ 3 ၸႅၵ်ႉ)၊ မၼ်းတေသူင်ႇ Callback Function ၼၼ်ႉမႃးၸုၵ်းထႅဝ်ပႂ်ႉဝႆႉၼႂ်း Queue ၼႆႉၶႃႈ။
-* **Event Loop**: ၼႆႉပဵၼ် "ၵူၼ်းၸတ်းၵၢၼ်"။ မၼ်းတေတူၺ်းယူႇတႃႇသေႇဝႃႈ **Call Stack ၸွင်ႇပဝ်ႇဝႆႉႁႃႉ?** သင် Stack ပဝ်ႇယဝ်ႉ၊ မၼ်းတေဢဝ်ၵၢၼ်လုၵ်ႉၼႂ်း Queue မႃးသႂ်ႇပၼ်ၼႂ်း Stack ပိူဝ်ႈတေႁဵတ်းၵၢၼ်ၶႃႈ။
-
----
-
-### တူဝ်ယၢင်ႇလၢႆးႁဵတ်းၵၢၼ် (How it works):
+**Method** ပဵၼ် Property ၶွင် Object ဢၼ်မီးၵႃႈၶၼ်ပဵၼ် **Function** ၶႃႈ။ မၼ်းၸွႆႈႁႂ်ႈ Object ၼၼ်ႉ မီး "ၵၢၼ်ႁဵတ်း (Action)" ဢမ်ႇၸႂ်ႈဝႃႈသိမ်းၶေႃႈမုၼ်းယူဝ်းယူဝ်းၵူၺ်း။
 
 ```javascript
-console.log("Start"); // 1. ၶဝ်ႈ Stack -> ဢွၵ်ႇ Console -> Pop ဢွၵ်ႇ
+const person = {
+  name: "Sai Kham",
+  // ၼႆႉပဵၼ် Method
+  greet: function() {
+    console.log("မႂ်ႇသုင်ၶႃႈ!");
+  }
+};
 
-setTimeout(() => {
-    console.log("Timer"); // 2. သူင်ႇၵႂႃႇပႂ်ႉတီႈ Web API
-}, 0);
-
-console.log("End"); // 3. ၶဝ်ႈ Stack -> ဢွၵ်ႇ Console -> Pop ဢွၵ်ႇ
-
-// 4. Event Loop ႁၼ်ဝႃႈ Stack ပဝ်ႇယဝ်ႉ၊ ၸင်ႇဢဝ် "Timer" လုၵ်ႉၼႂ်း Queue မႃးႁဵတ်းၵၢၼ်
+person.greet(); // "မႂ်ႇသုင်ၶႃႈ!"
 
 ```
 
-**ၽွၼ်းလႅတ်း (Output):**
+---
 
-1. Start
-2. End
-3. Timer (ယွၼ်ႉမၼ်းတေလႆႈၵႂႃႇပႂ်ႉၼႂ်း Queue ၵွၼ်ႇ ၸင်ႇတေၶဝ်ႈ Stack လႆႈၶႃႈ)
+### 2. The `this` Keyword
+
+Keyword **`this`** ၼႂ်း JavaScript မၼ်းမီးလွင်ႈလႅၵ်ႈလၢႆႈၸွမ်းငဝ်းလၢႆး (Context)၊ ၵူၺ်းၵႃႈ မိူဝ်ႈမၼ်းယူႇၼႂ်း Object Method ၼၼ်ႉ `this` ပွင်ႇဝႃႈ **"Object တူဝ်ဢၼ်တိုၵ်ႉႁွင်ႉၸႂ်ႉ Method ၼႆႉယူႇ"** ၼၼ်ႉၶႃႈ။
+
+မၼ်းၸွႆႈႁႂ်ႈ Method ၶဝ်ႈထိုင် (Access) Property တၢင်ႇၸိူဝ်း ဢၼ်ယူႇၼႂ်း Object လဵဝ်ၵၼ်ၼၼ်ႉလႆႈၶႃႈ။
+
+```javascript
+const car = {
+  brand: "Toyota",
+  model: "Camry",
+  year: 2022,
+  
+  getSummary: function() {
+    // this.brand ပွင်ႇဝႃႈ car.brand
+    return `This car is a ${this.year} ${this.brand} ${this.model}.`;
+  }
+};
+
+console.log(car.getSummary()); 
+// "This car is a 2022 Toyota Camry."
+
+```
+
+---
+
+### 3. Arrow Functions လႄႈ `this` (လွင်ႈသတိ!)
+
+တွၼ်ႈၼႆႉလမ်ႇလွင်ႈၼႃႇၶႃႈ! **Arrow Functions** ဢမ်ႇမီး `this` တူဝ်မၼ်း။ သင်ၸဝ်ႈၵဝ်ႇၸႂ်ႉ Arrow Function ႁဵတ်း Method၊ `this` တေဢမ်ႇၸႅၵ်ႇၸူး Object ၼၼ်ႉ၊ မၼ်းတေၵႂႃႇၸူး Global Scope တႅၼ်းၶႃႈ။
+
+> 💡 **Best Practice:** တႃႇသၢင်ႈ Object Method၊ ႁႂ်ႈၸႂ်ႉ Regular Function တႃႇသေႇ တွၼ်ႈတႃႇႁႂ်ႈ `this` ႁဵတ်းၵၢၼ်ထုၵ်ႇမႅၼ်ႈၶႃႈ။
+
+```javascript
+const user = {
+  name: "Nan Shwe",
+  // ❌ ဢမ်ႇလီၸႂ်ႉ (this တေပဵၼ် undefined ႁိုဝ် Global)
+  sayHiArrow: () => console.log(`Hi, I am ${this.name}`),
+  
+  // ✅ လၢႆးတႅမ်ႈမႂ်ႇ (Shorthand Method)
+  sayHi() {
+    console.log(`Hi, I am ${this.name}`);
+  }
+};
+
+user.sayHi(); // "Hi, I am Nan Shwe"
+
+```
 
 ---
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Call Stack**: ႁဵတ်းၵၢၼ် Synchronous ဢၼ်လူဝ်ႇႁဵတ်းၵမ်းလဵဝ်။
-* **Web APIs**: ႁဵတ်းၵၢၼ် Asynchronous ဢၼ်လူဝ်ႇၶၢဝ်းယၢမ်းပႂ်ႉ။
-* **Event Loop**: ၸွႆႈသူင်ႇၵၢၼ်လုၵ်ႉၼႂ်း Queue ၶဝ်ႈ Stack မိူဝ်ႈ Stack ပဝ်ႇ။
+* **Method** ပဵၼ် Function ဢၼ်ယူႇၼႂ်း Object။
+* **`this`** ၸွႆႈႁႂ်ႈ Method ဢဝ်ၶေႃႈမုၼ်းၼႂ်း Object တူဝ်မၼ်းမႃးၸႂ်ႉလႆႈ။
+* ႁႄႉၵင်ႈၵၢၼ်ၸႂ်ႉ **Arrow Function** တႃႇသၢင်ႈ Method သင်ၸဝ်ႈၵဝ်ႇလူဝ်ႇၸႂ်ႉ `this`။
 
 ---

@@ -1,81 +1,65 @@
-# Lesson 36: Async / Await
+### 1. Sets (သဵၼ်ႈမၢႆဢၼ်ဢမ်ႇသမ်ႉၵၼ်)
 
-**Async / Await** ပဵၼ် Syntax ဢၼ်သၢင်ႈဝႆႉၼိူဝ် **Promises** (Lesson 35)။ မၼ်းၸွႆႈႁႂ်ႈႁဝ်းတႅမ်ႈၵူတ်ႉ Asynchronous ႁႂ်ႈတူၺ်းမိူၼ်ၵူတ်ႉ Synchronous ပုံႇပႅၵ်ႉ၊ ႁဵတ်းႁႂ်ႈႁဝ်းဢမ်ႇလူဝ်ႇၸႂ်ႉ `.then()` လႄႈ `.catch()` ၼမ်ၼမ်ၶႃႈ။
+**Set** ပဵၼ် "ၸုမ်းၶေႃႈမုၼ်း" ဢၼ်သိမ်းလႆႈၵႃႈၶၼ်ၵူႈမဵဝ်း၊ ၵူၺ်းၵႃႈ လွင်ႈၶႅၼ်ႇမၼ်းတႄႉပဵၼ် **"ၵႃႈၶၼ်ၼႂ်းမၼ်း တေလႆႈပႅၵ်ႇပိူင်ႈၵၼ်ၵူၺ်း (Unique Values)"** ၶႃႈ။ သင်ႁဝ်းသႂ်ႇၶေႃႈမုၼ်းဢၼ်သမ်ႉၵၼ် (Duplicate) ၶဝ်ႈၵႂႃႇ၊ မၼ်းတေထွၼ်ပႅတ်ႈႁင်းမၼ်းၵမ်းလဵဝ်ၶႃႈ။
 
-### 1. Keyword "async"
-
-မိူဝ်ႈႁဝ်းသႂ်ႇ `async` ဝႆႉၽၢႆႇၼႃႈ Function၊ မၼ်းတေႁဵတ်းႁႂ်ႈ Function ၼၼ်ႉ Return ပဵၼ် **Promise** တႃႇသေႇၶႃႈ။
+**လၢႆးၸႂ်ႉတူဝ်ယၢင်ႇ:**
 
 ```javascript
-async function greet() {
-  return "မႂ်ႇသုင်ၶႃႈ!";
-}
+const mySet = new Set();
 
-greet().then(val => console.log(val)); // "မႂ်ႇသုင်ၶႃႈ!"
+mySet.add(1);
+mySet.add(5);
+mySet.add(5); // ❌ တေဢမ်ႇထႅမ်ၶဝ်ႈ ယွၼ်ႉမၼ်းသမ်ႉၵၼ်
+mySet.add("Hello");
+
+console.log(mySet); // Set { 1, 5, "Hello" }
+console.log(mySet.has(1)); // true (ၵူတ်ႇထတ်းဝႃႈမီးႁႃႉ?)
+mySet.delete(5); // ထွၼ်ဢွၵ်ႇ
 
 ```
 
 ---
 
-### 2. Keyword "await"
+### 2. Maps (Object ဢၼ်လွတ်ႈလႅဝ်း)
 
-Keyword `await` ၸႂ်ႉလႆႈၼႂ်း Function ဢၼ်မီး `async` ဝႆႉၵူၺ်း။ မၼ်းတေသင်ႇႁႂ်ႈ JavaScript **"ၸုၵ်းပႂ်ႉ"** တေႃႇထိုင် Promise ၼၼ်ႉယဝ်ႉတူဝ်ႈ (Resolve) ၸင်ႇတေၵႂႃႇထႅဝ်လိၵ်ႈထႅပ်ႈၼၼ်ႉၶႃႈ။
+**Map** တေႃႉမိူၼ် Object ၶႃႈ (သိမ်းပဵၼ် Key: Value)၊ ၵူၺ်းၵႃႈ မၼ်းမီးလွင်ႈပႅၵ်ႇပိူင်ႈ ဢၼ်ၶႅၼ်ႇလိူဝ် Object ယူႇ 2 ယၢင်ႇ:
 
-**တူဝ်ယၢင်ႇ (Example):**
+1. **Key Type:** Object ၸႂ်ႉလႆႈ String ႁိုဝ် Symbol ၵူၺ်း၊ ၵူၺ်းၵႃႈ Map ၸၢင်ႈဢဝ် **သင်ၵေႃႈယဝ်ႉ** (Number, Array, Function, Object) မႃးႁဵတ်းပဵၼ် **Key** လႆႈၶႃႈ။
+2. **Order:** Map တေတွၼ်းဝႆႉ "လမ်ႇတတ်း (Order)" ၶွင်ၶေႃႈမုၼ်း ၸွမ်းၼင်ႇဢၼ်ႁဝ်းသႂ်ႇၶဝ်ႈၵႂႃႇၶႃႈ။
+
+**လၢႆးၸႂ်ႉတူဝ်ယၢင်ႇ:**
 
 ```javascript
-function loginUser() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve("User Logged In!"), 2000);
-  });
-}
+const myMap = new Map();
 
-async function displayUser() {
-  console.log("Checking status...");
-  
-  // JavaScript တေၸုၵ်းပႂ်ႉ 2 ၸႅၵ်ႉ တီႈထႅဝ်ၼႆႉ
-  const status = await loginUser(); 
-  
-  console.log(status); // "User Logged In!"
-  console.log("Next step...");
-}
+// ၵၢၼ်သႂ်ႇၶေႃႈမုၼ်း (.set)
+myMap.set("name", "Sai Kham");
+myMap.set(100, "Number Key"); // ✅ ၸႂ်ႉ Number ပဵၼ် Key လႆႈ
+myMap.set(true, "Boolean Key");
 
-displayUser();
+// ၵၢၼ်ဢဝ်ၶေႃႈမုၼ်း (.get)
+console.log(myMap.get(100)); // "Number Key"
+console.log(myMap.size); // 3 (မိူၼ် .length ၼႂ်း Array)
 
 ```
 
 ---
 
-### 3. Error Handling (try...catch)
+### 💡 တႅၵ်ႈၼိူဝ် (Comparison Table)
 
-ၼႂ်း Async/Await၊ ႁဝ်းဢမ်ႇၸႂ်ႉ `.catch()` ယဝ်ႉ။ ႁဝ်းတေၸႂ်ႉ **`try...catch`** ဢၼ်ပဵၼ်လၢႆးၸတ်းၵၢၼ် Error ပုံႇပႅၵ်ႉၼၼ်ႉ တႅၼ်းၶႃႈ။
-
-```javascript
-async function fetchData() {
-  try {
-    const data = await someAPICall(); // သင် Promise ၼႆႉ Reject
-    console.log(data);
-  } catch (error) {
-    console.log("မီးပၼ်ႁႃ:", error); // တေမႃးႁဵတ်းၵၢၼ်တီႈၼႆႉ
-  }
-}
-
-```
-
----
-
-### 4. ယွၼ်ႉသင် Async / Await ထိုင်လီလိူဝ် Promise?
-
-1. **Clean Code**: ဢမ်ႇလူဝ်ႇၸႂ်ႉ `.then()` သိုပ်ႇၵၼ်ယၢဝ်းယၢဝ်း။
-2. **Debugging**: မိူဝ်ႈၵူတ်ႉမီးပၼ်ႁႃ၊ Stack Trace တေၼႄပၼ်ဢွင်ႈတီႈၽိတ်း လႆႈၸႅၼ်ႇလႅင်းလိူဝ်။
-3. **Logic**: ႁဝ်းၸၢင်ႈၸႂ်ႉ `if/else` ႁိုဝ် `for loop` ၸွမ်း `await` လႆႈငၢႆႈငၢႆႈ။
+| Feature | Object | Map |
+| --- | --- | --- |
+| **Key Type** | String / Symbol ၵူၺ်း | သင်ၵေႃႈယဝ်ႉ (Any type) |
+| **Element Order** | ဢမ်ႇၼႄႉၼွၼ်း | ၼပ်ႉၸွမ်းလမ်ႇတတ်း (Preserved) |
+| **Size** | လူဝ်ႇၼပ်ႉႁင်းၵူၺ်း | မီး Property `.size` ၵမ်းလဵဝ် |
+| **Performance** | လီတႃႇၶေႃႈမုၼ်းဢၼ်တႅတ်ႉတေႃး | လီတႃႇၵၢၼ်ထႅမ်/ထွၼ် ၶေႃႈမုၼ်းၼမ်ၼမ် |
 
 ---
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **`async`**: သႂ်ႇတီႈ Function တႃႇႁႂ်ႈမၼ်း Return ပဵၼ် Promise။
-* **`await`**: သႂ်ႇတီႈၼႃႈ Promise တႃႇသင်ႇႁႂ်ႈ "ၸုၵ်းပႂ်ႉ" ၽွၼ်းလႅတ်း။
-* **`try...catch`**: ၸႂ်ႉတႃႇၸတ်းၵၢၼ် Error မိူဝ်ႈ Promise ၼၼ်ႉ Reject။
+* ၸႂ်ႉ **Set** မိူဝ်ႈလူဝ်ႇၵူတ်ႇထတ်း "ၶေႃႈမုၼ်းသမ်ႉ (Duplicates)" (မိူၼ်ၼင်ႇ ၵဵပ်း ID ၵူၼ်းၸႂ်ႉ ဢၼ်ဢမ်ႇပၼ်ႁႂ်ႈသမ်ႉၵၼ်)။
+* ၸႂ်ႉ **Map** မိူဝ်ႈလူဝ်ႇ Key ဢၼ်ဢမ်ႇၸႂ်ႈ String ႁိုဝ် မိူဝ်ႈလူဝ်ႇၵုမ်းၵမ် Order ၶွင်ၶေႃႈမုၼ်း။
+* တႃႇသေႇ၊ `Set` လႄႈ `Map` တေမီး Method ဢၼ်ၸိုဝ်ႈမိူၼ်ၵၼ် မိူၼ်ၼင်ႇ `.has()`, `.delete()`, လႄႈ `.clear()` ၶႃႈ။
 
 ---

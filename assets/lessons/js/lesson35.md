@@ -1,84 +1,74 @@
-# Lesson 35: Promises (resolve, reject)
+### 1. Spread Operator (ၵၢၼ်ၽႄႈ/ၵၢၼ်ၵေႃႇပီႇ)
 
-**Promise** ပဵၼ် Object ဢၼ်တႅၼ်းတၢင် "ၵႃႈၶၼ်" (Value) ဢၼ်တေမႃးၼႂ်းဝၼ်းမိူဝ်ႈၼႃႈ။ မၼ်းမိူၼ်ၼင်ႇၵၢၼ် "ပၼ်ၵတိ" ဝႃႈ—ၵၢၼ်ဢၼ်ႁဝ်းႁဵတ်းယူႇၼၼ်ႉ တေယဝ်ႉတူဝ်ႈလီ (Success) ႁိုဝ် တေမီးပၼ်ႁႃ (Fail) ၶႃႈ။
+Spread ပွင်ႇဝႃႈ "ၵၢၼ်ဢဝ်ၶေႃႈမုၼ်းဢွၵ်ႇမႃးၽႄႈဝႆႉ" ၶႃႈ။ ႁဝ်းၸႂ်ႉမၼ်းတႃႇ ၵေႃႇပီႇ (Copy) ႁိုဝ် ဢဝ် Array/Object မႃးပူတ်းသႂ်ႇၵၼ်ၶႃႈ။
 
-### 1. States ၶွင် Promise (ငဝ်းလၢႆး 3 ပႅၵ်ႉ)
-
-Promise ၼိုင်ႈဢၼ် ၸၢင်ႈမီးငဝ်းလၢႆးလႆႈ 3 မဵဝ်း:
-
-1. **Pending**: တိုၵ်ႉႁဵတ်းၵၢၼ်ယူႇ (ပႂ်ႉဝႆႉ)။
-2. **Fulfilled (Resolved)**: ႁဵတ်းၵၢၼ်ယဝ်ႉတူဝ်ႈလီ (ဢွင်ႇမႅၼ်ႈ)။
-3. **Rejected**: မီးပၼ်ႁႃ ႁိုဝ် ႁဵတ်းၵၢၼ်ဢမ်ႇဢွင်ႇ (ၽိတ်းပႅၵ်ႇ)။
-
----
-
-### 2. ၵၢၼ်သၢင်ႈ Promise (Creating a Promise)
-
-ႁဝ်းၸႂ်ႉ `new Promise()` သေ ၼႂ်းမၼ်းတေမီး Function ဢၼ်ႁပ်ႉဢဝ် Argument 2 တူဝ်:
-
-* **resolve**: ႁွင်ႉမိူဝ်ႈၵၢၼ်ယဝ်ႉတူဝ်ႈလီ။
-* **reject**: ႁွင်ႉမိူဝ်ႈမီးပၼ်ႁႃ။
+**တူဝ်ယၢင်ႇတင်း Array:**
 
 ```javascript
-const myPromise = new Promise((resolve, reject) => {
-  const success = true;
+const fruits = ["Apple", "Banana"];
+const veggies = ["Carrot", "Potato"];
 
-  setTimeout(() => {
-    if (success) {
-      resolve("လူတ်ႇၶေႃႈမုၼ်းယဝ်ႉယဝ်ႉၶႃႈ!");
-    } else {
-      reject("မီးပၼ်ႁႃ တီႈၵၢၼ်လူတ်ႇၶေႃႈမုၼ်း!");
-    }
-  }, 2000);
-});
+// ဢဝ်တင်းသွင်ဢၼ်မႃး "ၽႄႈ" သႂ်ႇၼႂ်း Array မႂ်ႇ
+const food = [...fruits, ...veggies, "Egg"]; 
+console.log(food); // ["Apple", "Banana", "Carrot", "Potato", "Egg"]
+
+```
+
+**တူဝ်ယၢင်ႇတင်း Object:**
+
+```javascript
+const baseInfo = { name: "Sai Kham", age: 25 };
+// ၵေႃႇပီႇဢဝ် baseInfo မႃး သေထႅမ်/လႅၵ်ႈလၢႆႈၶေႃႈမုၼ်း
+const fullInfo = { ...baseInfo, city: "Taunggyi", age: 26 };
+
+console.log(fullInfo); // { name: "Sai Kham", age: 26, city: "Taunggyi" }
 
 ```
 
 ---
 
-### 3. ၵၢၼ်ၸႂ်ႉ Promise (Consuming a Promise)
+### 2. Rest Operator (ၵၢၼ်တုမ်/ၵၢၼ်ၵဵပ်းသိမ်း)
 
-မိူဝ်ႈႁဝ်းမီး Promise ယဝ်ႉ၊ ႁဝ်းၸၢင်ႈၸႂ်ႉ Methods ၸိူဝ်းၼႆႉ တႃႇႁပ်ႉဢဝ်ၽွၼ်းလႅတ်းမၼ်း:
+Rest ပွင်ႇဝႃႈ "ဢၼ်ၵိုတ်းဝႆႉ" ၶႃႈ။ ႁဝ်းၸႂ်ႉမၼ်းတႃႇ "တုမ်" ၶေႃႈမုၼ်းလၢႆလၢႆဢၼ် ႁႂ်ႈပဵၼ် Array ဢၼ်လဵဝ်ၵူၺ်းၶႃႈ။ မၼ်းၵႆႉယူႇၼႂ်း **Destructuring** ႁိုဝ် **Function Parameters** ၶႃႈ။
 
-* **`.then()`**: ႁဵတ်းၵၢၼ်မိူဝ်ႈ Promise ပဵၼ် `resolve`။
-* **`.catch()`**: ႁဵတ်းၵၢၼ်မိူဝ်ႈ Promise ပဵၼ် `reject` (ၸတ်းၵၢၼ် Error)။
-* **`.finally()`**: ႁဵတ်းၵၢၼ်တႃႇသေႇ ဢမ်ႇဝႃႈတေဢွင်ႇ ႁိုဝ် ၽိတ်း။
+**တူဝ်ယၢင်ႇၼႂ်း Destructuring:**
 
 ```javascript
-myPromise
-  .then((data) => {
-    console.log(data); // "လူတ်ႇၶေႃႈမုၼ်းယဝ်ႉယဝ်ႉၶႃႈ!"
-  })
-  .catch((error) => {
-    console.log(error); // "မီးပၼ်ႁႃ..."
-  })
-  .finally(() => {
-    console.log("ၵၢၼ်ႁဵတ်းယဝ်ႉတူဝ်ႈယဝ်ႉ!");
-  });
+const [first, second, ...others] = [1, 2, 3, 4, 5];
+
+console.log(first);  // 1
+console.log(second); // 2
+console.log(others); // [3, 4, 5] (တုမ်ဢၼ်ၵိုတ်းဝႆႉတင်းမူတ်း)
+
+```
+
+**တူဝ်ယၢင်ႇၼႂ်း Function:**
+
+```javascript
+function sum(...numbers) {
+  return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(sum(1, 2, 3, 4)); // 10 (တုမ် Arguments တင်းမူတ်းပဵၼ် Array)
 
 ```
 
 ---
 
-### 4. Promise Chaining (ၵၢၼ်မတ်ႉသိုပ်ႇၵၼ်)
+### 💡 လွင်ႈပႅၵ်ႇပိူင်ႈ ဢၼ်လမ်ႇလွင်ႈ
 
-တႅၼ်းၵၢၼ်တႅမ်ႈ Callback Hell၊ ႁဝ်းၸၢင်ႈၸႂ်ႉ `.then()` သိုပ်ႇၵၼ်ၵႂႃႇလႆႈ ႁဵတ်းႁႂ်ႈၵူတ်ႉႁဝ်း လူယႃႇငၢႆႈ (Readable) ၶႃႈ။
-
-```javascript
-getData()
-  .then(user => getPosts(user))
-  .then(posts => getComments(posts))
-  .then(comments => console.log(comments))
-  .catch(err => console.log(err));
-
-```
+| Feature | Spread `...` | Rest `...` |
+| --- | --- | --- |
+| **ၼႃႈတီႈ** | ၸႅၵ်ႇ/ၽႄႈ (Unpack) | တုမ်/ၵဵပ်း (Pack/Gather) |
+| **ဢွင်ႈတီႈ** | ယူႇၽၢႆႇၶႂႃ (Right-hand side) | ယူႇၽၢႆႇသၢႆႉ (Left-hand side) |
+| **တူဝ်ယၢင်ႇ** | `[...arr]` | `[first, ...rest] = arr` |
 
 ---
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Promise**: ပဵၼ် Object ဢၼ်ပႂ်ႉႁပ်ႉၵႃႈၶၼ် ဝၼ်းမိူဝ်ႈၼႃႈ။
-* **resolve/reject**: ပဵၼ်သဵၼ်ႈတၢင်း 2 ဢၼ် (ဢွင်ႇ/ၽိတ်း)။
-* **then/catch**: ပဵၼ်လၢႆးႁပ်ႉဢဝ် ၽွၼ်းလႅတ်း ႁႂ်ႈသိုဝ်ႈသႅၼ်ႈ။
+* **Spread** လီလိူဝ်ပိူၼ်ႈတႃႇႁဵတ်း **Shallow Copy** (ၵေႃႇပီႇၶေႃႈမုၼ်း) လူၺ်ႈဢမ်ႇယုင်ႈတင်း Array ငဝ်ႈတိုၼ်း။
+* **Rest** လူဝ်ႇယူႇတီႈ "တွၼ်းသုတ်း" (Last position) တႃႇသေႇ၊ မၼ်းတေဢဝ်ၶေႃႈမုၼ်းဢၼ်ၵိုတ်းဝႆႉ တုမ်ဝႆႉပၼ်ႁဝ်း။
+* ၸုၵ်းသၢမ်ၸုၵ်းၼႆႉ ၸွႆႈႁႂ်ႈၵူတ်ႉႁဝ်း Modern လႄႈ ၵုမ်းၵမ်ၶေႃႈမုၼ်းလၢႆလၢႆတူဝ်လႆႈငၢႆႈၼႃႇၶႃႈ။
 
 ---

@@ -1,66 +1,89 @@
-# Lesson 34: Callbacks & Callback Hell
 
-**Callback** ၼႆႉ ပဵၼ် Function ဢၼ်ႁဝ်းသူင်ႇၶဝ်ႈၵႂႃႇ (Pass as an argument) ၼႂ်း Function တၢင်ႇဢၼ် ပိူဝ်ႈတေႁႂ်ႈမၼ်း "ႁဵတ်းၵၢၼ်ၶိုၼ်း" (Call back) မိူဝ်ႈၵၢၼ်သင်ဝႆႉၼိုင်ႈယၢင်ႇယဝ်ႉတူဝ်ႈၶႃႈ။
+# Lesson 34: Array & Object Destructuring
 
-### 1. Callback ပဵၼ်သင်?
+### 1. Object Destructuring
 
-ၼႂ်း JavaScript Asynchronous၊ ႁဝ်းၸႂ်ႉ Callback ပိူဝ်ႈတေလၢတ်ႈဝႃႈ: *"မိူဝ်ႈလူတ်ႇၶေႃႈမုၼ်းယဝ်ႉယဝ်ႉၸိုင်၊ ၸွႆႈႁဵတ်း Function ၼႆႉပၼ်ၵမ်းၼႃႈ။"*
+မိူဝ်ႈႁဝ်းမီး Object ယႂ်ႇယႂ်ႇဢၼ်ၼိုင်ႈ၊ တႅၼ်းတၢင်ဢၼ်ႁဝ်းတေတႅမ်ႈ `const name = user.name;` လၢႆလၢႆထႅဝ်၊ ႁဝ်းၸၢင်ႈ "ပႅတ်ႉ" (Unpack) မၼ်းဢွၵ်ႇမႃးၵမ်းလဵဝ်လႆႈၶႃႈ။
 
 ```javascript
-function downloadFile(callback) {
-  console.log("Downloading...");
-  setTimeout(() => {
-    console.log("Download complete!");
-    callback(); // ၼႆႉပဵၼ်ၵၢၼ် "ႁွင်ႉၶိုၼ်း" (Callback)
-  }, 2000);
+const person = {
+  firstName: "Sai Kham",
+  age: 25,
+  city: "Taunggyi"
+};
+
+// လၢႆးတႅမ်ႈ Destructuring
+const { firstName, age, city } = person;
+
+console.log(firstName); // "Sai Kham"
+console.log(age);       // 25
+
+```
+
+> 💡 **Tip:** ၸိုဝ်ႈ Variable ၼႂ်း `{ }` တေလႆႈ **"မိူၼ်ၵၼ်"** တင်း Key ၼႂ်း Object ၶႃႈ။
+
+---
+
+### 2. Array Destructuring
+
+တွၼ်ႈတႃႇ Array သမ်ႉ၊ ႁဝ်းၸႂ်ႉ Square Brackets `[ ]` တႃႇထုတ်ႇဢဝ်ၶေႃႈမုၼ်း **ၸွမ်းလမ်ႇတတ်း (Order)** ၶွင် Index မၼ်းၶႃႈ။
+
+```javascript
+const coordinates = [10, 20, 30];
+
+// လၢႆးတႅမ်ႈ Destructuring
+const [x, y, z] = coordinates;
+
+console.log(x); // 10
+console.log(y); // 20
+
+// သင်ၶႂ်ႈၶၢမ်ႇ (Skip) တူဝ်ၵၢင်
+const [first, , last] = coordinates; 
+console.log(last); // 30
+
+```
+
+---
+
+### 3. Default Values & Renaming
+
+ႁဝ်းယင်းၸၢင်ႈပၼ် "ၵႃႈၶၼ်ပိုၼ်ႉထၢၼ်" ႁိုဝ် "ပၼ်ၸိုဝ်ႈမႂ်ႇ" ၼႂ်းယၢမ်းလဵဝ်ၵၼ်လႆႈၶႃႈ။
+
+```javascript
+const settings = { theme: "dark" };
+
+// ပၼ်ၸိုဝ်ႈမႂ်ႇ (theme -> currentTheme) လႄႈ သႂ်ႇ Default (fontSize)
+const { theme: currentTheme, fontSize = 16 } = settings;
+
+console.log(currentTheme); // "dark"
+console.log(fontSize);     // 16
+
+```
+
+---
+
+### 4. ၸႂ်ႉၼႂ်း Function Parameters
+
+ၼႆႉပဵၼ်လၢႆးဢၼ်ႁဝ်းတေလႆႈႁၼ်ၼမ်သုတ်း ၼႂ်းၵၢၼ်တႅမ်ႈ **React** ၶႃႈ။
+
+```javascript
+const user = { id: 101, name: "Nan Shwe" };
+
+// ထုတ်ႇဢဝ် name ၵမ်းလဵဝ်ၼႂ်း Parameter
+function welcome({ name }) {
+  console.log(`Welcome, ${name}!`);
 }
 
-downloadFile(() => {
-  console.log("Processing the file...");
-});
+welcome(user); // "Welcome, Nan Shwe!"
 
 ```
-
----
-
-### 2. Callback Hell (ၶုမ်ၾီၾႃႉ Callback)
-
-ပၼ်ႁႃတႄႇမီးမိူဝ်ႈႁဝ်းလူဝ်ႇႁဵတ်းၵၢၼ် Asynchronous လၢႆလၢႆယၢင်ႇ သိုပ်ႇၵၼ် (Sequential)။ မိူၼ်ၼင်ႇ:
-
-1. လူတ်ႇၶေႃႈမုၼ်း User
-2. လူတ်ႇ Post ၶွင် User ၼၼ်ႉ
-3. လူတ်ႇ Comment ၼႂ်း Post ၼၼ်ႉ
-
-သင်ႁဝ်းၸႂ်ႉ Callback၊ ၵူတ်ႉႁဝ်းတေတႄႇ "ငႅၵ်း" ၶဝ်ႈၵႂႃႇၽၢႆႇၶႂႃတိၵ်းတိၵ်း မိူၼ်ႁၢင်ႈပိရမိတ်ႉ (Pyramid of Doom) ၶႃႈ။
-
-```javascript
-// တူဝ်ယၢင်ႇ Callback Hell
-getData(function(a) {
-  getMoreData(a, function(b) {
-    getEvenMoreData(b, function(c) {
-      getFinalData(c, function(d) {
-        console.log("Final Result: " + d);
-      });
-    });
-  });
-});
-
-```
-
----
-
-### 3. ယွၼ်ႉသင် Callback Hell ထိုင်ပဵၼ်ပၼ်ႁႃ?
-
-* **လူယႃႇယၢပ်ႇ (Hard to read)**: ၵူတ်ႉသုၵ်ႉယုင်ႈၼႃႇ။
-* **ၸတ်းၵၢၼ် Error ယၢပ်ႇ (Error Handling)**: ႁဝ်းတေလႆႈၵူတ်ႇထတ်း Error ၼႂ်းၵူႈထႅဝ် Callback။
-* **ၵုမ်းထိူင်းယၢပ်ႇ (Hard to maintain)**: သင်ၶႂ်ႈလႅၵ်ႈလၢႆႈလမ်ႇတပ်ႉၵၢၼ်ႁဵတ်း၊ တေလႆႈမႄးတင်းမူတ်း။
 
 ---
 
 ### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Callback**: ပဵၼ် Function ဢၼ်ႁဝ်းသူင်ႇၵႂႃႇ တႃႇႁႂ်ႈႁဵတ်းၵၢၼ်မိူဝ်ႈၵၢၼ်တၢင်ႇဢၼ်ယဝ်ႉ။
-* **Callback Hell**: ပဵၼ်လွင်ႈၵူတ်ႉသုၵ်ႉယုင်ႈ ဢၼ်ပဵၼ်မႃးလူၺ်ႈၵၢၼ်သႂ်ႇ Callback သိုပ်ႇၵၼ်ၼမ်လႅတ်း။
-* **လၢႆးၵႄႈ**: ၼႂ်း JavaScript မၼ်းမီးလၢႆးၵႄႈဢၼ်ႁွင်ႉဝႃႈ **Promises** လႄႈ **Async/Await** ဢၼ်ႁဝ်းတေႁဵၼ်းၼႂ်းတွၼ်ႈၼႃႈၶႃႈ။
+* **Object Destructuring** ၸႂ်ႉ `{ }` — ၼပ်ႉဢဝ်ၸွမ်း **ၸိုဝ်ႈ (Key)**။
+* **Array Destructuring** ၸႂ်ႉ `[ ]` — ၼပ်ႉဢဝ်ၸွမ်း **ဢွင်ႈတီႈ (Index)**။
+* ၸွႆႈႁႂ်ႈၵူတ်ႉႁဝ်း "သႅၼ်ႈသႂ်" (Clean) လႄႈ လူယႃႇငၢႆႈလိူဝ်ၵဝ်ႇၼမ်ၼႃႇၶႃႈ။
 
 ---
