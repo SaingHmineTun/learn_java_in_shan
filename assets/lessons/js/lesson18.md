@@ -1,70 +1,68 @@
-# Lesson 18: Prototypes & The Prototype Chain
+# Lesson 18: Logic Practice (ၵၢၼ်ၸၢမ်းတႅမ်ႈ Logic)
 
-ၼႂ်း Lesson 17၊ ႁဝ်းႁၼ်ယဝ်ႉဝႃႈ ၵၢၼ်သၢင်ႈ Method ဝႆႉၼႂ်း Constructor မၼ်းသုမ်း Memory။ ပိူဝ်ႈတေၵႄႈလႅတ်းၼၼ်ႉ JavaScript ၸႂ်ႉ **Prototypes** ၶႃႈ။
+ႁဝ်းတေမႃးသၢင်ႈ Logic တႃႇၵိမ်း **"Adventure Quest"**။ တူဝ်ละคร (Character) ႁဝ်းတေလႆႈတႅပ်းတတ်းၵၢၼ် ၸွမ်းၼင်ႇငဝ်းလၢႆး (Conditions) ဢၼ်မီးဝႆႉၶႃႈ။
 
-### 1. Prototype ပဵၼ်သင်?
+### 🎮 တိုဝ်းၵၢၼ် (Scenario)
 
-ၵူႈ Function ၼႂ်း JavaScript မီး Property ဢၼ်ၼိုင်ႈႁွင်ႉဝႃႈ `.prototype`။ မၼ်းပဵၼ်မိူၼ် "ထူင်ၵၢင်" ဢၼ်ၵဵပ်း Methods ဝႆႉပၼ် Object ၵူႈတူဝ် ဢၼ်သၢင်ႈမႃးလုၵ်ႉတီႈ Constructor ၼၼ်ႉ ႁႂ်ႈၸၢင်ႈမႃး "ယိမ်" ၸႂ်ႉၸွမ်းၵၼ်လႆႈ။
+1. Character လူဝ်ႇမီး **Energy** ၼမ်လိူဝ် 0 ၸင်ႇတေလႅၼ်ႈလႆႈ။
+2. သင်မီး **Sword** (လႅဝ်း) လႄႈ **Level** ၼမ်လိူဝ် 5 ၸိုင် တေတိုၵ်း Monster လႆႈ။
+3. သင်ဢမ်ႇမီးလႅဝ်း ၵူၺ်းၵႃႈမီး **Magic Wand** ၸိုင် တေၸႂ်ႉၵႃႇထႃႇလႆႈ။
+4. သင်ႁူဝ်ၸႂ် (Health) လူတ်းယွမ်းၵႂႃႇ ႁဝ်းလူဝ်ႇၸႂ်ႉ **Potion** (ယႃတ်ႉ) ဢၼ်မီးဝႆႉ (Default Value)။
 
-**တူဝ်ယၢင်ႇ (Example):**
+---
+
+### 💻 တႅမ်ႈၵူတ်ႉ (The Code)
 
 ```javascript
-function User(name) {
-  this.name = name;
+// 1. တင်ႈၵႃႈၶၼ်ပိုၼ်ႉထၢၼ် (Variables)
+const health = 50;
+const energy = 20;
+const hasSword = true;
+const hasWand = false;
+const playerLevel = 7;
+let inventoryPotion = null; // ဢမ်ႇမီးယႃတ်ႉ
+
+// 2. ၸႂ်ႉ Short-circuiting တႃႇႁႃယႃတ်ႉ (Default Value)
+const healingItem = inventoryPotion ?? "Bread"; 
+
+// 3. ၸႂ်ႉ Logic တႅပ်းတတ်းၵၢၼ်
+console.log(`--- Game Start ---`);
+
+// ၵူတ်ႇထတ်း Energy (Truthy/Falsy)
+if (energy) {
+  console.log("🏃 Player တိုၵ်ႉလႅၼ်ႈလႆႈယူႇ...");
+} else {
+  console.log("😴 Player ဢမ်ႇမီးႁႅင်းယဝ်ႉ၊ လူဝ်ႇၼອນလိုဝ်ႈ။");
 }
 
-// ဢဝ် Method မႃးဝႆႉၼႂ်း Prototype (ၵဵပ်းဝႆႉတီႈလဵဝ် ၵူၺ်းၵႃႈ ၸႂ်ႉလႆႈၵူႈၵေႃႉ)
-User.prototype.sayHi = function() {
-  console.log(`မႂ်ႇသုင်၊ ၶႃႈၸိုဝ်ႈ ${this.name}`);
-};
+// ၵူတ်ႇထတ်း လၢႆးတိုၵ်း (Logical Operators)
+if (hasSword && playerLevel >= 5) {
+  console.log("⚔️ တိုၵ်းလူၺ်ႈလႅဝ်း! (Physical Attack)");
+} else if (hasWand) {
+  console.log("🪄 ၸႂ်ႉၵႃႇထႃႇတိုၵ်း! (Magic Attack)");
+} else {
+  console.log("🏃 လႅၼ်ႈပၢႆႈၵူၺ်းယဝ်ႉ၊ ဢမ်ႇမီးၶိူင်ႈတိုၵ်း။");
+}
 
-const user1 = new User("ၸၢႆးသႅင်");
-const user2 = new User("ၼၢင်းမူဝ်");
-
-user1.sayHi(); // "မႂ်ႇသုင်၊ ၶႃႈၸိုဝ်ႈ ၸၢႆးသႅင်"
-user2.sayHi(); // "မႂ်ႇသုင်၊ ၶႃႈၸိုဝ်ႈ ၼၢင်းမူဝ်"
-
-```
-
-* **ႁႅင်းလီ:** `sayHi` မီးဝႆႉၼႂ်း Memory တီႈလဵဝ်ၵူၺ်း၊ ဢမ်ႇဝႃႈႁဝ်းတေမီး User 10,000 ၵေႃႉၵေႃႈယႃႇ။
-
----
-
-### 2. Prototype Chain (သၢႆသူင်ႇ Prototype)
-
-မိူဝ်ႈႁဝ်းႁွင်ႉၸႂ်ႉ Property ႁိုဝ် Method ၼိုင်ႈယၢင်ႇၼႂ်း Object၊ JavaScript တေႁႃၸွမ်းလမ်ႇတပ်ႉၼႆႉၶႃႈ:
-
-1. ႁႃတူၺ်းၼႂ်း **တူဝ် Object** ၼၼ်ႉဢွၼ်တၢင်း။
-2. သင်ဢမ်ႇမီး၊ မၼ်းတေၶိုၼ်ႈၵႂႃႇႁႃၼႂ်း **Prototype** ၶွင်မၼ်း။
-3. သင်တိုၵ်ႉဢမ်ႇမီးထႅင်ႈ၊ မၼ်းတေၶိုၼ်ႈၵႂႃႇႁႃၼႂ်း **Object.prototype** (ဢၼ်ပဵၼ် ပူႇမွၼ်ႇလူင် ၶွင်ၵူႈ Object)။
-4. သင်ႁႃၸိုင်ႈသုတ်းသၢႆယဝ်ႉ ဢမ်ႇမီးတေႉ၊ မၼ်းတေ Return `undefined` ႁိုဝ် Error ၶႃႈ။
-
----
-
-### 3. `__proto__` vs `prototype`
-
-ၼႆႉပဵၼ်ဢၼ်ၵူၼ်းၵႆႉသုၵ်ႉယုင်ႈသုတ်း:
-
-* **`.prototype`**: မီးဝႆႉၼႂ်း **Constructor Function** (မိူၼ်ၼင်ႇ `User`)။ မၼ်းပဵၼ် "ပလွၵ်း" တႃႇသူင်ႇပၼ်လုၵ်ႈလၢၼ်။
-* **`.__proto__`**: မီးဝႆႉၼႂ်း **Object** (မိူၼ်ၼင်ႇ `user1`)။ မၼ်းပဵၼ် "ၵျော့" (Link) ဢၼ်ၸီႉၶိုၼ်ႈၵႂႃႇၸူး Prototype ၶွင်ပေႃႈမႄႈမၼ်း။
-
-```javascript
-console.log(user1.__proto__ === User.prototype); // true
+// ၸႂ်ႉ Ternary Operator တႃႇတူၺ်းလွင်ႈၸႂ်ႉယႃတ်ႉ
+const action = health < 30 ? `ၸႂ်ႉ ${healingItem} တႃႇထႅမ်လိူတ်ႈ` : "တိုၵ်ႉၶႅင်ႁႅင်းယူႇ";
+console.log(`Status: ${action}`);
 
 ```
 
 ---
 
-### 4. Prototypal Inheritance (ၵၢၼ်သိုပ်ႇပူၺ်ႈ)
+### 🔍 ထတ်းသၢင်ၵူတ်ႉ (Code Review)
 
-ႁဝ်းၸၢင်ႈႁဵတ်းႁႂ်ႈ Prototype ၶွင် Object ၼိုင်ႈဢၼ် သိုပ်ႇဢဝ် Properties လုၵ်ႉတီႈထႅင်ႈဢၼ်ၼိုင်ႈလႆႈ။
+* **`inventoryPotion ?? "Bread"`**: ႁဝ်းၸႂ်ႉ **Nullish Coalescing**။ ယွၼ်ႉ `inventoryPotion` ပဵၼ် `null`၊ မၼ်းၸင်ႇလိူၵ်ႈဢဝ် `"Bread"` မႃးပဵၼ်တူဝ်ၸွႆႈၶႃႈ။
+* **`if (energy)`**: ၼႆႉပဵၼ်ၵၢၼ်ၸႂ်ႉ **Truthy/Falsy**။ သင် `energy` ပဵၼ် `20` (Truthy) မၼ်းတေႁဵတ်းၵၢၼ်၊ သင်ပဵၼ် `0` (Falsy) မၼ်းတေၶဝ်ႈ `else` ၶႃႈ။
+* **`hasSword && playerLevel >= 5`**: ၼႆႉပဵၼ် **AND (`&&`)**။ လူဝ်ႇမၢၼ်ႇတင်းသွင်ယၢင်ႇ ၸင်ႇတေတိုၵ်းလႆႈၶႃႈ။
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 18)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Prototype**: ပဵၼ်လၢႆးၵဵပ်း Methods ဝႆႉတီႈလဵဝ် ပိူဝ်ႈတေႁႂ်ႈ Objects တင်းၼမ်ၸႂ်ႉလႆႈ (Memory Efficiency)။
-* **Prototype Chain**: လၢႆးႁႃၶေႃႈမုၼ်း လုၵ်ႉတီႈ "လုၵ်ႈ" ၶိုၼ်ႈၵႂႃႇၸူး "ပေႃႈမႄႈ" တေႃႇထိုင် "ပူႇမွၼ်ႇ"။
-* **`__proto__`**: ပဵၼ်သၢႆၸီႉ ဢၼ်မီးၼႂ်း Object ၵူႈတူဝ်။
+* Logic ဢၼ်ႁဝ်းႁဵၼ်းမႃးတင်းမူတ်း ၸွႆႈႁႂ်ႈ Program ႁဝ်း "ဝူၼ်ႉ" ပဵၼ်မိူၼ်ၵူၼ်း။
+* ၵၢၼ်ၸႂ်ႉ **Short-circuiting** လႄႈ **Ternary** ၸွႆႈႁႂ်ႈၵူတ်ႉႁဝ်းသႅၼ်ႈသႂ် လႄႈ ဢမ်ႇလူဝ်ႇတႅမ်ႈ `if/else` သုၵ်ႉယုင်ႈၼမ်လၢႆၶႃႈ။
 
 ---

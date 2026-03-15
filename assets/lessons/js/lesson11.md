@@ -1,69 +1,85 @@
-# Lesson 11: Function Declarations & Expressions (လၢႆးသၢင်ႈ Function)
 
-**Function** မၢႆထိုင် ၸုမ်းၵူတ်ႉ (Block of code) ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉ ပိူဝ်ႈတေႁဵတ်းၵၢၼ်လွင်ႈၼိုင်ႈ။ ႁႅင်းလီမၼ်းသုတ်းၵေႃႈပဵၼ် **"တႅမ်ႈၼိုင်ႈပွၵ်ႈ၊ ၸႂ်ႉလႆႈၵူႈတီႈ"** (Write once, use everywhere) ၼၼ်ႉၶႃႈ။
+# Lesson 11: If/Else & Nested Decision Making
 
-### 1. Function Declaration (ၵၢၼ်ပိုၼ်ၽၢဝ်ႇ Function)
+### 1. ပိုၼ်ႉထၢၼ် If Statement
 
-ၼႆႉပဵၼ်လၢႆးတႅမ်ႈပိုၼ်ႉထၢၼ်သုတ်း။ ႁဝ်းၸႂ်ႉ Keyword ဝႃႈ `function` ၸွမ်းလူၺ်ႈ "ၸိုဝ်ႈ" မၼ်းၶႃႈ။
+`if` ၸႂ်ႉတႃႇၵူတ်ႇထတ်း Logic။ သင်ဝႃႈ Logic ၼႂ်းၵွင်းၸိၵ်း `( )` ၼၼ်ႉပဵၼ် `true` ၸိုင်၊ ၵူတ်ႉၼႂ်းပူၵ်ႇ `{ }` တေႁဵတ်းၵၢၼ်ၶႃႈ။
 
 ```javascript
-// 1. သၢင်ႈ (Declare)
-function sayHello() {
-  console.log("မႂ်ႇသုင်ၶႃႈ!");
+const age = 20;
+
+if (age >= 18) {
+  console.log("ၸဝ်ႈၵဝ်ႇပဵၼ်ၽူႈယႂ်ႇယဝ်ႉ၊ တွတ်ႈၶႅပ်းၵၢင်ၸႂ်လႆႈၶႃႈ။");
 }
 
-// 2. ႁွင်ႉၸႂ်ႉ (Call / Invoke)
-sayHello(); 
-
 ```
 
-### 2. The `return` Keyword (ၵၢၼ်သူင်ႇၽົນလႆႈ)
+### 2. If / Else (သင်ဝႃႈ... ဢမ်ႇၼၼ်...)
 
-Function မၢင်ဢၼ် ဢမ်ႇၸႂ်ႈဝႃႈတေ `console.log` ၵူၺ်း၊ မၼ်းလူဝ်ႇ "ၼပ်ႉဢွၵ်ႇ" ၵႃႈၶၼ်သင်ဝႆႉၼိုင်ႈယၢင်ႇ သေသူင်ႇပၼ်ႁဝ်းၶိုၼ်း။ ႁဝ်းၸႂ်ႉ `return` ပိူဝ်ႈတေသူင်ႇၵႃႈၶၼ်ၼၼ်ႉ ဢွၵ်ႇမႃးတေႃႇၽၢႆႇၼွၵ်ႈၶႃႈ။
+သင်ဝႃႈ `if` ပဵၼ် `false` ၸိုင်၊ မၼ်းတေၵႂႃႇႁဵတ်းၵၢၼ်ၼႂ်း `else` ၶႃႈ။
 
 ```javascript
-function getAge() {
-  return 25;
+const hour = 15;
+
+if (hour < 12) {
+  console.log("မႂ်ႇသုင်ၵၢင်ၼႂ်ၶႃႈ");
+} else {
+  console.log("မႂ်ႇသုင်ၵၢင်ဝၼ်းၶႃႈ");
 }
 
-const myAge = getAge(); // myAge တေပဵၼ် 25
-
 ```
 
-> **သတိ:** ပေႃးဝႃႈ Function ႁွတ်ႈထိုင်တီႈ `return` ယဝ်ႉ၊ မၼ်းတေ **ၵိုတ်းၵမ်းလဵဝ်**။ ၵူတ်ႉဢၼ်တႅမ်ႈဝႆႉတႂ်ႈ `return` ၼၼ်ႉ တေဢမ်ႇႁဵတ်းၵၢၼ်ယဝ်ႉ။
+### 3. Else If (လၢႆလၢႆတၢင်းလိူၵ်ႈ)
 
----
-
-### 3. Function Expression (ၵၢၼ်ဝႆႉ Function ၼႂ်း Variable)
-
-ၼႂ်း JavaScript ၼၼ်ႉ Function ပဵၼ်မိူၼ်ၼင်ႇ "ၶေႃႈမုၼ်း" မဵဝ်းၼိုင်ႈၵူၺ်း၊ ယွၼ်ႉၼၼ် ႁဝ်းဢဝ်မၼ်းၵဵပ်းဝႆႉၼႂ်း Variable လႆႈၶႃႈ။
+မိူဝ်ႈႁဝ်းမီးငဝ်းလၢႆးတင်းၼမ်၊ ႁဝ်းၸၢင်ႈၸႂ်ႉ `else if` သိုပ်ႇၵၼ်ၵႂႃႇလႆႈၶႃႈ။
 
 ```javascript
-const speak = function() {
-  console.log("ၵႂႃႇၵိၼ်ၶဝ်ႈ!");
-};
+const score = 75;
 
-speak(); // ႁွင်ႉၸႂ်ႉၸွမ်းၸိုဝ်ႈ Variable
+if (score >= 80) {
+  console.log("Grade A");
+} else if (score >= 70) {
+  console.log("Grade B");
+} else if (score >= 60) {
+  console.log("Grade C");
+} else {
+  console.log("Grade F");
+}
 
 ```
 
 ---
 
-### 4. တႅၵ်ႈၼိူင်း Declaration လႄႈ Expression
+### 4. Nested If (If ၼႂ်း If)
 
-| လွင်ႈပႅၵ်ႇပိူင်ႈ | Function Declaration | Function Expression |
-| --- | --- | --- |
-| **Hoisting** | ႁွင်ႉၸႂ်ႉဢွၼ်တၢင်း တႅမ်ႈၵေႃႈလႆႈ (Hoisted) | တေလႆႈတႅမ်ႈဢွၼ်တၢင်း ၸင်ႇႁွင်ႉၸႂ်ႉလႆႈ |
-| **Syntax** | `function name() { ... }` | `const name = function() { ... }` |
+"Nested" ပွင်ႇဝႃႈ ၵၢၼ်သႂ်ႇ `if` ၶဝ်ႈၵႂႃႇဝႆႉၼႂ်း `if` ထႅင်ႈပွၵ်ႈၼိုင်ႈၶႃႈ။ ၸႂ်ႉမိူဝ်ႈႁဝ်းလူဝ်ႇၵူတ်ႇထတ်းလၢႆၸၼ်ႉ။
 
-**လွင်ႈလီတွၼ်း:** တႃႇတႅမ်ႈ Ebook ၸဝ်ႈၵဝ်ႇ၊ တႅၵ်ႈၼိူင်းၼႄဝႃႈ Function Declaration ပဵၼ်မိူၼ် **"ၵျွင်းၽြႃး"** (မီးဝႆႉယူႇတေႃႇသေႇ၊ ၽႂ်ၵေႃႈႁူႉၸၵ်း)၊ သမ်ႉ Expression ပဵၼ်မိူၼ် **"ၵႃးတႅၵ်ႉသီႇ"** (လူဝ်ႇႁွင်ႉဢွၼ်တၢင်း ၸင်ႇမၼ်းတေမႃး)။
+```javascript
+const isMember = true;
+const totalBill = 1200;
+
+if (isMember) {
+  console.log("ၸဝ်ႈၵဝ်ႇပဵၼ်သိုဝ်ႇ (Member) ၶႃႈ");
+  
+  if (totalBill > 1000) {
+    console.log("ၸဝ်ႈၵဝ်ႇလႆႈလူတ်းၵႃႈၶၼ် 10% ၶႃႈ!");
+  } else {
+    console.log("လူဝ်ႇသိုဝ်ႉတဵမ် 1000 ၸင်ႇတေလႆႈသုၼ်ႇလူတ်းၶႃႈ။");
+  }
+
+} else {
+  console.log("သိုဝ်ႉၶူဝ်းလႆႈယူႇ၊ ၵူၺ်းၵႃႈဢမ်ႇလႆႈသုၼ်ႇလူတ်းၶႃႈ။");
+}
+
+```
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 11)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Function**: ပဵၼ်ၸုမ်းၵူတ်ႉ ဢၼ်ၸႂ်ႉလႆႈလၢႆလၢႆပွၵ်ႈ (Reusable).
-* **Return**: ၸႂ်ႉတႃႇသူင်ႇၵႃႈၶၼ် ဢွၵ်ႇမႃးၼွၵ်ႈ Function.
-* **Hoisting**: Declaration ႁွင်ႉၸႂ်ႉလႆႈၵူႈတီႈ၊ Expression တေလႆႈတႅမ်ႈဢွၼ်တၢင်းၸင်ႇၸႂ်ႉလႆႈ။
+* **`if`**: ၵူတ်ႇထတ်းငဝ်းလၢႆး (Condition)။
+* **`else`**: ႁဵတ်းၵၢၼ်မိူဝ်ႈငဝ်းလၢႆးဢမ်ႇမၢၼ်ႇ။
+* **`else if`**: တႃႇတူၺ်းတၢင်းလိူၵ်ႈတၢင်ႇမဵဝ်း။
+* **Nested If**: ၸႂ်ႉတႃႇ Logic ဢၼ်မီးလၢႆၸၼ်ႉ၊ ၵူၺ်းၵႃႈ ယႃႇပေသႂ်ႇၼမ်လၢႆၼႃႇ (ယွၼ်ႉမၼ်းတေႁဵတ်းႁႂ်ႈၵူတ်ႉလူယႃႇယၢပ်ႇ)။
 
 ---

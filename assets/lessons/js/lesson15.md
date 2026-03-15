@@ -1,82 +1,67 @@
-# Lesson 15: Higher-Order Functions (Function ဢၼ်ၵုမ်း Function)
 
-ၼႂ်း JavaScript၊ Function ၼႆႉပဵၼ် "First-Class Citizens" (ၵူၼ်းမိူင်းၸၼ်ႉၼိုင်ႈ)။ မၼ်းမၢႆထိုင်ဝႃႈ ႁဝ်းဢဝ် Function သူင်ႇၶဝ်ႈၵႂႃႇၼႂ်း Function တၢင်ႇဢၼ်ၵေႃႈလႆႈ၊ ႁိုဝ် သူင်ႇ Function ဢွၵ်ႇမႃးၶိုၼ်းၵေႃႈလႆႈၶႃႈ။
+# Lesson 15: Ternary Operator
 
-### 1. Higher-Order Function မၢႆထိုင်သင်?
+**Ternary** ပွင်ႇဝႃႈ "မီး 3 တွၼ်ႈ" ၶႃႈ။ မၼ်းပဵၼ် Operator တူဝ်လဵဝ် ဢၼ်တေႃႉဢဝ်ၵႃႈၶၼ် (Operands) 3 ဢၼ်မႃးႁဵတ်းၵၢၼ်ႁူမ်ႈၵၼ်ၶႃႈ။
 
-Function လႂ်ၵေႃႈယႃႇ ဢၼ်ႁဵတ်းလွင်ႈတႂ်ႈၼႆႉ ၼိုင်ႈယၢင်ႇယၢင်ႇ ႁဝ်းႁွင်ႉဝႃႈ Higher-Order Function (HOF) ၶႃႈ:
+### 1. ပိူင်တႅမ်ႈ (Syntax)
 
-1. ႁပ်ႉဢဝ် Function တၢင်ႇဢၼ် ပဵၼ် **Argument** (Parameter)။
-2. သူင်ႇ Function တၢင်ႇဢၼ်ဢွၵ်ႇမႃးၶိုၼ်း ပဵၼ် **Return Value**။
+လၢႆးတႅမ်ႈမၼ်းတေၸႂ်ႉၶိူင်ႈမၢႆ **`?`** လႄႈ **`:`** ၶႃႈ:
 
-### 2. Callback Functions
+`condition ? value_if_true : value_if_false;`
 
-Function ဢၼ်ႁဝ်းသူင်ႇၶဝ်ႈၵႂႃႇၼၼ်ႉ ႁဝ်းႁွင်ႉဝႃႈ **Callback Function** ၶႃႈ။
+---
 
-**တူဝ်ယၢင်ႇ (Example):**
+### 2. တႅၵ်ႈၼိူဝ် If/Else vs. Ternary
+
+**လၢႆးတႅမ်ႈ If/Else ယူဝ်းယူဝ်း:**
 
 ```javascript
-function multiplier(factor) {
-  // ၼႆႉပဵၼ် HOF ဢၼ်သူင်ႇ Function ဢွၵ်ႇမႃးၶိုၼ်း
-  return function(number) {
-    return number * factor;
-  };
+const age = 20;
+let canVote;
+
+if (age >= 18) {
+  canVote = "တွတ်ႈၶႅပ်းလႆႈ";
+} else {
+  canVote = "တွတ်ႈၶႅပ်းဢမ်ႇလႆႈ";
 }
 
-const double = multiplier(2);
-console.log(double(5)); // 10
+```
+
+**လၢႆးတႅမ်ႈ Ternary (ပွတ်းလႄႈသႅၼ်ႈသႂ်):**
+
+```javascript
+const age = 20;
+const canVote = age >= 18 ? "တွတ်ႈၶႅပ်းလႆႈ" : "တွတ်ႈၶႅပ်းဢမ်ႇလႆႈ";
+
+console.log(canVote); // "တွတ်ႈၶႅပ်းလႆႈ"
 
 ```
 
 ---
 
-### 3. Built-in Higher-Order Functions
+### 3. ၵၢၼ်ၸႂ်ႉၼႂ်း Template Literal
 
-JavaScript မီး HOF ဝႆႉပၼ်ႁဝ်းတင်းၼမ် ဢၼ်ၸႂ်ႉတႃႇၸတ်းၵၢၼ် Array ႁႂ်ႈငၢႆႈၶိုၼ်ႈ။ ဢၼ်ႁဝ်းၸႂ်ႉၼမ်သုတ်းမီး 3 ဢၼ်:
-
-#### A. `.map()`
-
-ၸႂ်ႉတႃႇလႅၵ်ႈလၢႆႈၶေႃႈမုၼ်းၼႂ်း Array ၵူႈတူဝ်။
+လွင်ႈလီသုတ်းၶွင် Ternary ၵေႃႈပဵၼ် ႁဝ်းၸၢင်ႈဢဝ်မၼ်းၵႂႃႇသႂ်ႇဝႆႉၼႂ်း String (Backticks) လႆႈၵမ်းလဵဝ်ၶႃႈ၊ ဢၼ်ၼႆႉ `if/else` ႁဵတ်းဢမ်ႇလႆႈၶႃႈ။
 
 ```javascript
-const nums = [1, 2, 3];
-const doubled = nums.map(n => n * 2); // [2, 4, 6]
-
-```
-
-#### B. `.filter()`
-
-ၸႂ်ႉတႃႇလိူၵ်ႈဢဝ်ၶေႃႈမုၼ်း ၸွမ်းၼင်ႇသၢႆငၢႆဢၼ်ႁဝ်းပၼ်။
-
-```javascript
-const prices = [100, 500, 800, 200];
-const expensive = prices.filter(p => p > 300); // [500, 800]
-
-```
-
-#### C. `.reduce()`
-
-ၸႂ်ႉတႃႇဢဝ်ၶေႃႈမုၼ်းတင်းမူတ်း ၼႂ်း Array မႃးႁူမ်ႈၵၼ် ႁႂ်ႈၵိုတ်းၵႃႈၶၼ်လဵဝ်။
-
-```javascript
-const total = [1, 2, 3].reduce((sum, n) => sum + n, 0); // 6
+const bill = 150;
+console.log(`ၵႃႈၶၼ်မၼ်းပဵၼ် ${bill} Baht၊ ${bill > 100 ? "แพง" : "ถูก"} ၼႃႇၶႃႈ!`);
 
 ```
 
 ---
 
-### 4. Why use them? (ယွၼ်ႉသင်ထိုင်လီၸႂ်ႉ?)
+### ⚠️ ၶေႃႈသတိ (Best Practice)
 
-* **Declarative Code:** ႁဵတ်းႁႂ်ႈၵူတ်ႉႁဝ်း လူယႃႇငၢႆႈ။ ႁဝ်းသင်ႇဝႃႈ "ၶႂ်ႈလႆႈသင်" တႅၼ်းၵၢၼ်သင်ႇဝႃႈ "ႁဵတ်းၸိူင်ႉႁိုဝ်" (How to do it)။
-* **Less Bugs:** ဢမ်ႇလူဝ်ႇတႅမ်ႈ `for loop` ယၢဝ်းယၢဝ်း ဢၼ်ၸၢင်ႈၽိတ်းပလၢတ်ႈလႆႈငၢႆႈ။
-* **Reusability:** ၸၢင်ႈဢဝ် Logic ၼိုင်ႈယၢင်ႇ ၵႂႃႇၸႂ်ႉလႆႈတင်းလၢႆလၢႆ Function။
+* **ယႃႇၸႂ်ႉ Nested Ternary:** ႁဝ်းၸၢင်ႈဢဝ် Ternary သႂ်ႇဝႆႉၼႂ်း Ternary လႆႈ (မိူၼ်ၼင်ႇ else if)၊ ၵူၺ်းၵႃႈ မၼ်းတေႁဵတ်းႁႂ်ႈၵူတ်ႉလူယႃႇယၢပ်ႇၼႃႇ။ သင် Logic သုၵ်ႉယုင်ႈ၊ ႁႂ်ႈၸႂ်ႉ `if/else` ႁိုဝ် `switch` တေလီလိူဝ်ၶႃႈ။
+* **ၸႂ်ႉတႃႇတႅပ်းတတ်းငၢႆႈငၢႆႈ:** ၸႂ်ႉ Ternary မိူဝ်ႈႁဝ်းလူဝ်ႇလႅၵ်ႈၵႃႈၶၼ် Variable ဢၼ်မီးတၢင်းလိူၵ်ႈ 2 ဢၼ်ၵူၺ်းၶႃႈ။
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 15)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **HOF**: Function ဢၼ်ႁပ်ႉ ႁိုဝ် သူင်ႇ Function တၢင်ႇဢၼ်။
-* **Callback**: Function ဢၼ်သူင်ႇၶဝ်ႈၵႂႃႇ ပဵၼ် Argument။
-* **Array Methods**: `.map()`, `.filter()`, `.reduce()` ပဵၼ်တူဝ်ယၢင်ႇ HOF ဢၼ်လီသုတ်း။
+* **Ternary Operator** ပဵၼ်လၢႆးတႅမ်ႈ `if/else` ၼႂ်းထႅဝ်လဵဝ် (One-liner)။
+* **`?`** မိူၼ်ၼင်ႇ "မၢၼ်ႇႁႃႉ?"၊ **`:`** မိူၼ်ၼင်ႇ "သင်ဢမ်ႇမၢၼ်ႇၸိုင်..."။
+* ၸွႆႈႁႂ်ႈၵူတ်ႉႁဝ်းသႅၼ်ႈသႂ် လႄႈ ပွတ်းလိူဝ်ၵဝ်ႇ။
 
 ---

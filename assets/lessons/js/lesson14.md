@@ -1,68 +1,52 @@
-# Lesson 14: Scope & Closures (ၶွပ်ႇၵင်ႈ လႄႈ ၵၢၼ်တွၼ်းမၢႆ)
+# Lesson 14: Switch Statements
 
-မိူဝ်ႈႁဝ်းတႅမ်ႈၵူတ်ႉၼမ်မႃး၊ ႁဝ်းလူဝ်ႇႁူႉဝႃႈ တူဝ်လႅၵ်ႈလႂ် ၸႂ်ႉလႆႈတီႈလႂ်။ သင်ႁဝ်းဢမ်ႇႁူႉ၊ ၵူတ်ႉႁဝ်းတေ Error ဝႃႈ `ReferenceError: x is not defined` ၼၼ်ႉၶႃႈ။
+`switch` statement ၼႆႉ ၸႂ်ႉတႃႇတူၺ်းၵႃႈၶၼ် (Value) ၶွင် Variable ၼိုင်ႈဢၼ် သေ "တႅတ်ႉ" (Match) ၸူးလၢႆလၢႆ **Case** ၶႃႈ။
 
-### 1. Scope (ၶွပ်ႇၵင်ႈၵၢၼ်ၸႂ်ႉတူဝ်လႅၵ်ႈ)
+### 1. ပိူင်တႅမ်ႈ (Syntax)
 
-Scope မၢႆထိုင် "ဢွင်ႈတီႈ" ဢၼ်တူဝ်လႅၵ်ႈၼၼ်ႉ မီးတူဝ်မီးတၼ်းဝႆႉယူႇ။ ၼႂ်း JavaScript မီး 3 မဵဝ်း:
+* **`switch (variable)`**: ဢဝ် Variable ဢၼ်ႁဝ်းၶႂ်ႈၵူတ်ႇထတ်းသႂ်ႇဝႆႉ။
+* **`case`**: ၵႃႈၶၼ်ဢၼ်ႁဝ်းၶႂ်ႈတႅၵ်ႈ။
+* **`break`**: ၶေႃႈသင်ႇ "ၵိုတ်း"။ သင်ဢမ်ႇသႂ်ႇ `break`၊ JavaScript တေလႅၼ်ႈလူင်းၵႂႃႇ Case ၽၢႆႇတႂ်ႈထႅင်ႈတိၵ်းတိၵ်းၶႃႈ။
+* **`default`**: မိူၼ်ၼင်ႇ `else` ၶႃႈ။ သင်ဢမ်ႇမၢၼ်ႇ Case လႂ်ၵေႃႈ မၼ်းတေမႃးႁဵတ်းတီႈၼႆႈ။
 
-* **Global Scope:** တူဝ်လႅၵ်ႈဢၼ်တႅမ်ႈဝႆႉ ၽၢႆႇၼွၵ်ႈ Function တင်းမူတ်း။ ၸႂ်ႉလႆႈၵူႈတီႈ ၼႂ်း File ၼၼ်ႉ။
-* **Function Scope:** တူဝ်လႅၵ်ႈဢၼ်တႅမ်ႈဝႆႉ ၼႂ်း Function။ ၸႂ်ႉလႆႈၼႂ်း Function ၼၼ်ႉၵူၺ်း။
-* **Block Scope (`let`, `const`):** တူဝ်လႅၵ်ႈဢၼ်ယူႇၼႂ်းဝူင်းလဵၵ်းပိၵ်း `{ }` (မိူၼ်ၼင်ႇၼႂ်း `if` ႁိုဝ် `for` loop)။
+### 💻 တူဝ်ယၢင်ႇ (Code Example)
 
 ```javascript
-let globalVar = "ၶူင်းၵၢင်"; // Global
+const day = "Monday";
 
-function testScope() {
-  let localVar = "ၼႂ်းႁိူၼ်း"; // Function Scope
-  console.log(globalVar); // ၸႂ်ႉလႆႈ
-  console.log(localVar);  // ၸႂ်ႉလႆႈ
+switch (day) {
+  case "Monday": // သင် day === "Monday"
+    console.log("တႄႇၵၢၼ်ႁဵတ်းၵၢၼ် ဝၼ်းဢွၼ်တၢင်းသုတ်း!");
+    break;
+  case "Friday":
+    console.log("ဝၼ်းသုတ်းသႅၼ်းယဝ်ႉ၊ ၸမ်တေလႆႈလိုဝ်ႈယဝ်ႉ!");
+    break;
+  case "Saturday":
+  case "Sunday": // ႁဝ်းၸၢင်ႈဢဝ် 2 Case မႃးႁူမ်ႈၵၼ်လႆႈ
+    console.log("ပဵၼ်ဝၼ်းလိုဝ်ႈ ဝၼ်းသဝ်လႄႈ ဝၼ်းဢႃទိတ်ႉၶႃႈ။");
+    break;
+  default:
+    console.log("ပဵၼ်ဝၼ်းယူဝ်းယူဝ်း ၵၢင်သပ်ႉပတႃႉၶႃႈ။");
 }
-
-testScope();
-console.log(localVar); // Error! ဢွၵ်ႇမႃးၼွၵ်ႈႁိူၼ်းယဝ်ႉ ဢမ်ႇႁူႉၸၵ်း။
 
 ```
 
 ---
 
-### 2. Closures (ၵၢၼ်တွၼ်းမၢႆၶွင် Function)
+### 2. Switch vs. If/Else (ပႅၵ်ႇၵၼ်ၸိူင်ႉၼိုင်?)
 
-**Closure** ပဵၼ်လွင်ႈဢၼ် "Function လုၵ်ႈဢွၼ်ႇ" (Inner function) တိုၵ်ႉတွၼ်းမၢႆ လႄႈ ၸႂ်ႉတူဝ်လႅၵ်ႈၶွင် "Function ပေႃႈမႄႈ" (Outer function) လႆႈယူႇ၊ တင်းသဵင်ႈ ဢၼ် Function ပေႃႈမႄႈၼၼ်ႉ ႁဵတ်းၵၢၼ်ယဝ်ႉတူဝ်ႈၵႂႃႇယဝ်ႉၵေႃႈယႃႇ။
-
-**တူဝ်ယၢင်ႇ (Example):**
-
-```javascript
-function makeCounter() {
-  let count = 0; // တူဝ်လႅၵ်ႈၼႆႉ ယူႇၼႂ်း Scope ၶွင် makeCounter
-
-  return function() {
-    count++; // Function လုၵ်ႈဢွၼ်ႇ တိုၵ်ႉတွၼ်းမၢႆ 'count' ဝႆႉယူႇ
-    return count;
-  };
-}
-
-const counter = makeCounter();
-console.log(counter()); // 1
-console.log(counter()); // 2
-
-```
-
-> **Ebook Tip:** တွၼ်းမၢႆငၢႆႈငၢႆႈဝႃႈ Closure ပဵၼ်မိူၼ် **"Memory ၶွင် Function"**။ မၼ်းတေ "ၵဵပ်း" တူဝ်လႅၵ်ႈဢၼ်မၼ်းလူဝ်ႇၸႂ်ႉဝႆႉ ဢမ်ႇပၼ်ႁၢႆၶႃႈ။
+| Feature | If/Else | Switch Statement |
+| --- | --- | --- |
+| **ၵၢၼ်တႅၵ်ႈ** | တႅၵ်ႈလႆႈလၢႆလၢႆ Logic (>, <, &&, |  |
+| **တူဝ်တႅၵ်ႈ** | ၸႂ်ႉလႆႈလၢႆ Variable ၼႂ်းပွၵ်ႈလဵဝ် | ၸႂ်ႉလႆႈ Variable တူဝ်လဵဝ်ၵူၺ်း |
+| **လွင်ႈလူယႃႇ** | ယၢပ်ႇလိူဝ် သင်မီးတၢင်းလိူၵ်ႈၼမ် | ငၢႆႈလိူဝ် လႄႈ သႅၼ်ႈသႂ်လိူဝ် (Clean Code) |
 
 ---
 
-### 3. Why is it useful? (မၼ်းလီၸိူင်ႉႁိုဝ်?)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Data Privacy:** ႁဵတ်းႁႂ်ႈတူဝ်လႅၵ်ႈ (Variables) ႁဝ်း ပဵၼ်လွင်ႈလပ်ႉ (Private)။ ၵူၼ်းၽၢႆႇၼွၵ်ႈ ဢမ်ႇၸၢင်ႈမႃးလႅၵ်ႈလၢႆႈၵႃႈၶၼ်မၼ်းလႆႈ ၵမ်းလဵဝ်။
-* **State Management:** ၸွႆႈတွၼ်းမၢႆသၢႆငၢႆ (Status) ၶွင် Program ႁဝ်း။
-
----
-
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 14)
-
-* **Global Scope**: ၸႂ်ႉလႆႈၵူႈတီႈ။
-* **Local Scope**: ၸႂ်ႉလႆႈၼႂ်း `{ }` ဢၼ်မၼ်းယူႇဝႆႉၵူၺ်း။
-* **Closures**: လွင်ႈဢၼ် Function လုၵ်ႈဢွၼ်ႇ တွၼ်းမၢႆတူဝ်လႅၵ်ႈ ၽၢႆႇၼွၵ်ႈ Scope မၼ်းဝႆႉလႆႈ။
+* **`switch`** ၸႂ်ႉတူၺ်းလွင်ႈ **Strict Equality (`===`)** တႃႇသေႇ။
+* ယႃႇလိုမ်းသႂ်ႇ **`break`** (သင်ဢမ်ႇသႂ်ႇ၊ မၼ်းတေႁဵတ်းၵၢၼ်လူင်းၵႂႃႇၸူး Case ထႅင်ႈဢၼ်ၼိုင်ႈ လူၺ်ႈဢမ်ႇၵူတ်ႇထတ်း Logic)။
+* **`default`** ပဵၼ်တွၼ်ႈဢၼ် "ႁႄႉၵင်ႈ" သင်ဝႃႈ Case တၢင်ႇၸိူဝ်းဢမ်ႇမၢၼ်ႇ။
 
 ---

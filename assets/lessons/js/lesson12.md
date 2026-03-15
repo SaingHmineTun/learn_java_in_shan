@@ -1,83 +1,85 @@
-# Lesson 12: Parameters & Arguments (ၵၢၼ်သူင်ႇၶေႃႈမုၼ်းၶဝ်ႈ Function)
 
-ပိူဝ်ႈတေႁႂ်ႈ Function ႁဝ်းႁဵတ်းၵၢၼ်လႆႈလၢႆလၢႆမဵဝ်း (Dynamic)၊ ႁဝ်းလူဝ်ႇသူင်ႇၶေႃႈမုၼ်းပၼ်မၼ်းၶႃႈ။
+# Lesson 12: Logical Operators (&&, ||, !)
 
-### 1. Parameters vs. Arguments
+Logical Operators ၸွႆႈႁႂ်ႈႁဝ်းဢဝ် Logic လၢႆဢၼ်မႃး "မတ်ႉၸွႆး" ၵၼ် ဢမ်ႇၼၼ် "ပိၼ်ႇၽိတ်းပဵၼ်မၢၼ်ႇ" ၶႃႈ။
 
-သွင်ဢၼ်ၼႆႉ ၵႆႉမီးၵူၼ်းႁွင်ႉလေႃးၵၼ်၊ တေႃႉတေႉမၼ်းပႅၵ်ႇၵၼ်ဢိတ်းၼိုင်ႈၶႃႈ:
+### 1. AND Operator (`&&`)
 
-* **Parameters (ပႃႇရႃႇမီႇတႃႇ):** ပဵၼ် "ၸိုဝ်ႈတႅၼ်း" ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉ မိူဝ်ႈသၢင်ႈ Function (ပဵၼ်မိူၼ် ထူင်ပဝ်ႇ ဢၼ်ပႂ်ႉႁပ်ႉၶေႃႈမုၼ်း)။
-* **Arguments (ဢႃႇၵျူႇမႅၼ်ႉ):** ပဵၼ် "ၶေႃႈမုၼ်းတေႉ" ဢၼ်ႁဝ်းသူင်ႇပၼ် မိူဝ်ႈႁွင်ႉၸႂ်ႉ (ပဵၼ်ၶေႃႈမုၼ်း ဢၼ်သႂ်ႇၼႂ်းထူင်)။
+**"လူဝ်ႇမၢၼ်ႇတင်းမူတ်း"** - ငဝ်းလၢႆး (Condition) တင်းသွင်ၽၢႆႇ လူဝ်ႇပဵၼ် `true` တင်းသွင်ဢၼ် ၸင်ႇတေဢွၵ်ႇမႃးပဵၼ် `true` ၶႃႈ။
 
 ```javascript
-// 'name' တီႈၼႆႈပဵၼ် Parameter
-function greet(name) {
-  console.log(`မႂ်ႇသုင်ၶႃႈ ${name}!`);
-}
+const hasTicket = true;
+const isSober = true;
 
-// "ၸၢႆးသႅင်" တီႈၼႆႈပဵၼ် Argument
-greet("ၸၢႆးသႅင်"); 
-greet("ၼၢင်းမူဝ်"); 
+if (hasTicket && isSober) {
+  console.log("ၶဝ်ႈပွႆးလႆႈၶႃႈ!");
+} else {
+  console.log("ၶဝ်ႈဢမ်ႇလႆႈၶႃႈ။");
+}
+// သင်မီးဝႂ် ၵူၺ်းၵႃႈ မဝ်းလဝ်ႈ (false) ၸိုင် တေၶဝ်ႈဢမ်ႇလႆႈ။
 
 ```
 
 ---
 
-### 2. Multiple Parameters (သူင်ႇလၢႆလၢႆယၢင်ႇ)
+### 2. OR Operator (`||`)
 
-ႁဝ်းသူင်ႇၶေႃႈမုၼ်းလၢႆဢၼ်ၸွမ်းၵၼ်လႆႈ ၸႂ်ႉၶႅၼ်ႇမႃႇ (`,`) ၶၼ်ႈဝႆႉၶႃႈ။
+**"မၢၼ်ႇဢၼ်ၼိုင်ႈၵေႃႈလႆႈ"** - သင်မီးၽၢႆႇလႂ်ၽၢႆႇၼိုင်ႈပဵၼ် `true` ၸိုင် မၼ်းတေဢွၵ်ႇမႃးပဵၼ် `true` ၵမ်းလဵဝ်ၶႃႈ။
 
 ```javascript
-function add(a, b) {
-  return a + b;
-}
+const isWeekend = true;
+const isHoliday = false;
 
-console.log(add(5, 10)); // 15
+if (isWeekend || isHoliday) {
+  console.log("ယဝ်ႉၵၢၼ်ယဝ်ႉ၊ ၼອນလႆႈ!");
+}
+// မၢၼ်ႇဢၼ်ၼိုင်ႈၵေႃႈ ႁဵတ်းႁႂ်ႈ Logic တင်းမူတ်းပဵၼ် true ၶႃႈ။
 
 ```
 
 ---
 
-### 3. Default Parameters (ၵႃႈၶၼ်ပိုၼ်ႉထၢၼ်) - ES6
+### 3. NOT Operator (`!`)
 
-မၢင်ၵမ်း ၵူၼ်းၸႂ်ႉ (User) ၸၢင်ႈလိုမ်းသူင်ႇ Argument မႃး။ ပိူဝ်ႈတေဢမ်ႇႁႂ်ႈၵူတ်ႉႁဝ်း Error ႁိုဝ် ပဵၼ် `undefined`၊ ႁဝ်းဝႆႉၵႃႈၶၼ်ပိုၼ်ႉထၢၼ်လႆႈၶႃႈ။
+**"ပိၼ်ႇၽၢႆႇ"** - မၼ်းတေပိၼ်ႇ `true` ပဵၼ် `false`၊ လႄႈ ပိၼ်ႇ `false` ပဵၼ် `true` ၶႃႈ။
 
 ```javascript
-function welcome(user = "ၵူၼ်းမႂ်ႇ") {
-  console.log(`ႁူမ်ၸူမ်းႁပ်ႉတွၼ်ႈ ${user}`);
-}
+const isRaining = false;
 
-welcome("ၸၢႆးၵႅဝ်ႈ"); // "ႁူမ်ၸူမ်းႁပ်ႉတွၼ်ႈ ၸၢႆးၵႅဝ်ႈ"
-welcome();          // "ႁူမ်ၸူမ်းႁပ်ႉတွၼ်ႈ ၵူၼ်းမႂ်ႇ"
+if (!isRaining) {
+  console.log("ၾူၼ်ဢမ်ႇတူၵ်း၊ ဢွၵ်ႇၵႂႃႇလဵၼ်ႈလႆႈၶႃႈ။");
+}
+// !false တေပဵၼ် true ၶႃႈ။
 
 ```
 
 ---
 
-### 4. Rest Parameters (`...`) - ES6
+### 4. ၵၢၼ်ၸႂ်ႉႁူမ်ႈၵၼ် (Combining Operators)
 
-သင်ဝႃႈႁဝ်းဢမ်ႇႁူႉဝႃႈ ၵူၼ်းၸႂ်ႉတေသူင်ႇ Argument မႃးလၢႆဢၼ်၊ ႁဝ်းၸႂ်ႉ `...` (Spread/Rest operator) ပိူဝ်ႈတေႁပ်ႉဢဝ်ၶေႃႈမုၼ်းတင်းမူတ်း မႃးဝႆႉၼႂ်း **Array** ၼိုင်ႈဢၼ်ၶႃႈ။
+ႁဝ်းၸၢင်ႈၸႂ်ႉၶဝ်ႁူမ်ႈၵၼ်လႆႈ၊ ၵူၺ်းၵႃႈ လူဝ်ႇၸႂ်ႉၵွင်းၸိၵ်း `( )` တႃႇၸႅၵ်ႇတွၼ်ႈ Logic ႁႂ်ႈမၼ်းၸႅၼ်ႇလႅင်းၶႃႈ။
 
 ```javascript
-function sumAll(...numbers) {
-  let total = 0;
-  for (const n of numbers) {
-    total += n;
-  }
-  return total;
-}
+const age = 20;
+const hasLicense = true;
+const isDrunk = false;
 
-console.log(sumAll(1, 2, 3, 4, 5)); // 15
+// လူဝ်ႇဢႃႇယု 18+ လႄႈ မီးဝႂ်ၶပ်းၶီႇ၊ သေတေလႆႈဢမ်ႇမဝ်းလဝ်ႈ
+if ((age >= 18 && hasLicense) && !isDrunk) {
+  console.log("ၶပ်းၵႃးလႆႈၶႃႈ!");
+}
 
 ```
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 12)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-* **Parameter**: ၸိုဝ်ႈတႅၼ်း ဢၼ်တႅမ်ႈဝႆႉၼႂ်းဝူင်းလဵၵ်း `( )` မိူဝ်ႈသၢင်ႈ Function။
-* **Argument**: ၶေႃႈမုၼ်းတေႉ ဢၼ်သူင်ႇပၼ် မိူဝ်ႈႁွင်ႉၸႂ်ႉ။
-* **Default Value**: ၸႂ်ႉ `=` ပိူဝ်ႈတေဝႆႉၵႃႈၶၼ် မိူဝ်ႈဢမ်ႇမီး Argument သူင်ႇမႃး။
-* **Rest (`...`)**: ၸႂ်ႉတႃႇႁပ်ႉ Argument တင်းၼမ် မႃးဝႆႉၼႂ်း Array။
+* **`&&` (AND)**: တေပဵၼ် true မိူဝ်ႈ "တင်းသွင်ၽၢႆႇ" ပဵၼ် true။
+* **`||` (OR)**: တေပဵၼ် true မိူဝ်ႈ "ၽၢႆႇလႂ်ၽၢႆႇၼိုင်ႈ" ပဵၼ် true။
+* **`!` (NOT)**: ၸႂ်ႉတႃႇပိၼ်ႇၵႃႈၶၼ် Boolean ႁႂ်ႈပဵၼ်ၽၢႆႇၶတ်းၵၼ်။
+* ၵၢၼ်ၸႂ်ႉ Logical Operators တေၸွႆႈႁႂ်ႈ `if/else` ႁဝ်းသႅၼ်ႈသႂ် လႄႈ ဢမ်ႇလူဝ်ႇတႅမ်ႈ Nested If ၼမ်လၢႆၶႃႈ။
 
 ---
+
+

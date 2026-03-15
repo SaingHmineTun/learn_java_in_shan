@@ -1,65 +1,67 @@
-# Lesson 13: Arrow Functions (လၢႆးတႅမ်ႈ Function ပွတ်း - ES6)
 
-**Arrow Function** မၢႆထိုင် လၢႆးတႅမ်ႈ Function ဢၼ်ၸႂ်ႉၶႅပ်းလႅၼ်း `=>` (မိူၼ်ၼင်ႇ ႁၢင်ၵၢင်ႇ) တႅၼ်း Keyword `function` ၶႃႈ။
+# Lesson 13: Truthy vs. Falsy Values
 
-### 1. တႅၵ်ႈၼိူင်းလၢႆးတႅမ်ႈ (Syntax Comparison)
+ၼႂ်း JavaScript၊ ၵႃႈၶၼ် (Value) တင်းမူတ်း သင်ႁဝ်းဢဝ်မၼ်းၵႂႃႇသႂ်ႇၼႂ်း `if` statement ၸိုင် မၼ်းတေပိၼ်ႇပဵၼ် `true` ႁိုဝ် `false` ၵမ်းလဵဝ်ၶႃႈ။
 
-* **လၢႆးတႅမ်ႈပၵ်းၵဝ်ႇ (Regular Function):**
+### 1. Falsy Values (ၸုမ်းဢၼ်ပဵၼ် False)
+
+ၼႂ်း JavaScript မီးၵႃႈၶၼ်ယူႇ **6 ယၢင်ႇ** ၵူၺ်း ဢၼ်တေပဵၼ် `false` တႃႇသေႇၶႃႈ:
+
+1. **`false`**: တူဝ်မၼ်းၵမ်းလဵဝ်။
+2. **`0`**: တူဝ်ၼပ်ႉသုၼ် (ပႃးတင်း `-0` လႄႈ `0n` ဢၼ်ပဵၼ် BigInt)။
+3. **`""`**: String ဢၼ်ပဝ်ႇဝႆႉ (ဢမ်ႇမီးလိၵ်ႈသင်ၼႂ်းမၼ်း)။
+4. **`null`**: ၵႃႈၶၼ်ပဝ်ႇ။
+5. **`undefined`**: ဢမ်ႇပႆႇပၼ်ၵႃႈၶၼ်။
+6. **`NaN`**: Not a Number (ဢမ်ႇၸႂ်ႈတူဝ်ၼပ်ႉ)။
+
+---
+
+### 2. Truthy Values (ၸုမ်းဢၼ်ပဵၼ် True)
+
+ၶေႃႈမုၼ်း "တၢင်ႇၸိူဝ်း" တင်းမူတ်း ဢၼ်ဢမ်ႇၸႂ်ႈ 6 ယၢင်ႇၽၢႆႇၼိူဝ်ၼၼ်ႉ JavaScript တေၼပ်ႉပဵၼ် `true` တင်းမူတ်းၶႃႈ။ တူဝ်ယၢင်ႇမိူၼ်ၼင်ႇ:
+
+* `"0"` (String ဢၼ်မီးတူဝ်ၼပ်ႉ 0 ယူႇၼႂ်း)
+* `"false"` (String ဢၼ်မီးတူဝ်လိၵ်ႈ false)
+* `[]` (Array ပဝ်ႇ - ၼႆႉလမ်ႇလွင်ႈၼႃႇ!)
+* `{}` (Object ပဝ်ႇ)
+* တူဝ်ၼပ်ႉသင်ၵေႃႈယဝ်ႉ ဢၼ်ဢမ်ႇၸႂ်ႈ 0။
+
+---
+
+### 💻 တူဝ်ယၢင်ႇၼႂ်းၵူတ်ႉ (Example)
+
+ႁဝ်းၵႆႉၸႂ်ႉလွင်ႈၼႆႉ တႃႇၵူတ်ႇထတ်းဝႃႈ မီး "ၶေႃႈမုၼ်း" ယူႇၼႂ်း Variable ၼၼ်ႉႁႃႉ ဢမ်ႇမီးႁႃႉၶႃႈ။
+
 ```javascript
-const add = function(a, b) {
-  return a + b;
-};
+let money = 0; // 0 ပဵၼ် Falsy
+
+if (money) {
+  console.log("ၸဝ်ႈၵဝ်ႇမီးငိုၼ်းယူႇၶႃႈ!");
+} else {
+  console.log("ငိုၼ်းၸဝ်ႈၵဝ်ႇ သဵင်ႈယဝ်ႉၶႃႈ။");
+}
+// Result: ငိုၼ်းၸဝ်ႈၵဝ်ႇ သဵင်ႈယဝ်ႉၶႃႈ။
 
 ```
 
-
-* **လၢႆးတႅမ်ႈ Arrow Function:**
 ```javascript
-const add = (a, b) => {
-  return a + b;
-};
+let username = "Sai Kham"; // String မီးလိၵ်ႈ ပဵၼ် Truthy
 
-```
-
-
-
----
-
-### 2. လၢႆးတႅမ်ႈႁႂ်ႈပွတ်းသုတ်း (Implicit Return)
-
-သင်ဝႃႈၼႂ်း Function ႁဝ်းမီးၵူတ်ႉထႅဝ်လဵဝ် လႄႈ သူင်ႇၵႃႈၶၼ် (Return) ၵမ်းလဵဝ်၊ ႁဝ်းဢမ်ႇလူဝ်ႇတႅမ်ႈ `{ }` လႄႈ Keyword `return` ၵေႃႈလႆႈၶႃႈ။
-
-```javascript
-// ပွတ်းသုတ်းၶႃႈ!
-const add = (a, b) => a + b;
-
-const square = n => n * n; // သင်မီး Parameter တူဝ်လဵဝ် ဢမ်ႇလူဝ်ႇသႂ်ႇ ( ) ၵေႃႈလႆႈ
+if (username) {
+  console.log(`မႂ်ႇသုင်ၶႃႈ ${username}`);
+} else {
+  console.log("ၶႅၼ်းတေႃႈ သႂ်ႇၸိုဝ်ႈၸဝ်ႈၵဝ်ႇၶႃႈ။");
+}
+// Result: မႂ်ႇသုင်ၶႃႈ Sai Kham
 
 ```
 
 ---
 
-### 3. လွင်ႈပႅၵ်ႇပိူင်ႈဢၼ်လမ်ႇလွင်ႈ (Key Differences)
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
 
-Arrow Function ဢမ်ႇၸႂ်ႈဝႃႈ မၼ်းပွတ်းၵူၺ်း၊ မၼ်းမီးလွင်ႈႁဵတ်းၵၢၼ်ဢၼ်ပႅၵ်ႇၵၼ်ဝႆႉ:
-
-1. **`this` Keyword:** Arrow Function ဢမ်ႇမီး `this` ၶွင်တူဝ်မၼ်း။ မၼ်းတေၵႂႃႇၸႂ်ႉ `this` ၶွင် Scope ဢၼ်ယူႇတၢင်းၼွၵ်ႈမၼ်း (Lexical this)။ ၼႆႉမီးၽၼ်ၽွၼ်းၼႃႇ မိူဝ်ႈႁဝ်းတႅမ်ႈ Object Method ႁိုဝ် Event Listeners ၶႃႈ။
-2. **Arguments Object:** ၼႂ်း Arrow Function ဢမ်ႇမီး `arguments` object။ သင်လူဝ်ႇၸႂ်ႉ ႁဝ်းတေလႆႈၸႂ်ႉ Rest Parameters (`...`) တႅၼ်းၶႃႈ။
-3. **Constructor:** ႁဝ်းဢမ်ႇၸၢင်ႈၸႂ်ႉ Arrow Function ပိူဝ်ႈတေႁဵတ်း `new` Class (Constructor) လႆႈၶႃႈ။
-
----
-
-### 4. မိူဝ်ႈလႂ်ထိုင်လီၸႂ်ႉ? (When to use?)
-
-* **ၸႂ်ႉ:** တႃႇ Function ပွတ်းပွတ်း၊ တႃႇၸႂ်ႉၼႂ်း `map()`, `filter()`, `forEach()` ႁိုဝ် မိူဝ်ႈဢမ်ႇလူဝ်ႇၸႂ်ႉ `this` ၶွင်တူဝ်မၼ်း။
-* **ယႃႇၸႂ်ႉ:** တႃႇ Object Methods ဢၼ်လူဝ်ႇၸႂ်ႉ `this` ႁိုဝ် တႃႇသၢင်ႈ Constructors။
-
----
-
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 13)
-
-* **Arrow Function**: ၸႂ်ႉ `=>` တႅၼ်း Keyword `function`။
-* **Shorthand**: သင်မီးထႅဝ်လဵဝ် ဢမ်ႇလူဝ်ႇတႅမ်ႈ `{ }` လႄႈ `return`။
-* **This**: မၼ်းဢမ်ႇမီး `this` ၶွင်တူဝ်မၼ်း (Lexical Scoping)။
+* **Falsy** မီး 6 တူဝ်: `false`, `0`, `""`, `null`, `undefined`, `NaN`။
+* တၢင်ႇမဵဝ်းပဵၼ် **Truthy** တင်းမူတ်း။
+* ၵၢၼ်ပွင်ႇၸႂ်လွင်ႈၼႆႉ ၸွႆႈႁႂ်ႈႁဝ်းတႅမ်ႈၵူတ်ႉ `if` လႆႈပွတ်းလိူဝ်ၵဝ်ႇ (ဢမ်ႇလူဝ်ႇတႅမ်ႈ `if (money !== 0)`) ၶႃႈ။
 
 ---

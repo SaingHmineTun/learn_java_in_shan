@@ -1,58 +1,64 @@
 
-# Lesson 16: The `this` Keyword & Explicit Binding
+# Lesson 16: Short-circuiting Basics (&&, ||)
 
-ၼႂ်း JavaScript၊ `this` ဢမ်ႇၸႂ်ႈတူဝ်လႅၵ်ႈ (Variable) ပုံႇပႅၵ်ႉ။ မၼ်းပဵၼ် Keyword ဢၼ် "လႅၵ်ႈလၢႆႈၵႃႈၶၼ်" ၸွမ်းၼင်ႇဝႃႈ **"ၽႂ်ပဵၼ်ၵူၼ်းႁွင်ႉၸႂ်ႉမၼ်း"** (Call-site)။ သင်ၸဝ်ႈၵဝ်ႇပွင်ႇၸႂ် `this`၊ ၸဝ်ႈၵဝ်ႇတေၵုမ်းထိူင်း JavaScript လႆႈၵူႈယၢင်ႇၶႃႈ။
+ၼႂ်း JavaScript၊ Logical Operators (`&&` လႄႈ `||`) မၼ်းဢမ်ႇၵူၺ်းပၼ်ၵႃႈၶၼ်ပဵၼ် `true/false`၊ မၼ်းယင်းၸၢင်ႈ "ပၼ်ၵႃႈၶၼ် (Return Value)" ဢၼ်မၼ်းၵႂႃႇထူပ်းႁၼ်ၼၼ်ႉမႃးၵမ်းလဵဝ်ၶႃႈ။
 
-### 1. The 4 Rules of `this` (ပၵ်းပိူင် 4 ယၢင်ႇ)
+### 1. Short-circuiting လွင်ႈၸႂ်ႉ OR (`||`)
 
-ပိူဝ်ႈတေႁူႉဝႃႈ `this` ၸီႉၸူးသင်၊ ႁဝ်းလူဝ်ႇတူၺ်း 4 ၸၼ်ႉၼႆႉၶႃႈ:
+မိူဝ်ႈၸႂ်ႉ `||`၊ JavaScript တေႁႃၵႃႈၶၼ် **Truthy** ဢၼ်ဢွၼ်တၢင်းသုတ်း။
 
-1. **Global Binding**: သင်ႁဝ်းႁွင်ႉ Function ပဝ်ႇၼွၵ်ႈ Object၊ `this` တေပဵၼ် `window` (ၼႂ်း Browser) ႁိုဝ် `global` (ၼႂ်း Node.js)။
-2. **Implicit Binding**: မိူဝ်ႈႁွင်ႉၸႂ်ႉၼႂ်း Object၊ `this` တေၸီႉၸူး Object ဢၼ်ယူႇၽၢႆႇၼႃႈ "ၸုၵ်း" (`.`) ၼၼ်ႉၶႃႈ။
-* *တူဝ်ယၢင်ႇ:* `user.sayHi()` -> `this` ပဵၼ် `user`။
-
-
-3. **Explicit Binding**: ႁဝ်း "တႅပ်းတတ်းပၼ်မၼ်း" ဝႃႈတေႁႂ်ႈ `this` ပဵၼ်သင် ၸႂ်ႉလၢႆး `.call()`, `.apply()`, `.bind()`။
-4. **New Binding**: မိူဝ်ႈၸႂ်ႉ `new` Keyword၊ `this` တေပဵၼ် Object မႂ်ႇဢၼ်တိုၵ်ႉသၢင်ႈၼၼ်ႉ။
-
----
-
-### 2. Explicit Binding: Call, Apply, and Bind
-
-မၢင်ၵမ်း ႁဝ်းမီး Function ၼိုင်ႈဢၼ်၊ ၵူၺ်းၵႃႈႁဝ်းၶႂ်ႈႁႂ်ႈမၼ်းႁဵတ်းၵၢၼ်ပၼ် Object တၢင်ႇဢၼ်။ ႁဝ်းမတ်ႉ (Bind) မၼ်းလႆႈၸိူင်ႉၼႆၶႃႈ:
+* သင်ထူပ်းႁၼ် Truthy ဢၼ်ၼိုင်ႈယဝ်ႉ၊ မၼ်းတေ **"ၵိုတ်း"** သေဢဝ်ၵႃႈၶၼ်ၼၼ်ႉမႃးပၼ်ႁဝ်းၵမ်းလဵဝ် (ဢမ်ႇၵႂႃႇလူတွၼ်ႈၽၢႆႇလင်ထႅင်ႈယဝ်ႉ)။
+* ႁဝ်းၵႆႉၸႂ်ႉလွင်ႈၼႆႉ တႃႇပၼ် **Default Value** ၶႃႈ။
 
 ```javascript
-const chef = { name: "ၸၢႆးၶမ်း" };
-const waiter = { name: "ၼၢင်းဢွၼ်ႇ" };
+const userSetting = ""; // Falsy
+const defaultSetting = "Dark Mode";
 
-function introduce(skill) {
-  console.log(`ၶႃႈၸိုဝ်ႈ ${this.name}, ၵတ်ႉၶႅၼ်ႇလွင်ႈ ${skill}`);
-}
-
-// 1. .call() - ႁွင်ႉၸႂ်ႉၵမ်းလဵဝ်၊ သူင်ႇ Argument ပဵၼ်တူဝ်ၽႂ်တူဝ်မၼ်း
-introduce.call(chef, "ၵၢၼ်ႁဵတ်းၶဝ်ႈၽၵ်း");
-
-// 2. .apply() - ႁွင်ႉၸႂ်ႉၵမ်းလဵဝ်၊ သူင်ႇ Argument ပဵၼ် Array []
-introduce.apply(waiter, ["ၵၢၼ်လူပၼ်ၶႅၵ်ႇ"]);
-
-// 3. .bind() - ဢမ်ႇပႆႇႁွင်ႉၸႂ်ႉ၊ ၵူၺ်းၵႃႈ "သၢင်ႈ" Function မႂ်ႇ ဢၼ်မတ်ႉ this ဝႆႉယဝ်ႉ
-const chefIntro = introduce.bind(chef);
-chefIntro("ၵၢၼ်ႁဵတ်းၶဝ်ႈသွႆး"); 
+const currentTheme = userSetting || defaultSetting;
+console.log(currentTheme); // "Dark Mode"
+// ယွၼ်ႉ userSetting ပဵၼ်လိၵ်ႈပဝ်ႇ (Falsy)၊ မၼ်းၸင်ႇၵႂႃႇဢဝ် defaultSetting (Truthy) မႃးၶႃႈ။
 
 ```
 
 ---
 
-### 3. Arrow Functions - The Exception
+### 2. Short-circuiting လွင်ႈၸႂ်ႉ AND (`&&`)
 
-Arrow functions (`=>`) **ဢမ်ႇမီး** `this` ၶွင်တူဝ်မၼ်းၶႃႈ။ မၼ်းတေ "ယိမ်" (Inherit) `this` လုၵ်ႉတီႈ Scope ဢၼ်ယူႇတၢင်းၼွၵ်ႈမၼ်း (Lexical Scoping)။ ၼႆႉမီးၽၼ်ၽွၼ်းၼႃႇ မိူဝ်ႈႁဝ်းတႅမ်ႈၵူတ်ႉၼႂ်း `setTimeout` ႁိုဝ် Event Listeners ဢၼ် `this` ၵႆႉႁၢႆၼၼ်ႉၶႃႈ။
+မိူဝ်ႈၸႂ်ႉ `&&`၊ JavaScript တေႁႃၵႃႈၶၼ် **Falsy** ဢၼ်ဢွၼ်တၢင်းသုတ်း။
+
+* သင်ထူပ်းႁၼ် Falsy ဢၼ်ၼိုင်ႈယဝ်ႉ၊ မၼ်းတေ **"ၵိုတ်း"** သေဢဝ်ၵႃႈၶၼ် Falsy ၼၼ်ႉမႃးပၼ်ႁဝ်းၵမ်းလဵဝ်။
+* သင်မၢၼ်ႇ (Truthy) တင်းမူတ်း၊ မၼ်းတေဢဝ်ၵႃႈၶၼ် "တူဝ်လင်သုတ်း" မႃးပၼ်ၶႃႈ။
+
+```javascript
+console.log(0 && "Hello"); // 0 (ယွၼ်ႉ 0 ပဵၼ် Falsy၊ မၼ်းတတ်းတွၼ်ႈၵမ်းလဵဝ်)
+console.log("Sai" && "Kham"); // "Kham" (ယွၼ်ႉ Truthy တင်းသွင်၊ မၼ်းဢဝ်တူဝ်လင်သုတ်း)
+
+// ၵၢၼ်ၸႂ်ႉၼႂ်းၵူတ်ႉတေႉ (Practical use)
+const isLoggedIn = true;
+isLoggedIn && console.log("Welcome back!"); 
+// သင် isLoggedIn ပဵၼ် true၊ မၼ်းတေလႅၼ်ႈၵူတ်ႉၽၢႆႇလင် && ၵမ်းလဵဝ်ၶႃႈ။
+
+```
 
 ---
 
-### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway for Lesson 16)
+### 3. ပႅၵ်ႇၵၼ်ၸိူင်ႉၼိုင်?
 
-* **`this`** ပဵၼ် Keyword ဢၼ်လႅၵ်ႈလၢႆႈၸွမ်းသၢႆငၢႆၵၢၼ်ႁွင်ႉၸႂ်ႉ။
-* ၸႂ်ႉ **`.bind()`** မိူဝ်ႈၶႂ်ႈ "မတ်ႉ" Function ဝႆႉၸူး Object ၼိုင်ႈဢၼ်တေႃႇသေႇ။
-* **Arrow functions** တေၸီႉၸူး `this` ၶွင်တီႈဢၼ်မၼ်းတႅမ်ႈဝႆႉ (Parent scope)။
+| Operator | ၵၢၼ်ႁဵတ်းၵၢၼ် | ၸႂ်ႉမိူဝ်ႈလႂ်? |
+| --- | --- | --- |
+| **` |  | `** |
+| **`&&`** | ႁႃ Falsy ဢၼ်ဢွၼ်တၢင်းသုတ်း | တႃႇလႅၼ်ႈၵူတ်ႉ မိူဝ်ႈငဝ်းလၢႆးမၢၼ်ႇ (Execute if true) |
 
 ---
+
+### 📝 ၶေႃႈမုၼ်းတႃႇတွၼ်း (Key Takeaway)
+
+* **Short-circuiting** ၸွႆႈႁႂ်ႈ JavaScript ႁဵတ်းၵၢၼ်ၽႂ်းလိူဝ်ၵဝ်ႇ ယွၼ်ႉမၼ်းဢမ်ႇလူၵူတ်ႉဢၼ်ဢမ်ႇၸမ်ႇပဵၼ်။
+* ၸႂ်ႉ **`||`** တႃႇႁႄႉၵင်ႈပၼ်ႁႃ Variable ဢၼ်ပဝ်ႇ (Empty/Null)။
+* ၸႂ်ႉ **`&&`** တႃႇလႅၼ်ႈ Function ၸွမ်းၼင်ႇငဝ်းလၢႆး ၼႂ်းထႅဝ်လဵဝ် (ပွတ်းလိူဝ် `if`)။
+
+---
+
+**Lesson 16 ယဝ်ႉတူဝ်ႈယဝ်ႉၶႃႈ!** ၸဝ်ႈၵဝ်ႇတႅမ်ႈ Logic ဢၼ်လႅတ်းၽႂ်းလႆႈယဝ်ႉ။
+
+ၵမ်းၼႆႉ ႁဝ်းတေၵႂႃႇသိုပ်ႇ **Lesson 17: Nullish Coalescing (??)** ဢၼ်ပဵၼ် "ပီႈၼွင်ႉ" ၶွင် `||` ၵူၺ်းၵႃႈ မၼ်းလႅတ်းလိူဝ် တႃႇၸတ်းၵၢၼ်တူဝ်ၼပ်ႉ 0 လႄႈ လိၵ်ႈပဝ်ႇၶႃႈ။ ၸဝ်ႈၵဝ်ႇတေၶႂ်ႈသိုပ်ႇၵႂႃႇၵမ်းလဵဝ်ႁႃႉၶႃႈ?
