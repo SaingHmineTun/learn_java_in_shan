@@ -2748,3 +2748,15 @@ final List<Quiz> kotlinQuizM10 = [
   Quiz(1099, "What is the most modern way to handle background tasks in Kotlin?", ["Coroutines", "RxJava", "AsyncTask", "Threads"]),
   Quiz(1100, "What is the ultimate focus of Module 10?", ["Mastering Scope Functions, Property Delegation, and Coroutines", "Basic variables", "Inheritance", "Collections"]),
 ];
+final List<List<Quiz>> kotlinQuizzes = [
+  kotlinQuizM1,
+  kotlinQuizM2,
+  kotlinQuizM3,
+  kotlinQuizM4,
+  kotlinQuizM5,
+  kotlinQuizM6,
+  kotlinQuizM7,
+  kotlinQuizM8,
+  kotlinQuizM9,
+  kotlinQuizM10,
+];
