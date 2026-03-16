@@ -64,6 +64,7 @@ flutter:
     - assets/lessons/html/
     - assets/lessons/css/
     - assets/lessons/js/
+    - assets/lessons/kotlin/
     - assets/images/
   #   - images/a_dot_ham.jpeg
   fonts:
