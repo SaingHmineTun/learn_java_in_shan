@@ -1,4 +1,6 @@
 // TOPIC SECTION (Module 1 - Introduction)
+import '../languages/lang_kotlin.dart';
+
 const Map<int, String> javaTopics = {
   1: "Introduction to Java Programming",
 
@@ -90,6 +92,7 @@ const Map<String, Map<int, String>> topics = {
   "dart": dartTopics,
   "css": cssTopics,
   "js": jsTopics,
+  "kotlin": kotlinTopics,
 };
 
 // MODULE SECTION (Module 1: Lesson 1, Lesson 2)
@@ -700,6 +703,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "html": htmlModules,
   "css": cssModules,
   "js": jsModules,
+  "kotlin": kotlinModules,
 };
 
 // LESSON SECTION (Lesson 1: Content)
@@ -1170,6 +1174,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "html": htmlLessons,
   "css": cssLessons,
   "js": jsLessons,
+  "kotlin": kotlinLessons,
 };
 
 class Lesson {

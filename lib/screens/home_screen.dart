@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tmkacademy/screens/language_screen.dart';
-import 'package:tmkacademy/utils/language.dart';
+import 'package:tmkacademy/languages/language.dart';
 import '../utils/colors.dart';
 import 'about_screen.dart';
 

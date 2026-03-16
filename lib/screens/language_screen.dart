@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tmkacademy/screens/module_screen.dart';
 import 'package:tmkacademy/screens/quiz_screen.dart';
-import 'package:tmkacademy/utils/language.dart';
+import 'package:tmkacademy/languages/language.dart';
 import 'package:tmkacademy/utils/utils.dart';
 import '../utils/colors.dart'; // Using the TMK Brand Colors
 
