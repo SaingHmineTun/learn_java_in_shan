@@ -72,7 +72,7 @@ class ResultScreen extends StatelessWidget {
               _printCertificate(
                 nameController.text.isEmpty ? "STUDENT" : nameController.text,
                 score,
-                "Learn ${fullName[language]!.toUpperCase()} in Shan",
+                fullName[language]!.toUpperCase(),
               );
             },
             child: const Text(
@@ -192,7 +192,7 @@ class ResultScreen extends StatelessWidget {
                           courseName,
                           style: pw.TextStyle(
                             font: defaultFont,
-                            fontSize: 24,
+                            fontSize: 26,
                             fontWeight: pw.FontWeight.bold,
                             color: PdfColors.lightBlue300,
                           ),
@@ -273,7 +273,7 @@ class ResultScreen extends StatelessWidget {
       if (sessionQuizzes[i].options[0] == userResults[i]) score++;
     }
 
-    final bool isPassed = score >= (userResults.length * 0.7).toInt();
+    final bool isPassed = score >= (userResults.length * 0.8).toInt();
 
     return Scaffold(
       backgroundColor: kBrandDark,
