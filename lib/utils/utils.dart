@@ -1,18 +1,10 @@
 // TOPIC SECTION (Module 1 - Introduction)
 import '../languages/lang_basic.dart';
+import '../languages/lang_html.dart';
 import '../languages/lang_java.dart';
 import '../languages/lang_kotlin.dart';
 import '../languages/lang_python.dart';
 
-const Map<int, String> htmlTopics = {
-  1: "The Skeleton", // Structure: <!DOCTYPE>, <html>, <head>, <body>
-  2: "The Semantics", // Meaning: <header>, <nav>, <main>, <section>, <footer>
-  3: "The Scribe", // Text: Typography, Headings, <p>, <strong>, <em>
-  4: "The Navigator", // Links: Hyperlinks <a> and Navigation Logic
-  5: "The Collector", // Data: Lists <ul>, <ol> and Tables <table>
-  6: "The Input", // Interaction: Forms <form>, <input>, and Labels
-  7: "The Publisher", // Deployment: GitHub & Vercel
-};
 const Map<int, String> dartTopics = {
   1: "Introduction to Dart & Development Environment Setup",
   2: "Variables, Built-in Data Types, and Type Inference",
@@ -60,76 +52,6 @@ const Map<String, Map<int, String>> topics = {
   "kotlin": kotlinTopics,
 };
 
-const Map<int, Map<int, String>> htmlModules = {
-  1: {
-    1: "The Doctype: Declaring the Version",
-    2: "The HTML Tag: The Root and Lang Attributes",
-    3: "The Head: The Invisible Brain of the Page",
-    4: "The Meta Charset: Unlocking Shan Script (UTF-8)",
-    5: "The Title: Giving Your Book a Name",
-    6: "The Body: Where the Content Lives",
-    7: "Comments: Leaving Notes for the Scribe",
-    8: "The Meta Viewport: Making it Mobile-Ready",
-  },
-  2: {
-    9: "Semantic Layout: Using Header and Nav",
-    10: "Main and Section: Organizing Chapters",
-    11: "Articles: Independent Pieces of Content",
-    12: "Aside: Adding Marginalia and Notes",
-    13: "Footer: The Colophon and Copyright",
-    14: "The Div Tag: The Generic Container",
-    15: "The Span Tag: Targeting Small Text Segments",
-  },
-  3: {
-    16: "Hierarchy: H1 through H6",
-    17: "The Paragraph: Writing in Shan Blocks",
-    18: "Strong vs. Bold: Importance vs. Appearance",
-    19: "Em vs. Italic: Stress vs. Style",
-    20: "Underline and Strikethrough Tags",
-    21: "Line Breaks and Horizontal Rules",
-    22: "Preformatted Text and Code Snippets",
-    23: "Blockquotes: Citing External Wisdom",
-    24: "Superscript and Subscript",
-  },
-  4: {
-    25: "The Anchor Tag: Creating Hyperlinks",
-    26: "Relative vs. Absolute Paths (Linking Modules)",
-    27: "The Target Attribute: Control How Links Open",
-    28: "ID Attributes: Linking to Sections on One Page",
-    29: "The Download Attribute: Sharing Files",
-    30: "Email and Phone Links (mailto and tel)",
-    31: "Building a Navigation Menu in Pure HTML",
-  },
-  5: {
-    32: "The Image Tag: src, alt, and title",
-    33: "Image Sizing and Aspect Ratios",
-    34: "The Video Tag: Bringing the Page to Life",
-    35: "The Audio Tag: Adding Music and Voices",
-    36: "Figure and Figcaption: Labeling Media",
-    37: "The Picture Element: Responsive Image Sources",
-    38: "Embedding Iframes: Maps and External Content",
-  },
-  6: {
-    39: "Unordered Lists: Creating Bullet Points",
-    40: "Ordered Lists: Step-by-Step Instructions",
-    41: "Description Lists: Terms and Definitions",
-    42: "Tables: Rows, Headers, and Data Cells",
-    43: "Table Caption, Thread, Tbody, and Tfoot",
-    44: "Forms: Creating the Input Field",
-    45: "Labels, Fieldsets, and Legends",
-    46: "Input Types: Text, Password, and Email",
-    47: "The Textarea: For Long Shan Descriptions",
-  },
-  7: {
-    48: "W3C Validation: Checking for Broken Ink",
-    49: "The Favicon: Adding a Digital Seal to the Tab",
-    50: "SEO Basics: Meta Descriptions and Open Graph",
-    51: "GitHub: Uploading the Manuscript Folder",
-    52: "Vercel: Connecting and Zero-Config Deploy",
-    53: "Custom Domains: Naming Your Digital Library",
-    54: "Performance Check: Optimizing Assets for Speed",
-  },
-};
 const Map<int, Map<int, String>> dartModules = {
   1: {
     // Intro & Setup
@@ -428,7 +350,6 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "kotlin": kotlinModules,
 };
 
-// LESSON SECTION (Lesson 1: Content)
 final Map<int, Lesson> dartLessons = {
   1: Lesson(1, 1),
   2: Lesson(1, 2),
@@ -523,62 +444,6 @@ final Map<int, Lesson> dartLessons = {
   91: Lesson(14, 91),
   92: Lesson(14, 92),
   93: Lesson(14, 93),
-};
-final Map<int, Lesson> htmlLessons = {
-  1: Lesson(1, 1),
-  2: Lesson(1, 2),
-  3: Lesson(1, 3),
-  4: Lesson(1, 4),
-  5: Lesson(1, 5),
-  6: Lesson(1, 6),
-  7: Lesson(1, 7),
-  8: Lesson(1, 8),
-  9: Lesson(2, 9),
-  10: Lesson(2, 10),
-  11: Lesson(2, 11),
-  12: Lesson(2, 12),
-  13: Lesson(2, 13),
-  14: Lesson(2, 14),
-  15: Lesson(2, 15),
-  16: Lesson(3, 16),
-  17: Lesson(3, 17),
-  18: Lesson(3, 18),
-  19: Lesson(3, 19),
-  20: Lesson(3, 20),
-  21: Lesson(3, 21),
-  22: Lesson(3, 22),
-  23: Lesson(3, 23),
-  24: Lesson(3, 24),
-  25: Lesson(4, 25),
-  26: Lesson(4, 26),
-  27: Lesson(4, 27),
-  28: Lesson(4, 28),
-  29: Lesson(4, 29),
-  30: Lesson(4, 30),
-  31: Lesson(4, 31),
-  32: Lesson(5, 32),
-  33: Lesson(5, 33),
-  34: Lesson(5, 34),
-  35: Lesson(5, 35),
-  36: Lesson(5, 36),
-  37: Lesson(5, 37),
-  38: Lesson(5, 38),
-  39: Lesson(6, 39),
-  40: Lesson(6, 40),
-  41: Lesson(6, 41),
-  42: Lesson(6, 42),
-  43: Lesson(6, 43),
-  44: Lesson(6, 44),
-  45: Lesson(6, 45),
-  46: Lesson(6, 46),
-  47: Lesson(6, 47),
-  48: Lesson(7, 48),
-  49: Lesson(7, 49),
-  50: Lesson(7, 50),
-  51: Lesson(7, 51),
-  52: Lesson(7, 52),
-  53: Lesson(7, 53),
-  54: Lesson(7, 54),
 };
 final Map<int, Lesson> cssLessons = {
   1: Lesson(1, 1),
