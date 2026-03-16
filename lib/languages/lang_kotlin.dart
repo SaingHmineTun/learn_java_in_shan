@@ -156,4 +156,13 @@ final Map<int, Lesson> kotlinLessons = {
   25: Lesson(3, 25),
   26: Lesson(3, 26),
   27: Lesson(3, 27),
+  28: Lesson(4, 28),
+  29: Lesson(4, 29),
+  30: Lesson(4, 30),
+  31: Lesson(4, 31),
+  32: Lesson(4, 32),
+  33: Lesson(4, 33),
+  34: Lesson(4, 34),
+  35: Lesson(4, 35),
+  36: Lesson(4, 36),
 };
