@@ -1,3 +1,4 @@
+import '../utils/quiz.dart';
 import '../utils/utils.dart';
 
 const Map<int, String> jsTopics = {
@@ -191,3 +192,5828 @@ final Map<int, Lesson> jsLessons = {
   78: Lesson(9, 78),
   79: Lesson(9, 79),
 };
+
+final List<Quiz> jsQuizM1 = [
+  // --- Topic 1: How JS Runs & V8 Engine ---
+  Quiz(1, "Which engine is used by Google Chrome to execute JavaScript?", [
+    "V8",
+    "SpiderMonkey",
+    "Chakra",
+    "JavaScriptCore",
+  ]),
+  Quiz(
+    2,
+    "What is the process of converting JavaScript code into machine code just before execution called?",
+    [
+      "Just-In-Time (JIT) Compilation",
+      "Interpretation",
+      "AOT Compilation",
+      "Transpilation",
+    ],
+  ),
+  Quiz(
+    3,
+    "In the V8 engine, which component is responsible for generating optimized machine code?",
+    ["TurboFan", "Ignition", "Orinoco", "Liftoff"],
+  ),
+  Quiz(4, "JavaScript is a _____ language.", [
+    "Single-threaded",
+    "Multi-threaded",
+    "Low-level",
+    "Static-typed",
+  ]),
+  Quiz(5, "Which V8 component acts as the interpreter?", [
+    "Ignition",
+    "TurboFan",
+    "Parser",
+    "Call Stack",
+  ]),
+  Quiz(6, "What does the Call Stack do in the JavaScript Runtime?", [
+    "Tracks function execution",
+    "Stores global variables only",
+    "Handles asynchronous API calls",
+    "Optimizes loop performance",
+  ]),
+  Quiz(7, "Where are objects and function definitions stored in memory?", [
+    "Memory Heap",
+    "Call Stack",
+    "Microtask Queue",
+    "Event Loop",
+  ]),
+  Quiz(8, "V8 is written in which programming language?", [
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+  ]),
+  Quiz(9, "What happens during the 'Parsing' phase in V8?", [
+    "The code is turned into an Abstract Syntax Tree (AST)",
+    "The code is executed immediately",
+    "Memory is allocated for objects",
+    "The code is sent to the GPU",
+  ]),
+  Quiz(10, "Is JavaScript purely an interpreted language in modern browsers?", [
+    "No, it uses JIT compilation",
+    "Yes, it never compiles",
+    "No, it is strictly AOT compiled",
+    "Yes, the engine reads line by line only",
+  ]),
+
+  // --- Topic 2: Environment Setup ---
+  Quiz(
+    11,
+    "Which tool allows you to run JavaScript outside of a web browser?",
+    ["Node.js", "VS Code", "Postman", "Chrome DevTools"],
+  ),
+  Quiz(12, "In VS Code, which shortcut opens the integrated terminal?", [
+    "Ctrl + `",
+    "Ctrl + P",
+    "Alt + F4",
+    "Ctrl + Shift + B",
+  ]),
+  Quiz(
+    13,
+    "Which command checks the version of Node installed on your system?",
+    ["node -v", "node --version", "Both are correct", "npm check"],
+  ),
+  Quiz(
+    14,
+    "Where can you find the 'Console' tab to test JS snippets in a browser?",
+    ["Developer Tools", "Settings", "History", "Bookmarks"],
+  ),
+  Quiz(15, "What is the primary purpose of a code editor like VS Code?", [
+    "Writing and managing source code",
+    "Running a web server",
+    "Hosting websites",
+    "Compiling C++ code only",
+  ]),
+  Quiz(
+    16,
+    "Which command is used to run a file named 'app.js' using Node.js?",
+    ["node app.js", "run app.js", "npm app.js", "js app.js"],
+  ),
+  Quiz(17, "What does NPM stand for?", [
+    "Node Package Manager",
+    "New Programming Mode",
+    "Node Project Manager",
+    "Network Package Module",
+  ]),
+  Quiz(18, "Which file extension is standard for JavaScript files?", [
+    ".js",
+    ".java",
+    ".script",
+    ".exe",
+  ]),
+  Quiz(19, "Which VS Code extension is popular for auto-formatting code?", [
+    "Prettier",
+    "Live Server",
+    "ESLint",
+    "Bracket Pair Colorizer",
+  ]),
+  Quiz(20, "What is the 'Live Server' extension used for?", [
+    "Auto-refreshing the browser when code changes",
+    "Executing Node.js code",
+    "Installing NPM packages",
+    "Debugging C# code",
+  ]),
+
+  // --- Topic 3: Variables: let, const & var ---
+  Quiz(
+    21,
+    "Which keyword is used to declare a variable that cannot be reassigned?",
+    ["const", "let", "var", "static"],
+  ),
+  Quiz(22, "Which variable keywords have block scope?", [
+    "let and const",
+    "var and let",
+    "var only",
+    "All of them",
+  ]),
+  Quiz(23, "Can you declare a 'const' variable without initializing it?", [
+    "No",
+    "Yes",
+    "Only in strict mode",
+    "Only inside a function",
+  ]),
+  Quiz(
+    24,
+    "Which keyword was the original way to declare variables before ES6?",
+    ["var", "let", "const", "def"],
+  ),
+  Quiz(25, "What happens if you try to reassign a value to a 'let' variable?", [
+    "It updates successfully",
+    "It throws a TypeError",
+    "It throws a SyntaxError",
+    "It creates a new global variable",
+  ]),
+  Quiz(26, "Which of the following is an invalid variable name?", [
+    "2ndUser",
+    "_user",
+    "\$price",
+    "user2",
+  ]),
+  Quiz(27, "Which scope does 'var' have when declared inside a function?", [
+    "Function scope",
+    "Block scope",
+    "Global scope only",
+    "No scope",
+  ]),
+  Quiz(28, "Can you redeclare a variable using 'let' in the same scope?", [
+    "No",
+    "Yes",
+    "Only if it's undefined",
+    "Only in Node.js",
+  ]),
+  Quiz(
+    29,
+    "If you declare a variable without any keyword (e.g., x = 10), what happens?",
+    [
+      "It creates a global property",
+      "It throws an error in strict mode",
+      "Both of the above",
+      "It becomes a local 'let' variable",
+    ],
+  ),
+  Quiz(
+    30,
+    "What is the value of a declared variable that has not been assigned a value?",
+    ["undefined", "null", "0", "NaN"],
+  ),
+
+  // --- Topic 4: Internal Hoisting & TDZ ---
+  Quiz(31, "What is Hoisting in JavaScript?", [
+    "Moving declarations to the top of their scope",
+    "Optimizing loops",
+    "Deleting unused variables",
+    "Compressing code files",
+  ]),
+  Quiz(32, "Are 'let' and 'const' hoisted?", [
+    "Yes, but they are in the TDZ",
+    "No, not at all",
+    "Yes, they behave like var",
+    "Only inside functions",
+  ]),
+  Quiz(33, "What does TDZ stand for?", [
+    "Temporal Dead Zone",
+    "Total Data Zone",
+    "Timed Declaration Zone",
+    "Temporary Dead Zone",
+  ]),
+  Quiz(
+    34,
+    "What is the value of a 'var' variable before its actual line of declaration due to hoisting?",
+    ["undefined", "ReferenceError", "null", "NaN"],
+  ),
+  Quiz(35, "What error is thrown when accessing a 'let' variable in its TDZ?", [
+    "ReferenceError",
+    "TypeError",
+    "SyntaxError",
+    "InternalError",
+  ]),
+  Quiz(36, "Where does the Temporal Dead Zone end?", [
+    "At the line where the variable is initialized",
+    "At the end of the script",
+    "At the start of the function",
+    "It never ends",
+  ]),
+  Quiz(
+    37,
+    "Does function declaration hoisting allow calling a function before it is defined?",
+    ["Yes", "No", "Only if it returns a string", "Only in global scope"],
+  ),
+  Quiz(38, "Are function expressions hoisted like function declarations?", [
+    "No",
+    "Yes",
+    "Only if using 'var'",
+    "Only in arrow functions",
+  ]),
+  Quiz(39, "Hoisting happens during which phase of the JS engine?", [
+    "Creation/Memory phase",
+    "Execution phase",
+    "Optimization phase",
+    "Garbage collection phase",
+  ]),
+  Quiz(
+    40,
+    "Which variable type is initialized with 'undefined' during the memory phase?",
+    ["var", "let", "const", "All variables"],
+  ),
+
+  // --- Topic 5: Primitive Data Types ---
+  Quiz(41, "How many primitive data types are there in JavaScript (ES6+)?", [
+    "7",
+    "5",
+    "6",
+    "8",
+  ]),
+  Quiz(42, "Which of these is NOT a primitive data type?", [
+    "Array",
+    "Symbol",
+    "BigInt",
+    "Boolean",
+  ]),
+  Quiz(43, "What is the result of 'typeof null'?", [
+    "object",
+    "null",
+    "undefined",
+    "primitive",
+  ]),
+  Quiz(44, "Which data type is used for values larger than (2^53 - 1)?", [
+    "BigInt",
+    "Number",
+    "Double",
+    "Long",
+  ]),
+  Quiz(45, "Is 'String' a primitive data type in JS?", [
+    "Yes",
+    "No, it is an object",
+    "Only when using backticks",
+    "Only in TypeScript",
+  ]),
+  Quiz(46, "What is the result of 'typeof undefined'?", [
+    "undefined",
+    "object",
+    "null",
+    "string",
+  ]),
+  Quiz(
+    47,
+    "Which primitive type is used to create unique, anonymous identifiers?",
+    ["Symbol", "String", "Id", "Object"],
+  ),
+  Quiz(48, "What are the only two possible values for a Boolean?", [
+    "true and false",
+    "yes and no",
+    "1 and 0",
+    "null and undefined",
+  ]),
+  Quiz(49, "Primitive values are passed by _____.", [
+    "Value",
+    "Reference",
+    "Pointer",
+    "Memory address",
+  ]),
+  Quiz(50, "Are primitives immutable?", [
+    "Yes",
+    "No",
+    "Only Numbers",
+    "Only Strings",
+  ]),
+
+  // --- Topic 6: Template Literals ---
+  Quiz(51, "Which character is used to define a Template Literal?", [
+    "Backtick (`)",
+    "Single quote (')",
+    "Double quote (\")",
+    "Forward slash (/)",
+  ]),
+  Quiz(
+    52,
+    "What is the syntax for String Interpolation in template literals?",
+    ["\${expression}", "{{expression}}", "#{expression}", "&{expression}"],
+  ),
+  Quiz(53, "Do template literals support multi-line strings?", [
+    "Yes",
+    "No",
+    "Only with \\n",
+    "Only in ES5",
+  ]),
+  Quiz(
+    54,
+    "Can you call functions inside the interpolation syntax of a template literal?",
+    ["Yes", "No", "Only math functions", "Only arrow functions"],
+  ),
+  Quiz(55, "What is the output of: `Value: \${1 + 1}`?", [
+    "Value: 2",
+    "Value: 1+1",
+    "Value: \${1+1}",
+    "Error",
+  ]),
+  Quiz(56, "Template literals are introduced in which version of JS?", [
+    "ES6 (2015)",
+    "ES5",
+    "ES3",
+    "ES2020",
+  ]),
+  Quiz(57, "Template literals help prevent which common issue?", [
+    "Messy string concatenation",
+    "Hoisting",
+    "Memory leaks",
+    "Type coercion",
+  ]),
+  Quiz(58, "What is a 'Tagged Template'?", [
+    "A function that parses a template literal",
+    "A literal with a HTML tag",
+    "A literal with a # symbol",
+    "A literal stored in a variable",
+  ]),
+  Quiz(
+    59,
+    "Can you use single quotes inside a backtick-delimited string without escaping?",
+    ["Yes", "No", "Only if you use \\'", "Only at the start"],
+  ),
+  Quiz(
+    60,
+    "What is the primary benefit of interpolation over the '+' operator?",
+    [
+      "Readability and simplicity",
+      "Performance speed",
+      "Lower memory usage",
+      "Security against XSS",
+    ],
+  ),
+
+  // --- Topic 7: Essential String Methods ---
+  Quiz(61, "Which method returns the length of a string?", [
+    ".length",
+    ".size()",
+    ".count()",
+    ".length()",
+  ]),
+  Quiz(62, "Which method converts a string to all capital letters?", [
+    ".toUpperCase()",
+    ".toCapital()",
+    ".upper()",
+    ".setUpper()",
+  ]),
+  Quiz(63, "Which method removes whitespace from both ends of a string?", [
+    ".trim()",
+    ".strip()",
+    ".clean()",
+    ".cut()",
+  ]),
+  Quiz(
+    64,
+    "Which method checks if a string contains a specific sequence of characters?",
+    [".includes()", ".contains()", ".has()", ".find()"],
+  ),
+  Quiz(65, "What does '.slice(0, 3)' do to the string 'JavaScript'?", [
+    "Returns 'Jav'",
+    "Returns 'Java'",
+    "Returns 'Script'",
+    "Returns 'vab'",
+  ]),
+  Quiz(
+    66,
+    "Which method replaces a specific value with another value in a string?",
+    [".replace()", ".swap()", ".change()", ".update()"],
+  ),
+  Quiz(67, "Which method splits a string into an array of substrings?", [
+    ".split()",
+    ".toArray()",
+    ".divide()",
+    ".break()",
+  ]),
+  Quiz(68, "What is the index of the first character in a string?", [
+    "0",
+    "1",
+    "-1",
+    "Any",
+  ]),
+  Quiz(69, "Which method returns the character at a specified index?", [
+    ".charAt()",
+    ".getChar()",
+    ".index()",
+    ".char()",
+  ]),
+  Quiz(70, "What does '.indexOf('a')' return for the string 'apple'?", [
+    "0",
+    "1",
+    "true",
+    "a",
+  ]),
+
+  // --- Topic 8: Arithmetic & Assignment Operators ---
+  Quiz(71, "Which operator is used for Exponentiation (power)?", [
+    "**",
+    "^",
+    "^^",
+    "pow",
+  ]),
+  Quiz(72, "What does the Modulo operator (%) return?", [
+    "The remainder of a division",
+    "The quotient",
+    "The percentage",
+    "The square root",
+  ]),
+  Quiz(73, "What is the result of '10 / 0' in JavaScript?", [
+    "Infinity",
+    "NaN",
+    "Error",
+    "0",
+  ]),
+  Quiz(
+    74,
+    "Which operator adds a value to a variable and assigns the result?",
+    ["+=", "++", "=+", "add="],
+  ),
+  Quiz(75, "What is the result of '5 + \"5\"'?", ["\"55\"", "10", "NaN", "55"]),
+  Quiz(76, "What is the result of '10 - \"5\"'?", ["5", "\"5\"", "NaN", "105"]),
+  Quiz(77, "Which operator increments a value by 1?", [
+    "++",
+    "+1",
+    "+=",
+    "inc",
+  ]),
+  Quiz(78, "What does 'x *= 2' do?", [
+    "Multiplies x by 2 and assigns back",
+    "Checks if x is 2",
+    "Squares x",
+    "Multiplies x by itself twice",
+  ]),
+  Quiz(79, "What is the result of '2 + 3 * 4'?", ["14", "20", "24", "18"]),
+  Quiz(80, "Which operator is used for strictly checking equality?", [
+    "===",
+    "==",
+    "=",
+    "!==",
+  ]),
+
+  // --- Topic 9: Type Coercion & Conversion ---
+  Quiz(81, "What is Type Coercion?", [
+    "Automatic conversion of values by JS",
+    "Manual conversion by the programmer",
+    "Deleting variables of different types",
+    "Force-quitting the script",
+  ]),
+  Quiz(82, "Which function converts a string to an integer?", [
+    "parseInt()",
+    "Number()",
+    "ToInteger()",
+    "int()",
+  ]),
+  Quiz(83, "What is the result of 'Number(\"abc\")'?", [
+    "NaN",
+    "0",
+    "Error",
+    "undefined",
+  ]),
+  Quiz(84, "What is the result of 'Boolean(0)'?", [
+    "false",
+    "true",
+    "undefined",
+    "NaN",
+  ]),
+  Quiz(85, "Which of these is a 'falsy' value?", ["\"\"", "\"0\"", "[]", "{}"]),
+  Quiz(86, "What is the result of '\"5\" == 5'?", [
+    "true",
+    "false",
+    "undefined",
+    "NaN",
+  ]),
+  Quiz(87, "What is the result of '\"5\" === 5'?", [
+    "false",
+    "true",
+    "TypeError",
+    "NaN",
+  ]),
+  Quiz(
+    88,
+    "Implicit conversion to string happens when using which operator with a string?",
+    ["+", "-", "*", "/"],
+  ),
+  Quiz(89, "What is the result of 'String(true)'?", [
+    "\"true\"",
+    "1",
+    "true",
+    "Error",
+  ]),
+  Quiz(90, "What is the result of '!!\"hello\"'?", [
+    "true",
+    "false",
+    "\"hello\"",
+    "NaN",
+  ]),
+
+  // --- General Module Review ---
+  Quiz(91, "Is JavaScript case-sensitive?", [
+    "Yes",
+    "No",
+    "Only for variable names",
+    "Only in Node.js",
+  ]),
+  Quiz(92, "What is the result of 'typeof NaN'?", [
+    "number",
+    "NaN",
+    "undefined",
+    "object",
+  ]),
+  Quiz(93, "Which of these is used for multi-line comments?", [
+    "/* comment */",
+    "// comment",
+    "# comment",
+    "",
+  ]),
+  Quiz(94, "Which statement is used to stop a loop or switch?", [
+    "break",
+    "stop",
+    "exit",
+    "return",
+  ]),
+  Quiz(
+    95,
+    "Which value represents the intentional absence of any object value?",
+    ["null", "undefined", "void", "false"],
+  ),
+  Quiz(96, "What is the result of '1 + 2 + \"3\"'?", [
+    "\"33\"",
+    "\"123\"",
+    "6",
+    "NaN",
+  ]),
+  Quiz(97, "What is the result of '\"10\" - \"2\" + \"2\"'?", [
+    "\"82\"",
+    "10",
+    "8",
+    "\"10\"",
+  ]),
+  Quiz(98, "Which built-in object allows you to perform mathematical tasks?", [
+    "Math",
+    "Numbers",
+    "Calculate",
+    "Geometry",
+  ]),
+  Quiz(99, "What does 'use strict' do?", [
+    "Enforces stricter parsing and error handling",
+    "Makes the code run faster",
+    "Allows using reserved words",
+    "Disables hoisting",
+  ]),
+  Quiz(100, "Which of the following is NOT a reserved keyword in JS?", [
+    "program",
+    "debugger",
+    "volatile",
+    "export",
+  ]),
+];
+final List<Quiz> jsQuizM2 = [
+  // --- Topic 10: Comparison Operators & Strict Equality ---
+  Quiz(
+    101,
+    "Which operator checks if two values are equal but ignores their data type?",
+    ["==", "===", "=", "!="],
+  ),
+  Quiz(102, "What is the result of (5 == '5') in JavaScript?", [
+    "true",
+    "false",
+    "undefined",
+    "NaN",
+  ]),
+  Quiz(103, "Which operator is known as the 'Strict Equality' operator?", [
+    "===",
+    "==",
+    "!==",
+    "&&",
+  ]),
+  Quiz(104, "What does the '!==' operator check for?", [
+    "Strict inequality (value or type)",
+    "Loose inequality (value only)",
+    "Assignment",
+    "Logical NOT",
+  ]),
+  Quiz(105, "What is the result of (10 !== '10')?", [
+    "true",
+    "false",
+    "undefined",
+    "null",
+  ]),
+  Quiz(
+    106,
+    "Which operator checks if the left value is greater than or equal to the right?",
+    [">=", "=>", ">", "=<"],
+  ),
+  Quiz(107, "What is the result of (null == undefined)?", [
+    "true",
+    "false",
+    "ReferenceError",
+    "0",
+  ]),
+  Quiz(108, "What is the result of (null === undefined)?", [
+    "false",
+    "true",
+    "NaN",
+    "null",
+  ]),
+  Quiz(109, "Comparing 'a' > 'b' in JavaScript returns false because:", [
+    "Strings are compared by Unicode alphabetical order",
+    "Strings cannot be compared",
+    "Characters are converted to numbers first",
+    "It only works for numbers",
+  ]),
+  Quiz(110, "What is the result of (NaN === NaN)?", [
+    "false",
+    "true",
+    "undefined",
+    "NaN",
+  ]),
+
+  // --- Topic 11: If/Else & Nested Decision Making ---
+  Quiz(111, "Which keyword starts a conditional statement?", [
+    "if",
+    "then",
+    "when",
+    "case",
+  ]),
+  Quiz(112, "Where do you place the condition in an 'if' statement?", [
+    "Inside parentheses ( )",
+    "Inside curly braces { }",
+    "Inside square brackets [ ]",
+    "After the 'then' keyword",
+  ]),
+  Quiz(
+    113,
+    "What happens if the 'if' condition is false and there is no 'else'?",
+    [
+      "The code block is skipped",
+      "An error is thrown",
+      "The program stops",
+      "The code block runs anyway",
+    ],
+  ),
+  Quiz(114, "How do you check a second condition if the first 'if' is false?", [
+    "else if",
+    "elseif",
+    "if else",
+    "other if",
+  ]),
+  Quiz(115, "What is 'Nested Decision Making'?", [
+    "An if statement inside another if statement",
+    "Using multiple logic operators",
+    "Using a switch statement",
+    "A loop inside an if statement",
+  ]),
+  Quiz(
+    116,
+    "In an if/else chain, how many 'else' blocks can you have at the end?",
+    ["One", "Unlimited", "Two", "Zero"],
+  ),
+  Quiz(117, "What is the correct syntax for an else block?", [
+    "else { ... }",
+    "else (condition) { ... }",
+    "then { ... }",
+    "otherwise { ... }",
+  ]),
+  Quiz(118, "Which block of code runs if the condition is true?", [
+    "The block immediately following the if",
+    "The else block",
+    "The entire script",
+    "The global scope",
+  ]),
+  Quiz(119, "Can an 'if' statement exist without an 'else'?", [
+    "Yes",
+    "No",
+    "Only in strict mode",
+    "Only inside functions",
+  ]),
+  Quiz(
+    120,
+    "What is the result of: if (5 > 2) { console.log('A') } else { console.log('B') }?",
+    ["A", "B", "AB", "Error"],
+  ),
+
+  // --- Topic 12: Logical Operators (&&, ||, !) ---
+  Quiz(121, "Which operator represents the logical 'AND'?", [
+    "&&",
+    "||",
+    "!",
+    "&",
+  ]),
+  Quiz(122, "Which operator represents the logical 'OR'?", [
+    "||",
+    "&&",
+    "!",
+    "??",
+  ]),
+  Quiz(123, "What does the '!' (NOT) operator do?", [
+    "Inverts a boolean value",
+    "Checks for equality",
+    "Ends a statement",
+    "Declares a variable",
+  ]),
+  Quiz(124, "In (A && B), when is the result true?", [
+    "Only if both A and B are true",
+    "If either A or B is true",
+    "If A is true and B is false",
+    "Always",
+  ]),
+  Quiz(125, "In (A || B), when is the result true?", [
+    "If at least one (A or B) is true",
+    "Only if both A and B are true",
+    "Only if A is false",
+    "Only if B is false",
+  ]),
+  Quiz(126, "What is the result of !true?", [
+    "false",
+    "true",
+    "undefined",
+    "null",
+  ]),
+  Quiz(127, "What is the result of (true && false)?", [
+    "false",
+    "true",
+    "null",
+    "undefined",
+  ]),
+  Quiz(128, "What is the result of (true || false)?", [
+    "true",
+    "false",
+    "null",
+    "NaN",
+  ]),
+  Quiz(129, "What is the result of !!'hello'?", [
+    "true",
+    "false",
+    "'hello'",
+    "undefined",
+  ]),
+  Quiz(
+    130,
+    "The logical AND (&&) has higher precedence than logical OR (||).",
+    ["True", "False", "They are the same", "Depends on the browser"],
+  ),
+
+  // --- Topic 13: Truthy vs. Falsy Values ---
+  Quiz(131, "How many 'falsy' values are there in JavaScript?", [
+    "6 (or 7 including document.all)",
+    "2",
+    "10",
+    "5",
+  ]),
+  Quiz(132, "Which of the following is NOT a falsy value?", [
+    "[] (Empty Array)",
+    "0",
+    "\"\"",
+    "null",
+  ]),
+  Quiz(133, "Is the string 'false' truthy or falsy?", [
+    "Truthy",
+    "Falsy",
+    "Neither",
+    "Throws an error",
+  ]),
+  Quiz(134, "What is the result of Boolean({})?", [
+    "true",
+    "false",
+    "null",
+    "NaN",
+  ]),
+  Quiz(135, "Is the number 0 truthy or falsy?", [
+    "Falsy",
+    "Truthy",
+    "Depends on if it is '0'",
+    "Undefined",
+  ]),
+  Quiz(136, "Which of these is falsy?", [
+    "undefined",
+    "1",
+    "' ' (String with a space)",
+    "true",
+  ]),
+  Quiz(137, "If (true) is truthy, is (-1) truthy?", [
+    "Yes, all non-zero numbers are truthy",
+    "No, only positive numbers are truthy",
+    "Only if it is a string",
+    "No, it is falsy",
+  ]),
+  Quiz(138, "What is the boolean value of NaN?", [
+    "false",
+    "true",
+    "undefined",
+    "null",
+  ]),
+  Quiz(139, "Is Boolean(' ') (a string with a space) true or false?", [
+    "true",
+    "false",
+    "null",
+    "Error",
+  ]),
+  Quiz(
+    140,
+    "Truthy values are values that evaluate to true in a ________ context.",
+    ["Boolean", "String", "Numeric", "Global"],
+  ),
+
+  // --- Topic 14: Switch Statements ---
+  Quiz(141, "When is a switch statement usually preferred over if/else?", [
+    "When checking one variable against many fixed values",
+    "When checking complex logic ranges",
+    "When checking boolean values only",
+    "Always",
+  ]),
+  Quiz(
+    142,
+    "Which keyword is used to mark a specific value to match in a switch?",
+    ["case", "if", "when", "match"],
+  ),
+  Quiz(143, "What happens if you forget a 'break' statement in a case?", [
+    "The code falls through to the next case",
+    "The program throws an error",
+    "It automatically stops",
+    "The default case runs immediately",
+  ]),
+  Quiz(144, "Which keyword is used for code that runs if no case matches?", [
+    "default",
+    "else",
+    "otherwise",
+    "final",
+  ]),
+  Quiz(
+    145,
+    "Does a switch statement use strict equality (===) for comparison?",
+    ["Yes", "No", "Only for numbers", "Only in ES6+"],
+  ),
+  Quiz(
+    146,
+    "What is the output of a switch if a match is found but no code is inside the case?",
+    [
+      "It falls through to the next case with code",
+      "It prints 'undefined'",
+      "It throws an error",
+      "It skips the whole switch",
+    ],
+  ),
+  Quiz(147, "Can you match multiple cases to the same block of code?", [
+    "Yes, by stacking case labels",
+    "No",
+    "Only using the OR operator",
+    "Only using if/else",
+  ]),
+  Quiz(148, "Which keyword stops the execution of a switch block?", [
+    "break",
+    "stop",
+    "end",
+    "exit",
+  ]),
+  Quiz(149, "The value in switch(value) can be a variable or an expression.", [
+    "True",
+    "False",
+    "Only a number",
+    "Only a string",
+  ]),
+  Quiz(150, "Is the 'default' case mandatory in a switch?", [
+    "No",
+    "Yes",
+    "Only if there are no breaks",
+    "Only in strict mode",
+  ]),
+
+  // --- Topic 15: Ternary Operator ---
+  Quiz(151, "The Ternary operator is also known as the ________ operator.", [
+    "Conditional",
+    "Logical",
+    "Unary",
+    "Binary",
+  ]),
+  Quiz(152, "How many operands does a ternary operator have?", [
+    "3",
+    "2",
+    "1",
+    "4",
+  ]),
+  Quiz(153, "What is the correct syntax for the ternary operator?", [
+    "condition ? exprIfTrue : exprIfFalse",
+    "condition : exprIfTrue ? exprIfFalse",
+    "condition ? exprIfTrue ! exprIfFalse",
+    "if condition ? exprIfTrue : else",
+  ]),
+  Quiz(154, "What is the result of (10 > 5 ? 'Yes' : 'No')?", [
+    "Yes",
+    "No",
+    "true",
+    "false",
+  ]),
+  Quiz(155, "The ternary operator is often used as a shortcut for what?", [
+    "An if/else statement",
+    "A for loop",
+    "A variable declaration",
+    "A function call",
+  ]),
+  Quiz(156, "Can you nest ternary operators?", [
+    "Yes, but it can be hard to read",
+    "No",
+    "Only in switch statements",
+    "Only if they return numbers",
+  ]),
+  Quiz(157, "What is the result of (false ? 10 : 20)?", [
+    "20",
+    "10",
+    "false",
+    "undefined",
+  ]),
+  Quiz(158, "Is the ternary operator an expression or a statement?", [
+    "Expression (it returns a value)",
+    "Statement",
+    "Function",
+    "Object",
+  ]),
+  Quiz(159, "What does the '?' symbol represent in ternary?", [
+    "The start of the true/false options",
+    "An error check",
+    "A null check",
+    "A search query",
+  ]),
+  Quiz(160, "What is the result of (true ? 'Hello' : 'Goodbye')?", [
+    "Hello",
+    "Goodbye",
+    "true",
+    "Error",
+  ]),
+
+  // --- Topic 16: Short-circuiting Basics (&&, ||) ---
+  Quiz(161, "What is short-circuiting in logical operators?", [
+    "Stopping evaluation as soon as the result is determined",
+    "Increasing the speed of the CPU",
+    "Removing the need for semicolons",
+    "Creating an infinite loop",
+  ]),
+  Quiz(162, "In (A || B), if A is truthy, does JavaScript look at B?", [
+    "No",
+    "Yes",
+    "Only if B is a function",
+    "Only in strict mode",
+  ]),
+  Quiz(163, "In (A && B), if A is falsy, does JavaScript look at B?", [
+    "No",
+    "Yes",
+    "Only if B is true",
+    "Only in Chrome",
+  ]),
+  Quiz(164, "What is the result of (0 || 'User')?", [
+    "User",
+    "0",
+    "false",
+    "true",
+  ]),
+  Quiz(165, "What is the result of ('Hello' && 'World')?", [
+    "World",
+    "Hello",
+    "true",
+    "false",
+  ]),
+  Quiz(166, "Short-circuiting with OR (||) is commonly used to provide what?", [
+    "Default values",
+    "Error messages",
+    "Math calculations",
+    "Array lengths",
+  ]),
+  Quiz(167, "What is the result of (false && 'Anything')?", [
+    "false",
+    "Anything",
+    "true",
+    "undefined",
+  ]),
+  Quiz(168, "What is the result of (true || 'Anything')?", [
+    "true",
+    "Anything",
+    "false",
+    "undefined",
+  ]),
+  Quiz(169, "What is the result of (null || 10)?", [
+    "10",
+    "null",
+    "false",
+    "0",
+  ]),
+  Quiz(170, "What is the result of (undefined && 5)?", [
+    "undefined",
+    "5",
+    "false",
+    "NaN",
+  ]),
+
+  // --- Topic 17: Nullish Coalescing (??) ---
+  Quiz(171, "Which operator is the Nullish Coalescing operator?", [
+    "??",
+    "||",
+    "&&",
+    "?!",
+  ]),
+  Quiz(
+    172,
+    "The Nullish Coalescing operator (??) only looks for which two values?",
+    ["null and undefined", "false and 0", "NaN and \"\"", "All falsy values"],
+  ),
+  Quiz(173, "What is the result of (0 ?? 10)?", [
+    "0",
+    "10",
+    "null",
+    "undefined",
+  ]),
+  Quiz(174, "What is the result of (0 || 10)?", ["10", "0", "true", "false"]),
+  Quiz(175, "What is the result of (null ?? 'Default')?", [
+    "Default",
+    "null",
+    "undefined",
+    "Error",
+  ]),
+  Quiz(176, "What is the result of ('' ?? 'Default')?", [
+    "'' (Empty string)",
+    "Default",
+    "null",
+    "undefined",
+  ]),
+  Quiz(177, "Why use ?? instead of || for default values?", [
+    "Because || treats 0 and '' as falsy, but ?? does not",
+    "?? is faster than ||",
+    "?? works on older browsers",
+    "|| is deprecated",
+  ]),
+  Quiz(178, "What is the result of (undefined ?? 50)?", [
+    "50",
+    "undefined",
+    "null",
+    "NaN",
+  ]),
+  Quiz(179, "Can you use ?? with && or || without parentheses?", [
+    "No, it throws a SyntaxError",
+    "Yes",
+    "Only if you use let",
+    "Only in functions",
+  ]),
+  Quiz(180, "What is the result of (false ?? true)?", [
+    "false",
+    "true",
+    "null",
+    "undefined",
+  ]),
+
+  // --- Topic 18: Logic Practice ---
+  Quiz(
+    181,
+    "In building a game, which logic check is best for 'Is the player alive and has ammo'?",
+    [
+      "(isAlive && hasAmmo)",
+      "(isAlive || hasAmmo)",
+      "(!isAlive)",
+      "(isAlive ?? hasAmmo)",
+    ],
+  ),
+  Quiz(
+    182,
+    "Which check is best for 'Game Over if health is 0 OR time is up'?",
+    [
+      "(health === 0 || time === 0)",
+      "(health === 0 && time === 0)",
+      "(health ?? time)",
+      "(!health)",
+    ],
+  ),
+  Quiz(183, "How do you toggle a boolean variable 'isPaused'?", [
+    "isPaused = !isPaused",
+    "isPaused = true",
+    "isPaused == false",
+    "isPaused = !!isPaused",
+  ]),
+  Quiz(184, "What logic check ensures a number 'score' is between 1 and 10?", [
+    "(score >= 1 && score <= 10)",
+    "(score >= 1 || score <= 10)",
+    "(score == 1 && 10)",
+    "(score > 1 && < 10)",
+  ]),
+  Quiz(
+    185,
+    "How do you check if a variable 'input' is NOT null and NOT undefined?",
+    ["input != null", "input === null", "input !! null", "input ?? null"],
+  ),
+  Quiz(
+    186,
+    "To give a player a default name if 'customName' is empty, which is safer?",
+    [
+      "customName || 'Guest'",
+      "customName && 'Guest'",
+      "customName ?? 'Guest'",
+      "!customName",
+    ],
+  ),
+  Quiz(187, "What is the result of (true && false || true)?", [
+    "true",
+    "false",
+    "undefined",
+    "null",
+  ]),
+  Quiz(188, "What is the result of (true && (false || true))?", [
+    "true",
+    "false",
+    "null",
+    "Error",
+  ]),
+  Quiz(
+    189,
+    "In a game, 'isGameOver = health <= 0'. If health is 5, what is isGameOver?",
+    ["false", "true", "5", "0"],
+  ),
+  Quiz(190, "If you want to check if a user is NOT an admin, you use:", [
+    "!isAdmin",
+    "isAdmin == true",
+    "!!isAdmin",
+    "isAdmin && false",
+  ]),
+
+  // --- General Logic Review ---
+  Quiz(191, "Which value is considered falsy?", [
+    "0",
+    "Infinity",
+    "[]",
+    "'false'",
+  ]),
+  Quiz(192, "What is the purpose of the 'break' keyword in a loop or switch?", [
+    "Exits the current block",
+    "Pauses the code",
+    "Restarts the code",
+    "Skips one iteration",
+  ]),
+  Quiz(193, "What does the expression !!0 evaluate to?", [
+    "false",
+    "true",
+    "0",
+    "1",
+  ]),
+  Quiz(194, "Which operator checks for both value and type equality?", [
+    "===",
+    "==",
+    "!=",
+    "!==",
+  ]),
+  Quiz(
+    195,
+    "What is the default value of a switch statement if no case matches?",
+    [
+      "There is no default unless you provide a 'default' case",
+      "The first case",
+      "The last case",
+      "null",
+    ],
+  ),
+  Quiz(196, "What is the result of (5 > 3 > 1)?", [
+    "false (because 5 > 3 is true, and true > 1 is false)",
+    "true",
+    "Error",
+    "NaN",
+  ]),
+  Quiz(197, "Which logical operator has the lowest precedence?", [
+    "OR (||)",
+    "AND (&&)",
+    "NOT (!)",
+    "Comparison (==)",
+  ]),
+  Quiz(198, "What is the result of (false || 0 || undefined || 'Success')?", [
+    "Success",
+    "false",
+    "0",
+    "undefined",
+  ]),
+  Quiz(199, "What is the result of (1 && 2 && 0 && 4)?", ["0", "1", "2", "4"]),
+  Quiz(
+    200,
+    "In logic, 'Short-circuiting' helps in preventing ________ errors.",
+    [
+      "Runtime (e.g., accessing properties of null)",
+      "Syntax",
+      "Compilation",
+      "Infinite loop",
+    ],
+  ),
+];
+final List<Quiz> jsQuizM3 = [
+  // --- Topic 19: Function Declarations vs. Expressions ---
+  Quiz(201, "Which of the following is a function declaration?", [
+    "function greet() { }",
+    "const greet = function() { }",
+    "const greet = () => { }",
+    "greet: function() { }",
+  ]),
+  Quiz(202, "What is a key difference between declarations and expressions?", [
+    "Declarations are hoisted; expressions are not",
+    "Expressions are hoisted; declarations are not",
+    "Declarations cannot take parameters",
+    "Expressions cannot use the return keyword",
+  ]),
+  Quiz(
+    203,
+    "What happens if you call a function expression before it is defined?",
+    ["ReferenceError", "It runs normally", "undefined", "TypeError"],
+  ),
+  Quiz(204, "An anonymous function is a function that ________.", [
+    "Does not have a name",
+    "Cannot be stored in a variable",
+    "Is always an arrow function",
+    "Cannot return a value",
+  ]),
+  Quiz(
+    205,
+    "Which syntax allows you to define a function as part of a variable assignment?",
+    [
+      "Function Expression",
+      "Function Declaration",
+      "Function Statement",
+      "Function Hook",
+    ],
+  ),
+  Quiz(206, "Can function declarations be defined inside an 'if' block?", [
+    "Yes, but behavior varies in non-strict mode",
+    "No, never",
+    "Only if they are arrow functions",
+    "Only in Node.js",
+  ]),
+  Quiz(207, "What is the result of 'typeof function(){}'?", [
+    "function",
+    "object",
+    "undefined",
+    "string",
+  ]),
+  Quiz(
+    208,
+    "Function declarations are moved to the top of their scope during ________.",
+    ["Hoisting", "Execution", "Interpolation", "Transpilation"],
+  ),
+  Quiz(209, "Which is more flexible for conditional function definitions?", [
+    "Function Expressions",
+    "Function Declarations",
+    "Function Initializers",
+    "Function Constructors",
+  ]),
+  Quiz(210, "A function stored in an object property is called a ________.", [
+    "Method",
+    "Variable",
+    "Constructor",
+    "Callback",
+  ]),
+
+  // --- Topic 20: Arrow Functions: Syntax & Lexical 'this' ---
+  Quiz(211, "Which symbol is used to define an arrow function?", [
+    "=>",
+    "->",
+    "==>",
+    "~>",
+  ]),
+  Quiz(212, "Arrow functions were introduced in which version of JavaScript?", [
+    "ES6 (2015)",
+    "ES5",
+    "ES2020",
+    "ES3",
+  ]),
+  Quiz(213, "What does 'lexical this' mean for arrow functions?", [
+    "They inherit 'this' from the surrounding scope",
+    "They have their own unique 'this'",
+    "They cannot use 'this' at all",
+    "They only use 'this' in strict mode",
+  ]),
+  Quiz(
+    214,
+    "If an arrow function has only one parameter, are parentheses required?",
+    [
+      "No, they are optional",
+      "Yes, always",
+      "Only if the parameter is an object",
+      "Only in TypeScript",
+    ],
+  ),
+  Quiz(
+    215,
+    "In a single-line arrow function, is the 'return' keyword required for implicit return?",
+    ["No", "Yes", "Only for numbers", "Only if using curly braces"],
+  ),
+  Quiz(216, "Which of the following is a valid arrow function syntax?", [
+    "const add = (a, b) => a + b;",
+    "const add => (a, b) { a + b };",
+    "function add = (a, b) => { return a + b };",
+    "const add(a, b) => a + b;",
+  ]),
+  Quiz(217, "Can arrow functions be used as constructors (with 'new')?", [
+    "No",
+    "Yes",
+    "Only if named",
+    "Only in global scope",
+  ]),
+  Quiz(218, "Do arrow functions have their own 'arguments' object?", [
+    "No",
+    "Yes",
+    "Only if passed explicitly",
+    "Only in Node.js",
+  ]),
+  Quiz(219, "Arrow functions are always ________.", [
+    "Anonymous",
+    "Named",
+    "Hoisted",
+    "Synchronous",
+  ]),
+  Quiz(220, "What is the primary benefit of arrow functions in callbacks?", [
+    "They keep the 'this' context of the outer function",
+    "They run faster than regular functions",
+    "They take up less memory",
+    "They are automatically asynchronous",
+  ]),
+
+  // --- Topic 21: Parameters & Default Arguments ---
+  Quiz(221, "What are the values passed into a function when it is called?", [
+    "Arguments",
+    "Parameters",
+    "Variables",
+    "Inputs",
+  ]),
+  Quiz(222, "Where are parameters defined?", [
+    "In the function definition (parentheses)",
+    "In the function call",
+    "In the return statement",
+    "In the global scope",
+  ]),
+  Quiz(
+    223,
+    "What is the value of a parameter if no argument is passed for it?",
+    ["undefined", "null", "NaN", "0"],
+  ),
+  Quiz(224, "How do you set a default value for a parameter 'name'?", [
+    "function greet(name = 'Guest')",
+    "function greet(name : 'Guest')",
+    "function greet(name || 'Guest')",
+    "function greet(default name = 'Guest')",
+  ]),
+  Quiz(225, "Can a default parameter value depend on a previous parameter?", [
+    "Yes",
+    "No",
+    "Only if both are numbers",
+    "Only in arrow functions",
+  ]),
+  Quiz(226, "When are default arguments evaluated?", [
+    "At call time",
+    "At definition time",
+    "At build time",
+    "During hoisting",
+  ]),
+  Quiz(
+    227,
+    "Which value passed as an argument will trigger the default parameter value?",
+    ["undefined", "null", "false", "0"],
+  ),
+  Quiz(
+    228,
+    "The 'Rest Parameter' syntax allows a function to accept ________.",
+    [
+      "An indefinite number of arguments as an array",
+      "Only the first argument",
+      "Only strings",
+      "A single object",
+    ],
+  ),
+  Quiz(229, "What is the correct syntax for a rest parameter?", [
+    "...args",
+    "args...",
+    "*args",
+    "&args",
+  ]),
+  Quiz(
+    230,
+    "Where must a rest parameter be placed in the list of parameters?",
+    [
+      "At the very end",
+      "At the very beginning",
+      "Anywhere",
+      "Between two required parameters",
+    ],
+  ),
+
+  // --- Topic 22: The Return Keyword & Execution Flow ---
+  Quiz(231, "What does the 'return' keyword do?", [
+    "Outputs a value and stops function execution",
+    "Prints a value to the console",
+    "Restarts the function",
+    "Declares a variable",
+  ]),
+  Quiz(
+    232,
+    "What value does a function return if there is no return statement?",
+    ["undefined", "null", "void", "0"],
+  ),
+  Quiz(233, "Can a function have multiple 'return' statements?", [
+    "Yes, but only one will execute",
+    "No, it throws an error",
+    "Yes, and they all execute",
+    "Only in switch statements",
+  ]),
+  Quiz(
+    234,
+    "Does code written after a 'return' statement inside the same block run?",
+    [
+      "No, it is 'unreachable code'",
+      "Yes",
+      "Only if it is a console.log",
+      "Only in an if/else",
+    ],
+  ),
+  Quiz(
+    235,
+    "Can you return an object from an arrow function using shorthand syntax?",
+    [
+      "Yes, by wrapping the object in parentheses ({ })",
+      "Yes, just use { }",
+      "No",
+      "Only if you use the 'return' keyword",
+    ],
+  ),
+  Quiz(236, "A function that returns another function is called a ________.", [
+    "Higher-Order Function",
+    "Recursive Function",
+    "Callback",
+    "Constructor",
+  ]),
+  Quiz(237, "If you 'return;' without a value, what is returned?", [
+    "undefined",
+    "null",
+    "0",
+    "nothing (error)",
+  ]),
+  Quiz(238, "Can the 'return' keyword be used outside of a function?", [
+    "No, it throws a SyntaxError",
+    "Yes",
+    "Only in a loop",
+    "Only in a module",
+  ]),
+  Quiz(239, "Execution flow returns to ________ once a function finishes.", [
+    "Where the function was called",
+    "The top of the file",
+    "The bottom of the file",
+    "The next function definition",
+  ]),
+  Quiz(240, "Which of these allows returning multiple values effectively?", [
+    "Returning an Array or Object",
+    "Using multiple return keywords",
+    "Comma-separated values (return a, b;)",
+    "It is impossible",
+  ]),
+
+  // --- Topic 23: Global vs. Local Scope ---
+  Quiz(241, "Scope in JavaScript refers to ________.", [
+    "The visibility or accessibility of variables",
+    "The speed of code execution",
+    "The file size of the script",
+    "The browser's window size",
+  ]),
+  Quiz(242, "Variables declared outside of any function are in the ________.", [
+    "Global Scope",
+    "Local Scope",
+    "Block Scope",
+    "Function Scope",
+  ]),
+  Quiz(243, "Variables declared inside a function are in the ________.", [
+    "Local/Function Scope",
+    "Global Scope",
+    "Static Scope",
+    "External Scope",
+  ]),
+  Quiz(244, "Can a function access variables from the global scope?", [
+    "Yes",
+    "No",
+    "Only if they are 'var'",
+    "Only if passed as arguments",
+  ]),
+  Quiz(
+    245,
+    "Can the global scope access variables declared inside a function?",
+    ["No", "Yes", "Only in non-strict mode", "Only if using 'var'"],
+  ),
+  Quiz(246, "What is 'Scope Pollution'?", [
+    "Having too many global variables",
+    "Writing code without comments",
+    "Using arrow functions everywhere",
+    "Declaring variables inside a loop",
+  ]),
+  Quiz(247, "Which variable keyword(s) respect block scope ({ })?", [
+    "let and const",
+    "var",
+    "All of them",
+    "None of them",
+  ]),
+  Quiz(248, "What is the 'window' object in browsers?", [
+    "The global object",
+    "A local function",
+    "A CSS property",
+    "A Node.js module",
+  ]),
+  Quiz(249, "Does every function in JS create its own scope?", [
+    "Yes",
+    "No",
+    "Only if it has parameters",
+    "Only if it uses 'let'",
+  ]),
+  Quiz(
+    250,
+    "If a local variable has the same name as a global variable, which one is used inside the function?",
+    [
+      "The local variable (Shadowing)",
+      "The global variable",
+      "Both",
+      "It throws an error",
+    ],
+  ),
+
+  // --- Topic 24: Scope Chain & Lexical Environment ---
+  Quiz(251, "What is the Scope Chain?", [
+    "The process of looking up variables in nested scopes",
+    "A list of all functions in a file",
+    "A type of array",
+    "A security feature in Chrome",
+  ]),
+  Quiz(252, "In which direction does the scope chain work?", [
+    "Inward to Outward (Child to Parent)",
+    "Outward to Inward (Parent to Child)",
+    "Horizontally between functions",
+    "It is random",
+  ]),
+  Quiz(253, "What is Lexical Scope?", [
+    "Scope determined by the position of variables in the source code",
+    "Scope determined at runtime during execution",
+    "A scope that changes based on 'this'",
+    "Scope specific to Lexical analyzers",
+  ]),
+  Quiz(
+    254,
+    "If a variable is not found in the local scope, where does JS look next?",
+    [
+      "The outer/parent scope",
+      "The global scope immediately",
+      "It returns null",
+      "The bottom of the function",
+    ],
+  ),
+  Quiz(
+    255,
+    "What happens if a variable is not found anywhere in the scope chain?",
+    ["ReferenceError", "undefined", "null", "SyntaxError"],
+  ),
+  Quiz(256, "The 'Lexical Environment' consists of ________.", [
+    "Environment Record and Reference to outer environment",
+    "Only variable names",
+    "The Call Stack only",
+    "Global variables only",
+  ]),
+  Quiz(257, "Does a nested function have access to its parent's variables?", [
+    "Yes",
+    "No",
+    "Only if the parent returns it",
+    "Only if using 'var'",
+  ]),
+  Quiz(
+    258,
+    "Is the scope of a function defined when it is CALLED or when it is WRITTEN?",
+    ["When it is WRITTEN (Lexical)", "When it is CALLED", "Both", "Neither"],
+  ),
+  Quiz(259, "What is 'Shadowing' in scope?", [
+    "A local variable hiding a variable in an outer scope",
+    "A variable that exists but has no value",
+    "An error in the scope chain",
+    "A way to delete global variables",
+  ]),
+  Quiz(
+    260,
+    "Can sibling functions (defined in the same parent) access each other's local variables?",
+    ["No", "Yes", "Only if they are arrow functions", "Only if using 'this'"],
+  ),
+
+  // --- Topic 25: Immediately Invoked Functions (IIFE) ---
+  Quiz(261, "What does IIFE stand for?", [
+    "Immediately Invoked Function Expression",
+    "Internal Instant Function Execution",
+    "Immediately Isolated Function Environment",
+    "Instance Invoked Function Element",
+  ]),
+  Quiz(262, "What is the primary syntax for an IIFE?", [
+    "(function(){ ... })();",
+    "function(){ ... }();",
+    "() => { ... }();",
+    "run function(){ ... };",
+  ]),
+  Quiz(263, "Why were IIFEs commonly used before ES6 modules?", [
+    "To avoid polluting the global scope",
+    "To make code run faster",
+    "To create loops",
+    "To define global variables",
+  ]),
+  Quiz(264, "Can an IIFE be an arrow function?", [
+    "Yes: (() => { ... })();",
+    "No",
+    "Only in Node.js",
+    "Only if it has a name",
+  ]),
+  Quiz(265, "How many times can a specific IIFE be executed?", [
+    "Once (at the moment it is defined)",
+    "As many times as called",
+    "Infinite",
+    "Zero",
+  ]),
+  Quiz(266, "Can you pass arguments to an IIFE?", [
+    "Yes, in the trailing parentheses",
+    "No",
+    "Only strings",
+    "Only if it's named",
+  ]),
+  Quiz(267, "Does an IIFE create its own scope?", [
+    "Yes",
+    "No",
+    "Only in strict mode",
+    "Only if using 'let'",
+  ]),
+  Quiz(
+    268,
+    "Which part of the IIFE syntax converts it from a declaration to an expression?",
+    [
+      "The surrounding parentheses ( )",
+      "The function keyword",
+      "The semicolon",
+      "The curly braces",
+    ],
+  ),
+  Quiz(269, "IIFEs are less common now because of ________.", [
+    "ES Modules (import/export)",
+    "Arrow functions",
+    "Classes",
+    "The fetch API",
+  ]),
+  Quiz(270, "What is the output of (function(x){ return x * 2 })(5)?", [
+    "10",
+    "5",
+    "undefined",
+    "Error",
+  ]),
+
+  // --- Topic 26: Introduction to Closures ---
+  Quiz(271, "What is a closure in JavaScript?", [
+    "A function that remembers its lexical scope even when executed outside it",
+    "A way to close the browser window",
+    "A private variable in a class",
+    "A function with no return statement",
+  ]),
+  Quiz(272, "Closures are created every time a ________ is created.", [
+    "Function",
+    "Variable",
+    "Loop",
+    "Object",
+  ]),
+  Quiz(273, "Which of these is a common use case for closures?", [
+    "Data privacy / Private variables",
+    "Increasing CPU speed",
+    "Connecting to a database",
+    "Deleting files",
+  ]),
+  Quiz(
+    274,
+    "A closure allows a function to access variables from which scope?",
+    [
+      "Its parent/outer scope",
+      "Only its own scope",
+      "Only the global scope",
+      "The screen scope",
+    ],
+  ),
+  Quiz(
+    275,
+    "What happens to the outer variables after the outer function finishes executing in a closure?",
+    [
+      "They are preserved in memory for the inner function",
+      "They are deleted (garbage collected)",
+      "They become global",
+      "They are reset to 0",
+    ],
+  ),
+  Quiz(276, "Closures are a result of ________.", [
+    "Lexical Scope",
+    "Hoisting",
+    "Asynchronous code",
+    "Strict Mode",
+  ]),
+  Quiz(277, "Can closures consume significant memory if not managed?", [
+    "Yes, because they keep variables in memory",
+    "No",
+    "Only in mobile browsers",
+    "Only in Node.js",
+  ]),
+  Quiz(
+    278,
+    "In a 'counter' function closure, does each instance share the same count?",
+    [
+      "No, each call to the outer function creates a new independent closure",
+      "Yes",
+      "Only if using 'var'",
+      "Only if global",
+    ],
+  ),
+  Quiz(279, "Which of the following is NOT a feature of closures?", [
+    "Performance optimization of mathematical operations",
+    "Persistent state",
+    "Access to outer scope",
+    "Encapsulation",
+  ]),
+  Quiz(
+    280,
+    "What is the output of a function returning 'count++' if 'count' is inside a closure initialized at 0?",
+    [
+      "1 (on the first call, if using post-increment)",
+      "0 (on the first call, if using post-increment)",
+      "Error",
+      "undefined",
+    ],
+  ),
+
+  // --- Topic 27: Higher-Order Functions Introduction ---
+  Quiz(281, "What is a Higher-Order Function (HOF)?", [
+    "A function that takes a function as an argument or returns a function",
+    "A function with more than 100 lines of code",
+    "A function defined at the top of a file",
+    "A function that runs faster than normal functions",
+  ]),
+  Quiz(
+    282,
+    "A function passed into another function as an argument is called a ________.",
+    ["Callback", "Parameter function", "IIFE", "Closure"],
+  ),
+  Quiz(
+    283,
+    "Which of the following is a built-in Higher-Order Function in JS?",
+    ["map()", "if()", "typeof()", "var()"],
+  ),
+  Quiz(284, "Why are HOFs useful?", [
+    "They promote code reuse and abstraction",
+    "They are required for memory management",
+    "They prevent hoisting",
+    "They only work with arrow functions",
+  ]),
+  Quiz(285, "What is 'Abstraction' in the context of HOFs?", [
+    "Hiding the complex logic of how a task is done",
+    "Deleting variables",
+    "Converting code to strings",
+    "Running code on a server",
+  ]),
+  Quiz(286, "Is 'addEventListener' a Higher-Order Function?", [
+    "Yes, it takes a callback function",
+    "No",
+    "Only in arrow functions",
+    "Only in the browser console",
+  ]),
+  Quiz(287, "Which HOF is best for transforming every element in an array?", [
+    "map()",
+    "forEach()",
+    "filter()",
+    "reduce()",
+  ]),
+  Quiz(288, "Can a HOF return a new function?", [
+    "Yes",
+    "No",
+    "Only in ES6",
+    "Only if using 'const'",
+  ]),
+  Quiz(
+    289,
+    "What happens if you pass a function call (with parentheses) instead of the function name as a callback?",
+    [
+      "The function executes immediately and passes the result instead",
+      "The function waits to be called",
+      "It works normally",
+      "It throws a syntax error",
+    ],
+  ),
+  Quiz(290, "HOFs are a core concept of which programming paradigm?", [
+    "Functional Programming",
+    "Object-Oriented Programming",
+    "Imperative Programming",
+    "Procedural Programming",
+  ]),
+
+  // --- General Module Review ---
+  Quiz(
+    291,
+    "Which keyword is preferred for variables that won't change in a function?",
+    ["const", "let", "var", "fixed"],
+  ),
+  Quiz(292, "What is the 'Execution Context'?", [
+    "The environment where code is evaluated and executed",
+    "The HTML file",
+    "The VS Code editor",
+    "The user's computer",
+  ]),
+  Quiz(
+    293,
+    "In JS, functions are 'First-Class Citizens'. What does this mean?",
+    [
+      "They can be treated like any other variable",
+      "They are always at the top of the file",
+      "They are built-in to the language",
+      "They are faster than loops",
+    ],
+  ),
+  Quiz(294, "What is a 'Pure Function'?", [
+    "A function that always returns the same output for the same input and has no side effects",
+    "A function with no parameters",
+    "A function that doesn't use 'this'",
+    "A function that doesn't use global variables",
+  ]),
+  Quiz(295, "What is a 'Side Effect' in a function?", [
+    "Changing a variable outside the function or printing to console",
+    "Returning a value",
+    "Having multiple parameters",
+    "Being hoisted",
+  ]),
+  Quiz(296, "Which of these is NOT a function type in JS?", [
+    "Recursive Expression",
+    "Arrow Function",
+    "Function Declaration",
+    "Function Expression",
+  ]),
+  Quiz(297, "What is 'Hoisting' for variables declared with 'var'?", [
+    "Declaration is hoisted, but value is undefined",
+    "The whole line is hoisted",
+    "Nothing is hoisted",
+    "It causes a ReferenceError",
+  ]),
+  Quiz(298, "The 'arguments' object is NOT available in which function type?", [
+    "Arrow Functions",
+    "Function Declarations",
+    "Function Expressions",
+    "All of them have it",
+  ]),
+  Quiz(
+    299,
+    "Which of these allows us to create 'Private' variables in modern JS before Classes?",
+    ["Closures", "Global variables", "Switch statements", "Arrow functions"],
+  ),
+  Quiz(
+    300,
+    "What is the Scope of a variable declared with 'let' inside a 'for' loop?",
+    [
+      "Block scope (local to the loop)",
+      "Function scope",
+      "Global scope",
+      "The loop has no scope",
+    ],
+  ),
+];
+final List<Quiz> jsQuizM4 = [
+  // --- Topic 28: Array Basics & Storing Data ---
+  Quiz(301, "What is the correct syntax for creating an empty array?", [
+    "let arr = [];",
+    "let arr = {};",
+    "let arr = Array();",
+    "Both A and C are correct",
+  ]),
+  Quiz(302, "JavaScript arrays can store values of different data types.", [
+    "True",
+    "False",
+    "Only if initialized with 'var'",
+    "Only in Node.js",
+  ]),
+  Quiz(303, "How do you access the first element of an array named 'colors'?", [
+    "colors[0]",
+    "colors[1]",
+    "colors.first",
+    "colors.get(0)",
+  ]),
+  Quiz(304, "Which property returns the number of elements in an array?", [
+    ".length",
+    ".size",
+    ".count",
+    ".limit",
+  ]),
+  Quiz(
+    305,
+    "What happens if you try to access an index that does not exist in an array?",
+    [
+      "It returns undefined",
+      "It throws an error",
+      "It returns null",
+      "It returns 0",
+    ],
+  ),
+  Quiz(306, "How do you update the second element of an array 'fruits'?", [
+    "fruits[1] = 'apple';",
+    "fruits[2] = 'apple';",
+    "fruits.update(1, 'apple');",
+    "fruits.set(1, 'apple');",
+  ]),
+  Quiz(307, "Are JavaScript arrays zero-indexed?", [
+    "Yes",
+    "No",
+    "Only in strict mode",
+    "Only for numeric arrays",
+  ]),
+  Quiz(308, "What is the type of an array when checked with 'typeof'?", [
+    "object",
+    "array",
+    "list",
+    "collection",
+  ]),
+  Quiz(309, "How can you check specifically if a variable is an array?", [
+    "Array.isArray(variable)",
+    "variable.isArray()",
+    "typeof variable === 'array'",
+    "variable instanceof Array",
+  ]),
+  Quiz(310, "What is the last index of an array with length 'n'?", [
+    "n - 1",
+    "n",
+    "n + 1",
+    "0",
+  ]),
+
+  // --- Topic 29: Adding/Removing: push, pop, shift, unshift ---
+  Quiz(311, "Which method adds an element to the END of an array?", [
+    ".push()",
+    ".pop()",
+    ".shift()",
+    ".unshift()",
+  ]),
+  Quiz(312, "Which method removes the LAST element from an array?", [
+    ".pop()",
+    ".push()",
+    ".shift()",
+    ".unshift()",
+  ]),
+  Quiz(313, "Which method adds an element to the BEGINNING of an array?", [
+    ".unshift()",
+    ".push()",
+    ".pop()",
+    ".shift()",
+  ]),
+  Quiz(314, "Which method removes the FIRST element from an array?", [
+    ".shift()",
+    ".unshift()",
+    ".push()",
+    ".pop()",
+  ]),
+  Quiz(315, "What does the '.push()' method return?", [
+    "The new length of the array",
+    "The element added",
+    "The updated array",
+    "undefined",
+  ]),
+  Quiz(316, "What does the '.pop()' method return?", [
+    "The element that was removed",
+    "The new length of the array",
+    "true",
+    "undefined",
+  ]),
+  Quiz(
+    317,
+    "If you 'unshift' an element, does the index of existing elements change?",
+    [
+      "Yes, they increment by 1",
+      "No",
+      "Only the first one",
+      "Only if the array is empty",
+    ],
+  ),
+  Quiz(318, "Which operation is generally slower on large arrays?", [
+    "shift/unshift (affects all indices)",
+    "push/pop (only affects the end)",
+    "Both are equal",
+    "Accessing by index",
+  ]),
+  Quiz(319, "What is the result of [1, 2].push(3)?", [
+    "3 (the new length)",
+    "[1, 2, 3]",
+    "undefined",
+    "Error",
+  ]),
+  Quiz(320, "What happens if you call '.pop()' on an empty array?", [
+    "It returns undefined",
+    "It throws an error",
+    "It returns null",
+    "It returns 0",
+  ]),
+
+  // --- Topic 30: Modifying: splice, slice, and concat ---
+  Quiz(
+    321,
+    "Which method creates a new array by copying a portion of an existing array?",
+    [".slice()", ".splice()", ".concat()", ".copy()"],
+  ),
+  Quiz(
+    322,
+    "Which method can be used to add, remove, or replace elements at any position?",
+    [".splice()", ".slice()", ".push()", ".pop()"],
+  ),
+  Quiz(323, "Does '.slice()' modify the original array?", [
+    "No, it returns a shallow copy",
+    "Yes",
+    "Only if you pass two arguments",
+    "Only in Node.js",
+  ]),
+  Quiz(324, "Does '.splice()' modify the original array?", [
+    "Yes",
+    "No",
+    "Only if removing elements",
+    "Only if adding elements",
+  ]),
+  Quiz(325, "Which method is used to merge two or more arrays?", [
+    ".concat()",
+    ".join()",
+    ".merge()",
+    ".combine()",
+  ]),
+  Quiz(326, "What is the output of [1, 2].concat([3, 4])?", [
+    "[1, 2, 3, 4]",
+    "[[1, 2], [3, 4]]",
+    "[10]",
+    "Error",
+  ]),
+  Quiz(
+    327,
+    "In 'splice(start, deleteCount)', what does 'deleteCount' represent?",
+    [
+      "The number of elements to remove",
+      "The index where to stop",
+      "The value to search for",
+      "The number of items to add",
+    ],
+  ),
+  Quiz(328, "How do you create a full copy of an array using slice?", [
+    "arr.slice()",
+    "arr.slice(0)",
+    "Both are correct",
+    "arr.slice(all)",
+  ]),
+  Quiz(329, "What does '.slice(1, 4)' return for an array with 5 elements?", [
+    "Elements at indices 1, 2, and 3",
+    "Elements at indices 1, 2, 3, and 4",
+    "Elements at index 1 and 4 only",
+    "The first 4 elements",
+  ]),
+  Quiz(330, "What is the return value of '.splice()?'", [
+    "An array containing the deleted elements",
+    "The updated original array",
+    "The new length of the array",
+    "true/false",
+  ]),
+
+  // --- Topic 31: Searching: indexOf, includes, findIndex ---
+  Quiz(
+    331,
+    "Which method returns the first index at which a given element is found?",
+    [".indexOf()", ".search()", ".includes()", ".find()"],
+  ),
+  Quiz(332, "What does '.indexOf()' return if the element is NOT found?", [
+    "-1",
+    "0",
+    "false",
+    "undefined",
+  ]),
+  Quiz(
+    333,
+    "Which method returns true or false depending on if an element exists?",
+    [".includes()", ".has()", ".contains()", ".indexOf()"],
+  ),
+  Quiz(
+    334,
+    "Which method returns the index of the first element that satisfies a testing function?",
+    [".findIndex()", ".indexOf()", ".search()", ".match()"],
+  ),
+  Quiz(335, "What is the difference between indexOf and includes?", [
+    "indexOf returns index, includes returns boolean",
+    "includes is faster",
+    "indexOf only works for numbers",
+    "There is no difference",
+  ]),
+  Quiz(
+    336,
+    "Which method returns the value of the first element that satisfies a test?",
+    [".find()", ".findIndex()", ".filter()", ".get()"],
+  ),
+  Quiz(337, "Can '.indexOf()' be used to find NaN in an array?", [
+    "No (use includes instead)",
+    "Yes",
+    "Only in modern browsers",
+    "Only if NaN is a string",
+  ]),
+  Quiz(338, "Which method searches an array from right to left?", [
+    ".lastIndexOf()",
+    ".reverseIndexOf()",
+    ".backIndex()",
+    ".findLast()",
+  ]),
+  Quiz(339, "How many arguments can '.indexOf()' take?", [
+    "Two (element, start index)",
+    "One",
+    "Three",
+    "Unlimited",
+  ]),
+  Quiz(340, "What is the result of [1, 5, 10].find(n => n > 6)?", [
+    "10",
+    "2",
+    "true",
+    "[10]",
+  ]),
+
+  // --- Topic 32: Object Literals & Property Access ---
+  Quiz(341, "What is the correct syntax for an object literal?", [
+    "let obj = { key: value };",
+    "let obj = [ key: value ];",
+    "let obj = ( key: value );",
+    "let obj = < key: value >;",
+  ]),
+  Quiz(
+    342,
+    "How do you access the property 'name' of object 'user' using dot notation?",
+    ["user.name", "user[name]", "user->name", "user('name')"],
+  ),
+  Quiz(343, "When MUST you use bracket notation '[]' to access a property?", [
+    "When the property name is stored in a variable or has spaces",
+    "Always",
+    "When accessing numbers",
+    "When the object is empty",
+  ]),
+  Quiz(
+    344,
+    "How do you add a new property 'age' to an existing object 'person'?",
+    [
+      "person.age = 25;",
+      "person['age'] = 25;",
+      "Both are correct",
+      "person.add('age', 25);",
+    ],
+  ),
+  Quiz(345, "How do you delete a property 'job' from object 'user'?", [
+    "delete user.job;",
+    "user.job = null;",
+    "user.remove('job');",
+    "remove user.job;",
+  ]),
+  Quiz(
+    346,
+    "What is the result of accessing a property that does not exist in an object?",
+    ["undefined", "null", "Error", "false"],
+  ),
+  Quiz(347, "Can an object property name be a string with spaces?", [
+    "Yes, if wrapped in quotes",
+    "No",
+    "Only in ES6",
+    "Only if using 'var'",
+  ]),
+  Quiz(
+    348,
+    "Which keyword is used to check if a property exists in an object?",
+    ["in", "has", "exists", "with"],
+  ),
+  Quiz(349, "What is the result of 'typeof {}'?", [
+    "object",
+    "null",
+    "array",
+    "undefined",
+  ]),
+  Quiz(350, "What is 'Shorthand Property' syntax?", [
+    "Using { name } instead of { name: name } when variable name matches key",
+    "Using . instead of []",
+    "Omitting the function keyword",
+    "Using const for objects",
+  ]),
+
+  // --- Topic 33: Object Methods & 'this' keyword ---
+  Quiz(351, "What is a method in JavaScript?", [
+    "A function stored as an object property",
+    "A special type of variable",
+    "A loop for objects",
+    "A built-in array function",
+  ]),
+  Quiz(
+    352,
+    "Inside a regular object method, what does the 'this' keyword refer to?",
+    [
+      "The object the method belongs to",
+      "The global window object",
+      "The method itself",
+      "undefined",
+    ],
+  ),
+  Quiz(353, "Do arrow functions have their own 'this' context?", [
+    "No, they use lexical 'this' from the outer scope",
+    "Yes, they point to the object",
+    "They point to the window object",
+    "They point to null",
+  ]),
+  Quiz(354, "Why might 'this' be undefined inside a function?", [
+    "If the function is in strict mode and not called as a method",
+    "If the object is too large",
+    "If using const",
+    "If the property name is a number",
+  ]),
+  Quiz(355, "Which method is used to return an array of an object's keys?", [
+    "Object.keys(obj)",
+    "obj.keys()",
+    "Object.getNames(obj)",
+    "Object.properties(obj)",
+  ]),
+  Quiz(356, "Which method is used to return an array of an object's values?", [
+    "Object.values(obj)",
+    "obj.values()",
+    "Object.getData(obj)",
+    "Object.items(obj)",
+  ]),
+  Quiz(357, "Which method returns an array of [key, value] pairs?", [
+    "Object.entries(obj)",
+    "Object.pairs(obj)",
+    "Object.all(obj)",
+    "obj.entries()",
+  ]),
+  Quiz(358, "What is the output of 'this' in the global scope (browser)?", [
+    "Window object",
+    "undefined",
+    "null",
+    "The current function",
+  ]),
+  Quiz(359, "How do you define a method using ES6 shorthand?", [
+    "greet() { ... }",
+    "greet: () => { ... }",
+    "greet: function() { ... }",
+    "All are valid methods",
+  ]),
+  Quiz(
+    360,
+    "Can you use 'this' inside an arrow function to access object properties when defined as a method?",
+    [
+      "No, it will likely point to the global scope",
+      "Yes",
+      "Only if using 'let'",
+      "Only in Node.js",
+    ],
+  ),
+
+  // --- Topic 34: Array & Object Destructuring ---
+  Quiz(361, "What is destructuring in JavaScript?", [
+    "Unpacking values from arrays or properties from objects into variables",
+    "Deleting an object",
+    "Changing an array to an object",
+    "A way to loop through data",
+  ]),
+  Quiz(362, "How do you destructure 'x' and 'y' from [10, 20]?", [
+    "const [x, y] = [10, 20];",
+    "const {x, y} = [10, 20];",
+    "const (x, y) = [10, 20];",
+    "const [x, y] : [10, 20];",
+  ]),
+  Quiz(363, "How do you destructure 'name' from { name: 'Sai', age: 20 }?", [
+    "const { name } = obj;",
+    "const [ name ] = obj;",
+    "const name = obj.name;",
+    "Both A and C are correct",
+  ]),
+  Quiz(
+    364,
+    "How do you assign a property to a different variable name during destructuring?",
+    [
+      "const { name: userName } = user;",
+      "const { name as userName } = user;",
+      "const { name -> userName } = user;",
+      "const { userName = name } = user;",
+    ],
+  ),
+  Quiz(365, "What happens if you destructure a property that doesn't exist?", [
+    "The variable becomes undefined",
+    "It throws an error",
+    "It returns null",
+    "The script stops",
+  ]),
+  Quiz(366, "How do you set a default value during destructuring?", [
+    "const { theme = 'dark' } = settings;",
+    "const { theme : 'dark' } = settings;",
+    "const { theme } = settings || 'dark';",
+    "const { theme ?? 'dark' } = settings;",
+  ]),
+  Quiz(367, "Can you skip elements while destructuring an array?", [
+    "Yes, using commas like [, , third]",
+    "No",
+    "Only if they are null",
+    "Only using slice",
+  ]),
+  Quiz(368, "How do you swap two variables 'a' and 'b' using destructuring?", [
+    "[a, b] = [b, a];",
+    "{a, b} = {b, a};",
+    "a, b = b, a;",
+    "swap(a, b);",
+  ]),
+  Quiz(369, "Destructuring was introduced in ________.", [
+    "ES6",
+    "ES5",
+    "ES2020",
+    "jQuery",
+  ]),
+  Quiz(370, "What is 'Nested Destructuring'?", [
+    "Destructuring values from an object inside another object",
+    "Destructuring inside a loop",
+    "Destructuring two arrays at once",
+    "It is not possible",
+  ]),
+
+  // --- Topic 35: Spread & Rest Operators (...) ---
+  Quiz(371, "Which syntax represents both Spread and Rest operators?", [
+    "...",
+    "---",
+    "***",
+    "&&&",
+  ]),
+  Quiz(372, "What does the Spread operator do with an array?", [
+    "Expands an array into individual elements",
+    "Combines multiple elements into one array",
+    "Deletes an array",
+    "Finds the maximum value",
+  ]),
+  Quiz(373, "How do you create a copy of an array 'arr' using spread?", [
+    "const copy = [...arr];",
+    "const copy = [arr...];",
+    "const copy = .arr;",
+    "const copy = spread(arr);",
+  ]),
+  Quiz(374, "How do you merge two objects 'obj1' and 'obj2' using spread?", [
+    "const newObj = { ...obj1, ...obj2 };",
+    "const newObj = [ ...obj1, ...obj2 ];",
+    "const newObj = obj1 + obj2;",
+    "const newObj = spread(obj1, obj2);",
+  ]),
+  Quiz(375, "What does the Rest operator do in a function parameter?", [
+    "Collects multiple arguments into a single array",
+    "Spreads arguments into individual variables",
+    "Stops the function execution",
+    "Resets the arguments",
+  ]),
+  Quiz(
+    376,
+    "Where must the Rest operator be placed in a function's parameters?",
+    [
+      "As the last parameter",
+      "As the first parameter",
+      "Anywhere",
+      "In the middle",
+    ],
+  ),
+  Quiz(
+    377,
+    "Can you use spread to pass an array as individual arguments to a function?",
+    ["Yes: func(...arr);", "No", "Only for Math functions", "Only in Node.js"],
+  ),
+  Quiz(378, "What is the result of [...'Hello']?", [
+    "['H', 'e', 'l', 'l', 'o']",
+    "['Hello']",
+    "'H e l l o'",
+    "Error",
+  ]),
+  Quiz(
+    379,
+    "In destructuring, what does 'const [first, ...others] = [1, 2, 3]' do?",
+    [
+      "Assigns 1 to 'first' and [2, 3] to 'others'",
+      "Assigns 1 to 'first' and 2, 3 to 'others'",
+      "Throws an error",
+      "Assigns [1, 2, 3] to both",
+    ],
+  ),
+  Quiz(380, "Does spreading an object create a deep copy or a shallow copy?", [
+    "Shallow copy",
+    "Deep copy",
+    "Reference copy",
+    "Neither",
+  ]),
+
+  // --- Topic 36: Sets & Maps (Modern Collections) ---
+  Quiz(381, "What is a 'Set' in JavaScript?", [
+    "A collection of unique values",
+    "An ordered list of items",
+    "A type of object key",
+    "A function to update values",
+  ]),
+  Quiz(382, "What happens if you add a duplicate value to a Set?", [
+    "It is ignored",
+    "It throws an error",
+    "It replaces the old value",
+    "It is stored twice",
+  ]),
+  Quiz(383, "Which method is used to add a value to a Set?", [
+    ".add()",
+    ".push()",
+    ".insert()",
+    ".set()",
+  ]),
+  Quiz(384, "Which property returns the number of elements in a Set?", [
+    ".size",
+    ".length",
+    ".count",
+    ".total",
+  ]),
+  Quiz(385, "What is a 'Map' in JavaScript?", [
+    "A collection of key-value pairs where keys can be any type",
+    "A function to transform arrays",
+    "A layout for a website",
+    "A type of array",
+  ]),
+  Quiz(386, "In a Map, can an object be used as a key?", [
+    "Yes",
+    "No, only strings",
+    "No, only numbers",
+    "Only in strict mode",
+  ]),
+  Quiz(387, "Which method is used to store a value in a Map?", [
+    ".set(key, value)",
+    ".add(key, value)",
+    ".put(key, value)",
+    ".push(key, value)",
+  ]),
+  Quiz(388, "Which method is used to retrieve a value from a Map?", [
+    ".get(key)",
+    ".fetch(key)",
+    ".find(key)",
+    ".value(key)",
+  ]),
+  Quiz(
+    389,
+    "How do you check if a key exists in a Map or a value exists in a Set?",
+    [".has()", ".includes()", ".exists()", ".in()"],
+  ),
+  Quiz(390, "How do you remove all elements from a Set or Map?", [
+    ".clear()",
+    ".empty()",
+    ".reset()",
+    ".deleteAll()",
+  ]),
+
+  // --- General Module Review ---
+  Quiz(
+    391,
+    "Which is the best structure to store a list of names where order matters?",
+    ["Array", "Object", "Set", "Map"],
+  ),
+  Quiz(
+    392,
+    "Which is best to store user profiles indexed by a numeric UserID?",
+    ["Map", "Array", "Set", "Object"],
+  ),
+  Quiz(393, "What is the main advantage of using a Set to store data?", [
+    "Automatic removal of duplicates",
+    "Faster sorting",
+    "Smaller memory size",
+    "Better compatibility with CSS",
+  ]),
+  Quiz(394, "Which operator can easily merge two arrays?", [
+    "Spread (...)",
+    "Rest (...)",
+    "Plus (+)",
+    "Logical OR (||)",
+  ]),
+  Quiz(395, "Can objects have duplicate keys?", [
+    "No, the last one defined will overwrite the others",
+    "Yes",
+    "Only if they are numbers",
+    "Only in ES5",
+  ]),
+  Quiz(396, "What does 'Object.freeze(obj)' do?", [
+    "Prevents any modification to the object",
+    "Makes the object faster",
+    "Clears the object memory",
+    "Converts the object to an array",
+  ]),
+  Quiz(397, "How do you iterate through the values of a Set?", [
+    "for...of loop",
+    "for...in loop",
+    "Standard for loop",
+    "Sets cannot be iterated",
+  ]),
+  Quiz(398, "What is an 'Iterable'?", [
+    "An object that can be looped over (like Array, Map, Set, String)",
+    "A function that returns a number",
+    "A variable that can be changed",
+    "A type of CSS animation",
+  ]),
+  Quiz(399, "What is the difference between a Map and a plain Object?", [
+    "Map keys can be any type; Object keys are mostly strings/symbols",
+    "Maps are faster for frequent additions/removals",
+    "Maps remember the insertion order of keys",
+    "All of the above",
+  ]),
+  Quiz(400, "How do you convert a Set back into an Array?", [
+    "[...set]",
+    "Array.from(set)",
+    "Both are correct",
+    "set.toArray()",
+  ]),
+];
+final List<Quiz> jsQuizM5 = [
+  // --- Topic 37: For Loops: Traditional Iteration ---
+  Quiz(401, "What are the three parts of a traditional 'for' loop header?", [
+    "Initialization, Condition, Final-expression",
+    "Variable, Loop, Stop",
+    "Start, Middle, End",
+    "Definition, Execution, Increment",
+  ]),
+  Quiz(402, "Which part of the 'for' loop runs only once at the beginning?", [
+    "Initialization",
+    "Condition",
+    "Increment",
+    "Body",
+  ]),
+  Quiz(
+    403,
+    "What happens if the condition in a 'for' loop is false from the start?",
+    [
+      "The loop body never executes",
+      "The loop runs once then stops",
+      "It throws an error",
+      "The program crashes",
+    ],
+  ),
+  Quiz(
+    404,
+    "Which keyword is used to skip the rest of the current iteration and move to the next one?",
+    ["continue", "break", "skip", "next"],
+  ),
+  Quiz(405, "Which keyword is used to exit a loop entirely?", [
+    "break",
+    "continue",
+    "return",
+    "exit",
+  ]),
+  Quiz(406, "What is an 'Infinite Loop'?", [
+    "A loop that never meets its exit condition",
+    "A loop that runs 1000 times",
+    "A loop inside another loop",
+    "A loop that uses the 'let' keyword",
+  ]),
+  Quiz(407, "How do you loop backwards from 10 down to 1?", [
+    "for (let i = 10; i >= 1; i--)",
+    "for (let i = 1; i <= 10; i++)",
+    "for (let i = 10; i > 0; i++)",
+    "for (i = 10 to 1)",
+  ]),
+  Quiz(
+    408,
+    "What is the result of using 'var' instead of 'let' in a for loop header?",
+    [
+      "The variable is available outside the loop scope",
+      "The variable is private to the loop",
+      "The loop runs faster",
+      "It causes a syntax error",
+    ],
+  ),
+  Quiz(
+    409,
+    "Can you omit the initialization part if the variable is already defined?",
+    [
+      "Yes, but you must keep the semicolon (e.g., for (; i < 10; i++))",
+      "No",
+      "Only in strict mode",
+      "Only in while loops",
+    ],
+  ),
+  Quiz(
+    410,
+    "In a nested loop, which loop completes all its iterations for every single iteration of the outer loop?",
+    ["The inner loop", "The outer loop", "Both run simultaneously", "Neither"],
+  ),
+
+  // --- Topic 38: While & Do-While Loops ---
+  Quiz(411, "When is a 'while' loop typically preferred over a 'for' loop?", [
+    "When the number of iterations is not known in advance",
+    "When looping through an array",
+    "When you need an index variable",
+    "Always",
+  ]),
+  Quiz(412, "Where is the condition checked in a 'while' loop?", [
+    "Before the code block runs",
+    "After the code block runs",
+    "In the middle of the block",
+    "Only at the end of the script",
+  ]),
+  Quiz(413, "What is the key difference between 'while' and 'do-while'?", [
+    "'do-while' always runs at least once",
+    "'while' always runs at least once",
+    "There is no difference",
+    "'do-while' is faster",
+  ]),
+  Quiz(
+    414,
+    "What happens if you forget to increment the counter inside a 'while' loop?",
+    [
+      "You create an infinite loop",
+      "The loop stops automatically",
+      "The browser fixes it",
+      "An error is thrown",
+    ],
+  ),
+  Quiz(415, "What is the syntax for a 'do-while' loop?", [
+    "do { ... } while (condition);",
+    "while (condition) do { ... };",
+    "do (condition) { ... };",
+    "repeat { ... } until (condition);",
+  ]),
+  Quiz(
+    416,
+    "Which loop is best for a game loop that runs as long as 'isGameOver' is false?",
+    ["while", "for", "for-in", "forEach"],
+  ),
+  Quiz(417, "What does 'while(true)' create?", [
+    "An infinite loop",
+    "A loop that runs once",
+    "A syntax error",
+    "A loop that never runs",
+  ]),
+  Quiz(418, "In a 'while' loop, where should the 'increment' usually happen?", [
+    "Inside the code block (body)",
+    "In the header parentheses",
+    "Before the loop starts",
+    "After the loop ends",
+  ]),
+  Quiz(419, "Can 'break' be used inside a 'while' loop?", [
+    "Yes",
+    "No",
+    "Only in switch statements",
+    "Only in do-while",
+  ]),
+  Quiz(420, "What value does the condition in a while loop evaluate to?", [
+    "Boolean (true/false)",
+    "Number",
+    "String",
+    "Object",
+  ]),
+
+  // --- Topic 39: Looping through Arrays (for-of) ---
+  Quiz(
+    421,
+    "Which loop is specifically designed to iterate over the VALUES of an iterable (like an array)?",
+    ["for...of", "for...in", "forEach", "map"],
+  ),
+  Quiz(422, "What is the syntax for a 'for-of' loop?", [
+    "for (const item of array) { ... }",
+    "for (const item in array) { ... }",
+    "for (item of array) { ... }",
+    "array.forOf(item => { ... })",
+  ]),
+  Quiz(423, "Can you use 'for-of' with a string?", [
+    "Yes, it iterates over each character",
+    "No",
+    "Only with Template Literals",
+    "Only in Node.js",
+  ]),
+  Quiz(
+    424,
+    "Does 'for-of' give you access to the index of the current element directly?",
+    [
+      "No (unless using .entries())",
+      "Yes, it's the second variable",
+      "Yes, always",
+      "Only if the array is numeric",
+    ],
+  ),
+  Quiz(
+    425,
+    "Which is better for looping through an array when you DON'T need the index?",
+    ["for...of", "Traditional for loop", "for...in", "while"],
+  ),
+  Quiz(426, "How do you get both index and value using for-of?", [
+    "for (const [index, value] of array.entries())",
+    "for (const index, value of array)",
+    "for (const item of array.withIndex())",
+    "It is impossible",
+  ]),
+  Quiz(427, "Can you use 'break' and 'continue' inside a 'for-of' loop?", [
+    "Yes",
+    "No",
+    "Only 'break'",
+    "Only 'continue'",
+  ]),
+  Quiz(428, "Is 'for-of' available in ES5?", [
+    "No, it's an ES6 feature",
+    "Yes",
+    "Only in Internet Explorer",
+    "Only for objects",
+  ]),
+  Quiz(429, "What is the result of 'for (let x of [1, 2])'?", [
+    "x will be 1, then 2",
+    "x will be 0, then 1 (indices)",
+    "x will be [1, 2]",
+    "Error",
+  ]),
+  Quiz(430, "Can you use 'for-of' to iterate over a Map or a Set?", [
+    "Yes",
+    "No",
+    "Only a Set",
+    "Only a Map",
+  ]),
+
+  // --- Topic 40: Looping through Objects (for-in) ---
+  Quiz(
+    431,
+    "Which loop is primarily used to iterate over the KEYS (properties) of an object?",
+    ["for...in", "for...of", "forEach", "while"],
+  ),
+  Quiz(432, "What does 'for (let key in obj)' return for each iteration?", [
+    "The property name (key)",
+    "The property value",
+    "The index",
+    "The whole object",
+  ]),
+  Quiz(
+    433,
+    "How do you access the value of a property inside a 'for-in' loop?",
+    ["obj[key]", "obj.key", "key.value", "obj.get(key)"],
+  ),
+  Quiz(434, "Is 'for-in' recommended for iterating over arrays?", [
+    "No, it can be inconsistent and slower",
+    "Yes, it's the standard way",
+    "Only for small arrays",
+    "Only in strict mode",
+  ]),
+  Quiz(435, "What is the output of 'for (let x in [10, 20])'?", [
+    "0, then 1 (the indices)",
+    "10, then 20",
+    "undefined",
+    "Error",
+  ]),
+  Quiz(
+    436,
+    "Does 'for-in' iterate over inherited properties in the prototype chain?",
+    ["Yes", "No", "Only if using 'var'", "Only in ES6"],
+  ),
+  Quiz(
+    437,
+    "Which method can you use inside 'for-in' to check if a property belongs to the object itself?",
+    ["hasOwnProperty()", "isLocal()", "exists()", "inObject()"],
+  ),
+  Quiz(438, "Which of the following is an alternative to for-in for objects?", [
+    "Object.keys(obj).forEach()",
+    "obj.forEach()",
+    "for (let x of obj)",
+    "while (obj)",
+  ]),
+  Quiz(
+    439,
+    "In 'for (let p in person)', what is 'p' if the person object is { name: 'Sai' }?",
+    ["'name'", "'Sai'", "0", "undefined"],
+  ),
+  Quiz(440, "Can you use 'for-in' to loop through a string?", [
+    "Yes (it returns indices as strings)",
+    "No",
+    "Only in Node.js",
+    "Only with backticks",
+  ]),
+
+  // --- Topic 41: Higher-Order Functions & Callbacks ---
+  Quiz(441, "What is a callback function?", [
+    "A function passed as an argument to another function",
+    "A function that returns a value",
+    "A function used to call the server",
+    "A function defined inside another function only",
+  ]),
+  Quiz(442, "What is a Higher-Order Function (HOF)?", [
+    "A function that takes or returns another function",
+    "A function that is at the top of the file",
+    "A function that runs faster",
+    "A function that uses recursion",
+  ]),
+  Quiz(
+    443,
+    "Which array method executes a provided function once for each array element?",
+    ["forEach()", "map()", "filter()", "every()"],
+  ),
+  Quiz(444, "Does 'forEach()' return a new array?", [
+    "No, it returns undefined",
+    "Yes",
+    "Only if you return a value inside the callback",
+    "Only in ES6",
+  ]),
+  Quiz(
+    445,
+    "How many arguments does the callback in 'forEach' usually accept?",
+    [
+      "3 (element, index, array)",
+      "1 (element)",
+      "2 (element, index)",
+      "Unlimited",
+    ],
+  ),
+  Quiz(446, "Can you 'break' or 'continue' out of a 'forEach' loop?", [
+    "No",
+    "Yes",
+    "Only 'break'",
+    "Only 'continue'",
+  ]),
+  Quiz(447, "Why use 'forEach' instead of a traditional 'for' loop?", [
+    "Cleaner syntax and more declarative",
+    "It is much faster",
+    "It uses less memory",
+    "It allows using the 'await' keyword better",
+  ]),
+  Quiz(448, "Which is a Higher-Order Function?", [
+    "addEventListener",
+    "Math.max",
+    "parseInt",
+    "typeof",
+  ]),
+  Quiz(
+    449,
+    "What happens if you pass 'myFunc()' instead of 'myFunc' as a callback?",
+    [
+      "The function runs immediately and its result is passed",
+      "The function waits to run",
+      "It throws an error",
+      "It works the same",
+    ],
+  ),
+  Quiz(
+    450,
+    "Are functional methods like 'map' and 'filter' Higher-Order Functions?",
+    ["Yes", "No", "Only if they use arrow functions", "Only in React"],
+  ),
+
+  // --- Topic 42: The Map Method (Data Transformation) ---
+  Quiz(451, "What is the primary purpose of the 'map()' method?", [
+    "To create a new array with transformed elements",
+    "To filter out unwanted items",
+    "To find a specific item",
+    "To sort an array",
+  ]),
+  Quiz(452, "Does 'map()' modify the original array?", [
+    "No, it returns a new array",
+    "Yes",
+    "Only if using 'var'",
+    "Only if you don't return anything",
+  ]),
+  Quiz(
+    453,
+    "If you forget to return a value in the map callback, what will the new array contain?",
+    [
+      "undefined for each element",
+      "The original elements",
+      "Nothing (empty array)",
+      "null",
+    ],
+  ),
+  Quiz(454, "What is the result of [1, 2].map(x => x * 2)?", [
+    "[2, 4]",
+    "[1, 2, 2, 4]",
+    "3",
+    "undefined",
+  ]),
+  Quiz(455, "When should you use 'map' instead of 'forEach'?", [
+    "When you want to generate a new array from the results",
+    "When you just want to log data",
+    "When you want to stop the loop early",
+    "Never, they are the same",
+  ]),
+  Quiz(456, "Can you use 'map' on an object?", [
+    "No (you must convert to an array first using Object.keys/entries)",
+    "Yes",
+    "Only in ES2020",
+    "Only if it's a JSON object",
+  ]),
+  Quiz(
+    457,
+    "What is the length of the array returned by 'map()' compared to the original?",
+    ["Always the same length", "Shorter", "Longer", "Varies based on return"],
+  ),
+  Quiz(458, "What does map return if the original array is empty?", [
+    "An empty array []",
+    "null",
+    "undefined",
+    "Error",
+  ]),
+  Quiz(
+    459,
+    "How do you extract just the names from an array of user objects?",
+    [
+      "users.map(u => u.name)",
+      "users.filter(u => u.name)",
+      "users.forEach(u => u.name)",
+      "users.reduce(u => u.name)",
+    ],
+  ),
+  Quiz(
+    460,
+    "Map is a ________ function because it doesn't change the original data.",
+    ["Pure/Immutable", "Destructive", "Recursive", "Static"],
+  ),
+
+  // --- Topic 43: The Filter Method (Data Selection) ---
+  Quiz(461, "What does the 'filter()' method return?", [
+    "A new array containing elements that pass a test",
+    "The first element that passes a test",
+    "A boolean value",
+    "The index of the passed items",
+  ]),
+  Quiz(
+    462,
+    "What kind of value should the callback function in 'filter()' return?",
+    ["A truthy or falsy value", "A new element", "A number", "An object"],
+  ),
+  Quiz(463, "Does 'filter()' modify the original array?", [
+    "No",
+    "Yes",
+    "Only if all items pass",
+    "Only in non-strict mode",
+  ]),
+  Quiz(464, "If no elements pass the test in 'filter()', what is returned?", [
+    "An empty array []",
+    "undefined",
+    "null",
+    "false",
+  ]),
+  Quiz(465, "What is the result of [1, 10, 20].filter(x => x > 5)?", [
+    "[10, 20]",
+    "[1, 10, 20]",
+    "10",
+    "true",
+  ]),
+  Quiz(466, "Can 'filter()' change the length of the array?", [
+    "Yes, the new array can be shorter than the original",
+    "No",
+    "Only if using 'splice'",
+    "Only if return is true",
+  ]),
+  Quiz(467, "Is the original array's length affected by filter?", [
+    "No",
+    "Yes",
+    "Only if you reassign it",
+    "Only in ES6",
+  ]),
+  Quiz(468, "How do you remove 'null' values from an array 'data'?", [
+    "data.filter(x => x !== null)",
+    "data.map(x => x !== null)",
+    "data.forEach(x => x !== null)",
+    "data.find(x => x !== null)",
+  ]),
+  Quiz(469, "What happens if the callback returns 'true' for every element?", [
+    "A shallow copy of the entire array is returned",
+    "The original array is returned (same reference)",
+    "undefined",
+    "true",
+  ]),
+  Quiz(470, "Filter is useful for ________ tasks.", [
+    "Data cleaning and searching",
+    "Calculating a sum",
+    "Changing every value",
+    "Creating HTML strings",
+  ]),
+
+  // --- Topic 44: The Reduce Method (Accumulation) ---
+  Quiz(471, "What is the primary purpose of 'reduce()'?", [
+    "To reduce an array to a single value (like a sum or object)",
+    "To make an array smaller by removing items",
+    "To find the smallest number",
+    "To sort items",
+  ]),
+  Quiz(472, "What are the two main arguments of 'reduce()'?", [
+    "Callback function and an optional Initial Value",
+    "Start and End",
+    "Array and Index",
+    "Value and Condition",
+  ]),
+  Quiz(473, "What are the four arguments passed to the 'reduce' callback?", [
+    "Accumulator, CurrentValue, Index, Array",
+    "Total, Item, Count, List",
+    "Prev, Next, Current, Last",
+    "Sum, Val, i, arr",
+  ]),
+  Quiz(474, "What is the 'Accumulator' in reduce?", [
+    "The value returned from the previous iteration",
+    "The first item in the array",
+    "The final result only",
+    "The index counter",
+  ]),
+  Quiz(475, "What happens if you don't provide an 'Initial Value' to reduce?", [
+    "The first element of the array is used as the initial accumulator",
+    "It throws an error",
+    "The accumulator starts at 0",
+    "The accumulator starts at undefined",
+  ]),
+  Quiz(
+    476,
+    "What is the result of [1, 2, 3].reduce((acc, val) => acc + val, 0)?",
+    ["6", "[6]", "undefined", "123"],
+  ),
+  Quiz(477, "Can 'reduce()' return an object instead of a number?", [
+    "Yes, it can return any data type",
+    "No, only numbers or strings",
+    "Only in ES2015",
+    "Only if the initial value is {}",
+  ]),
+  Quiz(
+    478,
+    "Which method is best for counting occurrences of items in an array?",
+    ["reduce()", "map()", "filter()", "forEach()"],
+  ),
+  Quiz(
+    479,
+    "If you want to flatten a nested array, which method is most powerful?",
+    ["reduce()", "filter()", "map()", "some()"],
+  ),
+  Quiz(480, "What is the 'Initial Value' in: arr.reduce(cb, [])?", [
+    "An empty array",
+    "0",
+    "The first element",
+    "Nothing",
+  ]),
+
+  // --- Topic 45: Find, Some, Every & Method Chaining ---
+  Quiz(481, "What does 'find()' return?", [
+    "The first element that satisfies the condition",
+    "An array of all matches",
+    "A boolean",
+    "The index of the match",
+  ]),
+  Quiz(482, "What does 'find()' return if no match is found?", [
+    "undefined",
+    "null",
+    "-1",
+    "false",
+  ]),
+  Quiz(483, "What is the result of 'some()'?", [
+    "true if at least one element passes the test",
+    "The first element found",
+    "A new array",
+    "true if all elements pass",
+  ]),
+  Quiz(484, "What is the result of 'every()'?", [
+    "true if ALL elements pass the test",
+    "true if at least one element passes",
+    "An array of booleans",
+    "The last element",
+  ]),
+  Quiz(485, "What is 'Method Chaining'?", [
+    "Calling multiple methods in a single line (e.g., arr.filter().map())",
+    "Connecting two different arrays",
+    "A type of loop",
+    "Using a function inside a function",
+  ]),
+  Quiz(486, "In 'arr.filter().map()', which method runs first?", [
+    "filter()",
+    "map()",
+    "Both run at the same time",
+    "The one at the end",
+  ]),
+  Quiz(
+    487,
+    "Which method 'short-circuits' (stops early) as soon as it finds a true value?",
+    ["some()", "every()", "map()", "forEach()"],
+  ),
+  Quiz(
+    488,
+    "Which method 'short-circuits' (stops early) as soon as it finds a false value?",
+    ["every()", "some()", "filter()", "reduce()"],
+  ),
+  Quiz(
+    489,
+    "How do you find the index of an element that matches a complex condition?",
+    ["findIndex()", "indexOf()", "search()", "find()"],
+  ),
+  Quiz(490, "What is the result of [2, 4, 6].every(x => x % 2 === 0)?", [
+    "true",
+    "false",
+    "6",
+    "undefined",
+  ]),
+
+  // --- General Module Review ---
+  Quiz(
+    491,
+    "Which method is best for checking if an array has at least one negative number?",
+    ["some()", "every()", "filter()", "map()"],
+  ),
+  Quiz(
+    492,
+    "Which method is best for creating a list of HTML strings from an array of strings?",
+    ["map()", "filter()", "find()", "forEach()"],
+  ),
+  Quiz(
+    493,
+    "Functional methods (map, filter, etc.) are usually better than 'for' loops because:",
+    [
+      "They are more readable and less prone to 'off-by-one' errors",
+      "They are much faster in all browsers",
+      "They can only be used with const",
+      "They work with CSS",
+    ],
+  ),
+  Quiz(494, "What is the output of [1, 2, 3].some(x => x > 10)?", [
+    "false",
+    "true",
+    "undefined",
+    "Error",
+  ]),
+  Quiz(
+    495,
+    "Which method returns the value of the first element that is less than 0?",
+    ["find()", "filter()", "some()", "indexOf()"],
+  ),
+  Quiz(496, "Can you chain 'forEach' after 'map'?", [
+    "Yes, because map returns an array",
+    "No",
+    "Only if forEach returns an array",
+    "Only in ES6",
+  ]),
+  Quiz(497, "Can you chain 'map' after 'forEach'?", [
+    "No, because forEach returns undefined",
+    "Yes",
+    "Only if you return a value",
+    "Only in Node.js",
+  ]),
+  Quiz(
+    498,
+    "Which loop is most similar to how humans think about 'for each item in this box'?",
+    ["for...of", "Traditional for loop", "while", "do-while"],
+  ),
+  Quiz(499, "What is 'Immutable' data?", [
+    "Data that cannot be changed after it is created",
+    "Data that is stored in the cloud",
+    "A variable declared with 'var'",
+    "A function with no return",
+  ]),
+  Quiz(
+    500,
+    "Which method is technically the 'God Method' because it can replicate map, filter, and find?",
+    ["reduce()", "forEach()", "every()", "sort()"],
+  ),
+];
+final List<Quiz> jsQuizM6 = [
+  // --- Topic 46: Object Prototypes & Inheritance ---
+  Quiz(
+    501,
+    "Every JavaScript object has a built-in property which is another object, called its ________.",
+    ["Prototype", "Constructor", "Instance", "Class"],
+  ),
+  Quiz(
+    502,
+    "What is the name of the 'hidden' property that links an object to its prototype?",
+    ["__proto__", "[[Link]]", "parent", "prototypeLink"],
+  ),
+  Quiz(
+    503,
+    "What happens when you try to access a property that doesn't exist on an object?",
+    [
+      "JS looks for it in the object's prototype",
+      "It returns null immediately",
+      "It throws a ReferenceError",
+      "It creates the property with value undefined",
+    ],
+  ),
+  Quiz(504, "Which object is at the very top of the prototype chain?", [
+    "Object.prototype",
+    "Function.prototype",
+    "Array.prototype",
+    "null",
+  ]),
+  Quiz(505, "What is 'Prototypal Inheritance'?", [
+    "Objects inheriting features from other objects via the prototype chain",
+    "Classes inheriting from other classes",
+    "Copying all properties from one object to another",
+    "A way to define global variables",
+  ]),
+  Quiz(
+    506,
+    "Which method is used to create a new object with a specified prototype?",
+    ["Object.create()", "Object.new()", "Object.assign()", "new Object()"],
+  ),
+  Quiz(507, "What does the 'instanceof' operator check?", [
+    "If an object's prototype chain contains the prototype property of a constructor",
+    "If two objects are exactly the same",
+    "The data type of a variable",
+    "If a property is private",
+  ]),
+  Quiz(
+    508,
+    "Can you add methods to built-in prototypes like Array.prototype?",
+    [
+      "Yes, but it is generally considered bad practice (Monkey Patching)",
+      "No, they are frozen",
+      "Only in Node.js",
+      "Only if using the 'class' keyword",
+    ],
+  ),
+  Quiz(
+    509,
+    "Why use prototypes instead of adding methods directly to every object instance?",
+    [
+      "To save memory (all instances share one function)",
+      "To make the code run faster",
+      "To make properties private",
+      "Prototypes are required for arrow functions",
+    ],
+  ),
+  Quiz(510, "What is the default prototype of a function?", [
+    "An object with a 'constructor' property pointing back to the function",
+    "null",
+    "Object.prototype",
+    "Array.prototype",
+  ]),
+
+  // --- Topic 47: Classes & Constructors (ES6) ---
+  Quiz(511, "What is a JavaScript Class?", [
+    "Syntactic sugar over prototypal inheritance",
+    "A completely new way of handling objects",
+    "A type of data structure like an Array",
+    "A CSS selector",
+  ]),
+  Quiz(
+    512,
+    "Which method is automatically called when a new instance of a class is created?",
+    ["constructor()", "init()", "main()", "new()"],
+  ),
+  Quiz(513, "How do you create an instance of a class named 'User'?", [
+    "const user1 = new User();",
+    "const user1 = User();",
+    "const user1 = create User();",
+    "const user1 = User.new();",
+  ]),
+  Quiz(514, "Where are methods defined inside a class usually stored?", [
+    "On the Class prototype",
+    "On every individual instance",
+    "In the global scope",
+    "In the constructor only",
+  ]),
+  Quiz(515, "Are classes hoisted like function declarations?", [
+    "No",
+    "Yes",
+    "Only in non-strict mode",
+    "Only if they are empty",
+  ]),
+  Quiz(516, "What is the 'this' keyword inside a class method?", [
+    "The current instance of the class",
+    "The class definition itself",
+    "The window object",
+    "undefined",
+  ]),
+  Quiz(517, "Can a class have more than one constructor method?", [
+    "No",
+    "Yes",
+    "Only if they have different parameters",
+    "Only in ES2022",
+  ]),
+  Quiz(518, "Which keyword is used to define a class?", [
+    "class",
+    "object",
+    "struct",
+    "define",
+  ]),
+  Quiz(
+    519,
+    "By default, the code inside a class body always executes in ________.",
+    ["Strict Mode", "Global Mode", "Functional Mode", "Asynchronous Mode"],
+  ),
+  Quiz(520, "What does 'typeof MyClass' return?", [
+    "function",
+    "class",
+    "object",
+    "undefined",
+  ]),
+
+  // --- Topic 48: Getters, Setters & Property Validation ---
+  Quiz(521, "What is a 'Getter' in a class?", [
+    "A method that gets a value but is accessed like a property",
+    "A function to fetch data from an API",
+    "A property that cannot be changed",
+    "A way to delete properties",
+  ]),
+  Quiz(522, "What is a 'Setter' used for?", [
+    "To execute code whenever a property is assigned a value",
+    "To set the prototype of an object",
+    "To create a new class instance",
+    "To set the speed of a loop",
+  ]),
+  Quiz(523, "Which keywords are used to define getters and setters?", [
+    "get and set",
+    "fetch and push",
+    "read and write",
+    "input and output",
+  ]),
+  Quiz(524, "Why use getters/setters instead of simple properties?", [
+    "To provide data validation and encapsulation",
+    "To make the object smaller",
+    "To allow multi-threading",
+    "To prevent hoisting",
+  ]),
+  Quiz(525, "How do you call a getter named 'fullName' on object 'user'?", [
+    "user.fullName",
+    "user.fullName()",
+    "user.get('fullName')",
+    "user->fullName",
+  ]),
+  Quiz(526, "When using a setter, how is the value passed to it?", [
+    "Via assignment (user.name = 'Sai')",
+    "As a function argument (user.name('Sai'))",
+    "It is set automatically",
+    "Using the 'set' keyword",
+  ]),
+  Quiz(
+    527,
+    "To avoid infinite loops in setters, developers often prefix the internal property with ________.",
+    [
+      "An underscore (_name)",
+      "A dollar sign (\$name)",
+      "A hashtag (#name)",
+      "The word 'internal'",
+    ],
+  ),
+  Quiz(528, "Can you have a getter without a setter?", [
+    "Yes (creates a read-only property)",
+    "No",
+    "Only for numbers",
+    "Only in objects, not classes",
+  ]),
+  Quiz(529, "Are getters and setters part of the object's prototype?", [
+    "Yes",
+    "No",
+    "Only getters",
+    "Only if using 'var'",
+  ]),
+  Quiz(530, "What is 'Computed Property Name' in an object literal?", [
+    "Using [expression] as a key",
+    "A property that calculates math",
+    "A getter",
+    "A variable name",
+  ]),
+
+  // --- Topic 49: Inheritance: Extends & Super ---
+  Quiz(
+    531,
+    "Which keyword is used to create a child class from a parent class?",
+    ["extends", "inherits", "sub", "from"],
+  ),
+  Quiz(532, "What does the 'super()' function do in a constructor?", [
+    "Calls the constructor of the parent class",
+    "Makes a class super-fast",
+    "Refers to the current instance",
+    "Overrides a method",
+  ]),
+  Quiz(533, "Where must 'super()' be called in a child class constructor?", [
+    "Before using the 'this' keyword",
+    "At the very end",
+    "Only if there are no parameters",
+    "It is not required",
+  ]),
+  Quiz(534, "Can a child class override a method of its parent?", [
+    "Yes, by defining a method with the same name",
+    "No",
+    "Only if the parent allows it",
+    "Only using the 'override' keyword",
+  ]),
+  Quiz(
+    535,
+    "How do you call a parent method 'greet()' from inside a child method?",
+    ["super.greet()", "this.parent.greet()", "parent.greet()", "super()"],
+  ),
+  Quiz(
+    536,
+    "JavaScript supports 'Multiple Inheritance' (one class extending two parents).",
+    ["False", "True", "Only in strict mode", "Only through interfaces"],
+  ),
+  Quiz(537, "Inheritance allows for ________, which avoids duplicating code.", [
+    "Code Reusability",
+    "Hoisting",
+    "Memory Leaks",
+    "Garbage Collection",
+  ]),
+  Quiz(538, "If a child class has no constructor, what happens?", [
+    "It automatically uses the parent's constructor",
+    "An error is thrown",
+    "The class cannot be instantiated",
+    "The properties are null",
+  ]),
+  Quiz(539, "A class that extends another is called a ________.", [
+    "Subclass or Derived class",
+    "Superclass",
+    "Prototype class",
+    "Abstract class",
+  ]),
+  Quiz(540, "What is the 'Prototype Chain' in inheritance?", [
+    "The link from Child prototype to Parent prototype",
+    "A list of all objects in a file",
+    "The sequence of function calls",
+    "A type of array",
+  ]),
+
+  // --- Topic 50: Static Methods & Properties ---
+  Quiz(541, "What is a 'static' method?", [
+    "A method called on the class itself, not on instances",
+    "A method that never changes",
+    "A method that runs automatically",
+    "A method stored in the global scope",
+  ]),
+  Quiz(542, "How do you call a static method 'sayHi' on class 'User'?", [
+    "User.sayHi()",
+    "const u = new User(); u.sayHi();",
+    "User.prototype.sayHi()",
+    "this.sayHi()",
+  ]),
+  Quiz(543, "Which keyword defines a static property?", [
+    "static",
+    "const",
+    "fixed",
+    "stable",
+  ]),
+  Quiz(544, "Can a static method access 'this' to refer to a class instance?", [
+    "No",
+    "Yes",
+    "Only if passed as an argument",
+    "Only in ES5",
+  ]),
+  Quiz(545, "In a static method, what does 'this' refer to?", [
+    "The Class itself",
+    "The instance",
+    "The window object",
+    "undefined",
+  ]),
+  Quiz(546, "What is a common use case for static methods?", [
+    "Utility functions or factory methods",
+    "Updating user-specific data",
+    "Changing CSS styles",
+    "Handling click events",
+  ]),
+  Quiz(547, "Are static methods inherited by child classes?", [
+    "Yes",
+    "No",
+    "Only if they are not private",
+    "Only in Node.js",
+  ]),
+  Quiz(548, "Which built-in JS object uses many static methods?", [
+    "Math",
+    "Array",
+    "Object",
+    "All of the above",
+  ]),
+  Quiz(549, "Can a class instance call a static method directly?", [
+    "No",
+    "Yes",
+    "Only if it's a getter",
+    "Only using the 'static' keyword",
+  ]),
+  Quiz(550, "What is a static property used for?", [
+    "Storing configuration or cache common to all instances",
+    "Storing a user's password",
+    "Creating a new loop",
+    "Counting the number of variables",
+  ]),
+
+  // --- Topic 51: Private Fields (#) & Encapsulation ---
+  Quiz(551, "Which symbol is used to define a private field in a class?", [
+    "#",
+    "_",
+    "\$",
+    "!",
+  ]),
+  Quiz(552, "Can a private field (#name) be accessed outside of the class?", [
+    "No, it throws a SyntaxError",
+    "Yes, via dot notation",
+    "Yes, using bracket notation",
+    "Only in child classes",
+  ]),
+  Quiz(553, "What is Encapsulation?", [
+    "Hiding internal state and requiring all interaction through methods",
+    "Wrapping code in a function",
+    "Putting all files in one folder",
+    "Converting objects to strings",
+  ]),
+  Quiz(554, "Are private fields inherited and accessible in child classes?", [
+    "No, they are strictly private to the class they are defined in",
+    "Yes",
+    "Only if using super",
+    "Only in ES6",
+  ]),
+  Quiz(555, "Where must private fields be declared in a class?", [
+    "At the top level of the class body",
+    "Inside the constructor only",
+    "Outside the class",
+    "Anywhere",
+  ]),
+  Quiz(556, "Can methods be private as well?", [
+    "Yes, using the # prefix",
+    "No, only properties",
+    "Only in TypeScript",
+    "Only static methods",
+  ]),
+  Quiz(557, "Why use # instead of _ for private properties?", [
+    "# is enforced by the language; _ is just a convention",
+    "# is faster",
+    "# works on older browsers",
+    "_ is deprecated",
+  ]),
+  Quiz(
+    558,
+    "What happens if you try to declare a private field without the # inside the class methods?",
+    [
+      "It is treated as a regular public property",
+      "It throws an error",
+      "It becomes global",
+      "Nothing",
+    ],
+  ),
+  Quiz(559, "Private fields were introduced in which version of JavaScript?", [
+    "ES2022 (widely supported)",
+    "ES6",
+    "ES5",
+    "ES3",
+  ]),
+  Quiz(560, "Encapsulation helps in ________.", [
+    "Reducing complexity and protecting data integrity",
+    "Increasing memory usage",
+    "Making code public",
+    "Automatically naming variables",
+  ]),
+
+  // --- Topic 52: Optional Chaining (?.) ---
+  Quiz(561, "What does the Optional Chaining operator (?.) do?", [
+    "Short-circuits and returns undefined if the reference is nullish",
+    "Allows you to chain multiple functions",
+    "Checks if a variable is a string",
+    "Tries to fix an error",
+  ]),
+  Quiz(
+    562,
+    "What is the result of 'user?.address?.city' if 'user.address' is null?",
+    ["undefined", "null", "Error", "'' (Empty string)"],
+  ),
+  Quiz(563, "Can Optional Chaining be used with function calls?", [
+    "Yes (e.g., user.sayHi?.())",
+    "No",
+    "Only for math functions",
+    "Only in React",
+  ]),
+  Quiz(564, "Can Optional Chaining be used with bracket notation?", [
+    "Yes (e.g., arr?.[0])",
+    "No",
+    "Only for objects",
+    "Only for strings",
+  ]),
+  Quiz(
+    565,
+    "Does Optional Chaining work for assignment (e.g., user?.name = 'Sai')?",
+    [
+      "No, it is a syntax error",
+      "Yes",
+      "Only if name exists",
+      "Only in strict mode",
+    ],
+  ),
+  Quiz(
+    566,
+    "Which operator is often used together with Optional Chaining to provide a default value?",
+    [
+      "Nullish Coalescing (??)",
+      "Logical OR (||)",
+      "Logical AND (&&)",
+      "Ternary (?)",
+    ],
+  ),
+  Quiz(567, "What is the main benefit of ?. operator?", [
+    "Avoids 'Cannot read property of undefined' errors",
+    "Makes code run faster",
+    "Compresses the code",
+    "Allows access to private fields",
+  ]),
+  Quiz(568, "Is 'user?.name' the same as 'user && user.name'?", [
+    "Mostly, but ?. is cleaner and specifically checks null/undefined",
+    "Exactly the same",
+    "No, they are opposite",
+    "?. is only for arrays",
+  ]),
+  Quiz(
+    569,
+    "What happens if you use ?. on a variable that hasn't been declared at all?",
+    ["ReferenceError", "undefined", "null", "false"],
+  ),
+  Quiz(570, "Optional Chaining is an ________ feature.", [
+    "ES2020",
+    "ES6",
+    "ES5",
+    "ES2015",
+  ]),
+
+  // --- Topic 53: Polymorphism & OOP Review ---
+  Quiz(571, "What is Polymorphism in OOP?", [
+    "The ability of different classes to be treated as instances of the same parent class through the same interface",
+    "The ability to have multiple constructors",
+    "Converting an object into many different types",
+    "When a variable changes its data type",
+  ]),
+  Quiz(572, "In JS, how is polymorphism usually achieved?", [
+    "Method Overriding in subclasses",
+    "Using the 'poly' keyword",
+    "Method Overloading (multiple methods with same name)",
+    "It is not possible in JS",
+  ]),
+  Quiz(573, "What are the four pillars of OOP?", [
+    "Encapsulation, Abstraction, Inheritance, Polymorphism",
+    "Variables, Loops, Functions, Objects",
+    "Classes, Methods, Properties, Prototypes",
+    "Scope, Hoisting, Closures, Callbacks",
+  ]),
+  Quiz(574, "What is Abstraction?", [
+    "Hiding complex implementation details and showing only necessary features",
+    "Deleting code that is not used",
+    "Writing code that is hard to read",
+    "Inheriting from multiple parents",
+  ]),
+  Quiz(575, "An 'instance' of a class is ________.", [
+    "A specific object created from the class blueprint",
+    "The class definition",
+    "A method inside the class",
+    "A static property",
+  ]),
+  Quiz(
+    576,
+    "What does 'Composition' mean in OOP (as an alternative to Inheritance)?",
+    [
+      "Building objects by combining smaller, reusable pieces",
+      "Writing a class inside another class",
+      "Adding methods to the prototype",
+      "Converting code to JSON",
+    ],
+  ),
+  Quiz(
+    577,
+    "Does JavaScript support Method Overloading (same method name, different parameters) naturally?",
+    [
+      "No (the last definition wins), but you can simulate it with logic",
+      "Yes, it works like Java",
+      "Only in classes",
+      "Only using the 'overload' keyword",
+    ],
+  ),
+  Quiz(
+    578,
+    "Which keyword refers to the current class itself within a static method?",
+    ["this", "super", "class", "self"],
+  ),
+  Quiz(
+    579,
+    "What is the purpose of the 'constructor' property on an object's prototype?",
+    [
+      "It points to the function that created the instance",
+      "It creates a new object",
+      "It deletes the object",
+      "It is just a string name",
+    ],
+  ),
+  Quiz(580, "Object-Oriented Programming is a ________.", [
+    "Programming Paradigm",
+    "Programming Language",
+    "Library",
+    "Compiler",
+  ]),
+
+  // --- General Module Review ---
+  Quiz(581, "Which is more modern: Prototypes or Classes?", [
+    "Classes (though they use prototypes under the hood)",
+    "Prototypes",
+    "They are the same age",
+    "Neither, both are deprecated",
+  ]),
+  Quiz(582, "What is 'Factory Function'?", [
+    "A function that returns a new object without using 'new'",
+    "A class that produces other classes",
+    "A built-in JS method",
+    "A static method",
+  ]),
+  Quiz(583, "What happens if you call a class without 'new'?", [
+    "TypeError",
+    "It works fine",
+    "It returns undefined",
+    "It returns a string",
+  ]),
+  Quiz(584, "Can you use 'super' in a regular function?", [
+    "No, only in class methods",
+    "Yes",
+    "Only in arrow functions",
+    "Only in object literals",
+  ]),
+  Quiz(585, "What is a 'Mix-in'?", [
+    "A way to add behavior to classes without inheritance",
+    "A type of loop",
+    "A private field",
+    "A built-in class",
+  ]),
+  Quiz(
+    586,
+    "Is 'this' determined at the time a function is defined or called?",
+    ["Called (unless it is an arrow function)", "Defined", "Both", "Neither"],
+  ),
+  Quiz(587, "Which method permanently binds 'this' to a specific object?", [
+    ".bind()",
+    ".call()",
+    ".apply()",
+    ".set()",
+  ]),
+  Quiz(588, "What is the difference between .call() and .apply()?", [
+    "call takes arguments separately; apply takes them as an array",
+    "apply is for objects; call is for arrays",
+    "call is faster",
+    "There is no difference",
+  ]),
+  Quiz(589, "Which of these is NOT a pillar of OOP?", [
+    "Hoisting",
+    "Encapsulation",
+    "Inheritance",
+    "Polymorphism",
+  ]),
+  Quiz(590, "What is 'Shadowing' in prototypes?", [
+    "When an instance has a property with the same name as its prototype",
+    "When an object has no prototype",
+    "When a prototype is null",
+    "When code is hidden",
+  ]),
+  Quiz(
+    591,
+    "What is the result of 'Object.getPrototypeOf([]) === Array.prototype'?",
+    ["true", "false", "undefined", "Error"],
+  ),
+  Quiz(
+    592,
+    "How do you check if 'property' is a direct property of 'obj' (not inherited)?",
+    [
+      "obj.hasOwnProperty('property')",
+      "obj.has('property')",
+      "'property' in obj",
+      "obj.property !== undefined",
+    ],
+  ),
+  Quiz(593, "Does 'for...in' iterate over prototype properties?", [
+    "Yes",
+    "No",
+    "Only if they are strings",
+    "Only if they are methods",
+  ]),
+  Quiz(594, "Which keyword can prevent a class from being extended?", [
+    "JS does not have a 'final' keyword like Java",
+    "final",
+    "const",
+    "static",
+  ]),
+  Quiz(595, "Can you extend built-in classes like Array or Map?", [
+    "Yes",
+    "No",
+    "Only in Node.js",
+    "Only in TypeScript",
+  ]),
+  Quiz(596, "What is the primary goal of Abstraction?", [
+    "Reducing impact of change and complexity",
+    "Increasing code size",
+    "Making all variables global",
+    "Allowing direct memory access",
+  ]),
+  Quiz(597, "What is 'this' in a function called with 'new'?", [
+    "The newly created object",
+    "The window object",
+    "The function itself",
+    "undefined",
+  ]),
+  Quiz(
+    598,
+    "Which property on a function defines the prototype for objects created by it?",
+    [".prototype", ".__proto__", ".parent", ".link"],
+  ),
+  Quiz(599, "What is a 'Concrete Class'?", [
+    "A class that can be instantiated (unlike Abstract classes)",
+    "A class with only static methods",
+    "A class that cannot be changed",
+    "A class written in C++",
+  ]),
+  Quiz(600, "In modern JS, what is the best way to manage private data?", [
+    "Private Fields (#)",
+    "Closures",
+    "Naming conventions (_)",
+    "Symbols",
+  ]),
+];
+final List<Quiz> jsQuizM7 = [
+  // --- Topic 54: The Call Stack & Microtask Queue ---
+  Quiz(601, "What is the Call Stack?", [
+    "A data structure that tracks the execution of function calls",
+    "A place where all variables are stored permanently",
+    "A queue for handling API requests",
+    "A part of the DOM",
+  ]),
+  Quiz(602, "JavaScript is 'Single-Threaded'. What does this mean?", [
+    "It can only execute one command at a time",
+    "It can only run on one CPU core",
+    "It cannot handle any asynchronous tasks",
+    "It only allows one variable per scope",
+  ]),
+  Quiz(603, "What happens when the Call Stack is empty?", [
+    "The Event Loop checks the task queues",
+    "The program terminates immediately",
+    "The browser refreshes",
+    "JavaScript waits for user input",
+  ]),
+  Quiz(604, "Which of these has higher priority in the Event Loop?", [
+    "Microtask Queue (Promises)",
+    "Callback Queue (setTimeout)",
+    "The UI Render pipeline",
+    "Global scope variables",
+  ]),
+  Quiz(605, "What causes a 'Stack Overflow'?", [
+    "Infinite recursion (too many function calls)",
+    "Too many variables in an array",
+    "A network error",
+    "Running out of RAM",
+  ]),
+  Quiz(606, "Which queue do Promise '.then()' callbacks enter?", [
+    "Microtask Queue",
+    "Task Queue (Macrotask)",
+    "Render Queue",
+    "Call Stack",
+  ]),
+  Quiz(607, "What is the 'Execution Context'?", [
+    "An environment where code is evaluated and executed",
+    "The physical location of the script file",
+    "A list of all HTML elements",
+    "The user's browser version",
+  ]),
+  Quiz(
+    608,
+    "LIFO (Last In, First Out) describes the behavior of which structure?",
+    ["The Call Stack", "The Microtask Queue", "The Event Loop", "The Heap"],
+  ),
+  Quiz(
+    609,
+    "Where are objects and large data structures stored in the JS engine?",
+    ["The Heap", "The Stack", "The Queue", "The Cache"],
+  ),
+  Quiz(
+    610,
+    "Which function can be used to manually add a task to the Microtask Queue?",
+    ["queueMicrotask()", "setTimeout()", "Promise.resolve()", "Both A and C"],
+  ),
+
+  // --- Topic 55: The Event Loop in Depth ---
+  Quiz(611, "What is the primary role of the Event Loop?", [
+    "To coordinate the stack, heap, and task queues",
+    "To compile JS into machine code",
+    "To manage CSS animations",
+    "To handle database connections",
+  ]),
+  Quiz(612, "Where do Web APIs (like setTimeout or fetch) execute?", [
+    "In the browser environment (outside the JS engine)",
+    "On the Call Stack",
+    "In the Microtask Queue",
+    "Inside the V8 engine",
+  ]),
+  Quiz(
+    613,
+    "What is the order of execution for: 1. Console.log, 2. Promise, 3. setTimeout?",
+    ["1, 2, 3", "1, 3, 2", "2, 1, 3", "3, 2, 1"],
+  ),
+  Quiz(614, "What does 'Non-blocking' mean in JavaScript?", [
+    "Asynchronous tasks run in the background without stopping the main thread",
+    "The browser prevents users from clicking buttons",
+    "Errors are ignored",
+    "Code is automatically minified",
+  ]),
+  Quiz(
+    615,
+    "If the Call Stack is busy with a massive 'for' loop, can the Event Loop run a timeout?",
+    [
+      "No, the stack must be empty first",
+      "Yes, it interrupts the loop",
+      "Only if it's a Microtask",
+      "Only in Node.js",
+    ],
+  ),
+  Quiz(616, "What is the 'Callback Queue' also known as?", [
+    "Task Queue or Macrotask Queue",
+    "Microtask Queue",
+    "The Event Stack",
+    "The API Buffer",
+  ]),
+  Quiz(617, "What is the result of 'setTimeout(() => {}, 0)'?", [
+    "It runs as soon as the stack is clear",
+    "It runs immediately (before the next line)",
+    "It runs after 1 second",
+    "It is ignored",
+  ]),
+  Quiz(618, "Which of the following is NOT a macrotask?", [
+    "Promise.then()",
+    "setTimeout",
+    "setInterval",
+    "setImmediate",
+  ]),
+  Quiz(619, "Why does a 'while(true)' loop freeze the browser?", [
+    "It never clears the Call Stack, so the Event Loop can never update the UI",
+    "It uses too much internet bandwidth",
+    "It deletes the Microtask Queue",
+    "It is a security feature",
+  ]),
+  Quiz(620, "The Event Loop is part of the JavaScript engine (like V8).", [
+    "False (it is part of the host environment like the Browser or Node)",
+    "True",
+    "Only in Chrome",
+    "Only in ES6",
+  ]),
+
+  // --- Topic 56: Callbacks & The Pyramid of Doom ---
+  Quiz(621, "What is a callback in the context of asynchrony?", [
+    "A function executed after an asynchronous operation finishes",
+    "A way to restart a script",
+    "A function that calls itself",
+    "A variable that stores a URL",
+  ]),
+  Quiz(622, "What is the 'Pyramid of Doom'?", [
+    "Deeply nested callbacks that make code hard to read (Callback Hell)",
+    "A way to optimize database queries",
+    "A bug that crashes the browser",
+    "A security vulnerability",
+  ]),
+  Quiz(623, "How does callback-based code handle errors traditionally?", [
+    "By passing an 'err' object as the first argument to the callback",
+    "Using try/catch blocks",
+    "Using .catch()",
+    "Errors are not possible in callbacks",
+  ]),
+  Quiz(624, "Which of these is a solution to Callback Hell?", [
+    "Promises",
+    "Async/Await",
+    "Modularizing code",
+    "All of the above",
+  ]),
+  Quiz(625, "What is 'Inversion of Control'?", [
+    "Giving control of your program's execution to a third-party library's callback",
+    "Changing the direction of a loop",
+    "Using 'this' in a nested function",
+    "A feature of the Event Loop",
+  ]),
+  Quiz(626, "Why are callbacks considered 'eager'?", [
+    "They start executing the task immediately when called",
+    "They always run faster than Promises",
+    "They use more memory",
+    "They are part of the early JS versions",
+  ]),
+  Quiz(
+    627,
+    "Can you return a value from an asynchronous callback to the outer function?",
+    [
+      "No, you must process it inside the callback or use a Promise",
+      "Yes, using the 'return' keyword",
+      "Only if using 'var'",
+      "Only in Node.js",
+    ],
+  ),
+  Quiz(628, "What is 'Error-first callback' pattern?", [
+    "function(err, data) { ... }",
+    "function(data, err) { ... }",
+    "function(err) { return data; }",
+    "try { cb() } catch(err) { ... }",
+  ]),
+  Quiz(629, "Does a callback run on a separate thread?", [
+    "No, it runs on the same main thread when its turn comes",
+    "Yes",
+    "Only if it's a network request",
+    "Only in Web Workers",
+  ]),
+  Quiz(630, "What is the main readability issue with nested callbacks?", [
+    "The code grows horizontally rather than vertically",
+    "Variables cannot be shared",
+    "The font size decreases",
+    "It disables syntax highlighting",
+  ]),
+
+  // --- Topic 57: Promises: Resolve, Reject & States ---
+  Quiz(631, "What is a Promise in JavaScript?", [
+    "An object representing the eventual completion (or failure) of an async operation",
+    "A guarantee that an error won't happen",
+    "A type of function declaration",
+    "A replacement for variables",
+  ]),
+  Quiz(632, "What are the three possible states of a Promise?", [
+    "Pending, Fulfilled, Rejected",
+    "Start, Process, End",
+    "Resolved, Error, Waiting",
+    "Open, Closed, Finalized",
+  ]),
+  Quiz(633, "Which function is called when a Promise succeeds?", [
+    "resolve()",
+    "reject()",
+    "success()",
+    "done()",
+  ]),
+  Quiz(634, "Which function is called when a Promise fails?", [
+    "reject()",
+    "resolve()",
+    "fail()",
+    "error()",
+  ]),
+  Quiz(
+    635,
+    "Can a Promise change its state once it is Fulfilled or Rejected?",
+    [
+      "No, it is 'settled' and immutable",
+      "Yes, but only once",
+      "Only if it's in a loop",
+      "Only using the 'reset' method",
+    ],
+  ),
+  Quiz(636, "What is the initial state of a new Promise?", [
+    "Pending",
+    "Fulfilled",
+    "Resolved",
+    "null",
+  ]),
+  Quiz(637, "How do you create a new Promise object?", [
+    "new Promise((resolve, reject) => { ... })",
+    "Promise.create((res, rej) => { ... })",
+    "create Promise({ ... })",
+    "new Promise()",
+  ]),
+  Quiz(638, "What does it mean if a Promise is 'Settled'?", [
+    "It is either Fulfilled or Rejected",
+    "It is still Pending",
+    "It has been deleted from memory",
+    "The browser has closed the connection",
+  ]),
+  Quiz(639, "What happens to the value passed to 'resolve(value)'?", [
+    "It is passed as an argument to the .then() callback",
+    "It is printed to the console",
+    "It becomes a global variable",
+    "It is ignored",
+  ]),
+  Quiz(640, "Can a Promise return another Promise?", [
+    "Yes, this allows for Promise Chaining",
+    "No",
+    "Only if using 'async'",
+    "Only in strict mode",
+  ]),
+
+  // --- Topic 58: Chaining Promises (.then, .catch, .finally) ---
+  Quiz(641, "Which method is used to handle a fulfilled Promise?", [
+    ".then()",
+    ".catch()",
+    ".finally()",
+    ".done()",
+  ]),
+  Quiz(
+    642,
+    "Which method is used to handle errors/rejections in a Promise chain?",
+    [".catch()", ".then()", ".finally()", ".error()"],
+  ),
+  Quiz(
+    643,
+    "Which method runs regardless of whether the Promise was fulfilled or rejected?",
+    [".finally()", ".then()", ".catch()", ".always()"],
+  ),
+  Quiz(644, "What does '.then()' return?", [
+    "A new Promise",
+    "The original value",
+    "undefined",
+    "The boolean true",
+  ]),
+  Quiz(
+    645,
+    "If a '.then()' block returns a plain value, what happens in the next link of the chain?",
+    [
+      "It is wrapped in a resolved Promise and passed to the next .then()",
+      "The chain stops",
+      "An error is thrown",
+      "It is ignored",
+    ],
+  ),
+  Quiz(646, "Do you need a '.catch()' for every '.then()' in a chain?", [
+    "No, one .catch() at the end can handle errors from any previous link",
+    "Yes, always",
+    "Only if the Promise is local",
+    "Only in Node.js",
+  ]),
+  Quiz(647, "What is 'Promise Chaining'?", [
+    "Connecting multiple asynchronous operations in sequence",
+    "Putting Promises inside an array",
+    "A way to make Promises run faster",
+    "Using 'this' in a Promise",
+  ]),
+  Quiz(
+    648,
+    "Can you use '.then()' more than once on the same Promise object?",
+    [
+      "Yes, it's called branching",
+      "No",
+      "Only if the first one fails",
+      "Only in ES2020",
+    ],
+  ),
+  Quiz(
+    649,
+    "What is the result of 'Promise.resolve(5).then(x => x + 2).then(y => console.log(y))'?",
+    ["7", "5", "undefined", "Error"],
+  ),
+  Quiz(650, "If an error occurs in a '.then()', where is it caught?", [
+    "In the nearest following .catch() block",
+    "In the same .then() block",
+    "In the global scope",
+    "It is ignored",
+  ]),
+
+  // --- Topic 59: Async/Await Syntax ---
+  Quiz(651, "What does the 'async' keyword do to a function?", [
+    "It ensures the function always returns a Promise",
+    "It makes the function run on a separate thread",
+    "It prevents the function from returning a value",
+    "It automatically handles all errors",
+  ]),
+  Quiz(652, "Where can the 'await' keyword be used?", [
+    "Only inside an 'async' function (or top-level in modern modules)",
+    "In any function",
+    "Inside loops only",
+    "In the global scope only",
+  ]),
+  Quiz(653, "What does 'await' actually do?", [
+    "Pauses function execution until the Promise settles and returns the result",
+    "Speeds up the Promise resolution",
+    "Turns a Promise into a callback",
+    "Deletes the Promise",
+  ]),
+  Quiz(654, "Is 'await' blocking the entire browser thread?", [
+    "No, it only pauses the specific async function's execution",
+    "Yes, the screen freezes",
+    "Only if the Promise takes more than 1 second",
+    "Only in Firefox",
+  ]),
+  Quiz(655, "What is the equivalent of '.catch()' when using async/await?", [
+    "try/catch blocks",
+    "if/else statements",
+    "The 'throw' keyword only",
+    "There is no equivalent",
+  ]),
+  Quiz(
+    656,
+    "What does an async function return if you return a plain string 'Hello'?",
+    [
+      "A Promise that resolves to 'Hello'",
+      "The string 'Hello'",
+      "undefined",
+      "null",
+    ],
+  ),
+  Quiz(657, "Why is async/await often preferred over raw Promises?", [
+    "It makes asynchronous code look and behave more like synchronous code",
+    "It is significantly faster",
+    "It uses less RAM",
+    "It works in Internet Explorer 6",
+  ]),
+  Quiz(658, "Can you 'await' a value that is NOT a Promise?", [
+    "Yes, it wraps the value in a resolved Promise and continues",
+    "No, it throws an error",
+    "Only if it's a number",
+    "Only in strict mode",
+  ]),
+  Quiz(659, "What is 'Top-level await'?", [
+    "Using await outside of a function in a module",
+    "Using await at the top of a function",
+    "A way to speed up the first line of code",
+    "A deprecated feature",
+  ]),
+  Quiz(660, "How do you run two async functions in parallel using await?", [
+    "Use Promise.all([func1(), func2()])",
+    "Await both normally on separate lines",
+    "You cannot",
+    "Use a for-of loop",
+  ]),
+
+  // --- Topic 60: Handling Errors with Try/Catch ---
+  Quiz(661, "What is the purpose of a 'try' block?", [
+    "To wrap code that might throw an error",
+    "To test if a variable exists",
+    "To repeat code until it works",
+    "To define a new function",
+  ]),
+  Quiz(662, "When is the 'catch' block executed?", [
+    "Only if an error occurs in the 'try' block",
+    "Always after the 'try' block",
+    "Only if the 'try' block succeeds",
+    "Only in development mode",
+  ]),
+  Quiz(663, "What is the variable inside 'catch(error)'?", [
+    "An object containing details about the error",
+    "A boolean value",
+    "The line number",
+    "The name of the file",
+  ]),
+  Quiz(664, "Which keyword is used to manually create an error?", [
+    "throw",
+    "catch",
+    "error",
+    "stop",
+  ]),
+  Quiz(665, "What is the 'finally' block used for in try/catch?", [
+    "To run cleanup code regardless of success or failure",
+    "To catch errors that the 'catch' block missed",
+    "To restart the 'try' block",
+    "To display an alert to the user",
+  ]),
+  Quiz(666, "Can you have a 'try' block without a 'catch' block?", [
+    "Yes, but only if there is a 'finally' block",
+    "No, never",
+    "Only in arrow functions",
+    "Only for network requests",
+  ]),
+  Quiz(667, "What happens if an error is thrown but there is no try/catch?", [
+    "The script stops executing (Uncaught Error)",
+    "The browser ignores it",
+    "The browser refreshes",
+    "The variable is set to null",
+  ]),
+  Quiz(668, "How do you throw a custom error message?", [
+    "throw new Error('Something went wrong');",
+    "throw 'Something went wrong';",
+    "Both are valid (but 'new Error' is better)",
+    "Error('message').throw();",
+  ]),
+  Quiz(
+    669,
+    "Can try/catch handle errors in asynchronous code like 'setTimeout'?",
+    [
+      "No, not directly (unless the error is inside the callback)",
+      "Yes, perfectly",
+      "Only in Node.js",
+      "Only if using 'var'",
+    ],
+  ),
+  Quiz(670, "Try/catch is best used with ________ to handle async errors.", [
+    "Async/Await",
+    "Callbacks",
+    ".then()",
+    "Loops",
+  ]),
+
+  // --- Topic 61: Promise.all, Race, AllSettled & Any ---
+  Quiz(671, "What does 'Promise.all([p1, p2])' do?", [
+    "Waits for all promises to fulfill, or rejects if any one fails",
+    "Runs promises one after another",
+    "Returns the fastest promise",
+    "Returns only the failed promises",
+  ]),
+  Quiz(672, "What does 'Promise.race([p1, p2])' return?", [
+    "The result of the first promise to settle (either fulfilled or rejected)",
+    "The result of all promises as an array",
+    "An error if they don't finish at the same time",
+    "Only the fastest fulfilled promise",
+  ]),
+  Quiz(
+    673,
+    "What is the main difference between 'Promise.all' and 'Promise.allSettled'?",
+    [
+      "allSettled waits for all to finish even if some fail; all fails fast if any fail",
+      "all is newer than allSettled",
+      "allSettled returns a single value; all returns an array",
+      "There is no difference",
+    ],
+  ),
+  Quiz(674, "What does 'Promise.any([p1, p2])' do?", [
+    "Returns the first promise that fulfills (ignores rejections unless all fail)",
+    "Returns any promise that fails",
+    "Returns the first promise to settle",
+    "Randomly picks a promise",
+  ]),
+  Quiz(675, "If one promise in 'Promise.all' rejects, what happens?", [
+    "The entire Promise.all immediately rejects",
+    "It waits for the others to finish first",
+    "It ignores the failure",
+    "It returns null for that specific promise",
+  ]),
+  Quiz(676, "What is returned by 'Promise.allSettled'?", [
+    "An array of objects with 'status' and 'value/reason'",
+    "An array of values",
+    "A single fulfilled value",
+    "A boolean",
+  ]),
+  Quiz(677, "When would you use 'Promise.race'?", [
+    "To implement a timeout for a network request",
+    "To sum up values from multiple APIs",
+    "To ensure all images are loaded",
+    "To handle form validation",
+  ]),
+  Quiz(678, "When would you use 'Promise.all'?", [
+    "When you need data from multiple sources before proceeding",
+    "When you only care about the fastest source",
+    "When you want to ignore errors",
+    "When you are using a single API",
+  ]),
+  Quiz(679, "Which method was introduced in ES2021?", [
+    "Promise.any",
+    "Promise.all",
+    "Promise.race",
+    "Promise.resolve",
+  ]),
+  Quiz(680, "What happens if you pass an empty array to 'Promise.all([])'?", [
+    "It returns an immediately resolved Promise with an empty array",
+    "It stays Pending forever",
+    "It rejects",
+    "It throws a SyntaxError",
+  ]),
+
+  // --- Topic 62: Fetching Real API Data ---
+  Quiz(681, "What is the 'fetch()' API used for?", [
+    "Making network requests (HTTP requests)",
+    "Getting elements from the DOM",
+    "Changing the browser's URL",
+    "Downloading files to the local hard drive",
+  ]),
+  Quiz(682, "Does 'fetch()' return the actual data immediately?", [
+    "No, it returns a Promise that resolves to a Response object",
+    "Yes",
+    "It returns a JSON string",
+    "It returns a callback",
+  ]),
+  Quiz(683, "How do you extract JSON data from a Fetch response?", [
+    "response.json() (which also returns a Promise)",
+    "response.data",
+    "JSON.parse(response)",
+    "response.body",
+  ]),
+  Quiz(684, "Does 'fetch()' reject on HTTP error statuses like 404 or 500?", [
+    "No, it only rejects on network failure (like being offline)",
+    "Yes, always",
+    "Only for 500 errors",
+    "Only in strict mode",
+  ]),
+  Quiz(
+    685,
+    "How do you check if a fetch request was successful (status 200-299)?",
+    [
+      "Check the 'response.ok' property",
+      "Check if 'response === true'",
+      "It is automatic",
+      "Using a try/catch only",
+    ],
+  ),
+  Quiz(686, "What is the default HTTP method for 'fetch()'?", [
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE",
+  ]),
+  Quiz(687, "How do you send a POST request with fetch?", [
+    "Pass an options object as the second argument with method: 'POST'",
+    "Use fetch.post()",
+    "Fetch cannot send POST requests",
+    "Add '?method=POST' to the URL",
+  ]),
+  Quiz(688, "Where do you put the data you want to send in a POST request?", [
+    "In the 'body' property of the options object",
+    "In the URL query string",
+    "In the headers",
+    "In the .then() block",
+  ]),
+  Quiz(689, "What is 'CORS' in the context of fetching data?", [
+    "Cross-Origin Resource Sharing (a security feature)",
+    "A type of data compression",
+    "A JavaScript library",
+    "A way to speed up fetch",
+  ]),
+  Quiz(
+    690,
+    "Which header is commonly used to tell the server you are sending JSON?",
+    [
+      "'Content-Type': 'application/json'",
+      "'Accept': 'text/html'",
+      "'Auth': 'Bearer token'",
+      "'Type': 'JSON'",
+    ],
+  ),
+
+  // --- General Module Review ---
+  Quiz(
+    691,
+    "What is the output order: console.log('A'); setTimeout(() => console.log('B'), 0); console.log('C');",
+    ["A, C, B", "A, B, C", "B, A, C", "C, B, A"],
+  ),
+  Quiz(
+    692,
+    "Asynchronous JavaScript allows the UI to remain ________ while tasks run.",
+    ["Responsive", "Frozen", "Hidden", "Static"],
+  ),
+  Quiz(693, "Which of these is NOT a real Promise method?", [
+    "Promise.wait()",
+    "Promise.all()",
+    "Promise.resolve()",
+    "Promise.reject()",
+  ]),
+  Quiz(694, "What is a 'Settled' Promise?", [
+    "A Promise that is no longer Pending",
+    "A Promise that failed",
+    "A Promise that succeeded",
+    "A Promise that has been deleted",
+  ]),
+  Quiz(695, "What is the 'Microtask Queue' also called?", [
+    "Job Queue",
+    "Macrotask Queue",
+    "Render Queue",
+    "The Stack",
+  ]),
+  Quiz(696, "Why is 'await' better than '.then()' for complex logic?", [
+    "It avoids deeply nested chains and improves readability",
+    "It executes faster",
+    "It doesn't require a browser",
+    "It works with var",
+  ]),
+  Quiz(
+    697,
+    "If you 'await' a Promise that rejects, what happens to the code following it?",
+    [
+      "It is never executed (unless caught in a try/catch)",
+      "It executes anyway",
+      "It executes after 1 second",
+      "The computer restarts",
+    ],
+  ),
+  Quiz(698, "The 'fetch' API is built into which environment?", [
+    "Modern Browsers and Node.js 18+",
+    "Only Node.js",
+    "Only Chrome",
+    "Only jQuery",
+  ]),
+  Quiz(699, "What is an 'Async Generator'?", [
+    "A function that can yield values asynchronously",
+    "A tool that writes async code for you",
+    "A type of Promise",
+    "A hardware component",
+  ]),
+  Quiz(700, "JavaScript handles concurrency using an ________ loop.", [
+    "Event",
+    "infinite",
+    "async",
+    "object",
+  ]),
+];
+final List<Quiz> jsQuizM8 = [
+  // --- Topic 63: DOM Tree Architecture & Node Types ---
+  Quiz(701, "What does DOM stand for?", [
+    "Document Object Model",
+    "Data Object Management",
+    "Digital Ordinance Model",
+    "Document Oriented Middleware",
+  ]),
+  Quiz(702, "The DOM represents the HTML document as a ________.", [
+    "Tree of nodes",
+    "Flat list of strings",
+    "Binary file",
+    "CSS stylesheet",
+  ]),
+  Quiz(703, "Which of these is the 'root' node of every HTML document?", [
+    "document",
+    "window",
+    "html",
+    "body",
+  ]),
+  Quiz(704, "What is the difference between an 'Element' and a 'Node'?", [
+    "All Elements are Nodes, but not all Nodes are Elements (e.g., text nodes)",
+    "They are exactly the same",
+    "Elements are for CSS, Nodes are for JS",
+    "Nodes only exist in XML",
+  ]),
+  Quiz(705, "Which node type represents the text inside an HTML tag?", [
+    "Text Node",
+    "Comment Node",
+    "Attribute Node",
+    "Data Node",
+  ]),
+  Quiz(706, "Which global object represents the browser window?", [
+    "window",
+    "document",
+    "screen",
+    "navigator",
+  ]),
+  Quiz(707, "Is the DOM part of the core JavaScript language definition?", [
+    "No, it is a Web API provided by the browser",
+    "Yes",
+    "Only in Node.js",
+    "Only in ES6",
+  ]),
+  Quiz(708, "What is the 'Shadow DOM'?", [
+    "A way to encapsulate DOM logic and styles in Web Components",
+    "A hidden copy of the website for hackers",
+    "A deprecated version of the DOM",
+    "The dark mode version of a site",
+  ]),
+  Quiz(709, "What is the parent node of the <html> element?", [
+    "document",
+    "window",
+    "body",
+    "null",
+  ]),
+  Quiz(
+    710,
+    "Which property returns a collection of all child nodes (including text and comments)?",
+    [".childNodes", ".children", ".allNodes", ".nodeList"],
+  ),
+
+  // --- Topic 64: Selecting Elements (querySelector, getElementById) ---
+  Quiz(
+    711,
+    "Which method is most efficient for selecting an element by its unique ID?",
+    [
+      "getElementById()",
+      "querySelector()",
+      "getElementsByClassName()",
+      "getElementByTag()",
+    ],
+  ),
+  Quiz(712, "What does 'querySelector('.btn')' return?", [
+    "The first element with the class 'btn'",
+    "An array of all elements with class 'btn'",
+    "A string of the class name",
+    "undefined",
+  ]),
+  Quiz(
+    713,
+    "Which method returns a static NodeList of all matching elements?",
+    [
+      "querySelectorAll()",
+      "querySelector()",
+      "getElementsByTagName()",
+      "getElementsByClassName()",
+    ],
+  ),
+  Quiz(
+    714,
+    "What is the correct syntax to select an <h1> inside a <div> with id 'header'?",
+    [
+      "document.querySelector('#header h1')",
+      "document.getElementById('header').h1",
+      "document.select('div h1')",
+      "document.query('h1')",
+    ],
+  ),
+  Quiz(715, "What does 'getElementsByClassName' return?", [
+    "A live HTMLCollection",
+    "A static NodeList",
+    "A single element",
+    "An array",
+  ]),
+  Quiz(716, "If querySelector find no matches, what does it return?", [
+    "null",
+    "undefined",
+    "[]",
+    "Error",
+  ]),
+  Quiz(717, "How do you select all <p> elements on a page?", [
+    "document.querySelectorAll('p')",
+    "document.getElements('p')",
+    "document.find('p')",
+    "document.p",
+  ]),
+  Quiz(718, "Which selector is used for attributes in querySelector?", [
+    "document.querySelector('[type=\"text\"]')",
+    "document.querySelector('.type=\"text\"')",
+    "document.querySelector('#type=\"text\"')",
+    "document.querySelector('<type=\"text\">')",
+  ]),
+  Quiz(
+    719,
+    "Can you call querySelector on an individual element instead of 'document'?",
+    [
+      "Yes, it searches only within that element's descendants",
+      "No",
+      "Only for IDs",
+      "Only in React",
+    ],
+  ),
+  Quiz(
+    720,
+    "What is the main difference between a NodeList and an HTMLCollection?",
+    [
+      "HTMLCollection is live (updates automatically); NodeList is usually static",
+      "NodeList is faster",
+      "HTMLCollection only contains text nodes",
+      "There is no difference",
+    ],
+  ),
+
+  // --- Topic 65: Modifying Content & Attributes ---
+  Quiz(
+    721,
+    "Which property is used to change the plain text of an element (ignoring HTML tags)?",
+    ["textContent", "innerHTML", "value", "innerText"],
+  ),
+  Quiz(
+    722,
+    "Which property allows you to get or set the HTML content inside an element?",
+    ["innerHTML", "textContent", "outerHTML", "markup"],
+  ),
+  Quiz(723, "What is the security risk associated with using 'innerHTML'?", [
+    "Cross-Site Scripting (XSS) attacks",
+    "CSS injection",
+    "Slower page loads",
+    "Memory leaks",
+  ]),
+  Quiz(724, "How do you change the 'src' attribute of an <img> element?", [
+    "img.src = 'new.jpg';",
+    "img.setAttribute('src', 'new.jpg');",
+    "Both A and B are correct",
+    "img.attr('src', 'new.jpg');",
+  ]),
+  Quiz(725, "Which method removes an attribute from an element?", [
+    "removeAttribute()",
+    "deleteAttribute()",
+    "attr.remove()",
+    "setAttribute(attr, null)",
+  ]),
+  Quiz(726, "How do you check if an element has a specific attribute?", [
+    "hasAttribute()",
+    "getAttribute() === true",
+    "containsAttribute()",
+    "attr.exists()",
+  ]),
+  Quiz(
+    727,
+    "Which property is used to get/set the value of an <input> field?",
+    [".value", ".textContent", ".html", ".data"],
+  ),
+  Quiz(728, "How do you create a new <div> element in memory?", [
+    "document.createElement('div')",
+    "new div()",
+    "document.add('div')",
+    "document.makeElement('div')",
+  ]),
+  Quiz(
+    729,
+    "How do you add a newly created element to the end of the <body>?",
+    [
+      "document.body.appendChild(newElem)",
+      "document.body.add(newElem)",
+      "newElem.pushTo(document.body)",
+      "document.body.prepend(newElem)",
+    ],
+  ),
+  Quiz(730, "What does '.remove()' do to an element?", [
+    "Deletes it from the DOM tree",
+    "Hides it from view but keeps it in the tree",
+    "Clears its internal text",
+    "Deletes its CSS class",
+  ]),
+
+  // --- Topic 66: Changing CSS via JavaScript ---
+  Quiz(
+    731,
+    "Which property is used to access the inline styles of an element?",
+    [".style", ".css", ".theme", ".appearance"],
+  ),
+  Quiz(
+    732,
+    "How do you set the background color to red using the style property?",
+    [
+      "el.style.backgroundColor = 'red';",
+      "el.style.background-color = 'red';",
+      "el.style('color', 'red');",
+      "el.css('background', 'red');",
+    ],
+  ),
+  Quiz(
+    733,
+    "JavaScript uses ________ for CSS property names (e.g., fontSize instead of font-size).",
+    ["camelCase", "kebab-case", "snake_case", "PascalCase"],
+  ),
+  Quiz(
+    734,
+    "What is the most efficient way to apply multiple styles at once?",
+    [
+      "Add or remove a CSS class using classList",
+      "Set each style property one by one",
+      "Use el.setAttribute('style', ...)",
+      "Modify the global CSS file",
+    ],
+  ),
+  Quiz(735, "Which method adds a class to an element's class list?", [
+    "classList.add()",
+    "className.add()",
+    "addClass()",
+    "classes.push()",
+  ]),
+  Quiz(736, "Which method removes a class from an element?", [
+    "classList.remove()",
+    "classList.delete()",
+    "removeClass()",
+    "className = ''",
+  ]),
+  Quiz(
+    737,
+    "Which method adds a class if it's missing, or removes it if it exists?",
+    [
+      "classList.toggle()",
+      "classList.switch()",
+      "classList.contains()",
+      "classList.replace()",
+    ],
+  ),
+  Quiz(738, "How do you check if an element has a specific class?", [
+    "classList.contains()",
+    "classList.has()",
+    "className.includes()",
+    "classList.check()",
+  ]),
+  Quiz(739, "What does 'window.getComputedStyle(el)' return?", [
+    "The final CSS values applied to an element after all stylesheets are processed",
+    "The inline styles only",
+    "A list of all classes",
+    "The height and width only",
+  ]),
+  Quiz(
+    740,
+    "Does el.style.color return the color defined in an external CSS file?",
+    [
+      "No, only inline styles",
+      "Yes, always",
+      "Only if the file is loaded",
+      "Only in Chrome",
+    ],
+  ),
+
+  // --- Topic 67: Event Listeners & Event Objects ---
+  Quiz(
+    741,
+    "What is the modern method to attach an event handler to an element?",
+    ["addEventListener()", "attachEvent()", "setEvent()", "onClick()"],
+  ),
+  Quiz(742, "What are the two main arguments for 'addEventListener'?", [
+    "Event type and callback function",
+    "Function name and delay",
+    "CSS selector and action",
+    "ID and event name",
+  ]),
+  Quiz(743, "What is the 'Event Object' (often named 'e' or 'event')?", [
+    "An object passed to the callback containing details about the event",
+    "A list of all events on the page",
+    "The element that was clicked",
+    "A boolean indicating if the click worked",
+  ]),
+  Quiz(
+    744,
+    "Which property of the event object tells you which element triggered the event?",
+    ["event.target", "event.element", "event.this", "event.origin"],
+  ),
+  Quiz(
+    745,
+    "Which method stops the browser's default behavior (like a link opening)?",
+    [
+      "event.preventDefault()",
+      "event.stop()",
+      "event.cancel()",
+      "event.freeze()",
+    ],
+  ),
+  Quiz(746, "Which event triggers when a user presses a key?", [
+    "keydown",
+    "keypress",
+    "keyclick",
+    "buttondown",
+  ]),
+  Quiz(747, "Which event triggers when an <input> value changes?", [
+    "input",
+    "change",
+    "Both A and B (with slight differences)",
+    "update",
+  ]),
+  Quiz(748, "Which event triggers when the mouse enters an element?", [
+    "mouseenter",
+    "mouseover",
+    "hover",
+    "mousestart",
+  ]),
+  Quiz(749, "How do you remove an event listener?", [
+    "removeEventListener(type, functionName)",
+    "deleteEventListener(type)",
+    "el.off(type)",
+    "el.clearEvents()",
+  ]),
+  Quiz(
+    750,
+    "Why must you use a named function (not anonymous) to remove an event listener later?",
+    [
+      "Because removeEventListener needs a reference to the exact same function",
+      "Anonymous functions are illegal in JS",
+      "Named functions are faster",
+      "It is just a convention",
+    ],
+  ),
+
+  // --- Topic 68: Event Bubbling & Capturing ---
+  Quiz(751, "What is 'Event Bubbling'?", [
+    "The event starts at the target and moves up to the parents",
+    "The event starts at the document and moves down to the target",
+    "The event runs multiple times",
+    "The event causes a popup",
+  ]),
+  Quiz(752, "What is 'Event Capturing'?", [
+    "The event starts at the document and moves down to the target",
+    "The event moves from child to parent",
+    "Capturing a screenshot of the event",
+    "Stopping an event from running",
+  ]),
+  Quiz(
+    753,
+    "Which method stops an event from bubbling up to parent elements?",
+    [
+      "event.stopPropagation()",
+      "event.stop()",
+      "event.preventDefault()",
+      "event.cancelBubbling()",
+    ],
+  ),
+  Quiz(754, "By default, 'addEventListener' uses which phase?", [
+    "Bubbling",
+    "Capturing",
+    "Targeting",
+    "All phases",
+  ]),
+  Quiz(755, "How do you enable the 'capturing' phase in 'addEventListener'?", [
+    "Pass 'true' or {capture: true} as the third argument",
+    "Set the event name to 'capture:click'",
+    "It is enabled by default",
+    "You cannot in modern browsers",
+  ]),
+  Quiz(756, "In which order do the phases occur?", [
+    "Capture -> Target -> Bubble",
+    "Bubble -> Target -> Capture",
+    "Target -> Capture -> Bubble",
+    "Capture -> Bubble -> Target",
+  ]),
+  Quiz(
+    757,
+    "If you click a button inside a <div>, and both have click listeners, which runs first (default)?",
+    [
+      "The button's listener",
+      "The <div>'s listener",
+      "They run at the same time",
+      "The window's listener",
+    ],
+  ),
+  Quiz(758, "What does 'event.currentTarget' refer to?", [
+    "The element that the event listener is attached to",
+    "The element that was actually clicked",
+    "The previous element clicked",
+    "The document body",
+  ]),
+  Quiz(759, "Why is bubbling useful?", [
+    "It allows for event delegation",
+    "It makes events faster",
+    "It prevents errors",
+    "It is required for CSS",
+  ]),
+  Quiz(760, "Does every event bubble?", [
+    "No (e.g., focus, blur, and scroll do not bubble)",
+    "Yes, always",
+    "Only click events",
+    "Only in Node.js",
+  ]),
+
+  // --- Topic 69: Event Delegation Patterns ---
+  Quiz(761, "What is Event Delegation?", [
+    "Attaching one listener to a parent to handle events for many children",
+    "Assigning a function to a variable",
+    "Moving an event from one page to another",
+    "Deleting an event listener",
+  ]),
+  Quiz(762, "Why is event delegation efficient?", [
+    "Reduces memory usage by using fewer event listeners",
+    "Makes the computer CPU run slower",
+    "It is only for images",
+    "It automatically fixes bugs",
+  ]),
+  Quiz(763, "How does delegation identify which child was clicked?", [
+    "By checking 'event.target'",
+    "By using a loop",
+    "By using the ID of the parent",
+    "By checking the window object",
+  ]),
+  Quiz(764, "Event delegation works because of which DOM behavior?", [
+    "Event Bubbling",
+    "Hoisting",
+    "Inheritance",
+    "Encapsulation",
+  ]),
+  Quiz(765, "What is a common use case for event delegation?", [
+    "Handling clicks on a list with hundreds of items",
+    "Changing the color of one button",
+    "Setting a timer",
+    "Defining a class",
+  ]),
+  Quiz(
+    766,
+    "Does delegation work for elements added to the DOM dynamically (later)?",
+    [
+      "Yes, this is one of its biggest advantages",
+      "No",
+      "Only if you refresh the page",
+      "Only in jQuery",
+    ],
+  ),
+  Quiz(
+    767,
+    "When using delegation, what should you do to ensure the correct element was clicked?",
+    [
+      "Use 'event.target.matches('.selector')' or .classList.contains()",
+      "Assume it's always the first child",
+      "Use a try/catch block",
+      "Check the event timestamp",
+    ],
+  ),
+  Quiz(
+    768,
+    "Which method is commonly used to find the closest parent matching a selector during delegation?",
+    [".closest()", ".parent()", ".findParent()", ".querySelector()"],
+  ),
+  Quiz(
+    769,
+    "If you have a table with 1000 rows, how many listeners do you need with delegation?",
+    ["1 (on the table or tbody)", "1000", "1001", "0"],
+  ),
+  Quiz(770, "What is a disadvantage of event delegation?", [
+    "Some events don't bubble, and checking 'target' adds a tiny bit of logic",
+    "It uses too much memory",
+    "It is not supported in ES6",
+    "It slows down the keyboard",
+  ]),
+
+  // --- Topic 70: DOM Traversal (Parent/Child/Sibling) ---
+  Quiz(771, "Which property gets the parent element of a node?", [
+    "parentElement",
+    "parentNode",
+    "Both A and B",
+    "superNode",
+  ]),
+  Quiz(
+    772,
+    "Which property returns a live HTMLCollection of only child elements?",
+    ["children", "childNodes", "firstChild", "elements"],
+  ),
+  Quiz(
+    773,
+    "What is the difference between 'nextSibling' and 'nextElementSibling'?",
+    [
+      "nextElementSibling ignores text nodes; nextSibling does not",
+      "nextSibling is for CSS only",
+      "There is no difference",
+      "nextElementSibling is deprecated",
+    ],
+  ),
+  Quiz(774, "How do you get the first child that is an actual HTML element?", [
+    "firstElementChild",
+    "firstChild",
+    "child[0]",
+    "getElement(0)",
+  ]),
+  Quiz(
+    775,
+    "How do you get the previous element at the same level in the DOM tree?",
+    [
+      "previousElementSibling",
+      "previousSibling",
+      "lastSibling",
+      "parent.prev()",
+    ],
+  ),
+  Quiz(776, "What does 'el.closest('.container')' do?", [
+    "Traverses up the tree to find the nearest ancestor matching '.container'",
+    "Finds the nearest child matching '.container'",
+    "Finds the sibling matching '.container'",
+    "Returns the current element's width",
+  ]),
+  Quiz(777, "Does 'parentElement' ever return null?", [
+    "Yes, for the 'document' object or an unattached node",
+    "No",
+    "Only for the <body>",
+    "Only in strict mode",
+  ]),
+  Quiz(778, "Which property returns the number of child elements?", [
+    "childElementCount",
+    "length",
+    "size",
+    "count",
+  ]),
+  Quiz(779, "To loop through 'children', you can use ________.", [
+    "for...of loop",
+    "Array.from().forEach()",
+    "A standard for loop",
+    "All of the above",
+  ]),
+  Quiz(780, "Why is 'children' often better than 'childNodes'?", [
+    "Because 'childNodes' includes annoying empty text nodes/whitespace",
+    "Because 'children' is faster",
+    "Because 'childNodes' is for XML only",
+    "Because 'children' works in CSS",
+  ]),
+
+  // --- Topic 71: Forms & Input Validation Logic ---
+  Quiz(781, "Which event triggers when a user submits a form?", [
+    "submit",
+    "click",
+    "send",
+    "input",
+  ]),
+  Quiz(782, "Where should the 'submit' event listener be attached?", [
+    "The <form> element",
+    "The submit <button>",
+    "The window",
+    "Each <input>",
+  ]),
+  Quiz(783, "Why call 'e.preventDefault()' in a form submit handler?", [
+    "To prevent the page from refreshing/reloading",
+    "To validate the data",
+    "To clear the input fields",
+    "To encrypt the password",
+  ]),
+  Quiz(
+    784,
+    "How do you access an input with name='email' from a form variable 'myForm'?",
+    [
+      "myForm.elements['email']",
+      "myForm.email",
+      "Both A and B are common",
+      "myForm.get('email')",
+    ],
+  ),
+  Quiz(785, "What is the 'FormData' API used for?", [
+    "Easily collecting all key-value pairs from form fields",
+    "Changing the form's CSS",
+    "Creating a new HTML form",
+    "Validating email addresses automatically",
+  ]),
+  Quiz(
+    786,
+    "Which attribute can be added to HTML inputs for basic validation without JS?",
+    ["required", "pattern", "type='email'", "All of the above"],
+  ),
+  Quiz(787, "Which event is best for real-time validation as a user types?", [
+    "input",
+    "change",
+    "blur",
+    "submit",
+  ]),
+  Quiz(788, "What does the 'blur' event signify?", [
+    "An element has lost focus",
+    "The page is loading",
+    "The mouse has left the page",
+    "An error has occurred",
+  ]),
+  Quiz(789, "How do you programmatically trigger a form submission?", [
+    "form.submit()",
+    "form.trigger('submit')",
+    "form.click()",
+    "form.send()",
+  ]),
+  Quiz(790, "What is 'Constraint Validation API'?", [
+    "A set of JS methods/properties (like .checkValidity()) for form checking",
+    "A CSS framework for forms",
+    "A way to limit the number of inputs",
+    "A security protocol",
+  ]),
+
+  // --- General Module Review ---
+  Quiz(791, "Which method is used to insert a node before another node?", [
+    "insertBefore()",
+    "prepend()",
+    "addBefore()",
+    "insertAt()",
+  ]),
+  Quiz(792, "What is a 'Fragment' in the DOM?", [
+    "A lightweight container to hold nodes before adding them to the live DOM",
+    "A broken part of a website",
+    "A type of event",
+    "A small CSS file",
+  ]),
+  Quiz(793, "Does 'document.write()' follow modern best practices?", [
+    "No, it's outdated and can overwrite the entire page",
+    "Yes, it's the standard",
+    "Only for small strings",
+    "Only in Node.js",
+  ]),
+  Quiz(
+    794,
+    "Which property tells you the tag name of an element (e.g., 'DIV')?",
+    ["tagName", "nodeName", "Both A and B", "type"],
+  ),
+  Quiz(795, "How do you scroll to the top of the page using JS?", [
+    "window.scrollTo(0, 0)",
+    "document.top()",
+    "el.scroll()",
+    "page.reset()",
+  ]),
+  Quiz(796, "What is 'DOMContentLoaded' event?", [
+    "Fires when the HTML is fully loaded/parsed, without waiting for images/CSS",
+    "Fires when the whole page and all assets are loaded",
+    "Fires when the user leaves the page",
+    "Fires when a div is clicked",
+  ]),
+  Quiz(797, "What is the 'load' event on the window?", [
+    "Fires when the entire page, including images and stylesheets, is loaded",
+    "Fires when the first byte is received",
+    "Fires when the computer starts",
+    "Fires when a form is sent",
+  ]),
+  Quiz(
+    798,
+    "Which property returns the height of an element including padding and borders?",
+    ["offsetHeight", "clientHeight", "scrollHeight", "height"],
+  ),
+  Quiz(799, "What is the 'dataset' property used for?", [
+    "Accessing custom 'data-*' attributes",
+    "Connecting to a database",
+    "Storing large arrays",
+    "Handling JSON files",
+  ]),
+  Quiz(800, "The DOM is a ________.", [
+    "Cross-platform and language-independent interface",
+    "A type of JavaScript variable",
+    "A server-side technology",
+    "A specific part of the CSS engine",
+  ]),
+];
+final List<Quiz> jsQuizM9 = [
+  // --- Topic 72: LocalStorage & SessionStorage ---
+  Quiz(801, "Where is LocalStorage data stored?", [
+    "In the user's browser, persisting even after the browser is closed",
+    "On the web server",
+    "In a temporary file on the desktop",
+    "Only in the RAM",
+  ]),
+  Quiz(
+    802,
+    "What is the main difference between LocalStorage and SessionStorage?",
+    [
+      "SessionStorage clears when the tab/window is closed; LocalStorage does not",
+      "LocalStorage is faster",
+      "SessionStorage can store objects, LocalStorage only strings",
+      "LocalStorage is more secure",
+    ],
+  ),
+  Quiz(
+    803,
+    "What is the storage limit for LocalStorage in most modern browsers?",
+    ["Approximately 5MB - 10MB", "1GB", "Unlimited", "100KB"],
+  ),
+  Quiz(804, "How do you save a piece of data to LocalStorage?", [
+    "localStorage.setItem('key', 'value')",
+    "localStorage.save('key', 'value')",
+    "localStorage.push('value')",
+    "localStorage.write('key', 'value')",
+  ]),
+  Quiz(805, "How do you retrieve data from LocalStorage?", [
+    "localStorage.getItem('key')",
+    "localStorage.read('key')",
+    "localStorage['key']",
+    "Both A and C are possible",
+  ]),
+  Quiz(806, "What data type must values be when stored in LocalStorage?", [
+    "String",
+    "Object",
+    "Number",
+    "Boolean",
+  ]),
+  Quiz(807, "How do you store a JavaScript object in LocalStorage?", [
+    "Convert it to a string using JSON.stringify()",
+    "Pass it directly to setItem",
+    "LocalStorage cannot store objects",
+    "Use the ObjectStorage API",
+  ]),
+  Quiz(808, "How do you delete a specific item from LocalStorage?", [
+    "localStorage.removeItem('key')",
+    "localStorage.delete('key')",
+    "localStorage.clear('key')",
+    "delete localStorage.key",
+  ]),
+  Quiz(
+    809,
+    "Which method clears ALL data from LocalStorage for the current origin?",
+    [
+      "localStorage.clear()",
+      "localStorage.reset()",
+      "localStorage.flush()",
+      "localStorage.empty()",
+    ],
+  ),
+  Quiz(
+    810,
+    "Is LocalStorage accessible across different subdomains or protocols (HTTP vs HTTPS)?",
+    [
+      "No, it follows the Same-Origin Policy",
+      "Yes, always",
+      "Only if configured in CSS",
+      "Only in Node.js",
+    ],
+  ),
+
+  // --- Topic 73: Web Security Basics (XSS & CSRF Prevention) ---
+  Quiz(811, "What does XSS stand for?", [
+    "Cross-Site Scripting",
+    "Extended Security System",
+    "X-tra Safe Scripting",
+    "Cross-Site Storage",
+  ]),
+  Quiz(812, "How does an XSS attack typically work?", [
+    "An attacker injects malicious scripts into a trusted website",
+    "An attacker steals the server's password",
+    "The website crashes due to too many visitors",
+    "A virus is downloaded to the user's hard drive",
+  ]),
+  Quiz(
+    813,
+    "What is a primary way to prevent XSS when displaying user input?",
+    [
+      "Sanitize or escape the input to prevent script execution",
+      "Use innerHTML instead of textContent",
+      "Disable JavaScript in the browser",
+      "Use more global variables",
+    ],
+  ),
+  Quiz(814, "What does CSRF stand for?", [
+    "Cross-Site Request Forgery",
+    "Central Security Review Framework",
+    "Cross-Server Remote Fetch",
+    "Client-Side Response Failure",
+  ]),
+  Quiz(815, "What is the goal of a CSRF attack?", [
+    "To trick a logged-in user into performing an unwanted action on a different site",
+    "To read the user's LocalStorage",
+    "To slow down the server",
+    "To change the website's font",
+  ]),
+  Quiz(816, "Which header or token is commonly used to prevent CSRF attacks?", [
+    "Anti-CSRF Token",
+    "CORS Header",
+    "JWT Token",
+    "Secure Cookie",
+  ]),
+  Quiz(817, "What does the 'HttpOnly' flag on a cookie do?", [
+    "Prevents client-side JavaScript from accessing the cookie",
+    "Makes the cookie only work on HTTPS",
+    "Deletes the cookie after 1 hour",
+    "Makes the cookie visible in the DOM",
+  ]),
+  Quiz(818, "What is 'CSP' in web security?", [
+    "Content Security Policy",
+    "Cross-Site Protocol",
+    "Client-Side Protection",
+    "Common Security Practice",
+  ]),
+  Quiz(
+    819,
+    "Why is it dangerous to store sensitive tokens (like API keys) in LocalStorage?",
+    [
+      "Because they can be read by any script on the page (including malicious XSS)",
+      "Because LocalStorage is too slow",
+      "Because LocalStorage deletes itself frequently",
+      "Because it's encrypted incorrectly",
+    ],
+  ),
+  Quiz(820, "What is the 'Same-Origin Policy'?", [
+    "A security measure that restricts how a document from one origin can interact with a resource from another",
+    "A rule that all files must have the same name",
+    "A requirement to use the same browser version",
+    "A law about data privacy",
+  ]),
+
+  // --- Topic 74: ES Modules (Import/Export) ---
+  Quiz(
+    821,
+    "Which keyword is used to make a function available to other files?",
+    ["export", "import", "public", "share"],
+  ),
+  Quiz(
+    822,
+    "How do you bring a function from another file into your current script?",
+    [
+      "import { functionName } from './file.js'",
+      "require('./file.js')",
+      "get './file.js'",
+      "fetch('./file.js')",
+    ],
+  ),
+  Quiz(823, "What is a 'Default Export'?", [
+    "The main value exported from a file (only one per file)",
+    "The first variable defined in a file",
+    "An export that works on all browsers",
+    "A variable exported automatically",
+  ]),
+  Quiz(824, "How do you import a default export?", [
+    "import anyName from './file.js'",
+    "import { default } from './file.js'",
+    "import * from './file.js'",
+    "require(anyName)",
+  ]),
+  Quiz(825, "Can you have multiple 'Named Exports' in a single file?", [
+    "Yes",
+    "No",
+    "Only in strict mode",
+    "Only if they are strings",
+  ]),
+  Quiz(826, "How do you import all named exports as a single object?", [
+    "import * as Utils from './utils.js'",
+    "import all from './utils.js'",
+    "import Utils from './utils.js'",
+    "import { * } from './utils.js'",
+  ]),
+  Quiz(
+    827,
+    "Which HTML attribute is required to use ES Modules in the browser?",
+    ["type='module'", "type='javascript'", "module='true'", "defer"],
+  ),
+  Quiz(828, "Do ES Modules use 'strict mode' by default?", [
+    "Yes",
+    "No",
+    "Only if 'use strict' is written",
+    "Only in Node.js",
+  ]),
+  Quiz(829, "What is the difference between ES Modules (ESM) and CommonJS?", [
+    "ESM uses import/export; CommonJS uses require/module.exports",
+    "ESM is only for CSS",
+    "CommonJS is newer",
+    "ESM is synchronous, CommonJS is asynchronous",
+  ]),
+  Quiz(830, "What is 'Tree Shaking' in the context of modules?", [
+    "Removing unused code from the final bundle during build time",
+    "Moving files to different folders",
+    "Renaming variables to be shorter",
+    "Connecting to a database",
+  ]),
+
+  // --- Topic 75: Package Managers: NPM & Yarn ---
+  Quiz(831, "What does NPM stand for?", [
+    "Node Package Manager",
+    "Network Process Model",
+    "New Private Module",
+    "Node Property Manager",
+  ]),
+  Quiz(832, "Which command is used to create a 'package.json' file?", [
+    "npm init",
+    "npm start",
+    "npm create",
+    "npm install",
+  ]),
+  Quiz(833, "How do you install a library (like lodash) using NPM?", [
+    "npm install lodash",
+    "npm get lodash",
+    "npm add lodash",
+    "npm lodash",
+  ]),
+  Quiz(834, "What is the 'node_modules' folder?", [
+    "A folder where all installed project dependencies are stored",
+    "A place for your source code",
+    "A folder for browser settings",
+    "A hidden system folder",
+  ]),
+  Quiz(835, "What is the purpose of the 'package-lock.json' file?", [
+    "To lock dependencies to specific versions for consistent installs",
+    "To password protect the project",
+    "To prevent others from editing the code",
+    "To speed up the internet connection",
+  ]),
+  Quiz(836, "What is 'Yarn'?", [
+    "An alternative package manager developed by Facebook",
+    "A JavaScript library for animations",
+    "A tool for cleaning CSS",
+    "A type of loop",
+  ]),
+  Quiz(837, "How do you run a custom script defined in package.json?", [
+    "npm run script-name",
+    "npm start-script",
+    "run script-name",
+    "npm exec script-name",
+  ]),
+  Quiz(838, "What is a 'DevDependency'?", [
+    "A package only needed during development (like a linter), not in production",
+    "A package for developers' personal use",
+    "A broken package",
+    "A package that only works on Windows",
+  ]),
+  Quiz(
+    839,
+    "Which command installs all dependencies listed in an existing package.json?",
+    ["npm install", "npm update", "npm start", "npm build"],
+  ),
+  Quiz(
+    840,
+    "What does the '^' symbol mean in package.json versions (e.g., ^1.2.0)?",
+    [
+      "Allow updates to any minor version (e.g., 1.3.0)",
+      "Strictly only version 1.2.0",
+      "Allow any major update",
+      "Delete this package",
+    ],
+  ),
+
+  // --- Topic 76: Modern Build Tools: Vite Introduction ---
+  Quiz(841, "What is a 'Bundler' in JavaScript development?", [
+    "A tool that combines multiple files into one for the browser",
+    "A tool that makes the code longer",
+    "A way to group variables",
+    "A type of array",
+  ]),
+  Quiz(842, "Why is 'Vite' considered faster than older tools like Webpack?", [
+    "It uses native ES Modules and pre-bundles dependencies with esbuild",
+    "It is written in a faster font",
+    "It skips the testing phase",
+    "It only works on small projects",
+  ]),
+  Quiz(843, "What does 'HMR' stand for?", [
+    "Hot Module Replacement",
+    "High Memory Retrieval",
+    "Header Management Rule",
+    "HTML Mark Rendering",
+  ]),
+  Quiz(844, "What happens during HMR?", [
+    "The browser updates only the changed part of the code without a full refresh",
+    "The server restarts",
+    "The code is deleted",
+    "The browser closes",
+  ]),
+  Quiz(845, "Which command starts the Vite development server?", [
+    "npm run dev",
+    "npm start",
+    "vite go",
+    "npm build",
+  ]),
+  Quiz(846, "What is the 'dist' (or 'build') folder used for?", [
+    "It contains the optimized, final files ready for production hosting",
+    "It stores the source code",
+    "It contains the documentation",
+    "It is for deleted files",
+  ]),
+  Quiz(
+    847,
+    "Why do we need build tools if modern browsers support ES Modules?",
+    [
+      "For optimization (minification, transpilation, asset compression)",
+      "Because ES Modules are actually slower",
+      "To make the code harder to read for hackers",
+      "They are not actually needed",
+    ],
+  ),
+  Quiz(848, "What is 'Transpilation' (e.g., using Babel)?", [
+    "Converting modern JS code into older versions for compatibility",
+    "Converting JS into CSS",
+    "Translating code into different languages",
+    "Compressing images",
+  ]),
+  Quiz(849, "What is 'Minification'?", [
+    "Removing whitespace and shortening variable names to reduce file size",
+    "Deleting unused functions",
+    "Making the font smaller",
+    "Running code in a small window",
+  ]),
+  Quiz(850, "Vite can handle which types of files out of the box?", [
+    "JS, TS, CSS, and JSX",
+    "Only JS",
+    "Only HTML",
+    "Word documents",
+  ]),
+
+  // --- Topic 77: Environment Variables (.env) ---
+  Quiz(851, "What is the purpose of an '.env' file?", [
+    "To store sensitive configuration like API keys and database URLs",
+    "To store the main logic of the app",
+    "To write CSS styles",
+    "To list the project's authors",
+  ]),
+  Quiz(852, "Should '.env' files be committed to version control (Git)?", [
+    "No, they should be ignored (using .gitignore) for security",
+    "Yes, always",
+    "Only if the project is public",
+    "Only in Node.js",
+  ]),
+  Quiz(853, "How do you access environment variables in Node.js?", [
+    "process.env.VARIABLE_NAME",
+    "env.VARIABLE_NAME",
+    "window.env",
+    "getEnv('VARIABLE_NAME')",
+  ]),
+  Quiz(
+    854,
+    "In Vite, environment variables must usually be prefixed with ________.",
+    ["VITE_", "JS_", "APP_", "SECRET_"],
+  ),
+  Quiz(855, "What is 'dotenv'?", [
+    "A popular NPM package used to load variables from .env into process.env",
+    "A type of CSS file",
+    "A browser plugin",
+    "A security protocol",
+  ]),
+  Quiz(
+    856,
+    "Why use different .env files (e.g., .env.development, .env.production)?",
+    [
+      "To use different API endpoints or settings for different environments",
+      "To make the folder look organized",
+      "Because .env files have a size limit",
+      "To prevent browsers from reading them",
+    ],
+  ),
+  Quiz(857, "Environment variables are ________.", [
+    "Key-Value pairs",
+    "Arrays of numbers",
+    "Functions",
+    "HTML tags",
+  ]),
+  Quiz(858, "Where are environment variables actually 'loaded'?", [
+    "Into the environment where the process is running",
+    "Into the user's LocalStorage",
+    "Into the CSS engine",
+    "Into the HTML header",
+  ]),
+  Quiz(
+    859,
+    "What happens if a variable is missing from .env but used in code?",
+    [
+      "It usually evaluates to 'undefined'",
+      "The computer crashes",
+      "The internet stops working",
+      "It defaults to 'true'",
+    ],
+  ),
+  Quiz(860, "Are environment variables in frontend code truly 'secret'?", [
+    "No, they are bundled into the JS and can be seen in the browser source",
+    "Yes, they are encrypted",
+    "Only in Chrome",
+    "Only if using Vite",
+  ]),
+
+  // --- Topic 78: Debugging with Browser DevTools ---
+  Quiz(861, "How do you open DevTools in most browsers?", [
+    "F12 or Right-click -> Inspect",
+    "Ctrl + Alt + Delete",
+    "Shift + Enter",
+    "Type 'debug' in the URL",
+  ]),
+  Quiz(862, "What is a 'Breakpoint'?", [
+    "A line of code where the browser will pause execution for inspection",
+    "A place where the code is broken",
+    "The end of a function",
+    "A type of error",
+  ]),
+  Quiz(
+    863,
+    "Which keyword can you write in your code to trigger a breakpoint?",
+    ["debugger;", "pause;", "stop;", "inspect;"],
+  ),
+  Quiz(
+    864,
+    "Which DevTools tab is used to view network requests and API calls?",
+    ["Network", "Console", "Sources", "Elements"],
+  ),
+  Quiz(865, "What can you do in the 'Console' tab?", [
+    "Run JS code, view logs, and see errors",
+    "Edit CSS styles",
+    "View the file directory",
+    "Check the website's speed",
+  ]),
+  Quiz(866, "What is the 'Call Stack' panel in the Sources tab used for?", [
+    "To see the sequence of function calls that led to the current pause",
+    "To see all variables",
+    "To see the HTML structure",
+    "To see the CSS rules",
+  ]),
+  Quiz(867, "In DevTools, what does 'Step Over' do?", [
+    "Moves to the next line of code without entering functions",
+    "Skips the entire script",
+    "Runs the code 2x faster",
+    "Restarts the browser",
+  ]),
+  Quiz(868, "How can you view the values of LocalStorage in DevTools?", [
+    "Application Tab -> Local Storage",
+    "Console Tab -> Storage",
+    "Network Tab",
+    "Elements Tab",
+  ]),
+  Quiz(869, "What is 'Watch' in the Sources tab?", [
+    "A place to monitor specific variables or expressions as you debug",
+    "A clock to time your code",
+    "A way to see who is visiting the site",
+    "A security feature",
+  ]),
+  Quiz(870, "What does 'Console.table()' do?", [
+    "Displays data (like an array of objects) as a formatted table",
+    "Creates a database table",
+    "Deletes all logs",
+    "Prints the HTML table tags",
+  ]),
+
+  // --- Topic 79: Performance Profiling Basics ---
+  Quiz(
+    871,
+    "Which DevTools tab is used to analyze performance and frames per second?",
+    ["Performance", "Network", "Memory", "Security"],
+  ),
+  Quiz(872, "What is 'Lighthouse'?", [
+    "An automated tool for improving the quality/performance of web pages",
+    "A type of server",
+    "A JavaScript framework",
+    "A search engine",
+  ]),
+  Quiz(873, "What does 'LCP' stand for in performance metrics?", [
+    "Largest Contentful Paint",
+    "Longest Code Path",
+    "Local Cloud Provider",
+    "Linked Component Processor",
+  ]),
+  Quiz(874, "What is a 'Memory Leak'?", [
+    "When memory is allocated but not released, slowing down the app over time",
+    "When a computer runs out of disk space",
+    "When a variable is deleted by mistake",
+    "When data is sent to the wrong server",
+  ]),
+  Quiz(875, "What is the 'Main Thread' in the context of performance?", [
+    "The thread where the browser processes JS, layout, and paint",
+    "The internet connection",
+    "The CPU core",
+    "The power cable",
+  ]),
+  Quiz(876, "What is 'Reflow' (or Layout)?", [
+    "The process of calculating the positions and sizes of all elements",
+    "Refreshing the page",
+    "Loading a new CSS file",
+    "Moving a variable to another file",
+  ]),
+  Quiz(
+    877,
+    "Which property change is 'cheaper' for performance: 'width' or 'transform'?",
+    [
+      "transform (it avoids layout and paint)",
+      "width",
+      "They are the same",
+      "Neither",
+    ],
+  ),
+  Quiz(878, "What is 'Debouncing'?", [
+    "Limiting how often a function can fire (e.g., waiting for a user to stop typing)",
+    "Removing bugs from code",
+    "Speeding up a loop",
+    "Connecting to two APIs",
+  ]),
+  Quiz(879, "What is 'Throttling'?", [
+    "Ensuring a function is called at most once in a specified time period",
+    "Deleting the browser cache",
+    "Running code only on weekends",
+    "Reducing the screen resolution",
+  ]),
+  Quiz(880, "What is 'FID' in web vitals?", [
+    "First Input Delay (measures responsiveness)",
+    "Final Image Delivery",
+    "File Identification Data",
+    "Fast Interface Design",
+  ]),
+
+  // --- General Module Review ---
+  Quiz(
+    881,
+    "Which is more secure for storing a session token: LocalStorage or HttpOnly Cookie?",
+    ["HttpOnly Cookie", "LocalStorage", "They are the same", "SessionStorage"],
+  ),
+  Quiz(
+    882,
+    "Which command updates all NPM packages to their latest allowed versions?",
+    ["npm update", "npm upgrade", "npm install -u", "npm fix"],
+  ),
+  Quiz(883, "What is 'Dynamic Import'?", [
+    "Loading a module only when it is needed using import() as a function",
+    "Importing from a URL",
+    "Importing CSS into JS",
+    "A module that changes its name",
+  ]),
+  Quiz(884, "What does 'Source Maps' do?", [
+    "Maps minified/bundled code back to the original source for easier debugging",
+    "Shows a map of the server location",
+    "Tells you where to find JS libraries",
+    "Generates a sitemap.xml",
+  ]),
+  Quiz(885, "What is 'Polyfill'?", [
+    "A piece of code used to provide modern functionality on older browsers",
+    "A type of CSS animation",
+    "A way to fill a form automatically",
+    "A database query",
+  ]),
+  Quiz(886, "In '.env' files, comments start with which symbol?", [
+    "#",
+    "//",
+    "/*",
+    "--",
+  ]),
+  Quiz(887, "Which status code in the Network tab means 'Not Found'?", [
+    "404",
+    "200",
+    "500",
+    "302",
+  ]),
+  Quiz(888, "What is the 'Console.time()' and 'Console.timeEnd()' used for?", [
+    "Measuring how long a specific piece of code takes to run",
+    "Setting a clock on the website",
+    "Scheduling a task",
+    "Checking the user's timezone",
+  ]),
+  Quiz(
+    889,
+    "Which tool is used to find and fix problems in your JS code patterns?",
+    ["ESLint", "Prettier", "Vite", "NPM"],
+  ),
+  Quiz(
+    890,
+    "Which tool is used to format your code consistently (tabs vs spaces)?",
+    ["Prettier", "ESLint", "Babel", "Webpack"],
+  ),
+  Quiz(891, "Can you run 'npm install' without an internet connection?", [
+    "No, it needs to download packages from the registry",
+    "Yes, always",
+    "Only if you have a lockfile",
+    "Only if the packages are already in the global cache",
+  ]),
+  Quiz(892, "What is 'Global Namespace Pollution'?", [
+    "Creating too many global variables, increasing the risk of name collisions",
+    "Using too much internet bandwidth",
+    "Storing too many files in one folder",
+    "Writing code in multiple languages",
+  ]),
+  Quiz(893, "What does 'npm audit' do?", [
+    "Checks your project dependencies for known security vulnerabilities",
+    "Checks if your code is fast",
+    "Checks your spelling",
+    "Checks if you have paid for the packages",
+  ]),
+  Quiz(
+    894,
+    "Which keyword is used to export something as a group in an object?",
+    [
+      "export { var1, var2 }",
+      "export group { ... }",
+      "export all { ... }",
+      "module.exports",
+    ],
+  ),
+  Quiz(895, "What is the result of 'JSON.parse(null)'?", [
+    "null",
+    "undefined",
+    "Error",
+    "''",
+  ]),
+  Quiz(896, "Is 'localStorage.getItem('nonExistentKey')' an error?", [
+    "No, it returns null",
+    "Yes, it throws a ReferenceError",
+    "It returns undefined",
+    "It returns false",
+  ]),
+  Quiz(897, "What is 'Shimming'?", [
+    "Intercepting API calls to provide compatibility (similar to polyfilling)",
+    "A way to make the browser screen shake",
+    "A type of database indexing",
+    "A CSS trick for shadows",
+  ]),
+  Quiz(
+    898,
+    "Which DevTools panel helps you see which parts of your JS/CSS are unused?",
+    ["Coverage", "Performance", "Layers", "Security"],
+  ),
+  Quiz(899, "What is 'Tree Shaking' primary dependency?", [
+    "ES Modules (Static structure)",
+    "CommonJS",
+    "Global variables",
+    "HTML structure",
+  ]),
+  Quiz(900, "Modern JS development is ________.", [
+    "Modular and Tool-driven",
+    "Single-file only",
+    "Deprecated",
+    "Only for desktops",
+  ]),
+];
+final List<List<Quiz>> jsQuizzes = [
+  jsQuizM1,
+  jsQuizM2,
+  jsQuizM3,
+  jsQuizM4,
+  jsQuizM5,
+  jsQuizM6,
+  jsQuizM7,
+  jsQuizM8,
+  jsQuizM9,
+];
