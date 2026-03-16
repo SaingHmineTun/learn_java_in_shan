@@ -1,3 +1,4 @@
+import 'package:tmkacademy/languages/lang_dart.dart';
 import 'package:tmkacademy/languages/lang_html.dart';
 
 import '../languages/lang_basic.dart';
@@ -22,5 +23,6 @@ final Map<String, List<List<Quiz>>> quizzes = {
   "java": javaQuizzes,
   "basic": basicQuizzes,
   "kotlin": kotlinQuizzes,
-  "html": htmlQuizzes
+  "html": htmlQuizzes,
+  "dart": dartQuizzes,
 };
