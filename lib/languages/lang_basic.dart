@@ -1,6 +1,134 @@
 
 // Quizzes for Basic
 import '../utils/quiz.dart';
+import '../utils/utils.dart';
+
+const Map<int, String> basicTopics = {
+  1: "The Machine", // Hardware: CPU, RAM, Storage
+  2: "The Data", // Binary, Bits, Bytes, and Files
+  3: "The Manager", // Operating Systems & File Systems
+  4: "The Command Line", // Talking to the computer with text
+  5: "The Interface", // Browsers, Software, and the Web
+  6: "The Connected World", // Networking, IP Addresses, and DNS
+  7: "The AI Partner", // Using Gemini/ChatGPT/Copilot
+};
+
+const Map<int, Map<int, String>> basicModules = {
+  1: {
+    1: "The Cycle: Input, Process, and Output",
+    2: "The CPU: The Brain of the Machine",
+    3: "RAM: The Digital Workspace",
+    4: "Storage: Hard Drives vs. SSDs",
+    5: "The Motherboard: The Nervous System",
+    6: "The Transistor: The On/Off Switch",
+  },
+  2: {
+    7: "Binary: How Computers Count with 1s and 0s",
+    8: "Bits and Bytes: Measuring Digital Information",
+    9: "Text and Strings: How Computers Read Your Name",
+    10: "Numbers and Logic: Integers vs. Decimals",
+    11: "Colors and Pixels: How Images Work",
+    12: "Files and Formats: How Data is Packaged",
+  },
+  3: {
+    13: "The OS: The Boss of the System",
+    14: "Kernel vs. Shell: The Core and the Interface",
+    15: "File Systems: How the Manager Organizes Storage",
+    16: "Processes & Threads: How the OS Multitasks",
+    17: "Memory Management: Protecting the RAM",
+    18: "User Accounts & Permissions: Security and Privacy",
+    19: "Drivers: The OS Language Translators",
+  },
+  4: {
+    20: "The CLI: Why Text is More Powerful than Icons",
+    21: "Terminal vs. Shell: Command Prompt & PowerShell",
+    22: "Navigation: Moving Through Folders (cd, dir)",
+    23: "File Operations: Creating and Deleting (mkdir, type, del)",
+    24: "Paths: Absolute vs. Relative (Where am I?)",
+    25: "Networking Tools: Testing Connection (ping, ipconfig)",
+    26: "Permissions: Running as Administrator",
+  },
+  5: {
+    27: "GUI: Using Pictures instead of Code",
+    28: "Windows & Icons: The 'Desktop' Metaphor",
+    29: "The Browser: Your Door to the Internet",
+    30: "Software vs. Apps: What’s the difference?",
+    31: "How Software is Built: The 'Look' and the 'Brain'",
+    32: "Update & Version: Why does software change?",
+    33: "Accessibility: Software for Everyone",
+  },
+  6: {
+    34: "What is a Network? (Nodes and Links)",
+    35: "IP Addresses: The Phone Numbers of the Internet",
+    36: "DNS: The Phonebook (How google.com becomes an IP)",
+    37: "WiFi vs. Mobile Data: How your phone connects", // Added
+    38: "The Journey: From your Phone to a Global Website", // Added
+    39: "Censorship: How Governments block websites", // Added
+    40: "VPNs: The Secret Tunnel to Freedom", // Added
+    41: "HTTP/HTTPS: The Rules of the Web",
+    42: "The Cloud: It’s Just Someone Else’s Computer",
+  },
+  7: {
+    43: "What is AI? (The Machine that Learns)",
+    44: "Generative AI: How Gemini and ChatGPT 'Talk'",
+    45: "Prompt Engineering: How to give good instructions",
+    46: "The Hallucination: Why AI sometimes lies",
+    47: "AI Ethics & Safety: What NOT to share with AI",
+    48: "The Future: Living with your AI Partner",
+  },
+};
+
+final Map<int, Lesson> basicLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(1, 5),
+  6: Lesson(1, 6),
+  7: Lesson(2, 7),
+  8: Lesson(2, 8),
+  9: Lesson(2, 9),
+  10: Lesson(2, 10),
+  11: Lesson(2, 11),
+  12: Lesson(2, 12),
+  13: Lesson(3, 13),
+  14: Lesson(3, 14),
+  15: Lesson(3, 15),
+  16: Lesson(3, 16),
+  17: Lesson(3, 17),
+  18: Lesson(3, 18),
+  19: Lesson(3, 19),
+  20: Lesson(4, 20),
+  21: Lesson(4, 21),
+  22: Lesson(4, 22),
+  23: Lesson(4, 23),
+  24: Lesson(4, 24),
+  25: Lesson(4, 25),
+  26: Lesson(4, 26),
+  27: Lesson(5, 27),
+  28: Lesson(5, 28),
+  29: Lesson(5, 29),
+  30: Lesson(5, 30),
+  31: Lesson(5, 31),
+  32: Lesson(5, 32),
+  33: Lesson(5, 33),
+  34: Lesson(6, 34),
+  35: Lesson(6, 35),
+  36: Lesson(6, 36),
+  37: Lesson(6, 37),
+  38: Lesson(6, 38),
+  39: Lesson(6, 39),
+  40: Lesson(6, 40),
+  41: Lesson(6, 41),
+  42: Lesson(6, 42),
+  43: Lesson(7, 43),
+  44: Lesson(7, 44),
+  45: Lesson(7, 45),
+  46: Lesson(7, 46),
+  47: Lesson(7, 47),
+  48: Lesson(7, 48),
+};
+
 
 final List<Quiz> basicQuizM1 = [
   // --- Topic 1: The Cycle: Input, Process, and Output ---
