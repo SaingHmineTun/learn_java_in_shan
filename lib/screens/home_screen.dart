@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tmkacademy/screens/language_screen.dart';
 import 'package:tmkacademy/languages/language.dart';
 import '../utils/colors.dart';
@@ -13,22 +14,27 @@ class HomeScreen extends StatelessWidget {
       case 'java':
         return {
           'color': kBrandOrange,
-          'icon': Icons.coffee_rounded,
+          'icon': FontAwesomeIcons.java,
         };
       case 'python':
         return {
           'color': const Color(0xFF4CAF50),
-          'icon': Icons.auto_awesome_rounded,
+          'icon': FontAwesomeIcons.python,
         };
       case 'basic':
         return {
           'color': const Color(0xFFAA00FF), // Retro Purple
           'icon': Icons.terminal_rounded,
         };
+      case 'kotlin':
+        return {
+          'color': const Color(0xFF7F52FF), // Kotlin Violet
+          'icon': Icons.code_rounded, // Represents modern intelligence
+        };
       case 'dart':
         return {
           'color': const Color(0xFF00B0FF),
-          'icon': Icons.speed_rounded,
+          'icon': FontAwesomeIcons.dartLang,
         };
       case 'html':
         return {
@@ -39,7 +45,7 @@ class HomeScreen extends StatelessWidget {
       case 'css':
         return {
           'color': const Color(0xFF264DE4), // Official CSS Blue
-          'icon': Icons.style_rounded, // Represents styling
+          'icon': Icons.css_rounded, // Represents styling
         };
     // --- NEW: JAVASCRIPT DESIGN ---
       case 'js':
