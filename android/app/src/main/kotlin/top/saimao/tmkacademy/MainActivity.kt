@@ -1,4 +1,4 @@
-package top.saimao.learn_java_in_shan
+package top.saimao.tmkacademy
 
 import io.flutter.embedding.android.FlutterActivity
 

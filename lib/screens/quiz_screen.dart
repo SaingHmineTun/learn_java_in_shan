@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:tmkacademy/screens/result_screen.dart';
 import 'package:tmkacademy/utils/quiz.dart';
