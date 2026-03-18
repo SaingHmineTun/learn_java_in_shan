@@ -7,13 +7,17 @@
 ပဵၼ် unit "ပိူင်တၢႆ" ဝႆႉ၊ ဢမ်ႇလႅၵ်ႈလၢႆႈၸွမ်းသင်။
 
 * **px (Pixels):** ပဵၼ်ဢၼ်ႁဝ်းၸႂ်ႉၼမ်သုတ်း။
-* **လွင်ႈၸႂ်ႉတိုဝ်း:** ၸႂ်ႉတႃႇမၵ်းမၼ်ႈၶွပ်ႇ (Border)။
+* **cm (Centimeters):**
+* **mm (Millimeters):**
+* **in (Inches):** 1in မီး 96px
+* **pt (Points):** 1pt မီး 1/72in
+* **pc (Picas):** 1pc မီး 12pt
 
 ---
 
 ### 2. Relative Units
 
-ပဵၼ် unit ဢၼ် "လႅၵ်ႈလၢႆႈ" ၸွမ်း Font ဢမ်ႇၼၼ် ၸွမ်းတၢင်းၵႂၢင်ႈ Screen။
+ပဵၼ် unit ဢၼ် "လႅၵ်ႈလၢႆႈ" ၸွမ်း Font ဢမ်ႇၼၼ် ၸွမ်းတၢင်းၵႂၢင်ႈ Parent Element/Screen။
 
 * **% (Percentage):** ယွၼ်ႈၸွမ်းတၢင်းၵႂၢင်ႈၶွင် "ပေႃႈမႄႈ" (Parent Box) မၼ်း။
 * **em:** ယွၼ်ႈၸွမ်းတူဝ် Font ၶွင် Element ၼၼ်ႉ။
