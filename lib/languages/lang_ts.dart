@@ -12,7 +12,8 @@ const Map<int, String> tsTopics = {
   9: "Generics & Utility Types",
   10: "Asynchronous TS (Promises & Async/Await)",
   11: "OOP: Classes & Access Modifiers",
-  12: "Modules & Real-World Project",
+  12: "Advanced OOP (Abstract, Static, & Interfaces)",
+  13: "Meta-Programming & Decorators"
 };
 
 const Map<int, Map<int, String>> tsModules = {
@@ -107,6 +108,23 @@ const Map<int, Map<int, String>> tsModules = {
     68: "Inheritance: Reusing code with 'extends'",
     69: "Super keyword: Calling parent constructors and methods"
   },
+  12: {
+    70: "Static Properties & Methods: Global class data",
+    71: "Abstract Classes: Creating 'blueprints' for subclasses",
+    72: "Abstract Methods: Enforcing logic implementation",
+    73: "Singletons: Ensuring only one instance exists",
+    74: "Interfaces with Classes: Contract-based programming",
+    75: "Readonly in Interfaces vs Classes",
+    76: "Extending Multiple Interfaces"
+  },
+  13: {
+    77: "Decorators: Adding 'Meta-data' to Classes",
+    78: "Decorator Factories: Customizing your magic",
+    79: "Method & Property Decorators: Controlling behavior",
+    80: "Conditional Types: Logic inside your Types (T extends U ? X : Y)",
+    81: "Template Literal Types: String manipulation in TS",
+    82: "Recursive Types: Handling deeply nested data",
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -179,5 +197,11 @@ final Map<int, Lesson> tsLessons = {
   67: Lesson(11, 67),
   68: Lesson(11, 68),
   69: Lesson(11, 69),
-
+  70: Lesson(12, 70),
+  71: Lesson(12, 71),
+  72: Lesson(12, 72),
+  73: Lesson(12, 73),
+  74: Lesson(12, 74),
+  75: Lesson(12, 75),
+  76: Lesson(12, 76),
 };
