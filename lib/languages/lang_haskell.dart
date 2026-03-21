@@ -37,6 +37,14 @@ const Map<int, Map<int, String>> haskellModules = {
     18: "Pattern Matching Basics (Matching Constants and Variables)",
     19: "List Pattern Matching (The Power of x:xs)",
     20: "As-Patterns (Keeping the Whole while Matching Parts with @)"
+  },
+  3: {
+    21: "Thinking Recursively: The Mindset Shift",
+    22: "The Base Case vs. The Recursive Step",
+    23: "Recursion with Lists (Maximum and Sum)",
+    24: "More List Recursion (Replicate and Take)",
+    25: "The QuickSort Algorithm (Haskell's Elegant Way)",
+    26: "Tail Recursion and Performance Optimization"
   }
 };
 
@@ -61,4 +69,11 @@ final Map<int, Lesson> haskellLessons = {
   18: Lesson(2, 18),
   19: Lesson(2, 19),
   20: Lesson(2, 20),
+  21: Lesson(3, 21),
+  22: Lesson(3, 22),
+  23: Lesson(3, 23),
+  24: Lesson(3, 24),
+  25: Lesson(3, 25),
+  26: Lesson(3, 26),
+  27: Lesson(3, 27),
 };
