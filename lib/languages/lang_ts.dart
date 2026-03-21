@@ -80,6 +80,14 @@ const Map<int, Map<int, String>> tsModules = {
     47: "Debugging in VS Code: Breakpoints and Watches",
     48: "Source Maps: Debugging TS in the Browser"
   },
+  9: {
+    49: "Generics: Creating flexible and reusable components",
+    50: "Generic Constraints: Limiting types with 'extends'",
+    51: "Generics with Interfaces and Classes",
+    52: "Utility Types: Partial, Pick, and Omit",
+    53: "Utility Types: Readonly, Record, and Required",
+    54: "Mapped Types: Transforming types dynamically"
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -131,4 +139,10 @@ final Map<int, Lesson> tsLessons = {
   46: Lesson(8, 46),
   47: Lesson(8, 47),
   48: Lesson(8, 48),
+  49: Lesson(9, 49),
+  50: Lesson(9, 50),
+  51: Lesson(9, 51),
+  52: Lesson(9, 52),
+  53: Lesson(9, 53),
+  54: Lesson(9, 54),
 };
