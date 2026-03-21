@@ -38,6 +38,15 @@ const Map<int, Map<int, String>> cModules = {
     19: "Type Casting & Promotion: Mixing Data Types",
     20: "The Ternary Operator: Short-hand Logic", // New
   },
+  4: {
+    21: "The if-else Empire: Decision Making",
+    22: "Switch Case: The Multi-way Branch",
+    23: "while & do-while: Condition-first Loops",
+    24: "for Loops: The Powerhouse",
+    25: "Break & Continue: The Flow Controllers",
+    26: "Nested Loops: Pattern Printing",
+    27: "The goto Statement: Proceed with Caution",
+  }
 };
 
 final Map<int, Lesson> cLessons = {
@@ -61,4 +70,11 @@ final Map<int, Lesson> cLessons = {
   18: Lesson(3, 18),
   19: Lesson(3, 19),
   20: Lesson(3, 20),
+  21: Lesson(4, 21),
+  22: Lesson(4, 22),
+  23: Lesson(4, 23),
+  24: Lesson(4, 24),
+  25: Lesson(4, 25),
+  26: Lesson(4, 26),
+  27: Lesson(4, 27),
 };
