@@ -75,6 +75,16 @@ const Map<int, Map<int, String>> haskellModules = {
     48: "Applicative Functors: Functions in Context",
     49: "The Monoid Typeclass: Identity and Associativity",
     50: "Introduction to Monads: The 'm' Word"
+  },
+  7: {
+    51: "The Functor Laws: Identity and Composition",
+    52: "Applicative Laws: Keeping Things Predictable",
+    53: "Using 'fmap' with Multiple Arguments",
+    54: "The 'liftA2' and 'sequenceA' Functions",
+    55: "IO as a Functor: Mapping Over Real-World Data",
+    56: "Applicative IO: Running Actions in Parallel (Concept)",
+    57: "ZipLists: A Different Kind of Applicative",
+    58: "From Applicative to Monad: The Big Jump"
   }
 };
 
@@ -129,4 +139,12 @@ final Map<int, Lesson> haskellLessons = {
   48: Lesson(6, 48),
   49: Lesson(6, 49),
   50: Lesson(6, 50),
+  51: Lesson(7, 51),
+  52: Lesson(7, 52),
+  53: Lesson(7, 53),
+  54: Lesson(7, 54),
+  55: Lesson(7, 55),
+  56: Lesson(7, 56),
+  57: Lesson(7, 57),
+  58: Lesson(7, 58),
 };
