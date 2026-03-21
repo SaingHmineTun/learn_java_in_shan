@@ -6,7 +6,7 @@ const Map<int, String> cTopics = {
   3: "Operators & Expressions",
   4: "Control Flow & Logic Gates",
   5: "Data Architecture (Arrays & Structs)",
-  6: "The Pointer Path",
+  6: "Memory & Pointers: Under the Hood",
   7: "Dynamic Power & Functions",
   8: "System Interfacing",
 };
@@ -55,6 +55,19 @@ const Map<int, Map<int, String>> cModules = {
     32: "Introduction to Structs: Heterogeneous Data",
     33: "Nested Structs & Arrays of Structs: Database Basics",
     34: "Typedef & Enums: Creating Custom Data Types", // New
+  },
+  6: {
+    35: "Memory Addresses: The & Operator",
+    36: "Pointer Basics: The * Operator",
+    37: "Pointer Arithmetic: Moving in Memory",
+    38: "Pointers & Arrays: The Secret Relationship",
+    39: "Call by Value vs. Call by Reference",
+    40: "Dynamic Memory Allocation: malloc, calloc & free",
+    41: "Void Pointers & Pointers to Pointers",
+    42: "Dangling Pointers & Memory Leaks: The Dark Side", // New
+    43: "Pointers to Structs: The -> Arrow Operator",     // New
+    44: "Function Pointers: Code as Data",               // New
+    45: "The Stack vs. The Heap: Memory Layout",         // New
   }
 };
 
@@ -86,4 +99,11 @@ final Map<int, Lesson> cLessons = {
   25: Lesson(4, 25),
   26: Lesson(4, 26),
   27: Lesson(4, 27),
+  28: Lesson(5, 28),
+  29: Lesson(5, 29),
+  30: Lesson(5, 30),
+  31: Lesson(5, 31),
+  32: Lesson(5, 32),
+  33: Lesson(5, 33),
+  34: Lesson(5, 34),
 };
