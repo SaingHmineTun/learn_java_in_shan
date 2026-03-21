@@ -8,7 +8,7 @@ const Map<int, String> cTopics = {
   5: "Data Architecture (Arrays & Structs)",
   6: "Memory & Pointers: Under the Hood",
   7: "Functions & Dynamic Power",
-  8: "System Interfacing",
+  8: "File I/O",
 };
 
 const Map<int, Map<int, String>> cModules = {

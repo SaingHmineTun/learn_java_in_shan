@@ -32,6 +32,7 @@ flutter:
     - assets/lessons/css/
     - assets/lessons/js/
     - assets/lessons/kotlin/
+    - assets/lessons/c/
     - assets/images/
   fonts:
     - family: AJ05

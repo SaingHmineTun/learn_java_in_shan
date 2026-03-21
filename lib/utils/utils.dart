@@ -1,4 +1,6 @@
 // TOPIC SECTION (Module 1 - Introduction)
+import 'package:tmkacademy/languages/lang_c.dart';
+
 import '../languages/lang_basic.dart';
 import '../languages/lang_css.dart';
 import '../languages/lang_dart.dart';
@@ -17,6 +19,7 @@ const Map<String, Map<int, String>> topics = {
   "css": cssTopics,
   "js": jsTopics,
   "kotlin": kotlinTopics,
+  "c": cTopics
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -28,6 +31,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "css": cssModules,
   "js": jsModules,
   "kotlin": kotlinModules,
+  "c": cModules
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -39,6 +43,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "css": cssLessons,
   "js": jsLessons,
   "kotlin": kotlinLessons,
+  "c": cLessons,
 };
 
 class Lesson {

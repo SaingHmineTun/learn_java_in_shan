@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tmkacademy/screens/language_screen.dart';
-import 'package:tmkacademy/languages/language.dart';
+import 'package:tmkacademy/utils/language.dart';
 import '../utils/colors.dart';
 import 'about_screen.dart';
 
@@ -41,18 +41,21 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFFE44D26), // HTML5 Crimson
           'icon': Icons.html_rounded,
         };
-    // --- NEW: CSS DESIGN ---
       case 'css':
         return {
           'color': const Color(0xFF264DE4), // Official CSS Blue
           'icon': Icons.css_rounded, // Represents styling
         };
-    // --- NEW: JAVASCRIPT DESIGN ---
       case 'js':
       case 'javascript':
         return {
           'color': const Color(0xFFF7DF1E), // JavaScript Yellow
           'icon': Icons.javascript_rounded, // Built-in JS icon
+        };
+      case 'c':
+        return {
+          'color': const Color(0xFFA8B9CC), // Official C Gray/Blue
+          'icon': Icons.terminal_rounded, // Represents low-level/system programming
         };
       default:
         return {
