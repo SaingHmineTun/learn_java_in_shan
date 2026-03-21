@@ -88,6 +88,16 @@ const Map<int, Map<int, String>> tsModules = {
     53: "Utility Types: Readonly, Record, and Required",
     54: "Mapped Types: Transforming types dynamically"
   },
+  10: {
+    55: "The Event Loop: How TS handles Asynchronous tasks",
+    56: "Callbacks: The old way and 'Callback Hell'",
+    57: "Promises: Pending, Resolved, and Rejected states",
+    58: "Async/Await: Writing Async code like Synchronous",
+    59: "Error Handling in Async: Try/Catch with Await",
+    60: "Promise.all vs Promise.race: Handling multiple tasks",
+    61: "Typing Promises: Generics with Promise<T>",
+    62: "Advanced: AbortController and Canceling Async tasks"
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -145,4 +155,13 @@ final Map<int, Lesson> tsLessons = {
   52: Lesson(9, 52),
   53: Lesson(9, 53),
   54: Lesson(9, 54),
+  55: Lesson(10, 55),
+  56: Lesson(10, 56),
+  57: Lesson(10, 57),
+  58: Lesson(10, 58),
+  59: Lesson(10, 59),
+  60: Lesson(10, 60),
+  61: Lesson(10, 61),
+  62: Lesson(10, 62),
+
 };
