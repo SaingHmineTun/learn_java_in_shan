@@ -83,6 +83,18 @@ const Map<int, Map<int, String>> cModules = {
     56: "Variable Arguments: Creating Your Own printf",
     57: "Memory Management Strategy: Avoiding Leaks in Functions",
   },
+  8: {
+    58: "Introduction to File Streams: FILE Pointer",
+    59: "Opening & Closing Files: fopen & fclose",
+    60: "Writing Text Data: fputs, fprintf & fputc",
+    61: "Reading Text Data: fgets, fscanf & fgetc",
+    62: "Binary Files vs. Text Files: Why Binary is Better for Data",
+    63: "Working with Structs: fwrite & fread (Direct Database)",
+    64: "File Positioning: fseek, ftell & rewind",
+    65: "Error Handling in Files: ferror & feof",
+    66: "Mini-Project: Saving & Loading TMK Student Records",
+    67: "Command Line Arguments (argc, argv)", // Bonus
+  }
 };
 
 final Map<int, Lesson> cLessons = {
@@ -131,4 +143,16 @@ final Map<int, Lesson> cLessons = {
   43: Lesson(6, 43),
   44: Lesson(6, 44),
   45: Lesson(6, 45),
+  46: Lesson(7, 46),
+  47: Lesson(7, 47),
+  48: Lesson(7, 48),
+  49: Lesson(7, 49),
+  50: Lesson(7, 50),
+  51: Lesson(7, 51),
+  52: Lesson(7, 52),
+  53: Lesson(7, 53),
+  54: Lesson(7, 54),
+  55: Lesson(7, 55),
+  56: Lesson(7, 56),
+  57: Lesson(7, 57),
 };
