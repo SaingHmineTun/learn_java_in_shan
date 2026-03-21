@@ -72,6 +72,14 @@ const Map<int, Map<int, String>> tsModules = {
     41: "The 'in' operator: Checking property existence",
     42: "User-defined Type Guards: Creating custom checkers"
   },
+  8: {
+    43: "Try...Catch...Finally: The basic safety net",
+    44: "Throwing Errors: Creating custom exceptions",
+    45: "Type Guarding 'unknown' errors in catch blocks",
+    46: "Built-in Error Types (Reference, Syntax, Type Errors)",
+    47: "Debugging in VS Code: Breakpoints and Watches",
+    48: "Source Maps: Debugging TS in the Browser"
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -117,4 +125,10 @@ final Map<int, Lesson> tsLessons = {
   40: Lesson(7, 40),
   41: Lesson(7, 41),
   42: Lesson(7, 42),
+  43: Lesson(8, 43),
+  44: Lesson(8, 44),
+  45: Lesson(8, 45),
+  46: Lesson(8, 46),
+  47: Lesson(8, 47),
+  48: Lesson(8, 48),
 };
