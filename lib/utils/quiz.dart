@@ -2,6 +2,7 @@ import 'package:tmkacademy/languages/lang_css.dart';
 import 'package:tmkacademy/languages/lang_dart.dart';
 import 'package:tmkacademy/languages/lang_html.dart';
 import 'package:tmkacademy/languages/lang_js.dart';
+import 'package:tmkacademy/languages/lang_ts.dart';
 
 import '../languages/lang_basic.dart';
 import '../languages/lang_java.dart';
@@ -28,5 +29,6 @@ final Map<String, List<List<Quiz>>> quizzes = {
   "html": htmlQuizzes,
   "dart": dartQuizzes,
   "css": cssQuizzes,
-  "js": jsQuizzes
+  "js": jsQuizzes,
+  "ts": tsQuizzes,
 };

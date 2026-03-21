@@ -7,6 +7,7 @@ const languages = [
   "html",
   "css",
   "js",
+  "ts",
   "c",
   "haskell"
 ];
@@ -19,6 +20,7 @@ const fullName = {
   "html": "HTML in Shan",
   "css": "CSS in Shan",
   "js": "Javascript in Shan",
+  "ts": "Typescript in Shan",
   "c": "C in Shan",
   "haskell": "Haskell in Shan"
 };

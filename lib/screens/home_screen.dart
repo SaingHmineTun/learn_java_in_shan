@@ -57,6 +57,12 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFFF7DF1E),
           'icon': DevIcons.javascriptPlain,
         };
+      case 'ts':
+      case 'typescript':
+        return {
+          'color': const Color(0xFF3178C6), // Official TypeScript Blue
+          'icon': DevIcons.typescriptPlain,
+        };
       case 'c':
         return {
           'color': const Color(0xFFA8B9CC),
