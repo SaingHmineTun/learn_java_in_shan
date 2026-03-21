@@ -1,9 +1,10 @@
 # Learn Programming in Shan
 
-A Flutter mobile application designed to teach Java and Python programming languages with content presented in the Shan language. This educational platform aims to make programming education accessible to Shan speakers and learners.
+A Flutter mobile application designed to teach multiple programming languages with content presented in the Shan language. This educational platform aims to make programming education accessible to Shan speakers and learners.
 
 ## 📋 Table of Contents
 - [Features](#features)
+- [Supported Languages](#supported-languages)
 - [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -15,33 +16,28 @@ A Flutter mobile application designed to teach Java and Python programming langu
 
 ## ✨ Features
 
-- **Bilingual Learning**: Programming lessons in both English and the Shan language
-- **Multiple Languages**: Currently supports Java and Python programming languages
+- **Multiple Programming Languages**: Currently supports 11 programming languages
 - **Structured Learning Path**: Organized into modules covering fundamental to advanced topics
 - **Interactive Content**: Engaging lessons with practical examples
 - **Offline Access**: Lessons stored locally for offline learning
 - **Responsive Design**: Works well on various screen sizes (phones, tablets)
 - **Themed UI**: Beautiful coffee-themed color palette for enhanced learning experience
 
-### Java Curriculum
-- Introduction to Java Programming
-- Arrays, Conditionals and Looping
-- Classes and Objects
-- Object-Oriented Programming
-- Exception Handling
-- Multi-Threading
-- Collections Framework
-- Working with Files
+## 🌍 Supported Languages
 
-### Python Curriculum
-- Introduction to Python
-- Built-in Data Types
-- Python Operators
-- Statements
-- Functions
-- Modules, Classes and Objects
-- File Input and Output
-- Web Requests in Python
+The application currently supports the following programming languages:
+
+1. **BASIC** - Computer Basic lessons for absolute beginners
+2. **Python** - Complete Python programming language lessons
+3. **Java** - Comprehensive Java programming language curriculum
+4. **Kotlin** - Modern Android development language
+5. **Dart** - Language for Flutter cross-platform development
+6. **HTML** - HyperText Markup Language for web development
+7. **CSS** - Cascading Style Sheets for web styling
+8. **JavaScript** - Client-side web programming language
+9. **TypeScript** - JavaScript with type safety
+10. **C** - Foundational systems programming language
+11. **Haskell** - Functional programming language
 
 ## 📱 Screenshots
 
@@ -51,7 +47,7 @@ A Flutter mobile application designed to teach Java and Python programming langu
 ## 🚀 Usage
 
 1. Open the app to see the home screen with language selection
-2. Tap on either Java ☕ or Python 🐍 to begin learning
+2. Tap on any programming language to begin learning
 3. Navigate through modules in order or jump to specific topics
 4. Complete lessons within each module
 5. Take the final test to assess your knowledge
@@ -82,7 +78,7 @@ lib/
 - **flutter_markdown**: For displaying formatted lesson content
 - **url_launcher**: For opening external links
 - **font_awesome_flutter**: For vector icons
-- **printing**: For printing functionality
+- **printing**: For generating PDF certificates
 - **Custom Coffee Theme**: Carefully chosen color palette for optimal readability
 
 
@@ -92,6 +88,15 @@ lib/
 - Improving translations
 - Creating quizzes and exercises
 
+
+## 🎓 Certificate Generation
+
+After successfully completing the final test for each module with a score of 80% or higher, users can claim official certificates. The certificate generation feature includes:
+
+- **Custom Name Entry**: Users can input their full name to appear on the certificate
+- **Professional Design**: Beautifully formatted PDF certificates with official branding
+- **Downloadable Format**: Certificates are generated in PDF format (A4 landscape) for easy sharing and printing
+- **Permanent Record**: Certificates can be saved locally for future reference
 
 ## 🙏 Acknowledgements
 
