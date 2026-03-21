@@ -64,6 +64,14 @@ const Map<int, Map<int, String>> tsModules = {
     35: "Const Enums: Performance and usage",
     36: "Readonly Arrays: Protecting list integrity",
   },
+  7: {
+    37: "Union Types: Handling multiple types (|)",
+    38: "Type Guarding: Using typeof and instanceof",
+    39: "Truthiness Guarding: Handling null and undefined",
+    40: "Discriminated Unions: Pattern matching for objects",
+    41: "The 'in' operator: Checking property existence",
+    42: "User-defined Type Guards: Creating custom checkers"
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -103,4 +111,10 @@ final Map<int, Lesson> tsLessons = {
   34: Lesson(6, 34),
   35: Lesson(6, 35),
   36: Lesson(6, 36),
+  37: Lesson(7, 37),
+  38: Lesson(7, 38),
+  39: Lesson(7, 39),
+  40: Lesson(7, 40),
+  41: Lesson(7, 41),
+  42: Lesson(7, 42),
 };
