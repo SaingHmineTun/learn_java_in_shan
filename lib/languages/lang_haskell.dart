@@ -56,6 +56,16 @@ const Map<int, Map<int, String>> haskellModules = {
     33: "Derived Instances: Letting Haskell Do the Work",
     34: "The Maybe Type: Handling Nothingness Gracefully",
   },
+  5: {
+    35: "Currying and Partial Application: One Argument at a Time",
+    36: "Higher-Order Basics: Functions as Parameters",
+    37: "The 'Map' Function: Transforming Every Element",
+    38: "The 'Filter' Function: Keeping What Matters",
+    39: "Lambdas: Anonymous Functions on the Fly",
+    40: "Folds (Foldl and Foldr): The Ultimate List Reducer",
+    41: "Function Composition: Linking Functions with (.)",
+    42: "The '\$' Operator: Cleaning Up Parentheses"
+  }
 };
 
 final Map<int, Lesson> haskellLessons = {
@@ -93,4 +103,12 @@ final Map<int, Lesson> haskellLessons = {
   32: Lesson(4, 32),
   33: Lesson(4, 33),
   34: Lesson(4, 34),
+  35: Lesson(5, 35),
+  36: Lesson(5, 36),
+  37: Lesson(5, 37),
+  38: Lesson(5, 38),
+  39: Lesson(5, 39),
+  40: Lesson(5, 40),
+  41: Lesson(5, 41),
+  42: Lesson(5, 42),
 };
