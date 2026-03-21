@@ -9,8 +9,7 @@ const Map<int, String> haskellTopics = {
   6: "Typeclasses and Polymorphism",
   7: "The Functor and Applicative Bridge",
   8: "The Monad Deep Dive",
-  9: "Input/Output and Side Effects",
-  10: "Building Real-World Projects",
+  9: "IO, Side Effects & Project Completion",
 };
 
 const Map<int, Map<int, String>> haskellModules = {
@@ -95,6 +94,16 @@ const Map<int, Map<int, String>> haskellModules = {
     64: "The Reader Monad: Shared Environment and Dependency Injection",
     65: "The State Monad: Managing Mutable State Purely",
     66: "Monad Transformers: Combining Multiple Monads"
+  },
+  9: {
+    67: "Understanding the IO Monad: Why it's a One-way Street",
+    68: "Reading and Writing Files: Persistent Data Storage",
+    69: "Command Line Arguments: Handling User Input",
+    70: "Exception Handling: Making the App Crash-Proof",
+    71: "Concurrency: Running Multiple Tasks in Parallel",
+    72: "Project Part 1: Architecture of a CLI Todo App",
+    73: "Project Part 2: Implementing Features with Monads",
+    74: "Grand Finale: Compiling and Packaging the Final App"
   }
 };
 
@@ -165,4 +174,12 @@ final Map<int, Lesson> haskellLessons = {
   64: Lesson(8, 64),
   65: Lesson(8, 65),
   66: Lesson(8, 66),
+  67: Lesson(9, 67),
+  68: Lesson(9, 68),
+  69: Lesson(9, 69),
+  70: Lesson(9, 70),
+  71: Lesson(9, 71),
+  72: Lesson(9, 72),
+  73: Lesson(9, 73),
+  74: Lesson(9, 74),
 };
