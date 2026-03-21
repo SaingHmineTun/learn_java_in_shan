@@ -204,4 +204,10 @@ final Map<int, Lesson> tsLessons = {
   74: Lesson(12, 74),
   75: Lesson(12, 75),
   76: Lesson(12, 76),
+  77: Lesson(13, 77),
+  78: Lesson(13, 78),
+  79: Lesson(13, 79),
+  80: Lesson(13, 80),
+  81: Lesson(13, 81),
+  82: Lesson(13, 82),
 };
