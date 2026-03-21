@@ -32,6 +32,14 @@ const Map<int, Map<int, String>> tsModules = {
     11: "Literal Types: Creating strict constants",
     12: "Type Aliases: Customizing your data types",
   },
+  3: {
+    13: "Basic Operators: Arithmetic & Assignment",
+    14: "Comparison & Logical Operators: Making Decisions",
+    15: "Conditionals: The power of If, Else If, and Else",
+    16: "Switch Statements: Handling multiple conditions",
+    17: "Ternary Operator: The shorthand for If-Else",
+    18: "Loops: Iterating with For, While, and Do-While"
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -47,4 +55,10 @@ final Map<int, Lesson> tsLessons = {
   10: Lesson(2, 10),
   11: Lesson(2, 11),
   12: Lesson(2, 12),
+  13: Lesson(3, 13),
+  14: Lesson(3, 14),
+  15: Lesson(3, 15),
+  16: Lesson(3, 16),
+  17: Lesson(3, 17),
+  18: Lesson(3, 18),
 };
