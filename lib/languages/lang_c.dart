@@ -47,4 +47,11 @@ final Map<int, Lesson> cLessons = {
   4: Lesson(1, 4),
   5: Lesson(1, 5),
   6: Lesson(1, 6),
+  7: Lesson(2, 7),
+  8: Lesson(2, 8),
+  9: Lesson(2, 9),
+  10: Lesson(2, 10),
+  11: Lesson(2, 11),
+  12: Lesson(2, 12),
+  13: Lesson(2, 13),
 };
