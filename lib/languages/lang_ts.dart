@@ -38,7 +38,7 @@ const Map<int, Map<int, String>> tsModules = {
     15: "Conditionals: The power of If, Else If, and Else",
     16: "Switch Statements: Handling multiple conditions",
     17: "Ternary Operator: The shorthand for If-Else",
-    18: "Loops: Iterating with For, While, and Do-While"
+    18: "Loops: Iterating with For, While, and Do-While",
   },
   4: {
     19: "Function Declarations: Parameters & Return Types",
@@ -46,7 +46,15 @@ const Map<int, Map<int, String>> tsModules = {
     21: "Arrow Functions: The Modern Syntax",
     22: "Function Types: Defining function signatures",
     23: "Rest Parameters: Handling multiple arguments",
-    24: "Function Overloading: One name, multiple ways"
+    24: "Function Overloading: One name, multiple ways",
+  },
+  5: {
+    25: "Object Literals: Defining shapes on the fly",
+    26: "Interfaces: Creating reusable blueprints",
+    27: "Type Aliases vs Interfaces: When to use which?",
+    28: "Extending Interfaces: Building upon existing shapes",
+    29: "Readonly & Optional Properties in Objects",
+    30: "Index Signatures: Handling dynamic property names",
   },
 };
 
@@ -75,4 +83,10 @@ final Map<int, Lesson> tsLessons = {
   22: Lesson(4, 22),
   23: Lesson(4, 23),
   24: Lesson(4, 24),
+  25: Lesson(5, 25),
+  26: Lesson(5, 26),
+  27: Lesson(5, 27),
+  28: Lesson(5, 28),
+  29: Lesson(5, 29),
+  30: Lesson(5, 30),
 };
