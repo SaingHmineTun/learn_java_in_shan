@@ -53,7 +53,7 @@ strcpy(s1.name, "Sai Tun");
 
 ---
 
-**ၵၢၼ်ပိုၵ်ႉႁတ်း (Homework):**
+**ၵၢၼ်ႁိူၼ်း (Homework):**
 1. တႅမ်ႈ `struct Book` ဢၼ်မီး `title` (string), `author` (string), လႄႈ `price` (float)။ ယဝ်ႉသၢင်ႈ Variable တူဝ်ၼိုင်ႈသေ ၼႄၶေႃႈမုၼ်းမၼ်းဢွၵ်ႇမႃး။
 2. ၸၢမ်းတႅမ်ႈ Code ႁပ်ႉဢဝ်ၶေႃႈမုၼ်း "လုၵ်ႈႁဵၼ်း" တီႈ User (လူၺ်ႈၸႂ်ႉ `scanf` သေၵဵပ်းသႂ်ႇၼႂ်း Struct)။
 3. သင်ၸဝ်ႈၵဝ်ႇမီး `struct Person { char c; int i; };` ၼႆ၊ `sizeof(struct Person)` တေလႆႈလၢႆ Bytes ၶႃႈၼႄႇ? (ၸၢမ်းတႅမ်ႈ Code ၵူတ်ႇထတ်းတူၺ်းၶႃႈ)။
@@ -109,7 +109,7 @@ strcpy(s1.name, "Sai Tun");
 
 ---
 
-**ၵၢၼ်ပိုၵ်ႉႁတ်း (Homework):**
+**ၵၢၼ်ႁိူၼ်း (Homework):**
 1. တႅမ်ႈ `struct Book` ဢၼ်မီး `title` (string), `author` (string), လႄႈ `price` (float)။ ယဝ်ႉသၢင်ႈ Variable တူဝ်ၼိုင်ႈသေ ၼႄၶေႃႈမုၼ်းမၼ်းဢွၵ်ႇမႃး။
 2. ၸၢမ်းတႅမ်ႈ Code ႁပ်ႉဢဝ်ၶေႃႈမုၼ်း "လုၵ်ႈႁဵၼ်း" တီႈ User (လူၺ်ႈၸႂ်ႉ `scanf` သေၵဵပ်းသႂ်ႇၼႂ်း Struct)။
 3. သင်ၸဝ်ႈၵဝ်ႇမီး `struct Person { char c; int i; };` ၼႆ၊ `sizeof(struct Person)` တေလႆႈလၢႆ Bytes ၶႃႈၼႄႇ? (ၸၢမ်းတႅမ်ႈ Code ၵူတ်ႇထတ်းတူၺ်းၶႃႈ)။

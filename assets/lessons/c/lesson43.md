@@ -59,7 +59,7 @@ free(s_ptr); // ယႃႇလိုမ်း free ၼႃၶႃႈ!
 
 ---
 
-**ၵၢၼ်ပိုၵ်ႉႁတ်း (Homework):**
+**ၵၢၼ်ႁိူၼ်း (Homework):**
 1. တႅမ်ႈ `struct Product` ဢၼ်မီး `name` လႄႈ `price`။ ယဝ်ႉသၢင်ႈ Pointer သေပၼ် Value လူၺ်ႈၸႂ်ႉ `->`။
 2. တႅမ်ႈ Function ဢၼ်ႁပ်ႉ `struct Student *s` သေ မႄးလႅၵ်ႈလၢႆႈ "ဢႃႇယု" (Age) မၼ်း။
 3. သင်ႁဝ်းတႅမ်ႈ `ptr.name` တႅၼ်းၵၢၼ် `ptr->name` ၼႆ Compiler တေၼႄ Error ဝႃႈၸိူင်ႉႁိုဝ်ၶႃႈၼႄႇ? (ၸၢမ်းတႅမ်ႈ Code ၵူတ်ႇထတ်းတူၺ်းၶႃႈ)။

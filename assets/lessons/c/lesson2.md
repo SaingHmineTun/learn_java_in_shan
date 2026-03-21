@@ -31,7 +31,7 @@
 
 ---
 
-**ၵၢၼ်ပိုၵ်ႉႁတ်း (Homework):**
+**ၵၢၼ်ႁိူၼ်း (Homework):**
 * ပၵ်းသဝ်း VS Code လႄႈ Compiler (MinGW) ၼႂ်းၶွမ်ႇပိဝ်ႇတႃႇၸဝ်ႈၵဝ်ႇ ႁႂ်ႈယဝ်ႉတူဝ်ႈ။
 * ပၵ်းသဝ်း **C/C++ Extension Pack** ၶွင် Microsoft ၼႂ်း VS Code ၼၼ်ႉပႃးၶႃႈ။
 

@@ -7,7 +7,7 @@ const Map<int, String> cTopics = {
   4: "Control Flow & Logic Gates",
   5: "Data Architecture (Arrays & Structs)",
   6: "Memory & Pointers: Under the Hood",
-  7: "Dynamic Power & Functions",
+  7: "Functions & Dynamic Power",
   8: "System Interfacing",
 };
 
@@ -65,10 +65,24 @@ const Map<int, Map<int, String>> cModules = {
     40: "Dynamic Memory Allocation: malloc, calloc & free",
     41: "Void Pointers & Pointers to Pointers",
     42: "Dangling Pointers & Memory Leaks: The Dark Side", // New
-    43: "Pointers to Structs: The -> Arrow Operator",     // New
-    44: "Function Pointers: Code as Data",               // New
-    45: "The Stack vs. The Heap: Memory Layout",         // New
-  }
+    43: "Pointers to Structs: The -> Arrow Operator", // New
+    44: "Function Pointers: Code as Data", // New
+    45: "The Stack vs. The Heap: Memory Layout", // New
+  },
+  7: {
+    46: "Function Basics: Defining Your Own Tools",
+    47: "Parameters & Arguments: Passing Data by Value",
+    48: "Call by Reference: Giving Functions 'Real' Power",
+    49: "Returning Values & Pointers: Getting Results Back",
+    50: "Dynamic Memory in Functions: Using malloc with Tools",
+    51: "Array Parameters: Functions Handling Data Lists",
+    52: "Structs as Arguments: Processing Complex Data",
+    53: "Function Prototypes & Header Files: Professional Organization",
+    54: "Recursion: The Function That Calls Itself",
+    55: "Function Pointers as Callbacks: High-Order Logic",
+    56: "Variable Arguments: Creating Your Own printf",
+    57: "Memory Management Strategy: Avoiding Leaks in Functions",
+  },
 };
 
 final Map<int, Lesson> cLessons = {
