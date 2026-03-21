@@ -65,6 +65,16 @@ const Map<int, Map<int, String>> haskellModules = {
     40: "Folds (Foldl and Foldr): The Ultimate List Reducer",
     41: "Function Composition: Linking Functions with (.)",
     42: "The '\$' Operator: Cleaning Up Parentheses"
+  },
+  6: {
+    43: "Defining Your Own Typeclasses: The 'class' Keyword",
+    44: "Making Instances: The 'instance' Keyword",
+    45: "Subclassing Typeclasses: Class Constraints",
+    46: "Parametric vs Ad-hoc Polymorphism",
+    47: "Functors: Mapping Over Wrappers (The fmap Power)",
+    48: "Applicative Functors: Functions in Context",
+    49: "The Monoid Typeclass: Identity and Associativity",
+    50: "Introduction to Monads: The 'm' Word"
   }
 };
 
@@ -111,4 +121,12 @@ final Map<int, Lesson> haskellLessons = {
   40: Lesson(5, 40),
   41: Lesson(5, 41),
   42: Lesson(5, 42),
+  43: Lesson(6, 43),
+  44: Lesson(6, 44),
+  45: Lesson(6, 45),
+  46: Lesson(6, 46),
+  47: Lesson(6, 47),
+  48: Lesson(6, 48),
+  49: Lesson(6, 49),
+  50: Lesson(6, 50),
 };
