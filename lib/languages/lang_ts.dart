@@ -98,6 +98,15 @@ const Map<int, Map<int, String>> tsModules = {
     61: "Typing Promises: Generics with Promise<T>",
     62: "Advanced: AbortController and Canceling Async tasks"
   },
+  11: {
+    63: "Classes: The blueprint for objects",
+    64: "Constructors: Initializing objects with properties",
+    65: "Access Modifiers: Public, Private, and Protected",
+    66: "Readonly properties: Protecting data from changes",
+    67: "Shorthand Initialization: Writing cleaner constructors",
+    68: "Inheritance: Reusing code with 'extends'",
+    69: "Super keyword: Calling parent constructors and methods"
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -163,5 +172,12 @@ final Map<int, Lesson> tsLessons = {
   60: Lesson(10, 60),
   61: Lesson(10, 61),
   62: Lesson(10, 62),
+  63: Lesson(11, 63),
+  64: Lesson(11, 64),
+  65: Lesson(11, 65),
+  66: Lesson(11, 66),
+  67: Lesson(11, 67),
+  68: Lesson(11, 68),
+  69: Lesson(11, 69),
 
 };
