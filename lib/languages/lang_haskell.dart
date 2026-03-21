@@ -85,6 +85,16 @@ const Map<int, Map<int, String>> haskellModules = {
     56: "Applicative IO: Running Actions in Parallel (Concept)",
     57: "ZipLists: A Different Kind of Applicative",
     58: "From Applicative to Monad: The Big Jump"
+  },
+  8: {
+    59: "The Monad Laws: Left Identity, Right Identity, and Associativity",
+    60: "The Maybe Monad: Handling Failure Gracefully",
+    61: "The Either Monad: Error Handling with Messages",
+    62: "The List Monad: Non-determinism and List Comprehensions",
+    63: "The Writer Monad: Keeping a Log of Computations",
+    64: "The Reader Monad: Shared Environment and Dependency Injection",
+    65: "The State Monad: Managing Mutable State Purely",
+    66: "Monad Transformers: Combining Multiple Monads"
   }
 };
 
@@ -147,4 +157,12 @@ final Map<int, Lesson> haskellLessons = {
   56: Lesson(7, 56),
   57: Lesson(7, 57),
   58: Lesson(7, 58),
+  59: Lesson(8, 59),
+  60: Lesson(8, 60),
+  61: Lesson(8, 61),
+  62: Lesson(8, 62),
+  63: Lesson(8, 63),
+  64: Lesson(8, 64),
+  65: Lesson(8, 65),
+  66: Lesson(8, 66),
 };
