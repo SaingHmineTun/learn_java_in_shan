@@ -40,6 +40,14 @@ const Map<int, Map<int, String>> tsModules = {
     17: "Ternary Operator: The shorthand for If-Else",
     18: "Loops: Iterating with For, While, and Do-While"
   },
+  4: {
+    19: "Function Declarations: Parameters & Return Types",
+    20: "Optional & Default Parameters",
+    21: "Arrow Functions: The Modern Syntax",
+    22: "Function Types: Defining function signatures",
+    23: "Rest Parameters: Handling multiple arguments",
+    24: "Function Overloading: One name, multiple ways"
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -61,4 +69,10 @@ final Map<int, Lesson> tsLessons = {
   16: Lesson(3, 16),
   17: Lesson(3, 17),
   18: Lesson(3, 18),
+  19: Lesson(4, 19),
+  20: Lesson(4, 20),
+  21: Lesson(4, 21),
+  22: Lesson(4, 22),
+  23: Lesson(4, 23),
+  24: Lesson(4, 24),
 };
