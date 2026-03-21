@@ -47,11 +47,3 @@ int main() {
 3. ၵွပ်ႈသင် ႁဝ်းသမ်ႉဢမ်ႇၸႂ်ႉ `&` မိူဝ်ႈၼပ်ႉ `printf("%d", age)` ၶႃႈၼႄႇ? (ၸွႆႈတွပ်ႇ: ၵွပ်ႈ `printf` လူဝ်ႇ "Value"၊ မၼ်းဢမ်ႇလူဝ်ႇ "Address" တွၼ်ႈတႃႇၼႄမၢႆၼၼ်ႉၶႃႈ)။
 
 ---
-
-တွၼ်ႈၵၼ် 35 ယဝ်ႉတူဝ်ႈယဝ်ႉၶႃႈ။ တေၵႂႃႇၸူး **Lesson 36: Pointer Basics: The * Operator** ဢၼ်တေပဵၼ်ၵၢၼ်သၢင်ႈ Variable တွၼ်ႈတႃႇ "ၵဵပ်းမၢႆလိၵ်ႈ" ၸိူဝ်းၼႆႉဝႆႉ ၼၼ်ႉၶႃႈႁိုဝ်?
-
-1. Start Lesson 36
-2. Explain "Stack vs Heap" memory briefly
-3. Show how to find address of an Array element
-
-တေၵႂႃႇၽၢႆႇလႂ် ထႅင်ႈၶႃႈ?
