@@ -1,6 +1,7 @@
 import 'package:tmkacademy/languages/lang_c.dart';
 import 'package:tmkacademy/languages/lang_css.dart';
 import 'package:tmkacademy/languages/lang_dart.dart';
+import 'package:tmkacademy/languages/lang_haskell.dart';
 import 'package:tmkacademy/languages/lang_html.dart';
 import 'package:tmkacademy/languages/lang_js.dart';
 import 'package:tmkacademy/languages/lang_ts.dart';
@@ -32,5 +33,6 @@ final Map<String, List<List<Quiz>>> quizzes = {
   "css": cssQuizzes,
   "js": jsQuizzes,
   "ts": tsQuizzes,
-  "c": cQuizzes
+  "c": cQuizzes,
+  "haskell": haskellQuizzes,
 };
