@@ -36,7 +36,7 @@ const Map<int, Map<int, String>> haskellModules = {
     17: "Introduction to Tuples (Storing Different Data Types Together)",
     18: "Pattern Matching Basics (Matching Constants and Variables)",
     19: "List Pattern Matching (The Power of x:xs)",
-    20: "As-Patterns (Keeping the Whole while Matching Parts with @)"
+    20: "As-Patterns (Keeping the Whole while Matching Parts with @)",
   },
   3: {
     21: "Thinking Recursively: The Mindset Shift",
@@ -44,8 +44,18 @@ const Map<int, Map<int, String>> haskellModules = {
     23: "Recursion with Lists (Maximum and Sum)",
     24: "More List Recursion (Replicate and Take)",
     25: "The QuickSort Algorithm (Haskell's Elegant Way)",
-    26: "Tail Recursion and Performance Optimization"
-  }
+    26: "Tail Recursion and Performance Optimization",
+  },
+  4: {
+    27: "Types and Typeclasses: The Big Picture",
+    28: "Common Typeclasses (Eq, Ord, Show, and Read)",
+    29: "Numeric Typeclasses (Num, Integral, and Floating)",
+    30: "Creating Your Own Types with 'data'",
+    31: "Record Syntax: Modeling Complex Data (Like Student Profiles)",
+    32: "Type Parameters: Making Types Flexible (Generics)",
+    33: "Derived Instances: Letting Haskell Do the Work",
+    34: "The Maybe Type: Handling Nothingness Gracefully",
+  },
 };
 
 final Map<int, Lesson> haskellLessons = {
@@ -75,5 +85,12 @@ final Map<int, Lesson> haskellLessons = {
   24: Lesson(3, 24),
   25: Lesson(3, 25),
   26: Lesson(3, 26),
-  27: Lesson(3, 27),
+  27: Lesson(4, 27),
+  28: Lesson(4, 28),
+  29: Lesson(4, 29),
+  30: Lesson(4, 30),
+  31: Lesson(4, 31),
+  32: Lesson(4, 32),
+  33: Lesson(4, 33),
+  34: Lesson(4, 34),
 };
