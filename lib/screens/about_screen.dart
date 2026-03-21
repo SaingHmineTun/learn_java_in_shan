@@ -1,5 +1,5 @@
+import 'package:dev_icons/dev_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tmkacademy/utils/colors.dart'; // Brand Palette
 import 'package:url_launcher/url_launcher.dart';
 
@@ -103,14 +103,14 @@ class AboutScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       _buildContactCard(
-                        icon: FontAwesomeIcons.envelope,
+                        icon: DevIcons.googlePlain,
                         iconColor: kBrandOrange,
                         label: "EMAIL ADDRESS",
                         value: "tmk.muse@gmail.com",
                         onTap: _sendEmail,
                       ),
                       _buildContactCard(
-                        icon: FontAwesomeIcons.facebook,
+                        icon: DevIcons.facebookPlain,
                         iconColor: const Color(0xFF1877F2), // Standard FB Blue
                         label: "FACEBOOK PAGE",
                         value: "ထုင်ႉမၢဝ်းၶမ်း",
@@ -119,7 +119,7 @@ class AboutScreen extends StatelessWidget {
                         ),
                       ),
                       _buildContactCard(
-                        icon: FontAwesomeIcons.github,
+                        icon: DevIcons.githubOriginal,
                         iconColor: kBrandWhite,
                         label: "PROJECT REPOSITORY",
                         value: "Get GitHub Source Code",
@@ -128,7 +128,7 @@ class AboutScreen extends StatelessWidget {
                         ),
                       ),
                       _buildContactCard(
-                        icon: FontAwesomeIcons.earthAsia,
+                        icon: DevIcons.chromePlain,
                         iconColor: kBrandBlue,
                         label: "DEVELOPER WEBSITE",
                         value: "www.saimao.top",
@@ -193,7 +193,7 @@ class AboutScreen extends StatelessWidget {
                     color: iconColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  child: FaIcon(icon, color: iconColor, size: 20),
+                  child: Icon(icon, color: iconColor, size: 20),
                 ),
                 const SizedBox(width: 20),
                 Expanded(

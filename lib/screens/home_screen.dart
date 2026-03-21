@@ -1,5 +1,5 @@
+import 'package:dev_icons/dev_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tmkacademy/screens/language_screen.dart';
 import 'package:tmkacademy/utils/language.dart';
 import '../utils/colors.dart';
@@ -8,58 +8,63 @@ import 'about_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-  // Helper to get specific styles for each language
+
   Map<String, dynamic> _getLanguageStyle(String lang) {
     switch (lang.toLowerCase()) {
       case 'java':
         return {
-          'color': kBrandOrange,
-          'icon': FontAwesomeIcons.java,
+          'color': const Color(0xFFE76F00), // Java Orange
+          'icon': DevIcons.javaPlain,
         };
       case 'python':
         return {
-          'color': const Color(0xFF4CAF50),
-          'icon': FontAwesomeIcons.python,
+          'color': const Color(0xFF3776AB), // Python Blue
+          'icon': DevIcons.pythonPlain,
+        };
+      case 'haskell':
+        return {
+          'color': const Color(0xFF5E5086), // Haskell Purple
+          'icon': DevIcons.haskellPlain,
         };
       case 'basic':
         return {
-          'color': const Color(0xFFAA00FF), // Retro Purple
-          'icon': Icons.terminal_rounded,
+          'color': const Color(0xFFAA00FF),
+          'icon': Icons.terminal_rounded, // DevIcons ဢမ်ႇမီး Basic၊ ၸႂ်ႉ Terminal ဝႆႉမိူၼ်ၵဝ်ႇၶႃႈ
         };
       case 'kotlin':
         return {
-          'color': const Color(0xFF7F52FF), // Kotlin Violet
-          'icon': Icons.code_rounded, // Represents modern intelligence
+          'color': const Color(0xFF7F52FF),
+          'icon': DevIcons.kotlinPlain,
         };
       case 'dart':
         return {
           'color': const Color(0xFF00B0FF),
-          'icon': FontAwesomeIcons.dartLang,
+          'icon': DevIcons.dartPlain,
         };
       case 'html':
         return {
-          'color': const Color(0xFFE44D26), // HTML5 Crimson
-          'icon': Icons.html_rounded,
+          'color': const Color(0xFFE44D26),
+          'icon': DevIcons.html5Plain,
         };
       case 'css':
         return {
-          'color': const Color(0xFF264DE4), // Official CSS Blue
-          'icon': Icons.css_rounded, // Represents styling
+          'color': const Color(0xFF1572B6),
+          'icon': DevIcons.css3Plain,
         };
       case 'js':
       case 'javascript':
         return {
-          'color': const Color(0xFFF7DF1E), // JavaScript Yellow
-          'icon': Icons.javascript_rounded, // Built-in JS icon
+          'color': const Color(0xFFF7DF1E),
+          'icon': DevIcons.javascriptPlain,
         };
       case 'c':
         return {
-          'color': const Color(0xFFA8B9CC), // Official C Gray/Blue
-          'icon': Icons.terminal_rounded, // Represents low-level/system programming
+          'color': const Color(0xFFA8B9CC),
+          'icon': DevIcons.cPlain,
         };
       default:
         return {
-          'color': kBrandGold,
+          'color': kBrandGold, // ၸႂ်ႉ Constant ၶေႃႈၸဝ်ႈၶူးမိူၼ်ၵဝ်ႇ
           'icon': Icons.code_rounded,
         };
     }

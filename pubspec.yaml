@@ -12,8 +12,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_markdown: ^0.7.7+1
   url_launcher: ^6.3.2
-  font_awesome_flutter: ^10.9.1
   printing: ^5.14.2
+  dev_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -33,6 +33,7 @@ flutter:
     - assets/lessons/js/
     - assets/lessons/kotlin/
     - assets/lessons/c/
+    - assets/lessons/haskell/
     - assets/images/
   fonts:
     - family: AJ05
