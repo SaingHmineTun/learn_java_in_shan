@@ -56,6 +56,14 @@ const Map<int, Map<int, String>> tsModules = {
     29: "Readonly & Optional Properties in Objects",
     30: "Index Signatures: Handling dynamic property names",
   },
+  6: {
+    31: "Array Types: Square brackets vs Array<T>",
+    32: "Multi-dimensional Arrays: Matrices in TS",
+    33: "Tuples: Fixed-length and mixed-type arrays",
+    34: "Enums: Numeric and String enumerations",
+    35: "Const Enums: Performance and usage",
+    36: "Readonly Arrays: Protecting list integrity",
+  },
 };
 
 final Map<int, Lesson> tsLessons = {
@@ -89,4 +97,10 @@ final Map<int, Lesson> tsLessons = {
   28: Lesson(5, 28),
   29: Lesson(5, 29),
   30: Lesson(5, 30),
+  31: Lesson(6, 31),
+  32: Lesson(6, 32),
+  33: Lesson(6, 33),
+  34: Lesson(6, 34),
+  35: Lesson(6, 35),
+  36: Lesson(6, 36),
 };
