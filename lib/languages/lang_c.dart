@@ -94,7 +94,7 @@ const Map<int, Map<int, String>> cModules = {
     65: "Error Handling in Files: ferror & feof",
     66: "Mini-Project: Saving & Loading TMK Student Records",
     67: "Command Line Arguments (argc, argv)", // Bonus
-  }
+  },
 };
 
 final Map<int, Lesson> cLessons = {
@@ -155,4 +155,14 @@ final Map<int, Lesson> cLessons = {
   55: Lesson(7, 55),
   56: Lesson(7, 56),
   57: Lesson(7, 57),
+  58: Lesson(8, 58),
+  59: Lesson(8, 59),
+  60: Lesson(8, 60),
+  61: Lesson(8, 61),
+  62: Lesson(8, 62),
+  63: Lesson(8, 63),
+  64: Lesson(8, 64),
+  65: Lesson(8, 65),
+  66: Lesson(8, 66),
+  67: Lesson(8, 67),
 };
