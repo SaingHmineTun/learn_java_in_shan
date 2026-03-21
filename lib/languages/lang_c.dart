@@ -46,6 +46,15 @@ const Map<int, Map<int, String>> cModules = {
     25: "Break & Continue: The Flow Controllers",
     26: "Nested Loops: Pattern Printing",
     27: "The goto Statement: Proceed with Caution",
+  },
+  5: {
+    28: "Introduction to Arrays: Homogeneous Collections",
+    29: "Multidimensional Arrays: Matrices & Grids",
+    30: "Strings in C: Character Arrays & The Null Terminator",
+    31: "String Handling Functions: <string.h> Deep Dive",
+    32: "Introduction to Structs: Heterogeneous Data",
+    33: "Nested Structs & Arrays of Structs: Database Basics",
+    34: "Typedef & Enums: Creating Custom Data Types", // New
   }
 };
 
