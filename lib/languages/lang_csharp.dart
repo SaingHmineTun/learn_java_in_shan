@@ -451,6 +451,19 @@ final Map<int, Lesson> csharpLessons = {
   24: Lesson(2, 24),
   25: Lesson(2, 25),
   26: Lesson(2, 26),
+  27: Lesson(3, 27),
+  28: Lesson(3, 28),
+  29: Lesson(3, 29),
+  30: Lesson(3, 30),
+  31: Lesson(3, 31),
+  32: Lesson(3, 32),
+  33: Lesson(3, 33),
+  34: Lesson(3, 34),
+  35: Lesson(3, 35),
+  36: Lesson(3, 36),
+  37: Lesson(3, 37),
+  38: Lesson(3, 38),
+  39: Lesson(3, 39),
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -711,8 +724,130 @@ final List<Quiz> csharpQuizM2 = [
   Quiz(199, "What is the keyword for the 'true/false' type?", ["bool", "boolean", "bit", "logic"]),
   Quiz(200, "What does C# use for the 'empty' reference?", ["null", "nil", "None", "undefined"]),
 ];
+final List<Quiz> csharpQuizM3 = [
+  // Lesson 27: Arithmetic Operators
+  Quiz(201, "Which operator is used to find the remainder of a division?", ["%", "/", "*", "&"]),
+  Quiz(202, "What is the result of 10 / 3 in C# (integer division)?", ["3", "3.33", "3.4", "0"]),
+  Quiz(203, "How do you get 3.333... from 10 / 3?", ["10.0 / 3.0", "10 / 3", "(int)10 / 3", "10 % 3"]),
+  Quiz(204, "Which operator is used for multiplication?", ["*", "x", "^", "multi"]),
+  Quiz(205, "What does 15 % 4 return?", ["3", "1", "2", "0"]),
+  Quiz(206, "What is the result of 5 + 2 * 3?", ["11", "21", "10", "15"]),
+  Quiz(207, "If number % 2 == 0, the number is _____.", ["Even", "Odd", "Negative", "Prime"]),
+  Quiz(208, "Which operator is used for subtraction?", ["-", "_", "--", "sub"]),
+  Quiz(209, "What is the result of 100 / 0 in C#?", ["Runtime Error (DivideByZero)", "0", "Infinity", "null"]),
+  Quiz(210, "What is the result of 7 + 3 % 2?", ["8", "5", "0", "10"]),
+
+  // Lesson 28: Assignment Operators
+  Quiz(211, "What is the shorthand for 'x = x + 5'?", ["x += 5", "x =+ 5", "x ++ 5", "x + 5"]),
+  Quiz(212, "If x = 10, what is the value of x after 'x *= 2'?", ["20", "12", "100", "5"]),
+  Quiz(213, "What does 'x -= 10' do?", ["Subtracts 10 from x and stores the result in x", "Checks if x is less than 10", "Assigns -10 to x", "Deletes x"]),
+  Quiz(214, "Which operator is 'Simple Assignment'?", ["=", "==", "+=", "=>"]),
+  Quiz(215, "If x = 20, what is 'x /= 4'?", ["5", "16", "24", "80"]),
+  Quiz(216, "What is the shorthand for 'y = y % 3'?", ["y %= 3", "y = % 3", "y % 3", "y = mod 3"]),
+  Quiz(217, "Can you use '+=' with strings in C#?", ["Yes, it concatenates", "No, only numbers", "Only in loops", "Only for characters"]),
+  Quiz(218, "Which of these is NOT a compound assignment operator?", ["=+", "+=", "-=", "*="]),
+  Quiz(219, "If x = 5, what is x after 'x += x'?", ["10", "5", "25", "0"]),
+  Quiz(220, "Compound assignment helps to make code _____.", ["Shorter and cleaner", "Faster to run", "Secure", "More precise"]),
+
+  // Lesson 29: Increment/Decrement
+  Quiz(221, "What is the result of 'x++' if x was 5?", ["The value used is 5, then x becomes 6", "x becomes 6 immediately", "x becomes 4", "Error"]),
+  Quiz(222, "What is the difference between '++x' and 'x++'?", ["++x increments before use; x++ increments after use", "No difference", "++x is only for floats", "x++ is faster"]),
+  Quiz(223, "Which operator decreases a value by exactly 1?", ["--", "++", "-=", "-1"]),
+  Quiz(224, "If y = 10, what is 'int z = --y;'?", ["z = 9, y = 9", "z = 10, y = 9", "z = 9, y = 10", "z = 10, y = 10"]),
+  Quiz(225, "Can you use '++' on a constant (const)?", ["No", "Yes", "Only if it is an int", "Only in a constructor"]),
+  Quiz(226, "What is 'Postfix'?", ["An operator placed after the variable (x++)", "An operator before the variable", "A type of memory", "A code comment"]),
+  Quiz(227, "What is 'Prefix'?", ["An operator placed before the variable (++x)", "An operator after the variable", "A way to name variables", "A type of class"]),
+  Quiz(228, "What does x++ return if x is 0?", ["0", "1", "-1", "null"]),
+  Quiz(229, "How many times does 'x++' increment x?", ["Once", "Twice", "Until it hits 10", "Forever"]),
+  Quiz(230, "Is 'x = x + 1' the same as '++x'?", ["Yes, the final value of x is the same", "No", "Only for strings", "Only for floats"]),
+
+  // Lesson 30: Comparison Operators
+  Quiz(231, "Which operator checks for equality?", ["==", "=", "===", "!="]),
+  Quiz(232, "What is the return type of a comparison operator?", ["bool", "int", "string", "void"]),
+  Quiz(233, "Which operator means 'Not Equal'?", ["!=", "<>", "==", "not="]),
+  Quiz(234, "What does '10 >= 10' return?", ["true", "false", "10", "0"]),
+  Quiz(235, "What does '5 < 3' return?", ["false", "true", "null", "Error"]),
+  Quiz(236, "Is \"Mao\" == \"mao\" true or false?", ["false (case-sensitive)", "true", "Error", "null"]),
+  Quiz(237, "Which operator checks if the left is strictly smaller than the right?", ["<", "<=", ">", "!="]),
+  Quiz(238, "What does '5 != 10' return?", ["true", "false", "5", "1"]),
+  Quiz(239, "Which is used to assign a value?", ["=", "==", "!=", "=>"]),
+  Quiz(240, "Can you compare two different types like 'int' and 'double' directly?", ["Yes, C# handles it", "No, never", "Only with strings", "Only if both are null"]),
+
+  // Lesson 31: Logical Operators
+  Quiz(241, "Which operator is Logical AND?", ["&&", "||", "!", "&"]),
+  Quiz(242, "Which operator is Logical OR?", ["||", "&&", "|", "??"]),
+  Quiz(243, "What does '!true' return?", ["false", "true", "null", "1"]),
+  Quiz(244, "In 'A && B', if A is false, does C# check B?", ["No (Short-circuiting)", "Yes, always", "Only if B is an int", "Only in debug mode"]),
+  Quiz(245, "In 'A || B', if A is true, does C# check B?", ["No (Short-circuiting)", "Yes, always", "Only if B is false", "Only for strings"]),
+  Quiz(246, "What is (true && false)?", ["false", "true", "null", "Error"]),
+  Quiz(247, "What is (true || false)?", ["true", "false", "null", "1"]),
+  Quiz(248, "Which operator 'inverts' a boolean value?", ["!", "&&", "||", "~"]),
+  Quiz(249, "When does '&&' return true?", ["When both sides are true", "When one side is true", "When both sides are false", "Always"]),
+  Quiz(250, "When does '||' return false?", ["When both sides are false", "When one side is false", "When both sides are true", "Never"]),
+
+  // Lesson 32: Bitwise Operators
+  Quiz(251, "Which symbol is Bitwise AND?", ["&", "&&", "|", "^"]),
+  Quiz(252, "What does the '<<' operator do?", ["Left shift (Multiply by 2)", "Right shift", "Less than", "Input"]),
+  Quiz(253, "Which bitwise operator flips 0 to 1 and 1 to 0?", ["~ (NOT)", "^ (XOR)", "&", "|"]),
+  Quiz(254, "What is 1 & 0 in bitwise?", ["0", "1", "2", "null"]),
+  Quiz(255, "What is 1 | 0 in bitwise?", ["1", "0", "2", "Error"]),
+  Quiz(256, "The '^' operator returns 1 only if the bits are _____.", ["Different", "The same", "Both 1", "Both 0"]),
+  Quiz(257, "What is the result of 2 << 1?", ["4", "2", "1", "8"]),
+  Quiz(258, "What is the result of 10 >> 1?", ["5", "10", "20", "1"]),
+  Quiz(259, "Bitwise operators work on which level?", ["Binary (0 and 1)", "Text", "Decimal only", "Files"]),
+  Quiz(260, "Which is the 'Bitwise XOR' operator?", ["^", "~", "&", "|"]),
+
+  // Lesson 33: Precedence
+  Quiz(261, "Which has the highest priority (precedence)?", ["Parentheses ( )", "Multiplication *", "Addition +", "Assignment ="]),
+  Quiz(262, "What is the result of 10 + 5 * 2?", ["20", "30", "25", "17"]),
+  Quiz(263, "In C#, operators with the same precedence are evaluated from _____.", ["Left to Right", "Right to Left", "Randomly", "Top to Bottom"]),
+  Quiz(264, "Which is evaluated last in an expression?", ["Assignment (=)", "Logical (&&)", "Math (+)", "Comparison (==)"]),
+  Quiz(265, "What is the result of (10 + 5) * 2?", ["30", "20", "25", "100"]),
+  Quiz(266, "Does '*' have higher precedence than '/'?", ["No, they are equal", "Yes", "Only for ints", "Only on Windows"]),
+  Quiz(267, "Which math operator is handled first: + or %?", ["%", "+", "Neither", "They are equal"]),
+  Quiz(268, "What is PEMDAS?", ["The order of operations", "A type of variable", "A C# keyword", "A memory area"]),
+  Quiz(269, "What is the result of 12 / 2 * 3?", ["18", "2", "6", "12"]),
+  Quiz(270, "What is the result of 5 > 3 && 2 < 1?", ["false", "true", "Error", "5"]),
+
+  // Lesson 34: Advanced Output
+  Quiz(271, "Which specifier is used for Currency?", [":C", ":N", ":P", ":D"]),
+  Quiz(272, "What does the format ':N2' do?", ["Number with 2 decimal places and commas", "Negative 2", "New line", "Nothing"]),
+  Quiz(273, "How do you align a string to the left with a width of 20?", ["{name,-20}", "{name,20}", "{name:20}", "{name=20}"]),
+  Quiz(274, "How do you align to the right with a width of 10?", ["{score,10}", "{score,-10}", "{score:10}", "{score+10}"]),
+  Quiz(275, "What does {0.75:P} display?", ["75.00 %", "0.75", "75", "P0.75"]),
+  Quiz(276, "What character separates the variable from the format in interpolation?", [":", ",", ".", ";"]),
+  Quiz(277, "What does {5:000} display?", ["005", "5", "5.000", "Error"]),
+  Quiz(278, "Which specifier displays a number as a percentage?", [":P", ":C", ":N", ":D"]),
+  Quiz(279, "To align in a table, we use _____ inside the curly braces.", ["Comma and a number", "Colon and a number", "Plus sign", "Dollar sign"]),
+  Quiz(280, "The 'C' in :C format stands for?", ["Currency", "Center", "Calculate", "Character"]),
+
+  // Lesson 35: Advanced Input
+  Quiz(281, "Which method reads a single key press immediately?", ["Console.ReadKey()", "Console.ReadLine()", "Console.Read()", "Console.GetKey()"]),
+  Quiz(282, "How do you hide a key press from the screen (intercept)?", ["Console.ReadKey(true)", "Console.ReadKey(false)", "Console.ReadKey()", "Console.HideKey()"]),
+  Quiz(283, "What type does Console.ReadKey() return?", ["ConsoleKeyInfo", "string", "char", "int"]),
+  Quiz(284, "Which property of ConsoleKeyInfo tells you which key was pressed?", [".Key", ".Name", ".Value", ".Text"]),
+  Quiz(285, "Does ReadKey() wait for the Enter key?", ["No", "Yes", "Only for strings", "Only in loops"]),
+  Quiz(286, "Which enum is used to check for the Escape key?", ["ConsoleKey.Escape", "Key.Esc", "EscapeKey", "Console.Esc"]),
+  Quiz(287, "Can ReadKey() detect if Shift was held?", ["Yes (Modifiers)", "No", "Only for letters", "Only for numbers"]),
+  Quiz(288, "Intercepting a key is useful for _____.", ["Passwords", "Printing", "Math", "Variables"]),
+  Quiz(289, "What is the primary difference between ReadLine and ReadKey?", ["ReadKey doesn't wait for Enter", "ReadLine is faster", "ReadKey only works for numbers", "There is no difference"]),
+  Quiz(290, "Which namespace contains the Console class?", ["System", "System.IO", "System.Text", "System.Console"]),
+
+  // Lesson 36: Math Class
+  Quiz(291, "Which method calculates 2 to the power of 3?", ["Math.Pow(2, 3)", "Math.Sqrt(2, 3)", "Math.Max(2, 3)", "Math.Abs(2)"]),
+  Quiz(292, "Which method returns the Square Root of 16?", ["Math.Sqrt(16)", "Math.Pow(16, 2)", "Math.Round(16)", "Math.Root(16)"]),
+  Quiz(293, "What does Math.Abs(-10) return?", ["10", "-10", "0", "Error"]),
+  Quiz(294, "Which method always rounds UP to the next whole number?", ["Math.Ceiling()", "Math.Floor()", "Math.Round()", "Math.Up()"]),
+  Quiz(295, "Which method always rounds DOWN?", ["Math.Floor()", "Math.Ceiling()", "Math.Round()", "Math.Min()"]),
+  Quiz(296, "How do you get the value of PI in C#?", ["Math.PI", "PI()", "Math.Pi", "3.14"]),
+  Quiz(297, "What is the return type of Math.Sqrt()?", ["double", "int", "float", "decimal"]),
+  Quiz(298, "Which method returns the larger of two numbers?", ["Math.Max()", "Math.Min()", "Math.Big()", "Math.Top()"]),
+  Quiz(299, "What does Math.Round(4.5) return?", ["5 (or 4 depending on MidpointRounding)", "4", "4.5", "0"]),
+  Quiz(300, "The Math class methods are _____, meaning you don't need 'new'.", ["Static", "Instance", "Private", "Virtual"]),
+];
 
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
-  csharpQuizM2
+  csharpQuizM2,
+  csharpQuizM3
 ];
