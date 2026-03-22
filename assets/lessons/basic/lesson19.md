@@ -43,6 +43,17 @@
 
 ---
 
+**ၶေႃႈၵႂၢမ်း Technical ဢၼ်လူဝ်ႇမၢႆတွင်း**
+
+* **Driver:** Software ဢၼ်ပဵၼ် "ၵူၼ်းပိၼ်ႇလိၵ်ႈ" ၼႂ်းၵႄႈ OS လႄႈ Hardware (မိူၼ်ၼင်ႇ Printer Driver)။
+* **Plug and Play (PnP):** ၵႂၢမ်းၵတ်ႉၶႅၼ်ႇဢၼ် OS ၸၢင်ႈႁူႉၸၵ်း လႄႈ သႂ်ႇ Driver ပၼ်ၵမ်းလဵဝ် မိူဝ်ႈႁဝ်းသဵတ်း Hardware မႂ်ႇ။
+* **Hardware Compatibility:** လွင်ႈဢၼ် Hardware လႄႈ Software ၸၢင်ႈႁဵတ်းၵၢၼ်ၸွမ်းၵၼ်လႆႈ ဢမ်ႇမီးပၼ်ႁႃ။
+
+
+
+---
+
+
 ### 🏁 Module 3 Checkpoint
 Module 3 ယဝ်ႉတူဝ်ယဝ်ႉ! တေႃႈလဵဝ်ၸဝ်ႈၵဝ်ႇႁူႉယဝ်ႉဝႃႈ:
 * **OS:** ပဵၼ်ၽူႈၸတ်းၵၢၼ်လူင် (Windows, macOS, Linux).
