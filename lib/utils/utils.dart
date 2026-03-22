@@ -25,7 +25,7 @@ const Map<String, Map<int, String>> topics = {
   "c": cTopics,
   "haskell": haskellTopics,
   "ts": tsTopics,
-  "csharp": cssTopics
+  "csharp": csharpTopics
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
