@@ -512,7 +512,22 @@ final Map<int, Lesson> csharpLessons = {
   73: Lesson(6, 73),
   74: Lesson(6, 74),
   75: Lesson(6, 75),
-  76: Lesson(7, 76),
+  76: Lesson(6, 76),
+  77: Lesson(7, 77),
+  78: Lesson(7, 78),
+  79: Lesson(7, 79),
+  80: Lesson(7, 80),
+  81: Lesson(7, 81),
+  82: Lesson(7, 82),
+  83: Lesson(7, 83),
+  84: Lesson(7, 84),
+  85: Lesson(7, 85),
+  86: Lesson(7, 86),
+  87: Lesson(7, 87),
+  88: Lesson(7, 88),
+  89: Lesson(7, 89),
+  90: Lesson(7, 90),
+
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -4835,11 +4850,955 @@ final List<Quiz> csharpQuizM6 = [
     "Variables",
   ]),
 ];
+final List<Quiz> csharpQuizM7 = [
+  // Lesson 77: The Power of Modular Programming: Why Use Methods?
+  Quiz(751, "What is the main goal of Modular Programming?", [
+    "Dividing a program into small, manageable, and reusable pieces",
+    "Making the code run faster",
+    "Reducing the number of variables",
+    "Hiding the source code",
+  ]),
+  Quiz(752, "What is a Method?", [
+    "A named block of code that performs a specific task",
+    "A type of variable",
+    "A mathematical formula",
+    "A comment",
+  ]),
+  Quiz(753, "Which of these is a benefit of 'Code Reuse'?", [
+    "Reduces development time and errors",
+    "Increases the file size",
+    "Makes the app slower",
+    "Requires more RAM",
+  ]),
+  Quiz(
+    754,
+    "If you need to fix a bug in a logic used in 10 places, methods help by _____.",
+    [
+      "Allowing you to fix it in one place only",
+      "Deleting the code",
+      "Automatically fixing it",
+      "Requiring 10 different fixes",
+    ],
+  ),
+  Quiz(755, "What is 'Readability' in the context of methods?", [
+    "The ease with which a human can understand the code's purpose",
+    "The font size of the code",
+    "The speed of the CPU",
+    "The number of lines",
+  ]),
+  Quiz(756, "A method is also commonly known as a/an _____.", [
+    "Function",
+    "Integer",
+    "Loop",
+    "Class",
+  ]),
+  Quiz(757, "Why use methods instead of copying code?", [
+    "To make the code easier to maintain",
+    "To make it harder to read",
+    "To use more disk space",
+    "To prevent the app from starting",
+  ]),
+  Quiz(758, "What is a 'Module'?", [
+    "A self-contained unit of code",
+    "A hardware component",
+    "A type of monitor",
+    "A programming language",
+  ]),
+  Quiz(759, "Methods help in 'Testing' because _____.", [
+    "You can test a specific logic independently",
+    "They hide errors",
+    "They prevent bugs",
+    "They run in the cloud",
+  ]),
+  Quiz(760, "Which principle says a method should do only one thing?", [
+    "Single Responsibility Principle",
+    "Double Action Rule",
+    "Main Method Law",
+    "Static Logic",
+  ]),
+
+  // Lesson 78: Defining a Method: Access Modifiers, Return Types, and Names
+  Quiz(
+    761,
+    "Which access modifier allows a method to be called from any class?",
+    ["public", "private", "protected", "internal"],
+  ),
+  Quiz(
+    762,
+    "What is the default access modifier for a method if none is specified?",
+    ["private", "public", "static", "void"],
+  ),
+  Quiz(763, "Which keyword indicates that a method does NOT return a value?", [
+    "void",
+    "null",
+    "empty",
+    "static",
+  ]),
+  Quiz(764, "What is the recommended naming convention for methods in C#?", [
+    "PascalCase (e.g., CalculateTotal)",
+    "camelCase",
+    "snake_case",
+    "UPPERCASE",
+  ]),
+  Quiz(765, "What is a 'Return Type'?", [
+    "The data type of the value the method sends back to the caller",
+    "The name of the method",
+    "The parameter list",
+    "The access modifier",
+  ]),
+  Quiz(766, "Where is the body of a method located?", [
+    "Inside curly braces { }",
+    "Inside parentheses ( )",
+    "After a semicolon ;",
+    "In a separate file",
+  ]),
+  Quiz(767, "In 'public int GetAge()', what is 'int'?", [
+    "Return Type",
+    "Access Modifier",
+    "Method Name",
+    "Parameter",
+  ]),
+  Quiz(768, "What is a 'Method Signature'?", [
+    "The combination of name and parameter types",
+    "The return type only",
+    "The access modifier",
+    "The code inside the braces",
+  ]),
+  Quiz(769, "Can a method be defined without an access modifier?", [
+    "Yes, it defaults to private",
+    "No",
+    "Only if it is static",
+    "Only for strings",
+  ]),
+  Quiz(770, "What follows the method name in a definition?", [
+    "Parentheses ( )",
+    "Braces { }",
+    "A colon :",
+    "A semicolon ;",
+  ]),
+
+  // Lesson 79: Method Parameters: Passing Data into a Function
+  Quiz(771, "What is a 'Parameter'?", [
+    "A variable defined in the method header to receive data",
+    "The actual value sent to the method",
+    "The return value",
+    "The access modifier",
+  ]),
+  Quiz(772, "What is an 'Argument'?", [
+    "The actual value passed to a method when calling it",
+    "The variable name in the header",
+    "A logic error",
+    "A type of loop",
+  ]),
+  Quiz(773, "How are multiple parameters separated in a method definition?", [
+    "Commas",
+    "Semicolons",
+    "Colons",
+    "Dots",
+  ]),
+  Quiz(774, "Where are parameters defined?", [
+    "Inside the parentheses ( )",
+    "Inside the braces { }",
+    "After the return keyword",
+    "In the class header",
+  ]),
+  Quiz(775, "Does the order of arguments matter when calling a method?", [
+    "Yes, they must match the parameter order",
+    "No",
+    "Only for strings",
+    "Only in debug mode",
+  ]),
+  Quiz(776, "What is 'Type Matching' in parameters?", [
+    "The argument data type must match the parameter data type",
+    "All parameters must be integers",
+    "The method name must be short",
+    "The return type must be void",
+  ]),
+  Quiz(777, "Can a method have zero parameters?", [
+    "Yes",
+    "No",
+    "Only if it is void",
+    "Only if it is private",
+  ]),
+  Quiz(778, "In 'void Show(string msg)', what is 'msg'?", [
+    "Parameter",
+    "Argument",
+    "Return Type",
+    "Access Modifier",
+  ]),
+  Quiz(779, "In 'Show(\"Hello\")', what is '\"Hello\"'?", [
+    "Argument",
+    "Parameter",
+    "Method Name",
+    "Variable",
+  ]),
+  Quiz(780, "Parameters act as _____ variables inside the method.", [
+    "Local",
+    "Global",
+    "Static",
+    "Constant",
+  ]),
+
+  // Lesson 80: The Return Statement: Getting Data back from a Method
+  Quiz(781, "What keyword is used to send a value back from a method?", [
+    "return",
+    "send",
+    "exit",
+    "out",
+  ]),
+  Quiz(782, "What happens when a 'return' statement is executed?", [
+    "The method terminates and sends a value to the caller",
+    "The method restarts",
+    "The app crashes",
+    "The counter increments",
+  ]),
+  Quiz(783, "Can a 'void' method use the 'return' keyword?", [
+    "Yes, but only by itself (return;) to exit early",
+    "No",
+    "Only to return 0",
+    "Only for strings",
+  ]),
+  Quiz(784, "If a method return type is 'int', what must it return?", [
+    "An integer value",
+    "A string",
+    "Nothing",
+    "A boolean",
+  ]),
+  Quiz(785, "Where does the returned value go?", [
+    "To the point where the method was called (the Caller)",
+    "To the console",
+    "To the database",
+    "It is deleted",
+  ]),
+  Quiz(
+    786,
+    "Can a method return more than one value using the 'return' keyword?",
+    [
+      "No, it returns only one value (or an object/array)",
+      "Yes, up to 5",
+      "Yes, separated by commas",
+      "Always",
+    ],
+  ),
+  Quiz(787, "What is a 'Caller'?", [
+    "The code that invokes the method",
+    "The method being executed",
+    "The compiler",
+    "The CPU",
+  ]),
+  Quiz(788, "Does a method have to have a return statement?", [
+    "Only if its return type is not void",
+    "Yes, always",
+    "No, never",
+    "Only if it is public",
+  ]),
+  Quiz(789, "Where is the return statement usually placed?", [
+    "At the end of the method logic",
+    "At the very start",
+    "In the class header",
+    "Outside the braces",
+  ]),
+  Quiz(
+    790,
+    "What is the return type of a method that returns 'true' or 'false'?",
+    ["bool", "int", "string", "void"],
+  ),
+
+  // Lesson 81: Static vs. Instance Methods: An Initial Look
+  Quiz(791, "What does the 'static' keyword mean for a method?", [
+    "The method belongs to the class, not an object",
+    "The method cannot be changed",
+    "The method is very slow",
+    "The method is private",
+  ]),
+  Quiz(792, "How do you call a 'Static Method'?", [
+    "Using the Class Name (e.g., Math.Sqrt)",
+    "Using an object name",
+    "Using the 'new' keyword",
+    "It calls itself",
+  ]),
+  Quiz(793, "How do you call an 'Instance Method'?", [
+    "Using an object created with 'new'",
+    "Using the Class Name",
+    "Using 'static' keyword",
+    "Directly in Main",
+  ]),
+  Quiz(794, "Which of these is a static method example?", [
+    "Console.WriteLine()",
+    "List.Add()",
+    "Random.Next()",
+    "String.Trim()",
+  ]),
+  Quiz(795, "A 'Class' is like a _____, and an 'Instance' is like the _____.", [
+    "Blueprint, House",
+    "Car, Engine",
+    "Monitor, Keyboard",
+    "Software, Hardware",
+  ]),
+  Quiz(
+    796,
+    "Can a static method access non-static (instance) variables directly?",
+    ["No", "Yes", "Only if public", "Only for integers"],
+  ),
+  Quiz(797, "Where are static methods stored in memory?", [
+    "In a special static area",
+    "On the Heap with objects",
+    "On the Stack",
+    "In the Cloud",
+  ]),
+  Quiz(798, "Why use static methods for math functions?", [
+    "Because they don't need to store unique object data",
+    "Because they are faster",
+    "Because they are safer",
+    "To save disk space",
+  ]),
+  Quiz(799, "Can an instance method call a static method?", [
+    "Yes",
+    "No",
+    "Only if private",
+    "Only in debug",
+  ]),
+  Quiz(800, "What is 'instantiation'?", [
+    "Creating an object from a class using 'new'",
+    "Deleting a method",
+    "Running a loop",
+    "Naming a variable",
+  ]),
+
+  // Lesson 82: Method Overloading: Same Name, Different Parameters
+  Quiz(801, "What is 'Method Overloading'?", [
+    "Having multiple methods with the same name but different parameters",
+    "A method that is too large",
+    "Calling a method too many times",
+    "A syntax error",
+  ]),
+  Quiz(802, "Which part of the method MUST be different for overloading?", [
+    "Parameter list (type, number, or order)",
+    "Return type only",
+    "Access modifier",
+    "Method name",
+  ]),
+  Quiz(803, "Can you overload a method by changing only the return type?", [
+    "No",
+    "Yes",
+    "Only for doubles",
+    "Only in static methods",
+  ]),
+  Quiz(804, "Why use overloading?", [
+    "To provide different ways to perform the same action",
+    "To make the app larger",
+    "To confuse the compiler",
+    "To avoid using classes",
+  ]),
+  Quiz(805, "What is 'Compile-time Polymorphism'?", [
+    "Method Overloading",
+    "Loops",
+    "Variables",
+    "Recursion",
+  ]),
+  Quiz(
+    806,
+    "If I have Add(int, int) and Add(double, double), which one runs for Add(1.5, 2.5)?",
+    ["Add(double, double)", "Add(int, int)", "Both", "None"],
+  ),
+  Quiz(807, "Does the parameter name matter for overloading?", [
+    "No, only the parameter type and count",
+    "Yes",
+    "Only for strings",
+    "Only in C#",
+  ]),
+  Quiz(808, "Is Add(int a, int b) and Add(int x, int y) an overload?", [
+    "No, they have the same signature",
+    "Yes",
+    "Only if static",
+    "Only for ints",
+  ]),
+  Quiz(809, "How many times can you overload a method?", [
+    "As many as needed, provided signatures are unique",
+    "Only twice",
+    "Up to 5",
+    "Once",
+  ]),
+  Quiz(810, "What decides which overloaded method to run?", [
+    "The arguments provided during the call",
+    "The CPU",
+    "The user",
+    "The return type",
+  ]),
+
+  // Lesson 83: Named and Optional Arguments: Making Methods Flexible
+  Quiz(811, "What is an 'Optional Parameter'?", [
+    "A parameter with a default value",
+    "A parameter that is never used",
+    "A private variable",
+    "A loop counter",
+  ]),
+  Quiz(812, "How do you define an optional parameter?", [
+    "void MyMethod(int x = 10)",
+    "void MyMethod(optional int x)",
+    "void MyMethod(int x?)",
+    "void MyMethod(int x : 10)",
+  ]),
+  Quiz(813, "Where must optional parameters be placed in the definition?", [
+    "After all required parameters",
+    "Before all parameters",
+    "Anywhere",
+    "In a separate class",
+  ]),
+  Quiz(814, "What is a 'Named Argument'?", [
+    "Passing an argument by specifying the parameter name (e.g., age: 25)",
+    "Naming a variable",
+    "A string argument",
+    "A static method",
+  ]),
+  Quiz(815, "What is the benefit of Named Arguments?", [
+    "Improves readability and allows arguments in any order",
+    "Makes code run faster",
+    "Uses less memory",
+    "Prevents errors",
+  ]),
+  Quiz(816, "In Greet(name: \"Sai\", msg: \"Hi\"), what is used?", [
+    "Named Arguments",
+    "Optional Parameters",
+    "Value Passing",
+    "Overloading",
+  ]),
+  Quiz(817, "Can you skip a required parameter by using names?", [
+    "No, all required parameters must be provided",
+    "Yes",
+    "Only for ints",
+    "Only in debug",
+  ]),
+  Quiz(818, "What is a 'Default Value'?", [
+    "The value used if an optional argument is not provided",
+    "Zero",
+    "Null",
+    "A logic error",
+  ]),
+  Quiz(819, "Does Greet(string n, string m = \"Hi\") allow Greet(\"Mao\")?", [
+    "Yes, m will be \"Hi\"",
+    "No",
+    "Only if public",
+    "Only for strings",
+  ]),
+  Quiz(820, "Named arguments use which symbol to link name and value?", [
+    "Colon (:)",
+    "Equal (=)",
+    "Arrow (=>)",
+    "Dot (.)",
+  ]),
+
+  // Lesson 84: Passing by Value (The Default Behavior)
+  Quiz(821, "What is the default way C# passes simple types to methods?", [
+    "Pass by Value",
+    "Pass by Reference",
+    "Pass by Name",
+    "Pass by Address",
+  ]),
+  Quiz(822, "What happens in 'Pass by Value'?", [
+    "A copy of the variable's value is sent to the method",
+    "The actual variable is sent",
+    "The memory address is sent",
+    "The variable is deleted",
+  ]),
+  Quiz(
+    823,
+    "If a method changes a 'value' parameter, does it affect the original variable?",
+    [
+      "No, it only changes the copy",
+      "Yes",
+      "Only for integers",
+      "Only if public",
+    ],
+  ),
+  Quiz(
+    824,
+    "Which memory area is used for local copies during pass by value?",
+    ["Stack", "Heap", "Disk", "Cloud"],
+  ),
+  Quiz(825, "Is 'Pass by Value' safer for data integrity?", [
+    "Yes, it prevents accidental modification of original data",
+    "No",
+    "Only for strings",
+    "Only in C#",
+  ]),
+  Quiz(826, "When you pass an object by value, what is copied?", [
+    "The reference (memory address)",
+    "The entire object data",
+    "Nothing",
+    "The class name",
+  ]),
+  Quiz(827, "Are 'int', 'bool', and 'double' value types?", [
+    "Yes",
+    "No",
+    "Only int",
+    "Only bool",
+  ]),
+  Quiz(828, "Can 'Pass by Value' be slow for very large structs?", [
+    "Yes, because it copies all the data",
+    "No",
+    "Only for classes",
+    "Only in debug",
+  ]),
+  Quiz(829, "Does 'string' behave like a value type during passing?", [
+    "Yes, because strings are immutable in C#",
+    "No",
+    "Only for long strings",
+    "Only in while loops",
+  ]),
+  Quiz(830, "What is 'Scope' in passing values?", [
+    "The region where a local variable or parameter is accessible",
+    "The speed of the method",
+    "The return type",
+    "The class name",
+  ]),
+
+  // Lesson 85: Passing by Reference (The 'ref' Keyword)
+  Quiz(831, "What does the 'ref' keyword do?", [
+    "Passes the actual variable (its address) instead of a copy",
+    "Makes a variable read-only",
+    "Returns a value",
+    "Creates a new object",
+  ]),
+  Quiz(
+    832,
+    "If a method changes a 'ref' parameter, does it affect the original variable?",
+    ["Yes", "No", "Only for strings", "Only in static methods"],
+  ),
+  Quiz(833, "Where must the 'ref' keyword be used?", [
+    "Both in the method definition and the call",
+    "Only in the definition",
+    "Only in the call",
+    "In the class header",
+  ]),
+  Quiz(834, "Must a 'ref' variable be initialized before being passed?", [
+    "Yes, it must have an initial value",
+    "No",
+    "Only for ints",
+    "Only for strings",
+  ]),
+  Quiz(835, "What is a 'Pointer' or 'Address'?", [
+    "A number representing where data is stored in memory",
+    "A type of loop",
+    "A method name",
+    "A variable name",
+  ]),
+  Quiz(836, "Why use 'ref'?", [
+    "To allow a method to modify the caller's variable",
+    "To make code faster",
+    "To save hard drive space",
+    "To hide data",
+  ]),
+  Quiz(837, "Is 'ref' required for classes to modify their properties?", [
+    "No, classes are reference types by default",
+    "Yes",
+    "Only for strings",
+    "Only in C# 11",
+  ]),
+  Quiz(838, "Can you pass a constant as a 'ref' argument?", [
+    "No, it must be a variable",
+    "Yes",
+    "Only for ints",
+    "Only in debug",
+  ]),
+  Quiz(839, "What is 'Explicit passing'?", [
+    "Requiring 'ref' at both sides to show intent",
+    "Using var",
+    "Using public",
+    "Using return",
+  ]),
+  Quiz(840, "Ref parameters enable _____ communication.", [
+    "Two-way (input and output)",
+    "One-way",
+    "Static",
+    "Infinite",
+  ]),
+
+  // Lesson 86: The 'out' Parameter: Returning Multiple Values
+  Quiz(841, "What is the primary purpose of the 'out' keyword?", [
+    "To return multiple values from a single method",
+    "To exit a method",
+    "To print data",
+    "To delete a variable",
+  ]),
+  Quiz(842, "How is 'out' different from 'ref'?", [
+    "'out' does not require initialization before passing",
+    "'out' is faster",
+    "'out' only works for strings",
+    "'out' is private",
+  ]),
+  Quiz(843, "Must an 'out' parameter be assigned a value inside the method?", [
+    "Yes, before the method returns",
+    "No",
+    "Only if public",
+    "Only for ints",
+  ]),
+  Quiz(844, "Can 'out' be used for input to the method?", [
+    "No, it is for output only",
+    "Yes",
+    "Only for doubles",
+    "Only in C#",
+  ]),
+  Quiz(845, "Which standard C# method uses 'out'?", [
+    "int.TryParse()",
+    "Console.WriteLine()",
+    "Math.Abs()",
+    "String.Concat()",
+  ]),
+  Quiz(846, "How many 'out' parameters can a method have?", [
+    "Multiple (as many as needed)",
+    "Only one",
+    "Up to 3",
+    "None",
+  ]),
+  Quiz(847, "Does 'out' work with the Stack or Heap?", [
+    "Stack (for the reference) and Heap (if it's an object)",
+    "Stack only",
+    "Heap only",
+    "None",
+  ]),
+  Quiz(848, "Can you use 'var' with 'out' in C# 7+ (e.g., out var x)?", [
+    "Yes (Inline declaration)",
+    "No",
+    "Only for ints",
+    "Only for strings",
+  ]),
+  Quiz(
+    849,
+    "When 'TryParse' returns false, what happens to the 'out' variable?",
+    [
+      "It is set to the default value (e.g., 0 for int)",
+      "It is deleted",
+      "It stays null",
+      "The app crashes",
+    ],
+  ),
+  Quiz(850, "Using 'out' is an alternative to creating a _____.", [
+    "Tuple or Class for returning multiple items",
+    "Loop",
+    "If statement",
+    "Variable",
+  ]),
+
+  // Lesson 87: The 'params' Keyword: Variable Argument Lengths
+  Quiz(851, "What does the 'params' keyword allow?", [
+    "Passing a variable number of arguments as an array",
+    "Returning multiple values",
+    "Static methods",
+    "Private classes",
+  ]),
+  Quiz(852, "Where must the 'params' parameter be located?", [
+    "At the end of the parameter list",
+    "At the beginning",
+    "Anywhere",
+    "In a separate method",
+  ]),
+  Quiz(853, "How many 'params' arrays can a method have?", [
+    "Only one",
+    "Unlimited",
+    "Two",
+    "Zero",
+  ]),
+  Quiz(854, "What data type must follow the 'params' keyword?", [
+    "An array type (e.g., int[])",
+    "A single integer",
+    "A string",
+    "A class name",
+  ]),
+  Quiz(855, "Can you call a params method with zero arguments?", [
+    "Yes, it receives an empty array",
+    "No",
+    "Only if void",
+    "Only in debug",
+  ]),
+  Quiz(856, "If I have Sum(params int[] nums), is Sum(1, 2, 3) valid?", [
+    "Yes",
+    "No",
+    "Only if using ref",
+    "Only in while loops",
+  ]),
+  Quiz(857, "Which Console method uses params?", [
+    "Console.WriteLine(string, params object[])",
+    "Console.Clear()",
+    "Console.Read()",
+    "Console.Beep()",
+  ]),
+  Quiz(858, "Does 'params' copy the whole array into memory?", [
+    "Yes, it wraps the arguments into a new array",
+    "No",
+    "Only for strings",
+    "Only in C#",
+  ]),
+  Quiz(859, "Can 'params' be used with 'ref' or 'out'?", [
+    "No",
+    "Yes",
+    "Only for ints",
+    "Only in static",
+  ]),
+  Quiz(860, "The arguments for 'params' are separated by _____.", [
+    "Commas",
+    "Dots",
+    "Spaces",
+    "Semicolons",
+  ]),
+
+  // Lesson 88: Local Functions: Nesting Logic inside a Method
+  Quiz(861, "What is a 'Local Function'?", [
+    "A method defined inside another method",
+    "A method in a different file",
+    "A private class",
+    "A variable",
+  ]),
+  Quiz(862, "Who can call a Local Function?", [
+    "Only the containing (outer) method",
+    "Any method in the class",
+    "The user",
+    "The Main method only",
+  ]),
+  Quiz(863, "Can a local function access variables from its outer method?", [
+    "Yes (Closure)",
+    "No",
+    "Only if static",
+    "Only if public",
+  ]),
+  Quiz(864, "Do local functions need access modifiers (like public)?", [
+    "No, they are always local to the method",
+    "Yes",
+    "Only if they return int",
+    "Only in C# 12",
+  ]),
+  Quiz(865, "Why use a local function?", [
+    "To organize helper logic that is only used in one place",
+    "To make code run faster",
+    "To save RAM",
+    "To create a web app",
+  ]),
+  Quiz(866, "Can you define a local function inside a loop?", [
+    "Yes",
+    "No",
+    "Only in C# 10",
+    "Only for strings",
+  ]),
+  Quiz(867, "What is a 'Closure'?", [
+    "A local function capturing variables from its parent scope",
+    "Ending a program",
+    "A private method",
+    "A syntax error",
+  ]),
+  Quiz(868, "Can a local function be static?", [
+    "Yes (in modern C#)",
+    "No",
+    "Only if it returns void",
+    "Only for numbers",
+  ]),
+  Quiz(869, "Where can a local function be placed inside the method?", [
+    "Anywhere (even after the return statement)",
+    "Only at the top",
+    "Only at the bottom",
+    "In the header",
+  ]),
+  Quiz(870, "Is a local function better than a private method?", [
+    "If the logic is never needed anywhere else (Encapsulation)",
+    "No",
+    "Always",
+    "Never",
+  ]),
+
+  // Lesson 89: Expression-Bodied Members: The => Shorthand
+  Quiz(871, "What is an 'Expression-Bodied Member'?", [
+    "A method that uses => instead of a full block { }",
+    "A math formula",
+    "A type of loop",
+    "A class body",
+  ]),
+  Quiz(872, "What symbol is used for expression-bodied methods?", [
+    "=> (Lambda operator)",
+    "->",
+    "==",
+    "::",
+  ]),
+  Quiz(873, "When can you use the shorthand => for a method?", [
+    "When the method consists of a single expression",
+    "Always",
+    "Only for math",
+    "Only for void methods",
+  ]),
+  Quiz(874, "Do you need the 'return' keyword with =>?", [
+    "No, it is implied (if not void)",
+    "Yes",
+    "Only for strings",
+    "Only in debug",
+  ]),
+  Quiz(875, "Example of expression-bodied: 'int Square(int x) => x * x;'", [
+    "True",
+    "False",
+    "Only in Java",
+    "Only for doubles",
+  ]),
+  Quiz(876, "Can a method with a loop use the => syntax?", [
+    "No, it must use a statement block { }",
+    "Yes",
+    "Only in C# 12",
+    "Only for integers",
+  ]),
+  Quiz(877, "Is => just 'syntactic sugar'?", [
+    "Yes, it is a shorter way to write the same logic",
+    "No, it's a new CPU feature",
+    "Yes, it tastes good",
+    "No, it's slower",
+  ]),
+  Quiz(878, "Can void methods use =>?", [
+    "Yes (e.g., void Print() => Console.Write(\"Hi\");)",
+    "No",
+    "Only for strings",
+    "Only in static",
+  ]),
+  Quiz(879, "What is the => symbol often called?", [
+    "Fat arrow",
+    "Thin arrow",
+    "Equal arrow",
+    "Pointer",
+  ]),
+  Quiz(880, "Why use expression-bodied members?", [
+    "To make the code more concise and readable",
+    "To make it run faster",
+    "To hide logic",
+    "To save battery",
+  ]),
+
+  // Lesson 90: Exercise: Shan Unit Converter
+  Quiz(881, "What is 'Modular Design'?", [
+    "Breaking an app into specific helper methods",
+    "Building a PC",
+    "Using many variables",
+    "A type of loop",
+  ]),
+  Quiz(882, "In the converter, why separate 'FeetToCubits' from 'Main'?", [
+    "To make the logic reusable and easier to test",
+    "To make it slower",
+    "To hide the math",
+    "To save memory",
+  ]),
+  Quiz(883, "What does the ':F2' format specifier do?", [
+    "Displays a number with 2 decimal places",
+    "Makes the font bold",
+    "Multiplies by 2",
+    "Finds the first index",
+  ]),
+  Quiz(884, "If a converter method is 'static', can it be called from Main?", [
+    "Yes, directly",
+    "No",
+    "Only if it is public",
+    "Only with 'new'",
+  ]),
+  Quiz(885, "What is 'Single Responsibility'?", [
+    "A method should do only one specific task (like converting)",
+    "A variable should have one name",
+    "The app should have one file",
+    "The user has one mouse",
+  ]),
+  Quiz(
+    886,
+    "In the exercise, what was the return type of the converter methods?",
+    ["double", "int", "string", "void"],
+  ),
+  Quiz(887, "What is 'Refactoring'?", [
+    "Improving the structure of code without changing its behavior",
+    "Writing code from scratch",
+    "Deleting files",
+    "Creating a database",
+  ]),
+  Quiz(888, "How do you handle user input in the converter?", [
+    "Console.ReadLine() combined with double.Parse()",
+    "Math.Sqrt",
+    "int.ToString",
+    "A loop",
+  ]),
+  Quiz(
+    889,
+    "Why use a 'ShowResult' method instead of writing to console in every method?",
+    [
+      "To avoid code duplication (DRY principle)",
+      "To make it slower",
+      "To use more variables",
+      "To prevent bugs",
+    ],
+  ),
+  Quiz(890, "What does 'DRY' stand for?", [
+    "Don't Repeat Yourself",
+    "Do Repeat Yesterday",
+    "Data Real Yield",
+    "Digital Read Yearly",
+  ]),
+
+  // Final Mixed Review Module 7
+  Quiz(891, "Keyword to exit a method and send a value back?", [
+    "return",
+    "exit",
+    "stop",
+    "break",
+  ]),
+  Quiz(892, "Method with same name but different params?", [
+    "Overloaded",
+    "Overwritten",
+    "Static",
+    "Private",
+  ]),
+  Quiz(893, "Operator used in expression-bodied methods?", [
+    "=>",
+    "++",
+    "--",
+    "??",
+  ]),
+  Quiz(894, "Keyword for variable number of arguments?", [
+    "params",
+    "many",
+    "array",
+    "list",
+  ]),
+  Quiz(895, "Keyword for returning multiple values through params?", [
+    "out",
+    "ref",
+    "in",
+    "void",
+  ]),
+  Quiz(896, "Access modifier for methods accessible only in the same class?", [
+    "private",
+    "public",
+    "protected",
+    "static",
+  ]),
+  Quiz(897, "Default return type if nothing is returned?", [
+    "void",
+    "int",
+    "null",
+    "empty",
+  ]),
+  Quiz(898, "Method that belongs to the class itself?", [
+    "Static",
+    "Instance",
+    "Global",
+    "Local",
+  ]),
+  Quiz(899, "Process of creating an object to use instance methods?", [
+    "Instantiation",
+    "Initialization",
+    "Iteration",
+    "Declaration",
+  ]),
+  Quiz(900, "Module 7 covers which main topic?", [
+    "Methods and Functions",
+    "Arrays",
+    "Loops",
+    "Variables",
+  ]),
+];
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
   csharpQuizM2,
   csharpQuizM3,
   csharpQuizM4,
   csharpQuizM5,
-  csharpQuizM6
+  csharpQuizM6,
+  csharpQuizM7,
 ];
