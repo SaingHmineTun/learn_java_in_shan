@@ -437,6 +437,20 @@ final Map<int, Lesson> csharpLessons = {
   10: Lesson(1, 10),
   11: Lesson(1, 11),
   12: Lesson(1, 12),
+  13: Lesson(2, 13),
+  14: Lesson(2, 14),
+  15: Lesson(2, 15),
+  16: Lesson(2, 16),
+  17: Lesson(2, 17),
+  18: Lesson(2, 18),
+  19: Lesson(2, 19),
+  20: Lesson(2, 20),
+  21: Lesson(2, 21),
+  22: Lesson(2, 22),
+  23: Lesson(2, 23),
+  24: Lesson(2, 24),
+  25: Lesson(2, 25),
+  26: Lesson(2, 26),
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -566,6 +580,139 @@ final List<Quiz> csharpQuizM1 = [
   Quiz(99, "Which of these characters cannot be used in a variable name?", ["@", "Letters", "Numbers", "Underscore"]),
   Quiz(100, "Congratulations! You reached the end. What is C# named after?", ["The musical notation 'Sharp'", "A sharp knife", "A smart person", "A city in Europe"]),
 ];
+final List<Quiz> csharpQuizM2 = [
+  // Lesson 13: Basic Syntax
+  Quiz(101, "Which symbol is used to end most statements in C#?", [";", ":", ".", ","]),
+  Quiz(102, "What characters are used to define a 'Code Block'?", ["{ }", "( )", "[ ]", "< >"]),
+  Quiz(103, "Is C# a case-sensitive language?", ["Yes", "No", "Only for strings", "Only for class names"]),
+  Quiz(104, "Which of these is a valid statement in C#?", ["int x = 5;", "int x = 5", "x := 5;", "5 = int x;"]),
+  Quiz(105, "What happens if you forget a semicolon at the end of a statement?", ["A compilation error occurs", "The program runs slower", "The computer ignores the line", "A runtime crash occurs"]),
+
+  // Lesson 14: Variables & Naming
+  Quiz(106, "Which naming convention is recommended for local variables in C#?", ["camelCase", "PascalCase", "snake_case", "kebab-case"]),
+  Quiz(107, "What is 'Initialization'?", ["Assigning the first value to a variable", "Choosing a name for a variable", "Deleting a variable", "Changing a variable's type"]),
+  Quiz(108, "Which of the following is an invalid variable name?", ["1stPlace", "_score", "user_name", "totalAmount"]),
+  Quiz(109, "Can you declare a variable without giving it a type in C# (using traditional declaration)?", ["No, every variable needs a type", "Yes, always", "Only for numbers", "Only for text"]),
+  Quiz(110, "Which keyword is a 'Reserved Keyword' that cannot be used as a variable name?", ["class", "student", "myValue", "isShan"]),
+
+  // Lesson 15: Integral Numeric Types
+  Quiz(111, "Which data type is the standard choice for whole numbers?", ["int", "byte", "long", "double"]),
+  Quiz(112, "How many bits are in a 'byte' data type?", ["8 bits", "16 bits", "32 bits", "64 bits"]),
+  Quiz(113, "Which type should you use for very large numbers exceeding 2 billion?", ["long", "short", "int", "sbyte"]),
+  Quiz(114, "What is the range of a 'byte'?", ["0 to 255", "-128 to 127", "0 to 65535", "-32768 to 32767"]),
+  Quiz(115, "What character can be used as a digit separator for readability (e.g., 1_000_000)?", ["Underscore (_)", "Comma (,)", "Space ( )", "Dot (.)"]),
+
+  // Lesson 16: Floating-Point Types
+  Quiz(116, "Which type is best for financial and monetary calculations?", ["decimal", "float", "double", "int"]),
+  Quiz(117, "What suffix must be added to a literal number to make it a 'float'?", ["f", "d", "m", "l"]),
+  Quiz(118, "Which floating-point type is the default for numbers with decimals?", ["double", "float", "decimal", "real"]),
+  Quiz(119, "What is 'Precision' in floating-point types?", ["The number of digits it can accurately hold", "How fast the number calculates", "The physical size of the number", "The name of the variable"]),
+  Quiz(120, "What is the suffix for a 'decimal' literal?", ["m", "f", "d", "dec"]),
+
+  // Lesson 17: Boolean Type
+  Quiz(121, "What are the only two possible values for a 'bool'?", ["true and false", "0 and 1", "yes and no", "high and low"]),
+  Quiz(122, "Which operator checks if two values are exactly equal?", ["==", "=", "!=", "==="]),
+  Quiz(123, "Which operator represents 'Not Equal'?", ["!=", "<>", "==", "not="]),
+  Quiz(124, "What does the expression (10 > 5) return?", ["true", "false", "10", "Error"]),
+  Quiz(125, "Bools are commonly used for what purpose in programming?", ["Decision making and logic", "Storing long text", "Mathematical division", "Naming files"]),
+
+  // Lesson 18: Char and String
+  Quiz(126, "Which symbol is used to wrap a 'char' literal?", ["Single quotes ( ' )", "Double quotes ( \" )", "Backticks ( ` )", "Slashes ( / )"]),
+  Quiz(127, "How many characters can a 'char' variable hold?", ["Exactly 1", "Up to 255", "Unlimited", "0"]),
+  Quiz(128, "Which type is used to store a sequence of text characters?", ["string", "char", "text", "word"]),
+  Quiz(129, "What does the escape sequence '\\n' represent?", ["New line", "Tab space", "Backslash", "Null"]),
+  Quiz(130, "What is the result of \"Hello\".Length?", ["5", "4", "6", "0"]),
+
+  // Lesson 19: Interpolation and Symbols
+  Quiz(131, "Which symbol is used at the start of a string for Interpolation?", ["\$", "@", "#", "&"]),
+  Quiz(132, "Which symbol is used for a 'Verbatim String' to ignore escape characters?", ["@", "\$", "\\", "/"]),
+  Quiz(133, "In string interpolation, variables are placed inside which brackets?", ["{ }", "( )", "[ ]", "< >"]),
+  Quiz(134, "What is 'Concatenation'?", ["Joining two or more strings using +", "Deleting part of a string", "Converting text to numbers", "Comparing two strings"]),
+  Quiz(135, "Which string type is best for writing file paths like C:\\Users\\Name?", ["Verbatim String (@)", "Interpolated String (\$)", "Normal String", "Char"]),
+
+  // Lesson 20: The 'var' Keyword
+  Quiz(136, "What is the 'var' keyword used for?", ["Implicitly typed local variables", "Creating constants", "Naming classes", "Global variables"]),
+  Quiz(137, "When using 'var', when must you initialize the variable?", ["Immediately on the same line", "Anytime in the code", "Only after a loop", "It is not required"]),
+  Quiz(138, "Can you change the type of a 'var' variable after it is assigned?", ["No, it is strongly typed", "Yes, it is dynamic", "Only if it was an int", "Only if you use a cast"]),
+  Quiz(139, "Where can 'var' be used?", ["Inside methods as local variables", "As class fields", "As method parameters", "As return types"]),
+  Quiz(140, "If you write 'var x = \"Hi\";', what type does 'x' become?", ["string", "var", "object", "dynamic"]),
+
+  // Lesson 21: const and readonly
+  Quiz(141, "Which keyword creates a value that can never change after compilation?", ["const", "readonly", "var", "static"]),
+  Quiz(142, "Can a 'const' value be calculated at runtime?", ["No, it must be a constant value known at compile-time", "Yes, always", "Only for math", "Only in the Main method"]),
+  Quiz(143, "Which can be assigned a value during the constructor/runtime?", ["readonly", "const", "both", "neither"]),
+  Quiz(144, "What is the naming convention for 'const' values usually?", ["PascalCase or UPPER_CASE", "camelCase", "snake_case", "kebab-case"]),
+  Quiz(145, "If you try to change a const variable, what happens?", ["Compilation error", "The computer ignores it", "The value changes anyway", "The app crashes at runtime"]),
+
+  // Lesson 22: Stack and Heap
+  Quiz(146, "Where are Value Types (like int, bool) usually stored?", ["Stack", "Heap", "Hard Drive", "Cloud"]),
+  Quiz(147, "Where are Reference Types (like classes, arrays) stored?", ["Heap", "Stack", "CPU Cache", "Registers"]),
+  Quiz(148, "What is stored in the Stack for a Reference Type?", ["The memory address (Reference)", "The actual data", "Nothing", "The variable name"]),
+  Quiz(149, "Which memory area is managed by the Garbage Collector?", ["Heap", "Stack", "Static memory", "ROM"]),
+  Quiz(150, "Which memory is generally faster to access?", ["Stack", "Heap", "They are equal", "Hard Drive"]),
+
+  // Lesson 23: Nullable Types
+  Quiz(151, "Which symbol makes a value type nullable?", ["?", "!", "*", "&"]),
+  Quiz(152, "What does 'null' mean?", ["The absence of a value / Empty", "Zero", "False", "An error"]),
+  Quiz(153, "Which operator (??) provides a default value for a null variable?", ["Null-Coalescing Operator", "Ternary Operator", "Dot Operator", "Lambda Operator"]),
+  Quiz(154, "Which property checks if a Nullable variable has a value?", [".HasValue", ".IsNotNull", ".Exists", ".Status"]),
+  Quiz(155, "Can a standard 'int' be null without the '?' symbol?", ["No", "Yes", "Only in .NET 8+", "Only in debug mode"]),
+
+  // Lesson 24: Implicit Casting
+  Quiz(156, "What is Implicit Casting?", ["Converting a smaller type to a larger type automatically", "Forcing a conversion", "Converting text to numbers", "Deleting a variable"]),
+  Quiz(157, "Is data lost during Implicit Casting?", ["No", "Yes", "Only for booleans", "Sometimes"]),
+  Quiz(158, "Which is a valid implicit cast?", ["int to double", "double to int", "string to int", "long to byte"]),
+  Quiz(159, "Why does C# allow int to long implicitly?", ["Because a long is larger and can fit all int values", "Because they have the same name", "Because Microsoft decided so", "Because it makes the code faster"]),
+  Quiz(160, "Implicit casting is also known as _____ conversion.", ["Widening", "Narrowing", "Forced", "Hidden"]),
+
+  // Lesson 25: Explicit Casting
+  Quiz(161, "How do you perform Explicit Casting?", ["Using parentheses with the type (int)x", "Using the + symbol", "It happens automatically", "Using the 'var' keyword"]),
+  Quiz(162, "When is Explicit Casting required?", ["When converting a larger type to a smaller type (Narrowing)", "When adding two numbers", "When printing text", "When starting the program"]),
+  Quiz(163, "What happens to the decimal part when casting double to int?", ["It is truncated (chopped off)", "It is rounded to the nearest", "It is kept hidden", "It causes an error"]),
+  Quiz(164, "Which keyword prevents 'Overflow' during casting by throwing an error?", ["checked", "validate", "secure", "strict"]),
+  Quiz(165, "Casting a huge 'long' into a small 'byte' without checking can cause _____.", ["Data loss / Overflow", "The computer to melt", "A faster program", "Better precision"]),
+
+  // Lesson 26: Convert and Parsing
+  Quiz(166, "Which method is safest for converting user input to a number?", ["int.TryParse()", "int.Parse()", "Convert.ToInt32()", "(int)input"]),
+  Quiz(167, "What does int.Parse() do if the text is not a number?", ["Throws an exception (Crashes)", "Returns 0", "Returns null", "Asks the user again"]),
+  Quiz(168, "What does int.TryParse() return as its primary result?", ["A boolean (True if successful)", "The converted number", "A string", "An error code"]),
+  Quiz(169, "In TryParse, which keyword is used to send the result to a variable?", ["out", "ref", "in", "to"]),
+  Quiz(170, "Which class provides methods like ToInt32, ToDouble, and ToString?", ["Convert", "Transform", "Parser", "Cast"]),
+
+  // Mixed Module 2
+  Quiz(171, "What is the size of an 'int'?", ["32-bit", "16-bit", "64-bit", "8-bit"]),
+  Quiz(172, "What is the size of a 'long'?", ["64-bit", "32-bit", "16-bit", "128-bit"]),
+  Quiz(173, "Which of these is a Reference Type?", ["string", "int", "bool", "char"]),
+  Quiz(174, "Which of these is a Value Type?", ["double", "string", "class", "array"]),
+  Quiz(175, "What is the default value of an uninitialized int?", ["0", "null", "1", "-1"]),
+  Quiz(176, "What is the default value of a bool?", ["false", "true", "null", "0"]),
+  Quiz(177, "Can you store the letter 'A' in a double?", ["No", "Yes", "Only if you cast it", "Only in Shan language"]),
+  Quiz(178, "What is 'Syntax'?", ["The rules for the structure of code", "The speed of the program", "The size of the app", "A type of variable"]),
+  Quiz(179, "Which symbol is used for comments in C#?", ["//", "##", "--", "%%"]),
+  Quiz(180, "Which is used to store multiple characters of text?", ["string", "char", "byte", "long"]),
+  Quiz(181, "What does 'Strongly Typed' mean?", ["Variables must stay within their declared type", "The code is hard to read", "The program is very powerful", "You must use var for everything"]),
+  Quiz(182, "Which data type has the most precision for decimals?", ["decimal", "double", "float", "int"]),
+  Quiz(183, "How do you represent a 'char' in code?", ["'Z'", "\"Z\"", "Z", "(Z)"]),
+  Quiz(184, "Which operator is used for assignment?", ["=", "==", ":=", "->"]),
+  Quiz(185, "What does 'out' do in TryParse?", ["It allows a method to return more than one value", "It prints the result", "It exits the program", "It hides the variable"]),
+  Quiz(186, "Is 'int' an alias for 'System.Int32'?", ["Yes", "No", "Only on Linux", "Only in old versions"]),
+  Quiz(187, "Which type stores 16-bit Unicode characters?", ["char", "byte", "string", "long"]),
+  Quiz(188, "What is 'Scope'?", ["The region of code where a variable is accessible", "The name of the project", "The version of .NET", "A debugging tool"]),
+  Quiz(189, "Can a local variable be used before it is declared?", ["No", "Yes", "Only in loops", "Only if it is static"]),
+  Quiz(190, "What is the max value of a byte?", ["255", "127", "100", "1024"]),
+  Quiz(191, "Which keyword is used for a constant?", ["const", "stable", "fixed", "permanent"]),
+  Quiz(192, "How do you write 5 million as an int with digit separators?", ["5_000_000", "5,000,000", "5.000.000", "5 000 000"]),
+  Quiz(193, "What happens to the Stack when a method finishes?", ["The variables in that scope are removed", "It is saved to the disk", "It stays there forever", "It grows larger"]),
+  Quiz(194, "Which type is a 64-bit integer?", ["long", "int", "short", "double"]),
+  Quiz(195, "Which type is a 32-bit floating point?", ["float", "double", "decimal", "int"]),
+  Quiz(196, "What is the result of 10 / 3 in integer math?", ["3", "3.33", "4", "0"]),
+  Quiz(197, "What suffix is used for 'long' literals?", ["L", "F", "M", "D"]),
+  Quiz(198, "Which keyword is used to check for overflows?", ["checked", "try", "catch", "final"]),
+  Quiz(199, "What is the keyword for the 'true/false' type?", ["bool", "boolean", "bit", "logic"]),
+  Quiz(200, "What does C# use for the 'empty' reference?", ["null", "nil", "None", "undefined"]),
+];
+
 final List<List<Quiz>> csharpQuizzes = [
-  csharpQuizM1
+  csharpQuizM1,
+  csharpQuizM2
 ];
