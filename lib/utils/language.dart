@@ -9,7 +9,8 @@ const languages = [
   "js",
   "ts",
   "c",
-  "haskell"
+  "haskell",
+  "csharp"
 ];
 const fullName = {
   "basic": "Computer Basic",
@@ -22,5 +23,6 @@ const fullName = {
   "js": "Javascript in Shan",
   "ts": "Typescript in Shan",
   "c": "C in Shan",
-  "haskell": "Haskell in Shan"
+  "haskell": "Haskell in Shan",
+  "csharp": "C# in Shan"
 };

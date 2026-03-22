@@ -68,6 +68,11 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFFA8B9CC),
           'icon': DevIcons.cPlain,
         };
+      case 'csharp':
+        return {
+          'color': const Color(0xFF512BD4), // .NET / C# Purple
+          'icon': DevIcons.csharpPlain,
+        };
       default:
         return {
           'color': kBrandGold, // ၸႂ်ႉ Constant ၶေႃႈၸဝ်ႈၶူးမိူၼ်ၵဝ်ႇ
