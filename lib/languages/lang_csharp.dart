@@ -231,6 +231,7 @@ const Map<int, Map<int, String>> csharpModules = {
     165: "Polymorphism through Interfaces: Writing Decoupled Code",
     166: "Exercise: Designing a 'Shan Multimedia Player' (Audio and Video)",
   },
+  //  14: "Static Members and Extension Methods",
   14: {
     167: "The 'static' Keyword: Class-Level vs. Instance-Level",
     168: "Static Fields: Sharing Data Across All Objects",
@@ -243,6 +244,7 @@ const Map<int, Map<int, String>> csharpModules = {
     175: "Extension Methods vs. Instance Methods: Priority and Naming",
     176: "Exercise: Building a 'Shan String Utility' Library",
   },
+  //  15: "Generic Collections (List<T>, Dictionary<K,V>)",
   15: {
     177: "Introduction to Generics: Why <T> is a Game Changer",
     178: "ArrayList vs. List<T>: The Evolution of Collections and Type Safety",
@@ -608,6 +610,16 @@ final Map<int, Lesson> csharpLessons = {
   164: Lesson(13, 164),
   165: Lesson(13, 165),
   166: Lesson(13, 166),
+  167: Lesson(14, 167),
+  168: Lesson(14, 168),
+  169: Lesson(14, 169),
+  170: Lesson(14, 170),
+  171: Lesson(14, 171),
+  172: Lesson(14, 172),
+  173: Lesson(14, 173),
+  174: Lesson(14, 174),
+  175: Lesson(14, 175),
+  176: Lesson(14, 176),
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -7542,6 +7554,127 @@ final List<Quiz> csharpQuizM13 = [
   Quiz(1649, "Does an interface have its own memory on the heap?", ["No, only the objects implementing it do", "Yes", "Only for static members", "Only in C# 12"]),
   Quiz(1650, "Module 13 covers _____.", ["Abstraction and Interfaces", "Variables", "Loops", "Classes"]),
 ];
+final List<Quiz> csharpQuizM14 = [
+  // Lesson 167: The 'static' Keyword: Class-Level vs. Instance-Level
+  Quiz(1651, "What does the 'static' keyword mean in C#?", ["The member belongs to the class itself, not to a specific object", "The member cannot be changed", "The member is only visible inside the class", "The member is deleted after use"]),
+  Quiz(1652, "Static members are also known as _____ members.", ["Class-level", "Instance-level", "Object-level", "Local-level"]),
+  Quiz(1653, "Instance members are accessed using _____, while static members are accessed using _____.", ["An object, The class name", "The class name, An object", "A pointer, A reference", "Keywords, Strings"]),
+  Quiz(1654, "Which memory area stores static members in .NET?", ["High-Frequency Heap / Static Area", "The Stack", "The Garbage Collector", "The CPU Cache"]),
+  Quiz(1655, "How many copies of a static field exist in memory, regardless of how many objects are created?", ["Only one", "One for each object", "Two", "Zero"]),
+  Quiz(1656, "Can you access a static member using 'this' keyword?", ["No, 'this' refers to the current object instance", "Yes, always", "Only if it is public", "Only in C# 12"]),
+  Quiz(1657, "Static members are initialized _____.", ["When the class is first loaded", "Every time an object is created", "Only in the Main method", "Manually by the user"]),
+  Quiz(1658, "Is 'public static string Name;' an instance variable?", ["No, it is a class variable", "Yes", "Only if used in a loop", "Only for strings"]),
+  Quiz(1659, "Instance-level data is unique to each _____, while class-level data is shared by ____.", ["Object, All objects", "Method, Properties", "User, Developers", "File, Namespaces"]),
+  Quiz(1660, "Which keyword indicates a member is NOT static?", ["(No keyword / Default)", "instance", "dynamic", "new"]),
+
+  // Lesson 168: Static Fields: Sharing Data Across All Objects
+  Quiz(1661, "What is a common use for a static field?", ["Sharing data like a counter across all objects", "Storing a user's unique ID", "Creating local loop variables", "Defining private constants"]),
+  Quiz(1662, "If one object changes a static field, do other objects see the change?", ["Yes, they all share the same memory location", "No", "Only if they are in the same method", "Only for integers"]),
+  Quiz(1663, "How would you increment a static 'Count' variable in a constructor?", ["ClassName.Count++;", "this.Count++;", "Count = 1;", "new Count();"]),
+  Quiz(1664, "Static fields are ideal for _____.", ["Global constants or shared state", "Storing temporary user input", "Holding many large images", "Loop counters"]),
+  Quiz(1665, "What happens to a static field when an object is garbage collected?", ["Nothing, it lives as long as the App runs", "It is deleted", "It resets to zero", "It becomes private"]),
+  Quiz(1666, "Can a static field be marked as 'readonly'?", ["Yes", "No", "Only for strings", "Only in C# 11"]),
+  Quiz(1667, "Static fields are initialized to _____ by default if not assigned.", ["Their default type value (e.g., 0 or null)", "Empty string", "Random value", "Error"]),
+  Quiz(1668, "Are static fields thread-safe by default?", ["No, manual synchronization may be needed", "Yes, always", "Only in C# 12", "Only for booleans"]),
+  Quiz(1669, "A static field is created in the _____.", ["Static storage area", "Stack", "Local memory", "Disk"]),
+  Quiz(1670, "Use a static field when you want to 'remember' something _____.", ["Across all instances of a class", "Only inside one method", "For only one user", "In a database"]),
+
+  // Lesson 169: Static Methods: Building Utility and Helper Functions
+  Quiz(1671, "Which of these is a static method in the C# standard library?", ["Math.Sqrt()", "List.Add()", "String.Trim()", "File.Read() - instance version"]),
+  Quiz(1672, "A static method can ONLY access _____.", ["Other static members of the same class", "Instance fields", "The 'this' keyword", "Private properties of objects"]),
+  Quiz(1673, "Can a static method call an instance method directly?", ["No, because there is no 'this' context", "Yes", "Only if both are public", "Only for integers"]),
+  Quiz(1674, "Static methods are best for _____ tasks.", ["Input/Output or Math utility", "Maintaining object state", "Setting private object fields", "Handling UI events"]),
+  Quiz(1675, "To call a static method 'DoWork()' in class 'Tool', you write:", ["Tool.DoWork();", "new Tool().DoWork();", "this.DoWork();", "DoWork(Tool);"]),
+  Quiz(1676, "Static methods are often called _____.", ["Stateless methods", "Dynamic methods", "Private methods", "Constructors"]),
+  Quiz(1677, "Can you overload static methods?", ["Yes", "No", "Only by return type", "Only in C# 10"]),
+  Quiz(1678, "Why can't a static method use the 'this' keyword?", ["Because 'this' refers to an instance, and static methods have no instance", "Because it's a bug", "Because it's private", "It actually can"]),
+  Quiz(1679, "Static methods reside in memory _____.", ["Once for the entire class", "Once for every object", "Inside the stack", "In the CPU registers"]),
+  Quiz(1680, "A static method that converts Currency is an example of a _____.", ["Utility / Helper function", "Constructor", "Destructor", "Event handler"]),
+
+  // Lesson 170: Static Constructors: Initializing Global State Safely
+  Quiz(1681, "What is a Static Constructor used for?", ["To initialize static fields or global state once", "To create a new object", "To delete static data", "To initialize instance properties"]),
+  Quiz(1682, "A static constructor is called _____.", ["Automatically before the first instance is created or static member accessed", "Manually by the user", "Every time 'new' is used", "At the end of the program"]),
+  Quiz(1683, "Can a static constructor have parameters?", ["No", "Yes", "Only one", "Only if it is public"]),
+  Quiz(1684, "Which access modifier can you use with a static constructor?", ["None (Modifiers are not allowed)", "public", "private", "protected"]),
+  Quiz(1685, "How many times does a static constructor run in the app's lifetime?", ["Exactly once", "Every time an object is made", "Once per method call", "Zero"]),
+  Quiz(1686, "If a class has both a static and an instance constructor, which runs first?", ["The static constructor", "The instance constructor", "They run together", "It's random"]),
+  Quiz(1687, "Static constructors are useful for _____.", ["Complex initialization like reading config files", "Setting user names", "Closing database connections", "Looping"]),
+  Quiz(1688, "Can you call a static constructor manually?", ["No, the .NET runtime calls it", "Yes", "Only in the Main method", "Only via reflection"]),
+  Quiz(1689, "Static constructors are defined using which syntax?", ["static ClassName() { }", "public static ClassName()", "void static ClassName()", "ClassName static()"]),
+  Quiz(1690, "Does a static constructor run if no members of the class are ever used?", ["No", "Yes", "Only in Debug mode", "Always"]),
+
+  // Lesson 171: Static Classes: Creating Toolkits (The 'Math' Class Pattern)
+  Quiz(1691, "What is a Static Class?", ["A class that can only contain static members and cannot be instantiated", "A class that stays still", "A class with no methods", "A class that is private"]),
+  Quiz(1692, "Can you use the 'new' keyword with a static class?", ["No (Compile-time error)", "Yes", "Only if it has a constructor", "Only in C# 12"]),
+  Quiz(1693, "A static class is implicitly _____.", ["Sealed and Abstract (cannot be inherited or instantiated)", "Public and Virtual", "Private and Static", "Dynamic"]),
+  Quiz(1694, "Which keyword must be placed before every member of a static class?", ["static", "public", "const", "readonly"]),
+  Quiz(1695, "What is a famous example of a static class in C#?", ["System.Math", "System.Collections.Generic.List", "System.String", "System.Random"]),
+  Quiz(1696, "Static classes are used as _____ for related methods.", ["Containers / Toolkits", "Blueprints", "Interfaces", "Events"]),
+  Quiz(1697, "Can a static class inherit from another class (other than Object)?", ["No", "Yes", "Only if the parent is static", "Only for interfaces"]),
+  Quiz(1698, "Does a static class have an instance constructor?", ["No", "Yes", "Only a private one", "Only in C# 10"]),
+  Quiz(1699, "A static class makes the code more _____ by grouping utilities.", ["Organized", "Complex", "Slow", "Private"]),
+  Quiz(1700, "Can a static class contain instance properties?", ["No", "Yes", "Only if they are public", "Only for strings"]),
+
+  // Lesson 172: Introduction to Extension Methods: The 'this' Parameter
+  Quiz(1701, "What is an Extension Method?", ["A way to add new methods to existing types without modifying the source code", "A method that is very long", "A method that inherits from another", "A type of constructor"]),
+  Quiz(1702, "Where must an extension method be defined?", ["Inside a static, non-generic class", "Inside a normal class", "Inside an interface", "In the Main method"]),
+  Quiz(1703, "Which keyword is used to identify an extension method's first parameter?", ["this", "base", "static", "new"]),
+  Quiz(1704, "In 'public static void MyExt(this string s)', what is being extended?", ["The string type", "The MyExt method", "The static class", "The keyword this"]),
+  Quiz(1705, "Extension methods allow you to _____ a class's functionality.", ["Extend", "Delete", "Hide", "Enclose"]),
+  Quiz(1706, "Do extension methods appear in IntelliSense for the type they extend?", ["Yes, with a special arrow icon", "No", "Only if you type the full name", "Only in Visual Studio Code"]),
+  Quiz(1707, "Are extension methods actually added to the original class code?", ["No, it's just 'syntactic sugar' for a static call", "Yes", "Only at runtime", "Only for Microsoft classes"]),
+  Quiz(1708, "To use 'name.SayHi()', the first parameter of SayHi must be:", ["this string name", "string name", "this Name", "static string name"]),
+  Quiz(1709, "Extension methods make code more _____.", ["Readable and 'Fluent'", "Confusing", "Private", "Efficient at assembly level"]),
+  Quiz(1710, "Can you extend a 'sealed' class using extension methods?", ["Yes (this is one of their main benefits)", "No", "Only if you have the source code", "Only in C# 12"]),
+
+  // Lesson 173: Rules for Extension Methods: Static Class and Namespace Requirements
+  Quiz(1711, "What is the first rule of extension methods?", ["They must be defined in a static class", "They must be private", "They must be in the same file", "They must use the base keyword"]),
+  Quiz(1712, "To use an extension method in a different namespace, you must:", ["Add a 'using' directive for that namespace", "Rewrite the method", "Make the method private", "Restart Visual Studio"]),
+  Quiz(1713, "Can an extension method access private members of the class it extends?", ["No, it only has access to public members", "Yes", "Only if they are protected", "Only for strings"]),
+  Quiz(1714, "If an extension method and an instance method have the same signature, which wins?", ["The instance method always takes priority", "The extension method", "It throws an error", "They run together"]),
+  Quiz(1715, "Can you have an extension method with multiple parameters?", ["Yes, but only the first one has the 'this' keyword", "No, only one", "Only if they are all static", "Only for integers"]),
+  Quiz(1716, "Is 'public void MyExt(this string s)' valid?", ["No, the method must be 'static'", "Yes", "Only in C# 9", "Only if it is public"]),
+  Quiz(1717, "Extension methods are essentially _____ methods called with instance syntax.", ["Static", "Private", "Virtual", "Abstract"]),
+  Quiz(1718, "Can you define an extension method inside a nested class?", ["Only if the outer and inner classes are static", "Yes", "No", "Only in C# 11"]),
+  Quiz(1719, "Extension methods belong to which namespace?", ["The namespace of the static class they are defined in", "The System namespace", "The global namespace", "The class they extend"]),
+  Quiz(1720, "What happens if you define two extension methods with the same name in different namespaces?", ["You must specify which one to use via 'using' or full name", "The compiler crashes", "It picks the first one alphabetically", "It's ignored"]),
+
+  // Lesson 174: Extending Built-in Types (Strings, Integers, and Lists)
+  Quiz(1721, "Which built-in type is most commonly extended?", ["string", "bool", "void", "byte"]),
+  Quiz(1722, "How would you extend 'int' to check if a number is even?", ["public static bool IsEven(this int n)", "public bool IsEven(int n)", "static IsEven(int n)", "this int.IsEven()"]),
+  Quiz(1723, "Can you create extension methods for 'List<T>'?", ["Yes, allowing you to add utility to any list", "No", "Only for List<string>", "Only in C# 12"]),
+  Quiz(1724, "Extending 'double' to format currency is a good use of:", ["Extension Methods", "Constructors", "Inheritance", "Abstract Classes"]),
+  Quiz(1725, "Built-in types like 'DateTime' can be extended to:", ["Add custom formatting or business logic", "Change the current time", "Delete the class", "Make it static"]),
+  Quiz(1726, "When extending 'object', the method becomes available to:", ["Every type in C#", "Only strings", "Only integers", "Nothing"]),
+  Quiz(1727, "Extension methods on 'IEnumerable' are the foundation of:", ["LINQ", "Windows Forms", "ASP.NET", "Unity"]),
+  Quiz(1728, "Is '10.IsPositive()' a valid call if an extension exists?", ["Yes", "No, only variables can call it", "Only if 10 is a string", "Only in C# 12"]),
+  Quiz(1729, "Extending 'string' helps avoid _____.", ["Repeating common string manipulation code", "Slow loops", "Memory leaks", "Private access"]),
+  Quiz(1730, "A 'Shan String' extension library is a collection of:", ["Static methods for string processing", "New classes", "Database tables", "UI buttons"]),
+
+  // Lesson 175: Extension Methods vs. Instance Methods: Priority and Naming
+  Quiz(1731, "C# looks for _____ methods before _____ methods.", ["Instance, Extension", "Extension, Instance", "Static, Virtual", "Private, Public"]),
+  Quiz(1732, "If you add an extension method 'Trim()' to the string class, what happens?", ["It is ignored because string already has a 'Trim()' instance method", "It replaces the original", "The app crashes", "Both run"]),
+  Quiz(1733, "Why does C# prioritize instance methods?", ["To maintain the integrity and expectations of the original class design", "Because they are faster", "It's a mistake in C# 1.0", "To save memory"]),
+  Quiz(1734, "Can an extension method 'shadow' an instance method if it has different parameters?", ["Yes, it's treated as an overload", "No", "Only in C# 12", "Only for ints"]),
+  Quiz(1735, "What is 'Method Resolution'?", ["The process where the compiler chooses the best method to call", "A screen setting", "A type of loop", "A private class"]),
+  Quiz(1736, "To avoid naming conflicts, extension methods should have _____.", ["Unique or specific names", "Short names", "Names starting with 'Ext'", "No names"]),
+  Quiz(1737, "If you MUST call the extension method over a conflicting instance method, how?", ["Call it as a normal static method (StaticClass.Method(obj))", "Use the 'base' keyword", "Use 'this.'", "It's impossible"]),
+  Quiz(1738, "Shadowing usually occurs when _____.", ["A class is updated with a new method that matches your old extension", "You delete a class", "You use 'new'", "You use 'static'"]),
+  Quiz(1739, "Should you extend every class with many methods?", ["No, it can clutter IntelliSense and cause confusion", "Yes, always", "Only for strings", "Only in C# 11"]),
+  Quiz(1740, "Naming a 'string' extension 'ToString()' is _____.", ["A bad idea (will be ignored)", "Great for consistency", "Required", "A static error"]),
+
+  // Lesson 176: Exercise: Building a 'Shan String Utility' Library
+  Quiz(1741, "What was the goal of the Shan String Utility exercise?", ["To create a reusable toolkit for Shan language string processing", "To build a calculator", "To play music", "To manage a database"]),
+  Quiz(1742, "Using 'userName.ToShanGreeting()' is an example of _____ syntax.", ["Fluent / Extension", "Complex", "Legacy", "Abstract"]),
+  Quiz(1743, "A 'RemoveNumbers()' extension uses which tool internally?", ["Regex or Loop logic", "A constructor", "A database", "An event"]),
+  Quiz(1744, "The exercise showed that utilities are best kept in a _____ namespace.", ["Dedicated / Logical", "System", "Main", "Private"]),
+  Quiz(1745, "Is 'ShanStringExtensions' a static class?", ["Yes", "No", "Only if it has one method", "Only in C# 12"]),
+  Quiz(1746, "What does 'string.IsNullOrWhiteSpace(name)' do?", ["Checks if a string is null, empty, or just spaces", "Checks if it is a number", "Deletes the string", "Makes it upper case"]),
+  Quiz(1747, "Why use 'this string name' as the first parameter?", ["To make it an extension method for strings", "To make it private", "To make it a constructor", "To save RAM"]),
+  Quiz(1748, "The 'IsLongText(this string text, int limit = 20)' uses a _____.", ["Default parameter value", "Static field", "Constructor", "Abstract method"]),
+  Quiz(1749, "Organizing code into extension libraries promotes _____.", ["Reusability and Clean Code", "Hard coding", "Bugs", "Complexity"]),
+  Quiz(1750, "Module 14 is about _____.", ["Static Members and Extension Methods", "Variables", "Loops", "Interfaces"]),
+];
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
   csharpQuizM2,
@@ -7556,4 +7689,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM11,
   csharpQuizM12,
   csharpQuizM13,
+  csharpQuizM14,
 ];
