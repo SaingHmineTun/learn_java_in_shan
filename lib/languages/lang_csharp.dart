@@ -527,7 +527,21 @@ final Map<int, Lesson> csharpLessons = {
   88: Lesson(7, 88),
   89: Lesson(7, 89),
   90: Lesson(7, 90),
-
+  91: Lesson(8, 91),
+  92: Lesson(8, 92),
+  93: Lesson(8, 93),
+  94: Lesson(8, 94),
+  95: Lesson(8, 95),
+  96: Lesson(8, 96),
+  97: Lesson(8, 97),
+  98: Lesson(8, 98),
+  99: Lesson(8, 99),
+  100: Lesson(8, 100),
+  101: Lesson(8, 101),
+  102: Lesson(8, 102),
+  103: Lesson(8, 103),
+  104: Lesson(8, 104),
+  105: Lesson(8, 105),
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -5793,6 +5807,954 @@ final List<Quiz> csharpQuizM7 = [
     "Variables",
   ]),
 ];
+final List<Quiz> csharpQuizM8 = [
+  // Lesson 91: The OOP Revolution: Thinking in Objects vs. Procedures
+  Quiz(901, "What is the core focus of Object-Oriented Programming (OOP)?", [
+    "Objects and data",
+    "Functions and logic flow",
+    "Line-by-line execution",
+    "Hardware management",
+  ]),
+  Quiz(902, "In OOP, what is a 'Student' considered?", [
+    "An Object",
+    "A Procedure",
+    "A Primitive Type",
+    "A Loop",
+  ]),
+  Quiz(
+    903,
+    "Which programming style focuses on 'What to do' (verbs) step-by-step?",
+    [
+      "Procedural Programming",
+      "OOP",
+      "Functional Programming",
+      "Logic Programming",
+    ],
+  ),
+  Quiz(904, "Which of these is NOT one of the 4 Pillars of OOP?", [
+    "Compilation",
+    "Encapsulation",
+    "Inheritance",
+    "Polymorphism",
+  ]),
+  Quiz(905, "What is 'Encapsulation'?", [
+    "Grouping data and methods together and hiding internal details",
+    "Copying code",
+    "Running code faster",
+    "Creating a database",
+  ]),
+  Quiz(906, "OOP helps in 'Real-world Mapping' because _____.", [
+    "It models software after real-world entities",
+    "It uses binary code",
+    "It only works on Windows",
+    "It is very old",
+  ]),
+  Quiz(907, "What is 'Abstraction'?", [
+    "Showing only essential features and hiding complexity",
+    "Deleting code",
+    "Making code private",
+    "Mathematical formulas",
+  ]),
+  Quiz(908, "Why is OOP better for large projects?", [
+    "It is easier to manage and scale through modules",
+    "It makes the file size smaller",
+    "It doesn't require a compiler",
+    "It is faster than C",
+  ]),
+  Quiz(909, "A 'Car' object has 'Color' and 'Speed'. These are called _____.", [
+    "States (Data)",
+    "Behaviors (Actions)",
+    "Loops",
+    "Libraries",
+  ]),
+  Quiz(910, "A 'Car' object can 'Drive' and 'Brake'. These are called _____.", [
+    "Behaviors (Methods)",
+    "Properties",
+    "Variables",
+    "Classes",
+  ]),
+
+  // Lesson 92: Defining a Class: The Blueprint for Your Data
+  Quiz(911, "What is a Class in C#?", [
+    "A blueprint or template for creating objects",
+    "A type of variable",
+    "A single instance of data",
+    "A mathematical function",
+  ]),
+  Quiz(912, "Which keyword is used to define a class?", [
+    "class",
+    "struct",
+    "new",
+    "object",
+  ]),
+  Quiz(913, "What are the two main members of a class?", [
+    "Fields and Methods",
+    "Loops and If-statements",
+    "Integers and Strings",
+    "Main and Console",
+  ]),
+  Quiz(914, "What is a 'Field' in a class?", [
+    "A variable declared directly in a class to store data",
+    "A function",
+    "A button",
+    "A comment",
+  ]),
+  Quiz(915, "What is the recommended naming convention for Classes in C#?", [
+    "PascalCase",
+    "camelCase",
+    "snake_case",
+    "lowercase",
+  ]),
+  Quiz(916, "Where are class members defined?", [
+    "Inside the class curly braces { }",
+    "Inside the Main method",
+    "In the namespace header",
+    "In a separate text file",
+  ]),
+  Quiz(917, "Can a class exist without any methods?", [
+    "Yes",
+    "No",
+    "Only if it is static",
+    "Only for strings",
+  ]),
+  Quiz(918, "What does 'Behavior' refer to in a class?", [
+    "The methods/actions it can perform",
+    "The variables it has",
+    "The color of the code",
+    "The memory size",
+  ]),
+  Quiz(919, "In 'public class Student', what is 'public'?", [
+    "Access Modifier",
+    "Return Type",
+    "Method Name",
+    "Namespace",
+  ]),
+  Quiz(
+    920,
+    "A class defines _____ but does not contain actual _____ until instantiated.",
+    ["Structure, Data", "Data, Structure", "Methods, Loops", "Speed, Name"],
+  ),
+
+  // Lesson 93: Instantiating Objects: Bringing the Blueprint to Life
+  Quiz(921, "What is 'Instantiation'?", [
+    "The process of creating an object from a class",
+    "Deleting a class",
+    "Renaming a variable",
+    "Compiling code",
+  ]),
+  Quiz(922, "Which keyword is used to create a new object?", [
+    "new",
+    "create",
+    "make",
+    "instance",
+  ]),
+  Quiz(923, "Where is an object stored in memory?", [
+    "Heap",
+    "Stack",
+    "CPU Cache",
+    "Hard Drive",
+  ]),
+  Quiz(924, "What is an 'Instance'?", [
+    "A specific object created from a class",
+    "A type of class",
+    "A static method",
+    "A logic error",
+  ]),
+  Quiz(925, "Which operator is used to access members of an object?", [
+    "Dot operator (.)",
+    "Comma (,)",
+    "Colon (:)",
+    "Arrow (=>)",
+  ]),
+  Quiz(926, "In 'Student s1 = new Student();', what is 's1'?", [
+    "A reference variable",
+    "The object itself",
+    "A method",
+    "A constructor",
+  ]),
+  Quiz(927, "Can you create multiple objects from a single class?", [
+    "Yes, as many as memory allows",
+    "No, only one",
+    "Only two",
+    "Only if static",
+  ]),
+  Quiz(928, "What is the 'Stack' used for in object creation?", [
+    "Storing the reference (address) to the object",
+    "Storing the actual object data",
+    "Storing the class code",
+    "Nothing",
+  ]),
+  Quiz(929, "When you call 'new Student()', what is actually being called?", [
+    "The Constructor",
+    "The Main method",
+    "The Garbage Collector",
+    "The Operating System",
+  ]),
+  Quiz(930, "Each object has its own unique _____.", [
+    "Copy of instance fields",
+    "Class definition",
+    "Static methods",
+    "Namespace",
+  ]),
+
+  // Lesson 94: Fields vs. Variables: Storing Data within a Class
+  Quiz(931, "Where is a 'Field' declared?", [
+    "Inside a class but outside any method",
+    "Inside a method",
+    "Inside a loop",
+    "In the using directives",
+  ]),
+  Quiz(932, "Where is a 'Local Variable' declared?", [
+    "Inside a method",
+    "Inside a class body",
+    "In the namespace",
+    "In the project settings",
+  ]),
+  Quiz(933, "Which one has a longer 'Lifetime'?", [
+    "A Field (lives as long as the object)",
+    "A Local Variable",
+    "A Parameter",
+    "An Argument",
+  ]),
+  Quiz(934, "What is the 'Scope' of a private field?", [
+    "The entire class",
+    "Only one method",
+    "The whole project",
+    "The global memory",
+  ]),
+  Quiz(935, "Do fields get default values if not initialized?", [
+    "Yes (e.g., 0 for int, null for string)",
+    "No",
+    "Only if public",
+    "Only for bools",
+  ]),
+  Quiz(936, "Do local variables get default values?", [
+    "No, they must be assigned before use",
+    "Yes",
+    "Only for ints",
+    "Only in debug mode",
+  ]),
+  Quiz(937, "If a method ends, what happens to its local variables?", [
+    "They are removed from the stack",
+    "They stay in memory forever",
+    "They become fields",
+    "They are moved to the heap",
+  ]),
+  Quiz(
+    938,
+    "Can two different methods in the same class access the same Field?",
+    ["Yes", "No", "Only if static", "Only if they are void"],
+  ),
+  Quiz(939, "Fields represent the _____ of an object.", [
+    "State",
+    "Behavior",
+    "Speed",
+    "Logic",
+  ]),
+  Quiz(940, "Local variables are used for _____.", [
+    "Temporary calculations inside a method",
+    "Long-term data storage",
+    "Defining class structure",
+    "Global access",
+  ]),
+
+  // Lesson 95: The 'this' Keyword: Referencing the Current Instance
+  Quiz(941, "What does the 'this' keyword refer to?", [
+    "The current instance of the class",
+    "The parent class",
+    "The static method",
+    "The compiler",
+  ]),
+  Quiz(942, "When is 'this' commonly used?", [
+    "To distinguish between a field and a parameter with the same name",
+    "To create a new object",
+    "To exit a method",
+    "To call a static class",
+  ]),
+  Quiz(943, "Can 'this' be used inside a 'static' method?", [
+    "No, because static methods don't belong to an instance",
+    "Yes",
+    "Only for private fields",
+    "Only in C# 12",
+  ]),
+  Quiz(944, "In 'this.name = name;', which 'name' is the class field?", [
+    "this.name",
+    "the second name",
+    "Both",
+    "Neither",
+  ]),
+  Quiz(945, "Does 'this' improve code clarity?", [
+    "Yes, it explicitly shows a member belongs to the current object",
+    "No",
+    "Only for doubles",
+    "Only in debug",
+  ]),
+  Quiz(946, "What is 'Disambiguation'?", [
+    "Resolving confusion between members with the same name",
+    "Deleting code",
+    "Creating objects",
+    "Naming variables",
+  ]),
+  Quiz(947, "Can 'this' be passed as an argument to another method?", [
+    "Yes",
+    "No",
+    "Only in constructors",
+    "Only for strings",
+  ]),
+  Quiz(948, "What type of reference is 'this'?", [
+    "An implicit reference",
+    "A static reference",
+    "A null reference",
+    "A global variable",
+  ]),
+  Quiz(949, "Does every non-static method have access to 'this'?", [
+    "Yes",
+    "No",
+    "Only public ones",
+    "Only void ones",
+  ]),
+  Quiz(950, "Using 'this' is optional if _____.", [
+    "There is no naming conflict",
+    "The method is static",
+    "The field is private",
+    "The class is partial",
+  ]),
+
+  // Lesson 96: Access Modifiers Revisited: Encapsulation Basics (public/private)
+  Quiz(951, "What is 'Encapsulation'?", [
+    "Restricting access to data and grouping it with methods",
+    "Inheriting code",
+    "Writing long methods",
+    "Using loops",
+  ]),
+  Quiz(
+    952,
+    "Which access modifier makes a member accessible only within its own class?",
+    ["private", "public", "internal", "protected"],
+  ),
+  Quiz(953, "Which access modifier allows access from any other code?", [
+    "public",
+    "private",
+    "static",
+    "void",
+  ]),
+  Quiz(954, "Why should fields usually be 'private'?", [
+    "To protect data from direct, invalid modification",
+    "To make the app faster",
+    "To save memory",
+    "To allow anyone to change them",
+  ]),
+  Quiz(955, "What is 'Data Hiding'?", [
+    "Hiding internal state and requiring interaction through methods",
+    "Deleting data",
+    "Hiding the source code from users",
+    "Using binary files",
+  ]),
+  Quiz(
+    956,
+    "A 'public' method that provides access to a 'private' field is part of _____.",
+    ["Encapsulation", "Polymorphism", "Abstraction", "Inheritance"],
+  ),
+  Quiz(957, "What is 'Validation' in encapsulation?", [
+    "Checking if data is correct before assigning it to a field",
+    "Running the app",
+    "Naming a class",
+    "Creating an object",
+  ]),
+  Quiz(958, "What is the default access modifier for class members in C#?", [
+    "private",
+    "public",
+    "internal",
+    "static",
+  ]),
+  Quiz(
+    959,
+    "Can a 'private' method be called from the 'Main' method of another class?",
+    ["No", "Yes", "Only if it is static", "Only for integers"],
+  ),
+  Quiz(
+    960,
+    "Encapsulation is like a _____ that protects internal components.",
+    ["Black Box / Shell", "Window", "Open Door", "Mirror"],
+  ),
+
+  // Lesson 97: Namespaces: Organizing Your Shan Project Files
+  Quiz(961, "What is a 'Namespace'?", [
+    "A container used to organize classes and prevent naming conflicts",
+    "A type of variable",
+    "A physical folder on disk only",
+    "A class name",
+  ]),
+  Quiz(962, "Which keyword is used to declare a namespace?", [
+    "namespace",
+    "using",
+    "package",
+    "folder",
+  ]),
+  Quiz(963, "What is a 'Naming Collision'?", [
+    "When two classes have the same name in the same scope",
+    "A logic error",
+    "A syntax error",
+    "A slow app",
+  ]),
+  Quiz(964, "How are namespaces usually named in C#?", [
+    "Company.Project.Module (PascalCase)",
+    "lowercase",
+    "snake_case",
+    "UPPERCASE",
+  ]),
+  Quiz(965, "What is a 'Fully Qualified Name'?", [
+    "The namespace plus the class name (e.g., System.Console)",
+    "Just the class name",
+    "The variable name",
+    "The file path",
+  ]),
+  Quiz(966, "What is a 'File-Scoped Namespace'?", [
+    "A namespace declared with a semicolon, applying to the whole file",
+    "A hidden file",
+    "A private namespace",
+    "A namespace inside a method",
+  ]),
+  Quiz(967, "Do namespaces affect the performance of the app?", [
+    "No, they are for organizational and compiler use",
+    "Yes, they make it slower",
+    "Yes, they make it faster",
+    "Only on Linux",
+  ]),
+  Quiz(968, "Can you have nested namespaces?", [
+    "Yes (e.g., ShanApp.UI.Controls)",
+    "No",
+    "Only one level",
+    "Only for static classes",
+  ]),
+  Quiz(969, "What is a 'Hierarchy' in namespaces?", [
+    "The dot-separated levels of organization",
+    "The order of methods",
+    "The stack memory",
+    "The class size",
+  ]),
+  Quiz(970, "Namespaces are similar to _____ on a computer.", [
+    "Folders / Directories",
+    "Files",
+    "Shortcuts",
+    "Hard drives",
+  ]),
+
+  // Lesson 98: The 'using' Directive and Alias Namespaces
+  Quiz(971, "What does the 'using' directive do?", [
+    "Allows using classes from a namespace without typing the full name",
+    "Creates a new object",
+    "Imports a physical file",
+    "Deletes a namespace",
+  ]),
+  Quiz(972, "Where is the 'using' directive typically placed?", [
+    "At the top of the file",
+    "Inside the class",
+    "Inside the Main method",
+    "At the bottom of the file",
+  ]),
+  Quiz(973, "What is a 'Namespace Alias'?", [
+    "A shortcut name for a namespace or class",
+    "A fake namespace",
+    "A private class",
+    "A comment",
+  ]),
+  Quiz(974, "How do you define an alias?", [
+    "using MyName = Long.Namespace.Name;",
+    "alias MyName = Name;",
+    "using MyName : Name;",
+    "using MyName from Name;",
+  ]),
+  Quiz(975, "What is 'Global Using'?", [
+    "A using directive that applies to all files in a project",
+    "A using for the internet",
+    "A public variable",
+    "A static class",
+  ]),
+  Quiz(976, "What is 'using static'?", [
+    "Allows calling static members of a class directly",
+    "Importing a static class",
+    "Creating a static object",
+    "Deleting static data",
+  ]),
+  Quiz(977, "When should you use an Alias?", [
+    "When two namespaces have classes with the same name",
+    "Always",
+    "Never",
+    "Only for integers",
+  ]),
+  Quiz(978, "Does 'using' import all sub-namespaces automatically?", [
+    "No, you must import each specific namespace level",
+    "Yes",
+    "Only in C# 12",
+    "Only for System",
+  ]),
+  Quiz(979, "What is 'Ambiguity' in namespaces?", [
+    "When the compiler doesn't know which class to use due to same names",
+    "A clear code",
+    "A slow method",
+    "A missing file",
+  ]),
+  Quiz(980, "The 'using' directive helps make code more _____.", [
+    "Readable and concise",
+    "Complex",
+    "Private",
+    "Secure",
+  ]),
+
+  // Lesson 99: Static Classes vs. Instance Classes: When to Use Which?
+  Quiz(981, "What is a 'Static Class'?", [
+    "A class that cannot be instantiated (no 'new')",
+    "A class that never changes",
+    "A class with no methods",
+    "A public class",
+  ]),
+  Quiz(982, "Can a static class contain instance (non-static) members?", [
+    "No, everything must be static",
+    "Yes",
+    "Only for private fields",
+    "Only in debug",
+  ]),
+  Quiz(983, "How do you access members of a static class?", [
+    "ClassName.MemberName",
+    "Object.MemberName",
+    "new ClassName()",
+    "Directly by name only",
+  ]),
+  Quiz(984, "Why use an 'Instance Class'?", [
+    "When you need to store unique data for different objects",
+    "For math formulas",
+    "To save memory",
+    "For utility functions",
+  ]),
+  Quiz(985, "Which class type is better for a 'Math' utility?", [
+    "Static Class",
+    "Instance Class",
+    "Partial Class",
+    "Private Class",
+  ]),
+  Quiz(986, "Where is a static class stored in memory?", [
+    "In a single, permanent location for the app's life",
+    "On the Heap per object",
+    "On the Stack",
+    "In the Cloud",
+  ]),
+  Quiz(987, "Can you inherit from a static class?", [
+    "No",
+    "Yes",
+    "Only if public",
+    "Only for strings",
+  ]),
+  Quiz(988, "Static classes are often called _____ classes.", [
+    "Utility / Helper",
+    "Blueprint",
+    "Data",
+    "Main",
+  ]),
+  Quiz(989, "Can an instance class have static members?", [
+    "Yes",
+    "No",
+    "Only if it is public",
+    "Only if it is void",
+  ]),
+  Quiz(990, "Does a static class have a constructor?", [
+    "Yes, but it is static and cannot be called with 'new'",
+    "No",
+    "Only if it returns int",
+    "Only for strings",
+  ]),
+
+  // Lesson 100: Partial Classes: Splitting Large Class Files (Common in WinForms)
+  Quiz(991, "What is a 'Partial Class'?", [
+    "A class whose definition is split across multiple files",
+    "A half-written class",
+    "A private class",
+    "A type of loop",
+  ]),
+  Quiz(992, "Which keyword is used for partial classes?", [
+    "partial",
+    "split",
+    "part",
+    "divided",
+  ]),
+  Quiz(
+    993,
+    "Do all parts of a partial class need to be in the same namespace?",
+    ["Yes", "No", "Only if public", "Only in C# 12"],
+  ),
+  Quiz(994, "Why use partial classes?", [
+    "To separate UI code from logic or manage very large files",
+    "To make code run faster",
+    "To hide data",
+    "To avoid using classes",
+  ]),
+  Quiz(995, "When the app is compiled, what happens to partial classes?", [
+    "They are combined into a single class",
+    "They stay as separate files",
+    "They are deleted",
+    "They become static",
+  ]),
+  Quiz(
+    996,
+    "Can different parts of a partial class have different access modifiers (e.g., public and private)?",
+    ["No, they must match", "Yes", "Only for methods", "Only for strings"],
+  ),
+  Quiz(997, "Which tool commonly uses partial classes?", [
+    "Visual Studio (for WinForms/WPF designers)",
+    "Notepad",
+    "Excel",
+    "Chrome",
+  ]),
+  Quiz(
+    998,
+    "Can a partial class inherit from multiple base classes in different files?",
+    [
+      "No, the inheritance must be consistent across all parts",
+      "Yes",
+      "Only in debug",
+      "Only for interfaces",
+    ],
+  ),
+  Quiz(
+    999,
+    "Do partial classes allow multiple developers to work on the same class easily?",
+    ["Yes", "No", "Only if static", "Only if they use Linux"],
+  ),
+  Quiz(1000, "Partial classes are a _____ feature.", [
+    "Compiler",
+    "Hardware",
+    "Database",
+    "Networking",
+  ]),
+
+  // Lesson 101: Object Initializers: Setting Properties on the Fly
+  Quiz(1001, "What is an 'Object Initializer'?", [
+    "A shorthand to set properties during object creation",
+    "A special constructor",
+    "A type of variable",
+    "A memory cleaner",
+  ]),
+  Quiz(1002, "What syntax is used for object initializers?", [
+    "new Class { Prop1 = val, Prop2 = val }",
+    "new Class(Prop1 = val)",
+    "new Class : Prop1 = val",
+    "new Class [Prop1 = val]",
+  ]),
+  Quiz(
+    1003,
+    "Are parentheses () required before the braces {} in an initializer?",
+    [
+      "No, they are optional",
+      "Yes",
+      "Only for static classes",
+      "Only if parameters exist",
+    ],
+  ),
+  Quiz(
+    1004,
+    "Can you initialize 'private' fields using an object initializer?",
+    [
+      "No, only accessible (public) members",
+      "Yes",
+      "Only in constructors",
+      "Only for ints",
+    ],
+  ),
+  Quiz(1005, "What separates multiple properties in an initializer?", [
+    "Commas",
+    "Semicolons",
+    "Colons",
+    "Dots",
+  ]),
+  Quiz(1006, "What is a benefit of Object Initializers?", [
+    "Improved readability and less code",
+    "Faster execution",
+    "More security",
+    "Automatic database saving",
+  ]),
+  Quiz(1007, "Does an object initializer call the constructor first?", [
+    "Yes, then it assigns the properties",
+    "No",
+    "Only for static classes",
+    "Only in debug",
+  ]),
+  Quiz(1008, "Can you use object initializers with Collections (like List)?", [
+    "Yes (Collection Initializers)",
+    "No",
+    "Only for strings",
+    "Only for ints",
+  ]),
+  Quiz(1009, "Object initializers make code more _____.", [
+    "Declarative",
+    "Procedural",
+    "Binary",
+    "Encapsulated",
+  ]),
+  Quiz(1010, "Is 'var s = new Student { Name = \"Mao\" };' valid?", [
+    "Yes",
+    "No",
+    "Only if Student is a struct",
+    "Only if Name is static",
+  ]),
+
+  // Lesson 102: Comparing Objects: Reference Equality vs. Value Equality
+  Quiz(1011, "What does '==' check by default for class objects?", [
+    "Reference Equality (memory address)",
+    "Value Equality (data inside)",
+    "The class name",
+    "The memory size",
+  ]),
+  Quiz(1012, "What is 'Reference Equality'?", [
+    "Checking if two variables point to the exact same object in memory",
+    "Checking if names are same",
+    "Checking if age is same",
+    "Checking file size",
+  ]),
+  Quiz(1013, "What is 'Value Equality'?", [
+    "Checking if the data inside two different objects is the same",
+    "Checking memory addresses",
+    "Checking variable names",
+    "Checking the stack",
+  ]),
+  Quiz(
+    1014,
+    "If s1 and s2 have the same data but are created with 'new', does s1 == s2 return true?",
+    [
+      "No (they are different instances)",
+      "Yes",
+      "Only for strings",
+      "Only in C# 12",
+    ],
+  ),
+  Quiz(
+    1015,
+    "Which type in C# uses Value Equality for '==' even though it's a class?",
+    ["string", "Student", "List", "Object"],
+  ),
+  Quiz(1016, "How do you perform a reference check if '==' is overloaded?", [
+    "Object.ReferenceEquals(a, b)",
+    "a == b",
+    "a.Equals(b)",
+    "a is b",
+  ]),
+  Quiz(1017, "What is an 'Address' or 'Pointer'?", [
+    "A numeric value representing a memory location",
+    "A website URL",
+    "A method name",
+    "A variable name",
+  ]),
+  Quiz(1018, "If s2 = s1, do they share the same reference?", [
+    "Yes",
+    "No",
+    "Only if static",
+    "Only if public",
+  ]),
+  Quiz(
+    1019,
+    "To compare data inside custom objects, you should override _____.",
+    [
+      "The Equals() method",
+      "The Main method",
+      "The constructor",
+      "The ToString() method",
+    ],
+  ),
+  Quiz(1020, "Classes are _____ types, while ints are _____ types.", [
+    "Reference, Value",
+    "Value, Reference",
+    "Static, Instance",
+    "Public, Private",
+  ]),
+
+  // Lesson 103: Memory Management: How the Garbage Collector (GC) Works
+  Quiz(1021, "What is the 'Garbage Collector' (GC)?", [
+    "A background process that automatically frees unused memory",
+    "A disk cleanup tool",
+    "A virus scanner",
+    "A code compiler",
+  ]),
+  Quiz(1022, "An object becomes 'Garbage' when _____.", [
+    "It has no more active references pointing to it",
+    "The app closes",
+    "It is set to public",
+    "It is 1MB in size",
+  ]),
+  Quiz(1023, "Does C# require manual memory deletion (like C++)?", [
+    "No, the GC handles it automatically",
+    "Yes",
+    "Only for static classes",
+    "Only for large files",
+  ]),
+  Quiz(1024, "What are 'Generations' in GC?", [
+    "Categories (0, 1, 2) based on how long an object has lived",
+    "Types of computers",
+    "Version numbers of C#",
+    "Method levels",
+  ]),
+  Quiz(1025, "Which generation is collected most frequently?", [
+    "Generation 0",
+    "Generation 1",
+    "Generation 2",
+    "All equally",
+  ]),
+  Quiz(1026, "What is 'Compacting' in GC?", [
+    "Moving objects together to create larger blocks of free memory",
+    "Compressing files",
+    "Deleting code",
+    "Running code faster",
+  ]),
+  Quiz(1027, "Setting an object variable to 'null' _____.", [
+    "Removes a reference, making the object eligible for GC",
+    "Deletes the object immediately",
+    "Crashes the app",
+    "Saves the object to disk",
+  ]),
+  Quiz(1028, "What is a 'Memory Leak' in C#?", [
+    "When objects are not collected because they are still being referenced unnecessarily",
+    "A broken RAM chip",
+    "A fast app",
+    "A small file",
+  ]),
+  Quiz(1029, "When does the GC typically run?", [
+    "When memory is low or system is idle",
+    "Every 5 seconds",
+    "Whenever a method ends",
+    "Only when the user clicks a button",
+  ]),
+  Quiz(1030, "The GC manages the _____ memory.", [
+    "Heap",
+    "Stack",
+    "Read-only",
+    "Register",
+  ]),
+
+  // Lesson 104: Null-Conditional Operators (?.) with Objects
+  Quiz(1031, "What does the '?. ' operator do?", [
+    "Accesses a member only if the object is not null",
+    "Checks for errors",
+    "Creates a new object",
+    "Deletes a variable",
+  ]),
+  Quiz(1032, "What happens if 's1' is null and you call 's1?.Name'?", [
+    "It returns null without crashing",
+    "It throws a NullReferenceException",
+    "It returns an empty string",
+    "It crashes the computer",
+  ]),
+  Quiz(1033, "What is a 'NullReferenceException'?", [
+    "An error when you try to use an object that is null",
+    "A successful run",
+    "A file not found error",
+    "A math error",
+  ]),
+  Quiz(1034, "Can you chain null-conditional operators (e.g., a?.b?.c)?", [
+    "Yes",
+    "No",
+    "Only two levels",
+    "Only for strings",
+  ]),
+  Quiz(1035, "What is 'Short-circuiting' in '?.'?", [
+    "If the left side is null, the rest of the chain is skipped",
+    "A fast loop",
+    "A logic error",
+    "A security feature",
+  ]),
+  Quiz(1036, "How do you combine '?.' with a default value?", [
+    "Using the '??' (null-coalescing) operator",
+    "Using 'if'",
+    "Using 'else'",
+    "Using 'default'",
+  ]),
+  Quiz(1037, "Does 's1?.Study()' work for void methods?", [
+    "Yes, it only calls the method if s1 is not null",
+    "No",
+    "Only if s1 is static",
+    "Only in debug",
+  ]),
+  Quiz(1038, "What is 'Safe Navigation'?", [
+    "Accessing members without risking a null crash",
+    "Using a VPN",
+    "Private methods",
+    "Naming classes",
+  ]),
+  Quiz(1039, "Is '?. ' available in all C# versions?", [
+    "No, it was introduced in C# 6",
+    "Yes, always",
+    "Only in C# 12",
+    "Only for System",
+  ]),
+  Quiz(1040, "Using '?.' makes code more _____.", [
+    "Concise and safe",
+    "Complex",
+    "Unstable",
+    "Private",
+  ]),
+
+  // Lesson 105: Exercise: Designing a 'Shan Village' Class Library
+  Quiz(1041, "What is 'Composition' in OOP?", [
+    "When one class contains objects of another class (Has-A)",
+    "Inheritance",
+    "Writing code",
+    "Compiling code",
+  ]),
+  Quiz(
+    1042,
+    "In the exercise, 'Village' had a List of 'Villagers'. This is _____.",
+    [
+      "Composition / Relationship",
+      "Overloading",
+      "Static binding",
+      "Abstraction",
+    ],
+  ),
+  Quiz(1043, "What is a 'Class Library'?", [
+    "A collection of classes that can be used by other applications",
+    "A physical library",
+    "A single class",
+    "A variable list",
+  ]),
+  Quiz(1044, "Why use a 'List<T>' inside a class?", [
+    "To store multiple objects of the same type",
+    "To store one number",
+    "To make code faster",
+    "To save a file",
+  ]),
+  Quiz(
+    1045,
+    "Which OOP pillar is shown by putting 'Introduce' inside 'Villager'?",
+    ["Encapsulation", "Inheritance", "Polymorphism", "Logic"],
+  ),
+  Quiz(1046, "What is an 'Object Relationship'?", [
+    "How objects interact and connect with each other",
+    "The file size",
+    "The variable name",
+    "The CPU speed",
+  ]),
+  Quiz(1047, "In 'myVillage.Residents.Add(v1)', what is 'Residents'?", [
+    "A Field/Property (specifically a List)",
+    "A Method",
+    "A Class",
+    "A Namespace",
+  ]),
+  Quiz(1048, "Why initialize the List in the class (new List<Villager>())?", [
+    "To prevent a NullReferenceException when adding items",
+    "To make it public",
+    "To save RAM",
+    "To name it",
+  ]),
+  Quiz(1049, "Modeling a 'Village' with code is called _____.", [
+    "Domain Modeling",
+    "Web Design",
+    "Hardware Setup",
+    "Iteration",
+  ]),
+  Quiz(1050, "What was the main goal of Module 8?", [
+    "Understanding Classes and Objects",
+    "Learning Loops",
+    "Setting up Windows",
+    "Database management",
+  ]),
+];
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
   csharpQuizM2,
@@ -5801,4 +6763,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM5,
   csharpQuizM6,
   csharpQuizM7,
+  csharpQuizM8,
 ];
