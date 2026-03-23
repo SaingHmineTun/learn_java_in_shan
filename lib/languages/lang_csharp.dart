@@ -168,6 +168,7 @@ const Map<int, Map<int, String>> csharpModules = {
     115: "The IDisposable Interface vs. Destructors: The 'using' Statement",
     116: "Exercise: Building a 'Shan Digital Library' Book Tracker",
   },
+  //  10: "Encapsulation & Access Modifiers (public, private, internal)",
   10: {
     117: "The Principle of Encapsulation: Data Hiding and Security",
     118: "Access Modifiers Overview: Controlling Visibility",
@@ -554,6 +555,17 @@ final Map<int, Lesson> csharpLessons = {
   114: Lesson(9, 114),
   115: Lesson(9, 115),
   116: Lesson(9, 116),
+  117: Lesson(10, 117),
+  118: Lesson(10, 118),
+  119: Lesson(10, 119),
+  120: Lesson(10, 120),
+  121: Lesson(10, 121),
+  122: Lesson(10, 122),
+  123: Lesson(10, 123),
+  124: Lesson(10, 124),
+  125: Lesson(10, 125),
+  126: Lesson(10, 126),
+  127: Lesson(10, 127),
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -6888,6 +6900,127 @@ final List<Quiz> csharpQuizM9 = [
   Quiz(1149, "What is 'Deterministic Cleanup'?", ["Cleaning resources at a specific, known time", "Random cleanup", "Cleaning only strings", "Cleaning RAM every hour"]),
   Quiz(1150, "IDisposable is located in the _____ namespace.", ["System", "System.IO", "System.Data", "System.Collections"]),
 ];
+final List<Quiz> csharpQuizM10 = [
+  // Lesson 117: The Principle of Encapsulation
+  Quiz(1151, "What is the primary goal of Encapsulation?", ["To hide internal details and protect data integrity", "To make all variables public", "To write code in one single line", "To avoid using classes"]),
+  Quiz(1152, "Encapsulation is also known as _____.", ["Data Hiding", "Data Sharing", "Data Duplication", "Data Deletion"]),
+  Quiz(1153, "How does encapsulation improve security?", ["By preventing external code from directly modifying internal fields", "By encrypting the source code", "By using a password for every class", "By hiding the project folder"]),
+  Quiz(1154, "Which concept describes an object that reveals only 'what' it does but not 'how'?", ["Black Box", "Open Book", "Transparent Box", "Empty Box"]),
+  Quiz(1155, "Encapsulation groups data and _____ into a single unit.", ["Methods", "Files", "Namespaces", "Projects"]),
+  Quiz(1156, "What happens if a class is NOT encapsulated?", ["Internal data can be set to invalid values by external code", "The app will run faster", "The compiler will delete the class", "The code becomes shorter"]),
+  Quiz(1157, "Encapsulation helps achieve 'Loose _____' between classes.", ["Coupling", "Joining", "Breaking", "Linking"]),
+  Quiz(1158, "Which of these is a real-world example of encapsulation?", ["A TV remote with buttons (hiding internal circuitry)", "A transparent glass of water", "A pile of loose papers", "An open door"]),
+  Quiz(1159, "By hiding implementation details, encapsulation makes code more _____.", ["Maintainable", "Slow", "Complex", "Private"]),
+  Quiz(1160, "Encapsulation is one of the four pillars of _____.", ["Object-Oriented Programming (OOP)", "Web Development", "Database Querying", "Operating Systems"]),
+
+  // Lesson 118: Access Modifiers Overview
+  Quiz(1161, "What is the purpose of an Access Modifier?", ["To control the visibility and accessibility of class members", "To change the font color of the code", "To increase the execution speed", "To define the data type of a variable"]),
+  Quiz(1162, "How many primary access levels are available in C#?", ["6", "2", "4", "10"]),
+  Quiz(1163, "Visibility in C# is managed using _____.", ["Keywords", "Comments", "File names", "Line numbers"]),
+  Quiz(1164, "Which modifier provides the most restrictive access?", ["private", "public", "internal", "protected"]),
+  Quiz(1165, "Which modifier provides the least restrictive access?", ["public", "internal", "protected", "private"]),
+  Quiz(1166, "What is the default access modifier for members inside a class?", ["private", "public", "internal", "protected"]),
+  Quiz(1167, "Can you use access modifiers on a Class itself?", ["Yes (usually public or internal)", "No", "Only on methods", "Only on strings"]),
+  Quiz(1168, "Which modifier is used specifically for inheritance?", ["protected", "private", "internal", "static"]),
+  Quiz(1169, "Access modifiers are applied to _____.", ["Members like fields, methods, and properties", "Only the Main method", "Only loops", "Only comments"]),
+  Quiz(1170, "What does 'Scope' refer to in access modifiers?", ["The region of code where a member is accessible", "The size of the variable", "The speed of the method", "The name of the class"]),
+
+  // Lesson 119: The 'public' Modifier
+  Quiz(1171, "Where can a 'public' member be accessed from?", ["Anywhere in the current or external assemblies", "Only within the same class", "Only within the same file", "Only from the Main method"]),
+  Quiz(1172, "Is it a good practice to make all fields public?", ["No, it violates encapsulation", "Yes, it is easier to code", "Only for integers", "Only for buttons"]),
+  Quiz(1173, "Public methods usually form the _____ of a class.", ["API / Interface", "Private Logic", "Memory Layout", "Variable List"]),
+  Quiz(1174, "In 'public string Name;', who can see Name?", ["Any class that can see the containing class", "Only child classes", "Only the same assembly", "Nobody"]),
+  Quiz(1175, "Public members allow for _____ access.", ["Unrestricted", "Limited", "Slow", "Hidden"]),
+  Quiz(1176, "A public class in a DLL can be used by _____.", ["Other projects that reference the DLL", "Only the same project", "Only child projects", "Nobody"]),
+  Quiz(1177, "Does 'public' help in data hiding?", ["No, it exposes data", "Yes, it hides data", "Only for static members", "Only for classes"]),
+  Quiz(1178, "Which keyword opens access to all parts of the application?", ["public", "open", "free", "all"]),
+  Quiz(1179, "If a class is public, are its private members also public?", ["No, private members remain private", "Yes", "Only if static", "Only if methods"]),
+  Quiz(1180, "Public members are visible to _____ classes.", ["Unrelated and related", "Only related", "Only static", "Only internal"]),
+
+  // Lesson 120: The 'private' Modifier
+  Quiz(1181, "What is the visibility of a 'private' member?", ["Only within the class it is declared in", "Anywhere in the project", "Only in child classes", "In the whole solution"]),
+  Quiz(1182, "What happens if an external class tries to use a private field?", ["A compile-time error occurs", "It returns null", "The app crashes at runtime", "The value is 0"]),
+  Quiz(1183, "Private members are used to hide _____.", ["Internal implementation details", "The class name", "The project name", "The file size"]),
+  Quiz(1184, "Is 'private void DoWork()' visible to other files in the same project?", ["No", "Yes", "Only if public", "Only if static"]),
+  Quiz(1185, "By convention, private fields often start with _____.", ["An underscore (_)", "A dollar sign (\$)", "An 'at' symbol (@)", "A capital letter"]),
+  Quiz(1186, "Can a private member be accessed by a Child Class?", ["No", "Yes", "Only if it is a method", "Only if it is static"]),
+  Quiz(1187, "Which keyword provides the strongest encapsulation?", ["private", "public", "internal", "protected"]),
+  Quiz(1188, "Default visibility for fields if no modifier is written?", ["private", "public", "internal", "protected"]),
+  Quiz(1189, "Can a private method call a public method in the same class?", ["Yes", "No", "Only via an object", "Only if static"]),
+  Quiz(1190, "Private members protect against _____ modification.", ["Unauthorized / External", "Internal", "Compiler", "Static"]),
+
+  // Lesson 121: The 'protected' Modifier
+  Quiz(1191, "What is 'protected' access?", ["Access within the class and any derived (child) classes", "Access from anywhere", "Access only within the assembly", "Access only to the Main method"]),
+  Quiz(1192, "If Class B inherits from Class A, can B see A's protected fields?", ["Yes", "No", "Only if public", "Only if static"]),
+  Quiz(1193, "Does protected access allow access from unrelated classes?", ["No", "Yes", "Only in the same file", "Only if static"]),
+  Quiz(1194, "Protected is essentially 'private' with an exception for _____.", ["Inheritance / Children", "The Main method", "Static classes", "Interfaces"]),
+  Quiz(1195, "Can a child class in a DIFFERENT project see a protected member?", ["Yes", "No", "Only if public", "Only if internal"]),
+  Quiz(1196, "Protected modifier is used to support _____.", ["Inheritance", "Polymorphism only", "Static linking", "File IO"]),
+  Quiz(1197, "Is protected more restrictive than private?", ["No, it is less restrictive (allows children)", "Yes", "Same", "Depends on the CPU"]),
+  Quiz(1198, "Where do you place the keyword 'protected'?", ["Before the data type of the member", "Inside the method body", "At the top of the file", "After the variable name"]),
+  Quiz(1199, "Can you have a 'protected' class at the top level?", ["No (must be public or internal)", "Yes", "Only in DLLs", "Only if static"]),
+  Quiz(1200, "Protected members are like _____ in a family.", ["Family secrets shared with kids", "Public signs", "Personal notes", "Neighbors' news"]),
+
+  // Lesson 122: The 'internal' Modifier
+  Quiz(1201, "What does 'internal' restrict access to?", ["The current Assembly (Project)", "The current Class", "The current File", "The whole Computer"]),
+  Quiz(1202, "What is the output of a project assembly?", ["A .dll or .exe file", "A .txt file", "A folder", "A .zip file"]),
+  Quiz(1203, "If a class is internal, can another project use it?", ["No", "Yes", "Only if it is static", "Only if it is public"]),
+  Quiz(1204, "What is the default modifier for a Class defined at the top level?", ["internal", "public", "private", "protected"]),
+  Quiz(1205, "Internal is useful for _____ components.", ["Project-specific / Shared", "External", "Public", "Web-based"]),
+  Quiz(1206, "Can an internal member be seen by a different solution project?", ["No", "Yes", "Only if public", "Only if static"]),
+  Quiz(1207, "Does 'internal' allow access across files in the SAME project?", ["Yes", "No", "Only in the same namespace", "Only if static"]),
+  Quiz(1208, "Is 'internal' more permissive than 'protected' within the assembly?", ["Yes, it allows unrelated classes in the same assembly", "No", "Same", "Depends on the OS"]),
+  Quiz(1209, "Which keyword limits access to the DLL boundary?", ["internal", "private", "protected", "local"]),
+  Quiz(1210, "Internal members help keep the _____ of a library clean.", ["Public API", "File System", "RAM", "CPU"]),
+
+  // Lesson 123: Protected Internal and Private Protected
+  Quiz(1211, "What does 'protected internal' allow?", ["Access from the same assembly OR child classes (anywhere)", "Only child classes", "Only assembly", "Only the Main method"]),
+  Quiz(1212, "What does 'private protected' allow?", ["Access from child classes ONLY within the same assembly", "Access from anywhere", "Access from assembly OR children", "Only private classes"]),
+  Quiz(1213, "Which is more restrictive: private protected or protected internal?", ["private protected", "protected internal", "public", "internal"]),
+  Quiz(1214, "Protected internal uses _____ logic.", ["OR (Union)", "AND (Intersection)", "NOT", "XOR"]),
+  Quiz(1215, "Private protected uses _____ logic.", ["AND (Intersection)", "OR (Union)", "NOT", "XOR"]),
+  Quiz(1216, "Can a child class in a DIFFERENT DLL see a 'private protected' member?", ["No", "Yes", "Only if public", "Only if static"]),
+  Quiz(1217, "Can a child class in a DIFFERENT DLL see a 'protected internal' member?", ["Yes", "No", "Only if internal", "Only if private"]),
+  Quiz(1218, "These advanced modifiers are used for _____ control.", ["Fine-grained / Precise", "Simple", "Web", "Database"]),
+  Quiz(1219, "Which C# version introduced 'private protected'?", ["7.2", "1.0", "5.0", "12.0"]),
+  Quiz(1220, "Who can see a protected internal member in the SAME assembly?", ["Every class in that assembly", "Only children", "Only the class itself", "Nobody"]),
+
+  // Lesson 124: Class vs. Member Modifiers
+  Quiz(1221, "Which modifiers are valid for a top-level Class?", ["public and internal", "all 6 modifiers", "only private", "only protected"]),
+  Quiz(1222, "Can a top-level class be 'private'?", ["No (compile error)", "Yes", "Only if it is static", "Only if it is a string"]),
+  Quiz(1223, "What is a 'Nested Class'?", ["A class defined inside another class", "A class in a list", "A class in a loop", "A class in a DLL"]),
+  Quiz(1224, "Can a nested class be 'private'?", ["Yes, because it is a member of its parent class", "No", "Only if static", "Only for ints"]),
+  Quiz(1225, "Default modifier for a nested class?", ["private", "public", "internal", "protected"]),
+  Quiz(1226, "If a class is internal, what is the max accessibility of its members?", ["Internal (even if marked public)", "Public", "Private", "Protected"]),
+  Quiz(1227, "Visibility of a class is the 'First Gate' for _____.", ["Access control", "Loops", "Variables", "Memory"]),
+  Quiz(1228, "Can a nested class be 'protected'?", ["Yes", "No", "Only if static", "Only for strings"]),
+  Quiz(1229, "How many modifiers can a nested member have?", ["All 6", "Only 2", "Only 1", "None"]),
+  Quiz(1230, "A private nested class is only visible to _____.", ["The containing class", "Every class", "Only child classes", "Only the Main method"]),
+
+  // Lesson 125: Best Practices: Private Fields
+  Quiz(1231, "Why should fields be private?", ["To protect data and enforce validation logic", "To make code longer", "To slow down execution", "To use less RAM"]),
+  Quiz(1232, "What is the risk of a public field?", ["It can be set to invalid data from anywhere", "It makes the app crash", "It takes more space", "It is too fast"]),
+  Quiz(1233, "Instead of public fields, we should use _____.", ["Properties or Methods", "Global variables", "Text files", "Comments"]),
+  Quiz(1234, "Private fields allow changing implementation without _____.", ["Breaking external code", "Saving the file", "Compiling", "Using loops"]),
+  Quiz(1235, "What is 'Validation'?", ["Checking if a value is correct before assigning it", "Naming a variable", "Deleting a method", "Printing a string"]),
+  Quiz(1236, "C# convention for private field names?", ["_camelCase (with underscore)", "PascalCase", "UPPERCASE", "lowercase"]),
+  Quiz(1237, "Does using private fields support 'Loose Coupling'?", ["Yes", "No", "Only for static fields", "Only for ints"]),
+  Quiz(1238, "A class with private fields is like a _____.", ["Well-managed company", "Open market", "Broken car", "Empty book"]),
+  Quiz(1239, "Who should have direct access to internal variables?", ["Only the class itself", "Everyone", "Only the user", "Only the Main method"]),
+  Quiz(1240, "Encapsulation with private fields leads to _____ code.", ["Maintainable / Clean", "Spaghetti", "Slow", "Static"]),
+
+  // Lesson 126: The 'readonly' Modifier
+  Quiz(1241, "What does 'readonly' do to a field?", ["Prevents modification after initialization", "Hides it from view", "Makes it static", "Deletes it"]),
+  Quiz(1242, "Where can a readonly field be assigned?", ["Declaration or Constructor", "Anywhere", "Only in Main", "Only in Destructor"]),
+  Quiz(1243, "How is readonly different from const?", ["Readonly is runtime-constant; Const is compile-time-constant", "They are same", "Readonly is only for strings", "Const is for methods"]),
+  Quiz(1244, "Can each object instance have a different readonly value?", ["Yes (if set in constructor)", "No", "Only if static", "Only for ints"]),
+  Quiz(1245, "What happens if you try to change a readonly field in a method?", ["A compile-time error occurs", "It works fine", "It crashes at runtime", "The value becomes 0"]),
+  Quiz(1246, "Is 'readonly' used for data that should never change after birth?", ["Yes", "No", "Only for strings", "Only for loops"]),
+  Quiz(1247, "Can a readonly field be 'public'?", ["Yes (read-only from outside)", "No", "Only if static", "Only for ints"]),
+  Quiz(1248, "Does 'readonly' support immutability?", ["Yes", "No", "Only for static members", "Only for classes"]),
+  Quiz(1249, "Can you set a readonly field in a static constructor?", ["Yes (for static readonly fields)", "No", "Only in Main", "Only for strings"]),
+  Quiz(1250, "Readonly ensures that data remains _____.", ["Consistent / Safe", "Volatile", "Fast", "Hidden"]),
+];
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
   csharpQuizM2,
@@ -6897,5 +7030,6 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM6,
   csharpQuizM7,
   csharpQuizM8,
-  csharpQuizM9
+  csharpQuizM9,
+  csharpQuizM10,
 ];
