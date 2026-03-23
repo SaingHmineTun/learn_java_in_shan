@@ -153,6 +153,7 @@ const Map<int, Map<int, String>> csharpModules = {
     104: "Null-Conditional Operators (?.) with Objects",
     105: "Exercise: Designing a 'Shan Village' Class Library",
   },
+  //   9: "Constructors and Destructors",
   9: {
     106: "The Life Cycle of an Object: Birth, Life, and Death",
     107: "Default Constructors: What Happens if You Don't Write One?",
@@ -542,6 +543,17 @@ final Map<int, Lesson> csharpLessons = {
   103: Lesson(8, 103),
   104: Lesson(8, 104),
   105: Lesson(8, 105),
+  106: Lesson(9, 106),
+  107: Lesson(9, 107),
+  108: Lesson(9, 108),
+  109: Lesson(9, 109),
+  110: Lesson(9, 110),
+  111: Lesson(9, 111),
+  112: Lesson(9, 112),
+  113: Lesson(9, 113),
+  114: Lesson(9, 114),
+  115: Lesson(9, 115),
+  116: Lesson(9, 116),
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -6755,6 +6767,127 @@ final List<Quiz> csharpQuizM8 = [
     "Database management",
   ]),
 ];
+final List<Quiz> csharpQuizM9 = [
+  // Lesson 106: The Life Cycle of an Object: Birth, Life, and Death
+  Quiz(1051, "What are the three main stages of an object's life cycle?", ["Birth (Allocation), Life (Interaction), Death (Destruction)", "Start, Middle, End", "Input, Processing, Output", "Coding, Compiling, Running"]),
+  Quiz(1052, "In which memory area are objects 'born' (allocated)?", ["Heap", "Stack", "CPU Cache", "Hard Drive"]),
+  Quiz(1053, "What happens during the 'Birth' stage of an object?", ["Memory is allocated and the constructor is called", "The app closes", "The code is deleted", "A loop starts"]),
+  Quiz(1054, "An object is considered 'Alive' as long as _____.", ["There is at least one active reference pointing to it", "The computer is on", "It has a name", "It is 1MB in size"]),
+  Quiz(1055, "What process handles the 'Death' of an object by freeing memory?", ["Garbage Collection (GC)", "Compiling", "Debugging", "Linking"]),
+  Quiz(1056, "When does an object become 'Unreachable'?", ["When no variables point to its memory address", "When it is private", "When it is static", "When the screen turns off"]),
+  Quiz(1057, "The life cycle of an object is managed by the _____.", [".NET Runtime (CLR)", "Text Editor", "Operating System only", "User"]),
+  Quiz(1058, "What is 'Memory Allocation'?", ["Reserving a specific block of RAM for an object", "Deleting a file", "Naming a variable", "Sending an email"]),
+  Quiz(1059, "Can an object be 'reborn' once it is garbage collected?", ["No, it is destroyed and its memory is reclaimed", "Yes", "Only if it is static", "Only on Sundays"]),
+  Quiz(1060, "Why is understanding the life cycle important?", ["To manage resources efficiently and avoid memory leaks", "To type faster", "To change the theme of the IDE", "To use less strings"]),
+
+  // Lesson 107: Default Constructors: What Happens if You Don't Write One?
+  Quiz(1061, "What is a 'Default Constructor'?", ["A constructor with no parameters provided by the compiler", "The first method in a class", "A private method", "A way to delete objects"]),
+  Quiz(1062, "When does the compiler provide a default constructor?", ["When you do not define any constructors in your class", "Always", "Only for static classes", "Only if you ask for it"]),
+  Quiz(1063, "What is the return type of a constructor?", ["Constructors do not have a return type", "void", "int", "The class type itself"]),
+  Quiz(1064, "A constructor's name must be _____.", ["Exactly the same as the class name", "Main", "Construct", "Any name you like"]),
+  Quiz(1065, "What value does a default constructor give to an 'int' field?", ["0", "null", "1", "-1"]),
+  Quiz(1066, "What value does a default constructor give to a 'string' field?", ["null", "empty string", "Unknown", "0"]),
+  Quiz(1067, "What happens to the default constructor if you write a custom constructor?", ["The compiler no longer generates the default one", "It stays there", "It becomes private", "It crashes"]),
+  Quiz(1068, "Is 'public void Student()' a valid constructor?", ["No, constructors cannot have return types like 'void'", "Yes", "Only for strings", "Only if it is static"]),
+  Quiz(1069, "What is the purpose of a constructor?", ["To initialize the object's state", "To print text", "To stop the program", "To create a loop"]),
+  Quiz(1070, "Default constructors are also called _____ constructors.", ["Parameterless", "Static", "Void", "Private"]),
+
+  // Lesson 108: Parameterized Constructors: Initializing Data at Birth
+  Quiz(1071, "What is a 'Parameterized Constructor'?", ["A constructor that accepts arguments to initialize fields", "A constructor with no logic", "A static constructor", "A private method"]),
+  Quiz(1072, "In 'new Student(\"Mao\", 25)', what are the values in brackets called?", ["Arguments", "Parameters", "Fields", "Classes"]),
+  Quiz(1073, "What is a major benefit of parameterized constructors?", ["They ensure an object has required data immediately upon creation", "They make code slower", "They hide the class name", "They delete old data"]),
+  Quiz(1074, "Can a parameterized constructor call other methods?", ["Yes", "No", "Only static ones", "Only Main"]),
+  Quiz(1075, "How do you distinguish a parameter name from a field name if they are the same?", ["Use the 'this' keyword", "Use uppercase", "Use a comma", "You can't"]),
+  Quiz(1076, "Where are the parameters of a constructor defined?", ["In the parentheses () after the constructor name", "In the class body", "In the Main method", "In a text file"]),
+  Quiz(1077, "Does a parameterized constructor replace the default one?", ["Yes, the compiler will not generate the parameterless one anymore", "No", "Only if it's private", "Only for ints"]),
+  Quiz(1078, "Parameterized constructors help enforce _____.", ["Data integrity", "Loop speed", "File size", "Internet connection"]),
+  Quiz(1079, "Can you have two parameters of the same type in a constructor?", ["Yes", "No", "Only if one is string", "Only in C# 12"]),
+  Quiz(1080, "In 'public Student(string n) { Name = n; }', what is 'n'?", ["A parameter", "A field", "A class", "An object"]),
+
+  // Lesson 109: Constructor Overloading: Multiple Ways to Create an Object
+  Quiz(1081, "What is 'Constructor Overloading'?", ["Having multiple constructors with different parameter lists", "Creating too many objects", "Using a constructor in a loop", "Naming a constructor 'Main'"]),
+  Quiz(1082, "How does the compiler distinguish between overloaded constructors?", ["By their signature (parameter count, types, and order)", "By their return type", "By their names", "By the file size"]),
+  Quiz(1083, "Can two overloaded constructors have the same number and types of parameters?", ["No, they must have different signatures", "Yes", "Only if one is private", "Only in debug mode"]),
+  Quiz(1084, "What is the benefit of overloading constructors?", ["Flexibility in how objects are created", "Making the app faster", "Using less memory", "Hiding the class"]),
+  Quiz(1085, "If a class has constructors with (string) and (string, int), can you call it with no arguments?", ["Only if you also defined a parameterless constructor ()", "Yes", "No", "Only if static"]),
+  Quiz(1086, "Constructor overloading is an example of _____.", ["Polymorphism (Compile-time)", "Encapsulation", "Inheritance", "Abstraction"]),
+  Quiz(1087, "Which part of the signature does NOT count for overloading?", ["Return Type", "Parameter Count", "Parameter Type", "Parameter Order"]),
+  Quiz(1088, "Can you overload a constructor by just changing parameter names?", ["No, the types or count must change", "Yes", "Only for strings", "Only in Visual Studio"]),
+  Quiz(1089, "Overloaded constructors live in the _____ class.", ["Same", "Different", "Parent", "Static"]),
+  Quiz(1090, "How many constructors can a class have?", ["As many as needed, provided signatures are unique", "Only one", "Only two", "Up to ten"]),
+
+  // Lesson 110: Constructor Chaining: Using the 'this' Keyword
+  Quiz(1091, "What is 'Constructor Chaining'?", ["Calling one constructor from another in the same class", "Linking objects together", "Creating a list of classes", "Inheriting from a parent"]),
+  Quiz(1092, "Which keyword is used for constructor chaining in the same class?", ["this", "base", "new", "call"]),
+  Quiz(1093, "Where is the ': this()' syntax placed?", ["After the constructor signature but before the body { }", "Inside the body", "At the top of the file", "In the Main method"]),
+  Quiz(1094, "Why use constructor chaining?", ["To avoid code duplication and centralize initialization logic", "To make the app run faster", "To hide private fields", "To stop the GC"]),
+  Quiz(1095, "In chaining, which constructor executes its body first?", ["The targeted constructor (the one being called)", "The caller constructor", "Both at once", "The static constructor"]),
+  Quiz(1096, "Can you chain three constructors together (A -> B -> C)?", ["Yes", "No", "Only two", "Only in static classes"]),
+  Quiz(1097, "Does chaining help with the 'DRY' principle?", ["Yes (Don't Repeat Yourself)", "No", "Only for math", "Only for strings"]),
+  Quiz(1098, "What happens if you try to chain a constructor to itself?", ["Compile-time error (Circular dependency)", "It runs forever", "It works fine", "It crashes RAM"]),
+  Quiz(1099, "Can you pass arguments through 'this()' during chaining?", ["Yes", "No", "Only integers", "Only null"]),
+  Quiz(1100, "Constructor chaining makes the code more _____.", ["Maintainable and clean", "Complex", "Slow", "Private"]),
+
+  // Lesson 111: Static Constructors: Initializing Class-Level Data Once
+  Quiz(1101, "What is a 'Static Constructor'?", ["A constructor used to initialize static fields of a class", "A constructor that never moves", "A private method for strings", "A constructor for 'new' objects"]),
+  Quiz(1102, "How many times does a static constructor run?", ["Exactly once for the entire life of the application", "Every time an object is created", "Every second", "Never"]),
+  Quiz(1103, "Can a static constructor have parameters?", ["No", "Yes", "Only one", "Only for ints"]),
+  Quiz(1104, "Can you use access modifiers (public/private) on a static constructor?", ["No", "Yes", "Only public", "Only internal"]),
+  Quiz(1105, "When is a static constructor called?", ["Automatically before the first instance is created or static member accessed", "When you call 'new'", "Manually in Main", "By the user"]),
+  Quiz(1106, "Static constructors are used for _____.", ["Initializing static data or performing one-time setups", "Setting object names", "Printing user input", "Deleting objects"]),
+  Quiz(1107, "If a class has both static and instance constructors, which runs first?", ["The static constructor", "The instance constructor", "Depends on the code", "Main"]),
+  Quiz(1108, "Can a static constructor be called directly in code?", ["No, it is called automatically by the runtime", "Yes", "Only in static classes", "Only via 'this'"]),
+  Quiz(1109, "What happens if a static constructor throws an exception?", ["The class becomes unusable for the life of the app", "It tries again", "It skips the error", "The computer restarts"]),
+  Quiz(1110, "Static constructors are useful for loading _____.", ["Configuration settings or external data", "User passwords", "Button colors", "Loop counts"]),
+
+  // Lesson 112: Private Constructors and the Singleton Pattern
+  Quiz(1111, "What is a 'Private Constructor'?", ["A constructor that cannot be accessed from outside its class", "A hidden method", "A deleted constructor", "A constructor for strings"]),
+  Quiz(1112, "What is the primary effect of making a constructor private?", ["It prevents other classes from using 'new' to create instances", "It makes the class faster", "It hides the fields", "It saves memory"]),
+  Quiz(1113, "What is the 'Singleton Pattern'?", ["A design pattern that ensures a class has only one instance", "A pattern with one variable", "A way to write one line of code", "A loop with one turn"]),
+  Quiz(1114, "How do you get the instance of a Singleton class?", ["Through a public static method (e.g., GetInstance())", "By using 'new'", "By inheriting it", "By asking the GC"]),
+  Quiz(1115, "Where is the single instance of a Singleton stored?", ["In a private static field within the class", "On the stack", "In a text file", "In the registry"]),
+  Quiz(1116, "Why use a Singleton?", ["For centralized resources like Database connections or Settings", "To create many objects", "To hide methods", "To speed up loops"]),
+  Quiz(1117, "Does a private constructor stop static methods from working?", ["No, static methods can still be called", "Yes", "Only in C# 12", "Only for ints"]),
+  Quiz(1118, "In Singleton, when is the object usually created?", ["On the first call to GetInstance (Lazy Initialization)", "When the app starts", "When the user logs in", "Never"]),
+  Quiz(1119, "Can a private constructor be used for utility classes with only static methods?", ["Yes, to prevent unnecessary instantiation", "No", "Only for math", "Only in debug"]),
+  Quiz(1120, "Singleton ensures _____ access to a shared resource.", ["Global", "Local", "Temporary", "Slow"]),
+
+  // Lesson 113: Copy Constructors: Creating an Object from an Existing One
+  Quiz(1121, "What is a 'Copy Constructor'?", ["A constructor that creates a new object by copying data from another object", "A copy/paste tool", "A method that returns a string", "A static method"]),
+  Quiz(1122, "What is the parameter of a copy constructor?", ["An object of the same class type", "An integer", "A string", "Nothing"]),
+  Quiz(1123, "What is 'Deep Copying'?", ["Creating a new object and copying all values so they are independent", "Copying only the reference", "Copying a file", "Moving memory"]),
+  Quiz(1124, "What is 'Shallow Copying'?", ["Copying only the reference (both point to the same memory)", "Copying data", "Deleting an object", "Renaming a class"]),
+  Quiz(1125, "In 's2 = new Student(s1)', if s1 is modified later, does s2 change (if deep copied)?", ["No, they are independent objects", "Yes", "Only if static", "Only for strings"]),
+  Quiz(1126, "Why use a copy constructor?", ["To create a backup or a starting point based on an existing object", "To save RAM", "To make code shorter", "To use loops"]),
+  Quiz(1127, "Does C# provide a default copy constructor automatically?", ["No, you must define it yourself", "Yes", "Only for structs", "Only in Visual Studio"]),
+  Quiz(1128, "Can a copy constructor chain to another constructor?", ["Yes, using ': this()'", "No", "Only if public", "Only for ints"]),
+  Quiz(1129, "A copy constructor is similar to _____.", ["Cloning", "Inheriting", "Deleting", "Looping"]),
+  Quiz(1130, "What is the 'other' or 'source' object in a copy constructor?", ["The object being copied from", "The new object", "The class blueprint", "The GC"]),
+
+  // Lesson 114: Destructors (Finalizers): Understanding the '~' Syntax
+  Quiz(1131, "What is a 'Destructor' (Finalizer)?", ["A method called before an object is reclaimed by the GC", "A way to delete code", "The Main method", "A private field"]),
+  Quiz(1132, "What symbol is used to define a destructor?", ["Tilde (~)", "Hash (#)", "At (@)", "Dollar (\$)"]),
+  Quiz(1133, "Can you call a destructor manually?", ["No, it is called automatically by the Garbage Collector", "Yes", "Only in static classes", "Only if it's public"]),
+  Quiz(1134, "How many destructors can a class have?", ["Only one", "As many as you want", "Two", "None"]),
+  Quiz(1135, "Can a destructor have parameters or access modifiers?", ["No", "Yes", "Only public", "Only integers"]),
+  Quiz(1136, "Destructors are mainly used for _____.", ["Cleaning up unmanaged resources (Files, DB connections)", "Naming objects", "Math calculations", "Creating loops"]),
+  Quiz(1137, "Is the timing of a destructor predictable?", ["No, it depends on when the GC decides to run (Nondeterministic)", "Yes, exactly when null is set", "Yes, when the method ends", "Yes, every 10ms"]),
+  Quiz(1138, "What is an 'Unmanaged Resource'?", ["Resources outside the .NET runtime (like Win32 APIs, Files)", "A private variable", "A string", "An integer"]),
+  Quiz(1139, "Should you use destructors for simple memory cleanup?", ["No, let the GC handle managed memory; use for unmanaged only", "Yes, always", "Only for small classes", "Only in debug"]),
+  Quiz(1140, "What happens to a destructor if the app crashes?", ["It might not run", "It runs immediately", "It saves the file", "It restarts the app"]),
+
+  // Lesson 115: The IDisposable Interface vs. Destructors
+  Quiz(1141, "What is the 'IDisposable' interface used for?", ["Providing a way to release resources manually and immediately", "Creating objects", "Naming variables", "Sorting lists"]),
+  Quiz(1142, "What method must you implement for IDisposable?", ["Dispose()", "Clean()", "Close()", "Delete()"]),
+  Quiz(1143, "Which keyword helps automatically call Dispose()?", ["using", "new", "static", "try"]),
+  Quiz(1144, "What is the difference between Dispose() and a Destructor?", ["Dispose is manual/predictable; Destructor is automatic/unpredictable", "They are the same", "Dispose is only for ints", "Destructor is faster"]),
+  Quiz(1145, "What does 'GC.SuppressFinalize(this)' do?", ["Tells the GC that the object is already cleaned up; skip the destructor", "Stops the GC", "Crashes the app", "Makes the app faster"]),
+  Quiz(1146, "Is using the 'using' block safer than manual Dispose()?", ["Yes, it ensures Dispose is called even if an error occurs", "No", "Only for files", "Only in C# 12"]),
+  Quiz(1147, "When should a class implement IDisposable?", ["When it uses expensive resources like database, file handles, or network", "Always", "Never", "Only if it is static"]),
+  Quiz(1148, "Can you call Dispose() multiple times safely?", ["Yes, the implementation should handle multiple calls without error", "No", "Only once", "Only in debug"]),
+  Quiz(1149, "What is 'Deterministic Cleanup'?", ["Cleaning resources at a specific, known time", "Random cleanup", "Cleaning only strings", "Cleaning RAM every hour"]),
+  Quiz(1150, "IDisposable is located in the _____ namespace.", ["System", "System.IO", "System.Data", "System.Collections"]),
+];
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
   csharpQuizM2,
@@ -6764,4 +6897,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM6,
   csharpQuizM7,
   csharpQuizM8,
+  csharpQuizM9
 ];
