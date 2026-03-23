@@ -182,6 +182,7 @@ const Map<int, Map<int, String>> csharpModules = {
     126: "The 'readonly' Modifier: Protecting Data from Modification",
     127: "Exercise: Securing a 'Shan Bank Account' Class",
   },
+  //  11: "Properties (Getters and Setters)",
   11: {
     128: "What are Properties? Moving Beyond Public Fields",
     129: "The Traditional Manual Property (The 'value' Keyword)",
@@ -566,6 +567,17 @@ final Map<int, Lesson> csharpLessons = {
   125: Lesson(10, 125),
   126: Lesson(10, 126),
   127: Lesson(10, 127),
+  128: Lesson(11, 128),
+  129: Lesson(11, 129),
+  130: Lesson(11, 130),
+  131: Lesson(11, 131),
+  132: Lesson(11, 132),
+  133: Lesson(11, 133),
+  134: Lesson(11, 134),
+  135: Lesson(11, 135),
+  136: Lesson(11, 136),
+  137: Lesson(11, 137),
+  138: Lesson(11, 138),
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -7021,6 +7033,127 @@ final List<Quiz> csharpQuizM10 = [
   Quiz(1249, "Can you set a readonly field in a static constructor?", ["Yes (for static readonly fields)", "No", "Only in Main", "Only for strings"]),
   Quiz(1250, "Readonly ensures that data remains _____.", ["Consistent / Safe", "Volatile", "Fast", "Hidden"]),
 ];
+final List<Quiz> csharpQuizM11 = [
+  // Lesson 128: What are Properties?
+  Quiz(1251, "What is a Property in C#?", ["A member that provides a flexible mechanism to read, write, or compute the value of a private field", "A simple variable that is always public", "A method that doesn't return anything", "A way to delete a class"]),
+  Quiz(1252, "Properties are often called 'Smart _____'.", ["Fields", "Methods", "Loops", "Arrays"]),
+  Quiz(1253, "Which two accessors are used inside a property?", ["get and set", "read and write", "input and output", "start and end"]),
+  Quiz(1254, "What is the main benefit of using properties over public fields?", ["Encapsulation and data validation", "Faster execution speed", "Smaller file size", "Easier to name variables"]),
+  Quiz(1255, "A property acts as a _____ to a private field.", ["Gatekeeper", "Mirror", "Shadow", "Duplicate"]),
+  Quiz(1256, "Does a property look like a field or a method to the user of the class?", ["A field (uses the dot operator without parentheses)", "A method (uses parentheses)", "A loop", "A namespace"]),
+  Quiz(1257, "Properties allow you to change the internal implementation without _____.", ["Breaking external code", "Saving the project", "Using a constructor", "Naming the class"]),
+  Quiz(1258, "Which pillar of OOP do properties directly support?", ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction"]),
+  Quiz(1259, "What is a 'Backing Field'?", ["A private field that stores the actual data for a property", "A public field", "A static method", "A backup of the source code"]),
+  Quiz(1260, "Can properties contain logic (like if-statements)?", ["Yes, inside the get or set accessors", "No", "Only in static properties", "Only for strings"]),
+
+  // Lesson 129: The Traditional Manual Property
+  Quiz(1261, "In a manual property, which keyword represents the value being assigned?", ["value", "input", "data", "new"]),
+  Quiz(1262, "What is the return type of the 'value' keyword in a setter?", ["The same type as the property", "Always string", "Always int", "void"]),
+  Quiz(1263, "The 'get' accessor must always include a _____ statement.", ["return", "if", "break", "while"]),
+  Quiz(1264, "Where is the 'set' accessor logic executed?", ["When a value is assigned to the property using '='", "When the property is read", "When the object is deleted", "Only in the constructor"]),
+  Quiz(1265, "Manual properties require a _____ to store the data.", ["Private backing field", "Public list", "Static loop", "Global variable"]),
+  Quiz(1266, "Which accessor is called when you use 'Console.WriteLine(obj.Name);'?", ["get", "set", "init", "constructor"]),
+  Quiz(1267, "Can you have a property without a 'get' accessor?", ["Yes (Write-only property)", "No", "Only if it is static", "Only for integers"]),
+  Quiz(1268, "In 'set { _name = value; }', what is _name?", ["The backing field", "The property name", "A local variable", "A constant"]),
+  Quiz(1269, "Manual properties are best when you need _____.", ["Validation or custom logic", "Simple storage", "Faster performance", "Less code"]),
+  Quiz(1270, "What happens if a 'get' accessor doesn't return a value?", ["A compile-time error occurs", "It returns null", "The app crashes", "The value is 0"]),
+
+  // Lesson 130: Auto-Implemented Properties
+  Quiz(1271, "What is the shorthand syntax for an auto-implemented property?", ["{ get; set; }", "{ read; write; }", "=> value", "() -> data"]),
+  Quiz(1272, "Does an auto-property require you to declare a backing field manually?", ["No, the compiler creates one hidden backing field", "Yes", "Only for strings", "Only if it's private"]),
+  Quiz(1273, "Can you add validation logic inside an auto-property `{ get; set; }`?", ["No, you must convert it to a manual property first", "Yes", "Only in C# 12", "Only for ints"]),
+  Quiz(1274, "How do you initialize an auto-property with a default value?", ["public string Name { get; set; } = \"Sai\";", "Inside a loop", "Using a comment", "You cannot"]),
+  Quiz(1275, "Auto-properties are best used when _____ is not needed.", ["Logic or validation", "Memory", "A constructor", "A class"]),
+  Quiz(1276, "What does the compiler generate for an auto-property?", ["A private backing field and standard get/set logic", "Only a public field", "A static method", "A text file"]),
+  Quiz(1277, "Can you use auto-properties in a struct?", ["Yes", "No", "Only in classes", "Only for numbers"]),
+  Quiz(1278, "Is 'public int Age { get; set; }' valid C# code?", ["Yes", "No", "Only in the Main method", "Only if Age is static"]),
+  Quiz(1279, "Auto-properties help make the code _____.", ["Cleaner and more readable", "Slower", "More complex", "Private"]),
+  Quiz(1280, "Can an auto-property be static?", ["Yes", "No", "Only if it has no set", "Only for strings"]),
+
+  // Lesson 131: Read-Only Properties
+  Quiz(1281, "A read-only property has which accessor?", ["Only get", "Only set", "Both get and set", "init only"]),
+  Quiz(1282, "How do you create an auto-implemented read-only property?", ["public int Id { get; }", "public int Id { set; }", "public readonly int Id;", "public get Id;"]),
+  Quiz(1283, "Where can you assign a value to a 'get-only' auto-property?", ["In the constructor or property initializer", "Anywhere", "Only in the Main method", "Only in a loop"]),
+  Quiz(1284, "What is the purpose of a read-only property?", ["To prevent external code from changing the value", "To make code faster", "To hide the variable name", "To save RAM"]),
+  Quiz(1285, "Can a manual read-only property return a value from a private field?", ["Yes", "No", "Only if static", "Only in C# 1.0"]),
+  Quiz(1286, "Read-only properties support the concept of _____.", ["Immutability", "Volatility", "Recursion", "Dynamic typing"]),
+  Quiz(1287, "Which keyword is often used with fields to mimic read-only properties?", ["readonly", "const", "static", "fixed"]),
+  Quiz(1288, "In 'public string Version { get; } = \"1.0\";', can you change Version later?", ["No", "Yes", "Only in the constructor", "Only via reflection"]),
+  Quiz(1289, "Read-only properties are like _____.", ["A one-way mirror", "An open door", "A blank slate", "A static file"]),
+  Quiz(1290, "If a property only has a 'get', what happens if you try to assign a value to it?", ["A compile-time error occurs", "It crashes at runtime", "The value is ignored", "It works only once"]),
+
+  // Lesson 132: Write-Only Properties
+  Quiz(1291, "What is a write-only property?", ["A property with only a 'set' accessor", "A property with only a 'get'", "A public field", "A hidden method"]),
+  Quiz(1292, "When are write-only properties typically used?", ["For sensitive data like passwords", "For names and ages", "For calculations", "For every variable"]),
+  Quiz(1293, "Can an auto-property be write-only?", ["No, it must be a manual property", "Yes", "Only in C# 9", "Only for strings"]),
+  Quiz(1294, "What happens if you try to read a write-only property?", ["A compile-time error occurs", "It returns null", "It crashes", "It prints 'Secret'"]),
+  Quiz(1295, "Write-only properties provide _____ flow of data.", ["One-way (Inbound)", "One-way (Outbound)", "Two-way", "No"]),
+  Quiz(1296, "Is a write-only property common in standard C# programming?", ["No, they are rare", "Yes, they are everywhere", "Only in web apps", "Only for integers"]),
+  Quiz(1297, "Which accessor is present in a write-only property?", ["set", "get", "init", "readonly"]),
+  Quiz(1298, "Why prefer a method like 'SetPassword()' over a write-only property?", ["It's more explicit and standard", "It's faster", "Properties are broken", "Methods use less memory"]),
+  Quiz(1299, "Write-only properties are used for _____ access control.", ["Strict", "Open", "Lazy", "Static"]),
+  Quiz(1300, "In 'set { _secret = value; }', can you return a value?", ["No, setters are like void methods", "Yes", "Only if it is an int", "Only to the console"]),
+
+  // Lesson 133: Property Access Modifiers
+  Quiz(1301, "How do you allow anyone to read a property but only the class to change it?", ["public int Score { get; private set; }", "private int Score { get; set; }", "public int Score { get; }", "public private int Score;"]),
+  Quiz(1302, "What is the rule for access modifiers on accessors?", ["The accessor's modifier must be more restrictive than the property's", "It must be the same", "It must be more public", "There is no rule"]),
+  Quiz(1303, "Can you put a modifier on BOTH 'get' and 'set'?", ["No, only one accessor can have a modifier", "Yes", "Only if they are both private", "Only for static properties"]),
+  Quiz(1304, "Which modifier is commonly used on the 'set' accessor for encapsulation?", ["private", "public", "internal", "protected"]),
+  Quiz(1305, "What is 'Asymmetric Access'?", ["When 'get' and 'set' have different access levels", "When a property has no get", "When a field is public", "When a class is static"]),
+  Quiz(1306, "Can a property be 'internal' with a 'private set'?", ["Yes", "No", "Only in C# 11", "Only for ints"]),
+  Quiz(1307, "If the property is 'public', what is the default for an accessor without a modifier?", ["public", "private", "internal", "protected"]),
+  Quiz(1308, "Why use 'private set' instead of just 'get' only?", ["It allows methods inside the class to update the property easily", "It is faster", "It uses less RAM", "It is safer for threads"]),
+  Quiz(1309, "Which accessor is usually made private in data models?", ["set", "get", "both", "neither"]),
+  Quiz(1310, "Does 'public string Name { get; private set; }' create a backing field?", ["Yes, automatically", "No", "Only if you type it", "Only for strings"]),
+
+  // Lesson 134: Computed Properties
+  Quiz(1311, "What is a Computed Property?", ["A property that calculates its value on the fly rather than storing it", "A property that uses a calculator", "A property that is always static", "A public field with math"]),
+  Quiz(1312, "Does a computed property usually have a backing field?", ["No", "Yes", "Only if it is an int", "Only in old C#"]),
+  Quiz(1313, "Which syntax is common for simple computed properties?", ["Expression-bodied (=>)", "Auto-property", "While loops", "Switch cases"]),
+  Quiz(1314, "If you have FirstName and LastName, FullName is a good example of a _____ property.", ["Computed / Derived", "Write-only", "Static", "Private"]),
+  Quiz(1315, "Is a computed property usually read-only?", ["Yes, usually it only has a 'get'", "No, it must have a 'set'", "Only if it's a string", "Only in classes"]),
+  Quiz(1316, "When is a computed property's logic executed?", ["Every time the property is accessed (read)", "Only when the object is created", "Only when the app starts", "Once per hour"]),
+  Quiz(1317, "What is 'Derived Data'?", ["Data calculated from other existing fields", "Data from a database", "Deleted data", "Static data"]),
+  Quiz(1318, "The syntax 'public double Area => Width * Height;' defines a _____.", ["Read-only computed property", "Write-only property", "Method", "Constant"]),
+  Quiz(1319, "Computed properties ensure that data is always _____.", ["Up-to-date and consistent", "Static", "Compressed", "Encrypted"]),
+  Quiz(1320, "Can computed properties depend on other properties?", ["Yes", "No", "Only if they are private", "Only for numbers"]),
+
+  // Lesson 135: Validation Logic in Setters
+  Quiz(1321, "Where do you put validation rules in a property?", ["In the 'set' accessor", "In the 'get' accessor", "In the class name", "In the namespace"]),
+  Quiz(1322, "What does validation prevent?", ["Invalid or corrupted data from entering the object", "Speeding up the app", "Writing too much code", "Using backing fields"]),
+  Quiz(1323, "If `value < 0`, the setter can _____.", ["Reject the assignment or throw an exception", "Always accept it", "Delete the field", "Close the app"]),
+  Quiz(1324, "Validation logic requires using which type of property?", ["Manual Property (with backing field)", "Auto-property", "Write-only property", "Static property"]),
+  Quiz(1325, "The 'set' accessor acts as a _____ for data.", ["Filter / Guard", "Direct link", "Mirror", "Printer"]),
+  Quiz(1326, "Why is 'Age { get; set; }' risky without validation?", ["It allows negative ages like -50", "It is too slow", "It uses more memory", "It cannot be seen"]),
+  Quiz(1327, "Which keyword is checked against rules in the setter?", ["value", "data", "input", "this"]),
+  Quiz(1328, "Can the setter print an error message?", ["Yes, but throwing an exception is usually better", "No", "Only for strings", "Only in debug mode"]),
+  Quiz(1329, "Validation is a key part of _____.", ["Business Logic", "UI Design", "Hardware control", "File naming"]),
+  Quiz(1330, "A 'Guard Clause' in a setter usually checks for _____.", ["Invalid conditions early", "The current time", "The class name", "Backing fields"]),
+
+  // Lesson 136: The 'init' Only Setter
+  Quiz(1331, "What is the 'init' accessor?", ["An accessor that allows assignment only during object creation", "A way to start a loop", "A constructor alternative", "A private setter"]),
+  Quiz(1332, "Which version of C# introduced 'init'?", ["9.0", "1.0", "5.0", "12.0"]),
+  Quiz(1333, "Does 'init' support Object Initializers ( { Prop = val } )?", ["Yes", "No", "Only for strings", "Only in C# 1"]),
+  Quiz(1334, "Can you change an 'init' property after the object is created?", ["No, it becomes read-only after initialization", "Yes", "Only in the constructor", "Only via methods"]),
+  Quiz(1335, "What is the benefit of 'init' over '{ get; }'?", ["It allows setting values via Object Initializers while staying immutable", "It is faster", "It uses less memory", "It makes fields public"]),
+  Quiz(1336, "In 'public string ID { get; init; }', when can ID be set?", ["At creation (new Object { ID = ... })", "Anywhere", "Only in Main", "Every hour"]),
+  Quiz(1337, "Does 'init' work with auto-properties?", ["Yes", "No", "Only manual", "Only static"]),
+  Quiz(1338, "Is 'init' more or less flexible than 'set'?", ["Less flexible (it restricts modification)", "More flexible", "Same", "Depends on OS"]),
+  Quiz(1339, "Init-only properties promote _____.", ["Immutability", "Volatility", "Recursion", "Global state"]),
+  Quiz(1340, "Can you use 'init' with manual properties?", ["Yes, inside the accessor block", "No", "Only for integers", "Only for arrays"]),
+
+  // Lesson 137: Required Properties
+  Quiz(1341, "What does the 'required' modifier do?", ["Forces the caller to set the property during object creation", "Makes the property private", "Deletes the property", "Makes it static"]),
+  Quiz(1342, "Which version of C# introduced 'required'?", ["11.0", "9.0", "1.0", "8.0"]),
+  Quiz(1343, "What happens if you don't set a 'required' property in an object initializer?", ["A compile-time error occurs", "It is null", "The app crashes", "It works fine"]),
+  Quiz(1344, "Required properties help avoid _____ errors.", ["NullReference or missing data", "Loop", "Syntax", "Math"]),
+  Quiz(1345, "Can you combine 'required' and 'init'?", ["Yes, this is very common for immutable data", "No", "Only for strings", "Only in static classes"]),
+  Quiz(1346, "Where is the 'required' keyword placed?", ["Before the property type (e.g., public required string)", "Inside { }", "After the name", "In the constructor"]),
+  Quiz(1347, "Does 'required' work with fields too?", ["Yes, it can be applied to fields", "No, only properties", "Only in C# 12", "Only for ints"]),
+  Quiz(1348, "Who enforces 'required' properties?", ["The Compiler", "The OS", "The User", "The RAM"]),
+  Quiz(1349, "Required properties ensure _____ integrity.", ["Data / Object", "Hard drive", "Network", "UI"]),
+  Quiz(1350, "In 'public required string Name { get; set; }', is Name optional?", ["No, it must be provided", "Yes", "Only if it is null", "Only in Main"]),
+];
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
   csharpQuizM2,
@@ -7032,4 +7165,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM8,
   csharpQuizM9,
   csharpQuizM10,
+  csharpQuizM11,
 ];
