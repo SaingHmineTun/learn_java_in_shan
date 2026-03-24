@@ -3,7 +3,7 @@ import 'package:tmkacademy/utils/utils.dart';
 const Map<int, String> pythonTkinterTopics = {
   1: "Foundations & Branding (App: Shan Digital ID Card)",
   2: "Layout Mastery & Logic (App: Quick-Shan Translator)",
-  3: "Reactive UI & Validation (App: Secure Password Manager)",
+  3: "Reactive UI & Validation (App: Shan Password Manager)",
   4: "Working with Media & Assets (App: TMK Photo & Icon Viewer)",
   5: "Web Data & API Integration (App: Muse Live Weather Dashboard)",
   6: "Database Persistence & Tables (App: TMK Student Records Manager)",
@@ -23,6 +23,26 @@ const Map<int, Map<int, String>> pythonTkinterModules = {
     7: "Styling Basics: Backgrounds, Foregrounds, and Padding",
     8: "Project: Building the 'Shan Digital ID Card' Interface",
   },
+  2: {
+    9: "Introduction to Button & Command Binding",
+    10: "The Entry Widget: Taking User Input",
+    11: "Logic with Functions: Connecting UI to Python Code",
+    12: "Using Lambda for Passing Arguments to Buttons",
+    13: "The Text Widget: Multi-line Display for Translation",
+    14: "Managing Layouts with Nested Frames",
+    15: "String Manipulation: Processing Shan Text Input",
+    16: "Project: Building the 'Quick-Shan Translator' App",
+  },
+  3: {
+    17: "Understanding Variables (StringVar, IntVar)",
+    18: "Real-time UI Updates with .trace()",
+    19: "Input Validation: Checking for Shan/English Characters",
+    20: "Messagebox: Showing Alerts in Shan Language",
+    21: "The Checkbutton & Radiobutton: User Preferences",
+    22: "Focus & Events: Highlighting Active Entry Fields",
+    23: "Logical Error Handling (Try-Except) in GUI",
+    24: "Project: Building the 'TMK Secure Shan-Wallet' Interface",
+  },
 };
 
 final Map<int, Lesson> pythonTkinterLessons = {
@@ -34,4 +54,12 @@ final Map<int, Lesson> pythonTkinterLessons = {
   6: Lesson(1, 6),
   7: Lesson(1, 7),
   8: Lesson(1, 8),
+  9: Lesson(2, 9),
+  10: Lesson(2, 10),
+  11: Lesson(2, 11),
+  12: Lesson(2, 12),
+  13: Lesson(2, 13),
+  14: Lesson(2, 14),
+  15: Lesson(2, 15),
+  16: Lesson(2, 16),
 };
