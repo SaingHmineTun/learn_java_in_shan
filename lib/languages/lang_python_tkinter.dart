@@ -43,6 +43,17 @@ const Map<int, Map<int, String>> pythonTkinterModules = {
     23: "Logical Error Handling (Try-Except) in GUI",
     24: "Project: Building the 'TMK Secure Shan-Wallet' Interface",
   },
+  4: {
+    25: "Custom Window Icons & Title Branding",
+    26: "Advanced Image Handling with Pillow (PIL)",
+    27: "Dynamic Image Loading from File Paths",
+    28: "Creating an Image Slider: Next & Previous Logic",
+    29: "Displaying Lists of Photos with Scrollbars",
+    30: "Working with Different Image Formats (PNG vs JPG)",
+    31: "Optimizing Image Memory & Garbage Collection",
+    32: "Project: Building the 'TMK Photo & Icon Viewer' App",
+  },
+
 };
 
 final Map<int, Lesson> pythonTkinterLessons = {
