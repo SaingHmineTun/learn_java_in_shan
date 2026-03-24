@@ -12,6 +12,7 @@ import '../languages/lang_java.dart';
 import '../languages/lang_js.dart';
 import '../languages/lang_kotlin.dart';
 import '../languages/lang_python.dart';
+import '../languages/lang_python_tkinter.dart';
 
 const Map<String, Map<int, String>> topics = {
   "java": javaTopics,
@@ -25,7 +26,8 @@ const Map<String, Map<int, String>> topics = {
   "c": cTopics,
   "haskell": haskellTopics,
   "ts": tsTopics,
-  "csharp": csharpTopics
+  "csharp": csharpTopics,
+  "python_tkinter": pythonTkinterTopics
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -40,7 +42,8 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "c": cModules,
   "haskell": haskellModules,
   "ts": tsModules,
-  "csharp": csharpModules
+  "csharp": csharpModules,
+  "python_tkinter": pythonTkinterModules
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -55,7 +58,8 @@ final Map<String, Map<int, Lesson>> lessons = {
   "c": cLessons,
   "haskell": haskellLessons,
   "ts": tsLessons,
-  "csharp": csharpLessons
+  "csharp": csharpLessons,
+  "python_tkinter": pythonTkinterLessons
 };
 
 class Lesson {

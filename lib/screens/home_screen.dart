@@ -126,7 +126,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               Text(
-                lang.toUpperCase(),
+                fullName[lang] ?? lang,
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,

@@ -10,19 +10,21 @@ const languages = [
   "ts",
   "c",
   "haskell",
-  "csharp"
+  "csharp",
+  "python_tkinter",
 ];
 const fullName = {
   "basic": "Computer Basic",
-  "python": "Python in Shan",
-  "java": "Java in Shan",
-  "kotlin": "Kotlin in Shan",
-  "dart": "Dart in Shan",
-  "html": "HTML in Shan",
-  "css": "CSS in Shan",
-  "js": "Javascript in Shan",
-  "ts": "Typescript in Shan",
-  "c": "C in Shan",
-  "haskell": "Haskell in Shan",
-  "csharp": "C# in Shan"
+  "python": "Python",
+  "java": "Java",
+  "kotlin": "Kotlin",
+  "dart": "Dart",
+  "html": "HTML",
+  "css": "CSS",
+  "js": "Javascript",
+  "ts": "Typescript",
+  "c": "C",
+  "haskell": "Haskell",
+  "csharp": "C#",
+  "python_tkinter": "Tkinter in Python",
 };

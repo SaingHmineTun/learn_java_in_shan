@@ -36,6 +36,7 @@ flutter:
     - assets/lessons/haskell/
     - assets/lessons/ts/
     - assets/lessons/csharp/
+    - assets/lessons/python_tkinter/
     - assets/images/
   fonts:
     - family: AJ05
