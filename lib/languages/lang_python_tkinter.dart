@@ -53,6 +53,16 @@ const Map<int, Map<int, String>> pythonTkinterModules = {
     31: "Optimizing Image Memory & Garbage Collection",
     32: "Project: Building the 'TMK Photo & Icon Viewer' App",
   },
+  5: {
+    33: "Introduction to APIs: Connecting to the Web",
+    34: "Understanding JSON: Data Format for the Internet",
+    35: "The Requests Library: Fetching Data in Python",
+    36: "Parsing API Responses: Extracting Temperature & Icons",
+    37: "Handling Network Errors & Timeouts in GUI",
+    38: "Environment Variables: Protecting your API Keys",
+    39: "Threaded Requests: Keeping the UI Responsive",
+    40: "Project: Building the 'Muse Live Weather Dashboard'",
+  },
 
 };
 
@@ -89,4 +99,12 @@ final Map<int, Lesson> pythonTkinterLessons = {
   30: Lesson(4, 30),
   31: Lesson(4, 31),
   32: Lesson(4, 32),
+  33: Lesson(5, 33),
+  34: Lesson(5, 34),
+  35: Lesson(5, 35),
+  36: Lesson(5, 36),
+  37: Lesson(5, 37),
+  38: Lesson(5, 38),
+  39: Lesson(5, 39),
+  40: Lesson(5, 40),
 };
