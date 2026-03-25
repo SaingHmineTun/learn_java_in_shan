@@ -83,7 +83,16 @@ const Map<int, Map<int, String>> pythonTkinterModules = {
     55: "Score Tracking: Saving High Scores to SQLite",
     56: "Project: Building the 'Shan Typing Speed Tester'",
   },
-
+  8: {
+    57: "Modern UI with CustomTkinter: Beyond Standard Buttons",
+    58: "Working with Templates: Positioning Text on Images",
+    59: "The Pillow Library: Dynamic Image Processing",
+    60: "PDF Generation: Converting Certificates to Printable Files",
+    61: "Asset Management: Handling Fonts and Images Locally",
+    62: "Error Handling & Logging: Making Your App Robust",
+    63: "PyInstaller: Converting .py to .exe for Distribution",
+    64: "Final Project: The 'TMK Certificate Generator' Suite",
+  },
 };
 
 final Map<int, Lesson> pythonTkinterLessons = {
@@ -143,4 +152,12 @@ final Map<int, Lesson> pythonTkinterLessons = {
   54: Lesson(7, 54),
   55: Lesson(7, 55),
   56: Lesson(7, 56),
+  57: Lesson(8, 57),
+  58: Lesson(8, 58),
+  59: Lesson(8, 59),
+  60: Lesson(8, 60),
+  61: Lesson(8, 61),
+  62: Lesson(8, 62),
+  63: Lesson(8, 63),
+  64: Lesson(8, 64),
 };
