@@ -63,6 +63,16 @@ const Map<int, Map<int, String>> pythonTkinterModules = {
     39: "Threaded Requests: Keeping the UI Responsive",
     40: "Project: Building the 'Muse Live Weather Dashboard'",
   },
+  6: {
+    41: "Introduction to SQLite: Creating Your First Database",
+    42: "SQL Basics: INSERT, SELECT, UPDATE, DELETE (CRUD)",
+    43: "Connecting Tkinter to SQLite: The Database Wrapper",
+    44: "Using Treeview: Displaying Database Records in Tables",
+    45: "Form Validation: Ensuring Clean Data Entry",
+    46: "Searching & Filtering Records from the Database",
+    47: "Data Persistence: Managing Files and Backups",
+    48: "Project: Building the 'TMK Student Records Manager'",
+  },
 
 };
 
@@ -107,4 +117,12 @@ final Map<int, Lesson> pythonTkinterLessons = {
   38: Lesson(5, 38),
   39: Lesson(5, 39),
   40: Lesson(5, 40),
+  41: Lesson(6, 41),
+  42: Lesson(6, 42),
+  43: Lesson(6, 43),
+  44: Lesson(6, 44),
+  45: Lesson(6, 45),
+  46: Lesson(6, 46),
+  47: Lesson(6, 47),
+  48: Lesson(6, 48),
 };
