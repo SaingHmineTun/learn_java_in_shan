@@ -73,6 +73,16 @@ const Map<int, Map<int, String>> pythonTkinterModules = {
     47: "Data Persistence: Managing Files and Backups",
     48: "Project: Building the 'TMK Student Records Manager'",
   },
+  7: {
+    49: "Introduction to Concurrency: Why Games Need Threads",
+    50: "The Countdown Timer: Using the .after() Method",
+    51: "Real-time Input Tracking: Word per Minute (WPM) Logic",
+    52: "Keyboard Events: Binding Keys for Fast Interaction",
+    53: "Randomizing Text: Fetching Proverbs from Your API",
+    54: "Game States: Start, Pause, and Game Over Logic",
+    55: "Score Tracking: Saving High Scores to SQLite",
+    56: "Project: Building the 'Shan Typing Speed Tester'",
+  },
 
 };
 
@@ -125,4 +135,12 @@ final Map<int, Lesson> pythonTkinterLessons = {
   46: Lesson(6, 46),
   47: Lesson(6, 47),
   48: Lesson(6, 48),
+  49: Lesson(7, 49),
+  50: Lesson(7, 50),
+  51: Lesson(7, 51),
+  52: Lesson(7, 52),
+  53: Lesson(7, 53),
+  54: Lesson(7, 54),
+  55: Lesson(7, 55),
+  56: Lesson(7, 56),
 };
