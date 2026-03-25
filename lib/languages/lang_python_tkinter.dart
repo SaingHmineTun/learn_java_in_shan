@@ -81,4 +81,12 @@ final Map<int, Lesson> pythonTkinterLessons = {
   22: Lesson(3, 22),
   23: Lesson(3, 23),
   24: Lesson(3, 24),
+  25: Lesson(4, 25),
+  26: Lesson(4, 26),
+  27: Lesson(4, 27),
+  28: Lesson(4, 28),
+  29: Lesson(4, 29),
+  30: Lesson(4, 30),
+  31: Lesson(4, 31),
+  32: Lesson(4, 32),
 };
