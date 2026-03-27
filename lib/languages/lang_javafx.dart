@@ -44,6 +44,15 @@ const Map<int, Map<int, String>> javafxModules = {
     25: "Exporting Conversion History to a Text File",
   },
   4: {
+    17: "Introduction to JavaFX CSS (Inline vs. External)",
+    18: "Styling Buttons & TextFields (Gradients & Shadows)",
+    19: "Customizing the ID Card Design with CSS Shapes",
+    20: "Using Custom Fonts (Shan & Google Fonts)",
+    21: "Working with Dialogs & Alerts (Validation Feedback)",
+    22: "Exporting UI to Image (Saving the ID Card)",
+    23: "Final Project: The Polished Student ID Maker",
+  },
+  5: {
     26: "Introduction to JavaFX Media API (Media & Player)",
     27: "Designing the Cyberpunk UI with Neon CSS Effects",
     28: "Implementing Play, Pause, and Stop Audio Logic",
@@ -54,7 +63,7 @@ const Map<int, Map<int, String>> javafxModules = {
     33: "Handling Media Errors & Unsupported Formats",
     34: "Visualizer Basics: Animating UI to Audio Frequencies",
   },
-  5: {
+  6: {
     35: "Introduction to JDBC & MySQL Connector/J Setup",
     36: "Setting up MySQL Local Environment (XAMPP/WAMP)",
     37: "The Database Singleton Class (Connection Manager)",
@@ -64,7 +73,7 @@ const Map<int, Map<int, String>> javafxModules = {
     41: "The Ping Logic: Testing the Connection via JDBC",
     42: "Multithreading: Database Pings without UI Freezing",
   },
-  6: {
+  7: {
     43: "Designing the Expense Entry Form in Scene Builder",
     44: "Creating the MySQL Table Schema (DDL Basics)",
     45: "The Data Model: Creating the Expense POJO Class",
@@ -74,7 +83,7 @@ const Map<int, Map<int, String>> javafxModules = {
     49: "User Feedback: Transaction Alerts & UI Clearing",
     50: "SQL Queries: Fetching Sum of Expenses (Aggregates)",
   },
-  7: {
+  8: {
     51: "Introduction to TableView & TableColumn Setup",
     52: "The Power of ObservableList (Reactive Data Binding)",
     53: "SQL SELECT: Fetching Shan Proverbs from MySQL",
@@ -85,7 +94,7 @@ const Map<int, Map<int, String>> javafxModules = {
     58: "Exporting Table Data to CSV/Excel Format",
     59: "Final UI Polish: Shan Unicode Font Support",
   },
-  8: {
+  9: {
     60: "Scene Switching: Navigating Multiple Windows",
     61: "Passing Data Between Controllers (InitData Pattern)",
     62: "User Authentication: Creating a Secure Login System",
@@ -96,7 +105,7 @@ const Map<int, Map<int, String>> javafxModules = {
     67: "Implementing UI Loaders (ProgressIndicator)",
     68: "Working with Custom Dialogs and Popup Windows",
   },
-  9: {
+  10: {
     69: "LMS: Advanced Schema Design (Foreign Keys)",
     70: "LMS: Dashboard & Side-Navigation Architecture",
     71: "LMS: Managing Book Inventory (Full CRUD)",
@@ -127,4 +136,11 @@ final Map<int, Lesson> javafxLessons = {
   14: Lesson(2, 14),
   15: Lesson(2, 15),
   16: Lesson(2, 16),
+  17: Lesson(3, 17),
+  18: Lesson(3, 18),
+  19: Lesson(3, 19),
+  20: Lesson(3, 20),
+  21: Lesson(3, 21),
+  22: Lesson(3, 22),
+  23: Lesson(3, 23),
 };
