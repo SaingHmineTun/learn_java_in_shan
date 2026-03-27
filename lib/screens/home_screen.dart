@@ -16,10 +16,16 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFFE76F00), // Java Orange
           'icon': DevIcons.javaPlain,
         };
+      case 'python_tkinter': // Adding Tkinter here or as a separate case
       case 'python':
         return {
           'color': const Color(0xFF3776AB), // Python Blue
           'icon': DevIcons.pythonPlain,
+        };
+      case 'git':
+        return {
+          'color': const Color(0xFFF05032), // Git Orange-Red
+          'icon': DevIcons.gitPlain,
         };
       case 'haskell':
         return {
