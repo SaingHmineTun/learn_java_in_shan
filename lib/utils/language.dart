@@ -9,9 +9,10 @@ const languages = [
   "js",
   "ts",
   "c",
-  "haskell",
   "csharp",
+  "haskell",
   "python_tkinter",
+  "git",
 ];
 const fullName = {
   "basic": "Computer Basic",
@@ -24,7 +25,8 @@ const fullName = {
   "js": "Javascript",
   "ts": "Typescript",
   "c": "C",
-  "haskell": "Haskell",
   "csharp": "C#",
-  "python_tkinter": "Tkinter in Python",
+  "haskell": "Haskell",
+  "python_tkinter": "Python Tkinter",
+  "git": "Git & Github",
 };
