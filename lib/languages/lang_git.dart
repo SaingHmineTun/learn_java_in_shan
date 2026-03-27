@@ -130,7 +130,16 @@ final Map<int, Lesson> gitLessons = {
   42: Lesson(5, 42),
   43: Lesson(5, 43),
   44: Lesson(5, 44),
-  45: Lesson(5, 45)
+  45: Lesson(5, 45),
+  46: Lesson(6, 46),
+  47: Lesson(6, 47),
+  48: Lesson(6, 48),
+  49: Lesson(6, 49),
+  50: Lesson(6, 50),
+  51: Lesson(6, 51),
+  52: Lesson(6, 52),
+  53: Lesson(6, 53),
+  54: Lesson(6, 54),
 };
 
 final List<Quiz> gitQuizM1 = [
