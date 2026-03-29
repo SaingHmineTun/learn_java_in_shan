@@ -92,6 +92,7 @@ const Map<int, Map<int, String>> javafxModules = {
     57: "Exporting Table Data to CSV/Excel Format",
     58: "Final UI Polish: Shan Unicode Font Support",
   },
+  // 8: "Library Management System (Architecture & Auth)"
   8: {
     59: "Scene Switching: Navigating Multiple Windows",
     60: "Passing Data Between Controllers (InitData Pattern)",
