@@ -158,4 +158,12 @@ final Map<int, Lesson> javafxLessons = {
   38: Lesson(5, 38),
   39: Lesson(5, 39),
   40: Lesson(5, 40),
+  41: Lesson(6, 41),
+  42: Lesson(6, 42),
+  43: Lesson(6, 43),
+  44: Lesson(6, 44),
+  45: Lesson(6, 45),
+  46: Lesson(6, 46),
+  47: Lesson(6, 47),
+  48: Lesson(6, 48),
 };
