@@ -1,4 +1,4 @@
-## 📘 Lesson 58: Final UI Polish (Shan Unicode Support)
+## Lesson 58: Final UI Polish (Shan Unicode Support)
 
 ၼႂ်း JavaFX, သင်ႁဝ်းဢမ်ႇတင်ႈ Font ပၼ်မၼ်း၊ မၼ်းတေၸႂ်ႉ System Font (ၼင်ႇ Segoe UI)။ 
 ၵူၺ်းၵႃႈ Font ၸိူဝ်းၼၼ်ႉ မၢင်ပွၵ်ႈဢမ်ႇၼႄပၼ် လိၵ်ႈတႆးလီလီ။ ႁဝ်းတေဢဝ် Font ၼင်ႇ **NamKhone** ဢမ်ႇၼၼ် **PangLong** ၶဝ်ႈမႃးၸႂ်ႉၼႂ်း App ႁဝ်းၶႃႈ။
