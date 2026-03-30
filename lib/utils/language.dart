@@ -11,6 +11,7 @@ const languages = [
   "c",
   "csharp",
   "haskell",
+  "javafx",
   "python_tkinter",
   "git",
 ];
@@ -28,5 +29,6 @@ const fullName = {
   "csharp": "C#",
   "haskell": "Haskell",
   "python_tkinter": "Python Tkinter",
+  "javafx": "JavaFX",
   "git": "Git & Github",
 };

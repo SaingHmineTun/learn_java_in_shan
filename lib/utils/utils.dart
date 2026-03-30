@@ -3,6 +3,7 @@ import 'package:tmkacademy/languages/lang_c.dart';
 import 'package:tmkacademy/languages/lang_csharp.dart';
 import 'package:tmkacademy/languages/lang_git.dart';
 import 'package:tmkacademy/languages/lang_haskell.dart';
+import 'package:tmkacademy/languages/lang_javafx.dart';
 import 'package:tmkacademy/languages/lang_ts.dart';
 
 import '../languages/lang_basic.dart';
@@ -28,6 +29,7 @@ const Map<String, Map<int, String>> topics = {
   "haskell": haskellTopics,
   "ts": tsTopics,
   "csharp": csharpTopics,
+  "javafx": javafxTopics,
   "python_tkinter": pythonTkinterTopics,
   "git": gitTopics
 };
@@ -46,6 +48,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "ts": tsModules,
   "csharp": csharpModules,
   "python_tkinter": pythonTkinterModules,
+  "javafx": javafxModules,
   "git": gitModules
 };
 
@@ -63,6 +66,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "ts": tsLessons,
   "csharp": csharpLessons,
   "python_tkinter": pythonTkinterLessons,
+  "javafx": javafxLessons,
   "git": gitLessons
 };
 

@@ -8,9 +8,9 @@ import 'about_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
-
   Map<String, dynamic> _getLanguageStyle(String lang) {
     switch (lang.toLowerCase()) {
+      case 'javafx':
       case 'java':
         return {
           'color': const Color(0xFFE76F00), // Java Orange
@@ -35,28 +35,17 @@ class HomeScreen extends StatelessWidget {
       case 'basic':
         return {
           'color': const Color(0xFFAA00FF),
-          'icon': Icons.terminal_rounded, // DevIcons ဢမ်ႇမီး Basic၊ ၸႂ်ႉ Terminal ဝႆႉမိူၼ်ၵဝ်ႇၶႃႈ
+          'icon': Icons.terminal_rounded,
+          // DevIcons ဢမ်ႇမီး Basic၊ ၸႂ်ႉ Terminal ဝႆႉမိူၼ်ၵဝ်ႇၶႃႈ
         };
       case 'kotlin':
-        return {
-          'color': const Color(0xFF7F52FF),
-          'icon': DevIcons.kotlinPlain,
-        };
+        return {'color': const Color(0xFF7F52FF), 'icon': DevIcons.kotlinPlain};
       case 'dart':
-        return {
-          'color': const Color(0xFF00B0FF),
-          'icon': DevIcons.dartPlain,
-        };
+        return {'color': const Color(0xFF00B0FF), 'icon': DevIcons.dartPlain};
       case 'html':
-        return {
-          'color': const Color(0xFFE44D26),
-          'icon': DevIcons.html5Plain,
-        };
+        return {'color': const Color(0xFFE44D26), 'icon': DevIcons.html5Plain};
       case 'css':
-        return {
-          'color': const Color(0xFF1572B6),
-          'icon': DevIcons.css3Plain,
-        };
+        return {'color': const Color(0xFF1572B6), 'icon': DevIcons.css3Plain};
       case 'js':
       case 'javascript':
         return {
@@ -70,10 +59,7 @@ class HomeScreen extends StatelessWidget {
           'icon': DevIcons.typescriptPlain,
         };
       case 'c':
-        return {
-          'color': const Color(0xFFA8B9CC),
-          'icon': DevIcons.cPlain,
-        };
+        return {'color': const Color(0xFFA8B9CC), 'icon': DevIcons.cPlain};
       case 'csharp':
         return {
           'color': const Color(0xFF512BD4), // .NET / C# Purple
@@ -102,7 +88,9 @@ class HomeScreen extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (ctx) => LanguageScreen(language: lang.toLowerCase())),
+            MaterialPageRoute(
+              builder: (ctx) => LanguageScreen(language: lang.toLowerCase()),
+            ),
           );
         },
         child: Container(
@@ -124,11 +112,7 @@ class HomeScreen extends StatelessWidget {
                   color: accentColor.withOpacity(0.1),
                   shape: BoxShape.circle,
                 ),
-                child: Icon(
-                  langIcon,
-                  size: 45,
-                  color: accentColor,
-                ),
+                child: Icon(langIcon, size: 45, color: accentColor),
               ),
               const SizedBox(height: 15),
               Text(
@@ -142,7 +126,10 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 4,
+                ),
                 decoration: BoxDecoration(
                   color: accentColor.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(20),
@@ -183,9 +170,9 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (ctx) => const AboutScreen()),
-              );
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (ctx) => const AboutScreen()));
             },
             icon: const Icon(Icons.info_outline, color: kBrandGold),
           ),
@@ -222,13 +209,17 @@ class HomeScreen extends StatelessWidget {
                   alignment: WrapAlignment.center,
                   spacing: 20,
                   runSpacing: 20,
-                  children: languages.map((lang) => SizedBox(
-                    width: 165,
-                    child: AspectRatio(
-                      aspectRatio: 0.85,
-                      child: _buildLanguageCard(context, lang),
-                    ),
-                  )).toList(),
+                  children: languages
+                      .map(
+                        (lang) => SizedBox(
+                          width: 165,
+                          child: AspectRatio(
+                            aspectRatio: 0.85,
+                            child: _buildLanguageCard(context, lang),
+                          ),
+                        ),
+                      )
+                      .toList(),
                 ),
               ),
             ),
