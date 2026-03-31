@@ -114,4 +114,12 @@ final Map<int, Lesson> cppLessons = {
   13: Lesson(2, 13),
   14: Lesson(2, 14),
   15: Lesson(2, 15),
+  16: Lesson(3, 16),
+  17: Lesson(3, 17),
+  18: Lesson(3, 18),
+  19: Lesson(3, 19),
+  20: Lesson(3, 20),
+  21: Lesson(3, 21),
+  22: Lesson(3, 22),
+  23: Lesson(3, 23),
 };
