@@ -5,10 +5,11 @@ const Map<int, String> cppTopics = {
   2: "The Foundation: Variables & Data Types",
   3: "Logic & Math: Operators & Expressions",
   4: "Control Flow: Conditionals & Looping Structures",
-  5: "Functions: Modular Programming & Scope",
-  6: "Memory Mastery: Pointers & References",
-  7: "OOP Part 1: Classes, Objects & Encapsulation",
-  8: "OOP Part 2: Inheritance & Polymorphism",
+  5: "Organizing Data: Arrays, Strings, and Vectors",
+  6: "Functions: Modular Programming & Scope",
+  7: "Memory Mastery: Pointers & References",
+  8: "OOP Part 1: Classes, Objects & Encapsulation",
+  9: "OOP Part 2: Inheritance & Polymorphism",
 };
 
 const Map<int, Map<int, String>> cppModules = {
@@ -53,6 +54,17 @@ const Map<int, Map<int, String>> cppModules = {
     32: "Project: The Number Guessing Game",
   },
   5: {
+    33: "Introduction to Arrays: Storing Multiple Values",
+    34: "Array Indexing and Memory Layout",
+    35: "Multidimensional Arrays: Working with Tables and Grids",
+    36: "C-Style Strings vs. std::string: The Evolution",
+    37: "Essential String Functions: Manipulation and Searching",
+    38: "Introduction to std::vector: The Dynamic Array",
+    39: "Vector Operations: push_back, pop_back, and size",
+    40: "Iterating through Vectors with Iterators",
+    41: "Project: The Student Grade Management System"
+  },
+  6: {
     33: "The Power of Reusability: Defining and Calling Functions",
     34: "Function Prototypes: Declaration vs. Definition",
     35: "Return Types and the Purpose of Void",
@@ -63,7 +75,7 @@ const Map<int, Map<int, String>> cppModules = {
     40: "Static Variables and Persistent State",
     41: "Project: The Custom Math Library",
   },
-  6: {
+  7: {
     42: "The Address-of Operator (&): Finding where data lives",
     43: "Introduction to Pointers: Storing Memory Addresses",
     44: "De-referencing (*): Accessing Data via Pointers",
@@ -74,7 +86,7 @@ const Map<int, Map<int, String>> cppModules = {
     49: "References vs. Pointers: When to use which?",
     50: "Project: The Dynamic Array Manager",
   },
-  7: {
+  8: {
     51: "Thinking in Objects: Procedural vs. OOP",
     52: "Defining Your First Class and Creating Objects",
     53: "Access Specifiers: Public, Private, and Protected",
@@ -85,7 +97,7 @@ const Map<int, Map<int, String>> cppModules = {
     58: "The 'this' Pointer: Disambiguating Member Variables",
     59: "Project: The Student Profile Manager",
   },
-  8: {
+  9: {
     60: "The Power of Hierarchy: Base and Derived Classes",
     61: "Inheritance Types: Public, Private, and Protected",
     62: "Constructors and Destructors in Inheritance",
@@ -122,4 +134,13 @@ final Map<int, Lesson> cppLessons = {
   21: Lesson(3, 21),
   22: Lesson(3, 22),
   23: Lesson(3, 23),
+  24: Lesson(4, 24),
+  25: Lesson(4, 25),
+  26: Lesson(4, 26),
+  27: Lesson(4, 27),
+  28: Lesson(4, 28),
+  29: Lesson(4, 29),
+  30: Lesson(4, 30),
+  31: Lesson(4, 31),
+  32: Lesson(4, 32),
 };
