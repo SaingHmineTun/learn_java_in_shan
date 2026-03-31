@@ -1,5 +1,6 @@
 // TOPIC SECTION (Module 1 - Introduction)
 import 'package:tmkacademy/languages/lang_c.dart';
+import 'package:tmkacademy/languages/lang_cpp.dart';
 import 'package:tmkacademy/languages/lang_csharp.dart';
 import 'package:tmkacademy/languages/lang_git.dart';
 import 'package:tmkacademy/languages/lang_haskell.dart';
@@ -31,7 +32,8 @@ const Map<String, Map<int, String>> topics = {
   "csharp": csharpTopics,
   "javafx": javafxTopics,
   "python_tkinter": pythonTkinterTopics,
-  "git": gitTopics
+  "git": gitTopics,
+  "cpp": cppTopics
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -49,7 +51,8 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "csharp": csharpModules,
   "python_tkinter": pythonTkinterModules,
   "javafx": javafxModules,
-  "git": gitModules
+  "git": gitModules,
+  "cpp": cppModules
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -67,7 +70,8 @@ final Map<String, Map<int, Lesson>> lessons = {
   "csharp": csharpLessons,
   "python_tkinter": pythonTkinterLessons,
   "javafx": javafxLessons,
-  "git": gitLessons
+  "git": gitLessons,
+  "cpp": cppLessons
 };
 
 class Lesson {

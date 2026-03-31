@@ -60,6 +60,11 @@ class HomeScreen extends StatelessWidget {
         };
       case 'c':
         return {'color': const Color(0xFFA8B9CC), 'icon': DevIcons.cPlain};
+      case 'cpp':
+        return {
+          'color': const Color(0xFF4E9A06), // C++ Green
+          'icon': DevIcons.cplusplusPlain,
+        };
       case 'csharp':
         return {
           'color': const Color(0xFF512BD4), // .NET / C# Purple
