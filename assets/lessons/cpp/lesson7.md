@@ -1,4 +1,4 @@
-# Lesson 1.7: Project: The Personal Greeter
+# Lesson 7: Project: The Personal Greeter
 
 ### ၶေႃႈတၢင်ႇလဝ်ႈ (Introduction)
 ယိၼ်းၸူမ်းၸွမ်းၶႃႈ! ၸဝ်ႈၵဝ်ႇလႆႈႁဵၼ်းႁူႉလွင်ႈ ပိူင်သၢင်ႈ C++, ၵၢၼ် Compile လႄႈ ၵၢၼ်ၼေလိၵ်ႈဢွၵ်ႇ (Output) ယဝ်ႉ။ 

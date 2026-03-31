@@ -1,4 +1,4 @@
-# Lesson 1.6: The Compilation Workflow
+# Lesson 6: The Compilation Workflow
 
 ### ၶေႃႈတၢင်ႇလဝ်ႈ (Introduction)
 ၵၢၼ်ပိၼ်ႇၶူတ်ႉ (Compilation) ၼႂ်း C++ ၼႆႉ မၼ်းဢမ်ႇၸႂ်ႈဝႃႈ ပိၼ်ႇၵမ်းလဵဝ်ယဝ်ႉၶႃႈ။ 

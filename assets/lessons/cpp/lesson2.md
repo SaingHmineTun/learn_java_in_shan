@@ -1,4 +1,4 @@
-# Lesson 1.2: Compilers vs. Interpreters
+# Lesson 2: Compilers vs. Interpreters
 
 ### ၶေႃႈတၢင်ႇလဝ်ႈ (Introduction)
 မိူဝ်ႈႁဝ်းတႅမ်ႈၶူတ်ႉ (Source Code) ယဝ်ႉၼၼ်ႉ ၶမ်ႇပိဝ်ႇတႃႇ (CPU) မၼ်းဢမ်ႇပွင်ႇၸႂ် ၽႃႇသႃႇဢၼ်ႁဝ်းတႅမ်ႈၵမ်းသိုဝ်ႈၶႃႈ။ 
