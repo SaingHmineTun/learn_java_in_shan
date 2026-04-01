@@ -202,6 +202,14 @@ final Map<int, Lesson> cppLessons = {
   75: Lesson(9, 75),
   76: Lesson(9, 76),
   77: Lesson(9, 77),
+  78: Lesson(10, 78),
+  79: Lesson(10, 79),
+  80: Lesson(10, 80),
+  81: Lesson(10, 81),
+  82: Lesson(10, 82),
+  83: Lesson(10, 83),
+  84: Lesson(10, 84),
+  85: Lesson(10, 85),
 };
 
 final List<Quiz> cppQuizM1 = [
