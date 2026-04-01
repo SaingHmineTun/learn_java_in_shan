@@ -18,12 +18,14 @@ class Quiz {
   int id;
   String question;
   List<String> options;
+  String engQuestion;
 
   Quiz(
     this.id,
     this.question,
-    this.options,
-  ); // 1st index will always be the correct answer
+    this.options, [
+    this.engQuestion = "",
+  ]); // 1st index will always be the correct answer
 }
 
 final Map<String, List<List<Quiz>>> quizzes = {

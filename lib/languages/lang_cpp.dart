@@ -11,6 +11,9 @@ const Map<int, String> cppTopics = {
   7: "Memory Mastery: Pointers & References",
   8: "OOP Part 1: Classes, Objects & Encapsulation",
   9: "OOP Part 2: Inheritance & Polymorphism",
+  10: "Advanced C++: Templates and Exceptions",
+  11: "File I/O: Working with External Data",
+  12: "The Standard Template Library (STL)"
 };
 
 const Map<int, Map<int, String>> cppModules = {
@@ -109,6 +112,16 @@ const Map<int, Map<int, String>> cppModules = {
     76: "The 'Final' Keyword and Preventing Inheritance",
     77: "Project: The Digital Zoo Simulation",
   },
+  10: {
+    78: "Generic Programming: Introduction to Function Templates",
+    79: "Class Templates: Creating Reusable Data Structures",
+    80: "Template Specialization: Handling Unique Data Types",
+    81: "Understanding Exceptions: Why We Need Try and Catch",
+    82: "Throwing Exceptions and Creating Custom Error Classes",
+    83: "Standard Exceptions and Best Practices",
+    84: "RAII and Smart Pointers (Introduction)",
+    85: "Project: The Safe Math Tool"
+  }
 };
 
 final Map<int, Lesson> cppLessons = {
@@ -180,6 +193,15 @@ final Map<int, Lesson> cppLessons = {
   66: Lesson(8, 66),
   67: Lesson(8, 67),
   68: Lesson(8, 68),
+  69: Lesson(9, 69),
+  70: Lesson(9, 70),
+  71: Lesson(9, 71),
+  72: Lesson(9, 72),
+  73: Lesson(9, 73),
+  74: Lesson(9, 74),
+  75: Lesson(9, 75),
+  76: Lesson(9, 76),
+  77: Lesson(9, 77),
 };
 
 final List<Quiz> cppQuizM1 = [
