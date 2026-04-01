@@ -121,6 +121,15 @@ const Map<int, Map<int, String>> cppModules = {
     83: "Standard Exceptions and Best Practices",
     84: "RAII and Smart Pointers (Introduction)",
     85: "Project: The Safe Math Tool"
+  },
+  11: {
+    86: "Introduction to Streams: The <fstream> Library",
+    87: "Writing to Files: The ofstream Class",
+    88: "Reading from Files: The ifstream Class",
+    89: "File Modes: Appending, Truncating, and Binary",
+    90: "Detecting File States: is_open(), eof(), and fail()",
+    91: "Working with CSV Files: Basic Data Parsing",
+    92: "Project: The Digital Diary App"
   }
 };
 
@@ -210,6 +219,13 @@ final Map<int, Lesson> cppLessons = {
   83: Lesson(10, 83),
   84: Lesson(10, 84),
   85: Lesson(10, 85),
+  86: Lesson(11, 86),
+  87: Lesson(11, 87),
+  88: Lesson(11, 88),
+  89: Lesson(11, 89),
+  90: Lesson(11, 90),
+  91: Lesson(11, 91),
+  92: Lesson(11, 92),
 };
 
 final List<Quiz> cppQuizM1 = [
