@@ -130,6 +130,15 @@ const Map<int, Map<int, String>> cppModules = {
     90: "Detecting File States: is_open(), eof(), and fail()",
     91: "Working with CSV Files: Basic Data Parsing",
     92: "Project: The Digital Diary App"
+  },
+  12: {
+    93: "Introduction to STL: Containers, Iterators, and Algorithms",
+    94: "Sequence Containers: Vector, List, and Deque",
+    95: "Associative Containers: Sets and Maps",
+    96: "Container Adaptors: Stack and Queue",
+    97: "STL Algorithms: Sorting, Searching, and Modifying",
+    98: "Lambda Expressions in C++",
+    99: "Final Capstone Project: The Advanced Library Management System"
   }
 };
 
@@ -226,6 +235,13 @@ final Map<int, Lesson> cppLessons = {
   90: Lesson(11, 90),
   91: Lesson(11, 91),
   92: Lesson(11, 92),
+  93: Lesson(12, 93),
+  94: Lesson(12, 94),
+  95: Lesson(12, 95),
+  96: Lesson(12, 96),
+  97: Lesson(12, 97),
+  98: Lesson(12, 98),
+  99: Lesson(12, 99),
 };
 
 final List<Quiz> cppQuizM1 = [
