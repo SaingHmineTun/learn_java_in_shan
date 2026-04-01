@@ -321,16 +321,21 @@ class ResultScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    Text(
-                      isPassed
-                          ? "Course Requirement Met ✅"
-                          : "Requirement Not Met ❌",
-                      style: TextStyle(
-                        color: isPassed ? Colors.greenAccent : kBrandOrange,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+
+                    userResults.length == 20 // Show Course Requirement Met only in Final Test!
+                        ? Text(
+                            isPassed
+                                ? "Course Requirement Met ✅"
+                                : "Requirement Not Met ❌",
+                            style: TextStyle(
+                              color: isPassed
+                                  ? Colors.greenAccent
+                                  : kBrandOrange,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        : Container(),
                   ],
                 ),
               ),

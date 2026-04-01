@@ -1,3 +1,4 @@
+import 'dart:async'; // Added for Timer
 import 'package:flutter/material.dart';
 import 'package:tmkacademy/screens/result_screen.dart';
 import 'package:tmkacademy/utils/quiz.dart';
@@ -18,6 +19,7 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
+  // --- Quiz Logic Variables ---
   int totalQuizNumber = 10;
   int currentQuizIndex = 0;
   late List<Quiz> sessionQuizzes;
@@ -27,6 +29,11 @@ class _QuizScreenState extends State<QuizScreen> {
   late List<String> currentOptions;
   late String correctText;
   late List<String?> userResults;
+
+  // --- Timer Variables ---
+  Timer? _timer;
+  int _secondsRemaining = 20; // Time per question
+  final int _totalTimePerQuestion = 20;
 
   @override
   void initState() {
@@ -44,7 +51,34 @@ class _QuizScreenState extends State<QuizScreen> {
 
     userResults = List.filled(totalQuizNumber, null);
     sessionQuizzes = (List<Quiz>.from(sourceList)..shuffle()).take(totalQuizNumber).toList();
+
     _prepareQuestion();
+    _startTimer(); // Start timer for the first question
+  }
+
+  // Manage Countdown Logic
+  void _startTimer() {
+    _timer?.cancel();
+    setState(() {
+      _secondsRemaining = _totalTimePerQuestion;
+    });
+
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        if (_secondsRemaining > 0) {
+          _secondsRemaining--;
+        } else {
+          _timer?.cancel();
+          _handleTimeUp();
+        }
+      });
+    });
+  }
+
+  void _handleTimeUp() {
+    if (!isAnswered) {
+      checkAnswer(-1); // Mark as answered with -1 (Incorrect/No choice)
+    }
   }
 
   void _prepareQuestion() {
@@ -55,11 +89,19 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void checkAnswer(int index) {
     if (isAnswered) return;
+    _timer?.cancel(); // Stop the timer once an answer is chosen
     setState(() {
       isAnswered = true;
       selectedIndex = index;
-      userResults[currentQuizIndex] = (currentOptions[index]);
+      // Store result: "Timed Out" if index is -1, otherwise the selected text
+      userResults[currentQuizIndex] = index == -1 ? "Timed Out" : currentOptions[index];
     });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel(); // Clean up the timer to avoid memory leaks
+    super.dispose();
   }
 
   @override
@@ -85,7 +127,29 @@ class _QuizScreenState extends State<QuizScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // --- TMK Progress Section ---
+              // --- Timer Header ---
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.timer_rounded,
+                    color: _secondsRemaining < 5 ? Colors.red : kBrandGold,
+                    size: 20,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    "$_secondsRemaining s",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: _secondsRemaining < 5 ? Colors.red : kBrandWhite,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+
+              // --- Progress Section ---
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -113,6 +177,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
+                      // Shan Question
                       Text(
                         currentQuiz.question,
                         style: const TextStyle(
@@ -123,15 +188,16 @@ class _QuizScreenState extends State<QuizScreen> {
                         ),
                         textAlign: TextAlign.center,
                       ),
+
+                      // English Subtitle (Subtle)
                       if (currentQuiz.engQuestion.isNotEmpty) ...[
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 12),
                         Text(
                           currentQuiz.engQuestion,
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                             fontStyle: FontStyle.italic,
-                            // Using a subtle grey/white to make it look like a subtitle
                             color: kBrandWhite.withOpacity(0.6),
                             height: 1.4,
                           ),
@@ -145,7 +211,6 @@ class _QuizScreenState extends State<QuizScreen> {
                         String optionText = currentOptions[index];
                         bool isCorrect = optionText == correctText;
 
-                        // Color Logic for brand alignment
                         Color cardColor = kBrandSurface;
                         Color borderColor = kBrandBlue.withOpacity(0.2);
 
@@ -224,6 +289,7 @@ class _QuizScreenState extends State<QuizScreen> {
                           isAnswered = false;
                           selectedIndex = null;
                           _prepareQuestion();
+                          _startTimer(); // Restart clock for next question
                         });
                       } else {
                         Navigator.pushReplacement(

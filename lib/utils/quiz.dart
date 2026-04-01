@@ -23,9 +23,9 @@ class Quiz {
   Quiz(
     this.id,
     this.question,
-    this.options, [
+    this.options, [ // 1st index will always be the correct answer
     this.engQuestion = "",
-  ]); // 1st index will always be the correct answer
+  ]);
 }
 
 final Map<String, List<List<Quiz>>> quizzes = {
