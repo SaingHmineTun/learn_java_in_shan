@@ -17,8 +17,8 @@ import '../languages/lang_python.dart';
 class Quiz {
   int id;
   String question;
-  List<String> options;
   String engQuestion;
+  List<String> options;
 
   Quiz(
     this.id,
