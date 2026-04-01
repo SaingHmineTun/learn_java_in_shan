@@ -32,8 +32,8 @@ class _QuizScreenState extends State<QuizScreen> {
 
   // --- Timer Variables ---
   Timer? _timer;
-  int _secondsRemaining = 20; // Time per question
-  final int _totalTimePerQuestion = 20;
+  int _secondsRemaining = 60; // Time per question
+  final int _totalTimePerQuestion = 60;
 
   @override
   void initState() {
