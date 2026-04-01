@@ -156,6 +156,47 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  // --- Helper for Responsive AppBar Buttons ---
+  Widget _buildResponsiveAction(
+    BuildContext context, {
+    required String label,
+    required IconData icon,
+    required Color color,
+    required VoidCallback onPressed,
+  }) {
+    // Check if screen is wider than 700px (Desktop/Web)
+    bool isWide = MediaQuery.of(context).size.width > 700;
+
+    return isWide
+        ? Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 8.0),
+            child: TextButton.icon(
+              onPressed: onPressed,
+              icon: Icon(icon, color: color, size: 20),
+              label: Text(
+                label,
+                style: TextStyle(
+                  color: color,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                ),
+              ),
+              style: TextButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                backgroundColor: color.withOpacity(0.05), // Subtle hover area
+              ),
+            ),
+          )
+        : IconButton(
+            onPressed: onPressed,
+            icon: Icon(icon, color: color),
+            tooltip: label,
+          );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -174,31 +215,32 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         actions: [
-          // --- Added Donation Button ---
-          IconButton(
+          // --- Responsive Support Button ---
+          _buildResponsiveAction(
+            context,
+            label: "Support",
+            icon: Icons.favorite_outline_rounded,
+            color: kBrandOrange,
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (ctx) => const DonationScreen()),
               );
             },
-            icon: const Icon(
-              Icons.favorite_outline_rounded,
-              color: kBrandOrange,
-            ),
-            tooltip: "Support TMK Academy",
           ),
 
-          // --- Existing Info Button ---
-          IconButton(
+          // --- Responsive About Button ---
+          _buildResponsiveAction(
+            context,
+            label: "About",
+            icon: Icons.info_outline,
+            color: kBrandGold,
             onPressed: () {
               Navigator.of(
                 context,
               ).push(MaterialPageRoute(builder: (ctx) => const AboutScreen()));
             },
-            icon: const Icon(Icons.info_outline, color: kBrandGold),
-            tooltip: "About Developer",
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 12),
         ],
       ),
       body: Column(
