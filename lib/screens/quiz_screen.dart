@@ -123,6 +123,21 @@ class _QuizScreenState extends State<QuizScreen> {
                         ),
                         textAlign: TextAlign.center,
                       ),
+                      if (currentQuiz.engQuestion.isNotEmpty) ...[
+                        const SizedBox(height: 10),
+                        Text(
+                          currentQuiz.engQuestion,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            fontStyle: FontStyle.italic,
+                            // Using a subtle grey/white to make it look like a subtitle
+                            color: kBrandWhite.withOpacity(0.6),
+                            height: 1.4,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
                       const SizedBox(height: 40),
 
                       // --- Options List ---
