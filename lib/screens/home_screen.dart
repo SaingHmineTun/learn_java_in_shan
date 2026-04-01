@@ -4,6 +4,7 @@ import 'package:tmkacademy/screens/language_screen.dart';
 import 'package:tmkacademy/utils/language.dart';
 import '../utils/colors.dart';
 import 'about_screen.dart';
+import 'donation_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -173,6 +174,21 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         actions: [
+          // --- Added Donation Button ---
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (ctx) => const DonationScreen()),
+              );
+            },
+            icon: const Icon(
+              Icons.favorite_outline_rounded,
+              color: kBrandOrange,
+            ),
+            tooltip: "Support TMK Academy",
+          ),
+
+          // --- Existing Info Button ---
           IconButton(
             onPressed: () {
               Navigator.of(
@@ -180,6 +196,7 @@ class HomeScreen extends StatelessWidget {
               ).push(MaterialPageRoute(builder: (ctx) => const AboutScreen()));
             },
             icon: const Icon(Icons.info_outline, color: kBrandGold),
+            tooltip: "About Developer",
           ),
           const SizedBox(width: 8),
         ],
