@@ -7870,6 +7870,128 @@ final List<Quiz> csharpQuizM15 = [
   Quiz(1899, "Which keyword is used to loop through Dictionary pairs?", ["KeyValuePair<K,V>", "Entry", "Item", "Node"]),
   Quiz(1900, "Generic constraints ensure that 'T' has _____.", ["Specific capabilities or properties", "A name", "A static member", "A private field"]),
 ];
+final List<Quiz> csharpQuizM16 = [
+  // Lesson 190: Errors vs. Exceptions
+  Quiz(1901, "Exception ပဵၼ်သင်?", ["ပၼ်ႁႃဢၼ်ၵဵတ်းၶိုၼ်းမိူဝ်ႈ App တိုၵ်ႉလႅၼ်ႈယူႇ သေႁဝ်းႁပ်ႉမိုဝ်းလႆႈ", "ပၼ်ႁႃ Hardware ဢၼ်ၵႄႈဢမ်ႇလႆႈ", "ၵၢၼ်တႅမ်ႈလိၵ်ႈၽိတ်း Syntax", "Memory တဵမ်"], "What is an Exception?"),
+  Quiz(1902, "Error လႄႈ Exception ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", ["Error ၵႄႈဢမ်ႇလႆႈ တူဝ်ယင်ႇ OutOfMemory၊ Exception ၵႄႈလႆႈ", "မိူၼ်ၵၼ်ၵူႈပိူင်", "Exception ႁၢႆႉၸႃႉလိူဝ် Error", "Error ပဵၼ်တီႈ Code ၵူၺ်း"], "How do Error and Exception differ?"),
+  Quiz(1903, "ပၼ်ႁႃဢၼ်ၵႄႈဢမ်ႇလႆႈ (Unrecoverable) ႁွင်ႉဝႃႈသင်?", ["Error", "Exception", "Warning", "Logic"], "What are unrecoverable problems called?"),
+  Quiz(1904, "လွင်ႈႁပ်ႉမိုဝ်းပၼ်ႁႃ ႁႂ်ႈ App ဢမ်ႇ Crash ႁွင်ႉဝႃႈသင်?", ["Exception Handling", "Debugging", "Encoding", "Inheritance"], "What is handling exceptions to prevent app crashes called?"),
+  Quiz(1905, "OutOfMemoryError ပဵၼ်ပၼ်ႁႃပိူင်လႂ်?", ["Error (System level)", "Exception", "Format Error", "User Input Error"], "What type of problem is OutOfMemoryError?"),
+  Quiz(1906, "DivideByZeroException ပဵၼ်ပၼ်ႁႃပိူင်လႂ်?", ["Exception (Logic level)", "Hardware Error", "Syntax Error", "Compiler Error"], "What type of problem is DivideByZeroException?"),
+  Quiz(1907, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇ Exception Handling?", ["တႃႇႁႂ်ႈ App ၶႅင်ၵႅၼ်ႇ (Robust) လႄႈ ဢမ်ႇလူႉငၢႆႈ", "တႃႇႁႂ်ႈ Code လႅၼ်ႈဝႆး", "တႃႇလူတ်ႇ Memory", "တႃႇႁဵတ်းႁႂ်ႈ Code ယၢဝ်း"], "Why do we need Exception Handling?"),
+  Quiz(1908, "သင်ပၼ်ႁႃၵဵတ်းၶိုၼ်း သေႁဝ်းဢမ်ႇႁပ်ႉမိုဝ်းဝႆႉ တေပဵၼ်သင်?", ["App တေ Crash သေပိတ်းၵႂႃႇ", "App တေလႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ", "Compiler တေမႄးပၼ်ႁင်းၵူၺ်း", "ဢမ်ႇပဵၼ်သင်"], "What happens if an exception occurs and it's unhandled?"),
+  Quiz(1909, "Exception ပဵၼ်လွင်ႈတၢင်းဢၼ်ၵဵတ်းၶိုၼ်းမိူဝ်ႈလႂ်?", ["Runtime (မိူဝ်ႈလႅၼ်ႈယူႇ)", "Compile-time", "Installation", "Designing"], "When do Exceptions occur?"),
+  Quiz(1910, "တူဝ်ယင်ႇ Exception ဢၼ်ၵႆႉႁၼ်ၼမ် ပဵၼ်သင်?", ["FileNotFoundException", "BrokenMonitorError", "KeyboardNotPlugged", "PowerOff"], "What is a common example of an Exception?"),
+
+  // Lesson 191: The 'try-catch' Block
+  Quiz(1911, "Keyword လႂ် ၸႂ်ႉတႃႇၸၢမ်းလႅၼ်ႈ Code ဢၼ်ၸၢင်ႈမီးပၼ်ႁႃ?", ["try", "catch", "attempt", "check"], "Which keyword is used to try running code that might have issues?"),
+  Quiz(1912, "Keyword လႂ် ၸႂ်ႉတႃႇႁပ်ႉပၼ်ႁႃ မိူဝ်ႈမၼ်းၵဵတ်းၶိုၼ်း?", ["catch", "try", "hold", "stop"], "Which keyword is used to catch an exception when it occurs?"),
+  Quiz(1913, "သင်ၼႂ်း try block မီးပၼ်ႁႃ Code ထႅဝ်တႂ်ႈမၼ်းတေပဵၼ်သင်?", ["တေထုၵ်ႇၶၢမ်ႇ (Skip) ပႅတ်ႈ သေၵျွၵ်းၵႂႃႇတီႈ catch", "တေသိုပ်ႇလႅၼ်ႈၵႂႃႇ", "တေတႅမ်ႈမႂ်ႇ", "တေလူတ်ႇပႅတ်ႈ"], "What happens to the remaining code in a try block after an exception?"),
+  Quiz(1914, "Variable 'ex' ၼႂ်း catch(Exception ex) မီးဝႆႉတႃႇသင်?", ["တႃႇသိမ်းၶေႃႈမုၼ်း လွင်ႈပၼ်ႁႃဢၼ်ၵဵတ်းၶိုၼ်း", "တႃႇပိတ်း App", "တႃႇပဵၼ်တူဝ်ၼပ်ႉ", "တႃႇႁဵတ်း Loop"], "What is the variable 'ex' in catch(Exception ex) for?"),
+  Quiz(1915, "သင်မီး try ယဝ်ႉ ဢမ်ႇမီး catch ဢမ်ႇၼၼ် finally တေပဵၼ်သင်?", ["Compile Error", "App လႅၼ်ႈလႆႈယူႇ", "တေဝႆးလိူဝ်ၵဝ်ႇ", "တေပဵၼ် Warning"], "What happens if there's a try without catch or finally?"),
+  Quiz(1916, "ပိူင်သၢင်ႈ try-catch ၸွႆးႁႂ်ႈ App ႁဝ်း _____?", ["ဢမ်ႇ Crash (Robust)", "မီးသီႁၢင်ႈလီ", "သူင်ႇလိၵ်ႈဝႆး", "ၵဵပ်း Memory ဢေႇ"], "The try-catch block makes our app _____?"),
+  Quiz(1917, "Code ၼႂ်း catch block တေလႅၼ်ႈမိူဝ်ႈလႂ်?", ["မိူဝ်ႈမီး Exception ၵဵတ်းၶိုၼ်းၼႂ်း try", "လႅၼ်ႈတႃႇသေႇ", "ဢမ်ႇလႅၼ်ႈသေပွၵ်ႈ", "လႅၼ်ႈမိူဝ်ႈ App ပိတ်း"], "When does code inside a catch block execute?"),
+  Quiz(1918, "C# ၸႂ်ႉ _____ တႃႇသူင်ႇၶေႃႈမုၼ်းပၼ်ႁႃ?", ["Objects", "Strings only", "Integers", "Binary"], "What does C# use to send exception information?"),
+  Quiz(1919, "သင်ၼႂ်း try block ဢမ်ႇမီးပၼ်ႁႃ catch block တေလႅၼ်ႈႁႃႉ?", ["ဢမ်ႇလႅၼ်ႈ (Skipped)", "လႅၼ်ႈ", "လႅၼ်ႈသွင်ပွၵ်ႈ", "App တေ Error"], "If no exception occurs in try, does the catch block run?"),
+  Quiz(1920, "လၢႆးၸႂ်ႉ try-catch ႁွင်ႉဝႃႈသင်?", ["Exception Handling", "Error Prevention", "Code Safety", "Logic Testing"], "What is the use of try-catch called?"),
+
+  // Lesson 192: Catching Specific Exceptions
+  Quiz(1921, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇ Catch Specific Exceptions?", ["တႃႇႁပ်ႉမိုဝ်းပၼ်ႁႃ ၸွမ်းၼင်ႇလွင်ႈတၢင်းမၼ်းတႅတ်ႉတေႃး", "တႃႇႁႂ်ႈ Code ယၢဝ်း", "တႃႇႁႂ်ႈ App ၼၵ်း", "တႃႇႁႂ်ႈ CPU ႁဵတ်းၵၢၼ်ၼမ်"], "Why catch specific exceptions?"),
+  Quiz(1922, "Exception လႂ် ၵဵတ်းၶိုၼ်းမိူဝ်ႈဢဝ် 0 မႃးၸႅၵ်ႇ?", ["DivideByZeroException", "FormatException", "NullException", "ZeroError"], "Which exception occurs when dividing by 0?"),
+  Quiz(1923, "Exception လႂ် ၵဵတ်းၶိုၼ်းမိူဝ်ႈပိၼ်ႇလိၵ်ႈ 'abc' ပဵၼ်တူဝ်ၼပ်ႉ?", ["FormatException", "IndexException", "OverflowException", "DivideByZeroException"], "Which exception occurs when parsing 'abc' to a number?"),
+  Quiz(1924, "သင်မီး catch လၢႆဢၼ် တူဝ်လႂ်တေလႅၼ်ႈဢွၼ်တၢင်း?", ["တူဝ်ဢၼ်မႅၼ်ႈၸွမ်းပၼ်ႁႃ သေယူႇၽၢႆႇၼိူဝ်", "တူဝ်လင်သုတ်း", "လႅၼ်ႈတင်းမူတ်း", "လႅၼ်ႈလၢႆးၵၢႆႇၵၼ်"], "If there are multiple catch blocks, which one runs first?"),
+  Quiz(1925, "ပၵ်းၵၢၼ်ၵၢၼ်ဝၢင်း catch တေလႆႈဝႆႉၸိူင်ႉႁိုဝ်?", ["Specific ဝႆႉၼိူဝ်၊ General (Exception) ဝႆႉတႂ်ႈ", "General ဝႆႉၼိူဝ်", "ဝႆႉလၢႆးလႂ်ၵေႃႈလႆႈ", "ဢမ်ႇလူဝ်ႇမီး General"], "How should catch blocks be ordered?"),
+  Quiz(1926, "IndexOutOfRangeException ပဵၼ်မိူဝ်ႈလႂ်?", ["မိူဝ်ႈႁွင်ႉၸႂ်ႉ Index ၶွင် Array ဢၼ်ဢမ်ႇမီး", "မိူဝ်ႈ Memory တဵမ်", "မိူဝ်ႈ File ႁၢႆ", "မိူဝ်ႈ Network လူႉ"], "When does IndexOutOfRangeException occur?"),
+  Quiz(1927, "NullReferenceException ပဵၼ်မိူဝ်ႈလႂ်?", ["မိူဝ်ႈၸၢမ်းၸႂ်ႉ Object ဢၼ်ပဵၼ် null", "မိူဝ်ႈႁၢၼ်လူၺ်ႈ 0", "မိူဝ်ႈတႅမ်ႈလိၵ်ႈၽိတ်း", "မိူဝ်ႈပိတ်း App"], "When does NullReferenceException occur?"),
+  Quiz(1928, "သင်ႁဝ်းဝႆႉ catch(Exception ex) ဝႆႉၼိူဝ်သုတ်း တေပဵၼ်သင်?", ["မၼ်းတေႁပ်ႉၵူႈပိူင် သေတူဝ်တႂ်ႈမၼ်းတေဢမ်ႇလႆႈလႅၼ်ႈ", "App တေဝႆးလိူဝ်ၵဝ်ႇ", "Compiler တေၼႄ Warning ၵူၺ်း", "ဢမ်ႇပဵၼ်သင်"], "What happens if catch(Exception ex) is placed at the top?"),
+  Quiz(1929, "Exception class ဢၼ်ပဵၼ်မႄႈ (Base Class) ၶွင်ၵူႈတူဝ်ပဵၼ်သင်?", ["System.Exception", "System.Error", "System.Object", "System.Catch"], "What is the base class for all exceptions?"),
+  Quiz(1930, "ၸွင်ႇႁဝ်းၸၢင်ႈမီး catch လၢႆဢၼ် ၸွမ်တင်း try တူဝ်လဵဝ်လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 2 ဢၼ်", "လႆႈၵူၺ်း တွၼ်ႈတႃႇတူဝ်ၼပ်ႉ"], "Can we have multiple catch blocks for one try?"),
+
+  // Lesson 193: Message and StackTrace
+  Quiz(1931, "Property 'Message' မီးဝႆႉတႃႇသင်?", ["တႃႇလၢတ်ႈၼႄဝႃႈ ပၼ်ႁႃၼၼ်ႉပဵၼ်သင်", "တႃႇၼႄမၢႆထႅဝ်လိၵ်ႈ", "တႃႇပိတ်း App", "တႃႇသူင်ႇ Email"], "What is the 'Message' property for?"),
+  Quiz(1932, "Property 'StackTrace' မီးဝႆႉတႃႇသင်?", ["တႃႇၼႄသဵၼ်ႈတၢင်း လႄႈ မၢႆထႅဝ်လိၵ်ႈ ဢၼ်ပဵၼ်ပၼ်ႁႃ", "တႃႇၼႄၸိုဝ်ႈၵူၼ်းတႅမ်ႈ", "တႃႇမႄး Code ႁင်းၵူၺ်း", "တႃႇသိမ်းၶေႃႈမုၼ်း"], "What is the 'StackTrace' property for?"),
+  Quiz(1933, "တွၼ်ႈတႃႇ Debugging ႁဝ်းထုၵ်ႇလီတူၺ်း Property လႂ်?", ["StackTrace", "Message", "ToString", "Source"], "Which property is best for debugging?"),
+  Quiz(1934, "ႁဵတ်းသင်ႁဝ်းဢမ်ႇထုၵ်ႇလီၼႄ StackTrace ၸူး User?", ["ယွၼ်ႉမၼ်းယုင်ႈယၢင်ႈ လႄႈ ဢမ်ႇလွတ်ႈၽေး (Security)", "ယွၼ်ႉမၼ်းပဵၼ်သီလမ်", "ယွၼ်ႉမၼ်းႁဵတ်းႁႂ်ႈ App ၸႃႉ", "ယွၼ်ႉမၼ်းဢေႇပူၼ်ႉတီႈ"], "Why shouldn't we show StackTrace to users?"),
+  Quiz(1935, "StackTrace ၼႄၶေႃႈမုၼ်းသင်ပႃး?", ["ၸိုဝ်ႈ Method လႄႈ Line number", "ၸိုဝ်ႈ CPU", "မၢႆၾူၼ်း", "Password"], "What information does StackTrace include?"),
+  Quiz(1936, "Exception object သိမ်းဝႆႉၼႂ်း Variable လႂ် (ၸွမ်းၼင်ႇပိူင် standard)?", ["ex", "err", "e", "problem"], "In which variable is the exception object usually stored?"),
+  Quiz(1937, "Message သူင်ႇၶေႃႈမုၼ်းပဵၼ် Type သင်?", ["string", "int", "bool", "object"], "What type of data does Message return?"),
+  Quiz(1938, "သင်ႁဝ်းၶႂ်ႈႁူႉဝႃႈ ပၼ်ႁႃတႄႇပဵၼ်တီႈ File လႂ် ႁဝ်းတေတူၺ်းတီႈလႂ်?", ["StackTrace", "Message", "HelpLink", "Data"], "Where do we look to see which file caused the error?"),
+  Quiz(1939, "Property 'InnerException' မီးဝႆႉတႃႇသင်?", ["တႃႇသိမ်းပၼ်ႁႃတူဝ်ၵဝ်ႇ ဢၼ်ႁေႃႇဝႆႉ", "တႃႇပိတ်း App", "တႃႇလႅၼ်ႈ Code မႂ်ႇ", "တႃႇႁဵတ်း Loop"], "What is the 'InnerException' property for?"),
+  Quiz(1940, "တူဝ် Exception Object ၵဵတ်းၶိုၼ်းမိူဝ်ႈလႂ်?", ["မိူဝ်ႈပၼ်ႁႃၵဵတ်းၶိုၼ်းတႄႉတႄႉ (Instantiation)", "မိူဝ်ႈတႅမ်ႈ Code", "မိူဝ်ႈတႄႇသၢင်ႈ Project", "မိူဝ်ႈပိတ်းၶွမ်း"], "When is the Exception Object created?"),
+
+  // Lesson 194: The 'finally' Block
+  Quiz(1941, "Keyword လႂ် တေလႅၼ်ႈ 'တႃႇသေႇ' ဢမ်ႇဝႃႈမီးပၼ်ႁႃ ဢမ်ႇၼၼ် ဢမ်ႇမီး?", ["finally", "catch", "try", "end"], "Which keyword always runs regardless of exceptions?"),
+  Quiz(1942, "finally block ၵႆႉၸႂ်ႉတႃႇသင်?", ["တႃႇပိၵ်ႉ Resource (Cleanup) မိူၼ်ၼင်ႇ File/Database", "တႃႇႁပ်ႉပၼ်ႁႃ", "တႃႇၼႄ Message ၸူး User", "တႃႇလႅၼ်ႈပိူင်သၢင်ႈမႂ်ႇ"], "What is the finally block typically used for?"),
+  Quiz(1943, "သင်ၼႂ်း try block မီး 'return' ၸွင်ႇ finally တေတိုၵ်ႉလႅၼ်ႈယူႇႁႃႉ?", ["လႅၼ်ႈ (တေလႅၼ်ႈဢွၼ်တၢင်း return)", "ဢမ်ႇလႅၼ်ႈ", "လႅၼ်ႈဝၢႆးလင် return", "App တေ Error"], "Will finally run if there's a 'return' in the try block?"),
+  Quiz(1944, "သင်ပၼ်ႁႃၵဵတ်းၶိုၼ်းၼႂ်း catch block ၸွင်ႇ finally တေတိုၵ်ႉလႅၼ်ႈယူႇႁႃႉ?", ["လႅၼ်ႈ", "ဢမ်ႇလႅၼ်ႈ", "လႅၼ်ႈၵူၺ်းသင်ပဵၼ်တူဝ်ၼပ်ႉ", "App တေ Crash လၢႆๆ"], "Will finally run if an exception occurs in the catch block?"),
+  Quiz(1945, "ပိူင်သၢင်ႈ 'try-finally' (ဢမ်ႇမီး catch) လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း တွၼ်ႈတႃႇ File", "လႆႈၵူၺ်း ၼႂ်း C# 12"], "Is a 'try-finally' structure (without catch) valid?"),
+  Quiz(1946, "Resource Leak ပဵၼ်သင်?", ["ၵၢၼ်ဢၼ်ဢမ်ႇပိၵ်ႉ Resource သေႁဵတ်းႁႂ်ႈ Memory မူတ်း", "ၵၢၼ်ဢၼ် File ႁၢႆ", "ၵၢၼ်ဢၼ် Network ဝႆး", "ၵၢၼ်ဢၼ် Code ပွတ်း"], "What is a Resource Leak?"),
+  Quiz(1947, "ဝၢႆးလင် finally လႅၼ်ႈယဝ်ႉ Code ၽၢႆႇတႂ်ႈမၼ်းတေသိုပ်ႇလႅၼ်ႈႁႃႉ?", ["သိုပ်ႇလႅၼ်ႈ (သင်ဢမ်ႇပဵၼ်ပၼ်ႁႃဢၼ်ႁပ်ႉဢမ်ႇလႆႈ)", "ဢမ်ႇသိုပ်ႇလႅၼ်ႈ", "တႄႇသၢင်ႈ App မႂ်ႇ", "ပိတ်းၶွမ်း"], "Does code after finally continue running?"),
+  Quiz(1948, "finally block ဝႆႉတီႈလႂ်?", ["ဝႆႉၽၢႆႇလင် catch တူဝ်လင်သုတ်း", "ဝႆႉၼိူဝ် try", "ဝႆႉၼႂ်း catch", "ဝႆႉတီႈလႂ်ၵေႃႈလႆႈ"], "Where is the finally block placed?"),
+  Quiz(1949, "ၸွင်ႇႁဝ်းၸၢင်ႈမီး finally လၢႆဢၼ် ၸွမ်တင်း try တူဝ်လဵဝ်လႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ (မီးလႆႈတူဝ်လဵဝ်ၵူၺ်း)", "လႆႈ", "လႆႈသင်ပဵၼ် Database", "လႆႈ 3 ဢၼ်"], "Can we have multiple finally blocks for one try?"),
+  Quiz(1950, "FileStream.Close() ထုၵ်ႇလီဝႆႉၼႂ်း block လႂ်?", ["finally", "try", "catch", "Main"], "Where should FileStream.Close() be placed?"),
+
+  // Lesson 195: Throwing Exceptions
+  Quiz(1951, "Keyword လႂ် ၸႂ်ႉတႃႇသၢင်ႈပၼ်ႁႃဢွၵ်ႇမႃးႁင်းၵူၺ်း?", ["throw", "create", "make", "send"], "Which keyword is used to manually create an exception?"),
+  Quiz(1952, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇ throw exception?", ["တႃႇၵူတ်ႇထတ်း (Validation) ပၵ်းၵၢၼ်ၼႃႈၵၢၼ်ႁဝ်း", "တႃႇႁႂ်ႈ App ၸႃႉ", "တႃႇႁႂ်ႈ CPU တူၵ်း", "တႃႇပိတ်း Code"], "Why do we throw exceptions?"),
+  Quiz(1953, "ArgumentException ၸႂ်ႉတႃႇသင်?", ["မိူဝ်ႈ Parameter ဢၼ်သူင်ႇၶဝ်ႈမႃး ဢမ်ႇမႅၼ်ႈၸွမ်းပၵ်းၵၢၼ်", "မိူဝ်ႈ Password ၽိတ်း", "မိူဝ်ႈ Memory တဵမ်", "မိူဝ်ႈ Network လူႉ"], "What is ArgumentException used for?"),
+  Quiz(1954, "ဝၢႆးလင် 'throw' ယဝ်ႉ Code ထႅဝ်တႂ်ႈမၼ်းတေပဵၼ်သင်?", ["တေဢမ်ႇလႅၼ်ႈ (Unreachable code)", "တေသိုပ်ႇလႅၼ်ႈ", "တေလႅၼ်ႈဝႆး", "တေ Error"], "What happens to code after a 'throw' statement?"),
+  Quiz(1955, "ၸွင်ႇႁဝ်းၸၢင်ႈ throw Exception ၼႂ်း catch block လႆႈႁႃႉ?", ["လႆႈ (Rethrowing)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း ၼႂ်း try", "လႆႈၵူၺ်း ၼႂ်း constructor"], "Can we throw an exception inside a catch block?"),
+  Quiz(1956, "လၢႆးတႅမ်ႈ 'throw new Exception(\"Error\");' မႅၼ်ႈႁႃႉ?", ["မႅၼ်ႈ", "ၽိတ်း", "တေလႆႈမီး Variable ဢွၼ်တၢင်း", "ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း static method"], "Is 'throw new Exception(\"Error\");' correct?"),
+  Quiz(1957, "Validation ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၵူတ်ႇထတ်းၶေႃႈမုၼ်း ႁႂ်ႈမႅၼ်ႈၸွမ်းပၵ်းၵၢၼ်", "ၵၢၼ်သိမ်းၶေႃႈမုၼ်း", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်ပိၼ်ႇလိၵ်ႈ"], "What does Validation mean?"),
+  Quiz(1958, "သင်ႁဝ်း throw exception သေဢမ်ႇမီး try-catch ႁပ်ႉဝႆႉ တေပဵၼ်သင်?", ["App တေ Crash", "App တေသိုပ်ႇလႅၼ်ႈ", "Compiler တေမႄးပၼ်", "ဢမ်ႇပဵၼ်သင်"], "What happens if we throw an exception without try-catch?"),
+  Quiz(1959, "ArgumentNullException ၸႂ်ႉမိူဝ်ႈလႂ်?", ["မိူဝ်ႈ Parameter ပဵၼ် null သေႁဝ်းဢမ်ႇႁပ်ႉဢဝ်", "မိူဝ်ႈတူဝ်ၼပ်ႉပဵၼ် 0", "မိူဝ်ႈ Array တဵမ်", "မိူဝ်ႈ File ႁၢႆ"], "When is ArgumentNullException used?"),
+  Quiz(1960, "Exception ဢၼ်ႁဝ်း 'throw' ၼၼ်ႉပဵၼ် Type သင်?", ["Object (လုၵ်ႉတီႈ Class Exception)", "String", "Int", "Boolean"], "What type is an exception we 'throw'?"),
+
+  // Lesson 196: Exception Filters (when)
+  Quiz(1961, "Keyword လႂ် ၸႂ်ႉတႃႇလိူၵ်ႈႁပ်ႉပၼ်ႁႃ ၸွမ်းၼင်ႇငဝ်းလၢႆး?", ["when", "if", "filter", "check"], "Which keyword is used to filter exceptions based on conditions?"),
+  Quiz(1962, "Exception Filter ဝႆႉတီႈလႂ်?", ["ဝႆႉၸွမ်တင်း catch block", "ဝႆႉၼႂ်း try", "ဝႆႉၼႂ်း finally", "ဝႆႉၼိူဝ် method"], "Where is an exception filter placed?"),
+  Quiz(1963, "လၢႆးတႅမ်ႈ 'catch (Exception ex) when (ex.Message == \"Error\")' မႅၼ်ႈႁႃႉ?", ["မႅၼ်ႈ", "ၽိတ်း", "တေလႆႈၸႂ်ႉ 'if'", "တေလႆႈၸႂ်ႉ 'where'"], "Is 'catch (Exception ex) when (ex.Message == \"Error\")' correct?"),
+  Quiz(1964, "သင်ငဝ်းလၢႆးၼႂ်း 'when' ပဵၼ် false တေပဵၼ်သင်?", ["catch block ၼၼ်ႉတေထုၵ်ႇၶၢမ်ႇ (Skip) ပႅတ်ႈ", "App တေ Error", "တေသိုပ်ႇလႅၼ်ႈၼႂ်း catch", "တေသိုပ်ႇလႅၼ်ႈၼႂ်း finally"], "What happens if the 'when' condition is false?"),
+  Quiz(1965, "ၽွၼ်းလီၶွင် Exception Filter ပဵၼ်သင်?", ["Code သႅတ်းလိူဝ်ၵဝ်ႇ လႄႈ ဢမ်ႇလူဝ်ႇ if ၼႂ်း catch", "ႁႂ်ႈ App ဝႆး", "ႁႂ်ႈ CPU ၵတ်း", "ႁႂ်ႈ Memory ၼမ်"], "What is the benefit of Exception Filters?"),
+  Quiz(1966, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Variable ၼွၵ်ႈ try block မႃးပဵၼ် filter လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း တူဝ်ၼပ်ႉ", "လႆႈၵူၺ်း ၼႂ်း C# 9"], "Can we use variables outside the try block as filters?"),
+  Quiz(1967, "Exception Filters ၸွႆးႁႄႉၵၢင်ႈလွင်ႈသင်?", ["Stack Unwinding (StackTrace တိုၵ်ႉသႅတ်း)", "Syntax Error", "Memory Leak", "Infinite Loop"], "What does Exception Filters help with regarding the stack?"),
+  Quiz(1968, "ႁဝ်းၸၢင်ႈမီး catch လၢႆဢၼ် ဢၼ်ၸႂ်ႉ 'when' တူဝ်လဵဝ်ၵၼ်လႆႈႁႃႉ?", ["လႆႈ (ၵူၺ်းငဝ်းလၢႆးတေလႆႈပႅၵ်ႇၵၼ်)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း ၼႂ်း static class", "လႆႈၵူၺ်း 2 ဢၼ်"], "Can we have multiple catch blocks using 'when'?"),
+  Quiz(1969, "Exception Filters ပဵၼ် Feature ၶွင် C# မၢႆၵမ်းလၢႆ?", ["C# 6.0", "C# 1.0", "C# 12.0", "C# 2.0"], "Which C# version introduced Exception Filters?"),
+  Quiz(1970, "Filter တေလႆႈသူင်ႇၵႃႈၶၼ်ပဵၼ် Type သင်?", ["bool (true/false)", "string", "int", "void"], "What type must a filter return?"),
+
+  // Lesson 197: throw vs. throw ex
+  Quiz(1971, "ၵၢၼ်သူင်ႇပၼ်ႁႃသိုပ်ႇၵႂႃႇ ႁွင်ႉဝႃႈသင်?", ["Rethrowing", "Repeating", "Recatching", "Remaking"], "What is sending an exception further up called?"),
+  Quiz(1972, "လၢႆးတႅမ်ႈ 'throw;' လၢႆလၢႆ ၸွႆးလွင်ႈသင်?", ["ၵဵပ်းသိမ်း StackTrace ဝႆႉတင်းမူတ်း (Preserve History)", "လူတ်ႇပႅတ်ႈ StackTrace", "ႁႂ်ႈ App ၵိုတ်း", "ႁႂ်ႈ Code ဝႆး"], "What does 'throw;' (without variable) help with?"),
+  Quiz(1973, "သင်ႁဝ်းၸႂ်ႉ 'throw ex;' (မီး variable) တေပဵၼ်သင်?", ["StackTrace တေထုၵ်ႇ Reset (မၢႆတွင်းဝႃႈတႄႇပဵၼ်တီႈၼႆႉ)", "StackTrace တေတိုၵ်ႉမီးပိုၼ်းၵဝ်ႇ", "App တေလႅၼ်ႈဝႆး", "ဢမ်ႇပဵၼ်သင်"], "What happens if we use 'throw ex;'?"),
+  Quiz(1974, "လၢႆးလႂ်ဢၼ် 'Best Practice' လိူဝ်?", ["throw;", "throw ex;", "return null;", "break;"], "Which method is best practice for rethrowing?"),
+  Quiz(1975, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇ Rethrow?", ["တႃႇမၢႆ Log ဢွၼ်တၢင်း သေသူင်ႇပၼ်ႁႃသိုပ်ႇၵႂႃႇ", "တႃႇႁႂ်ႈ App Crash", "တႃႇႁႂ်ႈ Memory တဵမ်", "တႃႇႁႂ်ႈ Code ယၢဝ်း"], "Why do we rethrow?"),
+  Quiz(1976, "StackTrace Preservation ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၵဵပ်းသိမ်းပိုၼ်း ပိုၼ်ႉတီႈဢၼ်ပၼ်ႁႃတႄႇပဵၼ်", "ၵၢၼ်လူတ်ႇပႅတ်ႈပိုၼ်း", "ၵၢၼ်မႄး Code", "ၵၢၼ်သၢင်ႈ Object"], "What does StackTrace Preservation mean?"),
+  Quiz(1977, "သင်ႁဝ်းၸႂ်ႉ 'throw;' ၼွၵ်ႈ catch block တေပဵၼ်သင်?", ["Compile Error", "App သိုပ်ႇလႅၼ်ႈ", "App တေ Crash", "ဢမ်ႇပဵၼ်သင်"], "What happens if we use 'throw;' outside a catch block?"),
+  Quiz(1978, "Rethrowing ၸွႆးလွင်ႈသင်ၼႂ်း App ယႂ်ႇๆ?", ["Centralized Logging (မၢႆ Log ဝႆႉတီႈလဵဝ်)", "Fast UI", "Low RAM", "Dark Mode"], "How does rethrowing help in large apps?"),
+  Quiz(1979, "Call Stack ပဵၼ်သင်?", ["ၸၼ်ႉၵၢၼ်ႁွင်ႉ Method ဢၼ်သိမ်းပိုၼ်းဝႆႉ", "သဵၼ်ႈတၢင်း Network", "တီႈၵဵပ်း File", "ၸိုဝ်ႈ Variable"], "What is a Call Stack?"),
+  Quiz(1980, "ၸွင်ႇႁဝ်းၸၢင်ႈမႄး Message ဢွၼ်တၢင်းတေ Rethrow လႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ (တေလႆႈသၢင်ႈ Exception မႂ်ႇ)", "လႆႈ", "လႆႈၵူၺ်း ၼႂ်း static", "လႆႈ ၼႂ်း catch"], "Can we modify the Message before rethrowing?"),
+
+  // Lesson 198: Inner Exceptions
+  Quiz(1981, "Inner Exception ပဵၼ်သင်?", ["ပၼ်ႁႃတူဝ်ၵဝ်ႇ ဢၼ်ႁေႃႇဝႆႉၼႂ်းပၼ်ႁႃတူဝ်မႂ်ႇ", "ပၼ်ႁႃ Hardware", "ပၼ်ႁႃ Network", "ပၼ်ႁႃ Memory"], "What is an Inner Exception?"),
+  Quiz(1982, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇ Wrap exception?", ["တႃႇပၼ်ၶေႃႈမုၼ်းဢၼ်လူငၢႆး သေတိုၵ်ႉၵဵပ်းပိုၼ်းပၼ်ႁႃတႄႉတႄႉဝႆႉ", "တႃႇႁႂ်ႈ Code ယုင်ႈ", "တႃႇႁႂ်ႈ App ၸႃႉ", "တႃႇႁႂ်ႈ CPU ႁႅင်း"], "Why wrap an exception?"),
+  Quiz(1983, "ႁဝ်းႁွင်ႉၸႂ်ႉ Inner Exception ၽၢၼ်ႇ Property လႂ်?", ["ex.InnerException", "ex.Source", "ex.RootCause", "ex.OldError"], "How do we access Inner Exception?"),
+  Quiz(1984, "လၢႆးတႅမ်ႈ 'throw new Exception(\"Msg\", ex);' မႅၼ်ႈႁႃႉ?", ["မႅၼ်ႈ (ex ပဵၼ် inner)", "ၽိတ်း", "တေလႆႈၸႂ်ႉ 'out'", "တေလႆႈၸႂ်ႉ 'ref'"], "Is 'throw new Exception(\"Msg\", ex);' correct?"),
+  Quiz(1985, "Root Cause ပွင်ႇဝႃႈသင်?", ["ငဝ်ႈႁၢၵ်ႈတႄႉတႄႉ ဢၼ်ႁဵတ်းႁႂ်ႈပၼ်ႁႃပဵၼ်မႃး", "ၸိုဝ်ႈ App", "မၢႆထႅဝ်လင်သုတ်း", "တူဝ်ၼပ်ႉ"], "What does Root Cause mean?"),
+  Quiz(1986, "သင်ဢမ်ႇမီး Inner Exception Property ၼၼ်ႉတေပဵၼ်သင်?", ["null", "error", "zero", "empty string"], "What is the InnerException property if there isn't one?"),
+  Quiz(1987, "Exception Chaining ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်သၢင်ႈသဵၼ်ႈမၢႆပၼ်ႁႃ ဢၼ်ၵွင်ႉၵၢႆႇၵၼ်ဝႆႉ", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်ႁဵတ်း Loop", "ၵၢၼ်သၢင်ႈ Class"], "What does Exception Chaining mean?"),
+  Quiz(1988, "ႁဝ်းၸၢင်ႈ Wrap ပၼ်ႁႃလၢႆၸၼ်ႉလႆႈႁႃႉ?", ["လႆႈ (Inner ၼႂ်း Inner)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 2 ၸၼ်ႉ", "လႆႈၵူၺ်း ၼႂ်း Database"], "Can we wrap exceptions multiple levels deep?"),
+  Quiz(1989, "Abstraction ၼႂ်း Exception Handling ၸွႆးလွင်ႈသင်?", ["ႁႄႉၵၢင်ႈဢမ်ႇပၼ် Method ၽၢႆႇၼိူဝ် ႁူႉလွင်ႈ Technical ဢၼ်လုၵ်ႉလိူဝ်ပူၼ်ႉတီႈ", "ႁႂ်ႈ App ဝႆး", "ႁႂ်ႈ Code လႅင်း", "ႁႂ်ႈ CPU ၼိမ်"], "How does Abstraction help in exception handling?"),
+  Quiz(1990, "Constructor လႂ် ဢၼ်ၸႂ်ႉတႃႇ Wrap Exception?", ["Exception(string, Exception)", "Exception(string)", "Exception()", "Exception(int)"], "Which constructor is used to wrap an exception?"),
+
+  // Lesson 199: Custom Exceptions
+  Quiz(1991, "ႁဝ်းတေလႆႈသိုပ်ႇၸိူဝ်ႉၶိူဝ်း (Inherit) လုၵ်ႉတီႈ Class လႂ် တႃႇသၢင်ႈ Custom Exception?", ["Exception", "Object", "Error", "System"], "Which class must we inherit from to create a custom exception?"),
+  Quiz(1992, "ၸိုဝ်ႈ Class ၶွင် Custom Exception ထုၵ်ႇလီသုတ်းတွၼ်ႈလူၺ်ႈၶေႃႈၵႂၢမ်းလႂ်?", ["Exception", "Error", "Problem", "Issue"], "How should a custom exception class name end?"),
+  Quiz(1993, "Keyword လႂ် ၸႂ်ႉတႃႇသူင်ႇ Message ၵႂႃႇၸူး Constructor ၶွင် Exception class?", ["base", "this", "super", "parent"], "Which keyword sends the message to the base Exception class?"),
+  Quiz(1994, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇ Custom Exception?", ["တႃႇမၵ်းမၼ်ႈပၼ်ႁႃ တႅတ်ႉတေႃးၸွမ်း App ႁဝ်း (Semantic clarity)", "တႃႇႁႂ်ႈ Code ယုင်ႈယၢင်ႈ", "တႃႇႁႂ်ႈ App ၼၵ်း", "တႃႇႁႂ်ႈ Compiler ႁဵတ်းၵၢၼ်ၼမ်"], "Why do we need Custom Exceptions?"),
+  Quiz(1995, "ၸွင်ႇႁဝ်းၸၢင်ႈသႂ်ႇ Property ႁင်းၵူၺ်း ၼႂ်း Custom Exception လႆႈႁႃႉ?", ["လႆႈ (မိူၼ်ၼင်ႇ ErrorCode)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း string", "လႆႈၵူၺ်း int"], "Can we add custom properties to a custom exception?"),
+  Quiz(1996, "Serializable ပွင်ႇဝႃႈသင် (တွၼ်ႈတႃႇ Exception)?", ["ၵၢၼ်ပိၼ်ႇ Object ႁႂ်ႈသူင်ႇၽၢၼ်ႇ Network/File လႆႈ", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်မႄး Code", "ၵၢၼ်သိုပ်ႇၸိူဝ်ႉၶိူဝ်း"], "What does Serializable mean for an exception?"),
+  Quiz(1997, "လၢႆးတႅမ်ႈ 'public class MyEx : Exception { }' မႅၼ်ႈႁႃႉ?", ["မႅၼ်ႈ", "ၽိတ်း", "တေလႆႈပဵၼ် interface", "တေလႆႈပဵၼ် static"], "Is 'public class MyEx : Exception { }' correct?"),
+  Quiz(1998, "ႁဝ်းထုၵ်ႇလီသၢင်ႈ Custom Exception မိူဝ်ႈလႂ်?", ["မိူဝ်ႈ Standard Exception ဢမ်ႇမီး ဢမ်ႇၼၼ် ဢမ်ႇၸႅင်ႈလႅင်း", "သၢင်ႈၵူႈတီႈ", "သၢင်ႈမိူဝ်ႈ App ဝႆး", "ဢမ်ႇထုၵ်ႇလီသၢင်ႈသေပွၵ်ႈ"], "When should we create a custom exception?"),
+  Quiz(1999, "Custom Exception ၸွႆးလုၵ်ႈႁဵၼ်း/Developer တၢင်ႇၵေႃႉၸိူင်ႉႁိုဝ်?", ["ႁႂ်ႈၶဝ်ပွင်ႇၸႂ် လွင်ႈတၢင်းဢၼ်ၽိတ်းလႆႈငၢႆႈလိူဝ်", "ႁႂ်ႈၶဝ်တႅမ်ႈ Code ယၢဝ်း", "ႁႂ်ႈၶဝ်ပိတ်း App", "ဢမ်ႇၸွႆးသင်"], "How does a custom exception help other developers?"),
+  Quiz(2000, "ၸၼ်ႉၵၢၼ်သိုပ်ႇၸိူဝ်ႉၶိူဝ်း (Inheritance) ၸွႆးလွင်ႈသင်?", ["ႁႂ်ႈ Custom Class ႁဝ်းမီး Property မိူၼ် Exception တူဝ်လူင်", "ႁႂ်ႈ Code ဝႆး", "ႁႂ်ႈ Memory ဢေႇ", "ႁႂ်ႈ CPU ၼိမ်"], "What does inheritance help with in custom exceptions?"),
+];
+
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
   csharpQuizM2,
@@ -7886,4 +8008,6 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM13,
   csharpQuizM14,
   csharpQuizM15,
+  // Migrate to Shan!
+  csharpQuizM16,
 ];
