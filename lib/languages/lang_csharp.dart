@@ -292,6 +292,7 @@ const Map<int, Map<int, String>> csharpModules = {
     213: "Callbacks: Passing Logic as a Parameter to Other Methods",
     214: "Exercise: Building a 'Shan News Alert' System with Events",
   },
+  // 18: "LINQ (Language Integrated Query) for Data Filtering",
   18: {
     215: "Introduction to LINQ: Why Query Data Inside C#?",
     216: "LINQ Syntax Styles: Query Syntax vs. Method Syntax",
