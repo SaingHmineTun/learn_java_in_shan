@@ -260,6 +260,7 @@ const Map<int, Map<int, String>> csharpModules = {
     188: "Generic Constraints: Restricting <T> (where T : class, new())",
     189: "Exercise: Building a 'Shan Digital Dictionary' with Dictionary<K, V>",
   },
+  // 16: "Exception Handling (try-catch-finally & Custom Exceptions)",
   16: {
     190: "Introduction to Exceptions: Errors vs. Exceptions",
     191: "The 'try-catch' Block: Catching Your First Crash",
