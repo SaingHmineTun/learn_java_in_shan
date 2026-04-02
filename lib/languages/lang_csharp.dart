@@ -8055,6 +8055,135 @@ final List<Quiz> csharpQuizM17 = [
   Quiz(2099, "Standard Pattern ၶွင် Event ၸႂ်ႉ Parameters သင်?", ["(object sender, EventArgs e)", "(string msg, int id)", "(bool status)", "(none)"], "What parameters does the standard event pattern use?"),
   Quiz(2100, "Unsubscribing (-=) ၸွႆးႁႄႉၵၢင်ႈလွင်ႈသင်?", ["Memory Leak", "Syntax Error", "NullReferenceException", "DivideByZeroException"], "What does unsubscribing help prevent?"),
 ];
+final List<Quiz> csharpQuizM18 = [
+  // Lesson 215: Introduction to LINQ
+  Quiz(2101, "LINQ ယေႃႇမႃးလုၵ်ႉတီႈၶေႃႈၵႂၢမ်းလႂ်?", ["Language Integrated Query", "List Integrated Network Query", "Logic Interactive Number Query", "Local Internet Network Quest"], "What does LINQ stand for?"),
+  Quiz(2102, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇၸႂ်ႉ LINQ တႅၼ်း foreach loop?", ["ႁဵတ်းႁႂ်ႈ Code ပွတ်း၊ လူငၢႆႈ လႄႈ မႄးငၢႆႈ", "ယွၼ်ႉ foreach ၸႂ်ႉဢမ်ႇလႆႈယဝ်ႉ", "ಯွၼ်ႉ LINQ ဢမ်ႇၵိၼ် CPU", "ယွၼ်ႉ LINQ ႁဵတ်းႁႂ်ႈ App ၼၵ်းလိူဝ်"], "Why use LINQ instead of a foreach loop?"),
+  Quiz(2103, "LINQ ၸွႆးႁႃၶေႃႈမုၼ်းလုၵ်ႉတီႈလႂ်လႆႈလၢႆလၢႆ?", ["Array, List, XML, လႄႈ Database", "String ၵူၺ်း", "File Text ၵူၺ်း", "Internet ၵူၺ်း"], "Where can LINQ query data from?"),
+  Quiz(2104, "Declarative Programming ၼႂ်း LINQ ပွင်ႇဝႃႈသင်?", ["လၢတ်ႈဝႃႈ 'ႁဝ်းၶႂ်ႈလႆႈသင်' (What we want)", "လၢတ်ႈဝႃႈ 'ႁဵတ်းၸိူင်ႉႁိုဝ်' (How to do it)", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်တႅမ်ႈ loop"], "What is Declarative Programming in LINQ?"),
+  Quiz(2105, "LINQ to Objects ၸႂ်ႉတင်းသင်?", ["Arrays လႄႈ Lists", "SQL Server", "XML Files", "JSON API"], "What does LINQ to Objects work with?"),
+
+  // Lesson 216: LINQ Syntax Styles
+  Quiz(2106, "LINQ Syntax မီးလၢႆးတႅမ်ႈၵေႃႇပိူင်?", ["2 ပိူင် (Query လႄႈ Method)", "1 ပိူင်", "3 ပိူင်", "4 ပိူင်"], "How many LINQ syntax styles are there?"),
+  Quiz(2107, "Query Syntax မိူၼ်တင်းလိၵ်ႈသင်?", ["SQL", "HTML", "Python", "Java"], "Query Syntax is similar to which language?"),
+  Quiz(2108, "Method Syntax ၸႂ်ႉသင်တႃႇမၵ်းမၼ်ႈ Logic?", ["Lambda Expressions (=>)", "SQL Keywords", "Foreach", "If-Else"], "What does Method Syntax use to define logic?"),
+  Quiz(2109, "Keyword လႂ် ဢၼ်ပဵၼ်တူဝ်တႄႇၼႂ်း Query Syntax?", ["from", "select", "where", "join"], "Which keyword starts a Query Syntax?"),
+  Quiz(2110, "Fluent Syntax ပဵၼ်ထႅင်ႈၸိုဝ်ႈၼိုင်ႈၶွင်သင်?", ["Method Syntax", "Query Syntax", "SQL", "Lambda"], "What is another name for Method Syntax?"),
+
+  // Lesson 217: IEnumerable Foundation
+  Quiz(2111, "IEnumerable<T> ပဵၼ်သင်?", ["Interface ပိုၼ်ႉထၢၼ် ဢၼ်ၸွႆးႁႂ်ႈပၼ်ႇ Loop လူၶေႃႈမုၼ်း", "Class သိမ်း Data", "Method တႃႇပိတ်း App", "Database"], "What is IEnumerable<T>?"),
+  Quiz(2112, "ႁဵတ်းသင် LINQ ၸင်ႇလူဝ်ႇ IEnumerable?", ["ယွၼ်ႉ LINQ Extension Methods တႅမ်ႈဝႆႉၼိူဝ် IEnumerable", "ယွၼ်ႉမၼ်းဝႆး", "ယွၼ်ႉမၼ်းပဵၼ် String", "ယွၼ်ႉမၼ်းပဵၼ် Class"], "Why does LINQ need IEnumerable?"),
+  Quiz(2113, "Deferred Execution ၼႂ်း IEnumerable ပွင်ႇဝႃႈသင်?", ["Query တေဢမ်ႇလႅၼ်ႈၵၢၼ် တေႃႇမိူဝ်ႈႁဝ်းပၼ်ႇ Loop လူမၼ်း", "ၵၢၼ်လႅၼ်ႈၵၢၼ်ၵမ်းလဵဝ်", "ၵၢၼ်ပိတ်း App", "Error"], "What is Deferred Execution in IEnumerable?"),
+  Quiz(2114, "လွင်ႈပႅၵ်ႇပိူင်လူင် ၵႄႈ List လႄႈ IEnumerable?", ["IEnumerable ပဵၼ် Read-only သေ List မႄးၶေႃႈမုၼ်းလႆႈ", "List ဝႆးလိူဝ်", "IEnumerable ၼၵ်းလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်"], "Main difference between List and IEnumerable?"),
+  Quiz(2115, "Lazy Loading ၼႂ်း LINQ ၸွႆးလွင်ႈသင်?", ["လူတ်းၵၢၼ်ၸႂ်ႉ Memory ယွၼ်ႉမၼ်းဢမ်ႇလူ Data တင်းမူတ်းၵမ်းလဵဝ်", "ႁႂ်ႈ App ၼၵ်း", "ႁႂ်ႈ Code ယၢဝ်း", "ႁႂ်ႈ CPU ႁႅင်း"], "How does Lazy Loading help in LINQ?"),
+
+  // Lesson 218: Filtering with Where
+  Quiz(2116, "Method '.Where()' ၸႂ်ႉတႃႇသင်?", ["လိူၵ်ႈဢဝ်ၶေႃႈမုၼ်း ဢၼ်မႅၼ်ႈၸွမ်းပၵ်းၵၢၼ် (Filtering)", "ၸတ်းထႅဝ်", "ပိၼ်ႇ Type", "ၼပ်ႉတၢင်းၼမ်"], "What is the '.Where()' method used for?"),
+  Quiz(2117, "Predicate ၼႂ်း Where() တေလႆႈသူင်ႇၵႃႈၶၼ်သင်ဢွၵ်ႇမႃး?", ["bool (true/false)", "int", "string", "void"], "What value must the predicate in Where() return?"),
+  Quiz(2118, "Operator လႂ် ၸႂ်ႉတႃႇၵွင်ႉငဝ်းလၢႆး 2 ဢၼ် (And)?", ["&&", "||", "!", "=="], "Which operator is used for 'And' logic?"),
+  Quiz(2119, "Operator လႂ် ၸႂ်ႉတႃႇငဝ်းလၢႆး 'ဢမ်ႇၼၼ်' (Or)?", ["||", "&&", "!", "=="], "Which operator is used for 'Or' logic?"),
+  Quiz(2120, "သင် Where() ႁႃဢမ်ႇႁၼ်သေတူဝ် မၼ်းတေသူင်ႇသင်?", ["Empty Collection", "null", "Exception", "0"], "What does Where() return if no matches are found?"),
+
+  // Lesson 219: Selecting and Transforming
+  Quiz(2121, "Method '.Select()' ၸႂ်ႉတႃႇသင်?", ["ပိၼ်ႇႁၢင်ႈ (Projection) ဢမ်ႇၼၼ် လိူၵ်ႈဢဝ်ၵူၺ်း Property မၢင်ဢၼ်", "လိူၵ်ႈထႅဝ်", "ၸတ်းထႅဝ်", "ၼပ်ႉတၢင်းၼမ်"], "What is the '.Select()' method used for?"),
+  Quiz(2122, "Projection ၼႂ်း LINQ ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ပိၼ်ႇႁၢင်ႈၶေႃႈမုၼ်း လုၵ်ႉတီႈပိူင်ၼိုင်ႈ ၵႂႃႇပဵၼ်ထႅင်ႈပိူင်ၼိုင်ႈ", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သၢင်ႈ Loop", "ၵၢၼ်သူင်ႇ Email"], "What does Projection mean in LINQ?"),
+  Quiz(2123, "Anonymous Type ၼႂ်း Select ၸႂ်ႉ Keyword လႂ်?", ["new { }", "class", "struct", "var"], "Which keyword creates an Anonymous Type in Select?"),
+  Quiz(2124, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Select တႃႇၼပ်ႉသွၼ်ႇ (Transform) ၵႃႈၶၼ်လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း int", "လႆႈၵူၺ်း string"], "Can we use Select for value transformation?"),
+  Quiz(2125, "လွင်ႈပႅၵ်ႇပိူင်ၵႄႈ Where လႄႈ Select?", ["Where လိူၵ်ႈထႅဝ်၊ Select လိူၵ်ႈလွၵ်း (Column)", "Where ယၢဝ်းလိူဝ်", "Select ဝႆးလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်"], "Difference between Where and Select?"),
+
+  // Lesson 220: Ordering Data
+  Quiz(2126, "Method လႂ် ၸႂ်ႉတႃႇၸတ်းထႅဝ် A-Z (Ascending)?", ["OrderBy", "OrderByDescending", "ThenBy", "Sort"], "Which method sorts A-Z?"),
+  Quiz(2127, "Method လႂ် ၸႂ်ႉတႃႇၸတ်းထႅဝ် Z-A (Descending)?", ["OrderByDescending", "OrderBy", "Reverse", "Sort"], "Which method sorts Z-A?"),
+  Quiz(2128, "ThenBy ၸႂ်ႉမိူဝ်ႈလႂ်?", ["မိူဝ်ႈလူဝ်ႇၸတ်းထႅဝ်ၸၼ်ႉသွင် (Secondary Sort)", "တႃႇတႄႇၸတ်းထႅဝ်", "တႃႇလိူၵ်ႈထႅဝ်", "တႃႇၼပ်ႉ"], "When is ThenBy used?"),
+  Quiz(2129, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ ThenBy ဢွၼ်တၢင်း OrderBy လႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ", "လႆႈ", "လႆႈၵူၺ်း string", "လႆႈၵူၺ်း int"], "Can we use ThenBy before OrderBy?"),
+  Quiz(2130, "Primary Sort ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၸတ်းထႅဝ်ၸၼ်ႉတႄႇ (OrderBy)", "ၵၢၼ်ၸတ်းထႅဝ်ၸၼ်ႉသွင်", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သၢင်ႈ Loop"], "What is Primary Sort?"),
+
+  // Lesson 221: Quantifiers
+  Quiz(2131, "Method '.Any()' ၸႂ်ႉတႃႇသင်?", ["ၵူတ်ႇထတ်းဝႃႈ မီးၶေႃႈမုၼ်း 'မၢင်တူဝ်' ဢၼ်မႅၼ်ႈၸွမ်းပၵ်းၵၢၼ်ႁႃႉ", "ၼပ်ႉတင်းမူတ်း", "ၸတ်းထႅဝ်", "ပိၼ်ႇ Type"], "What is '.Any()' used for?"),
+  Quiz(2132, ".All() တေသူင်ႇ True မိူဝ်ႈလႂ်?", ["မိူဝ်ႈၶေႃႈမုၼ်း 'ၵူႈတူဝ်' မႅၼ်ႈၸွမ်းပၵ်းၵၢၼ်", "မိူဝ်ႈမီး 1 တူဝ်မႅၼ်ႈ", "မိူဝ်ႈဢမ်ႇမီးသင်မႅၼ်ႈ", "မိူဝ်ႈ App Error"], "When does .All() return True?"),
+  Quiz(2133, ".Contains() ပႅၵ်ႇတင်း Any() ၸိူင်ႉႁိုဝ်?", ["Contains ႁႃၵႃႈၶၼ်တႅတ်ႉတေႃး (Value) တႅၼ်း Lambda", "Any ဝႆးလိူဝ်", "Contains ၼၵ်းလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်"], "Difference between Contains and Any?"),
+  Quiz(2134, "Any() သူင်ႇၵႃႈၶၼ်ပဵၼ် Type သင်?", ["bool", "int", "string", "List"], "What type does Any() return?"),
+  Quiz(2135, "Early Exit ၼႂ်း Any() ပွင်ႇဝႃႈသင်?", ["ၵိုတ်းၵၢၼ်ႁႃၵမ်းလဵဝ် မိူဝ်ႈႁႃႁၼ် 1 တူဝ်ယဝ်ႉ", "ၵၢၼ်ပိတ်း App", "Error", "Loop"], "What is Early Exit in Any()?"),
+
+  // Lesson 222: Element Operators
+  Quiz(2136, ".First() ပႅၵ်ႇတင်း .FirstOrDefault() ၸိူင်ႉႁိုဝ်?", ["FirstOrDefault သူင်ႇ null တႅၼ်းၵၢၼ် Crash မိူဝ်ႈႁႃဢမ်ႇႁၼ်", "First ဝႆးလိူဝ်", "FirstOrDefault ၼၵ်းလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်"], "Difference between First and FirstOrDefault?"),
+  Quiz(2137, "သင်ႁႃၶေႃႈမုၼ်းႁၼ် 2 တူဝ်... .Single() တေပဵၼ်သင်?", ["Exception (Crash)", "ဢဝ်တူဝ်တႄႇ", "ဢဝ်တူဝ်လင်", "Return null"], "What happens if .Single() finds 2 items?"),
+  Quiz(2138, "Method လႂ် ၸႂ်ႉတႃႇႁႃ 'တူဝ်လင်သုတ်း'?", ["Last", "First", "Single", "Any"], "Which method finds the last item?"),
+  Quiz(2139, "Default Value ၶွင် int ပဵၼ်သင်?", ["0", "null", "1", "-1"], "What is the default value of int?"),
+  Quiz(2140, "SingleOrDefault ၸႂ်ႉတႃႇသင်?", ["ႁႃၶေႃႈမုၼ်းဢၼ်မီး 'တူဝ်လဵဝ်ၵူၺ်း' (Unique ID)", "ႁႃတူဝ်တႄႇ", "ႁႃတူဝ်လင်", "ၼပ်ႉ"], "What is SingleOrDefault for?"),
+
+  // Lesson 223: Aggregation
+  Quiz(2141, "Method '.Count()' ၸႂ်ႉတႃႇသင်?", ["ၼပ်ႉတၢင်းၼမ်ၶွင်ၶေႃႈမုၼ်း", "ႁူမ်ႈၵႃႈၶၼ်", "ႁႃၵႃႈၶၼ်ၵၢင်", "ၸတ်းထႅဝ်"], "What is '.Count()' for?"),
+  Quiz(2142, "Method '.Sum()' ၸႂ်ႉတႃႇသင်?", ["ဢဝ်တူဝ်ၼပ်ႉတင်းမူတ်းမႃးႁူမ်ႈၵၼ်", "ၼပ်ႉ", "ႁႃၵႃႈၶၼ်ၵၢင်", "ပိတ်း App"], "What is '.Sum()' for?"),
+  Quiz(2143, "သင် Average() ၼိူဝ် List ဢၼ်ပႅတ်ႈလၢႆ (Empty) တေပဵၼ်သင်?", ["Exception (Crash)", "0", "null", "1"], "What happens if Average() is called on an empty list?"),
+  Quiz(2144, "Method လႂ် ၸႂ်ႉတႃႇႁႃၵႃႈၶၼ်ဢၼ် 'ဢေႇသုတ်း'?", ["Min", "Max", "Sum", "Average"], "Which method finds the minimum value?"),
+  Quiz(2145, "Full Scan ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်လူၶေႃႈမုၼ်းတႄႇတေႃႇသုတ်း တႃႇၼပ်ႉသွၼ်ႇ", "ၵၢၼ်ပိတ်း App", "Error", "Loop"], "What is a Full Scan?"),
+
+  // Lesson 224: Grouping Data
+  Quiz(2146, "Method '.GroupBy()' ၸႂ်ႉတႃႇသင်?", ["ၸႅၵ်ႇၸုမ်း (Categorize) ၶေႃႈမုၼ်း", "ၸတ်းထႅဝ်", "ၼပ်ႉ", "ပိတ်း App"], "What is '.GroupBy()' for?"),
+  Quiz(2147, "Key ၼႂ်း GroupBy ပွင်ႇဝႃႈသင်?", ["ၸိုဝ်ႈၸုမ်း ဢမ်ႇၼၼ် Property ဢၼ်ၸႂ်ႉၸႅၵ်ႇ", "ID လုၵ်ႈႁဵၼ်း", "Password", "Loop"], "What is the Key in GroupBy?"),
+  Quiz(2148, "IGrouping<K, T> သိမ်းသင်ဝႆႉ?", ["Key လႄႈ သဵၼ်ႈမၢႆၶေႃႈမုၼ်းၼႂ်းၸုမ်း", "ID ၵူၺ်း", "Name ၵူၺ်း", "null"], "What does IGrouping store?"),
+  Quiz(2149, "တွၼ်ႈတႃႇလူၽွၼ်းလႆႈ GroupBy ႁဝ်းၵႆႉၸႂ်ႉ Loop ၸိူင်ႉႁိုဝ်?", ["Nested Foreach (Loop ၼႂ်း Loop)", "While loop", "For loop", "ဢမ်ႇၸႂ်ႉ loop"], "How to read GroupBy results?"),
+  Quiz(2150, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Count() ဝၢႆးလင် GroupBy လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း string", "လႆႈၵူၺ်း int"], "Can we use Count() after GroupBy?"),
+
+  // Lesson 225: Joining Data
+  Quiz(2151, "Method '.Join()' ၸႂ်ႉတႃႇသင်?", ["ဢဝ်သွင် List မႃးၵွင်ႉၵၼ် လူၺ်ႈၸႂ်ႉ ID", "ၸတ်းထႅဝ်", "ၼပ်ႉ", "ပိတ်း App"], "What is '.Join()' for?"),
+  Quiz(2152, "Inner Join ပွင်ႇဝႃႈသင်?", ["ၼႄၵူၺ်းၶေႃႈမုၼ်း ဢၼ်မီး Key မိူၼ်ၵၼ်တင်းသွင်ၽၢႆႇ", "ၼႄတင်းမူတ်း", "ၼႄၵူၺ်းၽၢႆႇသၢႆႉ", "Error"], "What is an Inner Join?"),
+  Quiz(2153, "Outer List ၼႂ်း Join ပွင်ႇဝႃႈသင်?", ["List တူဝ်တႄႇ ဢၼ်ႁဝ်းႁွင်ႉ .Join()", "List တူဝ်သွင်", "Database", "Loop"], "What is the Outer List in Join?"),
+  Quiz(2154, "Result Selector ၼႂ်း Join ၸႂ်ႉတႃႇသင်?", ["မၵ်းမၼ်ႈဝႃႈ တေဢဝ်ၶေႃႈမုၼ်းလႂ်မႃးသၢင်ႈပဵၼ် Object မႂ်ႇ", "တႃႇလိူၵ်ႈ ID", "တႃႇၸတ်းထႅဝ်", "တႃႇၼပ်ႉ"], "What is the Result Selector in Join?"),
+  Quiz(2155, "လၢႆးတႅမ်ႈ Join ဢၼ်လူငၢႆႈလိူဝ်?", ["Query Syntax", "Method Syntax", "Lambda", "Foreach"], "Which syntax is easier for Joins?"),
+
+  // Lesson 226: Deferred Execution
+  Quiz(2156, "Deferred Execution ၼႂ်း LINQ မီးၵႃႈၶၼ်ၸိူင်ႉႁိုဝ်?", ["လူတ်း Memory လႄႈ ႁဵတ်းႁႂ်ႈ App ဝႆး", "ႁႂ်ႈ App ၼၵ်း", "ႁႂ်ႈ Code ယၢဝ်း", "Error"], "Benefit of Deferred Execution?"),
+  Quiz(2157, "Method လႂ် ဢၼ်ႁဵတ်းႁႂ်ႈ Query လႅၼ်ႈၵၢၼ်ၵမ်းလဵဝ်?", [".ToList()", ".Where()", ".Select()", ".OrderBy()"], "Which method causes immediate execution?"),
+  Quiz(2158, "Streaming ၼႂ်း Deferred Execution ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်လူၶေႃႈမုၼ်းၵမ်းတူဝ် ၼႂ်းယၢမ်းဢၼ်လႅၼ်ႈၵၢၼ်", "ၵၢၼ်ပိတ်း App", "Error", "Loop"], "What is Streaming in LINQ?"),
+  Quiz(2159, "သင်ႁဝ်း Add ၶေႃႈမုၼ်းမႂ်ႇ ဝၢႆးသၢင်ႈ Query (Deferred)... မၼ်းတေၼႄၽွၼ်းလႆႈမႂ်ႇႁႃႉ?", ["ၼႄ", "ဢမ်ႇၼႄ", "ၼႄၵူၺ်း string", "ၼႄၵူၺ်း int"], "Will a deferred query see newly added data?"),
+  Quiz(2160, "Immediate Execution ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ႁဵတ်းၵၢၼ်ၵမ်းလဵဝ် သေသိမ်းၽွၼ်းလႆႈဝႆႉ", "ၵၢၼ်ယၼ်ႇၶၢဝ်းယၢမ်း", "Error", "Loop"], "What is Immediate Execution?"),
+
+  // Mixed Topics & Best Practices (2161-2200)
+  Quiz(2161, "Method Chaining ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ႁွင်ႉ LINQ Method သိုပ်ႇၵၼ်ၽၢၼ်ႇ . (Dot)", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သၢင်ႈ Class", "Error"], "What is Method Chaining?"),
+  Quiz(2162, "Extension Method ၼႂ်း LINQ ယူႇၼႂ်း Namespace လႂ်?", ["System.Linq", "System.Collections", "System.Data", "System.IO"], "Which namespace contains LINQ?"),
+  Quiz(2163, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Method ႁင်းၵူၺ်း ၼႂ်း Where() လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း string", "လႆႈၵူၺ်း int"], "Can we use custom methods in Where()?"),
+  Quiz(2164, "LINQ ၸၢင်ႈၸႂ်ႉတင်း Array လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း int[]", "လႆႈၵူၺ်း string[]"], "Can LINQ be used with Arrays?"),
+  Quiz(2165, "Operator 'equals' ၸႂ်ႉၼႂ်း Syntax လႂ်?", ["Query Syntax", "Method Syntax", "Lambda", "Foreach"], "Where is 'equals' keyword used?"),
+  Quiz(2166, "Method '.OfType<T>()' ၸႂ်ႉတႃႇသင်?", ["လိူၵ်ႈဢဝ်ၶေႃႈမုၼ်း ၵူၺ်း Type ဢၼ်ႁဝ်းမၵ်းမၼ်ႈ", "ပိၼ်ႇ Type", "ၼပ်ႉ", "ၸတ်းထႅဝ်"], "What is .OfType<T>() for?"),
+  Quiz(2167, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ LINQ တႃႇမႄး (Update) ၶေႃႈမုၼ်းၼႂ်း List လႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ (LINQ ပဵၼ် Query - Read only)", "လႆႈ", "လႆႈၵူၺ်း int", "လႆႈၵူၺ်း string"], "Can LINQ update data in a list?"),
+  Quiz(2168, "IOrderedEnumerable<T> ပဵၼ်ၽွၼ်းလႆႈလုၵ်ႉတီႈ Method လႂ်?", ["OrderBy / OrderByDescending", "Where", "Select", "Count"], "Which method returns IOrderedEnumerable<T>?"),
+  Quiz(2169, "သင်ႁဝ်းလူဝ်ႇ 'ၵႃႈၶၼ်ၵၢင်' ၶွင်မၢႆတွၼ်ႈ လုၵ်ႈႁဵၼ်းၵူႈၵေႃႉ ႁဝ်းၸႂ်ႉသင်?", ["Average()", "Sum()", "Min()", "Max()"], "How to get the average score?"),
+  Quiz(2170, "Method '.Distinct()' ၸႂ်ႉတႃႇသင်?", ["လူတ်ႇၶေႃႈမုၼ်းဢၼ် 'သမ်ႉ' (Duplicate) ဢွၵ်ႇ", "ၼပ်ႉ", "ၸတ်းထႅဝ်", "ပိတ်း App"], "What is .Distinct() for?"),
+
+  // (Adding more for completion up to 2200 with varied angles)
+  Quiz(2171, "Query Execution ပွင်ႇဝႃႈသင်?", ["ယၢမ်းဢၼ် LINQ တႄႇပၼ်ႇ Loop တႃႇႁႃၶေႃႈမုၼ်း", "ၵၢၼ်တႅမ်ႈ Code", "Error", "Loop"], "What is Query Execution?"),
+  Quiz(2172, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Lambda ၼႂ်း Count() လႆႈႁႃႉ?", ["လႆႈ (တႃႇၼပ်ႉၵူၺ်းတူဝ်ဢၼ်မႅၼ်ႈၸွမ်း)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း int", "လႆႈၵူၺ်း string"], "Can we use a lambda in Count()?"),
+  Quiz(2173, "Method '.Take(n)' ၸႂ်ႉတႃႇသင်?", ["ဢဝ်ၶေႃႈမုၼ်းၵူၺ်း n တူဝ်ဢွၼ်တၢင်း", "လူတ်ႇ n တူဝ်", "ၸတ်းထႅဝ်", "ၼပ်ႉ"], "What is .Take(n) for?"),
+  Quiz(2174, "Method '.Skip(n)' ၸႂ်ႉတႃႇသင်?", ["ၶၢမ်ႇပႅတ်ႈ n တူဝ်ဢွၼ်တၢင်း", "ဢဝ် n တူဝ်", "ၸတ်းထႅဝ်", "ၼပ်ႉ"], "What is .Skip(n) for?"),
+  Quiz(2175, "Paging (ၵၢၼ်ၸႅၵ်ႇၼႃႈလိၵ်ႈ) ၵႆႉၸႂ်ႉ Method လႂ်ႁူမ်ႈၵၼ်?", ["Skip() လႄႈ Take()", "Where() လႄႈ Select()", "OrderBy()", "Count()"], "Which methods are used for paging?"),
+  Quiz(2176, "LINQ Providers ပွင်ႇဝႃႈသင်?", ["ၶိူင်ႈမိုဝ်းဢၼ်ပိၼ်ႇ LINQ ၵႂႃႇပဵၼ် SQL ဢမ်ႇၼၼ် XML", "ၵူၼ်းတႅမ်ႈ Code", "Database", "Loop"], "What are LINQ Providers?"),
+  Quiz(2177, "ၸွင်ႇ LINQ ၸၢင်ႈၸႂ်ႉတင်း Dictionary လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း Key", "လႆႈၵူၺ်း Value"], "Can LINQ be used with Dictionary?"),
+  Quiz(2178, "Method '.First()' တေသူင်ႇ Type သင်?", ["Type ၶွင် Element တူဝ်လဵဝ်", "List", "IEnumerable", "bool"], "What type does .First() return?"),
+  Quiz(2179, "သင်လူဝ်ႇႁူႉဝႃႈ 'List ပႅတ်ႈလၢႆႁႃႉ?' ၸႂ်ႉသင်ဝႆးသုတ်း?", ["!Any()", "Count() == 0", "FirstOrDefault() == null", "Where().Count()"], "Fastest way to check if a list is empty?"),
+  Quiz(2180, "Method '.ElementAt(i)' ၸႂ်ႉတႃႇသင်?", ["ဢဝ်ၶေႃႈမုၼ်းတီႈ Index မၢႆ i", "ၼပ်ႉ", "ၸတ်းထႅဝ်", "ပိၼ်ႇ Type"], "What is .ElementAt(i) for?"),
+  Quiz(2181, "ၸွင်ႇႁဝ်းၸၢင်ႈ Join လၢႆလၢႆ List ၸွမ်ၵၼ်လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 2 List", "လႆႈၵူၺ်း string"], "Can we join multiple lists?"),
+  Quiz(2182, "Method Syntax ၵႆႉႁွင်ႉဝႃႈသင်?", ["Method Chaining", "Querying", "Foreaching", "If-Else"], "Method Syntax is often called?"),
+  Quiz(2183, "Expression Tree ၼႂ်း LINQ ပွင်ႇဝႃႈသင်?", ["ပိူင်သၢင်ႈ Logic ဢၼ် Compiler ၸႂ်ႉတႃႇပိၼ်ႇ Code", "တူၼ်ႈမႆႉ", "Error", "Loop"], "What is an Expression Tree in LINQ?"),
+  Quiz(2184, "ၸွင်ႇ .Select() ၸၢင်ႈသူင်ႇ Type ဢၼ်ပႅၵ်ႇၵၼ်ဢွၵ်ႇမႃးလႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း string", "လႆႈၵူၺ်း int"], "Can .Select() return a different type?"),
+  Quiz(2185, "Method '.MinBy()' ၸႂ်ႉတႃႇသင်?", ["ႁႃ Object ဢၼ်မီးၵႃႈၶၼ် Property ဢေႇသုတ်း", "ႁႃ 0", "ၼပ်ႉ", "ၸတ်းထႅဝ်"], "What is .MinBy() for?"),
+  Quiz(2186, "ၸွင်ႇ LINQ ႁဵတ်းႁႂ်ႈ Code လႅၼ်ႈဝႆးလိူဝ် foreach loop တႃႇသေႇႁႃႉ?", ["ဢမ်ႇ (မၢင်ပွၵ်ႈ Foreach တိုၵ်ႉဝႆးလိူဝ် ဢိတ်းၼိုင်ႈ)", "ၸိုဝ်ႈ", "ဢမ်ႇႁူႉ", "မႅၼ်ႈ"], "Is LINQ always faster than foreach?"),
+  Quiz(2187, "ယိူင်းဢၢၼ်းလူင်ၶွင် LINQ ပဵၼ်သင်?", ["Readability လႄႈ Developer Productivity", "Speed ၵူၺ်း", "Memory ၵူၺ်း", "Security"], "Main goal of LINQ?"),
+  Quiz(2188, "Method '.SelectMany()' ၸႂ်ႉတႃႇသင်?", ["Flattening (ဢဝ် List ၼႂ်း List မႃးႁဵတ်းပဵၼ် List လဵဝ်)", "ၼပ်ႉ", "ၸတ်းထႅဝ်", "ပိတ်း App"], "What is .SelectMany() for?"),
+  Quiz(2189, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ LINQ ၼႂ်း Unity Engine လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း တွၼ်ႈတႃႇ Android", "လႆႈၵူၺ်း string"], "Can LINQ be used in Unity?"),
+  Quiz(2190, "Var Keyword ၵႆႉၸႂ်ႉတင်းသင်ၼႂ်း LINQ?", ["Anonymous Types", "int ၵူၺ်း", "string ၵူၺ်း", "null"], "Var keyword is often used with what in LINQ?"),
+  Quiz(2191, "Method '.Union()' ၸႂ်ႉတႃႇသင်?", ["ႁူမ်ႈသွင် List ၶဝ်ႈၵၼ် (ဢဝ်တူဝ်ဢမ်ႇမိူၼ်ၵၼ်)", "ၸႅၵ်ႇၸုမ်း", "ၼပ်ႉ", "ပိတ်း App"], "What is .Union() for?"),
+  Quiz(2192, "Method '.Intersect()' ၸႂ်ႉတႃႇသင်?", ["ႁႃတူဝ်ဢၼ် 'မိူၼ်ၵၼ်' ၼႂ်းသွင် List", "ႁႃတူဝ်ပႅၵ်ႇ", "ၼပ်ႉ", "ၸတ်းထႅဝ်"], "What is .Intersect() for?"),
+  Quiz(2193, "Method '.Except()' ၸႂ်ႉတႃႇသင်?", ["ႁႃတူဝ်ဢၼ်မီးၼႂ်း List 1 ၵူၺ်း ဢမ်ႇမီးၼႂ်း List 2", "ႁူမ်ႈ", "ၼပ်ႉ", "ၸတ်းထႅဝ်"], "What is .Except() for?"),
+  Quiz(2194, "LINQ Support Generic Type ႁႃႉ?", ["Support", "No Support", "Support ၵူၺ်း int", "Support ၵူၺ်း string"], "Does LINQ support generics?"),
+  Quiz(2195, "Method '.Reverse()' ၸႂ်ႉတႃႇသင်?", ["ပိၼ်ႇသဵၼ်ႈမၢႆ လုၵ်ႉတေႃႇလင် မႃးတေႃႇၼႃႈ", "ၼပ်ႉ", "ၸတ်းထႅဝ်", "ပိတ်း App"], "What is .Reverse() for?"),
+  Quiz(2196, "ၸွင်ႇ LINQ ၸၢင်ႈၸႂ်ႉတင်း Database ဢၼ်ဢမ်ႇၸိုဝ်ႈ SQL လႆႈႁႃႉ?", ["လႆႈ (သင်မီး Provider)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း Text File", "ဢမ်ႇႁူႉ"], "Can LINQ query non-SQL databases?"),
+  Quiz(2197, "Property '.Length' ၶွင် Array မိူၼ်တင်း Method လႂ်ၼႂ်း LINQ?", ["Count()", "Sum()", "Max()", "Min()"], "Array.Length is equivalent to which LINQ method?"),
+  Quiz(2198, "Predicate ၼႂ်း LINQ မိူၼ်တင်းသင်?", ["Filter Condition", "Sort Order", "Variable", "Class"], "What is a predicate equivalent to?"),
+  Quiz(2199, "IEnumerable ယူႇၼႂ်း Namespace လႂ်?", ["System.Collections.Generic", "System.Linq", "System.IO", "System.Text"], "Which namespace contains IEnumerable?"),
+  Quiz(2200, "ၵၢၼ်ႁဵၼ်း LINQ ယဝ်ႉယဝ်ႉ ႁဝ်းတေၸၢင်ႈႁဵတ်းသင်?", ["ၸတ်းၵၢၼ်ၶေႃႈမုၼ်းလႆႈငၢႆႈ လႄႈ ဝႆးလိူဝ်ၵဝ်ႇ", "ပိတ်း App", "တႅမ်ႈ HTML", "ဢမ်ႇႁဵတ်းသင်"], "What can we do after learning LINQ?"),
+];
 
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
@@ -8075,4 +8204,5 @@ final List<List<Quiz>> csharpQuizzes = [
   // Migrate to Shan!
   csharpQuizM16,
   csharpQuizM17,
+  csharpQuizM18,
 ];
