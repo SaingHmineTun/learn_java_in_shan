@@ -1,3 +1,5 @@
+import 'package:tmkacademy/utils/utils.dart';
+
 const Map<int, String> mysqlTopics = {
   1: "Foundations of Databases",
   2: "Data Modeling & Design",
@@ -96,4 +98,13 @@ const Map<int, Map<int, String>> mysqlModules = {
     69: "Maintenance: ANALYZE and Slow Query Logs",
     70: "Server Tuning: Buffer Pools and Memory Basics"
   }
+};
+
+final Map<int, Lesson> mysqlLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(1, 5),
+  6: Lesson(1, 6),
 };
