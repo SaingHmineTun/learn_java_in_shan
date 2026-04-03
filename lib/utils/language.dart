@@ -15,6 +15,7 @@ const languages = [
   "javafx",
   "python_tkinter",
   "git",
+  "mysql"
 
 ];
 const fullName = {
@@ -34,4 +35,5 @@ const fullName = {
   "python_tkinter": "Python Tkinter",
   "javafx": "JavaFX",
   "git": "Git & Github",
+  "mysql": "MySQL"
 };

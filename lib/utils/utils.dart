@@ -14,6 +14,7 @@ import '../languages/lang_html.dart';
 import '../languages/lang_java.dart';
 import '../languages/lang_js.dart';
 import '../languages/lang_kotlin.dart';
+import '../languages/lang_mysql.dart';
 import '../languages/lang_python.dart';
 import '../languages/lang_python_tkinter.dart';
 
@@ -33,7 +34,8 @@ const Map<String, Map<int, String>> topics = {
   "javafx": javafxTopics,
   "python_tkinter": pythonTkinterTopics,
   "git": gitTopics,
-  "cpp": cppTopics
+  "cpp": cppTopics,
+  "mysql": mysqlTopics,
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -52,7 +54,8 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "python_tkinter": pythonTkinterModules,
   "javafx": javafxModules,
   "git": gitModules,
-  "cpp": cppModules
+  "cpp": cppModules,
+  "mysql": mysqlModules,
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -71,7 +74,8 @@ final Map<String, Map<int, Lesson>> lessons = {
   "python_tkinter": pythonTkinterLessons,
   "javafx": javafxLessons,
   "git": gitLessons,
-  "cpp": cppLessons
+  "cpp": cppLessons,
+  "mysql": mysqlLessons,
 };
 
 class Lesson {

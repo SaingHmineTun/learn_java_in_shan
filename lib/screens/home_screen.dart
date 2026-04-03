@@ -23,6 +23,11 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFF3776AB), // Python Blue
           'icon': DevIcons.pythonPlain,
         };
+      case 'mysql':
+        return {
+          'color': const Color(0xFF4479A1), // MySQL Blue
+          'icon': DevIcons.mysqlPlain,
+        };
       case 'git':
         return {
           'color': const Color(0xFFF05032), // Git Orange-Red
