@@ -486,4 +486,479 @@ List<Quiz> mysqlQuizM1 = [
     "How many bytes per character can utf8mb4 store up to?",
   ),
 ];
-List<List<Quiz>> mysqlQuizzes = [mysqlQuizM1];
+List<Quiz> mysqlQuizM2 = [
+  // --- Lesson 7: Entities, Attributes, & PK ---
+  Quiz(51, "Entity မၢႆထိုင်သင် ၼႂ်းပိူင်သၢင်ႈ Database?", [
+    "တူဝ်ၶေႃႈမုၼ်းလူင် မိူၼ်ၼင်ႇ Table (Noun)",
+    "ႁူဝ်ၶေႃႈၶေႃႈမုၼ်း (Column)",
+    "ၵၢၼ်ၵွင်ႉ Table",
+    "လၢႆးတႅမ်ႈ Code"
+  ]),
+  Quiz(52, "Attribute ပဵၼ်သင် ၼႂ်း Table?", [
+    "ႁူဝ်ၶေႃႈၶေႃႈမုၼ်း ဢၼ်လၢတ်ႈၼႄလွင်ႈ Entity",
+    "မၢႆၼပ်ႉ ID ႁင်းတူဝ်",
+    "တူဝ် Database Engine",
+    "သေႃးလပ်ႉ Admin"
+  ]),
+  Quiz(53, "Primary Key (PK) လူဝ်ႇမီးၵုၼ်ႇလၵ်ႉသၼႃႇသင်?", [
+    "Unique လႄႈ Not Null (ဢမ်ႇမိူၼ်ပိူၼ်ႈ လႄႈ ဢမ်ႇပဝ်ႇ)",
+    "သိမ်းလိၵ်ႈလႆႈယၢဝ်းယၢဝ်း",
+    "မီးလႆႈလၢႆလၢႆဢၼ် ၼႂ်း Table ၼိုင်ႈဢၼ်",
+    "လႅၵ်ႈလၢႆႈလႆႈၵူႈဝၼ်း"
+  ]),
+  Quiz(54, "Data Modeling ႁဵတ်းသင်လႄႈ လွင်ႈလူင်?", [
+    "တႃႇဝူၼ်ႉပိူင်သၢင်ႈ ဢွၼ်တၢင်းတေတႅမ်ႈ Code တႄႉ",
+    "တႃႇ Install MySQL",
+    "တႃႇပၼ် Password User",
+    "တႃႇ Download Software"
+  ]),
+  Quiz(55, "ၼႂ်း Table 'Students' ... 'Student_ID' ထုၵ်ႇလီပဵၼ်သင်?", [
+    "Primary Key",
+    "Attribute ธรรมဒါ",
+    "Foreign Key",
+    "Database Name"
+  ]),
+
+  // --- Lesson 8: Surrogate vs Natural Keys ---
+  Quiz(56, "Natural Key ပဵၼ်သင်?", [
+    "ဢဝ်ၶေႃႈမုၼ်းဢၼ်မီးယူႇယဝ်ႉ (မိူၼ်ၼင်ႇ NRC) မႃးႁဵတ်း PK",
+    "သၢင်ႈမၢႆၼပ်ႉမႂ်ႇ (ID) တႃႇ DB ၵူၺ်း",
+    "လၢႆးၵွင်ႉ 1:1",
+    "ၵၢၼ်ၸႅၵ်ႇ Table"
+  ]),
+  Quiz(57, "Surrogate Key ပဵၼ်သင်?", [
+    "သၢင်ႈမၢႆတွင်းမႂ်ႇ (ID) ဢၼ်ဢမ်ႇမီးတီႈပွင်ႇၼွၵ်ႈ DB",
+    "ဢဝ်မၢႆၾၢင် (NRC) မႃးၸႂ်ႉ",
+    "ၸိုဝ်ႈလုၵ်ႈႁဵၼ်း",
+    "လၢႆးၵွင်ႉ Table"
+  ]),
+  Quiz(58, "AUTO_INCREMENT ၵႆႉၸႂ်ႉၸွမ်း Key ပိူင်လႂ်?", [
+    "Surrogate Key",
+    "Natural Key",
+    "Composite Key",
+    "Foreign Key"
+  ]),
+  Quiz(59, "ၽွၼ်းလီ Surrogate Key ပဵၼ်သင်?", [
+    "မၼ်းတေဢမ်ႇလႅၵ်ႈလၢႆႈ (Static) လႄႈ ၵွင်ႉ Table ငၢႆႈ",
+    "မီးတီႈပွင်ႇတႃႇၵူၼ်းၸႂ်ႉ App",
+    "ႁဵတ်းႁႂ်ႈ DB လဵၵ်ႉၵႂႃႇ",
+    "ဢမ်ႇလူဝ်ႇၸႂ်ႉ ID"
+  ]),
+  Quiz(60, "UUID ပဵၼ် Key ပိူင်လႂ်?", [
+    "Surrogate Key ဢၼ်ယၢဝ်း လႄႈ Unique ၵူႈ Server",
+    "Natural Key",
+    "Primary Key ဢၼ်ပဵၼ်တူဝ်ၼပ်ႉ 1, 2, 3",
+    "Foreign Key"
+  ]),
+
+  // --- Lesson 9: One-to-Many (1:N) ---
+  Quiz(61, "Relationship ပိူင်လႂ် ဢၼ်လႆႈၸႂ်ႉၼမ်လိူဝ်ပိူၼ်ႈ?", [
+    "One-to-Many (1:N)",
+    "One-to-One (1:1)",
+    "Many-to-Many (M:N)",
+    "Zero-to-One"
+  ]),
+  Quiz(62, "Foreign Key (FK) လူဝ်ႇယူႇတီႈၽၢႆႇလႂ်?", [
+    "ၽၢႆႇ Many (Child Table)",
+    "ၽၢႆႇ One (Parent Table)",
+    "ယူႇတီႈလႂ်ၵေႃႈလႆႈ",
+    "ဢမ်ႇလူဝ်ႇမီး FK"
+  ]),
+  Quiz(63, "ၼႂ်းၵႄႈ 'Department' (1) လႄႈ 'Employee' (N) ... FK ယူႇတီႈလႂ်?", [
+    "Employee Table",
+    "Department Table",
+    "ယူႇတင်းသွင် Table",
+    "ဢမ်ႇလူဝ်ႇမီး"
+  ]),
+  Quiz(64, "Parent Table မၵ်းထိုင်သင်?", [
+    "Table ဢၼ်မီး Primary Key ဢၼ်ပိူၼ်ႈမႃးၵွင်ႉ (ၽၢႆႇ One)",
+    "Table ဢၼ်မီး Foreign Key",
+    "Junction Table",
+    "Database တင်းသဵင်ႈ"
+  ]),
+  Quiz(65, "Referential Integrity မၵ်းထိုင်သင်?", [
+    "လွင်ႈမၢၼ်ႇမႅၼ်ႈ ၼႂ်းၵၢၼ်ၵွင်ႉ FK ၸူး PK",
+    "လွင်ႈဝႆး DB",
+    "လွင်ႈသိမ်းလိၵ်ႈတႆး",
+    "လွင်ႈတင်ႈ Password"
+  ]),
+
+  // --- Lesson 10: Many-to-Many (M:N) ---
+  Quiz(66, "Many-to-Many (M:N) လူဝ်ႇသင်တႃႇၵွင်ႉ Table?", [
+    "Junction Table (Table တူဝ်ၵၢင်)",
+    "Primary Key တူဝ်လဵဝ်",
+    "Excel File",
+    "User Password"
+  ]),
+  Quiz(67, "ၼႂ်းၵႄႈ 'Students' လႄႈ 'Courses' ပဵၼ် Relationship ပိူင်လႂ်?", [
+    "Many-to-Many (M:N)",
+    "One-to-One (1:1)",
+    "One-to-Many (1:N)",
+    "ဢမ်ႇၵွင်ႉၵၢႆႇၵၼ်"
+  ]),
+  Quiz(68, "Junction Table ၵႆႉသိမ်းသင်ဝႆႉ?", [
+    "Foreign Keys ဢၼ်မႃးတီႈ Table သွင်ၽၢႆႇ",
+    "ၸိုဝ်ႈ Database",
+    "Password Admin",
+    "Unicode Font"
+  ]),
+  Quiz(69, "Composite Primary Key ၼႂ်း Junction Table ပဵၼ်သင်?", [
+    "ၵၢၼ်ဢဝ် FK သွင်ဢၼ် ႁူမ်ႈၵၼ်ပဵၼ် PK",
+    "ID ဢၼ်ၼပ်ႉႁင်းတူဝ်",
+    "ၸိုဝ်ႈ User",
+    "မၢႆ Port"
+  ]),
+  Quiz(70, "ႁဵတ်းသင်လူဝ်ႇ Junction Table?", [
+    "တႃႇတႅၵ်ႇ M:N ႁႂ်ႈပဵၼ် 1:N သွင်ဢၼ်",
+    "တႃႇသိမ်း Password",
+    "တႃႇႁဵတ်းႁႂ်ႈ DB ဝႆးလိူဝ်",
+    "တႃႇ Delete ၶေႃႈမုၼ်း"
+  ]),
+
+  // --- Lesson 11: One-to-One (1:1) ---
+  Quiz(71, "One-to-One (1:1) ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "Table Splitting (ၸႅၵ်ႇ Table တႃႇ Security)",
+    "ၵွင်ႉလုၵ်ႈႁဵၼ်း တင်း ၶိူင်ႈလိၵ်ႈ",
+    "ၼပ်ႉမၢႆ ID ႁင်းတူဝ်",
+    "တႅမ်ႈ SQL Code"
+  ]),
+  Quiz(72, "Vertical Partitioning မၢႆထိုင်သင်?", [
+    "ၵၢၼ်ၸႅၵ်ႇ Table ၸွမ်း Column (1:1 Relationship)",
+    "ၵၢၼ်ထႅမ် Row",
+    "ၵၢၼ် Normalization",
+    "ၵၢၼ် Backup"
+  ]),
+  Quiz(73, "တႃႇမၵ်းမၼ်ႈ 1:1 ... FK လူဝ်ႇမီး Constraint သင်?", [
+    "UNIQUE",
+    "NOT NULL ၵူၺ်း",
+    "DEFAULT",
+    "CHECK"
+  ]),
+  Quiz(74, "ၵူၼ်း 1 ၵေႃႉ တင်း မၢႆၾၢင် (NRC) 1 ဢၼ် ပဵၼ်ပိူင်လႂ်?", [
+    "One-to-One (1:1)",
+    "One-to-Many (1:N)",
+    "Many-to-Many (M:N)",
+    "ဢမ်ႇၵွင်ႉၵၢႆႇၵၼ်"
+  ]),
+  Quiz(75, "ႁဵတ်းသင်လႄႈ ၸႅၵ်ႇ Password ဝႆႉထႅင်ႈ Table ၼိုင်ႈ (1:1)?", [
+    "တႃႇလွင်ႈလွတ်ႈၽေး (Security)",
+    "တႃႇႁႂ်ႈသိမ်းၶေႃႈမုၼ်းလႆႈၼမ်",
+    "တႃႇႁႂ်ႈတႅမ်ႈ Code ငၢႆႈ",
+    "တႃႇႁႂ်ႈ Font ဢွၵ်ႇမၢၼ်ႇ"
+  ]),
+
+  // --- Lesson 12: 1st Normal Form (1NF) ---
+  Quiz(76, "Normalization ပဵၼ်သင်?", [
+    "ၵၢၼ်ၸတ်းပိူင် Table ႁႂ်ႈယွမ်းလွင်ႈသိမ်းၶေႃႈမုၼ်းသွၼ်ႉၵၼ်",
+    "ၵၢၼ် Install MySQL",
+    "ၵၢၼ်တႅမ်ႈ Application",
+    "ၵၢၼ်ပၼ်သုၼ်ႇ Internet"
+  ]),
+  Quiz(77, "Atomicity ၼႂ်း 1NF မၢႆထိုင်သင်?", [
+    "1 Cell (လုၵ်း) လူဝ်ႇမီး 1 Value (ၵႃႈၶၼ်) ၵူၺ်း",
+    "ၵၢၼ်ၵွင်ႉ Table",
+    "ၵၢၼ်ၼပ်ႉ ID ႁင်းတူဝ်",
+    "ၸိုဝ်ႈ Table တေလႆႈယၢဝ်း"
+  ]),
+  Quiz(78, "သင် Column 'Hobbies' သိမ်း 'Reading, Coding' ႁူမ်ႈၵၼ်... ပဵၼ်သင်?", [
+    "ဢမ်ႇပဵၼ် 1NF (Multi-valued attribute)",
+    "ပဵၼ် 1NF ယဝ်ႉ",
+    "ပဵၼ် 2NF",
+    "ပဵၼ် Primary Key"
+  ]),
+  Quiz(79, "Repeating Groups မၢႆထိုင်သင်?", [
+    "ၵၢၼ်ၸႂ်ႉ Column မိူၼ်ၵၼ် မိူၼ်ၼင်ႇ Phone1, Phone2",
+    "ၵၢၼ်ၸႅၵ်ႇ Table",
+    "ၵၢၼ်ၵွင်ႉ Foreign Key",
+    "ၵၢၼ်တႅမ်ႈ SQL Script"
+  ]),
+  Quiz(80, "ပၵ်းၵၢၼ် 1NF ပႃးသင်လၢႆလၢႆ?", [
+    "Atomic Values, Unique Column Names, လႄႈ PK",
+    "Foreign Keys ၵူၺ်း",
+    "Junction Table",
+    "Unicode Character Set"
+  ]),
+
+  // --- Lesson 13: 2NF & 3NF ---
+  Quiz(81, "တႃႇပဵၼ် 2NF လူဝ်ႇမီးသင်ဢွၼ်တၢင်း?", [
+    "တေလႆႈပဵၼ် 1NF ယဝ်ႉတူဝ်ႈ",
+    "တေလႆႈမီး Foreign Key ၼမ်",
+    "တေလႆႈမီး 10 Tables",
+    "တေလႆႈ Install Workbench"
+  ]),
+  Quiz(82, "Partial Dependency ပဵၼ်ပၼ်ႁႃ ၼႂ်းၸၼ်ႉလႂ်?", [
+    "2nd Normal Form (2NF)",
+    "1st Normal Form (1NF)",
+    "3rd Normal Form (3NF)",
+    "BNCF"
+  ]),
+  Quiz(83, "Transitive Dependency မၢႆထိုင်သင်?", [
+    "Column ၵွင်ႉၸူး Column ဢၼ်ဢမ်ႇၸႂ်ႈ PK",
+    "Column ၵွင်ႉၸူး Primary Key တူဝ်လဵဝ်",
+    "ၵၢၼ်ၵွင်ႉ Table ၶၢမ်ႈ Database",
+    "ၵၢၼ် Delete Table"
+  ]),
+  Quiz(84, "3rd Normal Form (3NF) ၵႄႈလိတ်ႈပၼ်ႁႃသင်?", [
+    "Transitive Dependency",
+    "Multi-valued Attributes",
+    "Primary Key Missing",
+    "Unicode Issues"
+  ]),
+  Quiz(85, "Redundancy ပဵၼ်သင်?", [
+    "ၵၢၼ်သိမ်းၶေႃႈမုၼ်းသွၼ်ႉၵၼ် ဢၼ်ဢမ်ႇလူဝ်ႇ",
+    "လွင်ႈဝႆး Database",
+    "လွင်ႈလွတ်ႈၽေး Security",
+    "လၢႆးတႅမ်ႈ Diagram"
+  ]),
+
+  // --- Lesson 14: EER Modeling ---
+  Quiz(86, "EER Diagram ၸႂ်ႉတႃႇသင်?", [
+    "တႃႇတႅမ်ႈႁၢင်ႈပိူင်သၢင်ႈ Database ႁႂ်ႈႁၼ်ၸႅၼ်ႇလႅင်း",
+    "တႃႇ Install Server",
+    "တႃႇတႅမ်ႈ Code Flutter",
+    "တႃႇသိမ်းလိၵ်ႈတႆး"
+  ]),
+  Quiz(87, "Crow's Foot Notation ၼႂ်း Diagram မၢႆထိုင်သင်?", [
+    "လၢႆးတႅမ်ႈသဵၼ်ႈၵွင်ႉ (Many ၸႂ်ႉႁၢင်ႈတိၼ်ၵႃ)",
+    "ၸိုဝ်ႈ Database",
+    "မၢႆ Port",
+    "လၢႆး Install ၶွမ်း"
+  ]),
+  Quiz(88, "ၼႂ်း Workbench ... ႁၢင်ႈ 3 ၶႃ (တိၼ်ၵႃ) ၼႄသင်?", [
+    "Many (N) Relationship",
+    "One (1) Relationship",
+    "Primary Key",
+    "Index"
+  ]),
+  Quiz(89, "Cardinality မၢႆထိုင်သင်?", [
+    "ၼပ်ႉတၢင်းၼမ် ၼႂ်းၵၢၼ်ၵွင်ႉၵၢႆႇ (1:1, 1:N, M:N)",
+    "လွင်ႈဝႆး Query",
+    "မၢႆၼပ်ႉ Table",
+    "ၸိုဝ်ႈ User"
+  ]),
+  Quiz(90, "Identifying Relationship မၢႆထိုင်သင်?", [
+    "သဵၼ်ႈၵွင်ႉ ဢၼ် Child လူဝ်ႇ PK Parent တႃႇမၵ်းထိုင် Identity",
+    "သဵၼ်ႈၵွင်ႉ ธรรมဒါ",
+    "ၵၢၼ် Delete Table",
+    "ၵၢၼ် Backup"
+  ]),
+
+  // --- Lesson 15: Engineering ---
+  Quiz(91, "Forward Engineering ပဵၼ်သင်?", [
+    "ၵၢၼ်လႅၵ်ႈ Diagram ပဵၼ် Database တႄႉတႄႉ",
+    "ၵၢၼ်လႅၵ်ႈ Database ပဵၼ် Diagram",
+    "ၵၢၼ် Install MySQL",
+    "ၵၢၼ် Update Windows"
+  ]),
+  Quiz(92, "Reverse Engineering ပဵၼ်သင်?", [
+    "ၵၢၼ်ဢဝ် Database ဢၼ်မီးယူႇယဝ်ႉ မႃးထွၼ်ပဵၼ် Diagram",
+    "ၵၢၼ်သၢင်ႈ Table မႂ်ႇၸွမ်းႁၢင်ႈ",
+    "ၵၢၼ် Delete Database",
+    "ၵၢၼ် Reset Password"
+  ]),
+  Quiz(93, "SQL Script ပဵၼ်သင်?", [
+    "သဵၼ်ႈမၢႆ Code SQL ဢၼ်ၸႂ်ႉသၢင်ႈ Database",
+    "လိၵ်ႈတႆး Unicode",
+    "ႁၢင်ႈ Diagram",
+    "Software Workbench"
+  ]),
+  Quiz(94, "ၽွၼ်းလီ Forward Engineering ပဵၼ်သင်?", [
+    "သၢင်ႈ Table လႆႈဝႆး လႄႈ ဢမ်ႇၽိတ်း Syntax",
+    "ႁဵတ်းႁႂ်ႈ DB ဝႆးလိူဝ်",
+    "တႃႇသိမ်း Emoji",
+    "တႃႇ Backup ၶေႃႈမုၼ်း"
+  ]),
+  Quiz(95, "Synchronization မၢႆထိုင်သင်?", [
+    "ၵၢၼ်ႁဵတ်းႁႂ်ႈ Diagram လႄႈ DB တႄႉတႄႉ မိူၼ်ၵၼ်",
+    "ၵၢၼ် Delete ၶေႃႈမုၼ်း",
+    "ၵၢၼ်ၵွင်ႉ Internet",
+    "ၵၢၼ်မႄး Spellings"
+  ]),
+
+  // --- Mix of Module 2 Key Concepts ---
+  Quiz(96, "Entity Relationship (ER) မၢႆထိုင်သင်?", [
+    "ၵၢၼ်ဝူၼ်ႉလွင်ႈၵွင်ႉၵၢႆႇၵၼ် ၼႂ်းၵႄႈ Entities",
+    "ၵၢၼ် Install Server",
+    "ၸိုဝ်ႈ User",
+    "မၢႆ Port 3306"
+  ]),
+  Quiz(97, "Non-Identifying Relationship ၼႄႁၢင်ႈသင် ၼႂ်း Workbench?", [
+    "သဵၼ်ႈၶၢတ်ႇ (Dashed Line)",
+    "သဵၼ်ႈၵိုတ်း (Solid Line)",
+    "သဵၼ်ႈလႅင်",
+    "ဢမ်ႇမီးသဵၼ်ႈ"
+  ]),
+  Quiz(98, "Composite Key မၢႆထိုင်သင်?", [
+    "Primary Key ဢၼ်ဢဝ် Column လၢႆဢၼ်မႃးႁူမ်ႈၵၼ်",
+    "ID ဢၼ်ၼပ်ႉႁင်းတူဝ်",
+    "Foreign Key တူဝ်လဵဝ်",
+    "Database Name"
+  ]),
+  Quiz(99, "Data Integrity ပဵၼ်သင်?", [
+    "လွင်ႈမၢၼ်ႇမႅၼ်ႈ လႄႈ မၼ်ႈၵိုမ်း ၶေႃႈမုၼ်း",
+    "လွင်ႈသိမ်းလိၵ်ႈတႆး",
+    "လွင်ႈလွတ်ႈၽေး Network",
+    "လွင်ႈဝႆး Hardware"
+  ]),
+  Quiz(100, "သဵၼ်ႈၵိုတ်း (Solid Line) ၼႂ်း EER မၢႆထိုင်သင်?", [
+    "Identifying Relationship",
+    "Non-Identifying Relationship",
+    "Many-to-Many",
+    "One-to-One"
+  ]),
+
+  // (Adding more to reach 75 quizzes for this module)
+  // ... continued questions for detailed practice ...
+
+  Quiz(101, "Attribute ဢၼ်ဢမ်ႇၸၢင်ႈပဝ်ႇ (Empty) လႆႈ ႁွင်ႉဝႃႈ?", [
+    "NOT NULL",
+    "NULL",
+    "DEFAULT",
+    "UNIQUE"
+  ]),
+  Quiz(102, "ၵႃႈၶၼ်ဢၼ် DB တေထႅမ်ပၼ်ႁင်းတူဝ် သင်ႁဝ်းဢမ်ႇသႂ်ႇ ႁွင်ႉဝႃႈ?", [
+    "DEFAULT",
+    "PRIMARY KEY",
+    "FOREIGN KEY",
+    "CHECK"
+  ]),
+  Quiz(103, "Constraint ဢၼ်ၸႂ်ႉႁၢမ်ႈ ဢမ်ႇႁႂ်ႈၶေႃႈမုၼ်းသမ်ႉၵၼ် ႁွင်ႉဝႃႈ?", [
+    "UNIQUE",
+    "NOT NULL",
+    "PRIMARY KEY",
+    "INDEX"
+  ]),
+  Quiz(104, "ERD ယေႃႈမႃးတီႈသင်?", [
+    "Entity Relationship Diagram",
+    "Electronic Record Data",
+    "Engine Relational Design",
+    "Every Row Database"
+  ]),
+  Quiz(105, "တူဝ်ယင်ႇ 1:N ၼႂ်း App Gallery ပဵၼ်သင်?", [
+    "Category ၼိုင်ႈဢၼ် မီး App လၢႆဢၼ်",
+    "App ၼိုင်ႈဢၼ် မီး User ၵေႃႉလဵဝ်",
+    "Category ၼိုင်ႈဢၼ် မီး 1 App ၵူၺ်း",
+    "User ၵူႈၵေႃႉ ၸႂ်ႉ Password မိူၼ်ၵၼ်"
+  ]),
+  Quiz(106, "သင်လူဝ်ႇသိမ်း Salary ဢၼ်လပ်ႉဝႆႉ ႁဝ်းထုၵ်ႇလီႁဵတ်းႁိုဝ်?", [
+    "ၸႅၵ်ႇဝႆႉထႅင်ႈ Table ၼိုင်ႈ (1:1 Relationship)",
+    "သႂ်ႇဝႆႉၼႂ်း Table Students",
+    "တႅမ်ႈဝႆႉၼႂ်း Excel",
+    "ဢမ်ႇလူဝ်ႇသိမ်း"
+  ]),
+  Quiz(107, "Junction Table လူဝ်ႇမီး Primary Key ႁႃႉ?", [
+    "လူဝ်ႇ (ၵႆႉပဵၼ် Composite PK ဢမ်ႇၼၼ် Auto-ID)",
+    "ဢမ်ႇလူဝ်ႇ",
+    "လူဝ်ႇၵူၺ်း Foreign Key",
+    "လူဝ်ႇၵူၺ်း Name"
+  ]),
+  Quiz(108, " normalization ၸၼ်ႉလႂ် ဢၼ် Developer ၵႆႉႁဵတ်းထိုင်?", [
+    "3NF",
+    "10NF",
+    "1NF ၵူၺ်း",
+    "ဢမ်ႇႁဵတ်းၵေႃႈလႆႈ"
+  ]),
+  Quiz(109, "Forward Engineer မီးဝႆႉၼႂ်း Menu လႂ် ၼႂ်း Workbench?", [
+    "Database Menu",
+    "Edit Menu",
+    "View Menu",
+    "Help Menu"
+  ]),
+  Quiz(110, "ၸၼ်ႉ Normalization ဢၼ်မၵ်းမၼ်ႈ 'No Partial Dependency'?", [
+    "2NF",
+    "1NF",
+    "3NF",
+    "BNCF"
+  ]),
+  Quiz(111, "ၸၼ်ႉ Normalization ဢၼ်မၵ်းမၼ်ႈ 'No Transitive Dependency'?", [
+    "3NF",
+    "2NF",
+    "1NF",
+    "4NF"
+  ]),
+  Quiz(112, "Foreign Key ၸၢင်ႈပဵၼ် NULL လႆႈႁႃႉ?", [
+    "လႆႈ (သင်မၼ်းဢမ်ႇၸႂ်ႈ Identifying Relationship)",
+    "ဢမ်ႇလႆႈ တႃႇသေႇ",
+    "လႆႈၵူၺ်းၼႂ်း Primary Key",
+    "လႆႈၵူၺ်းၼႂ်း Table လူင်"
+  ]),
+  Quiz(113, "EER Modeler ၸွႆႈႁဝ်းႁၼ်သင်?", [
+    "သဵၼ်ႈၵွင်ႉ (Relationships) ၼႂ်းၵႄႈ Tables",
+    "Code Java",
+    "သဵၼ်ႈတၢင်း Internet",
+    "ႁၢင်ႈၵူၼ်းၸႂ်ႉ App"
+  ]),
+  Quiz(114, "မိူဝ်ႈႁဵတ်း Reverse Engineering ... ႁဝ်းလူဝ်ႇသင်?", [
+    "Connection ၸူး Database Server",
+    "ၾၢႆႇ Photoshop",
+    "လိၵ်ႈတႆး Font ၵဝ်ႇ",
+    "Internet ဢၼ်ၽႅဝ်း"
+  ]),
+  Quiz(115, "ၼႂ်း Workbench ... AI မၢႆထိုင်သင်?", [
+    "Auto Increment",
+    "Artificial Intelligence",
+    "Access Index",
+    "Attribute Identifier"
+  ]),
+  Quiz(116, "ၼႂ်း Workbench ... NN မၢႆထိုင်သင်?", [
+    "Not Null",
+    "New Name",
+    "Next Node",
+    "Network Note"
+  ]),
+  Quiz(117, "ၼႂ်း Workbench ... PK မၢႆထိုင်သင်?", [
+    "Primary Key",
+    "Public Key",
+    "Private Key",
+    "Product Key"
+  ]),
+  Quiz(118, "သဵၼ်ႈၵွင်ႉ 1:N ၼႂ်း ERD မီးႁၢင်ႈသင်?", [
+    "ၽၢႆႇၼိုင်ႈပဵၼ် 1 သေ ၽၢႆႇၼိုင်ႈပဵၼ် တိၼ်ၵႃ",
+    "သဵၼ်ႈလႅင်သွင်ထႅဝ်",
+    "ႁၢင်ႈတူဝ်ၼပ်ႉ 100",
+    "ဢမ်ႇမီးသဵၼ်ႈ"
+  ]),
+  Quiz(119, "သင် Database ယုင်ႈယၢင်ႈၼမ်လွၼ်ႉၵႂႃႇ ႁဝ်းထုၵ်ႇလီႁဵတ်းႁိုဝ်?", [
+    "Normalization",
+    "Delete Tables",
+    "Change Password",
+    "Install New MySQL"
+  ]),
+  Quiz(120, "ၵၢၼ်ဢဝ် 'City' ဢွၵ်ႇပဵၼ် Table မႂ်ႇ ၵွပ်ႈမၼ်းၵွင်ႉၸွမ်း 'Zip' ပဵၼ်ၵၢၼ်ႁဵတ်းသင်?", [
+    "3NF Normalization",
+    "1NF Normalization",
+    "Forward Engineering",
+    "Reverse Engineering"
+  ]),
+  Quiz(121, "Composite Key ၸၢင်ႈပႃး Column လၢႆဢၼ်?", [
+    "2 ဢၼ် ၶိုၼ်ႈၼိူဝ်",
+    "1 ဢၼ်ၵူၺ်း",
+    "ဢမ်ႇပႃး Column လႆႈ",
+    "ပႃးလႆႈၵူၺ်း ID"
+  ]),
+  Quiz(122, "Referential Integrity Constraint ႁၢမ်ႈသင်?", [
+    "ႁၢမ်ႈ INSERT FK ဢၼ်ဢမ်ႇမီးၼႂ်း Parent PK",
+    "ႁၢမ်ႈတႅမ်ႈလိၵ်ႈတႆး",
+    "ႁၢမ်ႈပိုတ်ႇ Workbench",
+    "ႁၢမ်ႈ Delete Database"
+  ]),
+  Quiz(123, "EER Diagram ၼႄလွင်ႈ Logical Design ႁႃႉ?", [
+    "ၸႂ်ႉယဝ်ႉ",
+    "ဢမ်ႇၸႂ်ႈ",
+    "ၼႄၵူၺ်း Code",
+    "ၼႄၵူၺ်း User"
+  ]),
+  Quiz(124, "Script ဢၼ်လႆႈမႃးတီႈ Forward Engineering ၸႂ်ႉ SQL ၸုမ်းလႂ်ၼမ်?", [
+    "DDL (CREATE, ALTER...)",
+    "DML (INSERT, UPDATE...)",
+    "DQL (SELECT...)",
+    "DCL (GRANT...)"
+  ]),
+  Quiz(125, "တွၼ်ႈတႃႇသၢင်ႈ DB ႁႂ်ႈပဵၼ် Mobile App လီသုတ်း လူဝ်ႇဝူၼ်ႉသင်?", [
+    "Data Modeling ႁႂ်ႈမၢၼ်ႇမႅၼ်ႈ လႄႈ ယွမ်း Redundancy",
+    "ဝူၼ်ႉလွင်ႈ Password ၵူၺ်း",
+    "ဝူၼ်ႉလွင်ႈ Font ၵူၺ်း",
+    "ဢမ်ႇလူဝ်ႇဝူၼ်ႉသင်"
+  ]),
+];
+List<List<Quiz>> mysqlQuizzes = [mysqlQuizM1, mysqlQuizM2];
