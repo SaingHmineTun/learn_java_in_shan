@@ -154,6 +154,12 @@ final Map<int, Lesson> mysqlLessons = {
   49: Lesson(5, 49),
   50: Lesson(5, 50),
   51: Lesson(5, 51),
+  52: Lesson(6, 52),
+  53: Lesson(6, 53),
+  54: Lesson(6, 54),
+  55: Lesson(6, 55),
+  56: Lesson(6, 56),
+  57: Lesson(6, 57),
 };
 
 List<Quiz> mysqlQuizM1 = [
