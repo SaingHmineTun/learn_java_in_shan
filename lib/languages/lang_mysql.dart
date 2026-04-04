@@ -3396,1094 +3396,2170 @@ List<Quiz> mysqlQuizM5 = [
     "တႃႇၵွင်ႉၶေႃႈမုၼ်းလုၵ်ႉတီႈလၢႆ Table မႃးၼႄႁူမ်ႈၵၼ်",
     "တႃႇယႃႉ Table ပႅတ်ႈ",
     "တႃႇသၢင်ႈ Database မႂ်ႇ",
-    "တႃႇပၼ် Password ၶေႃႈမုၼ်း"
+    "တႃႇပၼ် Password ၶေႃႈမုၼ်း",
   ], "What is the purpose of JOIN in SQL?"),
 
-  Quiz(402, "Primary Key (PK) ၼႂ်းၵၢၼ် Join မိူၼ်တင်းသင်?", [
-    "မၢႆသေႃးတႅတ်ႈတေႃး ၼႂ်း Table တူဝ်မႄႈ",
-    "မၢႆသူင်ႇ ၼႂ်း Table တူဝ်လုၵ်ႈ",
-    "ၸိုဝ်ႈ Table",
-    "ၶေႃႈမုၼ်းဢၼ်ႁၢႆဝႆႉ"
-  ], "What is a Primary Key (PK) in the context of joining?"),
+  Quiz(
+    402,
+    "Primary Key (PK) ၼႂ်းၵၢၼ် Join မိူၼ်တင်းသင်?",
+    [
+      "မၢႆသေႃးတႅတ်ႈတေႃး ၼႂ်း Table တူဝ်မႄႈ",
+      "မၢႆသူင်ႇ ၼႂ်း Table တူဝ်လုၵ်ႈ",
+      "ၸိုဝ်ႈ Table",
+      "ၶေႃႈမုၼ်းဢၼ်ႁၢႆဝႆႉ",
+    ],
+    "What is a Primary Key (PK) in the context of joining?",
+  ),
 
-  Quiz(403, "Foreign Key (FK) ၼႂ်းၵၢၼ် Join မိူၼ်တင်းသင်?", [
-    "မၢႆသူင်ႇ ၼႂ်း Table တူဝ်လုၵ်ႈ ဢၼ်ၵွင်ႉၸူး PK",
-    "မၢႆသေႃးတႅတ်ႈတေႃး",
-    "Password Database",
-    "Column ဢၼ်ပဝ်ႇဝႆႉ"
-  ], "What is a Foreign Key (FK) in the context of joining?"),
+  Quiz(
+    403,
+    "Foreign Key (FK) ၼႂ်းၵၢၼ် Join မိူၼ်တင်းသင်?",
+    [
+      "မၢႆသူင်ႇ ၼႂ်း Table တူဝ်လုၵ်ႈ ဢၼ်ၵွင်ႉၸူး PK",
+      "မၢႆသေႃးတႅတ်ႈတေႃး",
+      "Password Database",
+      "Column ဢၼ်ပဝ်ႇဝႆႉ",
+    ],
+    "What is a Foreign Key (FK) in the context of joining?",
+  ),
 
-  Quiz(404, "Table Alias (AS) ၸွႆႈသင်ၼႂ်းၵၢၼ် Join?", [
-    "ၸွႆႈႁႂ်ႈပၼ်ၸိုဝ်ႈပွတ်းသေ တႅမ်ႈ Query လႆႈငၢႆႈ လႄႈ ဝႆး",
-    "ၸွႆႈႁႂ်ႈ Database ႁဵတ်းၵၢၼ်ဝႆး",
-    "ၸွႆႈယႃႉၶေႃႈမုၼ်းသွၼ်ႉ",
-    "ၸွႆႈပၼ် Permission"
-  ], "How does Table Alias help in a JOIN query?"),
+  Quiz(
+    404,
+    "Table Alias (AS) ၸွႆႈသင်ၼႂ်းၵၢၼ် Join?",
+    [
+      "ၸွႆႈႁႂ်ႈပၼ်ၸိုဝ်ႈပွတ်းသေ တႅမ်ႈ Query လႆႈငၢႆႈ လႄႈ ဝႆး",
+      "ၸွႆႈႁႂ်ႈ Database ႁဵတ်းၵၢၼ်ဝႆး",
+      "ၸွႆႈယႃႉၶေႃႈမုၼ်းသွၼ်ႉ",
+      "ၸွႆႈပၼ် Permission",
+    ],
+    "How does Table Alias help in a JOIN query?",
+  ),
 
-  Quiz(405, "ၶေႃႈၵႂၢမ်း 'ON' ၼႂ်း JOIN ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇမၵ်းမၼ်ႈ Column ဢၼ်တေဢဝ် PK လႄႈ FK မႃးတႅၵ်ႈၵၼ်",
-    "တႃႇလိူၵ်ႈ Table",
-    "တႃႇၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း",
-    "တႃႇတတ်းၶေႃႈမုၼ်း"
-  ], "What is the 'ON' clause used for in a JOIN?"),
+  Quiz(
+    405,
+    "ၶေႃႈၵႂၢမ်း 'ON' ၼႂ်း JOIN ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇမၵ်းမၼ်ႈ Column ဢၼ်တေဢဝ် PK လႄႈ FK မႃးတႅၵ်ႈၵၼ်",
+      "တႃႇလိူၵ်ႈ Table",
+      "တႃႇၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း",
+      "တႃႇတတ်းၶေႃႈမုၼ်း",
+    ],
+    "What is the 'ON' clause used for in a JOIN?",
+  ),
 
-  Quiz(406, "Relationship ပိူင် 1:N မၢႆထိုင်သင်?", [
-    "ၶေႃႈမုၼ်း 1 ထႅဝ် ၼႂ်း Table A ၵွင်ႉၸူးလႆႈ လၢႆထႅဝ် ၼႂ်း Table B",
-    "ၶေႃႈမုၼ်း 1 ထႅဝ် ၵွင်ႉၸူးလႆႈ 1 ထႅဝ်ၵူၺ်း",
-    "Table A တင်း B မိူၼ်ၵၼ်",
-    "ဢမ်ႇမီးသဵၼ်ႈၵွင်ႉၸူးၵၼ်"
-  ], "What does a 1:N relationship mean?"),
+  Quiz(
+    406,
+    "Relationship ပိူင် 1:N မၢႆထိုင်သင်?",
+    [
+      "ၶေႃႈမုၼ်း 1 ထႅဝ် ၼႂ်း Table A ၵွင်ႉၸူးလႆႈ လၢႆထႅဝ် ၼႂ်း Table B",
+      "ၶေႃႈမုၼ်း 1 ထႅဝ် ၵွင်ႉၸူးလႆႈ 1 ထႅဝ်ၵူၺ်း",
+      "Table A တင်း B မိူၼ်ၵၼ်",
+      "ဢမ်ႇမီးသဵၼ်ႈၵွင်ႉၸူးၵၼ်",
+    ],
+    "What does a 1:N relationship mean?",
+  ),
 
   Quiz(407, "Junction Table ၸႂ်ႉမိူဝ်ႈလႂ်?", [
     "မိူဝ်ႈမီး Relationship ပိူင် Many-to-Many (M:N)",
     "မိူဝ်ႈမီး Relationship ပိူင် 1:1",
     "မိူဝ်ႈၶႂ်ႈယႃႉ Table",
-    "မိူဝ်ႈၶႂ်ႈ Backup ၶေႃႈမုၼ်း"
+    "မိူဝ်ႈၶႂ်ႈ Backup ၶေႃႈမုၼ်း",
   ], "When is a Junction Table used?"),
 
-  Quiz(408, "Ambiguous Column Error တေပဵၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈ Table သွင်ဢၼ် မီးၸိုဝ်ႈ Column မိူၼ်ၵၼ် သေႁဝ်းဢမ်ႇလၢတ်ႈၸႅၼ်ႇလႅင်း",
-    "မိူဝ်ႈ Join ၽိတ်း ID",
-    "မိူဝ်ႈဢမ်ႇမီးၶေႃႈမုၼ်း",
-    "မိူဝ်ႈတႅမ်ႈ SELECT * "
-  ], "When does an Ambiguous Column error occur?"),
+  Quiz(
+    408,
+    "Ambiguous Column Error တေပဵၼ်မိူဝ်ႈလႂ်?",
+    [
+      "မိူဝ်ႈ Table သွင်ဢၼ် မီးၸိုဝ်ႈ Column မိူၼ်ၵၼ် သေႁဝ်းဢမ်ႇလၢတ်ႈၸႅၼ်ႇလႅင်း",
+      "မိူဝ်ႈ Join ၽိတ်း ID",
+      "မိူဝ်ႈဢမ်ႇမီးၶေႃႈမုၼ်း",
+      "မိူဝ်ႈတႅမ်ႈ SELECT * ",
+    ],
+    "When does an Ambiguous Column error occur?",
+  ),
 
   Quiz(409, "Parent Table မၢႆထိုင်သင်?", [
     "Table ဢၼ်မီး Primary Key ဢၼ်ပိူၼ်ႈမႃးၵွင်ႉၸူး",
     "Table ဢၼ်မီး Foreign Key",
     "Table ဢၼ်ပဝ်ႇဝႆႉ",
-    "Table ဢၼ်ယႃႉပႅတ်ႈယဝ်ႉ"
+    "Table ဢၼ်ယႃႉပႅတ်ႈယဝ်ႉ",
   ], "What is a Parent Table?"),
 
   Quiz(410, "Child Table မၢႆထိုင်သင်?", [
     "Table ဢၼ်မီး Foreign Key သူင်ႇၵႂႃႇၸူး PK",
     "Table ဢၼ်မီး Primary Key ၵူၺ်း",
     "Database တူဝ်မႄႈ",
-    "Table ၸူဝ်ႈၶၢဝ်း"
+    "Table ၸူဝ်ႈၶၢဝ်း",
   ], "What is a Child Table?"),
 
-  Quiz(411, "SELECT s.name FROM students s; တူဝ် 's' ၼၼ်ႉပဵၼ်သင်?", [
-    "Table Alias",
-    "Column Name",
-    "Database Name",
-    "Function"
-  ], "In 'FROM students s', what is 's'?"),
-
-  Quiz(412, "ႁဝ်းၸၢင်ႈ Join Table ဢၼ်ဢမ်ႇမီး FK ၵွင်ႉၸူး PK လႆႈႁႃႉ?", [
-    "လႆႈ ၵူၺ်းၵႃႈ ၶေႃႈမုၼ်းတေဢွၵ်ႇမႃးသုၼ်ႇလုၼ်ႇ (Cartesian Product)",
-    "ဢမ်ႇလႆႈတႃႇသေႇ",
-    "လႆႈၵူၺ်းၼႂ်း MySQL",
-    "လႆႈၵူၺ်းသင်ပဵၼ် ID"
-  ], "Can you join tables without a PK/FK relationship?"),
-
-  // --- Lesson 41: INNER JOIN (413-424) ---
-  Quiz(413, "INNER JOIN တေၼႄၶေႃႈမုၼ်းပိူင်လႂ်?", [
-    "ၼႄၵူၺ်းထႅဝ်ဢၼ်မီးၵႃႈၶၼ်ၵွင်ႉၵၼ်ၺႃး တင်းသွင်ၽၢႆႇ",
-    "ၼႄၶေႃႈမုၼ်းတင်းမူတ်း",
-    "ၼႄၵူၺ်းထႅဝ်ၽၢႆႇသၢႆႉ",
-    "ၼႄၵူၺ်းထႅဝ်ဢၼ်ဢမ်ႇမိူၼ်ၵၼ်"
-  ], "What records does INNER JOIN return?"),
-
-  Quiz(414,
-      "သင်လုၵ်ႈႁဵၼ်းဢမ်ႇပႆႇမီးႁွင်ႈ (Class ID = NULL) တေဢွၵ်ႇၼႂ်း INNER JOIN ႁႃႉ?",
-      [
-        "ဢမ်ႇဢွၵ်ႇ",
-        "ဢွၵ်ႇ",
-        "ဢွၵ်ႇပဵၼ် NULL",
-        "Error"
-      ], "Will a record with NULL foreign key show up in an INNER JOIN?"),
-
-  Quiz(415, "Default Join ၼႂ်း MySQL ပဵၼ်သင်?", [
-    "INNER JOIN",
-    "LEFT JOIN",
-    "RIGHT JOIN",
-    "FULL JOIN"
-  ], "What is the default JOIN type in MySQL?"),
+  Quiz(
+    411,
+    "SELECT s.name FROM students s; တူဝ် 's' ၼၼ်ႉပဵၼ်သင်?",
+    ["Table Alias", "Column Name", "Database Name", "Function"],
+    "In 'FROM students s', what is 's'?",
+  ),
 
   Quiz(
-      416, "Venn Diagram တွၼ်ႈ 'ၵႄႈၵၢင်' (Intersection) တႅၼ်း Join ပိူင်လႂ်?", [
-    "INNER JOIN",
-    "OUTER JOIN",
-    "SELF JOIN",
-    "CROSS JOIN"
-  ], "The intersection in a Venn Diagram represents which JOIN?"),
+    412,
+    "ႁဝ်းၸၢင်ႈ Join Table ဢၼ်ဢမ်ႇမီး FK ၵွင်ႉၸူး PK လႆႈႁႃႉ?",
+    [
+      "လႆႈ ၵူၺ်းၵႃႈ ၶေႃႈမုၼ်းတေဢွၵ်ႇမႃးသုၼ်ႇလုၼ်ႇ (Cartesian Product)",
+      "ဢမ်ႇလႆႈတႃႇသေႇ",
+      "လႆႈၵူၺ်းၼႂ်း MySQL",
+      "လႆႈၵူၺ်းသင်ပဵၼ် ID",
+    ],
+    "Can you join tables without a PK/FK relationship?",
+  ),
 
-  Quiz(417, "INNER JOIN ၸၢင်ႈၸႂ်ႉ WHERE ၸွမ်းလႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်းၼႂ်း SELECT",
-    "လႆႈၵူၺ်းၼႂ်း ID"
-  ], "Can you use a WHERE clause with an INNER JOIN?"),
+  // --- Lesson 41: INNER JOIN (413-424) ---
+  Quiz(
+    413,
+    "INNER JOIN တေၼႄၶေႃႈမုၼ်းပိူင်လႂ်?",
+    [
+      "ၼႄၵူၺ်းထႅဝ်ဢၼ်မီးၵႃႈၶၼ်ၵွင်ႉၵၼ်ၺႃး တင်းသွင်ၽၢႆႇ",
+      "ၼႄၶေႃႈမုၼ်းတင်းမူတ်း",
+      "ၼႄၵူၺ်းထႅဝ်ၽၢႆႇသၢႆႉ",
+      "ၼႄၵူၺ်းထႅဝ်ဢၼ်ဢမ်ႇမိူၼ်ၵၼ်",
+    ],
+    "What records does INNER JOIN return?",
+  ),
 
-  Quiz(418, "Syntax ဢၼ်မၢၼ်ႇမႅၼ်ႈႁင်း INNER JOIN?", [
-    "SELECT * FROM A INNER JOIN B ON A.id = B.id",
-    "SELECT * FROM A JOIN B WHERE A.id = B.id",
-    "SELECT * FROM A, B",
-    "SELECT * FROM A INNER B"
-  ], "What is the correct syntax for an INNER JOIN?"),
+  Quiz(
+    414,
+    "သင်လုၵ်ႈႁဵၼ်းဢမ်ႇပႆႇမီးႁွင်ႈ (Class ID = NULL) တေဢွၵ်ႇၼႂ်း INNER JOIN ႁႃႉ?",
+    ["ဢမ်ႇဢွၵ်ႇ", "ဢွၵ်ႇ", "ဢွၵ်ႇပဵၼ် NULL", "Error"],
+    "Will a record with NULL foreign key show up in an INNER JOIN?",
+  ),
 
-  Quiz(419, "သင် Join ၵၼ်ယဝ်ႉ ဢမ်ႇမီးထႅဝ်လႂ် Match ၵၼ်... တေပဵၼ်သင်?", [
-    "ဢွၵ်ႇမႃးပဵၼ် Empty Result (ဢမ်ႇၼႄသင်)",
-    "Error",
-    "ၼႄ NULL တင်းမူတ်း",
-    "ယႃႉ Table"
-  ], "What happens if no records match in an INNER JOIN?"),
+  Quiz(
+    415,
+    "Default Join ၼႂ်း MySQL ပဵၼ်သင်?",
+    ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+    "What is the default JOIN type in MySQL?",
+  ),
 
-  Quiz(420, "INNER JOIN တင်း JOIN မိူၼ်ၵၼ်ႁႃႉ?", [
-    "မိူၼ်ၵၼ် (Synonyms)",
-    "ဢမ်ႇမိူၼ်",
-    "JOIN ဝႆးလိူဝ်",
-    "INNER JOIN ၵျလိူဝ်"
-  ], "Are INNER JOIN and JOIN the same in MySQL?"),
+  Quiz(
+    416,
+    "Venn Diagram တွၼ်ႈ 'ၵႄႈၵၢင်' (Intersection) တႅၼ်း Join ပိူင်လႂ်?",
+    ["INNER JOIN", "OUTER JOIN", "SELF JOIN", "CROSS JOIN"],
+    "The intersection in a Venn Diagram represents which JOIN?",
+  ),
 
-  Quiz(421, "ႁဵတ်းသင်လႄႈ INNER JOIN ပဵၼ်ဢၼ်ပိူၼ်ႈၸႂ်ႉၼမ်လိူဝ်ပိူၼ်ႈ?", [
-    "ၵွပ်ႈမၼ်းၼႄၵူၺ်းၶေႃႈမုၼ်းဢၼ်မၢၼ်ႇမႅၼ်ႈ (Accuracy)",
-    "ၵွပ်ႈမၼ်းတႅမ်ႈငၢႆႈသုတ်း",
-    "ၵွပ်ႈမၼ်းပၼ် NULL",
-    "ၵွပ်ႈမၼ်းယႃႉ Table"
-  ], "Why is INNER JOIN the most commonly used join?"),
+  Quiz(
+    417,
+    "INNER JOIN ၸၢင်ႈၸႂ်ႉ WHERE ၸွမ်းလႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း SELECT", "လႆႈၵူၺ်းၼႂ်း ID"],
+    "Can you use a WHERE clause with an INNER JOIN?",
+  ),
+
+  Quiz(
+    418,
+    "Syntax ဢၼ်မၢၼ်ႇမႅၼ်ႈႁင်း INNER JOIN?",
+    [
+      "SELECT * FROM A INNER JOIN B ON A.id = B.id",
+      "SELECT * FROM A JOIN B WHERE A.id = B.id",
+      "SELECT * FROM A, B",
+      "SELECT * FROM A INNER B",
+    ],
+    "What is the correct syntax for an INNER JOIN?",
+  ),
+
+  Quiz(
+    419,
+    "သင် Join ၵၼ်ယဝ်ႉ ဢမ်ႇမီးထႅဝ်လႂ် Match ၵၼ်... တေပဵၼ်သင်?",
+    [
+      "ဢွၵ်ႇမႃးပဵၼ် Empty Result (ဢမ်ႇၼႄသင်)",
+      "Error",
+      "ၼႄ NULL တင်းမူတ်း",
+      "ယႃႉ Table",
+    ],
+    "What happens if no records match in an INNER JOIN?",
+  ),
+
+  Quiz(
+    420,
+    "INNER JOIN တင်း JOIN မိူၼ်ၵၼ်ႁႃႉ?",
+    ["မိူၼ်ၵၼ် (Synonyms)", "ဢမ်ႇမိူၼ်", "JOIN ဝႆးလိူဝ်", "INNER JOIN ၵျလိူဝ်"],
+    "Are INNER JOIN and JOIN the same in MySQL?",
+  ),
+
+  Quiz(
+    421,
+    "ႁဵတ်းသင်လႄႈ INNER JOIN ပဵၼ်ဢၼ်ပိူၼ်ႈၸႂ်ႉၼမ်လိူဝ်ပိူၼ်ႈ?",
+    [
+      "ၵွပ်ႈမၼ်းၼႄၵူၺ်းၶေႃႈမုၼ်းဢၼ်မၢၼ်ႇမႅၼ်ႈ (Accuracy)",
+      "ၵွပ်ႈမၼ်းတႅမ်ႈငၢႆႈသုတ်း",
+      "ၵွပ်ႈမၼ်းပၼ် NULL",
+      "ၵွပ်ႈမၼ်းယႃႉ Table",
+    ],
+    "Why is INNER JOIN the most commonly used join?",
+  ),
 
   Quiz(422, "Equijoin မၢႆထိုင်သင်?", [
     "JOIN ဢၼ်ၸႂ်ႉၶိူင်ႈမၢႆ '=' ၼႂ်း ON",
     "JOIN ဢၼ်ဢမ်ႇၸႂ်ႉ ID",
     "JOIN ဢၼ်မီးလၢႆ Table",
-    "JOIN ဢၼ်ယႃႉ Row"
+    "JOIN ဢၼ်ယႃႉ Row",
   ], "What is an Equijoin?"),
 
-  Quiz(423, "INNER JOIN ၸၢင်ႈ Join လၢႆလၢႆ Column ႁူမ်ႈၵၼ်လႆႈႁႃႉ?", [
-    "လႆႈ (ၸႂ်ႉ AND ၼႂ်း ON)",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း 1 Column",
-    "လႆႈၵူၺ်းၼႂ်း WHERE"
-  ], "Can INNER JOIN match on multiple columns?"),
+  Quiz(
+    423,
+    "INNER JOIN ၸၢင်ႈ Join လၢႆလၢႆ Column ႁူမ်ႈၵၼ်လႆႈႁႃႉ?",
+    [
+      "လႆႈ (ၸႂ်ႉ AND ၼႂ်း ON)",
+      "ဢမ်ႇလႆႈ",
+      "လႆႈၵူၺ်း 1 Column",
+      "လႆႈၵူၺ်းၼႂ်း WHERE",
+    ],
+    "Can INNER JOIN match on multiple columns?",
+  ),
 
-  Quiz(424, "သင်ၼႂ်း ON မီး NULL = NULL... မၼ်းတေ Match ႁႃႉ?", [
-    "ဢမ်ႇ Match (ၵွပ်ႈ NULL ဢမ်ႇတႅၵ်ႈၵၼ်လႆႈ)",
-    "Match",
-    "Error",
-    "ၼႄ NULL"
-  ], "Does NULL = NULL result in a match in INNER JOIN?"),
+  Quiz(
+    424,
+    "သင်ၼႂ်း ON မီး NULL = NULL... မၼ်းတေ Match ႁႃႉ?",
+    ["ဢမ်ႇ Match (ၵွပ်ႈ NULL ဢမ်ႇတႅၵ်ႈၵၼ်လႆႈ)", "Match", "Error", "ၼႄ NULL"],
+    "Does NULL = NULL result in a match in INNER JOIN?",
+  ),
 
   // --- Lesson 42: LEFT JOIN (425-436) ---
   Quiz(425, "LEFT JOIN တေၼႄၶေႃႈမုၼ်းပိူင်လႂ်?", [
     "ၼႄၵူႈထႅဝ်တီႈ Table ၽၢႆႇသၢႆႉ လႄႈ ဢၼ် Match ၵၼ်တီႈၽၢႆႇၶႂႃ",
     "ၼႄၵူၺ်း ဢၼ် Match ၵၼ်",
     "ၼႄၵူႈထႅဝ်တီႈ Table ၽၢႆႇၶႂႃ",
-    "ၼႄၵူၺ်း ဢၼ်ပဵၼ် NULL"
+    "ၼႄၵူၺ်း ဢၼ်ပဵၼ် NULL",
   ], "What records does LEFT JOIN return?"),
 
   Quiz(
-      426, "သင်ထႅဝ်တီႈၽၢႆႇသၢႆႉ ဢမ်ႇမီးတူဝ် Match တီႈၽၢႆႇၶႂႃ... ၽၢႆႇၶႂႃတေၼႄသင်?",
-      [
-        "NULL",
-        "0",
-        "Error",
-        "Empty String"
-      ],
-      "What is displayed for non-matching records on the right side of a LEFT JOIN?"),
+    426,
+    "သင်ထႅဝ်တီႈၽၢႆႇသၢႆႉ ဢမ်ႇမီးတူဝ် Match တီႈၽၢႆႇၶႂႃ... ၽၢႆႇၶႂႃတေၼႄသင်?",
+    ["NULL", "0", "Error", "Empty String"],
+    "What is displayed for non-matching records on the right side of a LEFT JOIN?",
+  ),
 
-  Quiz(427, "LEFT OUTER JOIN တင်း LEFT JOIN မိူၼ်ၵၼ်ႁႃႉ?", [
-    "မိူၼ်ၵၼ်",
-    "ဢမ်ႇမိူၼ်",
-    "OUTER ဝႆးလိူဝ်",
-    "LEFT ဝႆးလိူဝ်"
-  ], "Are LEFT OUTER JOIN and LEFT JOIN the same?"),
+  Quiz(
+    427,
+    "LEFT OUTER JOIN တင်း LEFT JOIN မိူၼ်ၵၼ်ႁႃႉ?",
+    ["မိူၼ်ၵၼ်", "ဢမ်ႇမိူၼ်", "OUTER ဝႆးလိူဝ်", "LEFT ဝႆးလိူဝ်"],
+    "Are LEFT OUTER JOIN and LEFT JOIN the same?",
+  ),
 
   Quiz(428, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ LEFT JOIN?", [
     "တွၼ်ႈတႃႇဝႆႉ (Preserve) ၶေႃႈမုၼ်းဢွၼ်တၢင်း ဢမ်ႇႁႂ်ႈႁၢႆပႅတ်ႈ",
     "တွၼ်ႈတႃႇယႃႉ Row",
     "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
-    "တွၼ်ႈတႃႇၼပ်ႉ SUM"
+    "တွၼ်ႈတႃႇၼပ်ႉ SUM",
   ], "Why would you use a LEFT JOIN?"),
 
-  Quiz(429, "LEFT JOIN ၸွႆႈႁႃ 'Gaps' (ၶေႃႈမုၼ်းဢၼ်ႁၢႆ) လႆႈၸိူင်ႉႁိုဝ်?", [
-    "ၸႂ်ႉ WHERE ... IS NULL ၸွမ်းၽၢႆႇၶႂႃ",
-    "ၸႂ်ႉ WHERE ... = 0",
-    "ၸႂ်ႉ ORDER BY",
-    "ၸႂ်ႉ LIMIT"
-  ], "How can LEFT JOIN find gaps in data?"),
+  Quiz(
+    429,
+    "LEFT JOIN ၸွႆႈႁႃ 'Gaps' (ၶေႃႈမုၼ်းဢၼ်ႁၢႆ) လႆႈၸိူင်ႉႁိုဝ်?",
+    [
+      "ၸႂ်ႉ WHERE ... IS NULL ၸွမ်းၽၢႆႇၶႂႃ",
+      "ၸႂ်ႉ WHERE ... = 0",
+      "ၸႂ်ႉ ORDER BY",
+      "ၸႂ်ႉ LIMIT",
+    ],
+    "How can LEFT JOIN find gaps in data?",
+  ),
 
-  Quiz(430, "Table ဢၼ်ယူႇၽၢႆႇလင်ၶေႃႈၵႂၢမ်း FROM ပဵၼ် Table ၽၢႆႇလႂ်?", [
-    "Left Table",
-    "Right Table",
-    "Center Table",
-    "Secondary Table"
-  ], "In 'FROM A LEFT JOIN B', which table is the Left table?"),
+  Quiz(
+    430,
+    "Table ဢၼ်ယူႇၽၢႆႇလင်ၶေႃႈၵႂၢမ်း FROM ပဵၼ် Table ၽၢႆႇလႂ်?",
+    ["Left Table", "Right Table", "Center Table", "Secondary Table"],
+    "In 'FROM A LEFT JOIN B', which table is the Left table?",
+  ),
 
-  Quiz(431, "Table ဢၼ်ယူႇၽၢႆႇလင်ၶေႃႈၵႂၢမ်း LEFT JOIN ပဵၼ် Table ၽၢႆႇလႂ်?", [
-    "Right Table",
-    "Left Table",
-    "Primary Table",
-    "Main Table"
-  ], "In 'FROM A LEFT JOIN B', which table is the Right table?"),
+  Quiz(
+    431,
+    "Table ဢၼ်ယူႇၽၢႆႇလင်ၶေႃႈၵႂၢမ်း LEFT JOIN ပဵၼ် Table ၽၢႆႇလႂ်?",
+    ["Right Table", "Left Table", "Primary Table", "Main Table"],
+    "In 'FROM A LEFT JOIN B', which table is the Right table?",
+  ),
 
-  Quiz(432, "သင်ပဵၼ် LEFT JOIN... တၢင်းၼမ်ထႅဝ် တေယွမ်းလိူဝ် INNER JOIN လႆႈႁႃႉ?",
-      [
-        "ဢမ်ႇလႆႈ (တေၼမ်လိူဝ် ဢမ်ႇၼၼ် တူဝ်ႇၵၼ်တႃႇသေႇ)",
-        "လႆႈ",
-        "တေတူဝ်ႇၵၼ်တႃႇသေႇ",
-        "Error"
-      ],
-      "Can a LEFT JOIN return fewer rows than an INNER JOIN on the same tables?"),
+  Quiz(
+    432,
+    "သင်ပဵၼ် LEFT JOIN... တၢင်းၼမ်ထႅဝ် တေယွမ်းလိူဝ် INNER JOIN လႆႈႁႃႉ?",
+    [
+      "ဢမ်ႇလႆႈ (တေၼမ်လိူဝ် ဢမ်ႇၼၼ် တူဝ်ႇၵၼ်တႃႇသေႇ)",
+      "လႆႈ",
+      "တေတူဝ်ႇၵၼ်တႃႇသေႇ",
+      "Error",
+    ],
+    "Can a LEFT JOIN return fewer rows than an INNER JOIN on the same tables?",
+  ),
 
-  Quiz(433, "ၵၢၼ်ဝႆႉလႅၼ်ႇ Table (Order) ၼႂ်း LEFT JOIN လွင်ႈယႂ်ႇႁႃႉ?", [
-    "ယႂ်ႇတႄႉတႄႉ (ပိၼ်ႇၽၢႆႇၵၼ် ၽွၼ်းလႆႈလႅၵ်ႈ)",
-    "ဢမ်ႇယႂ်ႇ",
-    "ယႂ်ႇၵူၺ်းၼႂ်း ID",
-    "ယႂ်ႇၵူၺ်းၼႂ်း SELECT"
-  ], "Does the table order matter in a LEFT JOIN?"),
+  Quiz(
+    433,
+    "ၵၢၼ်ဝႆႉလႅၼ်ႇ Table (Order) ၼႂ်း LEFT JOIN လွင်ႈယႂ်ႇႁႃႉ?",
+    [
+      "ယႂ်ႇတႄႉတႄႉ (ပိၼ်ႇၽၢႆႇၵၼ် ၽွၼ်းလႆႈလႅၵ်ႈ)",
+      "ဢမ်ႇယႂ်ႇ",
+      "ယႂ်ႇၵူၺ်းၼႂ်း ID",
+      "ယႂ်ႇၵူၺ်းၼႂ်း SELECT",
+    ],
+    "Does the table order matter in a LEFT JOIN?",
+  ),
 
-  Quiz(434, "LEFT JOIN ၸၢင်ႈ Join ၸူး Table လဵဝ်ၵၼ် လၢႆလၢႆပွၵ်ႈလႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း 2 ပွၵ်ႈ",
-    "Error"
-  ], "Can you use multiple LEFT JOINs in one query?"),
+  Quiz(
+    434,
+    "LEFT JOIN ၸၢင်ႈ Join ၸူး Table လဵဝ်ၵၼ် လၢႆလၢႆပွၵ်ႈလႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 2 ပွၵ်ႈ", "Error"],
+    "Can you use multiple LEFT JOINs in one query?",
+  ),
 
-  Quiz(435, "Result set ႁင်း LEFT JOIN တေပႃး NULL မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈၶေႃႈမုၼ်းၽၢႆႇသၢႆႉ ဢမ်ႇမီးတူဝ် Match တီႈၽၢႆႇၶႂႃ",
-    "မိူဝ်ႈမီး Error",
-    "မိူဝ်ႈ Table ပဝ်ႇ",
-    "မိူဝ်ႈ SELECT NULL"
-  ], "When does a LEFT JOIN result contain NULLs?"),
+  Quiz(
+    435,
+    "Result set ႁင်း LEFT JOIN တေပႃး NULL မိူဝ်ႈလႂ်?",
+    [
+      "မိူဝ်ႈၶေႃႈမုၼ်းၽၢႆႇသၢႆႉ ဢမ်ႇမီးတူဝ် Match တီႈၽၢႆႇၶႂႃ",
+      "မိူဝ်ႈမီး Error",
+      "မိူဝ်ႈ Table ပဝ်ႇ",
+      "မိူဝ်ႈ SELECT NULL",
+    ],
+    "When does a LEFT JOIN result contain NULLs?",
+  ),
 
-  Quiz(436, "LEFT JOIN ၸၢင်ႈၸႂ်ႉတွၼ်ႈတႃႇႁဵတ်း Full List ၶႅၵ်ႇႁႃႉ?", [
-    "ၸႂ်ႈ (တွၼ်ႈတႃႇၼႄၸိုဝ်ႈၶႅၵ်ႇၵူႈၵေႃႉ)",
-    "ဢမ်ႇၸႂ်ႈ",
-    "လႆႈၵူၺ်းၼႂ်း Report",
-    "Error"
-  ], "Can LEFT JOIN be used to create a full guest list?"),
+  Quiz(
+    436,
+    "LEFT JOIN ၸၢင်ႈၸႂ်ႉတွၼ်ႈတႃႇႁဵတ်း Full List ၶႅၵ်ႇႁႃႉ?",
+    [
+      "ၸႂ်ႈ (တွၼ်ႈတႃႇၼႄၸိုဝ်ႈၶႅၵ်ႇၵူႈၵေႃႉ)",
+      "ဢမ်ႇၸႂ်ႈ",
+      "လႆႈၵူၺ်းၼႂ်း Report",
+      "Error",
+    ],
+    "Can LEFT JOIN be used to create a full guest list?",
+  ),
 
   // --- Lesson 43: RIGHT JOIN & FULL JOIN (437-448) ---
-  Quiz(437, "RIGHT JOIN တေၼႄၶေႃႈမုၼ်းပိူင်လႂ်?", [
-    "ၼႄၵူႈထႅဝ်တီႈ Table ၽၢႆႇၶႂႃ လႄႈ ဢၼ် Match ၵၼ်တီႈၽၢႆႇသၢႆႉ",
-    "ၼႄၵူႈထႅဝ်တီႈ Table ၽၢႆႇသၢႆႉ",
-    "ၼႄၵူၺ်း ဢၼ် Match",
-    "ၼႄ NULL ၵူၺ်း"
-  ], "What records does RIGHT JOIN return?"),
+  Quiz(
+    437,
+    "RIGHT JOIN တေၼႄၶေႃႈမုၼ်းပိူင်လႂ်?",
+    [
+      "ၼႄၵူႈထႅဝ်တီႈ Table ၽၢႆႇၶႂႃ လႄႈ ဢၼ် Match ၵၼ်တီႈၽၢႆႇသၢႆႉ",
+      "ၼႄၵူႈထႅဝ်တီႈ Table ၽၢႆႇသၢႆႉ",
+      "ၼႄၵူၺ်း ဢၼ် Match",
+      "ၼႄ NULL ၵူၺ်း",
+    ],
+    "What records does RIGHT JOIN return?",
+  ),
 
-  Quiz(438, "MySQL မီး Command 'FULL OUTER JOIN' တႅတ်ႈတေႃးႁႃႉ?", [
-    "ဢမ်ႇမီး (လူဝ်ႇၸႂ်ႉ UNION တႃႇႁဵတ်းတႅၼ်း)",
-    "မီး",
-    "မီးၵူၺ်းၼႂ်း Version မႂ်ႇ",
-    "မီးၵူၺ်းၼႂ်း Workbench"
-  ], "Does MySQL support FULL OUTER JOIN natively?"),
+  Quiz(
+    438,
+    "MySQL မီး Command 'FULL OUTER JOIN' တႅတ်ႈတေႃးႁႃႉ?",
+    [
+      "ဢမ်ႇမီး (လူဝ်ႇၸႂ်ႉ UNION တႃႇႁဵတ်းတႅၼ်း)",
+      "မီး",
+      "မီးၵူၺ်းၼႂ်း Version မႂ်ႇ",
+      "မီးၵူၺ်းၼႂ်း Workbench",
+    ],
+    "Does MySQL support FULL OUTER JOIN natively?",
+  ),
 
-  Quiz(439, "ႁဝ်းၸၢင်ႈလႅၵ်ႈ RIGHT JOIN ႁႂ်ႈပဵၼ် LEFT JOIN လႆႈၸိူင်ႉႁိုဝ်?", [
-    "ပိၼ်ႇတီႈယူႇ Table ဢွၼ်တၢင်း-ၽၢႆႇလင်",
-    "လႅၵ်ႈ AS",
-    "လႅၵ်ႈ ON",
-    "ဢမ်ႇလႆႈ"
-  ], "How can you convert a RIGHT JOIN to a LEFT JOIN?"),
+  Quiz(
+    439,
+    "ႁဝ်းၸၢင်ႈလႅၵ်ႈ RIGHT JOIN ႁႂ်ႈပဵၼ် LEFT JOIN လႆႈၸိူင်ႉႁိုဝ်?",
+    ["ပိၼ်ႇတီႈယူႇ Table ဢွၼ်တၢင်း-ၽၢႆႇလင်", "လႅၵ်ႈ AS", "လႅၵ်ႈ ON", "ဢမ်ႇလႆႈ"],
+    "How can you convert a RIGHT JOIN to a LEFT JOIN?",
+  ),
 
   Quiz(440, "UNION ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇႁူမ်ႈၽွၼ်းလႆႈ (Result sets) သွင်ဢၼ်ၶဝ်ႈၵၼ်",
     "တႃႇယႃႉ Row",
     "တႃႇ Join Table",
-    "တႃႇၼပ်ႉ SUM"
+    "တႃႇၼပ်ႉ SUM",
   ], "What is UNION used for?"),
 
-  Quiz(441, "FULL JOIN တေၼႄၶေႃႈမုၼ်းပိူင်လႂ်?", [
-    "ၼႄၵူႈထႅဝ် လုၵ်ႉတင်းသွင် Table (Match လႄႈ Unmatch)",
-    "ၼႄၵူၺ်း ဢၼ် Match",
-    "ၼႄၵူၺ်း ဢၼ်ပဵၼ် NULL",
-    "Error"
-  ], "What records does a FULL JOIN return?"),
+  Quiz(
+    441,
+    "FULL JOIN တေၼႄၶေႃႈမုၼ်းပိူင်လႂ်?",
+    [
+      "ၼႄၵူႈထႅဝ် လုၵ်ႉတင်းသွင် Table (Match လႄႈ Unmatch)",
+      "ၼႄၵူၺ်း ဢၼ် Match",
+      "ၼႄၵူၺ်း ဢၼ်ပဵၼ် NULL",
+      "Error",
+    ],
+    "What records does a FULL JOIN return?",
+  ),
 
-  Quiz(442,
-      "ႁဵတ်းသင်လႄႈ Developer ၵမ်ႈၼမ် လိူၵ်ႈၸႂ်ႉ LEFT JOIN လိူဝ် RIGHT JOIN?", [
-        "ၵွပ်ႈမၼ်းလူငၢႆႈ (Readability) လုၵ်ႉသၢႆႉၵႂႃႇၶႂႃ",
-        "ၵွပ်ႈ LEFT JOIN ဝႆးလိူဝ်",
-        "ၵွပ်ႈ RIGHT JOIN မီး Error ၼမ်",
-        "ၵွပ်ႈ MySQL ဢမ်ႇပၼ်ၸႂ်ႉ"
-      ], "Why do developers prefer LEFT JOIN over RIGHT JOIN?"),
+  Quiz(
+    442,
+    "ႁဵတ်းသင်လႄႈ Developer ၵမ်ႈၼမ် လိူၵ်ႈၸႂ်ႉ LEFT JOIN လိူဝ် RIGHT JOIN?",
+    [
+      "ၵွပ်ႈမၼ်းလူငၢႆႈ (Readability) လုၵ်ႉသၢႆႉၵႂႃႇၶႂႃ",
+      "ၵွပ်ႈ LEFT JOIN ဝႆးလိူဝ်",
+      "ၵွပ်ႈ RIGHT JOIN မီး Error ၼမ်",
+      "ၵွပ်ႈ MySQL ဢမ်ႇပၼ်ၸႂ်ႉ",
+    ],
+    "Why do developers prefer LEFT JOIN over RIGHT JOIN?",
+  ),
 
-  Quiz(443,
-      "သင် Table ၽၢႆႇၶႂႃမီး 10 ထႅဝ် ဢၼ်ဢမ်ႇ Match... RIGHT JOIN တေၼႄၵႃႈလၢႆထႅဝ်?",
-      [
-        "ၼႄတင်း 10 ထႅဝ် (သေၽၢႆႇသၢႆႉပဵၼ် NULL)",
-        "ဢမ်ႇၼႄ",
-        "ၼႄၵူၺ်း 1 ထႅဝ်",
-        "Error"
-      ],
-      "How many rows will a RIGHT JOIN show for 10 non-matching right-side records?"),
+  Quiz(
+    443,
+    "သင် Table ၽၢႆႇၶႂႃမီး 10 ထႅဝ် ဢၼ်ဢမ်ႇ Match... RIGHT JOIN တေၼႄၵႃႈလၢႆထႅဝ်?",
+    [
+      "ၼႄတင်း 10 ထႅဝ် (သေၽၢႆႇသၢႆႉပဵၼ် NULL)",
+      "ဢမ်ႇၼႄ",
+      "ၼႄၵူၺ်း 1 ထႅဝ်",
+      "Error",
+    ],
+    "How many rows will a RIGHT JOIN show for 10 non-matching right-side records?",
+  ),
 
-  Quiz(444, "FULL JOIN ၸွႆႈသင်ၼႂ်းၵၢၼ်ၵူတ်ႇထတ်း (Auditing)?", [
-    "ၸွႆႈႁႃၶေႃႈမုၼ်းဢၼ်ၵိုတ်း (Orphan records) တင်းသွင်ၽၢႆႇ",
-    "ၸွႆႈယႃႉ Table",
-    "ၸွႆႈ Backup",
-    "ၸွႆႈပၼ် Password"
-  ], "How does FULL JOIN help in auditing?"),
+  Quiz(
+    444,
+    "FULL JOIN ၸွႆႈသင်ၼႂ်းၵၢၼ်ၵူတ်ႇထတ်း (Auditing)?",
+    [
+      "ၸွႆႈႁႃၶေႃႈမုၼ်းဢၼ်ၵိုတ်း (Orphan records) တင်းသွင်ၽၢႆႇ",
+      "ၸွႆႈယႃႉ Table",
+      "ၸွႆႈ Backup",
+      "ၸွႆႈပၼ် Password",
+    ],
+    "How does FULL JOIN help in auditing?",
+  ),
 
-  Quiz(445, "UNION တင်း UNION ALL ပႅၵ်ႇၵၼ်တီႈလႂ်?", [
-    "UNION ယႃႉထႅဝ်ဢၼ်မိူၼ်ၵၼ်၊ UNION ALL ဢဝ်တင်းမူတ်း",
-    "UNION ALL ဝႆးလိူဝ်",
-    "UNION ဢဝ်တင်းမူတ်း",
-    "ဢမ်ႇပႅၵ်ႇၵၼ်"
-  ], "Difference between UNION and UNION ALL?"),
+  Quiz(
+    445,
+    "UNION တင်း UNION ALL ပႅၵ်ႇၵၼ်တီႈလႂ်?",
+    [
+      "UNION ယႃႉထႅဝ်ဢၼ်မိူၼ်ၵၼ်၊ UNION ALL ဢဝ်တင်းမူတ်း",
+      "UNION ALL ဝႆးလိူဝ်",
+      "UNION ဢဝ်တင်းမူတ်း",
+      "ဢမ်ႇပႅၵ်ႇၵၼ်",
+    ],
+    "Difference between UNION and UNION ALL?",
+  ),
 
-  Quiz(446, "Syntax တႃႇႁဵတ်း FULL JOIN ၼႂ်း MySQL?", [
-    "LEFT JOIN ... UNION ... RIGHT JOIN",
-    "FULL JOIN ... ON",
-    "SELECT * FROM A, B",
-    "JOIN ALL"
-  ], "What is the syntax for simulating FULL JOIN in MySQL?"),
+  Quiz(
+    446,
+    "Syntax တႃႇႁဵတ်း FULL JOIN ၼႂ်း MySQL?",
+    [
+      "LEFT JOIN ... UNION ... RIGHT JOIN",
+      "FULL JOIN ... ON",
+      "SELECT * FROM A, B",
+      "JOIN ALL",
+    ],
+    "What is the syntax for simulating FULL JOIN in MySQL?",
+  ),
 
-  Quiz(447, "UNION ALL ဝႆးလိူဝ် UNION ၵွပ်ႈသင်?", [
-    "ၵွပ်ႈမၼ်းဢမ်ႇလူဝ်ႇလႅၼ်ႇသွၵ်ႈႁႃ ထႅဝ်ဢၼ်မိူၼ်ၵၼ် (Distinct check)",
-    "ၵွပ်ႈမၼ်းပဵၼ် Command မႂ်ႇ",
-    "ၵွပ်ႈမၼ်းၸႂ်ႉ Memory ဢေႇ",
-    "Error"
-  ], "Why is UNION ALL faster than UNION?"),
+  Quiz(
+    447,
+    "UNION ALL ဝႆးလိူဝ် UNION ၵွပ်ႈသင်?",
+    [
+      "ၵွပ်ႈမၼ်းဢမ်ႇလူဝ်ႇလႅၼ်ႇသွၵ်ႈႁႃ ထႅဝ်ဢၼ်မိူၼ်ၵၼ် (Distinct check)",
+      "ၵွပ်ႈမၼ်းပဵၼ် Command မႂ်ႇ",
+      "ၵွပ်ႈမၼ်းၸႂ်ႉ Memory ဢေႇ",
+      "Error",
+    ],
+    "Why is UNION ALL faster than UNION?",
+  ),
 
-  Quiz(448, "တွၼ်ႈတႃႇၸႂ်ႉ UNION... တၢင်းၼမ် Column တေလႆႈပဵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "တေလႆႈတူဝ်ႇၵၼ် (Same number of columns)",
-    "ဢမ်ႇလူဝ်ႇတူဝ်ႇၵၼ်",
-    "ၽၢႆႇၼိုင်ႈ ၼမ်လိူဝ်လႆႈ",
-    "Error"
-  ], "What requirement is there for columns when using UNION?"),
+  Quiz(
+    448,
+    "တွၼ်ႈတႃႇၸႂ်ႉ UNION... တၢင်းၼမ် Column တေလႆႈပဵၼ်ၸိူင်ႉႁိုဝ်?",
+    [
+      "တေလႆႈတူဝ်ႇၵၼ် (Same number of columns)",
+      "ဢမ်ႇလူဝ်ႇတူဝ်ႇၵၼ်",
+      "ၽၢႆႇၼိုင်ႈ ၼမ်လိူဝ်လႆႈ",
+      "Error",
+    ],
+    "What requirement is there for columns when using UNION?",
+  ),
 
   // --- Lesson 44: SELF JOIN (449-460) ---
   Quiz(449, "SELF JOIN မၢႆထိုင်သင်?", [
     "ၵၢၼ် Join Table ဢၼ်လဵဝ်ၵၼ် သွင်ပွၵ်ႈ",
     "ၵၢၼ် Join တူဝ်ႇၵၼ်",
     "ၵၢၼ်ယႃႉ Table",
-    "ၵၢၼ် Join 3 Tables"
+    "ၵၢၼ် Join 3 Tables",
   ], "What is a SELF JOIN?"),
 
-  Quiz(450, "ၼႂ်း SELF JOIN... တွၼ်ႈဢၼ်လွင်ႈယႂ်ႇသုတ်းပဵၼ်သင်?", [
-    "ၵၢၼ်ပၼ်ၸိုဝ်ႈ Alias ႁႂ်ႈပႅၵ်ႇၵၼ်",
-    "ၵၢၼ်ပၼ် Password",
-    "ၵၢၼ်သၢင်ႈ Table မႂ်ႇ",
-    "ၵၢၼ်ယႃႉ Primary Key"
-  ], "What is the most important part of a SELF JOIN?"),
+  Quiz(
+    450,
+    "ၼႂ်း SELF JOIN... တွၼ်ႈဢၼ်လွင်ႈယႂ်ႇသုတ်းပဵၼ်သင်?",
+    [
+      "ၵၢၼ်ပၼ်ၸိုဝ်ႈ Alias ႁႂ်ႈပႅၵ်ႇၵၼ်",
+      "ၵၢၼ်ပၼ် Password",
+      "ၵၢၼ်သၢင်ႈ Table မႂ်ႇ",
+      "ၵၢၼ်ယႃႉ Primary Key",
+    ],
+    "What is the most important part of a SELF JOIN?",
+  ),
 
-  Quiz(451, "Hierarchical Data တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?", [
-    "သဵၼ်ႈမၢႆ ႁူဝ်ၼႃႈ လႄႈ လုၵ်ႈၼွင်ႉ (Org Chart)",
-    "သဵၼ်ႈမၢႆၵုၼ်ႇ",
-    "သဵၼ်ႈမၢႆဝဵင်း",
-    "သဵၼ်ႈမၢႆ ID"
-  ], "What is an example of hierarchical data?"),
+  Quiz(
+    451,
+    "Hierarchical Data တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?",
+    [
+      "သဵၼ်ႈမၢႆ ႁူဝ်ၼႃႈ လႄႈ လုၵ်ႈၼွင်ႉ (Org Chart)",
+      "သဵၼ်ႈမၢႆၵုၼ်ႇ",
+      "သဵၼ်ႈမၢႆဝဵင်း",
+      "သဵၼ်ႈမၢႆ ID",
+    ],
+    "What is an example of hierarchical data?",
+  ),
 
   Quiz(452, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ SELF JOIN?", [
     "မိူဝ်ႈၶေႃႈမုၼ်းမီးသဵၼ်ႈၵွင်ႉၸူးတူဝ်မၼ်းၶိုၼ်း (Recursive)",
     "မိူဝ်ႈၶႂ်ႈ Join 2 Tables",
     "မိူဝ်ႈၶႂ်ႈယႃႉ Row",
-    "မိူဝ်ႈၶႂ်ႈၼပ်ႉ SUM"
+    "မိူဝ်ႈၶႂ်ႈၼပ်ႉ SUM",
   ], "Why would you use a SELF JOIN?"),
 
-  Quiz(453,
-      "Manager ID ၵွင်ႉၸူး Employee ID ၼႂ်း Table လဵဝ်ၵၼ် ပဵၼ် Join ပိူင်လႂ်?",
-      [
-        "SELF JOIN",
-        "INNER JOIN",
-        "LEFT JOIN",
-        "CROSS JOIN"
-      ], "Manager ID linked to Employee ID in the same table is which join?"),
+  Quiz(
+    453,
+    "Manager ID ၵွင်ႉၸူး Employee ID ၼႂ်း Table လဵဝ်ၵၼ် ပဵၼ် Join ပိူင်လႂ်?",
+    ["SELF JOIN", "INNER JOIN", "LEFT JOIN", "CROSS JOIN"],
+    "Manager ID linked to Employee ID in the same table is which join?",
+  ),
 
   Quiz(454, "Unary Relationship မၢႆထိုင်သင်?", [
     "သဵၼ်ႈၵွင်ႉၼႂ်း Table တူဝ်လဵဝ်",
     "သဵၼ်ႈၵွင်ႉ 2 Tables",
     "သဵၼ်ႈၵွင်ႉ 3 Tables",
-    "ဢမ်ႇမီးသဵၼ်ႈၵွင်ႉ"
+    "ဢမ်ႇမီးသဵၼ်ႈၵွင်ႉ",
   ], "What is a Unary Relationship?"),
 
-  Quiz(455,
-      "ၼႂ်း SELF JOIN... သင်ၶႂ်ႈႁႃ 'လုၵ်ႈႁဵၼ်းယူႇဝဵင်းလဵဝ်ၵၼ်' လူဝ်ႇၸႅတ်ႈသင်?",
-      [
-        "a.city = b.city AND a.id <> b.id",
-        "a.id = b.id",
-        "a.city = b.city",
-        "Error"
-      ], "How to find students in the same city using SELF JOIN?"),
+  Quiz(
+    455,
+    "ၼႂ်း SELF JOIN... သင်ၶႂ်ႈႁႃ 'လုၵ်ႈႁဵၼ်းယူႇဝဵင်းလဵဝ်ၵၼ်' လူဝ်ႇၸႅတ်ႈသင်?",
+    [
+      "a.city = b.city AND a.id <> b.id",
+      "a.id = b.id",
+      "a.city = b.city",
+      "Error",
+    ],
+    "How to find students in the same city using SELF JOIN?",
+  ),
 
-  Quiz(456, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ Alias ၼႂ်း SELF JOIN?", [
-    "တွၼ်ႈတႃႇၸႅၵ်ႇဝႃႈ Column လႂ် လုၵ်ႉတီႈ 'Role' လႂ်",
-    "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
-    "တွၼ်ႈတႃႇယႃႉ Table",
-    "ဢမ်ႇလူဝ်ႇၸႂ်ႉၵေႃႈလႆႈ"
-  ], "Why are aliases necessary in a SELF JOIN?"),
+  Quiz(
+    456,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ Alias ၼႂ်း SELF JOIN?",
+    [
+      "တွၼ်ႈတႃႇၸႅၵ်ႇဝႃႈ Column လႂ် လုၵ်ႉတီႈ 'Role' လႂ်",
+      "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
+      "တွၼ်ႈတႃႇယႃႉ Table",
+      "ဢမ်ႇလူဝ်ႇၸႂ်ႉၵေႃႈလႆႈ",
+    ],
+    "Why are aliases necessary in a SELF JOIN?",
+  ),
 
   Quiz(457, "SELF JOIN ၸၢင်ႈၸႂ်ႉ LEFT JOIN လႆႈႁႃႉ?", [
     "လႆႈ (မိူၼ်ၼင်ႇ တႃႇၼႄ CEO ဢၼ်ဢမ်ႇမီးႁူဝ်ၼႃႈ)",
     "ဢမ်ႇလႆႈ",
     "လႆႈၵူၺ်း INNER",
-    "Error"
+    "Error",
   ], "Can a SELF JOIN be a LEFT JOIN?"),
 
-  Quiz(458, "Recursive relationship တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?", [
-    "Comments လႄႈ Replies ၼႂ်း Table လဵဝ်ၵၼ်",
-    "Students လႄႈ Courses",
-    "Products လႄႈ Orders",
-    "Error"
-  ], "What is an example of a recursive relationship?"),
+  Quiz(
+    458,
+    "Recursive relationship တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?",
+    [
+      "Comments လႄႈ Replies ၼႂ်း Table လဵဝ်ၵၼ်",
+      "Students လႄႈ Courses",
+      "Products လႄႈ Orders",
+      "Error",
+    ],
+    "What is an example of a recursive relationship?",
+  ),
 
-  Quiz(459, "SELECT e.name, m.name FROM emp e, emp m ... ၼႆႉပဵၼ်သင်?", [
-    "SELF JOIN (Older Syntax)",
-    "INNER JOIN",
-    "CROSS JOIN",
-    "Error"
-  ], "What type of join is 'FROM emp e, emp m'?"),
+  Quiz(
+    459,
+    "SELECT e.name, m.name FROM emp e, emp m ... ၼႆႉပဵၼ်သင်?",
+    ["SELF JOIN (Older Syntax)", "INNER JOIN", "CROSS JOIN", "Error"],
+    "What type of join is 'FROM emp e, emp m'?",
+  ),
 
-  Quiz(460, "SELF JOIN ၸၢင်ႈ Join လၢႆလၢႆၸၼ်ႉလႆႈႁႃႉ?", [
-    "လႆႈ (Staff -> Supervisor -> Manager)",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း 2 ၸၼ်ႉ",
-    "Error"
-  ], "Can a SELF JOIN have multiple levels?"),
+  Quiz(
+    460,
+    "SELF JOIN ၸၢင်ႈ Join လၢႆလၢႆၸၼ်ႉလႆႈႁႃႉ?",
+    [
+      "လႆႈ (Staff -> Supervisor -> Manager)",
+      "ဢမ်ႇလႆႈ",
+      "လႆႈၵူၺ်း 2 ၸၼ်ႉ",
+      "Error",
+    ],
+    "Can a SELF JOIN have multiple levels?",
+  ),
 
   // --- Lesson 45: MULTI-TABLE JOIN (461-472) ---
   Quiz(461, "Multi-table Join မၢႆထိုင်သင်?", [
     "ၵၢၼ် Join 3 Tables ၶိုၼ်ႈၼိူဝ်",
     "ၵၢၼ် Join 2 Tables",
     "ၵၢၼ်ယႃႉ Table",
-    "ၵၢၼ် SELECT ၵူၺ်း"
+    "ၵၢၼ် SELECT ၵူၺ်း",
   ], "What is a multi-table join?"),
 
   Quiz(462, "Bridge Table ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇၵွင်ႉ Table သွင်ဢၼ် ဢၼ်ဢမ်ႇၵွင်ႉၵၼ်တႅတ်ႈတေႃး",
     "တႃႇယႃႉၶေႃႈမုၼ်း",
     "တႃႇ Backup",
-    "တႃႇပၼ် Password"
+    "တႃႇပၼ် Password",
   ], "What is a Bridge Table used for?"),
 
-  Quiz(463, "သင် Join 3 Tables (A, B, C)... လူဝ်ႇမီး JOIN Keyword ၵႃႈလၢႆဢၼ်?", [
-    "2 ဢၼ်",
-    "3 ဢၼ်",
-    "1 ဢၼ်",
-    "4 ဢၼ်"
-  ], "How many JOIN keywords are needed to join 3 tables?"),
+  Quiz(
+    463,
+    "သင် Join 3 Tables (A, B, C)... လူဝ်ႇမီး JOIN Keyword ၵႃႈလၢႆဢၼ်?",
+    ["2 ဢၼ်", "3 ဢၼ်", "1 ဢၼ်", "4 ဢၼ်"],
+    "How many JOIN keywords are needed to join 3 tables?",
+  ),
 
-  Quiz(464, "Junction Table တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?", [
-    "Enrollments (ၵွင်ႉ Students လႄႈ Courses)",
-    "Students",
-    "Courses",
-    "Error"
-  ], "What is an example of a junction table?"),
+  Quiz(
+    464,
+    "Junction Table တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?",
+    [
+      "Enrollments (ၵွင်ႉ Students လႄႈ Courses)",
+      "Students",
+      "Courses",
+      "Error",
+    ],
+    "What is an example of a junction table?",
+  ),
 
-  Quiz(465, "Multi-table Join ၸၢင်ႈမေႃး (Mix) INNER လႄႈ LEFT လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း INNER",
-    "လႆႈၵူၺ်း LEFT"
-  ], "Can you mix INNER and LEFT joins in a multi-table join?"),
+  Quiz(
+    465,
+    "Multi-table Join ၸၢင်ႈမေႃး (Mix) INNER လႄႈ LEFT လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း INNER", "လႆႈၵူၺ်း LEFT"],
+    "Can you mix INNER and LEFT joins in a multi-table join?",
+  ),
 
-  Quiz(466, "သင် Join Table ၼမ်ႁႅင်း (မိူၼ်ၼင်ႇ 10+) တေပဵၼ်သင်?", [
-    "Query တေၸႃႉလိူဝ်ၵဝ်ႇ (Performance drop)",
-    "Query တေဝႆး",
-    "Error",
-    "ယႃႉ Database"
-  ], "What happens if you join too many tables (e.g., 10+)?"),
+  Quiz(
+    466,
+    "သင် Join Table ၼမ်ႁႅင်း (မိူၼ်ၼင်ႇ 10+) တေပဵၼ်သင်?",
+    [
+      "Query တေၸႃႉလိူဝ်ၵဝ်ႇ (Performance drop)",
+      "Query တေဝႆး",
+      "Error",
+      "ယႃႉ Database",
+    ],
+    "What happens if you join too many tables (e.g., 10+)?",
+  ),
 
-  Quiz(467, "ၼႂ်း Multi-table Join... Order ႁင်း JOIN လွင်ႈယႂ်ႇႁႃႉ?", [
-    "ယႂ်ႇ (လူဝ်ႇၵွင်ႉပဵၼ်သၢႆၸိူၵ်ႈ တႄႇတီႈ Main Table)",
-    "ဢမ်ႇယႂ်ႇ",
-    "ယႂ်ႇၵူၺ်းၼႂ်း ID",
-    "Error"
-  ], "Does the join order matter in a multi-table join?"),
+  Quiz(
+    467,
+    "ၼႂ်း Multi-table Join... Order ႁင်း JOIN လွင်ႈယႂ်ႇႁႃႉ?",
+    [
+      "ယႂ်ႇ (လူဝ်ႇၵွင်ႉပဵၼ်သၢႆၸိူၵ်ႈ တႄႇတီႈ Main Table)",
+      "ဢမ်ႇယႂ်ႇ",
+      "ယႂ်ႇၵူၺ်းၼႂ်း ID",
+      "Error",
+    ],
+    "Does the join order matter in a multi-table join?",
+  ),
 
-  Quiz(468, "Junction Table ၵႆႉမီးသင်ယူႇၼႂ်းမၼ်း?", [
-    "Foreign Keys လုၵ်ႉတီႈသွင် Table",
-    "Primary Key ၵူၺ်း",
-    "ၶေႃႈမုၼ်းလိၵ်ႈယၢဝ်းယၢဝ်း",
-    "Error"
-  ], "What does a junction table usually contain?"),
+  Quiz(
+    468,
+    "Junction Table ၵႆႉမီးသင်ယူႇၼႂ်းမၼ်း?",
+    [
+      "Foreign Keys လုၵ်ႉတီႈသွင် Table",
+      "Primary Key ၵူၺ်း",
+      "ၶေႃႈမုၼ်းလိၵ်ႈယၢဝ်းယၢဝ်း",
+      "Error",
+    ],
+    "What does a junction table usually contain?",
+  ),
 
   Quiz(469, "Join Path မၢႆထိုင်သင်?", [
     "သဵၼ်ႈတၢင်းၵၢၼ်ၵွင်ႉ Table (A -> B -> C)",
     "ၸိုဝ်ႈ Table",
     "ID",
-    "Error"
+    "Error",
   ], "What is a Join Path?"),
 
-  Quiz(470,
-      "SELECT ... FROM A JOIN B ON A.id = B.id JOIN C ON B.id = C.id; ပဵၼ်သင်?",
-      [
-        "Multi-table Join",
-        "Self Join",
-        "Union",
-        "Error"
-      ], "Identify: FROM A JOIN B ON... JOIN C ON..."),
+  Quiz(
+    470,
+    "SELECT ... FROM A JOIN B ON A.id = B.id JOIN C ON B.id = C.id; ပဵၼ်သင်?",
+    ["Multi-table Join", "Self Join", "Union", "Error"],
+    "Identify: FROM A JOIN B ON... JOIN C ON...",
+  ),
 
-  Quiz(471, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇ Alias ၼႂ်း Multi-table Join?", [
-    "တွၼ်ႈတႃႇႁႂ်ႈ Code သႅၼ်ႈသႂ် လႄႈ ၸႅၵ်ႇ Column လႆႈငၢႆႈ",
-    "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
-    "တွၼ်ႈတႃႇယႃႉ Row",
-    "ဢမ်ႇလူဝ်ႇၸႂ်ႉ"
-  ], "Why are aliases used in multi-table joins?"),
+  Quiz(
+    471,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇ Alias ၼႂ်း Multi-table Join?",
+    [
+      "တွၼ်ႈတႃႇႁႂ်ႈ Code သႅၼ်ႈသႂ် လႄႈ ၸႅၵ်ႇ Column လႆႈငၢႆႈ",
+      "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
+      "တွၼ်ႈတႃႇယႃႉ Row",
+      "ဢမ်ႇလူဝ်ႇၸႂ်ႉ",
+    ],
+    "Why are aliases used in multi-table joins?",
+  ),
 
-  Quiz(472, "Many-to-Many Relationship လူဝ်ႇ Table ၵႃႈလၢႆဢၼ် တႃႇ Join?", [
-    "3 ဢၼ် (2 Data Tables + 1 Junction Table)",
-    "2 ဢၼ်",
-    "1 ဢၼ်",
-    "4 ဢၼ်"
-  ], "How many tables are involved in joining a Many-to-Many relationship?"),
+  Quiz(
+    472,
+    "Many-to-Many Relationship လူဝ်ႇ Table ၵႃႈလၢႆဢၼ် တႃႇ Join?",
+    ["3 ဢၼ် (2 Data Tables + 1 Junction Table)", "2 ဢၼ်", "1 ဢၼ်", "4 ဢၼ်"],
+    "How many tables are involved in joining a Many-to-Many relationship?",
+  ),
 
   // --- Lesson 46: AGGREGATE FUNCTIONS (473-484) ---
   Quiz(473, "Aggregate Functions မၢႆထိုင်သင်?", [
     "Functions ဢၼ်ဢဝ်ၶေႃႈမုၼ်းလၢႆထႅဝ် မႃးၼပ်ႉသွၼ်ႇပဵၼ်ၵႃႈၶၼ်လဵဝ်",
     "Functions ဢၼ်ယႃႉ Row",
     "Functions ဢၼ်မႄး Table",
-    "Functions ၸတ်းလႅၼ်ႇ"
+    "Functions ၸတ်းလႅၼ်ႇ",
   ], "What are aggregate functions?"),
 
   Quiz(474, "COUNT(*) ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "ၼပ်ႉတၢင်းၼမ်ထႅဝ်တင်းမူတ်း (ပႃးတင်း NULL)",
     "ႁူမ်ႈငိုၼ်း",
     "ႁႃၵႄႈၵၢင်",
-    "Error"
+    "Error",
   ], "What does COUNT(*) do?"),
 
   Quiz(475, "SUM() ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "ႁူမ်ႈၵႃႈၶၼ်တူဝ်ၼပ်ႉတင်းမူတ်း",
     "ၼပ်ႉထႅဝ်",
     "ႁႃၵႃႈၶၼ်ဢေႇသုတ်း",
-    "Error"
+    "Error",
   ], "What is the purpose of SUM()?"),
 
   Quiz(476, "AVG() ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "ႁႃၵႃႈၶၼ်ၵႄႈၵၢင် (Average)",
     "ႁူမ်ႈငိုၼ်း",
     "ၼပ်ႉထႅဝ်",
-    "Error"
+    "Error",
   ], "What is the purpose of AVG()?"),
 
   Quiz(477, "MIN() လႄႈ MAX() ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "ႁႃၵႃႈၶၼ်ဢေႇသုတ်း လႄႈ ၼမ်သုတ်း",
     "ၼပ်ႉထႅဝ်",
     "ႁႃၵႄႈၵၢင်",
-    "Error"
+    "Error",
   ], "What do MIN() and MAX() do?"),
 
-  Quiz(478, "Aggregate Functions တေႁဵတ်းၸိူင်ႉႁိုဝ် တင်း NULL?", [
-    "ၶၢမ်ႈ (Ignore) NULL ပႅတ်ႈ (ၼွၵ်ႈသေ COUNT(*))",
-    "ၼပ်ႉပဵၼ် 0",
-    "Error",
-    "ယႃႉ Row"
-  ], "How do aggregate functions handle NULL values?"),
+  Quiz(
+    478,
+    "Aggregate Functions တေႁဵတ်းၸိူင်ႉႁိုဝ် တင်း NULL?",
+    [
+      "ၶၢမ်ႈ (Ignore) NULL ပႅတ်ႈ (ၼွၵ်ႈသေ COUNT(*))",
+      "ၼပ်ႉပဵၼ် 0",
+      "Error",
+      "ယႃႉ Row",
+    ],
+    "How do aggregate functions handle NULL values?",
+  ),
 
-  Quiz(479, "COUNT(column_name) တင်း COUNT(*) ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "COUNT(col) ဢမ်ႇၼပ်ႉ NULL, COUNT(*) ၼပ်ႉတင်းမူတ်း",
-    "မိူၼ်ၵၼ်",
-    "COUNT(*) ဝႆးလိူဝ်",
-    "Error"
-  ], "Difference between COUNT(column) and COUNT(*)?"),
+  Quiz(
+    479,
+    "COUNT(column_name) တင်း COUNT(*) ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?",
+    [
+      "COUNT(col) ဢမ်ႇၼပ်ႉ NULL, COUNT(*) ၼပ်ႉတင်းမူတ်း",
+      "မိူၼ်ၵၼ်",
+      "COUNT(*) ဝႆးလိူဝ်",
+      "Error",
+    ],
+    "Difference between COUNT(column) and COUNT(*)?",
+  ),
 
-  Quiz(480, "SELECT SUM(price) FROM products WHERE cat_id = 1; ႁဵတ်းသင်?", [
-    "ႁူမ်ႈငိုၼ်းၵုၼ်ႇ ၵူၺ်းၼႂ်း Category 1",
-    "ႁူမ်ႈငိုၼ်းၵုၼ်ႇတင်း Table",
-    "ၼပ်ႉၵုၼ်ႇ",
-    "Error"
-  ], "What does SUM(price) with a WHERE clause do?"),
+  Quiz(
+    480,
+    "SELECT SUM(price) FROM products WHERE cat_id = 1; ႁဵတ်းသင်?",
+    [
+      "ႁူမ်ႈငိုၼ်းၵုၼ်ႇ ၵူၺ်းၼႂ်း Category 1",
+      "ႁူမ်ႈငိုၼ်းၵုၼ်ႇတင်း Table",
+      "ၼပ်ႉၵုၼ်ႇ",
+      "Error",
+    ],
+    "What does SUM(price) with a WHERE clause do?",
+  ),
 
-  Quiz(481, "SELECT COUNT(DISTINCT city) FROM students; ႁဵတ်းသင်?", [
-    "ၼပ်ႉဝဵင်း ဢၼ်ဢမ်ႇမိူၼ်ၵၼ် (Unique cities)",
-    "ၼပ်ႉလုၵ်ႈႁဵၼ်းတင်းမူတ်း",
-    "ၼပ်ႉဝဵင်းတင်းမူတ်း (ပႃးတင်းဢၼ်သမ်ႉၵၼ်)",
-    "Error"
-  ], "What does COUNT(DISTINCT city) do?"),
+  Quiz(
+    481,
+    "SELECT COUNT(DISTINCT city) FROM students; ႁဵတ်းသင်?",
+    [
+      "ၼပ်ႉဝဵင်း ဢၼ်ဢမ်ႇမိူၼ်ၵၼ် (Unique cities)",
+      "ၼပ်ႉလုၵ်ႈႁဵၼ်းတင်းမူတ်း",
+      "ၼပ်ႉဝဵင်းတင်းမူတ်း (ပႃးတင်းဢၼ်သမ်ႉၵၼ်)",
+      "Error",
+    ],
+    "What does COUNT(DISTINCT city) do?",
+  ),
 
-  Quiz(482, "AVG() ၸၢင်ႈၸႂ်ႉတင်း Column လိၵ်ႈ (VARCHAR) လႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈ (လႆႈၵူၺ်းတူဝ်ၼပ်ႉ Numeric)",
-    "လႆႈ",
-    "လႆႈၵူၺ်းၼႂ်း MySQL",
-    "Error"
-  ], "Can AVG() be used on a VARCHAR column?"),
+  Quiz(
+    482,
+    "AVG() ၸၢင်ႈၸႂ်ႉတင်း Column လိၵ်ႈ (VARCHAR) လႆႈႁႃႉ?",
+    [
+      "ဢမ်ႇလႆႈ (လႆႈၵူၺ်းတူဝ်ၼပ်ႉ Numeric)",
+      "လႆႈ",
+      "လႆႈၵူၺ်းၼႂ်း MySQL",
+      "Error",
+    ],
+    "Can AVG() be used on a VARCHAR column?",
+  ),
 
   Quiz(483, "MAX(name) တေၼႄသင်?", [
     "ၸိုဝ်ႈဢၼ်ယူႇၽၢႆႇလင်သုတ်း ၸွမ်းတူဝ်လိၵ်ႈ (Z-A)",
     "ၸိုဝ်ႈဢၼ်ယၢဝ်းသုတ်း",
     "Error",
-    "NULL"
+    "NULL",
   ], "What does MAX() return on a string column?"),
 
-  Quiz(484, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ 'AS' ၸွမ်း Aggregate Function?", [
-    "တွၼ်ႈတႃႇပၼ်ၸိုဝ်ႈ Column ႁႂ်ႈ App ႁဝ်းလူငၢႆႈ",
-    "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
-    "တွၼ်ႈတႃႇယႃႉ Row",
-    "ဢမ်ႇလူဝ်ႇၸႂ်ႉ"
-  ], "Why use 'AS' with aggregate functions?"),
+  Quiz(
+    484,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ 'AS' ၸွမ်း Aggregate Function?",
+    [
+      "တွၼ်ႈတႃႇပၼ်ၸိုဝ်ႈ Column ႁႂ်ႈ App ႁဝ်းလူငၢႆႈ",
+      "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
+      "တွၼ်ႈတႃႇယႃႉ Row",
+      "ဢမ်ႇလူဝ်ႇၸႂ်ႉ",
+    ],
+    "Why use 'AS' with aggregate functions?",
+  ),
 
   // --- Lesson 47: GROUP BY (485-496) ---
   Quiz(485, "GROUP BY ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "ၸႅၵ်ႇထႅဝ်ဢၼ်မိူၼ်ၵၼ် ပဵၼ်ၸုမ်း သေၼပ်ႉသွၼ်ႇ",
     "ၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း",
     "ယႃႉ Row",
-    "Join Table"
+    "Join Table",
   ], "What is the purpose of GROUP BY?"),
 
-  Quiz(486, "SELECT Rule ၼႂ်း GROUP BY မၢႆထိုင်သင်?", [
-    "Column ဢၼ် SELECT မႃး (ဢၼ်ဢမ်ႇၸႂ်ႈ Aggregate) တေလႆႈမီးၼႂ်း GROUP BY",
-    "SELECT * လႆႈတႃႇသေႇ",
-    "ဢမ်ႇလူဝ်ႇ GROUP BY ၵေႃႈလႆႈ",
-    "Error"
-  ], "What is the SELECT rule in GROUP BY?"),
-
-  Quiz(487, "SELECT city, COUNT(*) FROM students GROUP BY city; ၼႄသင်?", [
-    "ၼႄတၢင်းၼမ်လုၵ်ႈႁဵၼ်း ၸႅၵ်ႇၸွမ်းဝဵင်း",
-    "ၼႄၸိုဝ်ႈလုၵ်ႈႁဵၼ်းၵူႈၵေႃႉ",
-    "ၼႄဝဵင်းလဵဝ်ၵူၺ်း",
-    "Error"
-  ], "What does GROUP BY city show?"),
-
-  Quiz(488, "GROUP BY ၸၢင်ႈၸႅၵ်ႇလၢႆလၢႆ Column ႁူမ်ႈၵၼ်လႆႈႁႃႉ?", [
-    "လႆႈ (မိူၼ်ၼင်ႇ GROUP BY city, gender)",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း 1 Column",
-    "Error"
-  ], "Can you group by multiple columns?"),
-
-  Quiz(489, "WHERE တင်း GROUP BY ဢၼ်လႂ်ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း?", [
-    "WHERE (Filter ဢွၼ်တၢင်း ၸင်ႇ Group)",
-    "GROUP BY",
-    "ႁဵတ်းၸွမ်းၵၼ်",
-    "Error"
-  ], "Which is executed first: WHERE or GROUP BY?"),
-
-  Quiz(490, "Granularity ၼႂ်း Grouping မၢႆထိုင်သင်?", [
-    "ၸၼ်ႉတၢင်းၸႅၼ်ႇလႅင်း ၼႂ်းၵၢၼ်ၸႅၵ်ႇၸုမ်း",
-    "တၢင်းၼမ် Table",
-    "ID",
-    "Error"
-  ], "What is granularity in grouping?"),
+  Quiz(
+    486,
+    "SELECT Rule ၼႂ်း GROUP BY မၢႆထိုင်သင်?",
+    [
+      "Column ဢၼ် SELECT မႃး (ဢၼ်ဢမ်ႇၸႂ်ႈ Aggregate) တေလႆႈမီးၼႂ်း GROUP BY",
+      "SELECT * လႆႈတႃႇသေႇ",
+      "ဢမ်ႇလူဝ်ႇ GROUP BY ၵေႃႈလႆႈ",
+      "Error",
+    ],
+    "What is the SELECT rule in GROUP BY?",
+  ),
 
   Quiz(
-      491, "သင် SELECT name, COUNT(*) ... GROUP BY city; (MySQL Version ၵဝ်ႇ)?",
-      [
-        "မၼ်းတေလိူၵ်ႈဢဝ် 'name' ဢၼ်ၼိုင်ႈမႃးၼႄ (ဢၼ်ဢမ်ႇမၢၼ်ႇမႅၼ်ႈ)",
-        "မၼ်းတေ Error တႃႇသေႇ",
-        "မၼ်းတေၼႄၵူႈၸိုဝ်ႈ",
-        "Error"
-      ], "What happens if you SELECT name but GROUP BY city?"),
+    487,
+    "SELECT city, COUNT(*) FROM students GROUP BY city; ၼႄသင်?",
+    [
+      "ၼႄတၢင်းၼမ်လုၵ်ႈႁဵၼ်း ၸႅၵ်ႇၸွမ်းဝဵင်း",
+      "ၼႄၸိုဝ်ႈလုၵ်ႈႁဵၼ်းၵူႈၵေႃႉ",
+      "ၼႄဝဵင်းလဵဝ်ၵူၺ်း",
+      "Error",
+    ],
+    "What does GROUP BY city show?",
+  ),
+
+  Quiz(
+    488,
+    "GROUP BY ၸၢင်ႈၸႅၵ်ႇလၢႆလၢႆ Column ႁူမ်ႈၵၼ်လႆႈႁႃႉ?",
+    [
+      "လႆႈ (မိူၼ်ၼင်ႇ GROUP BY city, gender)",
+      "ဢမ်ႇလႆႈ",
+      "လႆႈၵူၺ်း 1 Column",
+      "Error",
+    ],
+    "Can you group by multiple columns?",
+  ),
+
+  Quiz(
+    489,
+    "WHERE တင်း GROUP BY ဢၼ်လႂ်ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း?",
+    [
+      "WHERE (Filter ဢွၼ်တၢင်း ၸင်ႇ Group)",
+      "GROUP BY",
+      "ႁဵတ်းၸွမ်းၵၼ်",
+      "Error",
+    ],
+    "Which is executed first: WHERE or GROUP BY?",
+  ),
+
+  Quiz(
+    490,
+    "Granularity ၼႂ်း Grouping မၢႆထိုင်သင်?",
+    ["ၸၼ်ႉတၢင်းၸႅၼ်ႇလႅင်း ၼႂ်းၵၢၼ်ၸႅၵ်ႇၸုမ်း", "တၢင်းၼမ် Table", "ID", "Error"],
+    "What is granularity in grouping?",
+  ),
+
+  Quiz(
+    491,
+    "သင် SELECT name, COUNT(*) ... GROUP BY city; (MySQL Version ၵဝ်ႇ)?",
+    [
+      "မၼ်းတေလိူၵ်ႈဢဝ် 'name' ဢၼ်ၼိုင်ႈမႃးၼႄ (ဢၼ်ဢမ်ႇမၢၼ်ႇမႅၼ်ႈ)",
+      "မၼ်းတေ Error တႃႇသေႇ",
+      "မၼ်းတေၼႄၵူႈၸိုဝ်ႈ",
+      "Error",
+    ],
+    "What happens if you SELECT name but GROUP BY city?",
+  ),
 
   Quiz(492, "GROUP BY ၸၢင်ႈၸႂ်ႉတင်း JOIN လႆႈႁႃႉ?", [
     "လႆႈ (ၵႆႉၸႂ်ႉတႃႇႁဵတ်း Report)",
     "ဢမ်ႇလႆႈ",
     "လႆႈၵူၺ်း INNER JOIN",
-    "Error"
+    "Error",
   ], "Can GROUP BY be used with JOIN?"),
 
-  Quiz(493, "ORDER BY ယူႇၽၢႆႇၼႃႈ ႁိုဝ် ၽၢႆႇလင် GROUP BY?", [
-    "ၽၢႆႇလင် (GROUP BY ဢွၼ်တၢင်း ၸင်ႇ ORDER BY)",
-    "ၽၢႆႇၼႃႈ",
-    "ယူႇတီႈလႂ်ၵေႃႈလႆႈ",
-    "Error"
-  ], "Does ORDER BY come before or after GROUP BY?"),
+  Quiz(
+    493,
+    "ORDER BY ယူႇၽၢႆႇၼႃႈ ႁိုဝ် ၽၢႆႇလင် GROUP BY?",
+    [
+      "ၽၢႆႇလင် (GROUP BY ဢွၼ်တၢင်း ၸင်ႇ ORDER BY)",
+      "ၽၢႆႇၼႃႈ",
+      "ယူႇတီႈလႂ်ၵေႃႈလႆႈ",
+      "Error",
+    ],
+    "Does ORDER BY come before or after GROUP BY?",
+  ),
 
-  Quiz(494, "GROUP BY ၸၢင်ႈၸႂ်ႉ Expression (မိူၼ်ၼင်ႇ YEAR(date)) လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း Column",
-    "Error"
-  ], "Can you group by an expression like YEAR(date)?"),
+  Quiz(
+    494,
+    "GROUP BY ၸၢင်ႈၸႂ်ႉ Expression (မိူၼ်ၼင်ႇ YEAR(date)) လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း Column", "Error"],
+    "Can you group by an expression like YEAR(date)?",
+  ),
 
   Quiz(495, "Aggregation မၢႆထိုင်သင်?", [
     "ၵၢၼ်ႁူမ်ႈၶေႃႈမုၼ်းပဵၼ်ၸုမ်း လႄႈ ၼပ်ႉသွၼ်ႇ",
     "ၵၢၼ်ယႃႉ Row",
     "ၵၢၼ် Join",
-    "Error"
+    "Error",
   ], "What does aggregation mean?"),
 
   Quiz(
-      496, "SELECT cat_id, SUM(price) FROM products GROUP BY cat_id; ႁဵတ်းသင်?",
-      [
-        "ႁူမ်ႈငိုၼ်းၵုၼ်ႇ ၸႅၵ်ႇၸွမ်း Category",
-        "ၼပ်ႉၵုၼ်ႇ",
-        "ႁႃၵႄႈၵၢင်",
-        "Error"
-      ], "What does grouping by cat_id with SUM(price) do?"),
+    496,
+    "SELECT cat_id, SUM(price) FROM products GROUP BY cat_id; ႁဵတ်းသင်?",
+    ["ႁူမ်ႈငိုၼ်းၵုၼ်ႇ ၸႅၵ်ႇၸွမ်း Category", "ၼပ်ႉၵုၼ်ႇ", "ႁႃၵႄႈၵၢင်", "Error"],
+    "What does grouping by cat_id with SUM(price) do?",
+  ),
 
   // --- Lesson 48: HAVING vs WHERE (497-508) ---
   Quiz(497, "HAVING ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇတတ်း (Filter) 'ၸုမ်း' ဝၢႆးသေ GROUP BY",
     "တႃႇတတ်းထႅဝ် ဢွၼ်တၢင်း GROUP BY",
     "တႃႇ Join Table",
-    "တႃႇယႃႉ Row"
+    "တႃႇယႃႉ Row",
   ], "What is the purpose of HAVING?"),
 
-  Quiz(498, "WHERE တင်း HAVING ပႅၵ်ႇၵၼ်တီႈလႂ်?", [
-    "WHERE တတ်းထႅဝ် (Row), HAVING တတ်းၸုမ်း (Group)",
-    "မိူၼ်ၵၼ်",
-    "HAVING ဝႆးလိူဝ်",
-    "Error"
-  ], "Difference between WHERE and HAVING?"),
+  Quiz(
+    498,
+    "WHERE တင်း HAVING ပႅၵ်ႇၵၼ်တီႈလႂ်?",
+    [
+      "WHERE တတ်းထႅဝ် (Row), HAVING တတ်းၸုမ်း (Group)",
+      "မိူၼ်ၵၼ်",
+      "HAVING ဝႆးလိူဝ်",
+      "Error",
+    ],
+    "Difference between WHERE and HAVING?",
+  ),
 
-  Quiz(499,
-      "ႁဝ်းၸၢင်ႈၸႂ်ႉ Aggregate Function (မိူၼ်ၼင်ႇ SUM) ၼႂ်း WHERE လႆႈႁႃႉ?", [
-        "ဢမ်ႇလႆႈ (လူဝ်ႇၸႂ်ႉၼႂ်း HAVING)",
-        "လႆႈ",
-        "လႆႈမၢင်ပွၵ်ႈ",
-        "Error"
-      ], "Can aggregate functions be used in a WHERE clause?"),
+  Quiz(
+    499,
+    "ႁဝ်းၸၢင်ႈၸႂ်ႉ Aggregate Function (မိူၼ်ၼင်ႇ SUM) ၼႂ်း WHERE လႆႈႁႃႉ?",
+    ["ဢမ်ႇလႆႈ (လူဝ်ႇၸႂ်ႉၼႂ်း HAVING)", "လႆႈ", "လႆႈမၢင်ပွၵ်ႈ", "Error"],
+    "Can aggregate functions be used in a WHERE clause?",
+  ),
 
   Quiz(500, "HAVING COUNT(*) > 5 ႁဵတ်းသင်?", [
     "လိူၵ်ႈၵူၺ်းၸုမ်းဢၼ်မီးၶေႃႈမုၼ်း ၼမ်လိူဝ် 5 ထႅဝ်",
     "ၼပ်ႉထႅဝ်တင်းမူတ်း",
     "ယႃႉ 5 ထႅဝ်",
-    "Error"
+    "Error",
   ], "What does HAVING COUNT(*) > 5 do?"),
 
-  Quiz(501, "ၸၼ်ႉၵၢၼ်ႁဵတ်းၵၢၼ် (Order of Execution) ဢၼ်မၢၼ်ႇမႅၼ်ႈ?", [
-    "FROM -> WHERE -> GROUP BY -> HAVING -> SELECT",
-    "SELECT -> FROM -> WHERE",
-    "WHERE -> FROM -> HAVING",
-    "GROUP BY -> WHERE -> SELECT"
-  ], "What is the correct logical order of execution?"),
+  Quiz(
+    501,
+    "ၸၼ်ႉၵၢၼ်ႁဵတ်းၵၢၼ် (Order of Execution) ဢၼ်မၢၼ်ႇမႅၼ်ႈ?",
+    [
+      "FROM -> WHERE -> GROUP BY -> HAVING -> SELECT",
+      "SELECT -> FROM -> WHERE",
+      "WHERE -> FROM -> HAVING",
+      "GROUP BY -> WHERE -> SELECT",
+    ],
+    "What is the correct logical order of execution?",
+  ),
 
-  Quiz(502, "ႁဵတ်းသင်လႄႈ ႁဝ်းထုၵ်ႇလီတတ်း (Filter) ၼႂ်း WHERE လိူဝ် HAVING?", [
-    "ၵွပ်ႈမၼ်းယွမ်းၵၢၼ်သူင်ႇၶေႃႈမုၼ်းၵႂႃႇၼပ်ႉ (Performance)",
-    "ၵွပ်ႈ WHERE တႅမ်ႈငၢႆႈ",
-    "ၵွပ်ႈ HAVING ၸႃႉလိူဝ်",
-    "Error"
-  ], "Why prefer WHERE over HAVING when possible?"),
+  Quiz(
+    502,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းထုၵ်ႇလီတတ်း (Filter) ၼႂ်း WHERE လိူဝ် HAVING?",
+    [
+      "ၵွပ်ႈမၼ်းယွမ်းၵၢၼ်သူင်ႇၶေႃႈမုၼ်းၵႂႃႇၼပ်ႉ (Performance)",
+      "ၵွပ်ႈ WHERE တႅမ်ႈငၢႆႈ",
+      "ၵွပ်ႈ HAVING ၸႃႉလိူဝ်",
+      "Error",
+    ],
+    "Why prefer WHERE over HAVING when possible?",
+  ),
 
-  Quiz(503, "HAVING ၸၢင်ႈၸႂ်ႉ Alias ၼႂ်း MySQL လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်းၼႂ်း WHERE",
-    "Error"
-  ], "Can HAVING use an alias in MySQL?"),
+  Quiz(
+    503,
+    "HAVING ၸၢင်ႈၸႂ်ႉ Alias ၼႂ်း MySQL လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း WHERE", "Error"],
+    "Can HAVING use an alias in MySQL?",
+  ),
 
   Quiz(504, "WHERE ၸၢင်ႈၸႂ်ႉ Alias လႆႈႁႃႉ?", [
     "ဢမ်ႇလႆႈ (ၵွပ်ႈ SELECT ယဝ်ႉဝၢႆး WHERE)",
     "လႆႈ",
     "လႆႈၵူၺ်းတူဝ်ၼပ်ႉ",
-    "Error"
+    "Error",
   ], "Can WHERE use an alias?"),
 
-  Quiz(505, "HAVING ၸၢင်ႈၸႂ်ႉလူၺ်ႈဢမ်ႇမီး GROUP BY လႆႈႁႃႉ?", [
-    "လႆႈ (မၼ်းတေၼပ်ႉတင်း Table ပဵၼ် 1 ၸုမ်း)",
-    "ဢမ်ႇလႆႈ",
-    "Error",
-    "NULL"
-  ], "Can HAVING exist without a GROUP BY?"),
+  Quiz(
+    505,
+    "HAVING ၸၢင်ႈၸႂ်ႉလူၺ်ႈဢမ်ႇမီး GROUP BY လႆႈႁႃႉ?",
+    ["လႆႈ (မၼ်းတေၼပ်ႉတင်း Table ပဵၼ် 1 ၸုမ်း)", "ဢမ်ႇလႆႈ", "Error", "NULL"],
+    "Can HAVING exist without a GROUP BY?",
+  ),
 
-  Quiz(506,
-      "SELECT city FROM students GROUP BY city HAVING city = 'Muse'; ၼႆႉလီႁႃႉ?",
-      [
-        "ဢမ်ႇလီ (ထုၵ်ႇလီတတ်း 'Muse' ၼႂ်း WHERE ဝႆႉဢွၼ်တၢင်း)",
-        "လီတႄႉတႄႉ",
-        "Error",
-        "NULL"
-      ], "Is filtering a simple column in HAVING efficient?"),
+  Quiz(
+    506,
+    "SELECT city FROM students GROUP BY city HAVING city = 'Muse'; ၼႆႉလီႁႃႉ?",
+    [
+      "ဢမ်ႇလီ (ထုၵ်ႇလီတတ်း 'Muse' ၼႂ်း WHERE ဝႆႉဢွၼ်တၢင်း)",
+      "လီတႄႉတႄႉ",
+      "Error",
+      "NULL",
+    ],
+    "Is filtering a simple column in HAVING efficient?",
+  ),
 
   Quiz(507, "Aggregate Predicate မၢႆထိုင်သင်?", [
     "သႅၼ်ႇသိုၵ်း ဢၼ်ယူႇၼႂ်း HAVING (မိူၼ်ၼင်ႇ SUM > 100)",
     "WHERE Clause",
     "SELECT Clause",
-    "Error"
+    "Error",
   ], "What is an aggregate predicate?"),
 
-  Quiz(508, "သင်ၶႂ်ႈႁႃ 'ဝဵင်းဢၼ်မီးလုၵ်ႈႁဵၼ်းယိင်း ၼမ်လိူဝ် 10 ၵေႃႉ'?", [
-    "WHERE gender='F' ... GROUP BY city HAVING COUNT(*) > 10",
-    "HAVING gender='F' AND COUNT(*) > 10",
-    "WHERE COUNT(*) > 10",
-    "Error"
-  ], "How to find cities with more than 10 female students?"),
+  Quiz(
+    508,
+    "သင်ၶႂ်ႈႁႃ 'ဝဵင်းဢၼ်မီးလုၵ်ႈႁဵၼ်းယိင်း ၼမ်လိူဝ် 10 ၵေႃႉ'?",
+    [
+      "WHERE gender='F' ... GROUP BY city HAVING COUNT(*) > 10",
+      "HAVING gender='F' AND COUNT(*) > 10",
+      "WHERE COUNT(*) > 10",
+      "Error",
+    ],
+    "How to find cities with more than 10 female students?",
+  ),
 
   // --- Lesson 49: SUBQUERIES I (509-520) ---
   Quiz(509, "Subquery မၢႆထိုင်သင်?", [
     "Query ဢၼ်တႅမ်ႈဝႆႉၼႂ်းၶွပ်ႇ ( ) ၼႂ်းထႅင်ႈ Query ၼိုင်ႈ",
     "Query ဢၼ်ယႃႉ Table",
     "Query ဢၼ်ဝႆးႁႅင်း",
-    "Error"
+    "Error",
   ], "What is a subquery?"),
 
-  Quiz(510, "Scalar Subquery သူင်ႇၽွၼ်းလႆႈမႃးၵႃႈလၢႆ?", [
-    "1 ထႅဝ် လႄႈ 1 Column (ၵႃႈၶၼ်လဵဝ်)",
-    "လၢႆထႅဝ်",
-    "လၢႆ Column",
-    "တင်း Table"
-  ], "What does a scalar subquery return?"),
+  Quiz(
+    510,
+    "Scalar Subquery သူင်ႇၽွၼ်းလႆႈမႃးၵႃႈလၢႆ?",
+    ["1 ထႅဝ် လႄႈ 1 Column (ၵႃႈၶၼ်လဵဝ်)", "လၢႆထႅဝ်", "လၢႆ Column", "တင်း Table"],
+    "What does a scalar subquery return?",
+  ),
 
-  Quiz(511, "Inner Query တင်း Outer Query ဢၼ်လႂ်ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း?", [
-    "Inner Query (ၼႂ်းၶွပ်ႇ)",
-    "Outer Query (ၼွၵ်ႈၶွပ်ႇ)",
-    "ႁဵတ်းၸွမ်းၵၼ်",
-    "Error"
-  ], "Which is executed first: Inner or Outer query?"),
+  Quiz(
+    511,
+    "Inner Query တင်း Outer Query ဢၼ်လႂ်ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း?",
+    [
+      "Inner Query (ၼႂ်းၶွပ်ႇ)",
+      "Outer Query (ၼွၵ်ႈၶွပ်ႇ)",
+      "ႁဵတ်းၸွမ်းၵၼ်",
+      "Error",
+    ],
+    "Which is executed first: Inner or Outer query?",
+  ),
 
-  Quiz(512, "ႁဵတ်းသင်လႄႈ ႁဝ်းၸႂ်ႉ Subquery ၼႂ်း WHERE?", [
-    "တွၼ်ႈတႃႇတႅၵ်ႈ (Compare) ၵႃႈၶၼ် ဢၼ်ႁဝ်းဢမ်ႇပႆႇႁူႉတႅတ်ႈတေႃး",
-    "တွၼ်ႈတႃႇ Join Table",
-    "တွၼ်ႈတႃႇယႃႉ Row",
-    "Error"
-  ], "Why use a subquery in a WHERE clause?"),
+  Quiz(
+    512,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းၸႂ်ႉ Subquery ၼႂ်း WHERE?",
+    [
+      "တွၼ်ႈတႃႇတႅၵ်ႈ (Compare) ၵႃႈၶၼ် ဢၼ်ႁဝ်းဢမ်ႇပႆႇႁူႉတႅတ်ႈတေႃး",
+      "တွၼ်ႈတႃႇ Join Table",
+      "တွၼ်ႈတႃႇယႃႉ Row",
+      "Error",
+    ],
+    "Why use a subquery in a WHERE clause?",
+  ),
 
   Quiz(513, "Nested SELECT မၢႆထိုင်သင်?", [
     "ၵၢၼ်သႂ်ႇ Subquery ဝႆႉၼႂ်း SELECT Clause",
     "ၵၢၼ်ယႃႉ Table",
     "ၵၢၼ် Join",
-    "Error"
+    "Error",
   ], "What is a nested SELECT?"),
 
-  Quiz(514, "သင် Scalar Subquery သူင်ႇမႃး 2 ထႅဝ်... Query တေပဵၼ်သင်?", [
-    "Error (Subquery returns more than 1 row)",
-    "မၼ်းတေလိူၵ်ႈဢဝ်ဢၼ်ၼိုင်ႈ",
-    "မၼ်းတေၼႄ NULL",
-    "Error"
-  ], "What happens if a scalar subquery returns 2 rows?"),
+  Quiz(
+    514,
+    "သင် Scalar Subquery သူင်ႇမႃး 2 ထႅဝ်... Query တေပဵၼ်သင်?",
+    [
+      "Error (Subquery returns more than 1 row)",
+      "မၼ်းတေလိူၵ်ႈဢဝ်ဢၼ်ၼိုင်ႈ",
+      "မၼ်းတေၼႄ NULL",
+      "Error",
+    ],
+    "What happens if a scalar subquery returns 2 rows?",
+  ),
 
-  Quiz(515, "Subquery ၼႂ်း SELECT Clause လူဝ်ႇမီးသင်တႃႇသေႇ?", [
-    "AS (Alias) တႃႇပၼ်ၸိုဝ်ႈ Column",
-    "WHERE Clause",
-    "GROUP BY",
-    "Error"
-  ], "What should a subquery in the SELECT clause always have?"),
+  Quiz(
+    515,
+    "Subquery ၼႂ်း SELECT Clause လူဝ်ႇမီးသင်တႃႇသေႇ?",
+    ["AS (Alias) တႃႇပၼ်ၸိုဝ်ႈ Column", "WHERE Clause", "GROUP BY", "Error"],
+    "What should a subquery in the SELECT clause always have?",
+  ),
 
   Quiz(516, "Derived Table မၢႆထိုင်သင်?", [
     "Subquery ဢၼ်ယူႇၼႂ်း FROM Clause",
     "Primary Table",
     "Temporary Table",
-    "Error"
+    "Error",
   ], "What is a Derived Table?"),
 
-  Quiz(517, "Subquery ၸၢင်ႈၸႂ်ႉ Operator 'IN' ၸွမ်းလႆႈႁႃႉ?", [
-    "လႆႈ (မိူၼ်ၼင်ႇ WHERE id IN (SELECT...))",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း Scalar",
-    "Error"
-  ], "Can a subquery be used with the 'IN' operator?"),
+  Quiz(
+    517,
+    "Subquery ၸၢင်ႈၸႂ်ႉ Operator 'IN' ၸွမ်းလႆႈႁႃႉ?",
+    [
+      "လႆႈ (မိူၼ်ၼင်ႇ WHERE id IN (SELECT...))",
+      "ဢမ်ႇလႆႈ",
+      "လႆႈၵူၺ်း Scalar",
+      "Error",
+    ],
+    "Can a subquery be used with the 'IN' operator?",
+  ),
 
-  Quiz(518, "Subquery vs JOIN: ဢၼ်လႂ်ဝႆးလိူဝ် (Performance)?", [
-    "JOIN (ၵမ်ႈၼမ်)",
-    "Subquery",
-    "မိူၼ်ၵၼ်",
-    "Error"
-  ], "Which is generally faster: Subquery or JOIN?"),
+  Quiz(
+    518,
+    "Subquery vs JOIN: ဢၼ်လႂ်ဝႆးလိူဝ် (Performance)?",
+    ["JOIN (ၵမ်ႈၼမ်)", "Subquery", "မိူၼ်ၵၼ်", "Error"],
+    "Which is generally faster: Subquery or JOIN?",
+  ),
 
-  Quiz(519, "ႁႃၵုၼ်ႇဢၼ်ပႅင်းလိူဝ် 'ၵႃႈၵႄႈၵၢင်' (AVG) လူဝ်ႇၸႂ်ႉသင်?", [
-    "WHERE price > (SELECT AVG(price) FROM products)",
-    "WHERE price > AVG(price)",
-    "HAVING price > AVG",
-    "Error"
-  ], "How to find products priced above average?"),
+  Quiz(
+    519,
+    "ႁႃၵုၼ်ႇဢၼ်ပႅင်းလိူဝ် 'ၵႃႈၵႄႈၵၢင်' (AVG) လူဝ်ႇၸႂ်ႉသင်?",
+    [
+      "WHERE price > (SELECT AVG(price) FROM products)",
+      "WHERE price > AVG(price)",
+      "HAVING price > AVG",
+      "Error",
+    ],
+    "How to find products priced above average?",
+  ),
 
-  Quiz(520, "Subquery ၸၢင်ႈသွၼ်ႉၵၼ် (Nested) လၢႆၸၼ်ႉလႆႈႁႃႉ?", [
-    "လႆႈ (ၵူၺ်းၵႃႈ ၸႃႉ လႄႈ လူယၢပ်ႇ)",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း 2 ၸၼ်ႉ",
-    "Error"
-  ], "Can subqueries be nested multiple levels deep?"),
+  Quiz(
+    520,
+    "Subquery ၸၢင်ႈသွၼ်ႉၵၼ် (Nested) လၢႆၸၼ်ႉလႆႈႁႃႉ?",
+    ["လႆႈ (ၵူၺ်းၵႃႈ ၸႃႉ လႄႈ လူယၢပ်ႇ)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 2 ၸၼ်ႉ", "Error"],
+    "Can subqueries be nested multiple levels deep?",
+  ),
 
   // --- Lesson 50: CORRELATED SUBQUERIES (521-532) ---
   Quiz(521, "Correlated Subquery မၢႆထိုင်သင်?", [
     "Subquery ဢၼ်ပိုင်ႈဢိင် (Refer) ၶေႃႈမုၼ်းလုၵ်ႉတီႈ Outer Query",
     "Subquery ဢၼ်ႁဵတ်းၵၢၼ်ႁင်းမၼ်း",
     "Query ဢၼ်ယႃႉ Table",
-    "Error"
+    "Error",
   ], "What is a correlated subquery?"),
 
   Quiz(522, "EXISTS Operator ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "ၸႅတ်ႈတူၺ်းဝႃႈ Subquery သူင်ႇထႅဝ် (Row) မႃးႁႃႉ",
     "ႁႃၵႃႈၶၼ် SUM",
     "Join Table",
-    "Error"
+    "Error",
   ], "What is the purpose of EXISTS?"),
 
-  Quiz(523, "Correlated Subquery ႁဵတ်းၵၢၼ်ၸိူင်ႉႁိုဝ်?", [
-    "Row-by-Row (ထႅဝ်ပၼ်ထႅဝ်)",
-    "ႁဵတ်းၵမ်းလဵဝ်တင်း Table",
-    "ဝႆးလိူဝ် JOIN",
-    "Error"
-  ], "How does a correlated subquery execute?"),
+  Quiz(
+    523,
+    "Correlated Subquery ႁဵတ်းၵၢၼ်ၸိူင်ႉႁိုဝ်?",
+    [
+      "Row-by-Row (ထႅဝ်ပၼ်ထႅဝ်)",
+      "ႁဵတ်းၵမ်းလဵဝ်တင်း Table",
+      "ဝႆးလိူဝ် JOIN",
+      "Error",
+    ],
+    "How does a correlated subquery execute?",
+  ),
 
-  Quiz(524, "ၼႂ်း EXISTS (SELECT ...) ... ႁဵတ်းသင်ႁဝ်းၵႆႉၸႂ်ႉ 'SELECT 1'?", [
-    "ၵွပ်ႈ Database ဢမ်ႇလူဝ်ႇ Data ၵူၺ်းလူဝ်ႇႁူႉဝႃႈ 'မီးထႅဝ်' ႁႃႉ",
-    "ၵွပ်ႈမၼ်းပဵၼ် ID",
-    "ၵွပ်ႈမၼ်းဝႆး",
-    "Error"
-  ], "Why is 'SELECT 1' common in EXISTS subqueries?"),
+  Quiz(
+    524,
+    "ၼႂ်း EXISTS (SELECT ...) ... ႁဵတ်းသင်ႁဝ်းၵႆႉၸႂ်ႉ 'SELECT 1'?",
+    [
+      "ၵွပ်ႈ Database ဢမ်ႇလူဝ်ႇ Data ၵူၺ်းလူဝ်ႇႁူႉဝႃႈ 'မီးထႅဝ်' ႁႃႉ",
+      "ၵွပ်ႈမၼ်းပဵၼ် ID",
+      "ၵွပ်ႈမၼ်းဝႆး",
+      "Error",
+    ],
+    "Why is 'SELECT 1' common in EXISTS subqueries?",
+  ),
 
-  Quiz(525, "EXISTS vs IN: ဢၼ်လႂ်ဝႆးလိူဝ် တႃႇ Table ယႂ်ႇၼမ်?", [
-    "EXISTS (ၵွပ်ႈမၼ်းၵိုတ်းၵမ်းလဵဝ် မိူဝ်ႈႁၼ်ထႅဝ်ဢွၼ်တၢင်း)",
-    "IN",
-    "မိူၼ်ၵၼ်",
-    "Error"
-  ], "Which is faster for large tables: EXISTS or IN?"),
+  Quiz(
+    525,
+    "EXISTS vs IN: ဢၼ်လႂ်ဝႆးလိူဝ် တႃႇ Table ယႂ်ႇၼမ်?",
+    [
+      "EXISTS (ၵွပ်ႈမၼ်းၵိုတ်းၵမ်းလဵဝ် မိူဝ်ႈႁၼ်ထႅဝ်ဢွၼ်တၢင်း)",
+      "IN",
+      "မိူၼ်ၵၼ်",
+      "Error",
+    ],
+    "Which is faster for large tables: EXISTS or IN?",
+  ),
 
   Quiz(526, "NOT EXISTS ၸွႆႈသင်?", [
     "ႁႃၶေႃႈမုၼ်းဢၼ်ဢမ်ႇပႆႇမီးသဵၼ်ႈၵွင်ႉ (Orphans)",
     "ႁႃၶေႃႈမုၼ်းဢၼ် Match",
     "ယႃႉ Row",
-    "Error"
+    "Error",
   ], "What does NOT EXISTS help with?"),
 
-  Quiz(527, "Correlated Subquery ၸၢင်ႈႁဵတ်းႁႂ်ႈ Query ၸႃႉလႆႈႁႃႉ?", [
-    "လႆႈ (ၵွပ်ႈမၼ်းလႆႈလႅၼ်ႇ Query ၼႂ်း ၵူႈထႅဝ်)",
-    "ဢမ်ႇလႆႈ",
-    "မၼ်းဝႆးတႃႇသေႇ",
-    "Error"
-  ], "Can correlated subqueries cause performance issues?"),
+  Quiz(
+    527,
+    "Correlated Subquery ၸၢင်ႈႁဵတ်းႁႂ်ႈ Query ၸႃႉလႆႈႁႃႉ?",
+    [
+      "လႆႈ (ၵွပ်ႈမၼ်းလႆႈလႅၼ်ႇ Query ၼႂ်း ၵူႈထႅဝ်)",
+      "ဢမ်ႇလႆႈ",
+      "မၼ်းဝႆးတႃႇသေႇ",
+      "Error",
+    ],
+    "Can correlated subqueries cause performance issues?",
+  ),
 
   Quiz(528, "EXISTS သူင်ႇသင်မႃး?", [
     "True ႁိုဝ် False (Boolean)",
     "မၢႆ ID",
     "NULL",
-    "Error"
+    "Error",
   ], "What does EXISTS return?"),
 
-  Quiz(529, "သင် Subquery သူင်ႇ NULL မႃး... EXISTS တေပဵၼ်သင်?", [
-    "True (ၵွပ်ႈ NULL ၵေႃႈၼပ်ႉပဵၼ်ထႅဝ် 1 ထႅဝ်)",
-    "False",
-    "NULL",
-    "Error"
-  ], "What if a subquery returns a row with NULL in EXISTS?"),
+  Quiz(
+    529,
+    "သင် Subquery သူင်ႇ NULL မႃး... EXISTS တေပဵၼ်သင်?",
+    ["True (ၵွပ်ႈ NULL ၵေႃႈၼပ်ႉပဵၼ်ထႅဝ် 1 ထႅဝ်)", "False", "NULL", "Error"],
+    "What if a subquery returns a row with NULL in EXISTS?",
+  ),
 
-  Quiz(530, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇ Table Alias ၼႂ်း Correlated Subquery?", [
-    "တွၼ်ႈတႃႇၵွင်ႉ Column ၼႂ်း လႄႈ ၼွၵ်ႈ ႁႂ်ႈၸႅၵ်ႇၵၼ်လႆႈ",
-    "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
-    "ဢမ်ႇလူဝ်ႇၸႂ်ႉ",
-    "Error"
-  ], "Why are table aliases needed in correlated subqueries?"),
+  Quiz(
+    530,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇ Table Alias ၼႂ်း Correlated Subquery?",
+    [
+      "တွၼ်ႈတႃႇၵွင်ႉ Column ၼႂ်း လႄႈ ၼွၵ်ႈ ႁႂ်ႈၸႅၵ်ႇၵၼ်လႆႈ",
+      "တွၼ်ႈတႃႇႁႂ်ႈ Query ဝႆး",
+      "ဢမ်ႇလူဝ်ႇၸႂ်ႉ",
+      "Error",
+    ],
+    "Why are table aliases needed in correlated subqueries?",
+  ),
 
-  Quiz(531, "EXISTS ၸၢင်ႈၸႂ်ႉၼႂ်း WHERE လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်းၼႂ်း SELECT",
-    "Error"
-  ], "Can EXISTS be used in a WHERE clause?"),
+  Quiz(
+    531,
+    "EXISTS ၸၢင်ႈၸႂ်ႉၼႂ်း WHERE လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း SELECT", "Error"],
+    "Can EXISTS be used in a WHERE clause?",
+  ),
 
-  Quiz(532, "Correlated Subquery ၵႆႉၸႂ်ႉၼႂ်း DELETE ႁႃႉ?", [
-    "ၸႂ်ႈ (တႃႇယႃႉလုၵ်ႈႁဵၼ်း ဢၼ်ဢမ်ႇမီး Grade)",
-    "ဢမ်ႇၸႂ်ႈ",
-    "လႆႈၵူၺ်း SELECT",
-    "Error"
-  ], "Is it common to use correlated subqueries in DELETE?"),
+  Quiz(
+    532,
+    "Correlated Subquery ၵႆႉၸႂ်ႉၼႂ်း DELETE ႁႃႉ?",
+    [
+      "ၸႂ်ႈ (တႃႇယႃႉလုၵ်ႈႁဵၼ်း ဢၼ်ဢမ်ႇမီး Grade)",
+      "ဢမ်ႇၸႂ်ႈ",
+      "လႆႈၵူၺ်း SELECT",
+      "Error",
+    ],
+    "Is it common to use correlated subqueries in DELETE?",
+  ),
 
   // --- Lesson 51: UNION & CTEs (533-550) ---
-  Quiz(533, "UNION Operator ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇႁူမ်ႈ Result sets ၸွမ်းထႅဝ် (Vertical)",
-    "တႃႇ Join Table ၸွမ်း Column",
-    "တႃႇယႃႉ Table",
-    "Error"
-  ], "What is the purpose of the UNION operator?"),
+  Quiz(
+    533,
+    "UNION Operator ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇႁူမ်ႈ Result sets ၸွမ်းထႅဝ် (Vertical)",
+      "တႃႇ Join Table ၸွမ်း Column",
+      "တႃႇယႃႉ Table",
+      "Error",
+    ],
+    "What is the purpose of the UNION operator?",
+  ),
 
   Quiz(534, "CTE ယေႃႈမႃးတီႈသင်?", [
     "Common Table Expression",
     "Core Table Engine",
     "Central Template Entry",
-    "Custom Text Editor"
+    "Custom Text Editor",
   ], "What does CTE stand for?"),
 
-  Quiz(535, "Keyword လႂ် ဢၼ်ၸႂ်ႉတႃႇသၢင်ႈ CTE?", [
-    "WITH",
-    "CREATE",
-    "DEFINE",
-    "AS"
-  ], "Which keyword is used to create a CTE?"),
-
-  Quiz(536, "UNION ALL တင်း UNION ဢၼ်လႂ်ဝႆးလိူဝ်?", [
-    "UNION ALL",
-    "UNION",
-    "မိူၼ်ၵၼ်",
-    "Error"
-  ], "Which is faster: UNION or UNION ALL?"),
+  Quiz(
+    535,
+    "Keyword လႂ် ဢၼ်ၸႂ်ႉတႃႇသၢင်ႈ CTE?",
+    ["WITH", "CREATE", "DEFINE", "AS"],
+    "Which keyword is used to create a CTE?",
+  ),
 
   Quiz(
-      537, "တွၼ်ႈတႃႇၸႂ်ႉ UNION... Data Types ၼႂ်း Column တေလႆႈပဵၼ်ၸိူင်ႉႁိုဝ်?",
-      [
-        "တေလႆႈမိူၼ်ၵၼ် (Compatible)",
-        "ဢမ်ႇလူဝ်ႇမိူၼ်",
-        "ပႅၵ်ႇၵၼ်လႆႈ",
-        "Error"
-      ], "What requirement is there for column data types in UNION?"),
+    536,
+    "UNION ALL တင်း UNION ဢၼ်လႂ်ဝႆးလိူဝ်?",
+    ["UNION ALL", "UNION", "မိူၼ်ၵၼ်", "Error"],
+    "Which is faster: UNION or UNION ALL?",
+  ),
+
+  Quiz(
+    537,
+    "တွၼ်ႈတႃႇၸႂ်ႉ UNION... Data Types ၼႂ်း Column တေလႆႈပဵၼ်ၸိူင်ႉႁိုဝ်?",
+    ["တေလႆႈမိူၼ်ၵၼ် (Compatible)", "ဢမ်ႇလူဝ်ႇမိူၼ်", "ပႅၵ်ႇၵၼ်လႆႈ", "Error"],
+    "What requirement is there for column data types in UNION?",
+  ),
 
   Quiz(538, "CTE ၸွႆႈသင်ၼႂ်းၵၢၼ်တႅမ်ႈ Code?", [
     "ၸွႆႈႁႂ်ႈ Code လူငၢႆႈ (Readability) လႄႈ ၸႅၵ်ႇပဵၼ်တွၼ်ႈ",
     "ၸွႆႈႁႂ်ႈ Database ဝႆး",
     "ၸွႆႈယႃႉ Row",
-    "Error"
+    "Error",
   ], "How does a CTE help in coding?"),
 
   Quiz(539, "CTE မီးသၢႆၸႂ် (Scope) ၵႃႈလၢႆ?", [
     "ၵူၺ်းၼႂ်း Query ဢၼ်မၼ်းယူႇၼၼ်ႉ",
     "တင်း Database",
     "တင်း Session",
-    "တႃႇသေႇ"
+    "တႃႇသေႇ",
   ], "What is the scope of a CTE?"),
 
   Quiz(540, "UNION ၸွႆႈယႃႉသင်ပႅတ်ႈ?", [
     "ထႅဝ်ဢၼ်မိူၼ်ၵၼ် (Duplicate rows)",
     "NULL values",
     "Column names",
-    "Error"
+    "Error",
   ], "What does UNION remove?"),
 
   Quiz(541, "Recursive CTE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇႁႃၶေႃႈမုၼ်းပဵၼ်ၸၼ်ႉ (Tree structure)",
     "တႃႇ Join 2 Tables",
     "တႃႇယႃႉ Table",
-    "Error"
+    "Error",
   ], "What is a recursive CTE used for?"),
 
-  Quiz(542, "ႁဝ်းၸၢင်ႈမီးလၢႆလၢႆ CTE ၼႂ်း Query လဵဝ်ၵၼ်လႆႈႁႃႉ?", [
-    "လႆႈ (ၸႂ်ႉ Comma ',' ၸႅၵ်ႇၵၼ်)",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း 2 ဢၼ်",
-    "Error"
-  ], "Can you have multiple CTEs in one query?"),
+  Quiz(
+    542,
+    "ႁဝ်းၸၢင်ႈမီးလၢႆလၢႆ CTE ၼႂ်း Query လဵဝ်ၵၼ်လႆႈႁႃႉ?",
+    ["လႆႈ (ၸႂ်ႉ Comma ',' ၸႅၵ်ႇၵၼ်)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 2 ဢၼ်", "Error"],
+    "Can you have multiple CTEs in one query?",
+  ),
 
-  Quiz(543, "ၸိုဝ်ႈ Column ၼႂ်း UNION ၽွၼ်းလႆႈ တေဢဝ်ၸွမ်း Table လႂ်?", [
-    "Table တူဝ်ဢွၼ်တၢင်းသုတ်း",
-    "Table တူဝ်ၽၢႆႇလင်",
-    "ပဵၼ် NULL",
-    "Error"
-  ], "Which table's column names are used in a UNION result?"),
+  Quiz(
+    543,
+    "ၸိုဝ်ႈ Column ၼႂ်း UNION ၽွၼ်းလႆႈ တေဢဝ်ၸွမ်း Table လႂ်?",
+    ["Table တူဝ်ဢွၼ်တၢင်းသုတ်း", "Table တူဝ်ၽၢႆႇလင်", "ပဵၼ် NULL", "Error"],
+    "Which table's column names are used in a UNION result?",
+  ),
 
-  Quiz(544, "JOIN တင်း UNION ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "JOIN ႁူမ်ႈ Column (Horizontal), UNION ႁူမ်ႈထႅဝ် (Vertical)",
-    "မိူၼ်ၵၼ်",
-    "UNION ဝႆးလိူဝ်",
-    "Error"
-  ], "Difference between JOIN and UNION?"),
+  Quiz(
+    544,
+    "JOIN တင်း UNION ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?",
+    [
+      "JOIN ႁူမ်ႈ Column (Horizontal), UNION ႁူမ်ႈထႅဝ် (Vertical)",
+      "မိူၼ်ၵၼ်",
+      "UNION ဝႆးလိူဝ်",
+      "Error",
+    ],
+    "Difference between JOIN and UNION?",
+  ),
 
-  Quiz(545, "CTE ၸၢင်ႈၸႂ်ႉ JOIN ႁူမ်ႈတင်း Table တႄႉ လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "Error",
-    "NULL"
-  ], "Can a CTE be joined with a regular table?"),
+  Quiz(
+    545,
+    "CTE ၸၢင်ႈၸႂ်ႉ JOIN ႁူမ်ႈတင်း Table တႄႉ လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "Error", "NULL"],
+    "Can a CTE be joined with a regular table?",
+  ),
 
-  Quiz(546, "UNION ၸၢင်ႈၸႂ်ႉ ORDER BY လႆႈတီႈလႂ်?", [
-    "ၽၢႆႇလင်သုတ်း ႁင်း Query သုတ်းတွၼ်ႈ",
-    "ၵႄႈၵၢင်",
-    "ၽၢႆႇၼႃႈ",
-    "Error"
-  ], "Where can you use ORDER BY with UNION?"),
+  Quiz(
+    546,
+    "UNION ၸၢင်ႈၸႂ်ႉ ORDER BY လႆႈတီႈလႂ်?",
+    ["ၽၢႆႇလင်သုတ်း ႁင်း Query သုတ်းတွၼ်ႈ", "ၵႄႈၵၢင်", "ၽၢႆႇၼႃႈ", "Error"],
+    "Where can you use ORDER BY with UNION?",
+  ),
 
   Quiz(547, "CTE ပဵၼ် Temporary Table တႄႉႁႃႉ?", [
     "ဢမ်ႇၸႂ်ႈ (မၼ်းပဵၼ် Result set ၸူဝ်ႈၶၢဝ်းၼႂ်း Memory)",
     "ၸႂ်ႈ",
     "လႆႈၵူၺ်းၼႂ်း MySQL",
-    "Error"
+    "Error",
   ], "Is a CTE a real temporary table?"),
 
-  Quiz(548, "UNION ALL ၸၢင်ႈၸွႆႈႁူမ်ႈ Logs ၼမ်ၼမ်လႆႈႁႃႉ?", [
-    "ၸႂ်ႈ (ၵွပ်ႈမၼ်းဝႆး)",
-    "ဢမ်ႇလႆႈ",
+  Quiz(
+    548,
+    "UNION ALL ၸၢင်ႈၸွႆႈႁူမ်ႈ Logs ၼမ်ၼမ်လႆႈႁႃႉ?",
+    ["ၸႂ်ႈ (ၵွပ်ႈမၼ်းဝႆး)", "ဢမ်ႇလႆႈ", "Error", "NULL"],
+    "Is UNION ALL useful for combining large logs?",
+  ),
+
+  Quiz(
+    549,
+    "WITH my_cte AS (...) SELECT * FROM my_cte; ၼႆႉပဵၼ်သင်?",
+    ["CTE Syntax", "Subquery", "Union", "Error"],
+    "Identify: WITH my_cte AS (...) SELECT...",
+  ),
+
+  Quiz(
+    550,
+    "ယဝ်ႉယဝ်ႉ Module 5! SQL တွၼ်ႈလႂ်ဢၼ်ႁဝ်းတေႁဵၼ်းသိုပ်ႇ?",
+    [
+      "Database Design & Normalization",
+      "Basic SELECT",
+      "INSERT ၵူၺ်း",
+      "Error",
+    ],
+    "What's next after Module 5?",
+  ),
+];
+List<Quiz> mysqlQuizM6 = [
+  // --- Lesson 52: Views (551-562) ---
+  Quiz(551, "View ၼႂ်း MySQL မၢႆထိုင်သင်?", [
+    "Table တိူဝ်ႇၵႄႇ (Virtual Table) ဢၼ်သိမ်းဝႆႉ SELECT Statement",
+    "Table ဢၼ်သိမ်းၶေႃႈမုၼ်းတႄႉဝႆႉၼႂ်း Disk",
+    "ၵၢၼ် Backup ၶေႃႈမုၼ်း",
+    "Command တႃႇယႃႉ Database",
+  ], "What is a View in MySQL?"),
+
+  Quiz(
+    552,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ View တွၼ်ႈတႃႇ Security?",
+    [
+      "တွၼ်ႈတႃႇတတ်း Column ဢၼ်လွင်ႈယႂ်ႇပႅတ်ႈ သေပၼ်ပိူၼ်ႈတူၺ်းၵူၺ်းတွၼ်ႈဢၼ်ပၼ်သုၼ်ႇ",
+      "တွၼ်ႈတႃႇသႂ်ႇ Password ပၼ် Table",
+      "တွၼ်ႈတႃႇႁၢမ်ႈပိူၼ်ႈ SELECT Table",
+      "တွၼ်ႈတႃႇယႃႉ User ပႅတ်ႈ",
+    ],
+    "Why use a View for security purposes?",
+  ),
+
+  Quiz(
+    553,
+    "View ၸၢင်ႈသိမ်းၶေႃႈမုၼ်း (Physical Data) ဝႆႉႁင်းမၼ်းႁႃႉ?",
+    [
+      "ဢမ်ႇသိမ်း (မၼ်းပိုင်ႈဢိင်ၸွမ်း Underlying Tables)",
+      "သိမ်း",
+      "သိမ်းၵူၺ်းတွၼ်ႈ Primary Key",
+      "Error",
+    ],
+    "Does a View store physical data?",
+  ),
+
+  Quiz(
+    554,
+    "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇသၢင်ႈ View?",
+    ["CREATE VIEW", "MAKE VIEW", "NEW VIEW", "START VIEW"],
+    "Which command is used to create a view?",
+  ),
+
+  Quiz(
+    555,
+    "သင် Table တႄႉ (Base Table) ထုၵ်ႇယႃႉပႅတ်ႈ... View တေပဵၼ်သင်?",
+    [
+      "View တေတၢႆ (Broken) သေၸႂ်ႉဢမ်ႇလႆႈ",
+      "View တေသိမ်းၶေႃႈမုၼ်းဝႆႉယူႇ",
+      "View တေမႄးတူဝ်မၼ်းၶိုၼ်း",
+      "Error",
+    ],
+    "What happens to a View if the base table is dropped?",
+  ),
+
+  Quiz(
+    556,
+    "CREATE OR REPLACE VIEW ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇမႄး (Update) Logic ၼႂ်း View ဢၼ်မီးဝႆႉယဝ်ႉ",
+      "တႃႇယႃႉ View",
+      "တႃႇသၢင်ႈ Table မႂ်ႇ",
+      "တႃႇပၼ် Permission",
+    ],
+    "What is CREATE OR REPLACE VIEW used for?",
+  ),
+
+  Quiz(
+    557,
+    "View ၸွႆႈသင်ၼႂ်းၵၢၼ်တႅမ်ႈ Query ဢၼ်ယုင်ႈယၢင်ႈ?",
+    [
+      "ၸွႆႈႁဵတ်းႁႂ်ႈမၼ်းငၢႆႈ (Simplicity) လူၺ်ႈၵၢၼ်သိမ်း JOIN ၼမ်ၼမ်ဝႆႉ",
+      "ၸွႆႈႁႂ်ႈ Database ဝႆးလိူဝ်ၵဝ်ႇ",
+      "ၸွႆႈယႃႉ Row ဢၼ်သွၼ်ႉၵၼ်",
+      "ဢမ်ႇၸွႆႈသင်",
+    ],
+    "How does a View simplify complex queries?",
+  ),
+
+  Quiz(558, "Underlying Table မၢႆထိုင်သင်?", [
+    "Table တႄႉ ဢၼ်မီးၶေႃႈမုၼ်းသိမ်းဝႆႉ ၽၢႆႇတႂ်ႈ View",
+    "Table ၸူဝ်ႈၶၢဝ်း",
+    "Database Name",
     "Error",
-    "NULL"
-  ], "Is UNION ALL useful for combining large logs?"),
+  ], "What is an underlying table?"),
 
-  Quiz(549, "WITH my_cte AS (...) SELECT * FROM my_cte; ၼႆႉပဵၼ်သင်?", [
-    "CTE Syntax",
-    "Subquery",
-    "Union",
-    "Error"
-  ], "Identify: WITH my_cte AS (...) SELECT..."),
+  Quiz(
+    559,
+    "ႁဝ်းၸၢင်ႈ UPDATE ၶေႃႈမုၼ်းလုၵ်ႉတီႈ View လႆႈတႃႇသေႇႁႃႉ?",
+    [
+      "ဢမ်ႇလႆႈ (လႆႈၵူၺ်းမၢင်ပိူင် ဢၼ်ဢမ်ႇယုင်ႈယၢင်ႈ)",
+      "လႆႈတႃႇသေႇ",
+      "လႆႈၵူၺ်းၼႂ်း SELECT",
+      "Error",
+    ],
+    "Can you always update data through a View?",
+  ),
 
-  Quiz(550, "ယဝ်ႉယဝ်ႉ Module 5! SQL တွၼ်ႈလႂ်ဢၼ်ႁဝ်းတေႁဵၼ်းသိုပ်ႇ?", [
-    "Database Design & Normalization",
-    "Basic SELECT",
-    "INSERT ၵူၺ်း",
-    "Error"
-  ], "What's next after Module 5?")
+  Quiz(560, "DROP VIEW ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇယႃႉ View ပႅတ်ႈ လုၵ်ႉၼႂ်း Database",
+    "တႃႇယႃႉၶေႃႈမုၼ်း",
+    "တႃႇပိတ်း Database",
+    "Error",
+  ], "What does DROP VIEW do?"),
+
+  Quiz(
+    561,
+    "WITH CHECK OPTION ၼႂ်း View ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇႁၢမ်ႈၵၢၼ် INSERT/UPDATE ဢၼ်ဢမ်ႇၵွင်ႉၵၢႆႇတင်း Condition ႁင်း View",
+      "တႃႇၵူတ်ႇထတ်း Password",
+      "တႃႇၼပ်ႉ SUM",
+      "Error",
+    ],
+    "What is the purpose of WITH CHECK OPTION in a View?",
+  ),
+
+  Quiz(
+    562,
+    "View ၸႂ်ႉတီႈယူႇ (Disk Space) ၼမ်ႁႃႉ?",
+    [
+      "ဢမ်ႇၼမ် (ၵွပ်ႈမၼ်းသိမ်းၵူၺ်း Definition)",
+      "ၼမ်ႁႅင်း",
+      "မိူၼ်တင်း Table တႄႉ",
+      "Error",
+    ],
+    "Does a View occupy significant disk space?",
+  ),
+
+  // --- Lesson 53: Stored Procedures (563-574) ---
+  Quiz(563, "Stored Procedure မၢႆထိုင်သင်?", [
+    "ၸုမ်း Code SQL ဢၼ်သိမ်းဝႆႉၼႂ်း Database သေႁွင်ႉၸႂ်ႉလႆႈလၢႆပွၵ်ႈ",
+    "ၵၢၼ် Backup Database",
+    "Table ၸူဝ်ႈၶၢဝ်း",
+    "Error",
+  ], "What is a Stored Procedure?"),
+
+  Quiz(
+    564,
+    "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇႁွင်ႉ Stored Procedure?",
+    ["CALL", "RUN", "EXECUTE", "START"],
+    "Which command is used to invoke a Stored Procedure?",
+  ),
+
+  Quiz(
+    565,
+    "Parameter ပိူင် 'OUT' ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇသူင်ႇၵႃႈၶၼ်လုၵ်ႉၼႂ်း Procedure ဢွၵ်ႇမႃးပၼ်ၽၢႆႇၼွၵ်ႈ",
+      "တႃႇသူင်ႇၵႃႈၶၼ်ၶဝ်ႈၵႂႃႇ",
+      "တႃႇယႃႉ Table",
+      "Error",
+    ],
+    "What is an OUT parameter used for?",
+  ),
+
+  Quiz(
+    566,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ DELIMITER // မိူဝ်ႈသၢင်ႈ Procedure?",
+    [
+      "တွၼ်ႈတႃႇႁၢမ်ႈ MySQL တတ်း Code မိူဝ်ႈႁၼ် ';' ၼႂ်း Procedure",
+      "တွၼ်ႈတႃႇႁႂ်ႈ Code ဝႆး",
+      "တွၼ်ႈတႃႇပၼ် Password",
+      "Error",
+    ],
+    "Why is DELIMITER // used when creating a procedure?",
+  ),
+
+  Quiz(
+    567,
+    "Stored Procedure ဝႆးလိူဝ် SQL ธรรมဒါ ၵွပ်ႈသင်?",
+    [
+      "ၵွပ်ႈမၼ်းပဵၼ် Pre-compiled Code ၼႂ်း Server",
+      "ၵွပ်ႈမၼ်းပဵၼ်လိၵ်ႈပွတ်း",
+      "ၵွပ်ႈမၼ်းဢမ်ႇမီး WHERE",
+      "Error",
+    ],
+    "Why can Stored Procedures be faster than regular SQL queries?",
+  ),
+
+  Quiz(568, "INOUT Parameter မၢႆထိုင်သင်?", [
+    "ၵႃႈၶၼ်ဢၼ်သူင်ႇၶဝ်ႈလႆႈ လႄႈ ဢဝ်ဢွၵ်ႇလႆႈ တူဝ်လဵဝ်ၵၼ်",
+    "ၵႃႈၶၼ်ဢၼ်ပဝ်ႇဝႆႉ",
+    "Primary Key",
+    "Error",
+  ], "What is an INOUT parameter?"),
+
+  Quiz(
+    569,
+    "Stored Procedure ၸၢင်ႈမီးလၢႆလၢႆ SQL Statement ႁူမ်ႈၵၼ်လႆႈႁႃႉ?",
+    [
+      "လႆႈ (မိူၼ်ၼင်ႇ INSERT သေ UPDATE ၸွမ်းၵၼ်)",
+      "ဢမ်ႇလႆႈ",
+      "လႆႈၵူၺ်း SELECT",
+      "Error",
+    ],
+    "Can a Stored Procedure contain multiple SQL statements?",
+  ),
+
+  Quiz(570, "DROP PROCEDURE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇယႃႉ Procedure ပႅတ်ႈ",
+    "တႃႇယႃႉ Table",
+    "တႃႇၵိုတ်း Database",
+    "Error",
+  ], "What does DROP PROCEDURE do?"),
+
+  Quiz(
+    571,
+    "ႁဝ်းၸၢင်ႈၸႂ်ႉ Stored Procedure တွၼ်ႈတႃႇ Security လႆႈၸိူင်ႉႁိုဝ်?",
+    [
+      "ပၼ်သုၼ်ႇ User ႁွင်ႉ CALL ၵူၺ်း လူၺ်ႈဢမ်ႇပၼ် SELECT Table တႄႉ",
+      "သႂ်ႇ Password ပၼ် Procedure",
+      "ယႃႉ User",
+      "Error",
+    ],
+    "How can Stored Procedures enhance security?",
+  ),
+
+  Quiz(
+    572,
+    "BEGIN ... END ၼႂ်း Procedure တႅၼ်းသင်?",
+    [
+      "တႅၼ်းၶွပ်ႇ (Block) ႁင်း Code ဢၼ်တေႁဵတ်းၵၢၼ်",
+      "တႅၼ်းၸိုဝ်ႈ Table",
+      "တႅၼ်း ID",
+      "Error",
+    ],
+    "What do BEGIN and END represent in a procedure?",
+  ),
+
+  Quiz(
+    573,
+    "Stored Procedure ၸၢင်ႈသူင်ႇၽွၼ်းလႆႈ (Result Set) မႃးမိူၼ် SELECT ႁႃႉ?",
+    ["ၸႂ်ႈ", "ဢမ်ႇၸႂ်ႈ", "လႆးၵူၺ်းတူဝ်ၼပ်ႉ", "Error"],
+    "Can a Stored Procedure return a result set?",
+  ),
+
+  Quiz(
+    574,
+    "Parameter 'IN' ၼႂ်း Procedure မိူၼ်တင်းသင်?",
+    [
+      "Input ဢၼ်သူင်ႇၶဝ်ႈၵႂႃႇ",
+      "Output ဢၼ်သူင်ႇဢွၵ်ႇ",
+      "ၸိုဝ်ႈ Database",
+      "Error",
+    ],
+    "What is an IN parameter equivalent to?",
+  ),
+
+  // --- Lesson 54: Logic & Control (575-586) ---
+  Quiz(
+    575,
+    "DECLARE ၼႂ်း Procedure ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တွၼ်ႈတႃႇမၵ်းမၼ်ႈတူဝ်လႅၵ်ႈလၢႆႈ (Variable)",
+      "တွၼ်ႈတႃႇသၢင်ႈ Table",
+      "တွၼ်ႈတႃႇယႃႉ Row",
+      "Error",
+    ],
+    "What is DECLARE used for in a procedure?",
+  ),
+
+  Quiz(
+    576,
+    "IF ... THEN ... ELSE ... END IF ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇလိူၵ်ႈတႅတ်ႈတတ်း (Conditional Logic)",
+      "တႃႇၼပ်ႉ Loop",
+      "တႃႇ Join Table",
+      "Error",
+    ],
+    "What is IF-THEN-ELSE used for?",
+  ),
+
+  Quiz(577, "SET Keyword ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇပၼ်ၵႃႈၶၼ် (Assign value) ပၼ် Variable",
+    "တႃႇသၢင်ႈ Variable",
+    "တႃႇ SELECT ၶေႃႈမုၼ်း",
+    "Error",
+  ], "What is the SET keyword used for?"),
+
+  Quiz(
+    578,
+    "CASE Statement ၵႆႉၸႂ်ႉမိူဝ်ႈလႂ်?",
+    [
+      "မိူဝ်ႈမီးတၢင်းလိူၵ်ႈ (Conditions) ၼမ်ၼမ်",
+      "မိူဝ်ႈၶႂ်ႈယႃႉ Table",
+      "မိူဝ်ႈၶႂ်ႈ Backup",
+      "Error",
+    ],
+    "When is a CASE statement typically used?",
+  ),
+
+  Quiz(
+    579,
+    "DECLARE Variable တေလႆႈဝႆႉတီႈလႂ်?",
+    [
+      "ဝႆႉတီႈၼိူဝ်သုတ်း ဝၢႆးသေ BEGIN",
+      "ဝႆႉတီႈလႂ်ၵေႃႈလႆႈ",
+      "ဝႆႉတီႈလင် END",
+      "Error",
+    ],
+    "Where must DECLARE statements be placed?",
+  ),
+
+  Quiz(580, "SIGNAL SQLSTATE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇသူင်ႇ Error Message (Custom Error) ဢွၵ်ႇမႃး",
+    "တႃႇပၼ်ၶႅၼ်းလိၵ်ႈ",
+    "တႃႇပိတ်း Server",
+    "Error",
+  ], "What is SIGNAL SQLSTATE used for?"),
+
+  Quiz(
+    581,
+    "တူဝ်လႅၵ်ႈလၢႆႈ (Variable) တင်း Column ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?",
+    [
+      "Variable သိမ်းၵႃႈၶၼ်ၸူဝ်ႈၶၢဝ်းၼႂ်း Memory, Column သိမ်းၼႂ်း Table",
+      "မိူၼ်ၵၼ်",
+      "Column ဝႆးလိူဝ်",
+      "Error",
+    ],
+    "Difference between a variable and a column?",
+  ),
+
+  Quiz(
+    582,
+    "IF score >= 80 THEN ... ၼႆႉပဵၼ်သင်?",
+    ["Boolean Expression", "Table Name", "Loop", "Error"],
+    "What is 'score >= 80' in an IF statement?",
+  ),
+
+  Quiz(
+    583,
+    "ELSE ၼႂ်း IF Statement မၢႆထိုင်သင်?",
+    [
+      "တွၼ်ႈဢၼ်တေႁဵတ်းၵၢၼ် သင်သႅၼ်ႇသိုၵ်းၽၢႆႇၼႃႈ ဢမ်ႇမၢၼ်ႇမႅၼ်ႈ (False)",
+      "တွၼ်ႈတႄႇ",
+      "တွၼ်ႈသုတ်း",
+      "Error",
+    ],
+    "What does ELSE represent in an IF statement?",
+  ),
+
+  Quiz(
+    584,
+    "DEFAULT ၼႂ်း DECLARE ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇပၼ်ၵႃႈၶၼ်တႄႇ (Initial value) သင်ဢမ်ႇပႆႇမီးၵႃႈၶၼ်",
+      "တႃႇယႃႉ Row",
+      "တႃႇပၼ် Password",
+      "Error",
+    ],
+    "What is DEFAULT used for in a DECLARE statement?",
+  ),
+
+  Quiz(
+    585,
+    "CASE ... WHEN ... ELSE ... END CASE; ပဵၼ်သင်?",
+    ["Switch Logic", "Loop Logic", "Join Logic", "Error"],
+    "What programming construct is CASE similar to?",
+  ),
+
+  Quiz(
+    586,
+    "ႁဝ်းၸၢင်ႈၸႂ်ႉ IF သွၼ်ႉ IF (Nested IF) လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 2 ၸၼ်ႉ", "Error"],
+    "Can you use nested IF statements?",
+  ),
+
+  // --- Lesson 55: WHILE & REPEAT Loops (587-598) ---
+  Quiz(587, "WHILE Loop တေႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
+    "မိူဝ်ႈသႅၼ်ႇသိုၵ်း (Condition) တိုၵ်ႉပဵၼ် True ယူႇ",
+    "မိူဝ်ႈသႅၼ်ႇသိုၵ်းပဵၼ် False",
+    "ႁဵတ်းပွၵ်ႈလဵဝ်ယဝ်ႉၵိုတ်း",
+    "Error",
+  ], "When does a WHILE loop execute?"),
+
+  Quiz(
+    588,
+    "REPEAT Loop တင်း WHILE Loop ပႅၵ်ႇၵၼ်တီႈလႂ်?",
+    [
+      "REPEAT ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်းၼိုင်ႈပွၵ်ႈ ၸင်ႇၸႅတ်ႈသႅၼ်ႇသိုၵ်း",
+      "WHILE ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း",
+      "မိူၼ်ၵၼ်",
+      "Error",
+    ],
+    "Difference between REPEAT and WHILE loops?",
+  ),
+
+  Quiz(589, "LEAVE Keyword ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇဢွၵ်ႇ (Break) လုၵ်ႉၼႂ်း Loop ၵမ်းလဵဝ်",
+    "တႃႇသိုပ်ႇ Loop",
+    "တႃႇယႃႉ Table",
+    "Error",
+  ], "What is the LEAVE keyword used for?"),
+
+  Quiz(
+    590,
+    "ITERATE Keyword ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇၶၢမ်ႈ (Continue) ၵႂႃႇႁဵတ်းပွၵ်ႈၼႃႈၼႂ်း Loop",
+      "တႃႇၵိုတ်း Loop",
+      "တႃႇ INSERT ၶေႃႈမုၼ်း",
+      "Error",
+    ],
+    "What is the ITERATE keyword used for?",
+  ),
+
+  Quiz(591, "Infinite Loop မၢႆထိုင်သင်?", [
+    "Loop ဢၼ်ႁဵတ်းၵၢၼ်ဢမ်ႇၵိုတ်း သေႁဵတ်းႁႂ်ႈ Server ၶႅင်",
+    "Loop ဢၼ်ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ်",
+    "Loop ဢၼ်မီး Error",
+    "Error",
+  ], "What is an infinite loop?"),
+
+  Quiz(
+    592,
+    "ႁဵတ်းသင်လႄႈ လူဝ်ႇသႂ်ႇ SET counter = counter + 1; ၼႂ်း Loop?",
+    [
+      "တႃႇထႅမ်ၵႃႈၶၼ် ႁႂ်ႈသႅၼ်ႇသိုၵ်းထိုင်တီႈၵိုတ်းလႆႈ",
+      "တႃႇပၼ် Password",
+      "တႃႇ SELECT ၶေႃႈမုၼ်း",
+      "Error",
+    ],
+    "Why increment a counter inside a loop?",
+  ),
+
+  Quiz(
+    593,
+    "UNTIL ၼႂ်း REPEAT Loop ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇမၵ်းမၼ်ႈသႅၼ်ႇသိုၵ်း တႃႇၵိုတ်း Loop",
+      "တႃႇတႄႇ Loop",
+      "တႃႇ SELECT",
+      "Error",
+    ],
+    "What is UNTIL used for in a REPEAT loop?",
+  ),
+
+  Quiz(594, "Loop Label ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇပၼ်ၸိုဝ်ႈ Loop ႁႂ်ႈ LEAVE ဢမ်ႇၼၼ် ITERATE ၸႂ်ႉလႆႈငၢႆႈ",
+    "တႃႇပၼ်ၸိုဝ်ႈ Table",
+    "တႃႇပၼ် Password",
+    "Error",
+  ], "What is a loop label used for?"),
+
+  Quiz(
+    595,
+    "WHILE Loop တေၵူတ်ႇထတ်းသႅၼ်ႇသိုၵ်း မိူဝ်ႈလႂ်?",
+    [
+      "ဢွၼ်တၢင်းတေႁဵတ်းၵၢၼ် (Pre-test)",
+      "ဝၢႆးသေႁဵတ်းၵၢၼ် (Post-test)",
+      "ဢမ်ႇၵူတ်ႇထတ်း",
+      "Error",
+    ],
+    "When does a WHILE loop check its condition?",
+  ),
+
+  Quiz(
+    596,
+    "REPEAT Loop တေၵူတ်ႇထတ်းသႅၼ်ႇသိုၵ်း မိူဝ်ႈလႂ်?",
+    [
+      "ဝၢႆးသေႁဵတ်းၵၢၼ်ယဝ်ႉ (Post-test)",
+      "ဢွၼ်တၢင်းတေႁဵတ်းၵၢၼ်",
+      "ဢမ်ႇၵူတ်ႇထတ်း",
+      "Error",
+    ],
+    "When does a REPEAT loop check its condition?",
+  ),
+
+  Quiz(597, "Loop ၼႂ်း SQL ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇသၢင်ႈ Dummy Data ဢမ်ႇၼၼ် ႁဵတ်းၵၢၼ်သမ်ႉၵၼ်ၼိူဝ်ၶေႃႈမုၼ်း",
+    "တႃႇ Join 2 Tables",
+    "တႃႇယႃႉ Database",
+    "Error",
+  ], "Common use case for loops in SQL?"),
+
+  Quiz(
+    598,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းဢမ်ႇထုၵ်ႇလီၸႂ်ႉ Loop ၼမ်လူၼ်ႉၼႂ်း SQL?",
+    [
+      "ၵွပ်ႈမၼ်းၸႃႉလိူဝ် Set-based operations",
+      "ၵွပ်ႈမၼ်းတႅမ်ႈယၢပ်ႇ",
+      "ၵွပ်ႈမၼ်းပၼ် NULL",
+      "Error",
+    ],
+    "Why avoid overusing loops in SQL?",
+  ),
+
+  // --- Lesson 56: Triggers (599-610) ---
+  Quiz(599, "Trigger ၼႂ်း MySQL မၢႆထိုင်သင်?", [
+    "Code ဢၼ်တိုၼ်ႇႁဵတ်းၵၢၼ်ႁင်းမၼ်း မိူဝ်ႈမီး Event ၼႂ်း Table",
+    "Command တႃႇ Backup",
+    "Table တိူဝ်ႇၵႄႇ",
+    "Error",
+  ], "What is a Trigger?"),
+
+  Quiz(
+    600,
+    "Event လႂ် ဢၼ်ၸၢင်ႈတိုၼ်ႇ Trigger လႆႈ?",
+    [
+      "INSERT, UPDATE, DELETE",
+      "SELECT, SHOW, DESCRIBE",
+      "CREATE, DROP, ALTER",
+      "Error",
+    ],
+    "Which events can fire a trigger?",
+  ),
+
+  Quiz(
+    601,
+    "BEFORE Trigger ႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?",
+    [
+      "ဢွၼ်တၢင်းၶေႃႈမုၼ်းတေထုၵ်ႇသိမ်း ၶဝ်ႈၼႂ်း Table",
+      "ဝၢႆးသေသိမ်းယဝ်ႉ",
+      "မိူဝ်ႈ Database ပိတ်း",
+      "Error",
+    ],
+    "When does a BEFORE trigger execute?",
+  ),
+
+  Quiz(602, "AFTER Trigger ႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
+    "ဝၢႆးသေၶေႃႈမုၼ်းသိမ်းယဝ်ႉတူဝ်ႈ",
+    "ဢွၼ်တၢင်းတေသိမ်း",
+    "မိူဝ်ႈ CALL Procedure",
+    "Error",
+  ], "When does an AFTER trigger execute?"),
+
+  Quiz(603, "Audit Log မၢႆထိုင်သင်?", [
+    "ပိုၼ်းၵၢၼ်လႅၵ်ႈလၢႆႈၶေႃႈမုၼ်း (History logs)",
+    "Password Database",
+    "Table ၸိုဝ်ႈလုၵ်ႈႁဵၼ်း",
+    "Error",
+  ], "What is an Audit Log?"),
+
+  Quiz(
+    604,
+    "OLD Keyword ၼႂ်း Trigger ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇမၢႆထိုင်ၵႃႈၶၼ်ၵဝ်ႇ ဢၼ်မီးယူႇဢွၼ်တၢင်း",
+      "တႃႇမၢႆထိုင်ၵႃႈၶၼ်မႂ်ႇ",
+      "တႃႇယႃႉ Row",
+      "Error",
+    ],
+    "What is the OLD keyword used for in a trigger?",
+  ),
+
+  Quiz(
+    605,
+    "NEW Keyword ၼႂ်း Trigger ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇမၢႆထိုင်ၵႃႈၶၼ်မႂ်ႇ ဢၼ်တေမႃးသိမ်းတႅၼ်း",
+      "တႃႇမၢႆထိုင်ၵႃႈၶၼ်ၵဝ်ႇ",
+      "တႃႇသၢင်ႈ Table",
+      "Error",
+    ],
+    "What is the NEW keyword used for in a trigger?",
+  ),
+
+  Quiz(
+    606,
+    "Trigger ၸၢင်ႈတိုၼ်ႇၸွမ်း SELECT လႆႈႁႃႉ?",
+    ["ဢမ်ႇလႆႈ", "လႆႈ", "လႆႈၵူၺ်းမၢင်ပွၵ်ႈ", "Error"],
+    "Can a trigger fire on a SELECT statement?",
+  ),
+
+  Quiz(
+    607,
+    "FOR EACH ROW ၼႂ်း Trigger မၢႆထိုင်သင်?",
+    [
+      "Trigger တေႁဵတ်းၵၢၼ် ၵူႈထႅဝ် ဢၼ်ထုၵ်ႇလႅၵ်ႈလၢႆႈ",
+      "Trigger ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ်",
+      "Trigger ႁဵတ်းၵၢၼ် 10 ထႅဝ်",
+      "Error",
+    ],
+    "What does FOR EACH ROW mean in a trigger?",
+  ),
+
+  Quiz(608, "Data Integrity မၢႆထိုင်သင်?", [
+    "ၵၢၼ်ဝႆႉၶေႃႈမုၼ်း ႁႂ်ႈမၢၼ်ႇမႅၼ်ႈ လႄႈ တႅတ်ႈတေႃး",
+    "ၵၢၼ်ယႃႉၶေႃႈမုၼ်း",
+    "ၵၢၼ် Backup",
+    "Error",
+  ], "What is Data Integrity?"),
+
+  Quiz(
+    609,
+    "ႁဵတ်းသင်လႄႈ Trigger ၼမ်လူၼ်ႉ ဢမ်ႇလီတွၼ်ႈတႃႇ Performance?",
+    [
+      "ၵွပ်ႈမၼ်းႁဵတ်းႁႂ်ႈ INSERT/UPDATE ၸႃႉလူင်း",
+      "ၵွပ်ႈမၼ်းတႅမ်ႈယၢပ်ႇ",
+      "ၵွပ်ႈမၼ်းပၼ် Password",
+      "Error",
+    ],
+    "Why are too many triggers bad for performance?",
+  ),
+
+  Quiz(610, "DROP TRIGGER ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇယႃႉ Trigger ပႅတ်ႈ",
+    "တႃႇယႃႉ Table",
+    "တႃႇပိတ်း Server",
+    "Error",
+  ], "What is DROP TRIGGER used for?"),
+
+  // --- Lesson 57: Events (611-625) ---
+  Quiz(611, "MySQL Event မၢႆထိုင်သင်?", [
+    "ၵၢၼ်တင်ႈၶၢဝ်းယၢမ်း (Scheduler) ႁႂ်ႈ Database ႁဵတ်းၵၢၼ်ႁင်းမၼ်း",
+    "Trigger ဢၼ်တိုၼ်ႇၸွမ်း INSERT",
+    "Stored Procedure ธรรมဒါ",
+    "Error",
+  ], "What is a MySQL Event?"),
+
+  Quiz(
+    612,
+    "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇပိုတ်ႇ Event Scheduler?",
+    [
+      "SET GLOBAL event_scheduler = ON;",
+      "START EVENTS;",
+      "OPEN SCHEDULER;",
+      "Error",
+    ],
+    "How to enable the MySQL event scheduler?",
+  ),
+
+  Quiz(
+    613,
+    "EVERY 1 DAY ၼႂ်း Event မၢႆထိုင်သင်?",
+    [
+      "ႁႂ်း Event ႁဵတ်းၵၢၼ် ၵူႈဝၼ်း သမ်ႉၶိုၼ်း",
+      "ႁႂ်ႈႁဵတ်းၵၢၼ်ဝၼ်းလဵဝ်ယဝ်ႉၵိုတ်း",
+      "ႁႂ်ႈႁဵတ်းၵၢၼ် 10 မိၼတ်ႉ",
+      "Error",
+    ],
+    "What does EVERY 1 DAY mean in an event?",
+  ),
+
+  Quiz(614, "Recurring Event မၢႆထိုင်သင်?", [
+    "Event ဢၼ်ႁဵတ်းၵၢၼ်သမ်ႉၶိုၼ်း ၸွမ်းၶၢဝ်းယၢမ်း",
+    "Event ဢၼ်ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ်",
+    "Trigger",
+    "Error",
+  ], "What is a recurring event?"),
+
+  Quiz(615, "One-time Event မၢႆထိုင်သင်?", [
+    "Event ဢၼ်ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ် ၼႂ်းၶၢဝ်းယၢမ်းဢၼ်မၵ်းမၼ်ႈ",
+    "Event ဢၼ်ႁဵတ်းၵၢၼ်ၵူႈဝၼ်း",
+    "Stored Procedure",
+    "Error",
+  ], "What is a one-time event?"),
+
+  Quiz(
+    616,
+    "ON SCHEDULE ၼႂ်း Event ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇမၵ်းမၼ်ႈ ၶၢဝ်းယၢမ်းဢၼ်တေႁဵတ်းၵၢၼ်",
+      "တႃႇမၵ်းမၼ်ႈ Table",
+      "တႃႇမၵ်းမၼ်ႈ ID",
+      "Error",
+    ],
+    "What is ON SCHEDULE used for in an event?",
+  ),
+
+  Quiz(
+    617,
+    "STARTS Keyword ၼႂ်း Event ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇမၵ်းမၼ်ႈ ဝၼ်းထီႉ လႄႈ ၶၢဝ်းယၢမ်း တႃႇတႄႇႁဵတ်းၵၢၼ်",
+      "တႃႇၵိုတ်း Event",
+      "တႃႇယႃႉ Event",
+      "Error",
+    ],
+    "What is the STARTS keyword used for in an event?",
+  ),
+
+  Quiz(
+    618,
+    "Event ပႅၵ်ႇၵၼ်တင်း Trigger ၸိူင်ႉႁိုဝ်?",
+    [
+      "Event တိုၼ်ႇၸွမ်း 'ၶၢဝ်းယၢမ်း', Trigger တိုၼ်ႇၸွမ်း 'ၵၢၼ်ႁဵတ်း'",
+      "မိူၼ်ၵၼ်",
+      "Trigger ဝႆးလိူဝ်",
+      "Error",
+    ],
+    "Difference between an Event and a Trigger?",
+  ),
+
+  Quiz(
+    619,
+    "Cleanup Task တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?",
+    [
+      "ၵၢၼ်ယႃႉ Logs ဢၼ်ၵဝ်ႇလိူဝ် 30 ဝၼ်း ၵူႈဝၼ်း",
+      "ၵၢၼ် INSERT လုၵ်ႈႁဵၼ်း",
+      "ၵၢၼ် Join Table",
+      "Error",
+    ],
+    "Example of a cleanup task for an event?",
+  ),
+
+  Quiz(
+    620,
+    "INTERVAL ၼႂ်း Event မၢႆထိုင်သင်?",
+    [
+      "ၶၢဝ်းယၢမ်းၵႄႈၵၢင် (မိူၼ်ၼင်ႇ 1 HOUR, 1 MINUTE)",
+      "ၸိုဝ်ႈ Table",
+      "Password",
+      "Error",
+    ],
+    "What does INTERVAL mean in an event context?",
+  ),
+
+  Quiz(
+    621,
+    "ႁဵတ်းသင်လႄႈ Event ၸၢင်ႈႁဵတ်းႁႂ်ႈ Server ၼၵ်း?",
+    [
+      "သင် Event ႁဵတ်းၵၢၼ်ယုင်ႈယၢင်ႈ ၼႂ်းၶၢဝ်းယၢမ်းပွတ်းႁႅင်း (Overlapping)",
+      "ၵွပ်ႈမၼ်းပဵၼ် SQL",
+      "ၵွပ်ႈမၼ်းပၼ် NULL",
+      "Error",
+    ],
+    "Why can events make a server heavy?",
+  ),
+
+  Quiz(622, "ALTER EVENT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇမႄး (Modify) Event ဢၼ်မီးဝႆႉယဝ်ႉ",
+    "တႃႇသၢင်ႈ Event",
+    "တႃႇယႃႉ Event",
+    "Error",
+  ], "What is ALTER EVENT used for?"),
+
+  Quiz(
+    623,
+    "DISABLE ၼႂ်း ALTER EVENT ႁဵတ်းသင်?",
+    [
+      "တႃႇၵိုတ်း (Turn off) Event ၸူဝ်ႈၶၢဝ်း လူၺ်ႈဢမ်ႇယႃႉပႅတ်ႈ",
+      "တႃႇယႃႉ Event",
+      "တႃႇ SELECT ၶေႃႈမုၼ်း",
+      "Error",
+    ],
+    "What does DISABLE do in an ALTER EVENT statement?",
+  ),
+
+  Quiz(624, "DROP EVENT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇယႃႉ Event ပႅတ်ႈ လုၵ်ႉၼႂ်း Database",
+    "တႃႇယႃႉ Table",
+    "တႃႇပိတ်း Database",
+    "Error",
+  ], "What does DROP EVENT do?"),
+
+  Quiz(
+    625,
+    "ယဝ်ႉယဝ်ႉ Module 6! Advanced Objects ၸွႆႈသင်?",
+    [
+      "ၸွႆႈႁႂ်ႈ Database ႁဵတ်းၵၢၼ်ႁင်းမၼ်း (Automation)",
+      "ၸွႆႈႁႂ်ႈ SELECT ငၢႆႈၵူၺ်း",
+      "ၸွႆႈယႃႉ ID",
+      "Error",
+    ],
+    "End of Module 6! What do advanced objects provide?",
+  ),
 ];
 List<List<Quiz>> mysqlQuizzes = [
   mysqlQuizM1,
   mysqlQuizM2,
   mysqlQuizM3,
   mysqlQuizM4,
-  mysqlQuizM5
+  mysqlQuizM5,
+  mysqlQuizM6,
 ];
