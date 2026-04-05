@@ -8395,6 +8395,131 @@ final List<Quiz> csharpQuizM19 = [
   Quiz(2299, "JSON Object တႄႇလူၺ်ႈတူဝ်လိၵ်ႈလႂ်?", ["{", "[", "(", "<"], "JSON Object starts with which character?"),
   Quiz(2300, "ၵၢၼ်ႁဵၼ်း Module 19 ယဝ်ႉယဝ်ႉ ႁဝ်းတေၸၢင်ႈႁဵတ်းသင်?", ["သိမ်းၶေႃႈမုၼ်း", "ပိၵ်ႉ App", "တႅမ်ႈ HTML", "ဢမ်ႇႁဵတ်းသင်"], "What can we do after Module 19?"),
 ];
+final List<Quiz> csharpQuizM20 = [
+  // Lesson 240: Introduction to Asynchrony
+  Quiz(2401, "လွင်ႈပႅၵ်ႇပိူင်လူင်ၵႄႈ Synchronous လႄႈ Asynchronous ပဵၼ်သင်?", ["Sync တေလႆႈပႂ်ႉၵၢၼ်ယဝ်ႉ Async ႁဵတ်းၸွမ်ၵၼ်လႆႈ", "Sync ဝႆးလိူဝ် Async ၼႂ်းၵၢၼ် Download", "Async ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Console App", "Sync ၸႂ်ႉ Memory ဢေႇလိူဝ် Async တႃႇသေႇ"], "Main difference between Synchronous and Asynchronous?"),
+  Quiz(2402, "ႁဵတ်းသင် UI ၸင်ႇ Freeze မိူဝ်ႈႁဵတ်းၵၢၼ် Synchronous ဢၼ်ယၢဝ်း?", ["UI Thread ပႂ်ႉၵၢၼ်သေဢမ်ႇမီးၶၢဝ်းယၢမ်း Drawing", "ယွၼ်ႉ Internet ၸႃႉပူၼ်ႉတီႈၼႂ်းယၢမ်းၼၼ်ႉ", "Windows ဢမ်ႇပၼ်သုၼ်ႇ Download ၼၵ်းၼၵ်း", "CPU ႁႅင်းဢေႇပူၼ်ႉတီႈတႃႇၸတ်းၵၢၼ်"], "Why does the UI freeze during long synchronous tasks?"),
+  Quiz(2403, "Blocking Programming ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ဢၼ် Code ၵိုတ်းယတ်းဝႆႉတႃႇပႂ်ႉၽွၼ်းလႆႈ", "ၵၢၼ်ဢၼ် App လႅၼ်ႈဝႆးလိူဝ်ပိူင်ထမ်ႇမတႃႇ", "ၵၢၼ်ဢၼ် Compiler ဢမ်ႇပၼ်လႅၼ်ႈ Code", "ၵၢၼ်ဢၼ် User ဢမ်ႇၸၢင်ႈၼဵၵ်းပုမ်ႇသင်လႆႈ"], "What does Blocking mean in programming?"),
+  Quiz(2404, "I/O Bound Task ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ဢၼ်လူဝ်ႇပႂ်ႉ File ဢမ်ႇၼၼ် Network", "ၵၢၼ်ဢၼ်လူဝ်ႇၸႂ်ႉ CPU ၼပ်ႉသွၼ်ႇမၢႆတူဝ်", "ၵၢၼ်ဢၼ်လူဝ်ႇမႄး UI ႁႂ်ႈႁၢင်ႈလီ", "ၵၢၼ်ဢၼ်လူဝ်ႇပိတ်း App ၵမ်းလဵဝ်"], "What is an I/O Bound task?"),
+  Quiz(2405, "Responsiveness ၼႂ်း App ပွင်ႇဝႃႈသင်?", ["App တိုၵ်ႉႁပ်ႉၵၢၼ်ၼဵၵ်းလႆႈၼႂ်းယၢမ်းႁဵတ်းၵၢၼ်", "App သူင်ႇ Data ဝႆးသုတ်းၼႂ်းလုမ်ႈၾႃႉ", "App မီးသီႁၢင်ႈလီလိူဝ် App တၢင်ႇဢၼ်", "App ဢမ်ႇၵိၼ် Memory RAM ၼမ်"], "What is Responsiveness in an app?"),
+
+  // Lesson 241: The Threading Model
+  Quiz(2406, "Thread ပဵၼ်သင် ၼႂ်းပိူင်သၢင်ႈ App?", ["သဵၼ်ႈတၢင်းၵၢၼ်ႁဵတ်းၵၢၼ်လဵၵ်ႉၼႂ်း App", "ၸိုဝ်ႈ Class ဢၼ်သိမ်း Database", "ပုမ်ႇၼဵၵ်းၼိူဝ်ၼႃႈจอ App", "လၢႆးတႅမ်ႈ Code ႁႂ်ႈပွတ်း"], "What is a Thread?"),
+  Quiz(2407, "UI Thread မီးၼႃႈၵၢၼ်သင်ပိူင်လူင်?", ["ၸတ်းၵၢၼ် Drawing လႄႈ User Interaction", "Download File လႄႈ သိမ်း Data", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်ၼပ်ႉဢၼ်ယုင်ႈယၢင်ႈ", "ၵူတ်ႇထတ်း Virus ၼႂ်းၶွမ်း"], "What is the main responsibility of the UI Thread?"),
+  Quiz(2408, "Background Thread ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ႁဵတ်းၵၢၼ်ၼၵ်းၼၵ်း ဢၼ်ဢမ်ႇၵวน UI", "တႅမ်ႈႁၢင်ႈ Button ၼိူဝ် Screen", "ႁပ်ႉၵၢၼ် Click လုၵ်ႉတီႈ User", "ပိတ်း App မိူဝ်ႈမီး Error"], "What is a Background Thread used for?"),
+  Quiz(2409, "သင် UI Thread တိုၵ်ႉပႂ်ႉ Task ဢၼ်ၼၵ်းၼၵ်း တေပဵၼ်သင်?", ["App တေၶႅင်သေ User ၼဵၵ်းသင်ဢမ်ႇလႆႈ", "App တေလႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ 2 ပွၵ်ႈ", "Internet တေဝႆးလိူဝ်ၵဝ်ႇၼမ်", "CPU တေယဵၼ်ၵႂႃႇႁင်းၵူၺ်းမၼ်း"], "What happens if the UI Thread is waiting for a heavy task?"),
+  Quiz(2410, "TAP ယေႃႇမႃးလုၵ်ႉတီႈၶေႃႈၵႂၢမ်းလႂ်?", ["Task-based Asynchronous Pattern", "Thread Async Process", "Technical Async Programming", "Total Async Path"], "What does TAP stand for?"),
+
+  // Lesson 242: Task and Task<T>
+  Quiz(2411, "Task Object တႅၼ်းထိုင်သင်?", ["ၵၢၼ်ဢၼ်တိုၵ်ႉႁဵတ်းယူႇၼႂ်းမိူဝ်းၼႃႈ", "ၵူၼ်းႁဵတ်းၵၢၼ်ၼႂ်း CPU", "တီႈၵဵပ်း File ၼႂ်း Hard Disk", "လၢႆးပိတ်း App ႁႂ်ႈလွတ်ႈၽေး"], "What does a Task object represent?"),
+  Quiz(2412, "Task<T> ပႅၵ်ႇတင်း Task ธรรมဒႃႇၸိူင်ႉႁိုဝ်?", ["Task<T> သူင်ႇၵႃႈၶၼ် Result ၶိုၼ်း", "Task<T> လႅၼ်ႈၸႃႉလိူဝ် Task", "Task<T> ၸႂ်ႉလႆးၵူၺ်းၼႂ်း Android", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်သေယိူင်ႈ"], "How does Task<T> differ from Task?"),
+  Quiz(2413, "State 'Faulted' ၶွင် Task ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ယဝ်ႉတူဝ်ႈလူၺ်ႈၵၢၼ်မီး Error", "ၵၢၼ်တိုၵ်ႉလႅၼ်ႈယူႇၸွမ်းပိူင်", "ၵၢၼ်ထုၵ်ႇယႃႉပႅတ်ႈႁင်းၵူၺ်း", "ၵၢၼ်ယဝ်ႉတူဝ်ႈလီငၢႆႈၵူႈယိူင်ႈ"], "What does the 'Faulted' state mean?"),
+  Quiz(2414, "RanToCompletion ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ယဝ်ႉတူဝ်ႈလီငၢႆႈၵူႈပိူင်", "ၵၢၼ်တိုၵ်ႉတႄႇလႅၼ်ႈၵူၺ်း", "ၵၢၼ်မီး Exception ၵဵတ်းၶိုၼ်း", "ၵၢၼ်ထုၵ်ႇယႃႉပႅတ်ႈၸူဝ်ႈၶၢဝ်း"], "What does RanToCompletion mean?"),
+  Quiz(2415, "Task<string> သူင်ႇၽွၼ်းလႆႈပဵၼ် Type သင်?", ["string", "int", "bool", "void"], "What type of result does Task<string> return?"),
+
+  // Lesson 243: async and await
+  Quiz(2416, "Keyword 'async' ၸႂ်ႉတႃႇသင်?", ["ပိုၼ်ၽၢဝ်ႇ Method ႁႂ်ႈၸႂ်ႉ await လႆႈ", "ႁဵတ်းႁႂ်ႈ Method လႅၼ်ႈဝႆးလိူဝ်", "သိမ်း Data ၶဝ်ႈၼႂ်း Database", "ပိတ်း Method ဢမ်ႇပၼ်ၽႂ်ၸႂ်ႉ"], "What is the 'async' keyword for?"),
+  Quiz(2417, "Keyword 'await' ႁဵတ်းသင်မိူဝ်ႈ Task ပႆႇယဝ်ႉ?", ["ၵိုတ်းၵၢၼ်ၼႂ်း Method သေပွႆႇ Thread", "ပိတ်း App ၵမ်းလဵဝ်လူၺ်ႈဢမ်ႇပႂ်ႉ", "ႁဵတ်းႁႂ်ႈ CPU ႁႅင်းသုင်လိူဝ်ၵဝ်ႇ", "တႅမ်ႈ Code ထႅဝ်တႂ်ႈမၼ်းၵမ်းလဵဝ်"], "What does 'await' do while the task is incomplete?"),
+  Quiz(2418, "Async Method ထုၵ်ႇလီသူင်ႇ Type သင်?", ["Task ဢမ်ႇၼၼ် Task<T>", "void ၵူၺ်းတႃႇသေႇ", "int ဢမ်ႇၼၼ် string", "bool ၵူၺ်းတႃႇသေႇ"], "What should an async method return?"),
+  Quiz(2419, "Suspension ၼႂ်း Async ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၵိုတ်း Method ဝႆႉၸူဝ်ႈၶၢဝ်း", "ၵၢၼ်ပိတ်း App ၵမ်းလဵဝ်", "ၵၢၼ် Error ၼႂ်း Code", "ၵၢၼ်လႅၼ်ႈ Code ၸွမ်ၵၼ်"], "What is Suspension in Async?"),
+  Quiz(2420, "State Machine ၼႂ်း Async ၸွႆးလွင်ႈသင်?", ["မၢႆတွင်းဝႃႈ Code လႅၼ်ႈထိုင်တီႈလႂ်", "ႁဵတ်းႁႂ်ႈ Animation ႁၢင်ႈလီ", "ၵူတ်ႇထတ်း Virus ၼႂ်း App", "သူင်ႇ Email ႁင်းၵူၺ်းမၼ်း"], "What does the State Machine help with?"),
+
+  // Lesson 244: Return Types
+  Quiz(2421, "ႁဵတ်းသင်ႁဝ်းၸင်ႇၸႂ်ႉ Task တႅၼ်း void?", ["တႃႇႁႂ်ႈၸၢင်ႈ await ၵၢၼ်ၼၼ်ႉလႆႈ", "တႃႇႁႂ်ႈ Code လႅၼ်ႈဝႆးလိူဝ်", "တႃႇသိမ်း Memory ၼႂ်းၶွမ်း", "တႃႇႁပ်ႉ Parameter လၢႆဢၼ်"], "Why use Task instead of void?"),
+  Quiz(2422, "ValueTask ၸွႆးလွင်ႈသင်လိူဝ် Task?", ["လူတ်း Allocation ၼႂ်း Heap", "သူင်ႇ Data ၽၢၼ်ႇ Internet ဝႆး", "ႁပ်ႉမိုဝ်း Error လႆႈလီလိူဝ်", "ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Windows"], "Benefit of ValueTask over Task?"),
+  Quiz(2423, "ယၢမ်းလႂ်ႁဝ်းၸင်ႇၸႂ်ႉ async void?", ["တွၼ်ႈတႃႇ Event Handlers ၵူၺ်း", "တွၼ်ႈတႃႇ Download File ယႂ်ႇ", "တွၼ်ႈတႃႇၼပ်ႉသွၼ်ႇမၢႆတူဝ်", "တွၼ်ႈတႃႇသိမ်း Data ၵူႈပွၵ်ႈ"], "When should we use async void?"),
+  Quiz(2424, "ပၼ်ႁႃလူင်ၶွင် async void ပဵၼ်သင်?", ["ႁပ်ႉ Exception ဢမ်ႇလႆႈ", "ၵိၼ် Memory ၼမ်ပူၼ်ႉတီႈ", "တႅမ်ႈ Code ယၢပ်ႇလိူဝ်ၵဝ်ႇ", "ဢမ်ႇလႅၼ်ႈၼိူဝ် Android"], "Main issue with async void?"),
+  Quiz(2425, "Fire and Forget ပွင်ႇဝႃႈသင်?", ["ပိုတ်ႇ Task သေဢမ်ႇပႂ်ႉၽွၼ်းလႆႈ", "ပိတ်း App သေလိုမ်းသိမ်း Data", "ၵၢၼ် Error ဢၼ်ၵႄႈဢမ်ႇလႆႈ", "ၵၢၼ် Delete File ႁင်းၵူၺ်း"], "What is Fire and Forget?"),
+
+  // Lesson 245: Exception Handling
+  Quiz(2426, "Exception ၼႂ်း Async တေပေႃႇမိူဝ်ႈလႂ်?", ["မိူဝ်ႈႁဝ်း await Task ၼၼ်ႉ", "မိူဝ်ႈတႄႇပိုၼ်ၽၢဝ်ႇ Method", "မိူဝ်ႈပိတ်း App ၵႂႃႇယဝ်ႉ", "မိူဝ်ႈတႅမ်ႈ Code ၽိတ်း Syntax"], "When does an Exception appear in Async?"),
+  Quiz(2427, "AggregateException သိမ်းသင်ဝႆႉ?", ["Error လၢႆဢၼ်ဢၼ်ၵွင်ႉၵၢႆႇၵၼ်", "ၸိုဝ်ႈ Class ဢၼ်မီး Error", "မၢႆထႅဝ်လိၵ်ႈဢၼ်ပဵၼ်ပၼ်ႁႃ", "လၢႆးၵႄႈပၼ်ႁႃႁင်းၵူၺ်း"], "What does AggregateException store?"),
+  Quiz(2428, "Finally block ၼႂ်း Async လႅၼ်ႈမိူဝ်ႈလႂ်?", ["လႅၼ်ႈတႃႇသေႇဝၢႆးၵၢၼ်ယဝ်ႉ", "လႅၼ်ႈမိူဝ်ႈမီး Error ၵူၺ်း", "လႅၼ်ႈမိူဝ်ႈဢမ်ႇမီး Error ၵူၺ်း", "ဢမ်ႇလႅၼ်ႈသေပွၵ်ႈၼႂ်း Async"], "When does the finally block run in Async?"),
+  Quiz(2429, "Unobserved Exception ပဵၼ်သင်?", ["Error ၼႂ်း Task ဢၼ်ဢမ်ႇ await", "Error ဢၼ် User ႁၼ်ၵမ်းလဵဝ်", "Error ဢၼ် Compiler မႄးပၼ်", "Error ၼႂ်း UI Thread ၵူၺ်း"], "What is an Unobserved Exception?"),
+  Quiz(2430, "Propagation ၼႂ်း Async ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်သူင်ႇ Error မႃးၸူး UI", "ၵၢၼ်သူင်ႇ Data ၸူး Server", "ၵၢၼ်ပိၼ်ႇ Type ၶေႃႈမုၼ်း", "ၵၢၼ် Delete Task ဢွၵ်ႇ"], "What is Propagation in Async?"),
+
+  // Lesson 246: Naming Convention
+  Quiz(2431, "Naming Convention ၶွင် Async ပဵၼ်သင်?", ["ထႅမ် Async ဝႆႉတီႈပၢႆၸိုဝ်ႈ", "တႄႇလူၺ်ႈ Async ဝႆႉၽၢႆႇၼႃႈ", "ၸႂ်ႉတူဝ်လိၵ်ႈလဵၵ်ႉတင်းမူတ်း", "ဢမ်ႇလူဝ်ႇတင်ႈၸိုဝ်ႈတႅတ်ႉတေႃး"], "Standard Async naming convention?"),
+  Quiz(2432, "Suffix ပွင်ႇဝႃႈသင်?", ["ၶေႃႈၵႂၢမ်းဢၼ်ထႅမ်တီႈပၢႆ", "ၶေႃႈၵႂၢမ်းဢၼ်ဝႆႉၽၢႆႇၼႃႈ", "တူဝ်ၼပ်ႉဢၼ်ယူႇၼႂ်းဝူင်ႇ", "ၸိုဝ်ႈ Namespace ၶွင် App"], "What is a Suffix?"),
+  Quiz(2433, "ႁဵတ်းသင်ႁဝ်းၸင်ႇထႅမ် Async ၼႃႈ Method?", ["ႁႂ်ႈႁူႉဝႃႈလူဝ်ႇၸႂ်ႉ await", "ႁႂ်ႈ Code လႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ", "ႁႂ်ႈ App ၵိၼ် RAM ဢေႇ", "ႁႂ်ႈ Compiler ဢမ်ႇ Error"], "Why add Async suffix to methods?"),
+  Quiz(2434, "Method လႂ်ဢမ်ႇလူဝ်ႇထႅမ် Async တီႈပၢႆ?", ["Event Handlers", "Database Methods", "Network Methods", "File Access Methods"], "Which methods don't need the Async suffix?"),
+  Quiz(2435, "Overloading ၼႂ်း Async ၸွႆးသင်?", ["မီးတင်းလၢႆး Sync လႄႈ Async", "ႁႂ်ႈ App ၼၵ်းလိူဝ်ပိူင်ထမ်ႇမတႃႇ", "ႁႂ်ႈ CPU ႁႅင်းသုင်လိူဝ်ၵဝ်ႇ", "ႁႂ်ႈ Memory တဵမ်ဝႆးလိူဝ်"], "What does Overloading help with in Async?"),
+
+  // Lesson 247: Task.WhenAll
+  Quiz(2436, "Task.WhenAll ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပႂ်ႉႁႂ်ႈၵူႈ Task ယဝ်ႉၸွမ်ၵၼ်", "ပႂ်ႉႁႂ်ႈ Task ၼိုင်ႈဢၼ်ယဝ်ႉ", "ယႃႉ Task တင်းမူတ်းပႅတ်ႈ", "ပိၼ်ႇ Task ႁႂ်ႈပဵၼ် String"], "What is Task.WhenAll used for?"),
+  Quiz(2437, "Parallel Programming ၸွႆးသင်?", ["ႁဵတ်းၵၢၼ်လၢႆဢၼ်ၼႂ်းယၢမ်းလဵဝ်", "ႁဵတ်းၵၢၼ်ၸွမ်းထႅဝ်ၼိုင်ႈဢၼ်", "ႁဵတ်းႁႂ်ႈ App လႅၼ်ႈၸႃႉလိူဝ်", "ႁဵတ်းႁႂ်ႈ Code ယၢဝ်းလိူဝ်ၵဝ်ႇ"], "Benefit of Parallel Programming?"),
+  Quiz(2438, "WhenAll သူင်ႇၽွၼ်းလႆႈပဵၼ်သင်?", ["Array ၶွင် Results", "string ၵူၺ်းဢၼ်လဵဝ်", "int ၵူၺ်းဢၼ်လဵဝ်", "bool ၵူၺ်းဢၼ်လဵဝ်"], "What does WhenAll return for result tasks?"),
+  Quiz(2439, "Sequential Execution ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ႁဵတ်းၸွမ်းထႅဝ်ၼိုင်ႈဢၼ်", "ၵၢၼ်ႁဵတ်းၸွမ်ၵၼ်တင်းမူတ်း", "ၵၢၼ်ပိတ်း App ၵမ်းလဵဝ်", "ၵၢၼ် Error ၼႂ်း Method"], "What is Sequential Execution?"),
+  Quiz(2440, "သင် Task ၼိုင်ႈဢၼ် Error ၼႂ်း WhenAll?", ["WhenAll တေသူင်ႇ Error ၼၼ်ႉ", "Task တၢင်ႇဢၼ်တေၵိုတ်းၵမ်းလဵဝ်", "App တေ Crash တႃႇသေႇ", "ဢမ်ႇပဵၼ်သင်သေယိူင်ႈ"], "What if one task errors in WhenAll?"),
+
+  // Lesson 248: CancellationToken
+  Quiz(2441, "CancellationTokenSource ၸႂ်ႉတႃႇသင်?", ["ပဵၼ်တူဝ်ၵုမ်းတႃႇသင်ႇ Cancel", "ပဵၼ်တူဝ်သိမ်း Data ၼႂ်း File", "ပဵၼ်တူဝ်ၼပ်ႉသွၼ်ႇမၢႆတူဝ်", "ပဵၼ်တူဝ်တႅမ်ႈႁၢင်ႈၼိူဝ် UI"], "What is CancellationTokenSource for?"),
+  Quiz(2442, "Cooperative Cancellation ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ယႃႉၵၢၼ်လူၺ်ႈၵၢၼ်ႁူမ်ႈမိုဝ်း", "ၵၢၼ်ၶႃႈ Task ႁႅင်းๆ ၵမ်းလဵဝ်", "ၵၢၼ်ပိတ်း App ၵမ်းလဵဝ်", "ၵၢၼ် Error ၼႂ်း Network"], "What is Cooperative Cancellation?"),
+  Quiz(2443, "ThrowIfCancellationRequested ႁဵတ်းသင်?", ["ၵူတ်ႇထတ်းဝႃႈလူဝ်ႇၵိုတ်းႁႃႉ", "သူင်ႇ Data ၸူး Server", "ပိၼ်ႇ Type ၶွင် Token", "ၼပ်ႉသွၼ်ႇ % ၵၢၼ်ႁဵတ်းၵၢၼ်"], "What does ThrowIfCancellationRequested do?"),
+  Quiz(2444, "CancelAfter(ms) ၸႂ်ႉတႃႇသင်?", ["မၵ်းမၼ်ႈ Timeout ႁင်းၵူၺ်း", "မၵ်းမၼ်ႈၶၢဝ်းယၢမ်း Download", "မၵ်းမၼ်ႈတၢင်းဝႆး Internet", "မၵ်းမၼ်ႈတူဝ်လိၵ်ႈၼႂ်း UI"], "What is CancelAfter(ms) used for?"),
+  Quiz(2445, "OperationCanceledException ပွင်ႇဝႃႈသင်?", ["Exception မိူဝ်ႈၵၢၼ်ထုၵ်ႇယႃႉ", "Exception မိူဝ်ႈ File ႁၢႆ", "Exception မိူဝ်ႈ RAM တဵမ်", "Exception မိူဝ်ႈပိတ်းၶွမ်း"], "What is OperationCanceledException?"),
+
+  // Lesson 249: IProgress<T>
+  Quiz(2446, "IProgress<T> ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပိုၼ်ၶၢဝ်ႇလွင်ႈတၢင်းၵၢၼ်ႁဵတ်းၵၢၼ်", "သိမ်း Data ၶဝ်ႈၼႂ်း Database", "ပိတ်း App မိူဝ်ႈယဝ်ႉတူဝ်ႈ", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်ယၢဝ်းๆ"], "What is IProgress<T> for?"),
+  Quiz(2447, "Report(value) ၼႂ်း IProgress ႁဵတ်းသင်?", ["သူင်ႇၶေႃႈမုၼ်းၶိုၼ်းမႃးၸူး UI", "ပိတ်း Task ၵမ်းလဵဝ်", "တႅမ်ႈ Code ၶဝ်ႈၼႂ်း File", "သူင်ႇ Error ၸူး Developer"], "What does Report(value) do?"),
+  Quiz(2448, "ႁဵတ်းသင်ႁဝ်းဢမ်ႇ Update UI ၼႂ်း Task ၵမ်းလဵဝ်?", ["ယွၼ်ႉ UI Thread ၵူၺ်းမႄး UI လႆႈ", "ယွၼ်ႉမၼ်းတေႁဵတ်းႁႂ်ႈဝႆးပူၼ်ႉ", "ယွၼ်ႉ Internet တေၸႃႉၵႂႃႇ", "ယွၼ်ႉ RAM တေတဵမ်ၵမ်းလဵဝ်"], "Why not update UI directly in a task?"),
+  Quiz(2449, "Progress<T> တေလႆႈသၢင်ႈတီႈလႂ်?", ["UI Thread", "Background Thread", "Database Server", "Cloud API"], "Where should Progress<T> be created?"),
+  Quiz(2450, "Thread Marshalling ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်သူင်ႇ Data ၵႄႈ Threads", "ၵၢၼ်ပိတ်း Threads တင်းမူတ်း", "ၵၢၼ်သၢင်ႈ Thread မႂ်ႇလၢႆဢၼ်", "ၵၢၼ် Error ၼႂ်း Threads"], "What is Thread Marshalling?"),
+
+  // Lesson 250: Deadlocks
+  Quiz(2451, "Deadlock ၼႂ်း Async ပွင်ႇဝႃႈသင်?", ["Thread သွင်တူဝ်ပႂ်ႉၵၼ်တေႃႇၶႅင်", "App လႅၼ်ႈဝႆးလိူဝ်ပိူင်ထမ်ႇမတႃႇ", "ၵၢၼ်သိမ်း Data ယဝ်ႉတူဝ်ႈ", "ၵၢၼ် Error ၼႂ်း Syntax"], "What is a Deadlock in Async?"),
+  Quiz(2452, "Async All the Way ပွင်ႇဝႃႈသင်?", ["ၸႂ်ႉ await တေႃႇပေႃးသုတ်း", "ၸႂ်ႉ Task တီႈလဵဝ်ၵူၺ်း", "ၸႂ်ႉ void တင်းမူတ်းၼႂ်း App", "ၸႂ်ႉ Sync ၵူၺ်းၼႂ်း UI"], "What does Async All the Way mean?"),
+  Quiz(2453, "ႁဵတ်းသင် .Result ၸင်ႇႁဵတ်းႁႂ်ႈ Deadlock?", ["ယွၼ်ႉမၼ်း Block UI Thread", "ယွၼ်ႉမၼ်းသူင်ႇ Data ၸႃႉ", "ယွၼ်ႉမၼ်းသူင်ႇ Error ၼမ်", "ယွၼ်ႉမၼ်းၵိၼ် RAM ၼမ်"], "Why does .Result cause Deadlocks?"),
+  Quiz(2454, "ConfigureAwait(false) ၸွႆးလွင်ႈသင်?", ["လူတ်းလွင်ႈပႂ်ႉ Synchronization", "ႁႂ်ႈ App ႁၢင်ႈလီလိူဝ်ၵဝ်ႇ", "ႁႂ်ႈ Internet ဝႆးလိူဝ်ၵဝ်ႇ", "ႁႂ်ႈ Code ပွတ်းလိူဝ်ၵဝ်ႇ"], "What does ConfigureAwait(false) help with?"),
+  Quiz(2455, "SynchronizationContext ပွင်ႇဝႃႈသင်?", ["ပိူင်ၸတ်းၵၢၼ် Thread context", "ၸိုဝ်ႈ Class ၼႂ်း System.IO", "လၢႆးပိတ်း App တႅတ်ႉတေႃး", "မၢႆထႅဝ်လိၵ်ႈၼႂ်း Method"], "What is SynchronizationContext?"),
+
+  // Mixed Async Topics (2456 - 2500)
+  Quiz(2456, "Task.Delay(ms) ပႅၵ်ႇတင်း Thread.Sleep ၸိူင်ႉႁိုဝ်?", ["Delay ဢမ်ႇ Block Thread", "Sleep ဝႆးလိူဝ် Delay", "Delay ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Windows", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်သေယိူင်ႈ"], "Difference between Task.Delay and Thread.Sleep?"),
+  Quiz(2457, "Task.WhenAny ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပႂ်ႉၵူၺ်းတူဝ်ဢၼ်ယဝ်ႉဢွၼ်တၢင်း", "ပႂ်ႉႁႂ်ႈၵူႈတူဝ်ယဝ်ႉၸွမ်ၵၼ်", "ယႃႉ Task တင်းမူတ်းပႅတ်ႈ", "ပိၼ်ႇ Task ႁႂ်ႈပဵၼ် void"], "What is Task.WhenAny for?"),
+  Quiz(2458, "Async Iterator (IAsyncEnumerable) ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သူင်ႇၽွၼ်းလႆႈလၢႆဢၼ်လၢႆး Async", "သူင်ႇၽွၼ်းလႆႈ 1 ဢၼ်ၵူၺ်း", "ပိတ်း App ၵမ်းလဵဝ်", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်ၼပ်ႉ"], "What is an Async Iterator for?"),
+  Quiz(2459, "await foreach ၸႂ်ႉတင်း Type သင်?", ["IAsyncEnumerable", "List", "Array", "IEnumerable"], "await foreach is used with which type?"),
+  Quiz(2460, "Yielding ၼႂ်း Async ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ပွႆႇ Thread မိူဝ်းႁဵတ်းၵၢၼ်တၢင်ႇပိူင်", "ၵၢၼ် Lock Thread ဝႆႉတႃႇသေႇ", "ၵၢၼ် Error ၼႂ်း Method", "ၵၢၼ်သူင်ႇ Data ၸူး Server"], "What is Yielding in Async?"),
+  Quiz(2461, "Task.Run() ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သူင်ႇၵၢၼ် CPU ၼၵ်းၵႂႃႇ Background", "Update UI ၼိူဝ် Screen", "ႁပ်ႉၵၢၼ် Click လုၵ်ႉတီႈ User", "ပိတ်း App တႅတ်ႉတေႃး"], "What is Task.Run() typically used for?"),
+  Quiz(2462, "CPU-bound Task ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ဢၼ်လူဝ်ႇၸႂ်ႉ CPU ၼပ်ႉသွၼ်ႇ", "ၵၢၼ်ဢၼ်လူဝ်ႇပႂ်ႉ Network", "ၵၢၼ်ဢၼ်လူဝ်ႇလူ File ၼႂ်း Disk", "ၵၢၼ်ဢၼ်လူဝ်ႇသူင်ႇ Email"], "What is a CPU-bound task?"),
+  Quiz(2463, "Task.Yield() ၸွႆးလွင်ႈသင်?", ["ပွႆႇႁႂ်း Thread ႁဵတ်းၵၢၼ်တၢင်ႇပိူင်", "ႁဵတ်းႁႂ်ႈ Task လႅၼ်ႈဝႆးလိူဝ်", "ယႃႉ Task တင်းမူတ်းပႅတ်ႈ", "သိမ်း Data ၶဝ်ႈၼႂ်း RAM"], "What does Task.Yield() help with?"),
+  Quiz(2464, "Task.CompletedTask သူင်ႇသင်?", ["Task ဢၼ်ယဝ်ႉတူဝ်ႈယူႇယဝ်ႉ", "Task ဢၼ်တိုၵ်ႉလႅၼ်ႈယူႇ", "Task ဢၼ်မီး Error", "Task ဢၼ်ထုၵ်ႇယႃႉ"], "What does Task.CompletedTask return?"),
+  Quiz(2465, "Task.FromResult(T) ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သၢင်ႈ Task ဢၼ်မီး Result ယဝ်ႉ", "သၢင်ႈ Task ဢၼ်ပႆႇမီး Result", "ယႃႉ Task ဢွၵ်ႇပႅတ်ႈ", "ပိၼ်ႇ Type ၶွင် Result"], "What is Task.FromResult for?"),
+  Quiz(2466, "Task.Factory.StartNew ပႅၵ်ႇတင်း Task.Run ၸိူင်ႉႁိုဝ်?", ["StartNew မီး Options ၼမ်လိူဝ်", "Task.Run ဝႆးလိူဝ်ၼမ်", "StartNew ၸႂ်ႉ Memory ဢေႇလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်သေယိူင်ႈ"], "Difference between StartNew and Task.Run?"),
+  Quiz(2467, "Context Switching ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်လႅၵ်ႈပိၼ်ႇၵၢၼ်ၼႂ်း CPU", "ၵၢၼ်လႅၵ်ႈပိၼ်ႇသီၼႂ်း App", "ၵၢၼ်လႅၵ်ႈပိၼ်ႇ File ၼႂ်း Folder", "ၵၢၼ်လႅၵ်ႈပိၼ်ႇ Thread ၸိုဝ်ႈ"], "What is Context Switching?"),
+  Quiz(2468, "Async Local ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သိမ်း Data ၸွမ်း Async flow", "သိမ်း Data ၼႂ်း Database", "သိမ်း Data ၼႂ်း File Text", "သိမ်း Data ၼႂ်း Cloud"], "What is AsyncLocal for?"),
+  Quiz(2469, "SemaphoreSlim ၸွႆးလွင်ႈသင်ၼႂ်း Async?", ["ၵုမ်းလွင်ႈၸႂ်ႉ Resource ၸွမ်ၵၼ်", "ႁဵတ်းႁႂ်ႈ Internet ဝႆးလိူဝ်", "ယႃႉ Task ႁင်းၵူၺ်းမၼ်း", "Update UI ႁႂ်ႈႁၢင်ႈလီ"], "Benefit of SemaphoreSlim in Async?"),
+  Quiz(2470, "Awaiter Pattern ပွင်ႇဝႃႈသင်?", ["ပိူင်သၢင်ႈၽၢႆႇလင်ၶွင် await", "လၢႆးတႅမ်ႈ Code ႁႂ်ႈပွတ်း", "လၢႆးပိတ်း App ႁႂ်းလွတ်ႈၽေး", "လၢႆးသူင်ႇ Data ၸူး Server"], "What is the Awaiter Pattern?"),
+  Quiz(2471, "Task.WaitAll ပႅၵ်ႇတင်း Task.WhenAll ၸိူင်ႉႁိုဝ်?", ["WaitAll ပဵၼ် Blocking (Sync)", "WhenAll ၸႃႉလိူဝ် WaitAll", "WaitAll ၸႂ်ႉ Memory ၼမ်လိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်သေယိူင်ႈ"], "Difference between WaitAll and WhenAll?"),
+  Quiz(2472, "Task.WaitAny ပႅၵ်ႇတင်း Task.WhenAny ၸိူင်ႉႁိုဝ်?", ["WaitAny ပဵၼ် Blocking (Sync)", "WhenAny ၸႃႉလိူဝ် WaitAny", "WaitAny ၸႂ်ႉ Memory ၼမ်လိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်သေယိူင်ႈ"], "Difference between WaitAny and WhenAny?"),
+  Quiz(2473, "CancellationTokenSource.Token ၸွႆးသင်?", ["ပဵၼ်တူဝ်မၢႆတႃႇသူင်ႇၸူး Task", "ပဵၼ်တူဝ်သိမ်း Data ၼႂ်း File", "ပဵၼ်တူဝ်ၼပ်ႉသွၼ်ႇမၢႆတူဝ်", "ပဵၼ်တူဝ်တႅမ်ႈႁၢင်ႈၼိူဝ် UI"], "What is CancellationTokenSource.Token for?"),
+  Quiz(2474, "IsCancellationRequested ပွင်ႇဝႃႈသင်?", ["ၵူတ်ႇထတ်းဝႃႈလူဝ်ႇၵိုတ်းႁႃႉ (bool)", "သူင်ႇ Data ၸူး Server ၵမ်းလဵဝ်", "ပိၼ်ႇ Type ၶွင် Token ႁင်းၵူၺ်း", "ၼပ်ႉသွၼ်ႇ % ၵၢၼ်ႁဵတ်းၵၢၼ်"], "What does IsCancellationRequested return?"),
+  Quiz(2475, "Task.FromCanceled(token) သူင်ႇသင်?", ["Task ဢၼ်ယႃႉပႅတ်ႈယဝ်ႉ", "Task ဢၼ်တိုၵ်ႉလႅၼ်ႈယူႇ", "Task ဢၼ်မီး Error", "Task ဢၼ်ယဝ်ႉတူဝ်ႈလီ"], "What does Task.FromCanceled return?"),
+  Quiz(2476, "Task.FromException(ex) သူင်ႇသင်?", ["Task ဢၼ်မီး Error ယဝ်ႉ", "Task ဢၼ်တိုၵ်ႉလႅၼ်ႈယူႇ", "Task ဢၼ်ယဝ်ႉတူဝ်ႈလီ", "Task ဢၼ်ထုၵ်ႇယႃႉ"], "What does Task.FromException return?"),
+  Quiz(2477, "Async Programming ၸွႆး Scalability ၸိူင်ႉႁိုဝ်?", ["Thread ဝၢင်ႇတႃႇႁပ်ႉ Request မႂ်ႇ", "ႁႂ်ႈ Server ႁႅင်းသုင်လိူဝ်ၵဝ်ႇ", "ႁႂ်ႈ Database သိမ်း Data ၼမ်", "ႁႂ်ႈ Code လႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ"], "How does Async help Scalability?"),
+  Quiz(2478, "HttpClient ၼႂ်း C# ပဵၼ် Sync ဢမ်ႇၼၼ် Async?", ["Async-first (ၸႂ်ႉ Async ပဵၼ်လူင်)", "Sync ၵူၺ်းတႃႇသေႇ", "ဢမ်ႇမီးတင်းသွင်ပိူင်", "ၸႂ်ႉလႆးၵူၺ်းၼႂ်း Windows"], "Is HttpClient primarily Sync or Async?"),
+  Quiz(2479, "File.ReadAllTextAsync ယူႇၼႂ်း Namespace လႂ်?", ["System.IO", "System.Threading", "System.Text", "System.Linq"], "Which namespace contains File.ReadAllTextAsync?"),
+  Quiz(2480, "Task.Delay(0) မိူၼ်တင်းသင်?", ["Task.CompletedTask", "Thread.Sleep(0)", "Task.Yield()", "Error"], "Task.Delay(0) is equivalent to what?"),
+  Quiz(2481, "State 'Canceled' ၶွင် Task ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ထုၵ်ႇယႃႉပႅတ်ႈတႅတ်ႉတေႃး", "ၵၢၼ်ယဝ်ႉတူဝ်ႈလီငၢႆႈၵူႈယိူင်ႈ", "ၵၢၼ်မီး Exception ၵဵတ်းၶိုၼ်း", "ၵၢၼ်တိုၵ်ႉတႄႇလႅၼ်ႈၵူၺ်း"], "What does the 'Canceled' state mean?"),
+  Quiz(2482, "ConfigureAwait(true) ႁဵတ်းသင်?", ["သူင်ႇ Code ၶိုၼ်းၸူး Context ၵဝ်ႇ", "လူတ်းလွင်ႈပႂ်ႉ Synchronization", "ႁႂ်ႈ App ႁၢင်ႈလီလိူဝ်ၵဝ်ႇ", "ႁႂ်ႈ Internet ဝႆးလိူဝ်ၵဝ်ႇ"], "What does ConfigureAwait(true) do?"),
+  Quiz(2483, "Async/Await ၸွႆး Readability ၸိူင်ႉႁိုဝ်?", ["တႅမ်ႈ Async ႁႂ်ႈမိူၼ် Code Sync", "ႁဵတ်းႁႂ်ႈ Code ယၢဝ်းလိူဝ်ၵဝ်ႇ", "ႁဵတ်းႁႂ်ႈ Code ယုင်ႈလိူဝ်ၵဝ်ႇ", "ႁဵတ်းႁႂ်ႈ Code ၵိၼ် Memory ၼမ်"], "How does Async/Await help readability?"),
+  Quiz(2484, "Exception ၼႂ်း Task.WhenAll တေပေႃႇမိူဝ်ႈလႂ်?", ["မိူဝ်ႈ Task တင်းမူတ်းယဝ်ႉယဝ်ႉ", "မိူဝ်ႈ Task တူဝ်တႄႇ Error", "မိူဝ်ႈပိတ်း App ၵႂႃႇယဝ်ႉ", "ဢမ်ႇပေႃႇမႃးသေပွၵ်ႈ"], "When does WhenAll throw its exception?"),
+  Quiz(2485, "IAsyncDisposable ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပိၵ်ႉ Resource လၢႆး Async", "ပိၵ်ႉ App ၵမ်းလဵဝ်လူၺ်ႈဢမ်ႇပႂ်ႉ", "သိမ်း Data ၶဝ်ႈၼႂ်း RAM", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်ယၢဝ်းๆ"], "What is IAsyncDisposable for?"),
+  Quiz(2486, "await using ၸႂ်ႉတင်း Type သင်?", ["IAsyncDisposable", "IDisposable", "Task", "ValueTask"], "await using is used with which type?"),
+  Quiz(2487, "Task.Run ၵႆႉၸႂ်ႉ Thread လႂ်?", ["Thread Pool Thread", "UI Thread", "Main Thread", "Error Thread"], "Which thread does Task.Run typically use?"),
+  Quiz(2488, "Thread Pool ပဵၼ်သင်?", ["ၸုမ်း Thread ဢၼ်မီးဝႆႉတႃႇၸႂ်ႉ", "တီႈၵဵပ်း File ၼႂ်း Hard Disk", "လၢႆးပိတ်း App ႁႂ်ႈလွတ်ႈၽေး", "ၸိုဝ်ႈ Class ၼႂ်း System.IO"], "What is a Thread Pool?"),
+  Quiz(2489, "Sync-over-Async ပဵၼ်သင်?", ["ၵၢၼ်ႁွင်ႉ Async လၢႆး Sync", "ၵၢၼ်ႁွင်ႉ Sync လၢႆး Async", "ၵၢၼ်ပိတ်း App ၵမ်းလဵဝ်", "ၵၢၼ် Error ၼႂ်း Method"], "What is Sync-over-Async?"),
+  Quiz(2490, "Async/Await ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["I/O-bound operations", "UI design ၵူၺ်း", "Memory management ၵူၺ်း", "Hard disk partitioning"], "What is Async/Await primarily used for?"),
+  Quiz(2491, "Task.WhenAny သူင်ႇၽွၼ်းလႆႈပဵၼ်သင်?", ["Task ဢၼ်ယဝ်ႉဢွၼ်တၢင်းပိူၼ်ႈ", "Array ၶွင် Tasks တင်းမူတ်း", "string ၵူၺ်းဢၼ်လဵဝ်", "bool ၵူၺ်းဢၼ်လဵဝ်"], "What does WhenAny return?"),
+  Quiz(2492, "Exception ၼႂ်း async void ၸၢင်ႈ catch လႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ (လၢႆးထမ်ႇမတႃႇ)", "လႆႈယူႇ (ၵူႈတီႈ)", "လႆႈၵူၺ်းၼႂ်း static", "လႆႈၵူၺ်းၼႂ်း Main"], "Can you catch exceptions from async void normally?"),
+  Quiz(2493, "Task.Status Property သူင်ႇသင်?", ["Status ၶွင် Task ယၢမ်းလဵဝ်", "ၸိုဝ်ႈၶွင် Task", "တၢင်းဝႆးၶွင် Task", "Error ၶွင် Task"], "What does the Task.Status property return?"),
+  Quiz(2494, "ValueTask ယူႇၼႂ်း Namespace လႂ်?", ["System.Threading.Tasks", "System.IO", "System.Collections", "System.Linq"], "Which namespace contains ValueTask?"),
+  Quiz(2495, "Task.WaitAll block Thread ႁႃႉ?", ["Block (ပဵၼ် Synchronous)", "ဢမ်ႇ Block (Async)", "မၢင်ပွၵ်ႈၵူၺ်း", "Block ၵူၺ်းၼႂ်း Android"], "Does Task.WaitAll block the thread?"),
+  Quiz(2496, "Task.WhenAll block Thread ႁႃႉ?", ["ဢမ်ႇ Block (ပဵၼ် Asynchronous)", "Block (Sync)", "Block ၵူၺ်းၼႂ်း Windows", "Block ၵူၺ်းၼႂ်း UI Thread"], "Does Task.WhenAll block the thread?"),
+  Quiz(2497, "await ၸၢင်ႈၸႂ်ႉၼႂ်း catch ဢမ်ႇၼၼ် finally လႆႈႁႃႉ?", ["လႆႈ (C# 6.0+)", "ဢမ်ႇလႆႈသေပွၵ်ႈ", "လႆႈၵူၺ်းၼႂ်း try", "လႆႈၵူၺ်းၼႂ်း Windows"], "Can await be used in catch or finally blocks?"),
+  Quiz(2498, "Task.Delay ၸႂ်ႉ Timer ၽၢႆႇလင်ႁႃႉ?", ["ၸႂ်ႉ (ဢမ်ႇၸႂ်ႉ Thread Sleep)", "ဢမ်ႇၸႂ်ႉသေပိူင်", "ၸႂ်ႉ Thread.Sleep ၵမ်းလဵဝ်", "ဢမ်ႇႁူႉ"], "Does Task.Delay use a timer internally?"),
+  Quiz(2499, "async Method ၸၢင်ႈမီး Parameters ပဵၼ် out ႁႃႉ?", ["ဢမ်ႇလႆႈ", "လႆႈယူႇ", "လႆႈၵူၺ်း int", "လႆႈၵူၺ်း string"], "Can async methods have 'out' parameters?"),
+  Quiz(2500, "ၵၢၼ်ႁဵၼ်း Module 20 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["တႅမ်ႈ App ဢၼ်လႅၼ်ႈလူၺ်ႈလီ", "ပိတ်း App ၵမ်းလဵဝ်", "တႅမ်ႈ HTML လၢႆး Async", "ဢမ်ႇႁဵတ်းသင်သေယိူင်ႈ"], "What can we do after learning Module 20?"),
+];
 
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
@@ -8417,4 +8542,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM17,
   csharpQuizM18,
   csharpQuizM19,
+  csharpQuizM20,
 ];
