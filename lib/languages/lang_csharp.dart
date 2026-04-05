@@ -337,6 +337,7 @@ const Map<int, Map<int, String>> csharpModules = {
     250: "Deadlocks and the 'Async All the Way' Best Practice",
     251: "Exercise: Building a 'Shan Image Downloader' Simulator",
   },
+  //  21: "Desktop Apps: Introduction to WinForms or WPF",
   21: {
     252: "The History of Windows Desktop Development: WinForms vs. WPF",
     253: "WinForms Basics: The Designer, Toolbox, and Properties Window",
@@ -345,9 +346,9 @@ const Map<int, Map<int, String>> csharpModules = {
     256: "Layout Management: Anchoring and Docking Controls",
     257: "Building a Simple 'Shan Community Calculator' in WinForms",
     258:
-        "Introduction to WPF: The Power of XAML (Extensible Application Markup Language)",
+        "Introduction to WPF: The Power of XAML",
     259:
-        "WPF Layouts: Grids, StackPanels, and WrapPanels (The Flutter Connection)",
+        "WPF Layouts: Grids, StackPanels, and WrapPanels",
     260: "Data Binding: Connecting UI to C# Code Automatically",
     261: "WPF Styling and Templating: Making Apps Look Professional",
     262: "The MVVM Pattern (Model-View-ViewModel) Introduction",
@@ -700,6 +701,20 @@ final Map<int, Lesson> csharpLessons = {
   249: Lesson(20, 249),
   250: Lesson(20, 250),
   251: Lesson(20, 251),
+  252: Lesson(21, 252),
+  253: Lesson(21, 253),
+  254: Lesson(21, 254),
+  255: Lesson(21, 255),
+  256: Lesson(21, 256),
+  257: Lesson(21, 257),
+  258: Lesson(21, 258),
+  259: Lesson(21, 259),
+  260: Lesson(21, 260),
+  261: Lesson(21, 261),
+  262: Lesson(21, 262),
+  263: Lesson(21, 263),
+  264: Lesson(21, 264),
+  265: Lesson(21, 265),
 };
 
 final List<Quiz> csharpQuizM1 = [
@@ -8521,6 +8536,155 @@ final List<Quiz> csharpQuizM20 = [
   Quiz(2500, "ၵၢၼ်ႁဵၼ်း Module 20 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["တႅမ်ႈ App ဢၼ်လႅၼ်ႈလူၺ်ႈလီ", "ပိတ်း App ၵမ်းလဵဝ်", "တႅမ်ႈ HTML လၢႆး Async", "ဢမ်ႇႁဵတ်းသင်သေယိူင်ႈ"], "What can we do after learning Module 20?"),
 ];
 
+final List<Quiz> csharpQuizM21 = [
+  // Lesson 252: History of Desktop Development
+  Quiz(2521, "WinForms တႄႇမီးမႃးၼႂ်းပီလႂ်?", ["2002", "2006", "1995", "2010"], "When was WinForms first released?"),
+  Quiz(2522, "WPF ၸႂ်ႉ Graphics Engine ဢၼ်လႂ်?", ["DirectX", "GDI+", "OpenGL", "Vulkan"], "Which graphics engine does WPF use?"),
+  Quiz(2523, "လွင်ႈပႅၵ်ႇပိူင်လူင်ၵႄႈ WinForms လႄႈ WPF ပဵၼ်သင်?", ["WinForms ပဵၼ် Pixel-based သေ WPF ပဵၼ် Vector-based", "WPF တႅမ်ႈငၢႆႈလိူဝ် WinForms တႃႇသေႇ", "WinForms ၸႂ်ႉ XAML ၼႂ်းၵၢၼ် Design", "WPF ဢမ်ႇ Support ၼႃႈၸေႃး 4K"], "Main difference between WinForms and WPF?"),
+  Quiz(2524, "XAML ယေႃႇမႃးလုၵ်ႉတီႈသင်?", ["Extensible Application Markup Language", "Extended App Model Language", "Extra Async Markup Logic", "Express Application Main Link"], "What does XAML stand for?"),
+  Quiz(2525, "Framework လႂ်ဢၼ်မၵ်းမၼ်ႈလွင်ႈ Design လႄႈ Logic ဢွၵ်ႇၵၼ်လီလိူဝ်?", ["WPF", "WinForms", "VB6", "MS-DOS"], "Which framework separates Design and Logic better?"),
+
+  // Lesson 253: WinForms Basics
+  Quiz(2531, "Property လႂ်ဢၼ်ၸႂ်ႉမၵ်းမၼ်ႈၸိုဝ်ႈ Control တွၼ်ႈတႃႇတႅမ်ႈ Code?", ["Name", "Text", "ID", "Tag"], "Property used to identify a control in code?"),
+  Quiz(2532, "Toolbox ၼႂ်း Visual Studio မီးၼႃႈၵၢၼ်သင်?", ["တီႈၵဵပ်း Controls တွၼ်ႈတႃႇလၢၵ်ႈမႃးဝၢင်း", "တီႈမႄးသီ လႄႈ Font ၶွင် Control", "တီႈတႅမ်ႈ Code C# ၶွင် Event", "တီႈၸတ်းၵၢၼ် Files တင်းမူတ်းၼႂ်း Project"], "Purpose of the Toolbox in Visual Studio?"),
+  Quiz(2533, "Shortcut Key လႂ်ဢၼ်ၸႂ်ႉတႃႇၵျွၵ်းၵႂႃႇၼႃႈ Designer?", ["Shift + F7", "F7", "F5", "Ctrl + S"], "Shortcut to view the Designer window?"),
+  Quiz(2534, "သင်ၶႂ်ႈလႅၵ်ႈလိၵ်ႈဢၼ်ၼႄၼိူဝ် Button ၼၼ်ႉ တေလႆႈမႄး Property လႂ်?", ["Text", "Name", "Content", "Label"], "Property to change the display text of a Button?"),
+  Quiz(2535, "Properties Window ၵႆႉမီးယူႇတီႈလႂ်?", ["ၽၢႆႇၶႂႃ ၽၢႆႇတႂ်ႈ Solution Explorer", "ၽၢႆႇသၢႆႉ ၸပ်းတင်း Toolbox", "ၽၢႆႇၼိူဝ် Menu Bar", "ၽၢႆႇတႂ်ႈ Output Window"], "Where is the Properties window typically located?"),
+
+  // Lesson 254: Event-Driven Programming
+  Quiz(2541, "Event-Driven Programming ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်တႅမ်ႈ Code ႁႂ်ႈလႅၼ်ႈၸွမ်းၼင်ႇၵၢၼ်တူင်ႉၼိုင် User", "ၵၢၼ်တႅမ်ႈ Code ႁႂ်ႈလႅၼ်ႈၸွမ်းထႅဝ်တႄႇၼိူဝ်လူင်းတႂ်ႈ", "ၵၢၼ်တႅမ်ႈ Code တွၼ်ႈတႃႇ Website ၵူၺ်း", "ၵၢၼ်တႅမ်ႈ Code ဢၼ်ဢမ်ႇမီးၼႃႈၸေႃး UI"], "What is Event-Driven Programming?"),
+  Quiz(2542, "EventArgs (e) ၼႂ်း Method Event ၸွႆးလွင်ႈသင်?", ["သူင်ႇၶေႃႈမုၼ်းထႅမ် လွင်ႈ Event ဢၼ်ၵိူတ်ႇၶိုၼ်း", "မၵ်းမၼ်ႈၸိုဝ်ႈၶွင် Control ဢၼ်သူင်ႇသၼ်ႇၺႃႇ", "ပိတ်း App ၵမ်းလဵဝ်မိူဝ်ႈမီး Error", "လႅၵ်ႈပိၼ်ႇသီၶွင် Form ႁင်းၵူၺ်း"], "What is the purpose of EventArgs?"),
+  Quiz(2543, "လၢႆးသၢင်ႈ Click Event ငၢႆႈသုတ်းၼႂ်း WinForms ပဵၼ်သင်?", ["Double Click ၼိူဝ် Control ၼႂ်း Designer", "တႅမ်ႈ Code ၼႂ်း Main() ႁင်းၵူၺ်း", "လၢၵ်ႈ Button ၵႂႃႇဝၢင်းၼိူဝ် TextBox", "ၼဵၵ်း F12 ၼိူဝ် Button"], "Easiest way to create a Click event?"),
+  Quiz(2544, "Event လႂ်ဢၼ်တေလႅၼ်ႈၵမ်းလဵဝ်မိူဝ်ႈ App တႄႇပိုတ်ႇမႃး?", ["Load", "Click", "Paint", "Closing"], "Which event runs when the form first opens?"),
+  Quiz(2545, "MessageBox.Show() ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၼႄၼႃႈတၢင်ႇလဵၵ်ႉๆ တႃႇလၢတ်ႈၼႄ User", "ႁပ်ႉၶေႃႈမုၼ်းလုၵ်ႉတီႈ Keyboard", "ပိတ်း App ၵမ်းလဵဝ်", "သိမ်း Data ၶဝ်ႈၼႂ်း Database"], "What is MessageBox.Show() used for?"),
+
+  // Lesson 255: Common Controls
+  Quiz(2551, "Control လႂ်ဢၼ်ၸႂ်ႉၼႄလိၵ်ႈဢၼ် User ဢမ်ႇၸၢင်ႈမႄးလႆႈ?", ["Label", "TextBox", "Button", "CheckBox"], "Which control displays read-only text?"),
+  Quiz(2552, "Property လႂ်ၶွင် TextBox ဢၼ်ၸႂ်ႉသိၵ်ႇ (Hide) Password?", ["PasswordChar", "IsHidden", "SecurityMode", "Masked"], "Property to hide characters in a TextBox?"),
+  Quiz(2553, "CheckBox မီး Property လႂ်တွၼ်ႈတႃႇၵူတ်ႇထတ်းဝႃႈ မီးမၢႆၶီတ်းႁႃႉ?", ["Checked", "IsSelected", "Value", "State"], "Property to check if a CheckBox is ticked?"),
+  Quiz(2554, "သင်ၶႂ်ႈႁပ်ႉလိၵ်ႈလၢႆလၢႆထႅဝ်ၼႂ်း TextBox တေလႆႈမႄးသင်?", ["Multiline = true", "ScrollBars = Both", "WordWrap = true", "Height = 500"], "How to enable multiple lines in a TextBox?"),
+  Quiz(2555, "Prefix ဢၼ် Standard တွၼ်ႈတႃႇ TextBox ပဵၼ်သင်?", ["txt", "lbl", "btn", "chk"], "Standard naming prefix for a TextBox?"),
+
+  // Lesson 256: Layout Management
+  Quiz(2556, "Anchoring ၸွႆးလွင်ႈသင်ၼႂ်း WinForms?", ["မၵ်းမၼ်ႈႁႂ်ႈ Control ယူႇႁၢင်ႇၵႆတင်းၶွပ်ႇၼႃႈၸေႃးတႃႇသေႇ", "ႁဵတ်းႁႂ်ႈ Control ၵႂႃႇၸပ်းၶွပ်ႇၽၢႆႇလႂ်ၽၢႆႇၼိုင်ႈတင်းမူတ်း", "လႅၵ်ႈပိၼ်ႇသီပိုၼ်ႉလုၵ်ႉတီႈ Designer", "ႁႄႉၵၢင်ႈဢမ်ႇႁႂ်ႈ User ၼဵၵ်းတုမ်ႇလႆႈ"], "What does Anchoring do in WinForms?"),
+  Quiz(2557, "Docking ၸွႆးလွင်ႈသင်?", ["ႁဵတ်းႁႂ်ႈ Control ၵႂႃႇၵိၼ်ပိုၼ်ႉတီႈၸပ်းၶွပ်ႇၽၢႆႇၼိုင်ႈတင်းမူတ်း", "ၵွင်ႉ Control ဝႆႉတင်းၵႄႈၵၢင်ၼႃႈၸေႃး", "ႁဵတ်းႁႂ်ႈ Control ႁၢႆၵႂႃႇမိူဝ်ႈ Resize", "ၸတ်းၵၢၼ် Event ၶွင် Mouse"], "What does Docking do?"),
+  Quiz(2558, "သင် Anchor တင်း 4 ၽၢႆႇ (Top, Bottom, Left, Right) တေပဵၼ်သင်?", ["Control တေယိုတ်းတူဝ် (Resize) ၸွမ်းၼႃႈၸေႃး", "Control တေယူႇတီႈၵဝ်ႇဢမ်ႇတူင်ႉၼိုင်", "Control တေလႅၼ်ႈၵႂႃႇယူႇတီႈၸဵင်ႇၶႂႃ", "App တေ Crash မိူဝ်ႈယိုတ်းၼႃႈၸေႃး"], "What happens if a control is anchored to all four sides?"),
+  Quiz(2559, "Dock.Fill ပွင်ႇဝႃႈသင်?", ["ၵိၼ်ပိုၼ်ႉတီႈဢၼ်ၵိုတ်းဝႆႉတင်းမူတ်းၼိူဝ် Form", "ပိတ်းပိုၼ်ႉတီႈဢမ်ႇပၼ်ဢဝ်သင်မႃးဝၢင်း", "ၼႄ Control ႁႂ်ႈယႂ်ႇလိူဝ်ပိူင်ထမ်ႇမတႃႇ", "ႁဵတ်းႁႂ်ႈ Control ယူႇၽၢႆႇၼိူဝ်သုတ်း"], "What does Dock.Fill mean?"),
+  Quiz(2560, "Panel Control ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပဵၼ် Container တႃႇၸတ်းၸုမ်း Controls", "ၼႄလိၵ်ႈ Unicode ႁႂ်ႈႁၢင်ႈလီ", "ၸတ်းၵၢၼ်လွင်ႈ Download ၼႂ်း App", "ပဵၼ်တူဝ်ၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "What is the purpose of a Panel control?"),
+
+  // Lesson 257: Project - Calculator
+  Quiz(2561, "double.Parse() ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပိၼ်ႇ String ႁႂ်ႈပဵၼ် Double တွၼ်ႈတႃႇၼပ်ႉသွၼ်ႇ", "ပိၼ်ႇ Double ႁႂ်ႈပဵၼ် String တႃႇၼႄၼိူဝ် Label", "ၵူတ်ႇထတ်းဝႃႈ TextBox ဝၢင်ႇဝႆႉႁႃႉ", "ပိတ်း App မိူဝ်ႈၼပ်ႉသွၼ်ႇၽိတ်း"], "Purpose of double.Parse()?"),
+  Quiz(2562, "ႁဵတ်းသင်ႁဝ်းလူဝ်ႇၸႂ်ႉ try-catch ၼႂ်း Calculator?", ["ႁပ်ႉမိုဝ်းမိူဝ်ႈ User တႅမ်ႈလိၵ်ႈဢၼ်ဢမ်ႇၸိုဝ်ႈတူဝ်ၼပ်ႉ", "ႁဵတ်းႁႂ်ႈ App ၼပ်ႉသွၼ်ႇဝႆးလိူဝ်ၵဝ်ႇ", "ၸွႆးမႄးသီ TextBox ႁင်းၵူၺ်းမၼ်း", "ဢမ်ႇလူဝ်ႇၸႂ်ႉၵေႃႈလႆႈ ဢမ်ႇလမ်ႇလွင်ႈသင်"], "Why use try-catch in a calculator app?"),
+  Quiz(2563, "lblResult.Text = sum.ToString() ပွင်ႇဝႃႈသင်?", ["ပိၼ်ႇၽွၼ်းလႆႈပဵၼ်လိၵ်ႈသေၼႄၼိူဝ် Label", "ပိၼ်ႇလိၵ်ႈႁႂ်ႈပဵၼ်တူဝ်ၼပ်ႉသေသိမ်းဝႆႉ", "Delete ၽွၼ်းလႆႈဢွၵ်ႇပႅတ်ႈ", "ၼႄ MessageBox လၢတ်ႈၽွၼ်းလႆႈ"], "What does result.ToString() do in this context?"),
+  Quiz(2564, "Code-behind ၶွင် WinForms ၵႆႉမီး Extension သင်?", [".cs", ".xaml", ".design", ".config"], "Common extension for WinForms code-behind?"),
+  Quiz(2565, "Color.LightGreen ယူႇၼႂ်း Namespace လႂ်?", ["System.Drawing", "System.IO", "System.Text", "System.Collections"], "Which namespace contains Color constants?"),
+
+  // Lesson 258: Introduction to WPF & XAML
+  Quiz(2566, "Markup Language ဢၼ် WPF ၸႂ်ႉၸိုဝ်ႈဝႃႈသင်?", ["XAML", "HTML", "JSON", "YAML"], "What is the markup language used by WPF?"),
+  Quiz(2567, "Property လႂ်ၼႂ်း WPF ဢၼ်မိူၼ်တင်း Text ၼႂ်း WinForms Button?", ["Content", "Label", "Value", "Title"], "WPF equivalent of the 'Text' property for a Button?"),
+  Quiz(2568, "WPF ၸတ်းၵၢၼ် Graphics လၢႆးလႂ်?", ["Vector-based", "Pixel-based", "Binary-based", "Text-based"], "How does WPF render graphics?"),
+  Quiz(2569, "Separation of Concerns ၼႂ်း WPF ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၸႅၵ်ႇ Design (XAML) လႄႈ Logic (C#) ဢွၵ်ႇၵၼ်", "ၵၢၼ်ပိတ်း App ၵမ်းလဵဝ်မိူဝ်ႈမီး Error", "ၵၢၼ်ႁဵတ်းႁႂ်ႈ App လႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ", "ၵၢၼ်ၸတ်းၵၢၼ် Memory ႁင်းၵူၺ်း"], "What is Separation of Concerns in WPF?"),
+  Quiz(2570, "Window တူဝ်ၼိုင်ႈၼႂ်း WPF မီးၾိုင််းပိူင်လူင်လၢႆဢၼ်?", ["2 ဢၼ် (.xaml လႄႈ .xaml.cs)", "1 ဢၼ်ၵူၺ်း", "3 ဢၼ်", "4 ဢၼ်"], "How many main files make up a WPF window?"),
+
+  // Lesson 259: WPF Layouts
+  Quiz(2571, "Grid ၼႂ်း WPF ၸတ်းဝၢင်း Controls လၢႆးလႂ်?", ["ၸတ်းပဵၼ် Rows လႄႈ Columns (Table)", "ဝၢင်းသိုပ်ႇၵၼ်လူင်းတႂ်ႈၵူၺ်း", "ဝၢင်းၸွတ်ႉၼႃႈၸေႃးႁင်းၵူၺ်း", "ဝၢင်းၸပ်းၶွပ်ႇတႃႇသေႇ"], "How does a Grid layout work?"),
+  Quiz(2572, "StackPanel ဢၼ်ပဵၼ် Vertical တေဝၢင်း Controls ၸိူင်ႉႁိုဝ်?", ["ဝၢင်းတေႃႇၵၼ်လူင်းတႂ်ႈ", "ဝၢင်းတေႃႇၵၼ်ၵႂႃႇၽၢႆႇၶႂႃ", "ဝၢင်းသွၼ်ႉၵၼ်တီႈလဵဝ်", "ဝၢင်းၵူၺ်းတီႈၸဵင်ႇ"], "How does a vertical StackPanel arrange controls?"),
+  Quiz(2573, "WrapPanel ပႅၵ်ႇတင်း StackPanel ၸိူင်ႉႁိုဝ်?", ["WrapPanel တေၵျွၵ်းလူင်းထႅဝ်မႂ်ႇမိူဝ်ႈၼႃႈၸေႃးတဵမ်", "WrapPanel ၸႃႉလိူဝ် StackPanel", "WrapPanel ၸႂ်ႉလႆႈၵူၺ်းတွၼ်ႈတႃႇ Buttons", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်"], "Difference between WrapPanel and StackPanel?"),
+  Quiz(2574, "Star Sizing (*) ၼႂ်း Grid ပွင်ႇဝႃႈသင်?", ["ၵိၼ်ပိုၼ်ႉတီႈဢၼ်ၵိုတ်းဝႆႉတင်းမူတ်းၸွမ်းသတ်ႉတပုၼ်ႇ", "မၵ်းမၼ်ႈသႅၼ်းပဵၼ် 100 Pixel တႅတ်ႉတေႃး", "ႁဵတ်းႁႂ်ႈ Column ႁၢႆၵႂႃႇ", "ႁဵတ်းႁႂ်ႈ Row ယႂ်ႇလိူဝ်ပိူၼ်ႈ 10 ပွၵ်ႈ"], "What is Star Sizing in a Grid?"),
+  Quiz(2575, "Orientation Property ၸႂ်ႉၼႂ်း Layout လႂ်?", ["StackPanel", "Grid", "Border", "Canvas"], "Which layout uses the Orientation property?"),
+
+  // Lesson 260: Data Binding
+  Quiz(2576, "Data Binding ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၵွင်ႉ UI လႄႈ Data ႁႂ်ႈလႅၵ်ႈပိၼ်ႇၸွမ်းၵၼ်", "ၵၢၼ်သိမ်း Data ၶဝ်ႈၼႂ်း Database", "ၵၢၼ်သူင်ႇ Data ၽၢၼ်ႇ Internet", "ၵၢၼ် Delete Data ဢွၵ်ႇပႅတ်ႈ"], "What is Data Binding?"),
+  Quiz(2577, "Two-Way Binding ပွင်ႇဝႃႈသင်?", ["Data လႄႈ UI Update ၸွမ်းၵၼ်တင်းသွင်ၽၢႆႇ", "UI Update ၸွမ်း Data ၽၢႆႇလဵဝ်", "Data Update ၸွမ်း UI ၽၢႆႇလဵဝ်", "Binding ဢၼ်ၸႂ်ႉလႆႈၵူၺ်း 2 ပွၵ်ႈ"], "What is Two-Way Binding?"),
+  Quiz(2578, "DataContext ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈငဝ်ႈႁၢၵ်ႈၶေႃႈမုၼ်းတႃႇ Binding", "မၵ်းမၼ်ႈသီပိုၼ်ႉၶွင် Window", "မၵ်းမၼ်ႈၸိုဝ်ႈၶွင် Application", "မၵ်းမၼ်ႈလွင်ႈပိတ်း App"], "What is DataContext used for?"),
+  Quiz(2579, "Interface လႂ်ဢၼ်ၸႂ်ႉသူင်ႇသၼ်ႇၺႃႇမိူဝ်ႈ Data လႅၵ်ႈပိၼ်ႇ?", ["INotifyPropertyChanged", "IDisposable", "ICollection", "IComparable"], "Interface for notifying UI of data changes?"),
+  Quiz(2580, "Binding Mode 'OneWay' ပွင်ႇဝႃႈသင်?", ["Data သူင်ႇၸူး UI ၵူၺ်း", "UI သူင်ႇၸူး Data ၵူၺ်း", "Update တင်းသွင်ၽၢႆႇ", "ဢမ်ႇမီးၵၢၼ် Update"], "What does 'OneWay' binding mode mean?"),
+
+  // Lesson 261: Styling and Templating
+  Quiz(2581, "Style ၼႂ်း WPF မိူၼ်တင်းသင်ၼႂ်း Website?", ["CSS", "HTML", "JavaScript", "PHP"], "WPF Styles are similar to what in web development?"),
+  Quiz(2582, "ControlTemplate ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပိၼ်ႇႁၢင်ႈၽၢင်ပိူင်သၢင်ႈၶွင် Control", "လႅၵ်ႈသီတူဝ်လိၵ်ႈၵူၺ်း", "မၵ်းမၼ်ႈ Logic ၼႂ်း C#", "သိမ်း Data ၶဝ်ႈၼႂ်း RAM"], "Purpose of a ControlTemplate?"),
+  Quiz(2583, "Trigger ၼႂ်း Style ႁဵတ်းသင်?", ["လႅၵ်ႈပိၼ်ႇ Style မိူဝ်ႈမီးငဝ်းလၢႆးသင်သေယိူင်ႈ (Hover)", "ပိတ်း App ၵမ်းလဵဝ်မိူဝ်ႈၼဵၵ်းတုမ်ႇ", "သူင်ႇ Email ႁင်းၵူၺ်းမၼ်း", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်ယၢဝ်းๆ"], "What does a Trigger do in a Style?"),
+  Quiz(2584, "StaticResource ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ႁွင်ႉၸႂ်ႉ Resource ဢၼ်မၵ်းမၼ်ႈဝႆႉယဝ်ႉ", "သၢင်ႈ Resource မႂ်ႇၵူႈပွၵ်ႈဢၼ်ႁွင်ႉ", "ပိတ်း Resource ဢမ်ႇပၼ်ၽႂ်ၸႂ်ႉ", "မႄး Resource ႁင်းၵူၺ်းမၼ်း"], "Purpose of StaticResource?"),
+  Quiz(2585, "Setter ၼႂ်း Style ၸႂ်ႉမၵ်းမၼ်ႈသင်?", ["Property လႄႈ Value ဢၼ်ၶႂ်ႈလႅၵ်ႈ", "ၸိုဝ်ႈၶွင် Control", "Event Handler", "Name ၶွင် Method"], "What does a Setter in a Style define?"),
+
+  // Lesson 262: MVVM Pattern
+  Quiz(2586, "MVVM ယေႃႇမႃးလုၵ်ႉတီႈသင်?", ["Model-View-ViewModel", "Main-View-Version-Model", "Mobile-View-Visual-Model", "Model-Visual-View-Manager"], "What does MVVM stand for?"),
+  Quiz(2587, "သုၼ်ႇလႂ်ၼႂ်း MVVM ဢၼ်ပဵၼ် XAML?", ["View", "Model", "ViewModel", "Controller"], "Which part of MVVM is the XAML file?"),
+  Quiz(2588, "ViewModel မီးၼႃႈၵၢၼ်သင်?", ["ၸတ်းၵၢၼ် Logic လႄႈ ႁၢင်ႈႁႅၼ်း Data တႃႇ View", "သိမ်း Data ၶဝ်ႈၼႂ်း Database ၵူၺ်း", "တႅမ်ႈႁၢင်ႈ UI ႁႂ်ႈႁၢင်ႈလီ", "ပိတ်း Application"], "Role of the ViewModel in MVVM?"),
+  Quiz(2589, "Command (ICommand) ၸႂ်ႉတႅၼ်းသင်ၼႂ်း MVVM?", ["Event Click ၶွင် Button", "Property Text ၶွင် Label", "Background Color", "Window Title"], "What does a Command replace in MVVM?"),
+  Quiz(2590, "Model ၼႂ်း MVVM မီးၼႃႈၵၢၼ်သင်?", ["သိမ်းၶေႃႈမုၼ်း (Data Entities)", "ၸတ်း Layout ၶွင် UI", "ႁပ်ႉၵၢၼ် Click လုၵ်ႉတီႈ User", "ၼႄ MessageBox"], "Role of the Model in MVVM?"),
+
+  // Lesson 263: Shan Fonts and Unicode
+  Quiz(2591, "Unicode ပႅၵ်ႇတင်း Zawgyi-Tai ၸိူင်ႉႁိုဝ်?", ["Unicode ပဵၼ် Standard ၵူႈမိူင်းမိူင်းယွမ်းႁပ်ႉ", "Zawgyi ၼႄလိၵ်ႈလႆႈဝႆးလိူဝ်", "Unicode ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Windows", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်"], "Difference between Unicode and Zawgyi-Tai?"),
+  Quiz(2592, "Embedded Font ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ဢဝ် Font သႂ်ႇဝႆႉၼႂ်းတူဝ် App", "ၵၢၼ် Install Font ၶဝ်ႈၼႂ်း Windows", "ၵၢၼ် Delete Font ဢွၵ်ႇပႅတ်ႈ", "ၵၢၼ်ပိၼ်ႇလိၵ်းတႆးပဵၼ်လိၵ်ႈဢင်းၵိတ်း"], "What is an Embedded Font?"),
+  Quiz(2593, "FontFamily='./Fonts/#NamKhone' ၼႂ်း XAML ပွင်ႇဝႃႈသင်?", ["ႁွင်ႉၸႂ်ႉ Font ဢၼ် Embedded ဝႆႉၼႂ်း Folder", "ႁွင်ႉၸႂ်ႉ Font လုၵ်ႉတီႈ Internet", "လႅၵ်ႈသႅၼ်း Font ႁႂ်ႈယႂ်ႇလိူဝ်", "ပိတ်း Font ဢမ်ႇပၼ်ၼႄ"], "What does this FontFamily syntax mean?"),
+  Quiz(2594, "ႁဵတ်းသင်လိၵ်ႈတႆးၼႂ်း TextBox ၸင်ႇၵႆႉ 'ထုၵ်ႇတတ်း' (Clipped)?", ["ယွၼ်ႉ LineHeight ဢမ်ႇၵုမ်ႇထူၼ်ႈတႃႇမၢႆတႆး", "ယွၼ်ႉ RAM ဢမ်ႇၵုမ်ႇထူၼ်ႈ", "ယွၼ်ႉ Internet ၸႃႉ", "ယွၼ်ႉတႅမ်ႈ Code ၽိတ်း Syntax"], "Why does Shan text sometimes get clipped in a TextBox?"),
+  Quiz(2595, "Fallback Font ပွင်ႇဝႃႈသင်?", ["Font ဢၼ်တေၼႄမိူဝ်ႈႁႃ Font ဢၼ်သင်ႇဝႆႉဢမ်ႇႁၼ်", "Font ဢၼ်ႁၢင်ႈလီလိူဝ်ပိူၼ်ႈ", "Font ဢၼ်ၸႂ်ႉၼပ်ႉသွၼ်ႇမၢႆတူဝ်", "Font ဢၼ်ပိတ်း App ႁင်းၵူၺ်း"], "What is a Fallback Font?"),
+
+  // Lesson 264: Choosing the Framework
+  Quiz(2596, "မိူဝ်ႈလႂ်ႁဝ်းထုၵ်ႇလီလိူၵ်ႈၸႂ်ႉ WinForms?", ["မိူဝ်ႈလူဝ်ႇ App ငၢႆႈๆ ဢၼ်လၢၵ်ႈဝၢင်းသေယဝ်ႉဝႆး", "မိူဝ်ႈလူဝ်ႇ App ႁၢင်ႈလီလိူဝ်ပိူၼ်ႈ", "မိူဝ်ႈလူဝ်ႇၸႂ်ႉ DirectX ႁႅင်းๆ", "မိူဝ်ႈလူဝ်ႇတႅမ်ႈ App တွၼ်ႈတႃႇ 4K Screen"], "When should we choose WinForms?"),
+  Quiz(2597, "မိူဝ်ႈလႂ်ႁဝ်းထုၵ်ႇလီလိူၵ်ႈၸႂ်ႉ WPF?", ["မိူဝ်ႈလူဝ်ႇ App ဢၼ်မီး UI ၶိုတ်းၵၢပ်ႈ လႄႈ MVVM", "မိူဝ်ႈလူဝ်ႇ App ဢၼ်လႅၼ်ႈၼိူဝ်ၶွမ်းၵဝ်ႇๆ", "မိူဝ်ႈဢမ်ႇၶႂ်ႈႁဵၼ်း XAML", "မိူဝ်ႈလူဝ်ႇ App ဢၼ်မီးၵူၺ်း 1 တုမ်ႇ"], "When should we choose WPF?"),
+  Quiz(2598, "High-DPI Support ၶွင် WPF လီလိူဝ် WinForms ၸိူင်ႉႁိုဝ်?", ["ယွၼ်ႉ WPF ပဵၼ် Vector-based ႁၢင်ႈဢမ်ႇတႅၵ်ႇ", "ယွၼ်ႉ WPF ၸႂ်ႉ Memory ဢေႇလိူဝ်", "ယွၼ်ႉ WPF တႅမ်ႈငၢႆႈလိူဝ်", "ဢမ်ႇမီးသင်လီလိူဝ်"], "Why is WPF better for High-DPI screens?"),
+  Quiz(2599, "GDI+ ၵႆႉထုၵ်ႇၸႂ်ႉၼႂ်း Framework လႂ်?", ["WinForms", "WPF", "Flutter", "React Native"], "Which framework uses GDI+?"),
+  Quiz(2600, "Rapid Development (ဝႆး) ပဵၼ်ၸိုဝ်ႈသဵင်ၶွင် Framework လႂ်?", ["WinForms", "WPF", "Avalonia", "Uno Platform"], "Which framework is famous for Rapid Development?"),
+
+  // Lesson 265: Project - Student ID
+  Quiz(2601, "Border Control ၼႂ်း WPF ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["တႅမ်ႈၶွပ်ႇ လႄႈ မၵ်းမၼ်ႈသီပိုၼ်ႉ", "ႁပ်ႉလိၵ်ႈလုၵ်ႉတီႈ Keyboard", "ၼပ်ႉသွၼ်ႇမၢႆတွၼ်ႈလုၵ်ႈႁဵၼ်း", "သူင်ႇ Data ၸူး Server"], "What is a Border control used for in WPF?"),
+  Quiz(2602, "DropShadowEffect ၸွႆးလွင်ႈသင်?", ["ထႅမ် 'ငဝ်း' ႁႂ်ႈ UI ႁၢင်ႈလီမီးမိူၼ် 3D", "ႁဵတ်းႁႂ်ႈ App လႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ", "ပိတ်း App မိူဝ်ႈမီး Error", "လႅၵ်ႈပိၼ်ႇ Font ႁင်းၵူၺ်း"], "What does DropShadowEffect do?"),
+  Quiz(2603, "ComboBox ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပၼ် User လိူၵ်ႈၵႃႈၶၼ်လုၵ်ႉတီႈသဵၼ်ႈမၢႆ (Drop-down)", "ၼႄၶႅပ်းႁၢင်ႈလုၵ်ႈႁဵၼ်း", "တႅမ်ႈလိၵ်ႈလၢႆလၢႆထႅဝ်", "ၼဵၵ်းတုမ်ႇတႃႇ Save Data"], "Purpose of a ComboBox?"),
+  Quiz(2604, "CornerRadius Property ၸႂ်ႉမႄးသင်?", ["မႄးၶွပ်ႇႁႂ်ႈမၼ်း 'မူၼ်း' (Rounded)", "မႄးသႅၼ်းၶွင် Window", "မႄးသီတူဝ်လိၵ်ႈ", "မႄးတၢင်းဝႆး Animation"], "What does CornerRadius modify?"),
+  Quiz(2605, "Separator ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["တႅမ်ႈသဵၼ်ႈတတ်း တွၼ်ႈတႃႇၸႅၵ်ႇသုၼ်ႇ Code/UI", "ပိၼ်ႇလိၵ်ႈႁႂ်ႈပဵၼ်တူဝ်ၼပ်ႉ", "ပိတ်း App ၵမ်းလဵဝ်", "ၼပ်ႉသွၼ်ႇ % ၵၢၼ်ႁဵတ်းၵၢၼ်"], "What is a Separator used for?"),
+
+  // Additional Desktop & C# Mixed (2606 - 2620)
+  Quiz(2606, "Application.Current.Shutdown() ႁဵတ်းသင်?", ["ပိတ်း Application တင်းမူတ်း", "Restart Computer ၵမ်းလဵဝ်", "Clear Memory RAM", "Delete Project ဢွၵ်ႇပႅတ်ႈ"], "What does Application.Current.Shutdown() do?"),
+  Quiz(2607, "Property 'IsReadOnly' ၼႂ်း TextBox ၸွႆးသင်?", ["User လူလႆႈၵူၺ်း မႄးဢမ်ႇလႆႈ", "TextBox ႁၢႆၵႂႃႇလုၵ်ႉၼိူဝ် Form", "User တႅမ်ႈလႆးၵူၺ်းတူဝ်ၼပ်ႉ", "ပိတ်း TextBox ဢမ်ႇပၼ်ၼဵၵ်း"], "What is the 'IsReadOnly' property in a TextBox?"),
+  Quiz(2608, "TabOrder ပွင်ႇဝႃႈသင်?", ["လမ်ႇดับၵၢၼ်ၵျွၵ်းၶွင် Cursor မိူဝ်ႈၼဵၵ်း Tab", "ၵၢၼ်ၸတ်း Files ၼႂ်း Project", "ၵၢၼ်လႅၵ်ႈသီ Window ႁင်းၵူၺ်း", "ၵၢၼ်သူင်ႇ Data ၸူး Printer"], "What is TabOrder?"),
+  Quiz(2609, "ToolTip ၼႂ်း WinForms/WPF ပဵၼ်သင်?", ["လိၵ်ႈလဵၵ်ႉๆ ဢၼ်ၼႄမိူဝ်ႈ Mouse ၵႂႃႇၸိ", "တူဝ်မႄး Error ၼႂ်း Code", "ၸိုဝ်ႈၶွင် Compiler", "လွၵ်းတႅမ်ႈ Password"], "What is a ToolTip?"),
+  Quiz(2610, "Modal Window ပွင်ႇဝႃႈသင်?", ["ၼႃႈတၢင်ႇဢၼ်တေလႆႈပိတ်း ၸင်ႇတေသိုပ်ႇၸႂ်ႉၼႃႈတၢင်ႇၵဝ်ႇလႆႈ", "ၼႃႈတၢင်ႇဢၼ်ၼႄႁၢင်ႈလီလိူဝ်ပိူၼ်ႈ", "ၼႃႈတၢင်ႇဢၼ်မီး Animation", "ၼႃႈတၢင်ႇဢၼ်ပိတ်းဢမ်ႇလႆႈ"], "What is a Modal Window?"),
+  Quiz(2611, "DialogResult ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ႁူႉဝႃႈ User ၼဵၵ်း OK ဢမ်ႇၼၼ် Cancel", "ႁူႉဝႃႈ App လႅၼ်ႈဝႆးတေႃႇလႂ်", "ႁူႉဝႃႈမီး Memory ၵိုတ်းၵႃႈႁိုဝ်", "ႁူႉဝႃႈ User ၸိုဝ်ႈသင်"], "Purpose of DialogResult?"),
+  Quiz(2612, "Resources.resx ၼႂ်း WinForms ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵဵပ်း String, Image ဢမ်ႇၼၼ် Files ၼႂ်း Project", "တႅမ်ႈ Logic ၶွင် Button", "ၸတ်း Layout ၶွင် Form", "ပဵၼ်တူဝ် Compiler"], "What is Resources.resx for?"),
+  Quiz(2613, "Visual Tree ၼႂ်း WPF ပွင်ႇဝႃႈသင်?", ["ပိူင်သၢင်ႈၸၼ်ႉၶွင် Controls တင်းမူတ်းၼိူဝ် UI", "တူၼ်ႈမႆႉဢၼ်ၼႄၼႂ်း App", "လၢႆးၸႅၵ်ႇ Folder ၼႂ်း Project", "လၢႆးတႅမ်ႈ Code ႁႂ်ႈပဵၼ် Standard"], "What is the Visual Tree in WPF?"),
+  Quiz(2614, "Logical Tree ၼႂ်း WPF ပႅၵ်ႇတင်း Visual Tree ၸိူင်ႉႁိုဝ်?", ["Logical Tree ၼႄၵူၺ်း Controls ဢၼ်ႁဝ်းတႅမ်ႈၼႂ်း XAML", "Visual Tree ၸႃႉလိူဝ် Logical Tree", "Logical Tree ၸႂ်ႉ Memory ၼမ်လိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်"], "Difference between Logical and Visual Tree?"),
+  Quiz(2615, "Dependency Property ၼႂ်း WPF ၸွႆးလွင်ႈသင်?", ["ၸွႆးလွင်ႈ Data Binding လႄႈ Animation", "ႁဵတ်းႁႂ်ႈ App လႅၼ်ႈဝႆးလိူဝ် 10 ပွၵ်ႈ", "ယႃႉ Error ၼႂ်း Code ႁင်းၵူၺ်း", "သိမ်း Data ၶဝ်ႈၼႂ်း Database"], "Benefit of Dependency Properties?"),
+  Quiz(2616, "RelativeSource ၼႂ်း Binding ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["Binding ၸူး Control ဢၼ်ယူႇၸမ်ၵၼ် ဢမ်ႇၼၼ် Parent", "Binding ၸူး Database ၽၢႆႇၼွၵ်ႈ", "Binding ၸူး Website တၢင်ႇဢၼ်", "Binding ၸူး File Text"], "What is RelativeSource in Binding used for?"),
+  Quiz(2617, "ItemsControl ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၼႄသဵၼ်ႈမၢႆ (List) ၶွင် Data", "ၼႄ Button ဢၼ်လဵဝ်", "ၼႄ TextBox တႃႇတႅမ်ႈလိၵ်ႈ", "ပိတ်း Application"], "Purpose of an ItemsControl?"),
+  Quiz(2618, "DataTemplate ၼႂ်း WPF ၸႂ်ႉမၵ်းမၼ်ႈသင်?", ["ႁၢင်ႈၽၢင်ၶွင် Data ၼႂ်း List", "သႅၼ်းၶွင် Window", "ၸိုဝ်ႈၶွင် Variable", "တၢင်းဝႆးၶွင် Thread"], "What does a DataTemplate define?"),
+  Quiz(2619, "CommandParameter ၸႂ်ႉသူင်ႇသင်?", ["သူင်ႇၶေႃႈမုၼ်းထႅမ်ၵႂႃႇၸွမ် Command", "သူင်ႇ Error ၸူး Developer", "သူင်ႇသႅၼ်းၶွင် Button", "သူင်ႇသီပိုၼ်ႉၶွင် Form"], "What is CommandParameter for?"),
+  Quiz(2620, "Messenger/EventAggregator ၼႂ်း MVVM ၸွႆးသင်?", ["သူင်ႇၶေႃႈမုၼ်းၵႄႈ ViewModel ဢၼ်ဢမ်ႇႁူႉၸၵ်းၵၼ်", "သူင်ႇ Email ႁင်းၵူၺ်း", "ပိတ်း Windows တင်းမူတ်း", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "What does a Messenger do in MVVM?"),
+
+  // Final Mixed Review (2621 - 2650)
+  Quiz(2621, "WPF Support 3D Graphics ႁႃႉ?", ["Support (ၸႂ်ႉ Viewport3D)", "ဢမ်ႇ Support သေပွၵ်ႈ", "Support ၵူၺ်းၼႂ်း Windows 11", "Support ၵူၺ်းၼႂ်း WinForms"], "Does WPF support 3D graphics?"),
+  Quiz(2622, "MultiBinding ၼႂ်း WPF ပွင်ႇဝႃႈသင်?", ["Binding Property 1 ဢၼ် ၶဝ်ႈၸူး Source လၢႆလၢႆဢၼ်", "Binding ၸူး Database လၢႆဢၼ်ၸွမ်ၵၼ်", "Binding ၵူၺ်းၼႂ်း Windows", "ဢမ်ႇမီးၼႂ်း WPF"], "What is MultiBinding?"),
+  Quiz(2623, "IValueConverter ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပိၼ်ႇ Data လုၵ်ႉတီႈ Source ႁႂ်ႈပဵၼ်ႁၢင်ႈဢၼ် UI လူဝ်ႇ", "ပိၼ်ႇ C# ႁႂ်းပဵၼ် XAML", "ပိၼ်ႇ App ႁႂ်းပဵၼ် Website", "ပိၼ်ႇ File Text ႁႂ်ႈပဵၼ် Image"], "Purpose of IValueConverter?"),
+  Quiz(2624, "UserControl ၼႂ်း WPF ၸွႆးသင်?", ["သၢင်ႈ Control ဢၼ်ၸႂ်ႉလႆႈလၢႆလၢႆပွၵ်ႈ (Reusable)", "ႁပ်ႉၶေႃႈမုၼ်းလုၵ်ႉတီႈ User ၵူၺ်း", "ပိတ်း App ႁင်းၵူၺ်းမၼ်း", "မႄးသီ Window ႁႂ်ႈႁၢင်ႈလီ"], "Benefit of a UserControl?"),
+  Quiz(2625, "App.xaml ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈ Global Resources လႄႈ Startup Window", "တႅမ်ႈ Logic ၶွင် Button", "ၸတ်း Layout ၶွင် Page", "ပဵၼ်တူဝ် Compiler"], "Purpose of App.xaml?"),
+  Quiz(2626, "Dispatcher ၼႂ်း WPF ၸွႆးလွင်ႈသင်?", ["Update UI လုၵ်ႉတီႈ Background Thread ႁႂ်းလွတ်ႈၽေး", "သူင်ႇ Data ၸူး Server", "ပိတ်း Application", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်ယၢဝ်းๆ"], "What does the Dispatcher do?"),
+  Quiz(2627, "BackgroundWorker ပႅၵ်ႇတင်း Task ၸိူင်ႉႁိုဝ်?", ["BackgroundWorker ပဵၼ်ပိူင်ၵဝ်ႇ (Legacy) ၼႂ်း WinForms", "Task ၸႃႉလိူဝ် BackgroundWorker", "BackgroundWorker ၸႂ်ႉ Memory ဢေႇလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်"], "Difference between BackgroundWorker and Task?"),
+  Quiz(2628, "ObservableCollection<T> ၸွႆးလွင်ႈသင်?", ["Update UI ႁင်းၵူၺ်းမိူဝ်ႈ Item ၼႂ်း List ထုၵ်ႇထႅမ်/လူတ်း", "သိမ်း Data ၶဝ်ႈၼႂ်း Database ဝႆးလိူဝ်", "ႁဵတ်းႁႂ်ႈ App လႅၼ်ႈဝႆးလိူဝ်", "ပိတ်း App ၵမ်းလဵဝ်မိူဝ်ႈ List တဵမ်"], "Benefit of ObservableCollection?"),
+  Quiz(2629, "Virtualization (UI) ၼႂ်း WPF ၸွႆးသင်?", ["ႁဵတ်းႁႂ်း List ဢၼ်မီး Item ၼမ်ၼႃႇလႅၼ်ႈလႆႈလူၺ်ႈ (Smooth)", "သၢင်ႈ Computer တူဝ်မႂ်ႇၼႂ်း App", "ႁဵတ်းႁႂ်း App ႁၢင်ႈလီလိူဝ် 10 ပွၵ်ႈ", "ယႃႉ Error ၼႂ်း Code"], "What is UI Virtualization?"),
+  Quiz(2630, "XAML Islands ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၸႂ်ႉ WPF/WinUI Controls ၼႂ်း WinForms ဢမ်ႇၼၼ် C++", "ၵိုတ်းပႂ်ႉၵၢၼ်သူင်ႇ Data", "ၸိုဝ်ႈ Server ၶွင် Microsoft", "လွၵ်းတႅမ်ႈ Code ၼိူဝ် Website"], "What are XAML Islands?"),
+  Quiz(2631, "VisualStateManager ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၸတ်းၵၢၼ်လွင်ႈလႅၵ်ႈပိၼ်ႇႁၢင်ႈ UI ၸွမ်းၼင်ႇ State", "ၸတ်းၵၢၼ် Memory RAM", "ၸတ်းၵၢၼ် Files ၼႂ်း Project", "ၸတ်းၵၢၼ် Database Connection"], "Purpose of VisualStateManager?"),
+  Quiz(2632, "Behavior ၼႂ်း WPF ၸွႆးထႅမ်သင်?", ["ထႅမ် Feature ႁႂ်း Control လူၺ်ႈဢမ်ႇလူဝ်ႇတႅမ်ႈ Code-behind", "ထႅမ်တူဝ်ၼပ်ႉသွၼ်ႇမၢႆတူဝ်", "ထႅမ်သီပိုၼ်ႉႁႂ်ႈႁၢင်ႈလီ", "ထႅမ်တူဝ်ယႃႉ Virus"], "What does a Behavior add to a control?"),
+  Quiz(2633, "Adorner Layer ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["တႅမ်ႈႁၢင်ႈသွၼ်ႉၼိူဝ် Control (မိူၼ် Resize handle)", "သိမ်း Data ၶဝ်ႈၼႂ်း File", "ပိတ်း Application", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "What is the Adorner Layer for?"),
+  Quiz(2634, "CanExecute ၼႂ်း ICommand ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵူတ်ႇထတ်းဝႃႈ တုမ်ႇ (Button) ထုၵ်ႇလီၼဵၵ်းလႆႈႁႃႉ", "လႅၼ်ႈ Code တႄႉတႄႉ", "ပိတ်း Application", "မႄးသီ Window"], "Purpose of CanExecute in ICommand?"),
+  Quiz(2635, "Binding Expression ပွင်ႇဝႃႈသင်?", ["Code XAML ဢၼ်မၵ်းမၼ်ႈလွင်ႈ Binding", "Code C# ဢၼ်ၼပ်ႉသွၼ်ႇမၢႆတူဝ်", "လိၵ်ႈဢၼ်တႅၵ်ႇၼႂ်း UI", "ၸိုဝ်ႈၶွင် Variable"], "What is a Binding Expression?"),
+  Quiz(2636, "View-First Approach ပွင်ႇဝႃႈသင်?", ["သၢင်ႈ View ဢွၼ်တၢင်းယဝ်ႉၸင်ႇၵွင်ႉ ViewModel", "သၢင်ႈ ViewModel ဢွၼ်တၢင်း", "သၢင်ႈ Database ဢွၼ်တၢင်း", "ပိတ်း App ဢွၼ်တၢင်း"], "What is View-First approach?"),
+  Quiz(2637, "ViewModel-First Approach ပွင်ႇဝႃႈသင်?", ["သၢင်ႈ ViewModel ဢွၼ်တၢင်းယဝ်ႉၸင်ႇႁႃ View မႃးၼႄ", "သၢင်ႈ View ဢွၼ်တၢင်း", "သၢင်ႈ Image ဢွၼ်တၢင်း", "ပိတ်း App ၵမ်းလဵဝ်"], "What is ViewModel-First approach?"),
+  Quiz(2638, "Event To Command ၸွႆးလွင်ႈသင်?", ["ပိၼ်ႇ Event (မိူၼ် MouseMove) ႁႂ်ႈပဵၼ် Command ၼႂ်း MVVM", "ပိတ်း Event တင်းမူတ်း", "ႁဵတ်းႁႂ်ႈ Command လႅၼ်ႈဝႆးလိူဝ်", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "What does EventToCommand help with?"),
+  Quiz(2639, "Property 'Visibility' ၼႂ်း WPF မီးၵႃႈၶၼ်သင်?", ["Visible, Hidden, Collapsed", "True, False", "0, 1", "Show, Hide"], "Possible values for Visibility property in WPF?"),
+  Quiz(2640, "Collapsed ပႅၵ်ႇတင်း Hidden ၸိူင်ႉႁိုဝ်?", ["Collapsed တေဢမ်ႇၵိၼ်ပိုၼ်ႉတီႈ ၵူၺ်းၵႃႈ Hidden တိုၵ်ႉၵိၼ်ဝႆႉ", "Hidden ၸႃႉလိူဝ် Collapsed", "Collapsed ၸႂ်ႉ Memory ၼမ်လိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်"], "Difference between Collapsed and Hidden?"),
+  Quiz(2641, "XAML Reader/Writer ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပိုတ်ႇ လႄႈ သိမ်း XAML ၼႂ်းယၢမ်း App လႅၼ်ႈယူႇ (Runtime)", "တႅမ်ႈ Code C# ႁင်းၵူၺ်း", "ပိတ်း Application", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "Purpose of XAML Reader/Writer?"),
+  Quiz(2642, "BAML ပွင်ႇဝႃႈသင်?", ["Binary XAML ဢၼ်ထုၵ်ႇ Compile ယဝ်ႉ", "Basic App Model Logic", "Binary Async Main Link", "ဢမ်ႇမီးၼႂ်း .NET"], "What is BAML?"),
+  Quiz(2643, "MergedDictionaries ၸွႆးလွင်ႈသင်?", ["ဢဝ် Resource ၼမ်ၼႃႇမႃးႁူမ်ႈၵၼ်ဝႆႉတီႈလဵဝ်", "ၸႅၵ်ႇ Data ဢွၵ်ႇပဵၼ်သုၼ်ႇๆ", "ပိတ်း App မိူဝ်ႈမီး Error", "သူင်ႇ Data ၸူး Server"], "Benefit of MergedDictionaries?"),
+  Quiz(2644, "DynamicResource ပႅၵ်ႇတင်း StaticResource ၸိူင်ႉႁိုဝ်?", ["DynamicResource တေ Update မိူဝ်ႈ Resource လႅၵ်ႈပိၼ်ႇၼႂ်းယၢမ်းလႅၼ်ႈ", "StaticResource ဝႆးလိူဝ် DynamicResource", "DynamicResource ၸႂ်ႉ Memory ၼမ်လိူဝ်", "တင်းမူတ်းမႅၼ်ႈ"], "Difference between StaticResource and DynamicResource?"),
+  Quiz(2645, "Tracing ၼႂ်း Binding ၸွႆးသင်?", ["ၵူတ်ႇထတ်းပၼ်ႁႃ (Debug) မိူဝ်ႈ Binding ဢမ်ႇဢွၵ်ႇ", "ႁဵတ်းႁႂ်ႈ Binding ဝႆးလိူဝ်", "ယႃႉ Binding ဢွၵ်ႇပႅတ်ႈ", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "What is Binding Tracing for?"),
+  Quiz(2646, "Design-time Data ၸွႆးသင်?", ["ၼႄ Data တူဝ်ယင်ႇၼႂ်း Designer ၵူၺ်း (ဢမ်ႇၼႄမိူဝ်ႈလႅၼ်ႈတႄႉ)", "သိမ်း Data ၶဝ်ႈၼႂ်း Database", "ပိတ်း App မိူဝ်ႈ Design", "လႅၵ်ႈသီ Window"], "Benefit of Design-time Data?"),
+  Quiz(2647, "AutomationPeer ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၸွႆးလွင်ႈ Accessibility (မိူၼ် Screen Reader)", "ႁဵတ်းႁႂ်း App လႅၼ်ႈႁင်းၵူၺ်း", "ပိတ်း Computer", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "Purpose of AutomationPeer?"),
+  Quiz(2648, "Windows API Code Pack ၸွႆးသင်?", ["ႁွင်ႉၸႂ်ႉ Feature ၶွင် Windows ဢၼ် .NET ပႆႇမီး", "တႅမ်ႈ Code Website", "ပိတ်း Application", "မႄးသီ TextBox"], "What does Windows API Code Pack help with?"),
+  Quiz(2649, "ClickOnce Deployment ปွင်ႇဝႃႈသင်?", ["လၢႆး Install App ဢၼ် Update ႁင်းၵူၺ်းလႆႈငၢႆႈငၢႆႈ", "ၵၢၼ်ၼဵၵ်းပုမ်ႇ 1 ပွၵ်ႈ", "ၵၢၼ် Delete Project", "ၵၢၼ်ပိတ်း Computer"], "What is ClickOnce Deployment?"),
+  Quiz(2650, "Module 21 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["သၢင်ႈ Desktop App ဢၼ်ၸႂ်ႉလႆႈတႄႉတႄႉ", "ပိတ်း App တင်းမူတ်း", "တႅမ်ႈ HTML ၵူၺ်း", "ဢမ်ႇႁဵတ်းသင်သေယိူင်ႈ"], "What can we do after finishing Module 21?"),
+];
+
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
   csharpQuizM2,
@@ -8543,4 +8707,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM18,
   csharpQuizM19,
   csharpQuizM20,
+  csharpQuizM21,
 ];
