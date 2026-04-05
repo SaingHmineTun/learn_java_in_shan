@@ -273,7 +273,7 @@ class ResultScreen extends StatelessWidget {
       if (sessionQuizzes[i].options[0] == userResults[i]) score++;
     }
 
-    final bool isPassed = score >= (userResults.length * 0.8).toInt();
+    final bool isPassed = score >= (userResults.length * 0.9).toInt();
 
     return Scaffold(
       backgroundColor: kBrandDark,
