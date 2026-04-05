@@ -2304,1041 +2304,990 @@ List<Quiz> mysqlQuizM4 = [
     "Data Manipulation Language",
     "Data Maintenance Logic",
     "Database Management Link",
-    "Direct Model Language",
+    "Direct Model Language"
   ], "What does DML stand for?"),
-  Quiz(
-    252,
-    "ၶေႃႈၵႂၢမ်းလႂ် ပဵၼ် DML Command?",
-    ["INSERT", "CREATE", "DROP", "ALTER"],
-    "Which of the following is a DML command?",
-  ),
+
+  Quiz(252, "ၶေႃႈၵႂၢမ်းလႂ် ပဵၼ် DML Command?", [
+    "INSERT",
+    "CREATE",
+    "DROP",
+    "ALTER"
+  ], "Which of the following is a DML command?"),
+
   Quiz(253, "INSERT INTO ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇသႂ်ႇၶေႃႈမုၼ်းမႂ်ႇၶဝ်ႈၼႂ်း Table",
+    "တႃႇသႂ်ႇၶေႃႈမုၼ်းမႂ်ႇ",
     "တႃႇသၢင်ႈ Table မႂ်ႇ",
     "တႃႇမႄးပိူင်သၢင်ႈ Table",
-    "တႃႇယႃႉ Table",
+    "တႃႇယႃႉ Database ပႅတ်ႈ"
   ], "What is the purpose of INSERT INTO?"),
-  Quiz(
-    254,
-    "လၢႆးတႅမ်ႈ INSERT ဢၼ် Professional သုတ်း?",
-    [
-      "တေလႆႈမၵ်းမၼ်ႈၸိုဝ်ႈ Column",
-      "တႅမ်ႈၸိုဝ်ႈ Table ၵူၺ်း",
-      "သႂ်ႇၵူၺ်း Value",
-      "ဢမ်ႇလူဝ်ႇသႂ်ႇသင်",
-    ],
-    "What is the professional way to write an INSERT statement?",
-  ),
+
+  Quiz(254, "လၢႆးတႅမ်ႈ INSERT ဢၼ် Professional သုတ်း?", [
+    "တေလႆႈမၵ်းမၼ်ႈၸိုဝ်ႈ Column",
+    "တႅမ်ႈၸိုဝ်ႈ Table ၵူၺ်း",
+    "သႂ်ႇၵူၺ်း Value ႁင်းမၼ်း",
+    "ဢမ်ႇလူဝ်ႇသႂ်ႇၸိုဝ်ႈ Table"
+  ], "What is the professional way to write an INSERT statement?"),
+
   Quiz(255, "INSERT IGNORE ၸွႆႈသင်?", [
-    "ၶၢမ်ႈ Error မိူဝ်ႈမီး Key သွၼ်ႉၵၼ်",
-    "ယႃႉၶေႃႈမုၼ်းၵဝ်ႇ",
-    "မႄးၶေႃႈမုၼ်း",
-    "ပိတ်း Database",
+    "ၶၢမ်ႈ Error မိူဝ်ႈမီး Key သွၼ်ႉ",
+    "ယႃႉၶေႃႈမုၼ်းၵဝ်ႇပႅတ်ႈ",
+    "မႄးၶေႃႈမုၼ်းဢၼ်မီးဝႆႉ",
+    "ပိတ်း Database ၸူဝ်ႈၶၢဝ်း"
   ], "What does INSERT IGNORE do?"),
+
   Quiz(256, "Multi-row INSERT မၢႆထိုင်သင်?", [
-    "ၵၢၼ်သႂ်ႇလၢႆထႅဝ် ၼႂ်း Command ပွၵ်ႈလဵဝ်",
+    "ၵၢၼ်သႂ်ႇလၢႆထႅဝ်ၼႂ်းပွၵ်ႈလဵဝ်",
     "ၵၢၼ်သႂ်ႇၼႂ်းလၢႆ Table",
-    "ၵၢၼ်သၢင်ႈလၢႆ Table",
-    "ၵၢၼ် Update ၶေႃႈမုၼ်း",
+    "ၵၢၼ်သၢင်ႈလၢႆ Table ၸွမ်းၵၼ်",
+    "ၵၢၼ် Update လၢႆထႅဝ်"
   ], "What is a multi-row INSERT?"),
-  Quiz(
-    257,
-    "INSERT INTO ... SELECT ၸႂ်ႉမိူဝ်ႈလႂ်?",
-    [
-      "ဢဝ်ၶေႃႈမုၼ်းလုၵ်ႉ Table ၼိုင်ႈ ၵႂႃႇသႂ်ႇထႅင်ႈ Table ၼိုင်ႈ",
-      "တႃႇသၢင်ႈ Table",
-      "တႃႇယႃႉ Row",
-      "တႃႇမႄး Column",
-    ],
-    "When is INSERT INTO ... SELECT used?",
-  ),
-  Quiz(
-    258,
-    "သင်သႂ်ႇ Value ဢမ်ႇတူဝ်ႇတင်း Column ၼႂ်း INSERT?",
-    [
-      "မၼ်းတေပဵၼ် Error",
-      "မၼ်းတေသႂ်ႇ NULL ပၼ်",
-      "မၼ်းတေၶၢမ်ႈၵႂႃႇ",
-      "မၼ်းတေယႃႉ Table",
-    ],
-    "What happens if values don't match columns in INSERT?",
-  ),
-  Quiz(
-    259,
-    "VALUE တင်း VALUES ၼႂ်း MySQL ပႅၵ်ႇၵၼ်ႁႃႉ?",
-    [
-      "မိူၼ်ၵၼ် (Synonyms)",
-      "VALUE ဝႆးလိူဝ်",
-      "VALUES ၸႂ်ႉတွၼ်ႈတႃႇ Single row ၵူၺ်း",
-      "ဢမ်ႇမိူၼ်ၵၼ်",
-    ],
-    "Are VALUE and VALUES different in MySQL?",
-  ),
+
+  Quiz(257, "INSERT INTO ... SELECT ၸႂ်ႉမိူဝ်ႈလႂ်?", [
+    "ဢဝ်ၶေႃႈမုၼ်းလုၵ်ႉတီႈ Table တၢင်ႇဢၼ်",
+    "တႃႇသၢင်ႈ Table မႂ်ႇ",
+    "တႃႇယႃႉ Row ဢၼ်သွၼ်ႉ",
+    "တႃႇမႄး Column ၼႂ်း Table"
+  ], "When is INSERT INTO ... SELECT used?"),
+
+  Quiz(258, "သင်သႂ်ႇ Value ဢမ်ႇတူဝ်ႇတင်း Column ၼႂ်း INSERT?", [
+    "မၼ်းတေပဵၼ် Error",
+    "မၼ်းတေသႂ်ႇ NULL ပၼ်",
+    "မၼ်းတေၶၢမ်ႈၵႂႃႇႁင်းမၼ်း",
+    "မၼ်းတေယႃႉ Table ပႅတ်ႈ"
+  ], "What happens if values don't match columns in INSERT?"),
+
+  Quiz(259, "VALUE တင်း VALUES ၼႂ်း MySQL ပႅၵ်ႇၵၼ်ႁႃႉ?", [
+    "မိူၼ်ၵၼ်",
+    "VALUE ဝႆးလိူဝ်ၵဝ်ႇ",
+    "VALUES ၸႂ်ႉတႃႇ 1 ထႅဝ်ၵူၺ်း",
+    "ပႅၵ်ႇၵၼ်တႄႉတႄႉ"
+  ], "Are VALUE and VALUES different in MySQL?"),
+
   Quiz(260, "Bulk Insert ၸွႆႈသင်?", [
-    "ၸွႆႈႁႂ်ႈသႂ်ႇၶေႃႈမုၼ်းၼမ်ၼမ် လႆႈဝႆးလိူဝ်ၵဝ်ႇ",
-    "ၸွႆႈယႃႉ Table",
-    "ၸွႆႈပၼ် Password",
-    "ၸွႆႈႁဵတ်း Backup",
+    "ၸွႆႈႁႂ်ႈသႂ်ႇၶေႃႈမုၼ်းလႆႈဝႆး",
+    "ၸွႆႈယႃႉ Table တင်းမူတ်း",
+    "ၸွႆႈပၼ် Password Table",
+    "ၸွႆႈႁဵတ်း Backup ၶေႃႈမုၼ်း"
   ], "What is the benefit of Bulk Insert?"),
-  Quiz(
-    261,
-    "Default Value တေဢွၵ်ႇမႃးမိူဝ်ႈလႂ် ၼႂ်း INSERT?",
-    [
-      "မိူဝ်ႈႁဝ်းဢမ်ႇသူင်ႇၵႃႈၶၼ် Column ၼၼ်ႉၵႂႃႇ",
-      "မိူဝ်ႈႁဝ်းသူင်ႇ NULL ၵႂႃႇ",
-      "မိူဝ်ႈမီး Error",
-      "မိူဝ်ႈ Table တဵမ်",
-    ],
-    "When does a default value appear during INSERT?",
-  ),
-  Quiz(
-    262,
-    "INSERT ၸၢင်ႈသႂ်ႇ Expression (မိူၼ်ၼင်ႇ 5+5) လႆႈႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း ID", "လႆႈၵူၺ်းၼႂ်း VARCHAR"],
-    "Can you use expressions in an INSERT statement?",
-  ),
+
+  Quiz(261, "Default Value တေဢွၵ်ႇမႃးမိူဝ်ႈလႂ်?", [
+    "မိူဝ်ႈႁဝ်းဢမ်ႇသူင်ႇၵႃႈၶၼ်ၵႂႃႇ",
+    "မိူဝ်ႈႁဝ်းသူင်ႇ NULL ၵႂႃႇ",
+    "မိူဝ်ႈမီး Error ၼႂ်း SQL",
+    "မိူဝ်ႈ Table တဵမ်ယဝ်ႉ"
+  ], "When does a default value appear during INSERT?"),
+
+  Quiz(262, "INSERT ၸၢင်ႈသႂ်ႇ Expression လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်း Primary Key",
+    "လႆႈၵူၺ်းၼႂ်း VARCHAR"
+  ], "Can you use expressions in an INSERT statement?"),
 
   // --- Lesson 29: UPDATE & DELETE (263-275) ---
-  Quiz(
-    263,
-    "UPDATE Command ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇမႄးၶေႃႈမုၼ်း ဢၼ်မီးဝႆႉယူႇယဝ်ႉ",
-      "တႃႇသၢင်ႈ Table",
-      "တႃႇယႃႉ Row",
-      "တႃႇလႅၵ်ႈ Data Type",
-    ],
-    "What is the purpose of the UPDATE command?",
-  ),
-  Quiz(
-    264,
-    "SET Keyword ၼႂ်း UPDATE ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "မၵ်းမၼ်ႈ Column လႄႈ Value ဢၼ်တေမႄး",
-      "လိူၵ်ႈ Table",
-      "မၵ်းမၼ်ႈ Condition",
-      "ယႃႉၶေႃႈမုၼ်း",
-    ],
-    "What is the SET keyword used for in UPDATE?",
-  ),
-  Quiz(
-    265,
-    "သင် UPDATE ဢမ်ႇမီး WHERE...?",
-    [
-      "ၶေႃႈမုၼ်းတေလႅၵ်ႈပဵၼ်ဢၼ်လဵဝ်ၵၼ် တင်းမူတ်း",
-      "မၼ်းတေ Error",
-      "မၼ်းတေဢမ်ႇမႄးသင်",
-      "မၼ်းတေသၢင်ႈ Table မႂ်ႇ",
-    ],
-    "What happens if UPDATE has no WHERE clause?",
-  ),
+  Quiz(263, "UPDATE Command ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇမႄးၶေႃႈမုၼ်းဢၼ်မီးဝႆႉ",
+    "တႃႇသၢင်ႈ Table မႂ်ႇ",
+    "တႃႇယႃႉ Row ဢွၵ်ႇ",
+    "တႃႇလႅၵ်ႈ Data Type"
+  ], "What is the purpose of the UPDATE command?"),
+
+  Quiz(264, "SET Keyword ၼႂ်း UPDATE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "မၵ်းမၼ်ႈ Column လႄႈ Value",
+    "လိူၵ်ႈ Table ဢၼ်တေမႄး",
+    "မၵ်းမၼ်ႈ Condition ၼႂ်း WHERE",
+    "ယႃႉၶေႃႈမုၼ်းၼႂ်း Column"
+  ], "What is the SET keyword used for in UPDATE?"),
+
+  Quiz(265, "သင် UPDATE ဢမ်ႇမီး WHERE...?", [
+    "ၶေႃႈမုၼ်းတေလႅၵ်ႈတင်း Table",
+    "မၼ်းတေ Error ၵမ်းလဵဝ်",
+    "မၼ်းတေဢမ်ႇမႄးသင်သေယၢင်ႇ",
+    "မၼ်းတေသၢင်ႈ Table မႂ်ႇတႅၼ်း"
+  ], "What happens if UPDATE has no WHERE clause?"),
+
   Quiz(266, "DELETE FROM students; ႁဵတ်းသင်?", [
-    "ယႃႉၶေႃႈမုၼ်းပႅတ်ႈတင်း Table",
+    "ယႃႉၶေႃႈမုၼ်းတင်း Table",
     "ယႃႉ Table Structure",
-    "မႄးၶေႃႈမုၼ်း",
-    "ဢမ်ႇႁဵတ်းသင်",
+    "မႄးၶေႃႈမုၼ်းပဵၼ် NULL",
+    "ဢမ်ႇႁဵတ်းသင်သေယၢင်ႇ"
   ], "What does DELETE FROM students; do?"),
+
   Quiz(267, "Safe Updates Mode ၸွႆႈသင်?", [
-    "ႁၢမ်ႈ UPDATE/DELETE သင်ဢမ်ႇၸႂ်ႉ Primary Key ၼႂ်း WHERE",
-    "ၸွႆႈဝႆး",
-    "ၸွႆႈ Backup",
-    "ၸွႆႈ Search",
+    "ႁၢမ်ႈ UPDATE သင်ဢမ်ႇၸႂ်ႉ Key",
+    "ၸွႆႈႁႂ်ႈ Query ဝႆးလိူဝ်",
+    "ၸွႆႈ Backup ၶေႃႈမုၼ်းႁင်းမၼ်း",
+    "ၸွႆႈ Search ၶေႃႈမုၼ်း"
   ], "What is the role of Safe Updates Mode?"),
-  Quiz(
-    268,
-    "Soft Delete ၵႆႉၸႂ်ႉ Column ပိူင်လႂ်?",
-    ["BOOLEAN ဢမ်ႇၼၼ် TINYINT (is_deleted)", "VARCHAR", "DATE", "PRIMARY KEY"],
-    "Which column type is common for Soft Delete?",
-  ),
-  Quiz(
-    269,
-    "UPDATE ၸၢင်ႈမႄးလၢႆလၢႆ Column ႁူမ်ႈၵၼ်လႆႈႁႃႉ?",
-    [
-      "လႆႈ (ၸႂ်ႉၶိူင်ႈမၢႆ Comma ',')",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်း 2 Column",
-      "လႆႈၵူၺ်းၼႂ်း ID",
-    ],
-    "Can UPDATE modify multiple columns at once?",
-  ),
-  Quiz(
-    270,
-    "TRUNCATE တင်း DELETE FROM (ဢမ်ႇမီး WHERE) ပႅၵ်ႇၵၼ်တီႈလႂ်?",
-    [
-      "TRUNCATE ပဵၼ် DDL သေ Reset Auto-ID",
-      "DELETE ဝႆးလိူဝ်",
-      "TRUNCATE ၸၢင်ႈ Rollback",
-      "ဢမ်ႇပႅၵ်ႇၵၼ်သင်",
-    ],
-    "Difference between TRUNCATE and DELETE without WHERE?",
-  ),
-  Quiz(
-    271,
-    "သင် UPDATE ... SET age = age + 1 ... တေပဵၼ်သင်?",
-    [
-      "ထႅမ်ဢႃႇယု 1 ပီႊ တႃႇၵူႈၵေႃႉ",
-      "ဢႃႇယုတေပဵၼ် 1",
-      "Error",
-      "ဢႃႇယုတေပဵၼ် NULL",
-    ],
-    "What does SET age = age + 1 do?",
-  ),
+
+  Quiz(268, "Soft Delete ၵႆႉၸႂ်ႉ Column ပိူင်လႂ်?", [
+    "BOOLEAN ဢမ်ႇၼၼ် TINYINT",
+    "VARCHAR တႃႇသိမ်းၸိုဝ်ႈ",
+    "DATE တႃႇသိမ်းဝၼ်းထီႉ",
+    "PRIMARY KEY တူဝ်ၼပ်ႉ"
+  ], "Which column type is common for Soft Delete?"),
+
+  Quiz(269, "UPDATE ၸၢင်ႈမႄးလၢႆလၢႆ Column ႁူမ်ႈၵၼ်လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း 2 Column",
+    "လႆႈၵူၺ်းၼႂ်း ID"
+  ], "Can UPDATE modify multiple columns at once?"),
+
+  Quiz(270, "TRUNCATE တင်း DELETE (No WHERE) ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
+    "TRUNCATE Reset Auto-ID",
+    "DELETE ဝႆးလိူဝ်ၵဝ်ႇၼမ်",
+    "TRUNCATE ၸၢင်ႈ Rollback ลႆႈ",
+    "ဢမ်ႇပႅၵ်ႇၵၼ်သင်သေယၢင်ႇ"
+  ], "Difference between TRUNCATE and DELETE without WHERE?"),
+
+  Quiz(271, "သင် UPDATE ... SET age = age + 1 ...?", [
+    "ထႅမ်ဢႃႇယု 1 ပီႊ တႃႇၵူႈၵေႃႉ",
+    "ဢႃႇယုတေပဵၼ် 1 တႃႇၵူႈၵေႃႉ",
+    "မၼ်းတေ Error ၵမ်းလဵဝ်",
+    "ဢႃႇယုတေပဵၼ် NULL"
+  ], "What does SET age = age + 1 do?"),
+
   Quiz(272, "DELETE ၸၢင်ႈၸႂ်ႉ LIMIT လႆႈႁႃႉ?", [
-    "လႆႈ (တႃႇယႃႉၵူၺ်းၸွမ်းတၢင်းၼမ် ဢၼ်လိူၵ်ႈဝႆႉ)",
+    "လႆႈ",
     "ဢမ်ႇလႆႈ",
     "လႆႈၵူၺ်းၼႂ်း SELECT",
-    "လႆႈၵူၺ်းၼႂ်း UPDATE",
+    "လႆႈၵူၺ်းၼႂ်း UPDATE"
   ], "Can DELETE use a LIMIT clause?"),
-  Quiz(
-    273,
-    "ပၵ်းၵၢၼ် DML ဢၼ်လႂ် ဢၼ်လူဝ်ႇလႆႈမီး WHERE တႃႇသေႇ?",
-    ["UPDATE လႄႈ DELETE", "INSERT", "CREATE", "DESCRIBE"],
-    "Which DML commands should always have a WHERE clause?",
-  ),
-  Quiz(
-    274,
-    "သင် DELETE ၺႃး Row ဢၼ်ပိူၼ်ႈၵွင်ႉ FK ဝႆႉ (RESTRICT)...?",
-    [
-      "မၼ်းတေ Error လႄႈ ဢမ်ႇပၼ်ယႃႉ",
-      "မၼ်းတေယႃႉပႃး Parent",
-      "မၼ်းတေပဵၼ် NULL",
-      "မၼ်းတေယႃႉလႆႈၵမ်းလဵဝ်",
-    ],
-    "What if DELETE hits a RESTRICT foreign key?",
-  ),
+
+  Quiz(273, "ပၵ်းၵၢၼ် DML လႂ်ဢၼ်လူဝ်ႇလႆႈမီး WHERE တႃႇသေႇ?", [
+    "UPDATE လႄႈ DELETE",
+    "INSERT ၶေႃႈမုၼ်း",
+    "CREATE Table",
+    "DESCRIBE Table"
+  ], "Which DML commands should always have a WHERE clause?"),
+
+  Quiz(274, "သင် DELETE ၺႃး Row ဢၼ်ပိူၼ်ႈၵွင်ႉ RESTRICT ဝႆႉ?", [
+    "မၼ်းတေ Error ဢမ်ႇပၼ်ယႃႉ",
+    "မၼ်းတေယႃႉပႃး Parent",
+    "မၼ်းတေပဵၼ် NULL ႁင်းမၼ်း",
+    "မၼ်းတေယႃႉလႆႈၵမ်းလဵဝ်"
+  ], "What if DELETE hits a RESTRICT foreign key?"),
+
   Quiz(275, "လၢႆးမႄးၶေႃႈမုၼ်း ဢၼ်လွတ်ႈၽေးသုတ်း?", [
-    "SELECT တူၺ်းဢွၼ်တၢင်းတေ UPDATE/DELETE",
+    "SELECT တူၺ်းဢွၼ်တၢင်း",
     "တႅမ်ႈ Code ဝႆးဝႆး",
     "ဢမ်ႇလူဝ်ႇသႂ်ႇ WHERE",
-    "ယႃႉ Table သၢင်ႈမႂ်ႇ",
+    "ယႃႉ Table သၢင်ႈမႂ်ႇ"
   ], "Safest way to modify data?"),
 
   // --- Lesson 30: SELECT Clause (276-288) ---
   Quiz(276, "SELECT Clause ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "မၵ်းမၼ်ႈ Column ဢၼ်တေဢဝ်ဢွၵ်ႇမႃးၼႄ",
-    "လိူၵ်ႈ Table",
+    "မၵ်းမၼ်ႈ Column ဢၼ်တေၼႄ",
+    "လိူၵ်ႈ Table ဢၼ်တေၸႂ်ႉ",
     "မၵ်းမၼ်ႈ Condition",
-    "ၸတ်းလႅၼ်ႇ",
+    "ၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း"
   ], "What is the SELECT clause used for?"),
+
   Quiz(277, "SELECT * မၢႆထိုင်သင်?", [
     "ဢဝ်ၵူႈ Column ၼႂ်း Table",
-    "ဢဝ်ၵူႈ Table",
-    "ယႃႉၶေႃႈမုၼ်း",
-    "မႄးၶေႃႈမုၼ်း",
+    "ဢဝ်ၵူႈ Table ၼႂ်း DB",
+    "ယႃႉၶေႃႈမုၼ်းတင်းမူတ်း",
+    "မႄးၶေႃႈမုၼ်းတင်းမူတ်း"
   ], "What does SELECT * mean?"),
-  Quiz(
-    278,
-    "Alias (AS) ၼႂ်း SELECT ၸွႆႈသင်?",
-    [
-      "ပၼ်ၸိုဝ်ႈမႂ်ႇ (Temporary) တႃႇ Column",
-      "လႅၵ်ႈ Data Type",
-      "သၢင်ႈ PK",
-      "ပၼ် Password",
-    ],
-    "What is the use of Alias (AS) in SELECT?",
-  ),
-  Quiz(
-    279,
-    "SELECT 5 + 5; တေဢွၵ်ႇၽွၼ်းလႆႈၵႃႈလၢႆ?",
-    ["10", "55", "5 + 5", "Error"],
-    "What is the result of SELECT 5 + 5;?",
-  ),
-  Quiz(
-    280,
-    "Literal Value ၼႂ်း SELECT မၢႆထိုင်သင်?",
-    [
-      "ၵႃႈၶၼ်တႅတ်ႈတေႃး (String/Number) ဢၼ်ဢမ်ႇလုၵ်ႉတီႈ Column",
-      "ၸိုဝ်ႈ Table",
-      "မၢႆ ID",
-      "Function",
-    ],
-    "What is a Literal value in SELECT?",
-  ),
-  Quiz(281, "SELECT DISTINCT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "ယႃႉၶေႃႈမုၼ်းဢၼ်သွၼ်ႉၵၼ် ၼႂ်း Output",
-    "သၢင်ႈ Table",
-    "ယႃႉ Table",
-    "မႄး Column",
-  ], "What is SELECT DISTINCT used for?"),
-  Quiz(
-    282,
-    "သင် SELECT name, 'Shan' AS group... 'Shan' တေဢွၵ်ႇမႃးၵႃႈလၢႆထႅဝ်?",
-    [
-      "ဢွၵ်ႇၸွမ်းၵူႈထႅဝ် ၼႂ်း Result set",
-      "ဢွၵ်ႇၵူၺ်းထႅဝ် 1",
-      "ဢမ်ႇဢွၵ်ႇ",
-      "ဢွၵ်ႇၵူၺ်း 10 ထႅဝ်",
-    ],
-    "In 'SELECT name, 'Shan' AS group', how often does 'Shan' appear?",
-  ),
-  Quiz(
-    283,
-    "Alias ၸၢင်ႈမီး Space (မိူၼ်ၼင်ႇ 'Full Name') လႆႈႁႃႉ?",
-    [
-      "လႆႈ (သင်ၸႂ်ႉ Quotes '...')",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်းၼႂ်း ID",
-      "လႆႈၵူၺ်းၼႂ်း TEXT",
-    ],
-    "Can an Alias have spaces?",
-  ),
-  Quiz(284, "SELECT NOW(); ၼႄသင်?", [
-    "ဝၼ်းထီႉ လႄႈ ၶၢဝ်းယၢမ်း ဝိၼႃတီႇၼႆႉ",
-    "ၸိုဝ်ႈ User",
-    "Version Database",
+
+  Quiz(278, "Alias (AS) ၼႂ်း SELECT ၸွႆႈသင်?", [
+    "ပၼ်ၸိုဝ်ႈမႂ်ႇၸူဝ်ႈၶၢဝ်း",
+    "လႅၵ်ႈ Data Type",
+    "သၢင်ႈ Primary Key",
+    "ပၼ် Password Table"
+  ], "What is the use of Alias (AS) in SELECT?"),
+
+  Quiz(279, "SELECT 5 + 5; ၽွၼ်းလႆႈပဵၼ်ၵႃႈလၢႆ?", [
+    "10",
+    "55",
+    "5 + 5",
+    "Error"
+  ], "What is the result of SELECT 5 + 5;?"),
+
+  Quiz(280, "Literal Value ၼႂ်း SELECT မၢႆထိုင်သင်?", [
+    "ၵႃႈၶၼ်တႅတ်ႈတေႃး (String/No)",
     "ၸိုဝ်ႈ Table",
+    "မၢႆ ID ႁင်း Column",
+    "Function ၼႂ်း SQL"
+  ], "What is a Literal value in SELECT?"),
+
+  Quiz(281, "SELECT DISTINCT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "ယႃႉၶေႃႈမုၼ်းဢၼ်သွၼ်ႉၵၼ်",
+    "သၢင်ႈ Table မႂ်ႇ",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "မႄး Column တႅၼ်းတီႈ"
+  ], "What is SELECT DISTINCT used for?"),
+
+  Quiz(282, "SELECT name, 'Shan' AS grp ... 'Shan' တေၼႄၵႃႈလၢႆ?", [
+    "ၼႄၸွမ်းၵူႈထႅဝ်",
+    "ၼႄၵူၺ်းထႅဝ် 1",
+    "ဢမ်ႇၼႄသေဢၼ်",
+    "ၼႄၵူၺ်း 10 ထႅဝ်"
+  ], "In 'SELECT name, 'Shan' AS group', how often does 'Shan' appear?"),
+
+  Quiz(283, "Alias ၸၢင်ႈမီး Space (မိူၼ်ၼင်ႇ 'Full Name') လႆႈႁႃႉ?", [
+    "လႆႈ (သင်ၸႂ်ႉ Quotes)",
+    "ဢမ်ႇလႆႈသေပွၵ်ႈ",
+    "လႆႈၵူၺ်းၼႂ်း ID",
+    "လႆႈၵူၺ်းၼႂ်း TEXT"
+  ], "Can an Alias have spaces?"),
+
+  Quiz(284, "SELECT NOW(); ၼႄသင်?", [
+    "ဝၼ်းထီႉလႄႈၶၢဝ်းယၢမ်းၼႆႉ",
+    "ၸိုဝ်ႈ User ဢၼ်ၸႂ်ႉ",
+    "Version Database",
+    "ၸိုဝ်ႈ Table တင်းမူတ်း"
   ], "What does SELECT NOW(); show?"),
-  Quiz(
-    285,
-    "ႁဵတ်းသင်လႄႈ ႁဝ်းဢမ်ႇထုၵ်ႇလီၸႂ်ႉ SELECT * ၼႂ်း App တႄႉ?",
-    [
-      "ၵွပ်ႈမၼ်းသူင်ႇ Data ၼမ်လူၼ်ႉ သေႁဵတ်းႁႂ်ႈ App ၸႃႉ",
-      "မၼ်းတေ Error",
-      "မၼ်းတေယႃႉ DB",
-      "မၼ်းတေမီး Error Logic",
-    ],
-    "Why avoid SELECT * in production apps?",
-  ),
-  Quiz(
-    286,
-    "SELECT ၸၢင်ႈၼပ်ႉသွၼ်ႇ Math Expression လႆႈႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 1 ဢၼ်", "လႆႈၵူၺ်း +, -"],
-    "Can SELECT perform math expressions?",
-  ),
-  Quiz(
-    287,
-    "AS Keyword ၸၢင်ႈၶၢမ်ႈ (Skip) ပႅတ်ႈလႆႈႁႃႉ?",
-    [
-      "လႆႈ (တႅမ်ႈၸိုဝ်ႈ Alias ဝႆႉၽၢႆႇလင်ၵမ်းလဵဝ်)",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်းၼႂ်း Table",
-      "လႆႈၵူၺ်းၼႂ်း SELECT",
-    ],
-    "Can you omit the AS keyword?",
-  ),
-  Quiz(
-    288,
-    "တၢင်းၼမ် Column ၼႂ်း SELECT မၵ်းမၼ်ႈသင်?",
-    [
-      "တၢင်းၼမ် Column ဢၼ်တေဢွၵ်ႇၼႄ (Vertical Structure)",
-      "တၢင်းၼမ်ထႅဝ်",
-      "တၢင်းၼမ် Table",
-      "တၢင်းၼမ် User",
-    ],
-    "What does the number of columns in SELECT determine?",
-  ),
+
+  Quiz(285, "ႁဵတ်းသင်ဢမ်ႇထုၵ်ႇလီၸႂ်ႉ SELECT * ၼႂ်း App?", [
+    "ၵွပ်ႈမၼ်းသူင်ႇ Data ၼမ်လူၼ်ႉ",
+    "မၼ်းတေ Error တႃႇသေႇ",
+    "မၼ်းတေယႃႉ Database",
+    "မၼ်းတေမီး Error Logic"
+  ], "Why avoid SELECT * in production apps?"),
+
+  Quiz(286, "SELECT ၸၢင်ႈၼပ်ႉသွၼ်ႇ Math Expression လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း 1 ဢၼ်",
+    "လႆႈၵူၺ်း +, -"
+  ], "Can SELECT perform math expressions?"),
+
+  Quiz(287, "AS Keyword ၸၢင်ႈၶၢမ်ႈ (Skip) ပႅတ်ႈလႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်း Table",
+    "လႆႈၵူၺ်းၼႂ်း SELECT"
+  ], "Can you omit the AS keyword?"),
+
+  Quiz(288, "တၢင်းၼမ် Column ၼႂ်း SELECT မၵ်းမၼ်ႈသင်?", [
+    "တၢင်းၼမ် Column ဢၼ်တေၼႄ",
+    "တၢင်းၼမ်ထႅဝ်",
+    "တၢင်းၼမ် Table",
+    "တၢင်းၼမ် User"
+  ], "What does the number of columns in SELECT determine?"),
 
   // --- Lesson 31: Basic Filtering (289-301) ---
-  Quiz(
-    289,
-    "WHERE Clause ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "လိူၵ်ႈ (Filter) ၶေႃႈမုၼ်း ၸွမ်းၼင်ႇသႅၼ်ႇသိုၵ်း",
-      "ၸတ်းလႅၼ်ႇ",
-      "သႂ်ႇၶေႃႈမုၼ်း",
-      "ယႃႉ Table",
-    ],
-    "What is the purpose of the WHERE clause?",
-  ),
+  Quiz(289, "WHERE Clause ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "လိူၵ်ႈၶေႃႈမုၼ်းၸွမ်းသႅၼ်ႇသိုၵ်း",
+    "ၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း",
+    "သႂ်ႇၶေႃႈမုၼ်းမႂ်ႇ",
+    "ယႃႉ Table ပႅတ်ႈ"
+  ], "What is the purpose of the WHERE clause?"),
+
   Quiz(290, "Comparison Operator '!=' မၢႆထိုင်သင်?", [
-    "ဢမ်ႇတူဝ်ႇၵၼ် (Not Equal)",
-    "တူဝ်ႇၵၼ်",
+    "ဢမ်ႇတူဝ်ႇၵၼ်",
+    "တူဝ်ႇၵၼ်တႅတ်ႈတေႃး",
     "ယႂ်ႇလိူဝ်",
-    "ယွမ်းလိူဝ်",
+    "ယွမ်းလိူဝ်"
   ], "What does '!=' mean?"),
+
   Quiz(291, "Logical Operator 'AND' တေပဵၼ် True မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈတင်းသွင်ၽၢႆႇ မၢၼ်ႇမႅၼ်ႈတင်းသွင်",
-    "မိူဝ်ႈၽၢႆႇလႂ်ၽၢႆႇၼိုင်ႈ မၢၼ်ႇမႅၼ်ႈ",
+    "မိူဝ်ႈမၢၼ်ႇမႅၼ်ႈတင်းသွင်",
+    "မိူဝ်ႈမၢၼ်ႇမႅၼ်ႈၽၢႆႇလႂ်ၽၢႆႇၼိုင်ႈ",
     "မိူဝ်ႈပဵၼ် NULL",
-    "မိူဝ်ႈဢမ်ႇမီးၶေႃႈမုၼ်း",
+    "မိူဝ်ႈဢမ်ႇမီးၶေႃႈမုၼ်း"
   ], "When is AND true?"),
+
   Quiz(292, "Logical Operator 'OR' တေပဵၼ် True မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈမီးၽၢႆႇလႂ်ၽၢႆႇၼိုင်ႈ မၢၼ်ႇမႅၼ်ႈ",
-    "မိူဝ်ႈတေလႆႈမၢၼ်ႇမႅၼ်ႈတင်းသွင်",
+    "မိူဝ်ႈမၢၼ်ႇမႅၼ်ႈၽၢႆႇလႂ်ၽၢႆႇၼိုင်ႈ",
+    "မိူဝ်ႈတေလႆႈမၢၼ်ႇတင်းသွင်",
     "မိူဝ်ႈပဵၼ် NULL",
-    "ဢမ်ႇမီး True",
+    "ဢမ်ႇမီး True သေဢၼ်"
   ], "When is OR true?"),
-  Quiz(
-    293,
-    "Operator '<>' မိူၼ်တင်း Operator လႂ်?",
-    ["!=", "==", ">=", "<="],
-    "Which operator is equivalent to '<>'?",
-  ),
+
+  Quiz(293, "Operator '<>' မိူၼ်တင်း Operator လႂ်?", [
+    "!=",
+    "==",
+    ">=",
+    "<="
+  ], "Which operator is equivalent to '<>'?"),
+
   Quiz(294, "Logical Operator 'NOT' ၸွႆႈသင်?", [
-    "ပိၼ်ႇၵႃႈၶၼ် (True ਪဵၼ် False)",
+    "ပိၼ်ႇၵႃႈၶၼ်",
     "တွၵ်ႇလိၵ်ႈ",
     "ၼပ်ႉသွၼ်ႇ",
-    "ယႃႉၶေႃႈမုၼ်း",
+    "ယႃႉၶေႃႈမုၼ်း"
   ], "What does the NOT operator do?"),
-  Quiz(
-    295,
-    "ဝူတ်း '()' ၼႂ်း WHERE ၸွႆႈသင်?",
-    [
-      "မၵ်းမၼ်ႈဝႃႈ ႁႂ်ႈၼပ်ႉသွၼ်ႇ Logic တွၼ်ႈလႂ်ဢွၼ်တၢင်း",
-      "ပၼ်ၸိုဝ်ႈ",
-      "လႅၵ်ႈ Type",
-      "ႁၢမ်ႈ Error",
-    ],
-    "What is the purpose of parentheses in WHERE?",
-  ),
-  Quiz(
-    296,
-    "WHERE age >= 18 AND age <= 25 ႁႃသင်?",
-    [
-      "ႁႃၵူၼ်းဢႃႇယု 18 ထိုင် 25",
-      "ႁႃၵူၼ်းဢႃႇယု 18 ၵူၺ်း",
-      "ႁႃၵူၼ်းဢႃႇယု 25 ၵူၺ်း",
-      "ႁႃၵူၼ်းဢႃႇယု 0-18",
-    ],
-    "What does WHERE age >= 18 AND age <= 25 search for?",
-  ),
-  Quiz(
-    297,
-    "WHERE price > 100 OR category = 'A' ႁႃသင်?",
-    [
-      "ၵုၼ်ႇဢၼ်ၵႃႈၶၼ် > 100 ဢမ်ႇၼၼ် ပဵၼ် Category A",
-      "ၵုၼ်ႇ Category A ဢၼ်ၵႃႈၶၼ် > 100 ၵူၺ်း",
-      "ၵုၼ်ႇၵူႈပိူင်",
-      "ဢမ်ႇမီးသင်",
-    ],
-    "What does WHERE price > 100 OR category = 'A' search for?",
-  ),
-  Quiz(
-    298,
-    "MySQL String Comparison ၸႅၵ်ႇ Case (A vs a) ႁႃႉ?",
-    [
-      "ၵမ်ႈၼမ် ဢမ်ႇၸႅၵ်ႇ (Case-insensitive)",
-      "ၸႅၵ်ႇတႃႇသေႇ",
-      "ၸႅၵ်ႇၵူၺ်းၼႂ်း ID",
-      "ၸႅၵ်ႇၵူၺ်းၼႂ်း TEXT",
-    ],
-    "Is MySQL string comparison case-sensitive by default?",
-  ),
-  Quiz(
-    299,
-    "WHERE NOT city = 'Muse' ႁႃသင်?",
-    [
-      "ႁႃၵူၼ်းဢၼ်ဢမ်ႇယူႇ 'Muse'",
-      "ႁႃၵူၼ်းယူႇ 'Muse'",
-      "ႁႃၵူၼ်းၵူႈၵေႃႉ",
-      "Error",
-    ],
-    "What does WHERE NOT city = 'Muse' search for?",
-  ),
-  Quiz(
-    300,
-    "သင် WHERE မီး AND လႄႈ OR ႁူမ်ႈၵၼ်... ဢၼ်လႂ်ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း?",
-    ["AND (Precedence ယႂ်ႇလိူဝ်)", "OR", "ႁဵတ်းၸွမ်းၵၼ်", "ဢမ်ႇမီးပၵ်းၵၢၼ်"],
-    "Which has higher precedence: AND or OR?",
-  ),
-  Quiz(
-    301,
-    "Arithmetic Operator ၸၢင်ႈၸႂ်ႉၼႂ်း WHERE လႆႈႁႃႉ?",
-    [
-      "လႆႈ (မိူၼ်ၼင်ႇ WHERE age + 1 > 20)",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်း +, -",
-      "လႆႈၵူၺ်းၼႂ်း SELECT",
-    ],
-    "Can arithmetic operators be used in WHERE?",
-  ),
+
+  Quiz(295, "ဝူတ်း '()' ၼႂ်း WHERE ၸွႆႈသင်?", [
+    "မၵ်းမၼ်ႈဝႃႈတေၼပ်ႉသင်ဢွၼ်တၢင်း",
+    "ပၼ်ၸိုဝ်ႈ Alias",
+    "လႅၵ်ႈ Type ၶေႃႈမုၼ်း",
+    "ႁၢမ်ႈ Error ၼႂ်း SQL"
+  ], "What is the purpose of parentheses in WHERE?"),
+
+  Quiz(296, "WHERE age >= 18 AND age <= 25 ႁႃသင်?", [
+    "ႁႃၵူၼ်းဢႃႇယု 18 ထိုင် 25",
+    "ႁႃၵူၼ်းဢႃႇယု 18 ၵူၺ်း",
+    "ႁႃၵူၼ်းဢႃႇယု 25 ၵူၺ်း",
+    "ႁႃၵူၼ်းဢႃႇယု 0-18"
+  ], "What does WHERE age >= 18 AND age <= 25 search for?"),
+
+  Quiz(297, "WHERE price > 100 OR cat = 'A' ႁႃသင်?", [
+    "ၵႃႈၶၼ် > 100 ဢမ်ႇၼၼ် ပဵၼ် A",
+    "Category A ဢၼ်ၵႃႈၶၼ် > 100",
+    "ၵုၼ်ႇၵူႈပိူင်ၼႂ်း Table",
+    "ဢမ်ႇမီးၶေႃႈမုၼ်းဢွၵ်ႇမႃး"
+  ], "What does WHERE price > 100 OR category = 'A' search for?"),
+
+  Quiz(298, "MySQL String Comparison ၸႅၵ်ႇ Case ႁႃႉ?", [
+    "ၵမ်ႈၼမ် ဢမ်ႇၸႅၵ်ႇ",
+    "ၸႅၵ်ႇတႃႇသေႇ",
+    "ၸႅၵ်ႇၵူၺ်းၼႂ်း ID",
+    "ၸႅၵ်ႇၵူၺ်းၼႂ်း TEXT"
+  ], "Is MySQL string comparison case-sensitive by default?"),
+
+  Quiz(299, "WHERE NOT city = 'Muse' ႁႃသင်?", [
+    "ႁႃၵူၼ်းဢၼ်ဢမ်ႇယူႇ 'Muse'",
+    "ႁႃၵူၼ်းယူႇ 'Muse' ၵူၺ်း",
+    "ႁႃၵူၼ်းၵူႈၵေႃႉၼႂ်း DB",
+    "Error ၵမ်းလဵဝ်"
+  ], "What does WHERE NOT city = 'Muse' search for?"),
+
+  Quiz(300, "သင် WHERE မီး AND လႄႈ OR... ဢၼ်လႂ်ဢွၼ်တၢင်း?", [
+    "AND",
+    "OR",
+    "ႁဵတ်းၸွမ်းၵၼ်",
+    "ဢမ်ႇမီးပၵ်းၵၢၼ်"
+  ], "Which has higher precedence: AND or OR?"),
+
+  Quiz(301, "Arithmetic Operator ၸၢင်ႈၸႂ်ႉၼႂ်း WHERE လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း +, -",
+    "လႆႈၵူၺ်းၼႂ်း SELECT"
+  ], "Can arithmetic operators be used in WHERE?"),
 
   // --- Lesson 32: BETWEEN and IN (302-314) ---
   Quiz(302, "BETWEEN Operator ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "လိူၵ်ႈၶေႃႈမုၼ်း ၼႂ်းၵႄႈၵႃႈၶၼ်သွင်ဢၼ်",
+    "လိူၵ်ႈၶေႃႈမုၼ်းၼႂ်းၵႄႈၵႃႈၶၼ်",
     "လိူၵ်ႈၼႂ်းသဵၼ်ႈမၢႆ",
-    "ယႃႉၶေႃႈမုၼ်း",
-    "မႄးၸိုဝ်ႈ",
+    "ယႃႉၶေႃႈမုၼ်းပႅတ်ႈ",
+    "မႄးၸိုဝ်ႈ Column"
   ], "What is BETWEEN used for?"),
+
   Quiz(303, "BETWEEN 10 AND 20 ပႃးမၢႆ 10 လႄႈ 20 ႁႃႉ?", [
-    "ၸႂ်ႈ (Inclusive)",
+    "ၸႂ်ႈ",
     "ဢမ်ႇၸႂ်ႈ",
     "ပႃးၵူၺ်း 10",
-    "ပႃးၵူၺ်း 20",
+    "ပႃးၵူၺ်း 20"
   ], "Is BETWEEN inclusive?"),
+
   Quiz(304, "IN Operator ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "လိူၵ်ႈၶေႃႈမုၼ်း ဢၼ်မၢၼ်ႇမႅၼ်ႈၸွမ်း ၼႂ်းသဵၼ်ႈမၢႆ",
-    "လိူၵ်ႈၼႂ်းၵႄႈ",
-    "ယႃႉၶေႃႈမုၼ်း",
-    "မႄး Column",
+    "လိူၵ်ႈၶေႃႈမုၼ်းဢၼ်မၢၼ်ႇၼႂ်း List",
+    "လိူၵ်ႈၼႂ်းၵႄႈၵႃႈၶၼ်",
+    "ယႃႉၶေႃႈမုၼ်းပႅတ်ႈ",
+    "မႄး Column တႅၼ်းတီႈ"
   ], "What is IN used for?"),
-  Quiz(
-    305,
-    "IN ('A', 'B') မိူၼ်တင်း Logical Operator လႂ်?",
-    ["OR (col='A' OR col='B')", "AND", "NOT", "XOR"],
-    "Which operator is equivalent to IN?",
-  ),
+
+  Quiz(305, "IN ('A', 'B') မိူၼ်တင်း Logical Operator လႂ်?", [
+    "OR",
+    "AND",
+    "NOT",
+    "XOR"
+  ], "Which operator is equivalent to IN?"),
+
   Quiz(306, "NOT BETWEEN 1 AND 10 ႁႃသင်?", [
-    "ၵႃႈၶၼ်ဢၼ်ဢေႇလိူဝ် 1 ဢမ်ႇၼၼ် ယႂ်ႇလိူဝ် 10",
-    "ၵႃႈၶၼ် 1-10",
+    "ဢၼ်ဢေႇလိူဝ် 1 ႁိုဝ် ယႂ်ႇလိူဝ် 10",
+    "ၵႃႈၶၼ် 1 ถိုင် 10",
     "ၵႃႈၶၼ် 1 ၵူၺ်း",
-    "ၵႃႈၶၼ် 10 ၵူၺ်း",
+    "ၵႃႈၶၼ် 10 ၵူၺ်း"
   ], "What does NOT BETWEEN 1 AND 10 find?"),
+
   Quiz(307, "NOT IN ('A', 'B') ႁႃသင်?", [
-    "ၵႃႈၶၼ်ဢၼ်ဢမ်ႇၸႂ်ႈ 'A' လႄႈ 'B'",
+    "ဢၼ်ဢမ်ႇၸႂ်ႈ 'A' လႄႈ 'B'",
     "ၵႃႈၶၼ် 'A' လႄႈ 'B'",
     "ၵႃႈၶၼ် 'A' ၵူၺ်း",
-    "ၵႃႈၶၼ် 'B' ၵူၺ်း",
+    "ၵႃႈၶၼ် 'B' ၵူၺ်း"
   ], "What does NOT IN ('A', 'B') find?"),
-  Quiz(
-    308,
-    "BETWEEN ၸၢင်ႈၸႂ်ႉတင်း ဝၼ်းထီႉ (Dates) လႆႈႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း တူဝ်ၼပ်ႉ", "လႆႈၵူၺ်းၼႂ်း လိၵ်ႈ"],
-    "Can BETWEEN be used with dates?",
-  ),
-  Quiz(
-    309,
-    "IN Operator ၸၢင်ႈသႂ်ႇ Subquery ၼႂ်းမၼ်းလႆႈႁႃႉ?",
-    [
-      "လႆႈ (Power ဢၼ်လွင်ႈယႂ်ႇသုတ်း)",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်း 1 ဢၼ်",
-      "လႆႈၵူၺ်းၼႂ်း ID",
-    ],
-    "Can IN contain a subquery?",
-  ),
+
+  Quiz(308, "BETWEEN ၸၢင်ႈၸႂ်ႉတင်း ဝၼ်းထီႉ (Dates) လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်းတူဝ်ၼပ်ႉ",
+    "လႆႈၵူၺ်းၼႂ်းလိၵ်ႈ"
+  ], "Can BETWEEN be used with dates?"),
+
+  Quiz(309, "IN Operator ၸၢင်ႈသႂ်ႇ Subquery လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း 1 ဢၼ်",
+    "လႆႈၵူၺ်းၼႂ်း ID"
+  ], "Can IN contain a subquery?"),
+
   Quiz(310, "BETWEEN 'A' AND 'C' ႁႃသင်?", [
     "ႁႃလိၵ်ႈဢၼ်တႄႇလူၺ်ႈ A, B, C",
-    "ႁႃတူဝ်ၼပ်ႉ",
-    "ႁႃ NULL",
-    "Error",
+    "ႁႃတူဝ်ၼပ်ႉၵူၺ်း",
+    "ႁႃၵႃႈၶၼ် NULL",
+    "Error ၵမ်းလဵဝ်"
   ], "What does BETWEEN 'A' AND 'C' find?"),
-  Quiz(
-    311,
-    "IN Operator တေမၼ်ႈၵိုမ်းမိူဝ်ႈမီး NULL ႁႃႉ?",
-    ["ဢမ်ႇ (NULL ဢမ်ႇဢွၵ်ႇမႃးၼႂ်း IN)", "ၸႂ်ႈ", "မၢင်ပွၵ်ႈ", "Error"],
-    "Does IN include NULL values?",
-  ),
-  Quiz(
-    312,
-    "ႁဵတ်းသင်လႄႈ ၸႂ်ႉ IN လီလိူဝ် OR လၢႆလၢႆဢၼ်?",
-    [
-      "ၵွပ်ႈမၼ်းလူငၢႆႈ လႄႈ DB သွၵ်ႈႁႃဝႆးလိူဝ်",
-      "မၼ်း Error ဢေႇ",
-      "မၼ်းပၼ် Password",
-      "မၼ်းယႃႉ Table",
-    ],
-    "Why is IN better than multiple ORs?",
-  ),
-  Quiz(
-    313,
-    "NOT IN () သင်ၼႂ်းဝူတ်းမီး NULL ... တေပဵၼ်သင်?",
-    [
-      "မၼ်းတေဢမ်ႇဢွၵ်ႇသင်မႃး (Empty Result)",
-      "မၼ်းတေဢွၵ်ႇၵူႈဢၼ်",
-      "မၼ်းတေ Error",
-      "မၼ်းတေဢွၵ်ႇ NULL",
-    ],
-    "What if NOT IN contains a NULL?",
-  ),
-  Quiz(
-    314,
-    "IN ၸၢင်ႈသႂ်ႇၵႃႈၶၼ်လၢႆပိူင် (Mixed types) လႆႈႁႃႉ?",
-    [
-      "လႆႈ (ၵူၺ်းၵႃႈ ဢမ်ႇထုၵ်ႇလီႁဵတ်း)",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်းၼႂ်း VARCHAR",
-      "လႆႈၵူၺ်းၼႂ်း INT",
-    ],
-    "Can IN contain mixed types?",
-  ),
+
+  Quiz(311, "IN Operator တေမၼ်ႈၵိုမ်းမိူဝ်ႈမီး NULL ႁႃႉ?", [
+    "ဢမ်ႇ",
+    "ၸႂ်ႈ",
+    "မၢင်ပွၵ်ႈ",
+    "Error ၵမ်းလဵဝ်"
+  ], "Does IN include NULL values?"),
+
+  Quiz(312, "ႁဵတ်းသင်လႄႈ ၸႂ်ႉ IN လီလိူဝ် OR လၢႆလၢႆဢၼ်?", [
+    "ၵွပ်ႈမၼ်းလူငၢႆႈ လႄႈ ဝႆးလိူဝ်",
+    "မၼ်း Error ဢေႇလိူဝ်",
+    "မၼ်းပၼ် Password",
+    "မၼ်းယႃႉ Table ပႅတ်ႈ"
+  ], "Why is IN better than multiple ORs?"),
+
+  Quiz(313, "NOT IN () သင်ၼႂ်းဝူတ်းမီး NULL...?", [
+    "မၼ်းတေဢမ်ႇဢွၵ်ႇသင်မႃး",
+    "မၼ်းတေဢွၵ်ႇၵူႈဢၼ်",
+    "မၼ်းတေ Error ၵမ်းလဵဝ်",
+    "မၼ်းတေဢွၵ်ႇ NULL ၵူၺ်း"
+  ], "What if NOT IN contains a NULL?"),
+
+  Quiz(314, "IN ၸၢင်ႈသႂ်ႇၵႃႈၶၼ်လၢႆပိူင် (Mixed) လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်း VARCHAR",
+    "လႆႈၵူၺ်းၼႂ်း INT"
+  ], "Can IN contain mixed types?"),
 
   // --- Lesson 33: LIKE and Wildcards (315-327) ---
   Quiz(315, "LIKE Operator ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "သွၵ်ႈႁႃလိၵ်ႈ ၸွမ်းၼင်ႇႁွႆးလိၵ်ႈ (Pattern Matching)",
-    "လိူၵ်ႈၼႂ်းၵႄႈ",
-    "ယႃႉ Table",
-    "မႄး Column",
+    "သွၵ်ႈႁႃလိၵ်ႈၸွမ်းႁွႆးလိၵ်ႈ",
+    "လိူၵ်ႈၼႂ်းၵႄႈၵႃႈၶၼ်",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "မႄး Column တႅၼ်းတီႈ"
   ], "What is LIKE used for?"),
+
   Quiz(316, "Wildcard '%' (Percent) တႅၼ်းသင်?", [
-    "တူဝ်လိၵ်ႈၵႃႈလၢႆတူဝ်ၵေႃႈလႆႈ (0 ၶိုၼ်ႈၼိူဝ်)",
+    "တူဝ်လိၵ်ႈၵႃႈလၢႆတူဝ်ၵေႃႈလႆႈ",
     "1 တူဝ်တႅတ်ႈတေႃး",
     "မၢႆထိုင် % တႄႉတႄႉ",
-    "Space",
+    "Space ၼႂ်းလိၵ်ႈ"
   ], "What does '%' represent?"),
+
   Quiz(317, "Wildcard '_' (Underscore) တႅၼ်းသင်?", [
     "တူဝ်လိၵ်ႈ 1 တူဝ်တႅတ်ႈတေႃး",
     "ၵႃႈလၢႆတူဝ်ၵေႃႈလႆႈ",
-    "Space",
-    "NULL",
+    "Space ၼႂ်းလိၵ်ႈ",
+    "NULL တႃႇသေႇ"
   ], "What does '_' represent?"),
+
   Quiz(318, "LIKE 'A%' ႁႃသင်?", [
     "တႄႇလူၺ်ႈ 'A'",
     "သုတ်းလူၺ်ႈ 'A'",
     "မီး 'A' ယူႇၵႄႈၵၢင်",
-    "ပဵၼ် 'A' တူဝ်လဵဝ်",
+    "ပဵၼ် 'A' တူဝ်လဵဝ်"
   ], "What does LIKE 'A%' find?"),
+
   Quiz(319, "LIKE '%A' ႁႃသင်?", [
     "သုတ်းလူၺ်ႈ 'A'",
     "တႄႇလူၺ်ႈ 'A'",
     "မီး 'A' ယူႇၵႄႈၵၢင်",
-    "ပဵၼ် 'A' တွၼ်ႈၼႃႈ",
+    "ပဵၼ် 'A' တူဝ်တၢင်းၼႃႈ"
   ], "What does LIKE '%A' find?"),
+
   Quiz(320, "LIKE '%A%' ႁႃသင်?", [
     "မီး 'A' ယူႇတီႈလႂ်ၵေႃႈလႆႈ",
     "တႄႇလူၺ်ႈ 'A'",
     "သုတ်းလူၺ်ႈ 'A'",
-    "ပဵၼ် 'A' တူဝ်လဵဝ်",
+    "ပဵၼ် 'A' တူဝ်လဵဝ်ၵူၺ်း"
   ], "What does LIKE '%A%' find?"),
+
   Quiz(321, "LIKE '_A%' ႁႃသင်?", [
-    "တူဝ်လိၵ်ႈတူဝ်တီႈသွင် ပဵၼ် 'A'",
+    "တူဝ်လိၵ်ႈတူဝ်တီႈသွင်ပဵၼ် 'A'",
     "တႄႇလူၺ်ႈ 'A'",
-    "တူဝ်လိၵ်ႈတူဝ်တီႈၼိုင်ႈ ပဵၼ် 'A'",
-    "Error",
+    "တူဝ်လိၵ်ႈတူဝ်တီႈၼိုင်ႈပဵၼ် 'A'",
+    "Error ၵမ်းလဵဝ်"
   ], "What does LIKE '_A%' find?"),
+
   Quiz(322, "NOT LIKE 'A%' ႁႃသင်?", [
     "ဢၼ်ဢမ်ႇတႄႇလူၺ်ႈ 'A'",
     "ဢၼ်တႄႇလူၺ်ႈ 'A'",
     "ဢၼ်ပဵၼ် 'A' ၵူၺ်း",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "What does NOT LIKE 'A%' find?"),
-  Quiz(
-    323,
-    "Escape Character '\' ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇႁႃတူဝ် '%' ဢမ်ႇၼၼ် '_' တႄႉတႄႉ",
-      "တႃႇယႃႉ Row",
-      "တႃႇပၼ် Space",
-      "တႃႇတႄႇၼႃႈမႂ်ႇ",
-    ],
-    "What is the escape character used for?",
-  ),
-  Quiz(
-    324,
-    "LIKE ဝႆးလိူဝ် REGEXP ႁႃႉ?",
-    [
-      "ၸႂ်ႈ (Pattern ပိုၼ်ႉထၢၼ် LIKE ဝႆးလိူဝ်)",
-      "ဢမ်ႇၸႂ်ႈ",
-      "မိူၼ်ၵၼ်",
-      "Error",
-    ],
-    "Is LIKE faster than REGEXP for simple patterns?",
-  ),
+
+  Quiz(323, "Escape Character '\' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇႁႃ '%' ဢမ်ႇၼၼ် '_' တႄႉ",
+    "တႃႇယႃႉ Row ပႅတ်ႈ",
+    "တႃႇပၼ် Space",
+    "တႃႇတႄႇၼႃႈမႂ်ႇ"
+  ], "What is the escape character used for?"),
+
+  Quiz(324, "LIKE ဝႆးလိူဝ် REGEXP ႁႃႉ?", [
+    "ၸႂ်ႈ",
+    "ဢမ်ႇၸႂ်ႈ",
+    "မိူၼ်ၵၼ်",
+    "Error ၵမ်းလဵဝ်"
+  ], "Is LIKE faster than REGEXP for simple patterns?"),
+
   Quiz(325, "LIKE '____' (4 underscores) ႁႃသင်?", [
-    "လိၵ်ႈဢၼ်မီး 4 တူဝ်တႅတ်ႈတေႃး",
+    "လိၵ်ႈဢၼ်မီး 4 တူဝ်",
     "လိၵ်ႈဢၼ်မီး 4 တွၼ်ႈ",
     "လိၵ်ႈဢၼ်တႄႇလူၺ်ႈ 4",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "What does LIKE '____' find?"),
-  Quiz(326, "MySQL LIKE ၸႅၵ်ႇ Case (A vs a) ႁႃႉ?", [
-    "ဢမ်ႇ (Default case-insensitive)",
-    "ၸႅၵ်ႇ",
-    "ၸႅၵ်ႇၵူၺ်းၼႂ်း ID",
-    "Error",
-  ], "Is LIKE case-sensitive in MySQL?"),
-  Quiz(
-    327,
-    "LIKE ၸၢင်ႈၸႂ်ႉတင်း တူဝ်ၼပ်ႉ (Numeric) လႆႈႁႃႉ?",
-    [
-      "လႆႈ (MySQL တေပိၼ်ႇပဵၼ် String ႁင်းမၼ်း)",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်းၼႂ်း VARCHAR",
-      "Error",
-    ],
-    "Can LIKE be used with numeric values?",
-  ),
 
-  // --- Lesson 34: REGEXP (328-340) ---
+  Quiz(326, "MySQL LIKE ၸႅၵ်ႇ Case ႁႃႉ?", [
+    "ဢမ်ႇၸႅၵ်ႇ",
+    "ၸႅၵ်ႇတႃႇသေႇ",
+    "ၸႅၵ်ႇၵူၺ်းၼႂ်း ID",
+    "Error ၵမ်းလဵဝ်"
+  ], "Is LIKE case-sensitive in MySQL?"),
+
+  Quiz(327, "LIKE ၸၢင်ႈၸႂ်ႉတင်း တူဝ်ၼပ်ႉ (Numeric) လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်း VARCHAR",
+    "Error ၵမ်းလဵဝ်"
+  ], "Can LIKE be used with numeric values?"),
+
+  // --- Lesson 34: REGEXP (328-400 as requested previously for v2 format) ---
   Quiz(328, "REGEXP ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "သွၵ်ႈႁႃႁွႆးလိၵ်ႈ ဢၼ်ယုင်ႈယၢင်ႈ လႄႈ ၵျလိူဝ် (Regex)",
-    "လိူၵ်ႈၼႂ်းၵႄႈ",
-    "ယႃႉ Table",
-    "မႄး Column",
+    "သွၵ်ႈႁႃႁွႆးလိၵ်ႈဢၼ်ယုင်ႈယၢင်ႈ",
+    "လိူၵ်ႈၼႂ်းၵႄႈၵႃႈၶၼ်",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "မႄး Column တႅၼ်းတီႈ"
   ], "What is REGEXP used for?"),
+
   Quiz(329, "တူဝ် '^' ၼႂ်း REGEXP မၢႆထိုင်သင်?", [
-    "တႄႇလူၺ်ႈ (Beginning)",
+    "တႄႇလူၺ်ႈ",
     "သုတ်းလူၺ်ႈ",
     "ဢမ်ႇၼၼ်",
-    "တူဝ်လိၵ်ႈ 1 တူဝ်",
+    "တူဝ်လိၵ်ႈ 1 တူဝ်"
   ], "What does '^' mean?"),
+
   Quiz(330, "တူဝ် '\$' ၼႂ်း REGEXP မၢႆထိုင်သင်?", [
-    "သုတ်းလူၺ်ႈ (End)",
+    "သုတ်းလူၺ်ႈ",
     "တႄႇလူၺ်ႈ",
     "ဢမ်ႇၼၼ်",
-    "Space",
+    "Space"
   ], "What does '\$' mean?"),
+
   Quiz(331, "တူဝ် '|' ၼႂ်း REGEXP မၢႆထိုင်သင်?", [
-    "ဢမ်ႇၼၼ် (OR)",
-    "လႄႈ (AND)",
+    "ဢမ်ႇၼၼ်",
+    "လႄႈ",
     "တႄႇလူၺ်ႈ",
-    "သုတ်းလူၺ်ႈ",
+    "သုတ်းလူၺ်ႈ"
   ], "What does '|' mean?"),
+
   Quiz(332, "REGEXP 'A|B' ႁႃသင်?", [
     "မီး 'A' ဢမ်ႇၼၼ် 'B'",
     "မီးတင်း 'A' လႄႈ 'B'",
     "တႄႇလူၺ်ႈ 'A'",
-    "သုတ်းလူၺ်ႈ 'B'",
+    "သုတ်းလူၺ်ႈ 'B'"
   ], "What does 'A|B' find?"),
+
   Quiz(333, "တူဝ် '.' (Dot) ၼႂ်း REGEXP မၢႆထိုင်သင်?", [
-    "တူဝ်လိၵ်ႈ 1 တူဝ် (Any character)",
+    "တူဝ်လိၵ်ႈ 1 တူဝ်",
     "တူဝ်လိၵ်ႈၵႃႈလၢႆတူဝ်",
-    "မၢႆထိုင် '.' တႄႉတႄႉ",
-    "End",
+    "မၢႆထိုင် '.' တႄႉ",
+    "End"
   ], "What does '.' mean?"),
+
   Quiz(334, "REGEXP '[abc]' ႁႃသင်?", [
-    "မီးတူဝ် 'a', 'b', ဢမ်ႇၼၼ် 'c' ၼႂ်းဝူတ်း",
+    "မီး 'a', 'b', ႁိုဝ် 'c'",
     "တႄႇလူၺ်ႈ 'abc'",
     "သုတ်းလူၺ်ႈ 'abc'",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "What does '[abc]' find?"),
+
   Quiz(335, "REGEXP '[a-z]' ႁႃသင်?", [
-    "တူဝ်လိၵ်ႈ ယူႇၼႂ်းၵႄႈ a ထိုင် z",
+    "တူဝ်လိၵ်ႈၼႂ်းၵႄႈ a ထိုင် z",
     "တူဝ်လိၵ်ႈ 'a' လႄႈ 'z' ၵူၺ်း",
-    "Error",
-    "NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does '[a-z]' find?"),
+
   Quiz(336, "REGEXP '^Sai' ႁႃသင်?", [
     "ၸိုဝ်ႈဢၼ်တႄႇလူၺ်ႈ 'Sai'",
     "ၸိုဝ်ႈဢၼ်သုတ်းလူၺ်ႈ 'Sai'",
-    "ၸိုဝ်ႈဢၼ်မီး 'Sai' ယူႇၵႄႈၵၢင်",
-    "Error",
+    "ၸိုဝ်ႈဢၼ်မီး 'Sai' ၵႄႈၵၢင်",
+    "Error ၵမ်းလဵဝ်"
   ], "What does '^Sai' find?"),
+
   Quiz(337, "REGEXP 'Mao\$' ႁႃသင်?", [
     "ၸိုဝ်ႈဢၼ်သုတ်းလူၺ်ႈ 'Mao'",
     "ၸိုဝ်ႈဢၼ်တႄႇလူၺ်ႈ 'Mao'",
-    "Error",
-    "NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does 'Mao\$' find?"),
+
   Quiz(338, "REGEXP '[0-9]' ႁႃသင်?", [
-    "လိၵ်ႈဢၼ်မီးတူဝ်ၼပ်ႉယူႇၼႂ်းမၼ်း",
+    "လိၵ်ႈဢၼ်မီးတူဝ်ၼပ်ႉ",
     "လိၵ်ႈဢၼ်မီး 0-9 တူဝ်",
-    "Error",
-    "NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does '[0-9]' find?"),
-  Quiz(339, "REGEXP ၸၢင်ႈၸႅၵ်ႇ Case (BINARY) လႆႈႁႃႉ?", [
-    "လႆႈ (ၸႂ်ႉ REGEXP BINARY)",
+
+  Quiz(339, "REGEXP ၸၢင်ႈၸႅၵ်ႇ Case လႆႈႁႃႉ?", [
+    "လႆႈ",
     "ဢမ်ႇလႆႈ",
     "လႆႈတႃႇသေႇ",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "Can REGEXP be case-sensitive?"),
+
   Quiz(340, "REGEXP '^[A-Z]' ႁႃသင်?", [
-    "တႄႇလူၺ်ႈ တူဝ်လိၵ်ႈဢင်းၵိတ်းတူဝ်ယႂ်ႇ",
-    "သုတ်းလူၺ်ႈ",
-    "Error",
-    "NULL",
+    "တႄႇလူၺ်ႈတူဝ်ယႂ်ႇ",
+    "သုတ်းလူၺ်ႈတူဝ်ယႂ်ႇ",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does '^[A-Z]' find?"),
 
   // --- Lesson 35: Nullability (341-353) ---
   Quiz(341, "NULL မၢႆထိုင်သင်?", [
-    "ဢမ်ႇႁူႉၵႃႈၶၼ် (Unknown/Missing)",
+    "ဢမ်ႇႁူႉၵႃႈၶၼ်",
     "သုၼ် (0)",
     "လိၵ်ႈပဝ်ႇ ('')",
-    "Space",
+    "Space ၼႂ်း SQL"
   ], "What does NULL mean?"),
+
   Quiz(342, "IS NULL ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "သွၵ်ႈႁႃၶေႃႈမုၼ်းပဝ်ႇ (NULL)",
+    "သွၵ်ႈႁႃၶေႃႈမုၼ်းပဝ်ႇ",
     "သွၵ်ႈႁႃတူဝ်ၼပ်ႉ 0",
-    "ယႃႉ Row",
-    "မႄး Column",
+    "ယႃႉ Row ပႅတ်ႈ",
+    "မႄး Column တႅၼ်းတီႈ"
   ], "What is IS NULL used for?"),
+
   Quiz(343, "IS NOT NULL ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "သွၵ်ႈႁႃၶေႃႈမုၼ်း ဢၼ်မီးၵႃႈၶၼ်တႅတ်ႈတေႃး",
-    "သွၵ်ႈႁႃ NULL",
-    "Error",
-    "NULL",
+    "သွၵ်ႈႁႃၶေႃႈမုၼ်းဢၼ်မီးၵႃႈၶၼ်",
+    "သွၵ်ႈႁႃ NULL ၵူၺ်း",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What is IS NOT NULL used for?"),
+
   Quiz(344, "ႁဵတ်းသင် phone = NULL ၸႂ်ႉဢမ်ႇလႆႈ?", [
-    "ၵွပ်ႈ NULL ဢမ်ႇၸႂ်ႈၵႃႈၶၼ် (Value) ဢၼ်တႅၵ်ႈၵၼ်လႆႈ",
-    "မၼ်း Error",
-    "မၼ်းပဵၼ် Space",
-    "Error",
+    "ၵွပ်ႈ NULL ဢမ်ႇၸႂ်ႈ Value",
+    "မၼ်း Error တႃႇသေႇ",
+    "မၼ်းပဵၼ် Space ၵူၺ်း",
+    "Error ၵမ်းလဵဝ်"
   ], "Why doesn't phone = NULL work?"),
-  Quiz(
-    345,
-    "Three-valued Logic ၼႂ်း SQL ပႃးသင်လၢႆလၢႆ?",
-    ["True, False, Unknown (NULL)", "True, False", "0, 1", "NULL ၵူၺ်း"],
-    "What are the components of three-valued logic?",
-  ),
-  Quiz(346, "10 > NULL ၽွၼ်းလႆႈတေပဵၼ်သင်?", [
-    "Unknown (NULL)",
+
+  Quiz(345, "Three-valued Logic ပႃးသင်?", [
+    "True, False, Unknown",
+    "True, False ၵူၺ်း",
+    "0, 1, NULL",
+    "NULL ၵူၺ်းတႃႇသေႇ"
+  ], "What are the components of three-valued logic?"),
+
+  Quiz(346, "10 > NULL ၽွၼ်းလႆႈပဵၼ်သင်?", [
+    "Unknown",
     "True",
     "False",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "What is the result of 10 > NULL?"),
+
   Quiz(347, "IFNULL(col, 'N/A') ၸွႆႈသင်?", [
-    "သင် col ပဵၼ် NULL ႁႂ်ႈၼႄ 'N/A' တႅၼ်း",
-    "ယႃႉ NULL",
-    "ပၼ် NULL",
-    "Error",
+    "သင် NULL ႁႂ်ႈၼႄ 'N/A'",
+    "ယႃႉ NULL ပႅတ်ႈၵမ်းလဵဝ်",
+    "ပၼ် NULL တႅၼ်းတီႈ",
+    "Error ၵမ်းလဵဝ်"
   ], "What does IFNULL(col, 'N/A') do?"),
+
   Quiz(348, "COALESCE() ၸွႆႈသင်?", [
-    "ဢဝ်ၵႃႈၶၼ်ဢွၼ်တၢင်းသုတ်း ဢၼ်ဢမ်ႇၸႂ်ႈ NULL ၼႂ်းသဵၼ်ႈမၢႆ",
-    "ၼပ်ႉသွၼ်ႇ",
-    "ယႃႉ Table",
-    "Error",
+    "ဢဝ်ၵႃႈၶၼ်ဢွၼ်တၢင်းသုတ်းဢၼ်ဢမ်ႇၸႂ်ႈ NULL",
+    "ၼပ်ႉသွၼ်ႇၵႃႈၶၼ်တင်းမူတ်း",
+    "ယႃႉ Table ပႅတ်ႈၵမ်းလဵဝ်",
+    "Error ၵမ်းလဵဝ်"
   ], "What does COALESCE() do?"),
-  Quiz(
-    349,
-    "Empty String ('') တင်း NULL မိူၼ်ၵၼ်ႁႃႉ?",
-    [
-      "ဢမ်ႇမိူၼ် (Empty string မီးၵႃႈၶၼ် ၵူၺ်းၵႃႈ NULL ဢမ်ႇမီး)",
-      "မိူၼ်",
-      "မၢင်ပွၵ်ႈ",
-      "Error",
-    ],
-    "Is Empty String the same as NULL?",
-  ),
+
+  Quiz(349, "Empty String ('') တင်း NULL မိူၼ်ၵၼ်ႁႃႉ?", [
+    "ဢမ်ႇမိူၼ်",
+    "မိူၼ်ၵၼ်ၵူႈယၢင်ႇ",
+    "မၢင်ပွၵ်ႈမိူၼ်ၵၼ်",
+    "Error ၵမ်းလဵဝ်"
+  ], "Is Empty String the same as NULL?"),
+
   Quiz(350, "IS NULL ၸၢင်ႈၸႂ်ႉၼႂ်း UPDATE လႆႈႁႃႉ?", [
-    "လႆႈ (မိူၼ်ၼင်ႇ WHERE col IS NULL)",
+    "လႆႈ",
     "ဢမ်ႇလႆႈ",
     "လႆႈၵူၺ်းၼႂ်း SELECT",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "Can IS NULL be used in UPDATE?"),
-  Quiz(
-    351,
-    "MySQL ၸတ်းလႅၼ်ႇ NULL ဝႆႉတီႈလႂ် မိူဝ်ႈ ORDER BY ASC?",
-    ["ဝႆးၽၢႆႇၼႃႈသုတ်း (ဢေႇသုတ်း)", "ဝႆႉၽၢႆႇလင်", "ယူႇၵႄႈၵၢင်", "Error"],
-    "Where does MySQL place NULLs in ORDER BY ASC?",
-  ),
-  Quiz(
-    352,
-    "ISNULL(col) (Function) မိူၼ်တင်း IS NULL (Operator) ႁႃႉ?",
-    ["မိူၼ်ၵၼ် (MySQL သွင်လၢႆး)", "ဢမ်ႇမိူၼ်", "Error", "NULL"],
-    "Is ISNULL(col) the same as IS NULL?",
-  ),
-  Quiz(
-    353,
-    "NOT (col IS NULL) မိူၼ်တင်းသင်?",
-    ["col IS NOT NULL", "col = NULL", "Error", "NULL"],
-    "What is equivalent to NOT (col IS NULL)?",
-  ),
+
+  Quiz(351, "MySQL ၸတ်း NULL ဝႆႉတီႈလႂ်မိူဝ်ႈ ASC?", [
+    "ၼိူဝ်သုတ်း",
+    "တႂ်ႈသုတ်း",
+    "ၵႄႈၵၢင်",
+    "Error ၵမ်းလဵဝ်"
+  ], "Where does MySQL place NULLs in ORDER BY ASC?"),
+
+  Quiz(352, "ISNULL(col) မိူၼ်တင်း IS NULL ႁႃႉ?", [
+    "မိူၼ်ၵၼ်",
+    "ဢမ်ႇမိူၼ်",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "Is ISNULL(col) the same as IS NULL?"),
+
+  Quiz(353, "NOT (col IS NULL) မိူၼ်တင်းသင်?", [
+    "col IS NOT NULL",
+    "col = NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "What is equivalent to NOT (col IS NULL)?"),
 
   // --- Lesson 36: Sorting (354-366) ---
   Quiz(354, "ORDER BY ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "ၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း (Sorting)",
+    "ၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း",
     "လိူၵ်ႈၶေႃႈမုၼ်း",
-    "ယႃႉၶေႃႈမုၼ်း",
-    "မႄး Table",
+    "ယႃႉၶေႃႈမုၼ်းပႅတ်ႈ",
+    "မႄး Table Structure"
   ], "What is the purpose of ORDER BY?"),
+
   Quiz(355, "ASC ၸတ်းၸိူင်ႉႁိုဝ်?", [
-    "တီႈဢေႇ ၶိုၼ်ႈၵႂႃႇၼမ် (A-Z, 1-100)",
-    "တီႈၼမ် လုင်းမႃးဢေႇ",
-    "Error",
-    "NULL",
+    "ဢေႇ ၶိုၼ်ႈၵႂႃႇ ၼမ်",
+    "ၼမ် ลုင်းမႃး ဢေႇ",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "How does ASC sort?"),
+
   Quiz(356, "DESC ၸတ်းၸိူင်ႉႁိုဝ်?", [
-    "တီႈၼမ် လုင်းမႃးဢေႇ (Z-A, 100-1)",
-    "တီႈဢေႇ ၶိုၼ်ႈၵႂႃႇၼမ်",
-    "Error",
-    "NULL",
+    "ၼမ် ลုင်းမႃး ဢေႇ",
+    "ဢေႇ ၶိုၼ်ႈၵႂႃႇ ၼမ်",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "How does DESC sort?"),
+
   Quiz(357, "ORDER BY col1, col2 မၢႆထိုင်သင်?", [
-    "ၸတ်းၸွမ်း col1 ဢွၼ်တၢင်း သေၸင်ႇၸတ်း col2",
-    "ၸတ်းႁူမ်ႈၵၼ်",
-    "Error",
-    "NULL",
+    "ၸတ်း col1 သေၸင်ႇၸတ်း col2",
+    "ၸတ်းႁူမ်ႈၵၼ်ၵမ်းလဵဝ်",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does ORDER BY col1, col2 mean?"),
+
   Quiz(358, "Default sorting ၼႂ်း MySQL ပဵၼ်သင်?", [
     "ASC",
     "DESC",
     "Random",
-    "NULL",
+    "NULL"
   ], "What is the default sort order?"),
+
   Quiz(359, "ORDER BY RAND() ၸွႆႈသင်?", [
-    "ၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း လွၼ်ႉလႃႈ (Random)",
+    "ၸတ်းလႅၼ်ႇလွၼ်ႉလႃႈ",
     "ၸတ်းၸွမ်း ID",
-    "Error",
-    "NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does ORDER BY RAND() do?"),
-  Quiz(
-    360,
-    "FIELD() Function ၼႂ်း ORDER BY ၸွႆႈသင်?",
-    [
-      "ၸတ်းလႅၼ်ႇ ၸွမ်းၼင်ႇသဵၼ်ႈမၢႆ ဢၼ်ႁဝ်းမၵ်းမၼ်ႈ",
-      "ၸတ်းၸွမ်း A-Z",
-      "Error",
-      "NULL",
-    ],
-    "What is FIELD() used for in sorting?",
-  ),
-  Quiz(361, "ORDER BY ၸၢင်ႈၸႂ်ႉ Alias ၸိုဝ်ႈမႂ်ႇလႆႈႁႃႉ?", [
-    "လႆႈ (MySQL ပၼ်သုၼ်ႇ)",
+
+  Quiz(360, "FIELD() ၼႂ်း ORDER BY ၸွႆႈသင်?", [
+    "ၸတ်းၸွမ်းသဵၼ်ႈမၢႆဢၼ်မၵ်းမၼ်ႈ",
+    "ၸတ်းၸွမ်း A-Z",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "What is FIELD() used for in sorting?"),
+
+  Quiz(361, "ORDER BY ၸၢင်ႈၸႂ်ႉ Alias လႆႈႁႃႉ?", [
+    "လႆႈ",
     "ဢမ်ႇလႆႈ",
     "လႆႈၵူၺ်းၼႂ်း ID",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "Can ORDER BY use an Alias?"),
+
   Quiz(362, "ORDER BY 2 မၢႆထိုင်သင်?", [
-    "ၸတ်းၸွမ်း Column တူဝ်တီႈသွင် ၼႂ်း SELECT",
-    "ၸတ်းၸွမ်းမၢႆ 2",
-    "Error",
-    "NULL",
+    "ၸတ်းၸွမ်း Column 2 ၼႂ်း SELECT",
+    "ၸတ်းၸွမ်းမၢႆ 2 တႅတ်ႈတေႃး",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does ORDER BY 2 mean?"),
-  Quiz(
-    363,
-    "ႁဵတ်းသင်လႄႈ ဢမ်ႇထုၵ်ႇလီၸႂ်ႉ ORDER BY ၼပ်ႉမၢႆ (မိူၼ်ၼင်ႇ 1, 2)?",
-    [
-      "ၵွပ်ႈသင် Table လႅၵ်ႈမႃး... Query တေၸတ်းၽိတ်း",
-      "မၼ်း Error",
-      "မၼ်းၸႃႉ",
-      "Error",
-    ],
-    "Why avoid sorting by column index?",
-  ),
-  Quiz(
-    364,
-    "ORDER BY DESC ... NULL တေယူႇတီႈလႂ်?",
-    ["ယူႇတႂ်ႈသုတ်း (ၽၢႆႇလင်)", "ယူႇၼိူဝ်သုတ်း", "ယူႇၵႄႈၵၢင်", "Error"],
-    "Where do NULLs go in ORDER BY DESC?",
-  ),
-  Quiz(
-    365,
-    "Sorting ၸွမ်း Column ဢၼ်မီး Index ၸွႆႈသင်?",
-    ["ၸွႆႈႁႂ်ႈ Query ဝႆးလိူဝ်တႄႉတႄႉ", "ၸွႆႈယႃႉ Table", "Error", "NULL"],
-    "How does sorting on an indexed column help?",
-  ),
-  Quiz(
-    366,
-    "ORDER BY ၸၢင်ႈၸႂ်ႉ Math Expression (မိူၼ်ၼင်ႇ price * quantity) လႆႈႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း SELECT", "Error"],
-    "Can ORDER BY use math expressions?",
-  ),
+
+  Quiz(363, "ႁဵတ်းသင်ဢမ်ႇထုၵ်ႇလီၸႂ်ႉ ORDER BY 1, 2?", [
+    "သင် Table လႅၵ်ႈ Query တေၽိတ်း",
+    "မၼ်း Error တႃႇသေႇ",
+    "မၼ်းၸႃႉလိူဝ်ၵဝ်ႇ",
+    "Error ၵမ်းလဵဝ်"
+  ], "Why avoid sorting by column index?"),
+
+  Quiz(364, "ORDER BY DESC... NULL တေယူႇတီႈလႂ်?", [
+    "တႂ်ႈသုတ်း",
+    "ၼိူဝ်သုတ်း",
+    "ၵႄႈၵၢင်",
+    "Error ၵမ်းလဵဝ်"
+  ], "Where do NULLs go in ORDER BY DESC?"),
+
+  Quiz(365, "Sorting ၸွမ်း Index ၸွႆႈသင်?", [
+    "ၸွႆႈႁႂ်ႈဝႆးလိူဝ်တႄႉတႄႉ",
+    "ၸွႆႈယႃႉ Table ပႅတ်ႈ",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "How does sorting on an indexed column help?"),
+
+  Quiz(366, "ORDER BY ၸၢင်ႈၸႂ်ႉ Math Expression လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်း SELECT",
+    "Error ၵမ်းလဵဝ်"
+  ], "Can ORDER BY use math expressions?"),
 
   // --- Lesson 37: Pagination (367-379) ---
   Quiz(367, "LIMIT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "မၵ်းမၼ်ႈတၢင်းၼမ်ထႅဝ် ဢၼ်တေဢဝ်ဢွၵ်ႇမႃးၼႄ",
-    "ၸတ်းလႅၼ်ႇ",
-    "ယႃႉ Table",
-    "Error",
+    "မၵ်းမၼ်ႈတၢင်းၼမ်ထႅဝ်",
+    "ၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "Error ၵမ်းလဵဝ်"
   ], "What is LIMIT used for?"),
+
   Quiz(368, "OFFSET ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "ၶၢမ်ႈ (Skip) ၶေႃႈမုၼ်းတွၼ်ႈၼႃႈ",
+    "ၶၢမ်ႈၶေႃႈမုၼ်းတွၼ်ႈၼႃႈ",
     "မၵ်းမၼ်ႈတၢင်းၼမ်",
-    "Error",
-    "NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What is OFFSET used for?"),
+
   Quiz(369, "LIMIT 10 ၼႄသင်?", [
     "ၼႄ 10 ထႅဝ်ဢွၼ်တၢင်းသုတ်း",
     "ၼႄ 10 ထႅဝ်ၽၢႆႇလင်",
-    "Error",
-    "NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does LIMIT 10 show?"),
+
   Quiz(370, "LIMIT 5, 10 မၢႆထိုင်သင်?", [
-    "ၶၢမ်ႈ 5 ဢဝ် 10 (LIMIT 10 OFFSET 5)",
+    "ၶၢမ်ႈ 5 ဢဝ် 10",
     "ၶၢမ်ႈ 10 ဢဝ် 5",
-    "Error",
-    "NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What does LIMIT 5, 10 mean?"),
-  Quiz(
-    371,
-    "Pagination ၼႂ်း App ၸႂ်ႉ Logic လႂ်?",
-    ["LIMIT လႄႈ OFFSET", "WHERE ၵူၺ်း", "ORDER BY ၵူၺ်း", "Error"],
-    "What logic is used for pagination?",
-  ),
-  Quiz(
-    372,
-    "OFFSET = (page-1) * items ... သင် Page 2, Items 10... OFFSET ပဵၼ်ၵႃႈလၢႆ?",
-    ["10", "20", "0", "5"],
-    "If Page 2 and 10 items, what is the OFFSET?",
-  ),
+
+  Quiz(371, "Pagination ၸႂ်ႉ Logic လႂ်?", [
+    "LIMIT လႄႈ OFFSET",
+    "WHERE ၵူၺ်း",
+    "ORDER BY ၵူၺ်း",
+    "Error ၵမ်းလဵဝ်"
+  ], "What logic is used for pagination?"),
+
+  Quiz(372, "Page 2, Items 10... OFFSET ปဵၼ်ၵႃႈလၢႆ?", [
+    "10",
+    "20",
+    "0",
+    "5"
+  ], "If Page 2 and 10 items, what is the OFFSET?"),
+
   Quiz(373, "LIMIT ၸၢင်ႈၸႂ်ႉၼႂ်း UPDATE လႆႈႁႃႉ?", [
-    "လႆႈ (တႃႇမၵ်းမၼ်ႈထႅဝ် ဢၼ်တေမႄး)",
+    "လႆႈ",
     "ဢမ်ႇလႆႈ",
     "လႆႈၵူၺ်းၼႂ်း SELECT",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "Can LIMIT be used in UPDATE?"),
+
   Quiz(374, "LIMIT ၸၢင်ႈၸႂ်ႉၼႂ်း DELETE လႆႈႁႃႉ?", [
-    "လႆႈ (တႃႇယႃႉၵူၺ်းမၢင်ထႅဝ်)",
+    "လႆႈ",
     "ဢမ်ႇလႆႈ",
-    "Error",
-    "NULL",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "Can LIMIT be used in DELETE?"),
-  Quiz(
-    375,
-    "သင် OFFSET ၼမ်ၼမ် (မိူၼ်ၼင်ႇ 1 လၢၼ်ႉ)... တေပဵၼ်သင်?",
-    ["Query တေၸႃႉလိူဝ်ၵဝ်ႇ", "Query တေဝႆး", "Error", "NULL"],
-    "What if OFFSET is very high?",
-  ),
-  Quiz(
-    376,
-    "OFFSET ၸၢင်ႈၸႂ်ႉလူၺ်ႈဢမ်ႇမီး LIMIT လႆႈႁႃႉ?",
-    ["ဢမ်ႇလႆႈ (တေလႆႈမီး LIMIT ၸွမ်းတႃႇသေႇ)", "လႆႈ", "Error", "NULL"],
-    "Can OFFSET exist without LIMIT?",
-  ),
-  Quiz(
-    377,
-    "ORDER BY လူဝ်ႇမီးဢွၼ်တၢင်း LIMIT ႁႃႉ?",
-    ["ၸႂ်ႈ (တေလႆႈၸတ်းလႅၼ်ႇ ၸင်ႇတေတတ်းလႆႈမၢၼ်ႇ)", "ဢမ်ႇၸႂ်ႈ", "Error", "NULL"],
-    "Should ORDER BY come before LIMIT?",
-  ),
+
+  Quiz(375, "သင် OFFSET ၼမ်ၼမ် (1 လၢၼ်ႉ)...?", [
+    "Query တေၸႃႉလိူဝ်ၵဝ်ႇ",
+    "Query တေဝႆးလိူဝ်ၵဝ်ႇ",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "What if OFFSET is very high?"),
+
+  Quiz(376, "OFFSET ၸႂ်ႉလူၺ်ႈဢမ်ႇမီး LIMIT လႆႈႁႃႉ?", [
+    "ဢမ်ႇလႆႈ",
+    "လႆႈ",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "Can OFFSET exist without LIMIT?"),
+
+  Quiz(377, "ORDER BY လူဝ်ႇမီးဢွၼ်တၢင်း LIMIT ႁႃႉ?", [
+    "ၸႂ်ႈ",
+    "ဢမ်ႇၸႂ်ႈ",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "Should ORDER BY come before LIMIT?"),
+
   Quiz(378, "LIMIT 1 ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇဢဝ်ၵူၺ်း 1 ထႅဝ် (မိူၼ်ၼင်ႇ ႁႃၵႃႈၶၼ်သုင်သုတ်း)",
-    "ယႃႉ Table",
-    "Error",
-    "NULL",
+    "တႃႇဢဝ်ၵူၺ်း 1 ထႅဝ်",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "Error ၵမ်း lဵဝ်",
+    "NULL တႃႇသေႇ"
   ], "What is LIMIT 1 commonly used for?"),
-  Quiz(
-    379,
-    "SELECT ... LIMIT 5 OFFSET 0 မိူၼ်တင်းသင်?",
-    ["SELECT ... LIMIT 5", "SELECT ... OFFSET 5", "Error", "NULL"],
-    "What is equivalent to LIMIT 5 OFFSET 0?",
-  ),
+
+  Quiz(379, "LIMIT 5 OFFSET 0 မိူၼ်တင်းသင်?", [
+    "LIMIT 5",
+    "OFFSET 5",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "What is equivalent to LIMIT 5 OFFSET 0?"),
 
   // --- Lesson 38: Math Functions (380-390) ---
-  Quiz(380, "ABS(-5) ၽွၼ်းလႆႈတေပဵၼ်ၵႃႈလၢႆ?", [
+  Quiz(380, "ABS(-5) ၽွၼ်းလႆႈပဵၼ်ၵႃႈလၢႆ?", [
     "5",
     "-5",
     "0",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "What is the result of ABS(-5)?"),
-  Quiz(381, "ROUND(1.5) ၽွၼ်းလႆႈတေပဵၼ်ၵႃႈလၢႆ?", [
+
+  Quiz(381, "ROUND(1.5) ၽွၼ်းလႆႈပဵၼ်ၵႃႈလၢႆ?", [
     "2",
     "1",
     "1.5",
-    "0",
+    "0"
   ], "What is the result of ROUND(1.5)?"),
-  Quiz(382, "ROUND(1.4) ၽွၼ်းလႆႈတေပဵၼ်ၵႃႈလၢႆ?", [
+
+  Quiz(382, "ROUND(1.4) ၽွၼ်းလႆႈပဵၼ်ၵႃႈလၢႆ?", [
     "1",
     "2",
     "1.4",
-    "0",
+    "0"
   ], "What is the result of ROUND(1.4)?"),
-  Quiz(383, "CEIL(1.1) ၽွၼ်းလႆႈတေပဵၼ်ၵႃႈလၢႆ?", [
+
+  Quiz(383, "CEIL(1.1) ၽွၼ်းလႆႈပဵၼ်ၵႃႈလၢႆ?", [
     "2",
     "1",
     "1.1",
-    "0",
+    "0"
   ], "What is the result of CEIL(1.1)?"),
-  Quiz(384, "FLOOR(1.9) ၽွၼ်းလႆႈတေပဵၼ်ၵႃႈလၢႆ?", [
+
+  Quiz(384, "FLOOR(1.9) ၽွၼ်းလႆႈပဵၼ်ၵႃႈလၢႆ?", [
     "1",
     "2",
     "1.9",
-    "0",
+    "0"
   ], "What is the result of FLOOR(1.9)?"),
-  Quiz(
-    385,
-    "CEIL() တင်း FLOOR() ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?",
-    ["CEIL ၼပ်ႉၶိုၼ်ႈ သေ FLOOR ၼပ်ႉလူင်း", "မိူၼ်ၵၼ်", "Error", "NULL"],
-    "Difference between CEIL and FLOOR?",
-  ),
+
+  Quiz(385, "CEIL() တင်း FLOOR() ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
+    "CEIL ၼပ်ႉၶိုၼ်ႈ, FLOOR ၼပ်ႉလူင်း",
+    "မိူၼ်ၵၼ်ၵူႈယၢင်ႇ",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ"
+  ], "Difference between CEIL and FLOOR?"),
+
   Quiz(386, "ROUND(123.456, 1) တေပဵၼ်ၵႃႈလၢႆ?", [
     "123.5",
     "123.4",
     "123",
-    "124",
+    "124"
   ], "What is ROUND(123.456, 1)?"),
+
   Quiz(387, "RAND() ဢွၵ်ႇတူဝ်ၼပ်ႉယူႇၼႂ်းၵႄႈလႂ်?", [
     "0 ထိုင် 1",
     "1 ထိုင် 100",
     "0 ထိုင် 100",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "What range does RAND() return?"),
-  Quiz(388, "SQRT(16) ၽွၼ်းလႆႈတေပဵၼ်ၵႃႈလၢႆ?", [
+
+  Quiz(388, "SQRT(16) ၽွၼ်းလႆႈပဵၼ်ၵႃႈလၢႆ?", [
     "4",
     "8",
     "16",
-    "2",
+    "2"
   ], "What is SQRT(16)?"),
-  Quiz(389, "POW(2, 3) ၽွၼ်းလႆႈတေပဵၼ်ၵႃႈလၢႆ?", [
+
+  Quiz(389, "POW(2, 3) ၽွၼ်းလႆႈပဵၼ်ၵႃႈလၢႆ?", [
     "8",
     "6",
     "5",
-    "9",
+    "9"
   ], "What is POW(2, 3)?"),
-  Quiz(390, "MOD(10, 3) (Remainder) တေပဵၼ်ၵႃႈလၢႆ?", [
+
+  Quiz(390, "MOD(10, 3) တေပဵၼ်ၵႃႈလၢႆ?", [
     "1",
     "3",
     "0",
-    "10",
+    "10"
   ], "What is MOD(10, 3)?"),
 
   // --- Lesson 39: String Functions (391-400) ---
@@ -3346,62 +3295,71 @@ List<Quiz> mysqlQuizM4 = [
     "'AB'",
     "'A B'",
     "'A'",
-    "'B'",
+    "'B'"
   ], "What is CONCAT('A', 'B')?"),
-  Quiz(
-    392,
-    "CONCAT_WS('-', 'A', 'B') (With Separator) တေပဵၼ်သင်?",
-    ["'A-B'", "'AB'", "'A B'", "'-AB'"],
-    "What is CONCAT_WS('-', 'A', 'B')?",
-  ),
-  Quiz(
-    393,
-    "SUBSTRING('ShanState', 1, 4) တေပဵၼ်သင်?",
-    ["'Shan'", "'Stat'", "'anSt'", "'State'"],
-    "What is SUBSTRING('ShanState', 1, 4)?",
-  ),
+
+  Quiz(392, "CONCAT_WS('-', 'A', 'B') တေပဵၼ်သင်?", [
+    "'A-B'",
+    "'AB'",
+    "'A B'",
+    "'-AB'"
+  ], "What is CONCAT_WS('-', 'A', 'B')?"),
+
+  Quiz(393, "SUBSTRING('ShanState', 1, 4) တေပဵၼ်သင်?", [
+    "'Shan'",
+    "'Stat'",
+    "'anSt'",
+    "'State'"
+  ], "What is SUBSTRING('ShanState', 1, 4)?"),
+
   Quiz(394, "LENGTH('ABC') တေၼႄၵႃႈလၢႆ?", [
     "3",
     "2",
     "4",
-    "0",
+    "0"
   ], "What is the LENGTH of 'ABC'?"),
+
   Quiz(395, "UPPER('abc') တေပဵၼ်သင်?", [
     "'ABC'",
     "'abc'",
     "'Abc'",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "What is UPPER('abc')?"),
+
   Quiz(396, "LOWER('ABC') တေပဵၼ်သင်?", [
     "'abc'",
     "'ABC'",
     "'Abc'",
-    "Error",
+    "Error ၵမ်းလဵဝ်"
   ], "What is LOWER('ABC')?"),
+
   Quiz(397, "TRIM('  abc  ') ၸွႆႈသင်?", [
-    "ယႃႉ Space ၽၢႆႇၼႃႈ လႄႈ ၽၢႆႇလင်ပႅတ်း",
-    "တွၵ်ႇလိၵ်ႈ",
-    "လႅၵ်ႈ Type",
-    "Error",
+    "ယႃႉ Space ၼႃႈလႄႈလင်",
+    "တွၵ်ႇလိၵ်ႈၵမ်းလဵဝ်",
+    "လႅၵ်ႈ Type ၶေႃႈမုၼ်း",
+    "Error ၵမ်းလဵဝ်"
   ], "What does TRIM() do?"),
-  Quiz(
-    398,
-    "REPLACE('Banana', 'a', 'o') တေပဵၼ်သင်?",
-    ["'Bonono'", "'Banana'", "'Bonana'", "Error"],
-    "What is REPLACE('Banana', 'a', 'o')?",
-  ),
+
+  Quiz(398, "REPLACE('Banana', 'a', 'o') တေပဵၼ်သင်?", [
+    "'Bonono'",
+    "'Banana'",
+    "'Bonana'",
+    "Error ၵမ်းလဵဝ်"
+  ], "What is REPLACE('Banana', 'a', 'o')?"),
+
   Quiz(399, "LEFT('Hello', 2) တေပဵၼ်သင်?", [
     "'He'",
     "'lo'",
     "'Hel'",
-    "'ello'",
+    "'ello'"
   ], "What is LEFT('Hello', 2)?"),
+
   Quiz(400, "RIGHT('Hello', 2) တေပဵၼ်သင်?", [
     "'lo'",
     "'He'",
     "'ello'",
-    "'Hel'",
-  ], "What is RIGHT('Hello', 2)?"),
+    "'Hel'"
+  ], "What is RIGHT('Hello', 2)?")
 ];
 List<Quiz> mysqlQuizM5 = [
   // --- Lesson 40: Join Fundamentals (401-412) ---
