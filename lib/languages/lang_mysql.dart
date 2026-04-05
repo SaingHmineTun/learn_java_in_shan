@@ -1160,1143 +1160,884 @@ List<Quiz> mysqlQuizM2 = [
   ),
 ];
 List<Quiz> mysqlQuizM3 = [
-  // --- Lesson 16: DDL Basics ---
+  // --- Lesson 16: DDL Basics (126-130) ---
   Quiz(126, "DDL ယေႃႈမႃးတီႈသင်?", [
     "Data Definition Language",
     "Data Detail Logic",
     "Database Design Level",
-    "Direct Data Link",
-  ], "What does DDL stand for?"),
+    "Direct Data Link"
+  ], "What does DML stand for?"),
 
-  Quiz(
-    127,
-    "ၶေႃႈၵႂၢမ်းလႂ် ပဵၼ် DDL Command?",
-    ["INSERT", "SELECT", "CREATE", "UPDATE"],
-    "Which of the following is a DDL command?",
-  ),
+  Quiz(127, "ၶေႃႈၵႂၢမ်းလႂ် ပဵၼ် DDL Command?", [
+    "CREATE",
+    "INSERT",
+    "SELECT",
+    "UPDATE"
+  ], "Which of the following is a DDL command?"),
 
-  Quiz(
-    128,
-    "သင်ၶႂ်ႈသၢင်ႈ Database မႂ်ႇ လူဝ်ႇၸႂ်ႉ Command သင်?",
-    ["MAKE DATABASE", "CREATE DATABASE", "NEW DATABASE", "ADD DATABASE"],
-    "Which command is used to create a new database?",
-  ),
+  Quiz(128, "သင်ၶႂ်ႈသၢင်ႈ Database မႂ်ႇ လူဝ်ႇၸႂ်ႉ Command သင်?", [
+    "CREATE DATABASE",
+    "MAKE DATABASE",
+    "NEW DATABASE",
+    "ADD DATABASE"
+  ], "Which command is used to create a new database?"),
 
-  Quiz(
-    129,
-    "Command လႂ် ၸႂ်ႉတႃႇယႃႉ Database တင်းမူတ်းပႅတ်ႈ?",
-    ["DELETE DATABASE", "REMOVE DATABASE", "DROP DATABASE", "CLEAR DATABASE"],
-    "Which command is used to delete an entire database?",
-  ),
+  Quiz(129, "Command လႂ် ၸႂ်ႉတႃႇယႃႉ Database တင်းမူတ်း?", [
+    "DROP DATABASE",
+    "DELETE DATABASE",
+    "REMOVE DATABASE",
+    "CLEAR DATABASE"
+  ], "Which command is used to delete an entire database?"),
 
   Quiz(130, "IF NOT EXISTS ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇႁၢမ်ႈ Error သင်မီး Database ၼၼ်ႉဝႆႉယူႇယဝ်ႉ",
-    "တႃႇသၢင်ႈ Database ဢၼ်ပဝ်ႇ",
-    "တႃႇပၼ် Password",
-    "တႃႇ Check Connection",
+    "တႃႇႁၢမ်ႈ Error သင်မီး Database ၼၼ်ႉဝႆႉယဝ်ႉ",
+    "တႃႇသၢင်ႈ Database ဢၼ်ပဝ်ႇတႃႇသေႇ",
+    "တႃႇပၼ် Password ပၼ် Database",
+    "တႃႇ Check Connection ၼႂ်း Server"
   ], "What is the purpose of IF NOT EXISTS?"),
 
-  // --- Lesson 17: String Data Types ---
-  Quiz(
-    131,
-    "Type လႂ် ဢၼ်ၸႂ်ႉတႃႇသိမ်း 'ၸိုဝ်ႈ' ဢၼ်မီးတၢင်းယၢဝ်းဢမ်ႇမိူၼ်ၵၼ်?",
-    ["CHAR", "VARCHAR", "INT", "TEXT"],
-    "Which type is best for names with varying lengths?",
-  ),
+  // --- Lesson 17: String Data Types (131-135) ---
+  Quiz(131, "Type လႂ် ဢၼ်ၸႂ်ႉသိမ်း 'ၸိုဝ်ႈ' ဢၼ်တၢင်းယၢဝ်းဢမ်ႇမိူၼ်ၵၼ်?", [
+    "VARCHAR",
+    "CHAR",
+    "INT",
+    "TINYINT"
+  ], "Which type is best for names with varying lengths?"),
 
-  Quiz(
-    132,
-    "CHAR တင်း VARCHAR ပႅၵ်ႇၵၼ်တီႈလႂ်?",
-    [
-      "CHAR ပဵၼ် Fixed length သေ VARCHAR ပဵၼ် Variable length",
-      "VARCHAR ဝႆးလိူဝ် CHAR",
-      "CHAR သိမ်းလိၵ်ႈလႆႈၼမ်လိူဝ်",
-      "ဢမ်ႇပႅၵ်ႇၵၼ်သင်",
-    ],
-    "What is the difference between CHAR and VARCHAR?",
-  ),
+  Quiz(132, "CHAR တင်း VARCHAR ပႅၵ်ႇၵၼ်တီႈလႂ်?", [
+    "CHAR ပဵၼ် Fixed length သေ VARCHAR ပဵၼ် Variable",
+    "VARCHAR ဝႆးလိူဝ် CHAR တႃႇသေႇ",
+    "CHAR သိမ်းလိၵ်ႈလႆႈၼမ်လိူဝ် VARCHAR",
+    "သွင်ဢၼ်ၼႆႉဢမ်ႇပႅၵ်ႇၵၼ်သင်သေယၢင်ႇ"
+  ], "What is the difference between CHAR and VARCHAR?"),
 
-  Quiz(
-    133,
-    "သင်လူဝ်ႇသိမ်း လိၵ်ႈဢၼ်ယၢဝ်းၼမ် (မိူၼ်ၼင်ႇ ပိုၼ်း) လူဝ်ႇၸႂ်ႉသင်?",
-    ["VARCHAR(255)", "CHAR(255)", "TEXT", "SHORTINT"],
-    "Which type should be used for long text like a biography?",
-  ),
+  Quiz(133, "သင်လူဝ်ႇသိမ်း လိၵ်ႈဢၼ်ယၢဝ်းၼမ် လူဝ်ႇၸႂ်ႉသင်?", [
+    "TEXT",
+    "VARCHAR(255)",
+    "CHAR(255)",
+    "SHORTINT"
+  ], "Which type should be used for long text like a biography?"),
 
   Quiz(134, "VARCHAR(100) မၢႆထိုင်သင်?", [
     "သိမ်းလိၵ်ႈလႆႈၼမ်သုတ်း 100 တူဝ်",
     "သိမ်းလိၵ်ႈလႆႈ 100 bytes တႃႇသေႇ",
-    "သိမ်းတူဝ်ၼပ်ႉ 100 ဢၼ်",
-    "ပဵၼ်ၸိုဝ်ႈ Table",
+    "သိမ်းတူဝ်ၼပ်ႉလႆႈ 100 ဢၼ်",
+    "ပဵၼ်မၢႆ ID ႁင်း Table"
   ], "What does VARCHAR(100) specify?"),
 
-  Quiz(
-    135,
-    "Data Type လႂ် ဢၼ်ၸႂ်ႉ Disk Space ဢေႇလိူဝ် သင်သိမ်းလိၵ်ႈပွတ်း?",
-    ["VARCHAR", "CHAR", "LONGTEXT", "BLOB"],
-    "Which data type uses less disk space for short strings?",
-  ),
+  Quiz(135, "Data Type လႂ် ဢၼ်ၸႂ်ႉ Disk Space ဢေႇလိူဝ်?", [
+    "VARCHAR",
+    "CHAR",
+    "LONGTEXT",
+    "BLOB"
+  ], "Which data type uses less disk space for short strings?"),
 
-  // --- Lesson 18: Numeric Data Types ---
-  Quiz(
-    136,
-    "Type လႂ် မၢၼ်ႇမႅၼ်ႈသုတ်း တႃႇသိမ်း 'ငိုၼ်း' (Price/Money)?",
-    ["FLOAT", "DOUBLE", "DECIMAL", "INT"],
-    "Which type is best for storing monetary values?",
-  ),
+  // --- Lesson 18: Numeric Data Types (136-140) ---
+  Quiz(136, "Type လႂ် မၢၼ်ႇမႅၼ်ႈသုတ်း တႃႇသိမ်း 'ငိုၼ်း'?", [
+    "DECIMAL",
+    "FLOAT",
+    "DOUBLE",
+    "INT"
+  ], "Which type is best for storing monetary values?"),
 
-  Quiz(
-    137,
-    "TINYINT ၵႆႉၸႂ်ႉသိမ်းၶေႃႈမုၼ်းပိူင်လႂ်?",
-    [
-      "တူဝ်ၼပ်ႉဢၼ်လဵၵ်ႉ (မိူၼ်ၼင်ႇ ဢႃႇယု)",
-      "ၵႃႈၶၼ်ငိုၼ်းလၢၼ်ႉ",
-      "ၸိုဝ်ႈၵူၼ်း",
-      "ဝၼ်းထီႉ",
-    ],
-    "What is TINYINT typically used for?",
-  ),
+  Quiz(137, "TINYINT ၵႆႉၸႂ်ႉသိမ်းၶေႃႈမုၼ်းပိူင်လႂ်?", [
+    "တူဝ်ၼပ်ႉဢၼ်လဵၵ်ႉ",
+    "ၵႃႈၶၼ်ငိုၼ်းလၢၼ်ႉ",
+    "ၸိုဝ်ႈၵူၼ်းယၢဝ်းယၢဝ်း",
+    "ဝၼ်းထီႉလႄႈၶၢဝ်းယၢမ်း"
+  ], "What is TINYINT typically used for?"),
 
   Quiz(138, "UNSIGNED မၢႆထိုင်သင်?", [
-    "သိမ်းလႆႈၵူၺ်း တူဝ်ၼပ်ႉဢၼ်ပဵၼ် ပွတ်းၼိူဝ် (0 ၶိုၼ်ႈၼိူဝ်)",
-    "သိမ်းလႆႈၵူၺ်း တူဝ်ၼပ်ႉၶိုတ်း (-)",
-    "ဢမ်ႇမီး Primary Key",
-    "မၵ်းထိုင် ၶေႃႈမုၼ်းပဝ်ႇ",
+    "သိမ်းလႆႈၵူၺ်းတူဝ်ၼပ်ႉ 0 ၶိုၼ်ႈၼိူဝ်",
+    "သိမ်းလႆႈၵူၺ်းတူဝ်ၼပ်ႉၶိုတ်း",
+    "ဢမ်ႇမီး Primary Key ၼႂ်း Table",
+    "မၵ်းထိုင်ၶေႃႈမုၼ်းဢၼ်ပဝ်ႇဝႆႉ"
   ], "What does the UNSIGNED attribute mean?"),
 
   Quiz(139, "DECIMAL(10, 2) မၢႆထိုင်သင်?", [
-    "တူဝ်ၼပ်ႉတင်းမူတ်း 10 တူဝ် ပႃးၽၢႆႇလင်ၸုၵ်ႉ 2 တူဝ်",
-    "တူဝ်ၼပ်ႉ 10 ၸုၵ်ႉ 2",
-    "သိမ်းလႆႈၵူၺ်း 10.2",
-    "မၢႆထိုင် ဝၼ်းထီႉ",
+    "တူဝ်ၼပ်ႉတင်းမူတ်း 10 တူဝ် ပႃးၽၢႆႇလင်ၸုၵ်ႉ 2",
+    "တူဝ်ၼပ်ႉ 10 ၸုၵ်ႉ 2 တႅတ်ႈတေႃး",
+    "သိမ်းလႆႈၵူၺ်း 10.2 တႃႇသေႇ",
+    "မၢႆထိုင်ဝၼ်းထီႉၼႂ်းပီႊၼႆႉ"
   ], "What does DECIMAL(10, 2) represent?"),
 
-  Quiz(
-    140,
-    "FLOAT လႄႈ DOUBLE ၸၢင်ႈမီးပၼ်ႁႃသင်?",
-    [
-      "Rounding Errors (ၶေႃႈမုၼ်းၶၢတ်ႇဢိတ်းဢွတ်း)",
-      "သိမ်းတူဝ်ၼပ်ႉဢမ်ႇလႆႈ",
-      "ဝႆးလိူဝ် INT",
-      "ဢမ်ႇမီးပၼ်ႁႃသင်",
-    ],
-    "What issue can occur with FLOAT and DOUBLE types?",
-  ),
+  Quiz(140, "FLOAT လႄႈ DOUBLE ၸၢင်ႈမီးပၼ်ႁႃသင်?", [
+    "Rounding Errors",
+    "သိမ်းတူဝ်ၼပ်ႉဢမ်ႇလႆႈ",
+    "ဝႆးလိူဝ် INT ၼမ်ႁႅင်း",
+    "ဢမ်ႇမီးပၼ်ႁႃသင်သေယၢင်ႇ"
+  ], "What issue can occur with FLOAT and DOUBLE types?"),
 
-  // --- Lesson 19 & 20: Temporal Data ---
-  Quiz(
-    141,
-    "DATE Type သိမ်းၶေႃႈမုၼ်းၼႂ်း Format လႂ်?",
-    ["YYYY-MM-DD", "DD-MM-YYYY", "MM-DD-YYYY", "YYYY/DD/MM"],
-    "What is the standard format for DATE type?",
-  ),
+  // --- Lesson 19 & 20: Temporal Data (141-145) ---
+  Quiz(141, "DATE Type သိမ်းၶေႃႈမုၼ်းၼႂ်း Format လႂ်?", [
+    "YYYY-MM-DD",
+    "DD-MM-YYYY",
+    "MM-DD-YYYY",
+    "YYYY/DD/MM"
+  ], "What is the standard format for DATE type?"),
 
-  Quiz(
-    142,
-    "TIMESTAMP တင်း DATETIME ပႅၵ်ႇၵၼ်တီႈလႂ်?",
-    [
-      "TIMESTAMP လႅၵ်ႈလၢႆႈၸွမ်း TimeZone",
-      "DATETIME ဝႆးလိူဝ်",
-      "TIMESTAMP သိမ်းလႆႈယၢဝ်းလိူဝ်",
-      "ဢမ်ႇပႅၵ်ႇၵၼ်သင်",
-    ],
-    "What is a key difference between TIMESTAMP and DATETIME?",
-  ),
+  Quiz(142, "TIMESTAMP တင်း DATETIME ပႅၵ်ႇၵၼ်တီႈလႂ်?", [
+    "TIMESTAMP လႅၵ်ႈလၢႆႈၸွမ်း TimeZone",
+    "DATETIME ဝႆးလိူဝ် TIMESTAMP",
+    "TIMESTAMP သိမ်းလႆႈယၢဝ်းလိူဝ် DATETIME",
+    "သွင်ဢၼ်ၼႆႉမိူၼ်ၵၼ်ၵူႈယၢင်ႇ"
+  ], "What is a key difference between TIMESTAMP and DATETIME?"),
 
-  Quiz(
-    143,
-    "TIMESTAMP သိမ်းလႆႈထိုင် ပီႊလႂ်?",
-    ["ပီႊ 2038", "ပီႊ 9999", "ပီႊ 2050", "ပီႊ 2100"],
-    "What is the maximum year a TIMESTAMP can store?",
-  ),
+  Quiz(143, "TIMESTAMP သိမ်းလႆႈထိုင် ပီႊလႂ်?", [
+    "ပီႊ 2038",
+    "ပီႊ 9999",
+    "ပီႊ 2050",
+    "ပီႊ 2100"
+  ], "What is the maximum year a TIMESTAMP can store?"),
 
-  Quiz(
-    144,
-    "YEAR Type ၸႂ်ႉ Disk Space ၵႃႈလၢႆ?",
-    ["1 byte", "4 bytes", "8 bytes", "16 bytes"],
-    "How much storage does the YEAR type use?",
-  ),
+  Quiz(144, "YEAR Type ၸႂ်ႉ Disk Space ၵႃလၢႆ?", [
+    "1 byte",
+    "4 bytes",
+    "8 bytes",
+    "16 bytes"
+  ], "How much storage does the YEAR type use?"),
 
-  Quiz(
-    145,
-    "သင်လူဝ်ႇသိမ်း ၶၢဝ်းယၢမ်းတႄႇႁဵၼ်း (မိူၼ်ၼင်ႇ 09:00:00) လူဝ်ႇၸႂ်ႉသင်?",
-    ["TIME", "DATE", "YEAR", "TIMESTAMP"],
-    "Which type is best for storing a class start time?",
-  ),
+  Quiz(145, "သင်လူဝ်ႇသိမ်းၶၢဝ်းယၢမ်းတႄႇႁဵၼ်း လူဝ်ႇၸႂ်ႉသင်?", [
+    "TIME",
+    "DATE",
+    "YEAR",
+    "TIMESTAMP"
+  ], "Which type is best for storing a class start time?"),
 
-  // --- Lesson 21 & 22: Constraints & CHECK ---
-  Quiz(
-    146,
-    "NOT NULL Constraint မၢႆထိုင်သင်?",
-    [
-      "ႁၢမ်ႈဝႆႉလုၵ်းပဝ်ႇ (Empty)",
-      "ပၼ်သုၼ်ႇဝႆႉပဝ်ႇ",
-      "ႁၢမ်ႈသွၼ်ႉၵၼ်",
-      "မၵ်းမၼ်ႈၵႃႈၶၼ် Default",
-    ],
-    "What does the NOT NULL constraint mean?",
-  ),
+  // --- Lesson 21 & 22: Constraints & CHECK (146-150) ---
+  Quiz(146, "NOT NULL Constraint မၢႆထိုင်သင်?", [
+    "ႁၢမ်ႈဝႆႉလုၵ်းပဝ်ႇ",
+    "ပၼ်သုၼ်ႇဝႆႉပဝ်ႇလႆႈ",
+    "ႁၢမ်ႈၶေႃႈမုၼ်းသွၼ်ႉၵၼ်",
+    "မၵ်းမၼ်ႈၵႃႈၶၼ် Default"
+  ], "What does the NOT NULL constraint mean?"),
 
-  Quiz(
-    147,
-    "UNIQUE Constraint ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "ႁၢမ်ႈၶေႃႈမုၼ်း 'သွၼ်ႉ' (Duplicate) ၵၼ်",
-      "တႃႇပၼ် ID ႁင်းတူဝ်",
-      "တႃႇၵွင်ႉ Table",
-      "တႃႇၸႅတ်ႈတူဝ်ၼပ်ႉ",
-    ],
-    "What is the purpose of the UNIQUE constraint?",
-  ),
+  Quiz(147, "UNIQUE Constraint ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "ႁၢမ်ႈၶေႃႈမုၼ်းသွၼ်ႉၵၼ်",
+    "တႃႇပၼ် ID ႁင်းတူဝ်",
+    "တႃႇၵွင်ႉ Table သွင်ဢၼ်",
+    "တႃႇၸႅတ်ႈတူဝ်ၼပ်ႉၼႂ်း Column"
+  ], "What is the purpose of the UNIQUE constraint?"),
 
-  Quiz(
-    148,
-    "DEFAULT ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "ထႅမ်ၶေႃႈမုၼ်းပၼ်ႁင်းတူဝ် မိူဝ်ႈဢမ်ႇသႂ်ႇၵႃႈၶၼ်",
-      "တႃႇယႃႉ Table",
-      "တႃႇပၼ်သုၼ်ႇ Admin",
-      "တႃႇ Check Error",
-    ],
-    "What is the purpose of the DEFAULT constraint?",
-  ),
+  Quiz(148, "DEFAULT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "ထႅမ်ၶေႃႈမုၼ်းပၼ်ႁင်းတူဝ်",
+    "တႃႇယႃႉ Table တင်းမူတ်း",
+    "တႃႇပၼ်သုၼ်ႇ Admin",
+    "တႃႇ Check Error ၼႂ်း SQL"
+  ], "What is the purpose of the DEFAULT constraint?"),
 
-  Quiz(
-    149,
-    "CHECK Constraint တႄႇၸႂ်ႉလႆႈၼႂ်း MySQL Version လႂ်?",
-    ["8.0.16 ၶိုၼ်းၼိူဝ်", "5.7", "5.6", "8.0.1"],
-    "Since which MySQL version is CHECK constraint fully supported?",
-  ),
+  Quiz(149, "CHECK Constraint တႄႇၸႂ်ႉလႆႈၼႂ်း Version လႂ်?", [
+    "8.0.16 ၶိုၼ်းၼိူဝ်",
+    "5.7 ၶိုၼ်းၼိူဝ်",
+    "5.6 ၶိုၼ်းၼိူဝ်",
+    "8.0.1 ၶိုၼ်းၼိူဝ်"
+  ], "Since which MySQL version is CHECK constraint fully supported?"),
 
-  Quiz(
-    150,
-    "Constraint လႂ် ၸႂ်ႉမၵ်းမၼ်ႈဝႃႈ 'ဢႃႇယု တေလႆႈယႂ်ႇလိူဝ် 18'?",
-    ["CHECK", "UNIQUE", "NOT NULL", "DEFAULT"],
-    "Which constraint ensures 'age must be greater than 18'?",
-  ),
+  Quiz(150, "Constraint လႂ် ၸႂ်ႉမၵ်းဝႃႈ 'ဢႃႇယု တေလႆႈ > 18'?", [
+    "CHECK",
+    "UNIQUE",
+    "NOT NULL",
+    "DEFAULT"
+  ], "Which constraint ensures 'age must be greater than 18'?"),
 
-  // --- Lesson 23: Primary Keys ---
-  Quiz(
-    151,
-    "Primary Key (PK) လူဝ်ႇမီးၵုၼ်ႇလၵ်ႉသၼႃႇသင်?",
-    [
-      "NOT NULL လႄႈ UNIQUE",
-      "ပဵၼ် NULL လႆႈ",
-      "ပဵၼ်တူဝ်လိၵ်ႈၵူၺ်း",
-      "မီးလႆႈလၢႆဢၼ်ၼႂ်း Table ၼိုင်ႈဢၼ်",
-    ],
-    "What characteristics must a Primary Key have?",
-  ),
+  // --- Lesson 23: Primary Keys (151-155) ---
+  Quiz(151, "Primary Key (PK) လူဝ်ႇမီးၵုၼ်ႇလၵ်ႉသၼႃႇသင်?", [
+    "NOT NULL လႄႈ UNIQUE",
+    "ပဵၼ် NULL လႆႈတႃႇသေႇ",
+    "ပဵၼ်တူဝ်လိၵ်ႈၵူၺ်းတႃႇသေႇ",
+    "မီးလႆႈလၢႆဢၼ်ၼႂ်း 1 Table"
+  ], "What characteristics must a Primary Key have?"),
 
   Quiz(152, "Composite Primary Key မၢႆထိုင်သင်?", [
-    "ဢဝ် Column လၢႆဢၼ်မႃးႁူမ်ႈၵၼ်ပဵၼ် PK",
+    "ဢဝ်လၢႆ Column ႁူမ်ႈၵၼ်ပဵၼ် PK",
     "PK ဢၼ်ပဵၼ် ID ႁင်းတူဝ်",
     "PK ဢၼ်ၵွင်ႉၸူး Table ၼွၵ်ႈ",
-    "PK ဢၼ်မီးတူဝ်ၼပ်ႉလၢႆဢၼ်",
+    "PK ဢၼ်မီးတူဝ်ၼပ်ႉလၢႆဢၼ်"
   ], "What is a Composite Primary Key?"),
 
-  Quiz(
-    153,
-    "ၼႂ်း Table ၼိုင်ႈဢၼ် မီး Primary Key လႆႈၵႃႈလၢႆ?",
-    ["1 ဢၼ်", "2 ဢၼ်", "မီးလႆႈဢမ်ႇမၵ်းမၼ်ႈ", "ဢမ်ႇလူဝ်ႇမီးၵေႃႈလႆႈ"],
-    "How many Primary Keys can a table have?",
-  ),
+  Quiz(153, "ၼႂ်း Table ၼိုင်ႈဢၼ် မီး Primary Key လႆႈၵႃႈလၢႆ?", [
+    "1 ဢၼ်ၵူၺ်း",
+    "2 ဢၼ်ၵူၺ်း",
+    "မီးလႆႈဢမ်ႇမၵ်းမၼ်ႈ",
+    "ဢမ်ႇလူဝ်ႇမီးၵေႃႈလႆႈ"
+  ], "How many Primary Keys can a table have?"),
 
-  Quiz(
-    154,
-    "AUTO_INCREMENT ၵႆႉၸႂ်ႉၸွမ်း Key ပိူင်လႂ်?",
-    ["Primary Key", "Foreign Key", "Natural Key", "Composite Key"],
-    "AUTO_INCREMENT is commonly used with which key?",
-  ),
+  Quiz(154, "AUTO_INCREMENT ၵႆႉၸႂ်ႉၸွမ်း Key ပိူင်လႂ်?", [
+    "Primary Key",
+    "Foreign Key",
+    "Natural Key",
+    "Composite Key"
+  ], "AUTO_INCREMENT is commonly used with which key?"),
 
-  Quiz(
-    155,
-    "ႁဵတ်းသင်လႄႈ ႁဝ်းဢမ်ႇထုၵ်ႇလီလႅၵ်ႈလၢႆႈၵႃႈၶၼ် Primary Key?",
-    [
-      "ၵွပ်ႈမၼ်းတေယႃႉၵၢၼ်ၵွင်ႉၵၢႆႇတင်း Table ၼွၵ်ႈ",
-      "ၵွပ်ႈမၼ်းတေႁဵတ်းႁႂ်ႈ DB ဝႆးလိူဝ်",
-      "ၵွပ်ႈမၼ်းပဵၼ် NULL ဢမ်ႇလႆႈ",
-      "ဢမ်ႇမီးလွင်ႈတၢင်းသင်",
-    ],
-    "Why should Primary Key values remain stable?",
-  ),
+  Quiz(155, "ႁဵတ်းသင်ဢမ်ႇထုၵ်ႇလီလႅၵ်ႈၵႃႈ PK?", [
+    "ၵွပ်ႈမၼ်းတေယႃႉၵၢၼ်ၵွင်ႉၵၢႆႇ",
+    "ၵွပ်ႈမၼ်းတေႁဵတ်းႁႂ်ႈ DB ဝႆး",
+    "ၵွပ်ႈမၼ်းပဵၼ် NULL ဢမ်ႇလႆႈ",
+    "ဢမ်ႇမီးလွင်ႈတၢင်းသင်သေယၢင်ႇ"
+  ], "Why should Primary Key values remain stable?"),
 
-  // --- Lesson 24 & 25: Foreign Keys & Cascading ---
+  // --- Lesson 24 & 25: Foreign Keys & Cascading (156-160) ---
   Quiz(156, "Foreign Key (FK) ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇၵွင်ႉ Table ၼိုင်ႈ ၸူး PK ၶေႃႈထႅင်ႈ Table ၼိုင်ႈ",
-    "တႃႇယႃႉ Table",
+    "တႃႇၵွင်ႉ Table ၼိုင်ႈ ၸူး PK",
+    "တႃႇယႃႉ Table တင်းမူတ်း",
     "တႃႇပၼ် ID ႁင်းတူဝ်",
-    "တႃႇသိမ်း Password",
+    "တႃႇသိမ်း Password Database"
   ], "What is a Foreign Key used for?"),
 
   Quiz(157, "Referential Integrity မၵ်းထိုင်သင်?", [
-    "လွင်ႈမၢၼ်ႇမႅၼ်ႈ ၼႂ်းၵၢၼ်ၵွင်ႉ FK ၸူး PK",
-    "လွင်ႈဝႆး Database",
-    "လွင်ႈသၢင်ႈ Table",
-    "လွင်ႈ Backup",
+    "လွင်ႈမၢၼ်ႇမႅၼ်ႈၼႂ်းၵၢၼ်ၵွင်ႉ FK",
+    "လွင်ႈဝႆး Database Server",
+    "လွင်ႈသၢင်ႈ Table ၼႂ်း DB",
+    "လွင်ႈ Backup ၶေႃႈမုၼ်း"
   ], "What is Referential Integrity?"),
 
   Quiz(158, "ON DELETE CASCADE မၢႆထိုင်သင်?", [
-    "သင်ယႃႉ Parent... Child တေႁၢႆၸွမ်းၵၼ်",
-    "သင်ယႃႉ Parent... Child တေပဵၼ် NULL",
-    "ႁၢမ်ႈယႃႉ Parent",
-    "ဢမ်ႇႁဵတ်းသင်",
+    "သင်ယႃႉ Parent... Child တေႁၢႆ",
+    "သင်ယႃႉ Parent... Child တေ NULL",
+    "ႁၢမ်ႈယႃႉ Parent တႃႇသေႇ",
+    "ဢမ်ႇႁဵတ်းသင်သေယၢင်ႇ"
   ], "What does ON DELETE CASCADE do?"),
 
   Quiz(159, "ON DELETE SET NULL ၸႂ်ႉမိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈၶႂ်ႈႁႂ်ႈ Child ယင်းမီးယူႇ ၵူၺ်းၵႃႈ ဢမ်ႇမီး Parent ၵွင်ႉယဝ်ႉ",
-    "မိူဝ်ႈၶႂ်ႈယႃႉ Child ပႅတ်ႈ",
-    "မိူဝ်ႈၶႂ်ႈမႄး ID",
-    "မိူဝ်ႈၶႂ်ႈ Reset ID",
+    "မိူဝ်ႈၶႂ်ႈႁႂ်ႈ Child ယင်းမီးယူႇ",
+    "မိူဝ်ႈၶႂ်ႈယႃႉ Child ပႅတ်ႈၵမ်းလဵဝ်",
+    "မိူဝ်ႈၶႂ်ႈမႄး ID ႁင်း Parent",
+    "မိူဝ်ႈၶႂ်ႈ Reset ID ၼႂ်း Table"
   ], "When is ON DELETE SET NULL used?"),
 
-  Quiz(
-    160,
-    "RESTRICT Option ႁဵတ်းၵၢၼ်ၸိူင်ႉႁိုဝ်?",
-    [
-      "ႁၢမ်ႈယႃႉ Parent သင်ယင်းမီး Child ၵွင်ႉဝႆႉယူႇ",
-      "ယႃႉပႅတ်ႈတင်းမူတ်း",
-      "ပၼ်ယႃႉလႆႈၵမ်းလဵဝ်",
-      "ပိၼ်ႇပဵၼ် Default",
-    ],
-    "How does the RESTRICT option work?",
-  ),
+  Quiz(160, "RESTRICT Option ႁဵတ်းၵၢၼ်ၸိူင်ႉႁိုဝ်?", [
+    "ႁၢမ်ႈယႃႉ Parent သင် Child မီးယူႇ",
+    "ယႃႉပႅတ်ႈတင်းမူတ်းၵမ်းလဵဝ်",
+    "ပၼ်ယႃႉလႆႈၵမ်းလဵဝ်တႃႇသေႇ",
+    "ပိၼ်ႇပဵၼ် Default ႁင်း MySQL"
+  ], "How does the RESTRICT option work?"),
 
-  // --- Lesson 26: ALTER TABLE ---
+  // --- Lesson 26: ALTER TABLE (161-165) ---
   Quiz(161, "ALTER TABLE ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇမႄးပိူင်သၢင်ႈ Table ဢၼ်မီးဝႆႉယဝ်ႉ",
-    "တႃႇသၢင်ႈ Table မႂ်ႇ",
-    "တႃႇယႃႉ Table",
-    "တႃႇထႅမ် Row",
+    "တႃႇမႄး Structure Table",
+    "တႃႇသၢင်ႈ Table ဢၼ်မႂ်ႇ",
+    "တႃႇယႃႉ Table တင်းမူတ်း",
+    "တႃႇထႅမ် Row ၶေႃႈမုၼ်း"
   ], "What is the purpose of ALTER TABLE?"),
 
-  Quiz(
-    162,
-    "သင်လူဝ်ႇထႅမ် Column မႂ်ႇ ၼႂ်း Table ၵဝ်ႇ လူဝ်ႇၸႂ်ႉ Command သင်?",
-    [
-      "ALTER TABLE ... ADD",
-      "ALTER TABLE ... CHANGE",
-      "UPDATE TABLE",
-      "CREATE COLUMN",
-    ],
-    "Which command adds a new column to an existing table?",
-  ),
+  Quiz(162, "သင်လူဝ်ႇထႅမ် Column မႂ်ႇ ၸႂ်ႉသင်?", [
+    "ALTER TABLE ... ADD",
+    "ALTER TABLE ... CHANGE",
+    "UPDATE TABLE ... ADD",
+    "CREATE COLUMN ... NEW"
+  ], "Which command adds a new column to an existing table?"),
 
   Quiz(163, "MODIFY COLUMN ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "လႅၵ်ႈ Data Type ဢမ်ႇၼၼ် Constraint",
-    "ယႃႉ Column",
-    "ပိၼ်ႇၸိုဝ်ႈ Table",
-    "သၢင်ႈ Table",
+    "ယႃႉ Column ဢွၵ်ႇၼႂ်း Table",
+    "ပိၼ်ႇၸိုဝ်ႈ Table တူဝ်တႄႉ",
+    "သၢင်ႈ Table ဢၼ်မီးယူႇယဝ်ႉ"
   ], "What is MODIFY COLUMN used for?"),
 
   Quiz(164, "RENAME COLUMN ၸွႆႈသင်?", [
     "ပိၼ်ႇၸိုဝ်ႈ Column",
     "ပိၼ်ႇၸိုဝ်ႈ Table",
     "လႅၵ်ႈ Data Type",
-    "ယႃႉ Column",
+    "ယႃႉ Column ပႅတ်ႈ"
   ], "What does RENAME COLUMN do?"),
 
   Quiz(165, "DROP COLUMN ၸွႆႈသင်?", [
     "ယႃႉ Column ၼိုင်ႈဢၼ်ပႅတ်ႈ",
-    "ယႃႉ Table ပႅတ်ႈ",
-    "လၢင်ႉၶေႃႈမုၼ်း",
-    "ထႅမ် Column",
+    "ယႃႉ Table ၼိုင်ႈဢၼ်ပႅတ်ႈ",
+    "လၢင်ႉၶေႃႈမုၼ်းၼႂ်း Table",
+    "ထႅမ် Column ၼႂ်း Table"
   ], "What does DROP COLUMN do?"),
 
-  // --- Lesson 27: DROP vs TRUNCATE vs DELETE ---
-  Quiz(
-    166,
-    "TRUNCATE တင်း DELETE ပႅၵ်ႇၵၼ်တီႈလႂ်?",
-    [
-      "TRUNCATE လၢင်ႉတင်း Table လႄႈ Reset ID",
-      "DELETE ဝႆးလိူဝ်",
-      "TRUNCATE ၸၢင်ႈၸႂ်ႉ WHERE Clause",
-      "ဢမ်ႇပႅၵ်ႇၵၼ်သင်",
-    ],
-    "What is a difference between TRUNCATE and DELETE?",
-  ),
+  // --- Lesson 27: DROP vs TRUNCATE vs DELETE (166-170) ---
+  Quiz(166, "TRUNCATE တင်း DELETE ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
+    "TRUNCATE Reset ID လႄႈ ဝႆးလိူဝ်",
+    "DELETE ဝႆးလိူဝ် TRUNCATE",
+    "TRUNCATE ၸႂ်ႉ WHERE Clause လႆႈ",
+    "သွင်ဢၼ်ၼႆႉဢမ်ႇပႅၵ်ႇၵၼ်သင်"
+  ], "What is a difference between TRUNCATE and DELETE?"),
 
   Quiz(167, "DROP TABLE ႁဵတ်းသင်?", [
     "ယႃႉပႅတ်ႈတင်း Structure လႄႈ Data",
-    "လၢင်ႉၵူၺ်းၶေႃႈမုၼ်း",
-    "မႄးၸိုဝ်ႈ Table",
-    "Backup Table",
+    "လၢင်ႉၵူၺ်းၶေႃႈမုၼ်းၼႂ်း Table",
+    "မႄးၸိုဝ်ႈ Table ႁႂ်ႈပဵၼ်ဢၼ်မႂ်ႇ",
+    "Backup Table ဝႆးၼႂ်း Disk"
   ], "What does DROP TABLE do?"),
 
-  Quiz(
-    168,
-    "Command လႂ် ဝႆးလိူဝ်ပိူၼ်ႈ တႃႇလၢင်ႉၶေႃႈမုၼ်း 1 လၢၼ်ႉထႅဝ်?",
-    ["TRUNCATE", "DELETE", "DROP", "ALTER"],
-    "Which command is fastest for clearing millions of rows?",
-  ),
+  Quiz(168, "Command လႂ် ဝႆးလိူဝ်ပိူၼ်ႈ?", [
+    "TRUNCATE",
+    "DELETE",
+    "DROP",
+    "ALTER"
+  ], "Which command is fastest for clearing millions of rows?"),
 
-  Quiz(
-    169,
-    "DELETE Command ပဵၼ် SQL ၸုမ်းလႂ်?",
-    ["DML", "DDL", "DQL", "DCL"],
-    "Which SQL category does DELETE belong to?",
-  ),
+  Quiz(169, "DELETE Command ပဵၼ် SQL ၸုမ်းလႂ်?", [
+    "DML",
+    "DDL",
+    "DQL",
+    "DCL"
+  ], "Which SQL category does DELETE belong to?"),
 
-  Quiz(
-    170,
-    "သင်ၸႂ်ႉ TRUNCATE ယဝ်ႉ AUTO_INCREMENT တေပဵၼ်ႁိုဝ်?",
-    ["ၶိုၼ်းတႄႇတီႈ 1 မႂ်ႇ", "သိုပ်ႇမၢႆၵဝ်ႇ", "ပဵၼ် NULL", "Error"],
-    "What happens to AUTO_INCREMENT after a TRUNCATE?",
-  ),
+  Quiz(170, "သင်ၸႂ်ႉ TRUNCATE ယဝ်ႉ AUTO_INCREMENT ပဵၼ်ႁိုဝ်?", [
+    "ၶိုၼ်းတႄႇတီႈ 1 မႂ်ႇ",
+    "သိုပ်ႇမၢႆၵဝ်ႇတႃႇသေႇ",
+    "ပဵၼ် NULL တႃႇသေႇ",
+    "Error ၵမ်းလဵဝ်"
+  ], "What happens to AUTO_INCREMENT after a TRUNCATE?"),
 
-  // --- More Practice Questions (171-250) ---
-  // (Continuing with mixed topics from Module 3 to reach 125 count)
-  Quiz(
-    171,
-    "DDL Command လႂ် ၸႂ်ႉတႃႇမၵ်းမၼ်ႈ Database ဢၼ်တေၸႂ်ႉ?",
-    ["USE", "CREATE", "ALTER", "DROP"],
-    "Which command selects the database to use?",
-  ),
+  // --- Practice Questions (171-250) ---
+  Quiz(171, "DDL Command လႂ် ၸႂ်ႉတႃႇလိူၵ်ႈ DB?", [
+    "USE",
+    "CREATE",
+    "ALTER",
+    "DROP"
+  ], "Which command selects the database to use?"),
 
-  Quiz(
-    172,
-    "CHAR(10) သိမ်းလိၵ်ႈ 3 တူဝ်... မၼ်းတေၸႂ်ႉ Disk Space ၵႃႈလၢႆ?",
-    ["10 bytes (ထႅမ် Space ပၼ်)", "3 bytes", "13 bytes", "0 bytes"],
-    "How much space does CHAR(10) use for a 3-letter word?",
-  ),
+  Quiz(172, "CHAR(10) သိမ်းလိၵ်ႈ 3 တူဝ် ၸႂ်ႉၵႃႈလၢႆ?", [
+    "10 bytes",
+    "3 bytes",
+    "13 bytes",
+    "0 bytes"
+  ], "How much space does CHAR(10) use for a 3-letter word?"),
 
-  Quiz(
-    173,
-    "VARCHAR(10) သိမ်းလိၵ်ႈ 3 တူဝ်... မၼ်းတေၸႂ်ႉ Disk Space ၵႃႈလၢႆ?",
-    ["3 bytes (+ 1 byte overhead)", "10 bytes", "1 byte", "11 bytes"],
-    "How much space does VARCHAR(10) use for a 3-letter word?",
-  ),
+  Quiz(173, "VARCHAR(10) သိမ်းလိၵ်ႈ 3 တူဝ် ၸႂ်ႉၵႃႈလၢႆ?", [
+    "4 bytes",
+    "10 bytes",
+    "1 byte",
+    "11 bytes"
+  ], "How much space does VARCHAR(10) use for a 3-letter word?"),
 
-  Quiz(
-    174,
-    "LONGTEXT သိမ်းလိၵ်ႈလႆႈၼမ်သုတ်းၵႃႈလၢႆ?",
-    ["4GB", "64KB", "16MB", "1GB"],
-    "What is the maximum size of LONGTEXT?",
-  ),
+  Quiz(174, "LONGTEXT သိမ်းလိၵ်ႈလႆႈၼမ်သုတ်းၵႃႈလၢႆ?", [
+    "4GB",
+    "64KB",
+    "16MB",
+    "1GB"
+  ], "What is the maximum size of LONGTEXT?"),
 
   Quiz(175, "BIT Data Type ၸႂ်ႉသိမ်းသင်?", [
-    "Bit values (0 လႄႈ 1)",
+    "0 လႄႈ 1",
     "လိၵ်ႈယၢဝ်း",
     "ဝၼ်းထီႉ",
-    "ငိုၼ်း",
+    "ငိုၼ်း"
   ], "What does the BIT data type store?"),
 
-  Quiz(
-    176,
-    "INT UNSIGNED သိမ်းတူဝ်ၼပ်ႉလႆႈယႂ်ႇလိူဝ် INT သႅၼ်ႇသိုၵ်း (Signed) ၵႃႈလၢႆ?",
-    ["2 ပုၼ်ႈ", "10 ပုၼ်ႈ", "မိူၼ်ၵၼ်", "4 ပုၼ်ႈ"],
-    "How much larger is the positive range of UNSIGNED INT vs SIGNED?",
-  ),
+  Quiz(176, "INT UNSIGNED သိမ်းလႆႈယႂ်ႇလိူဝ် SIGNED ၵႃႈလၢႆ?", [
+    "2 ပုၼ်ႈ",
+    "10 ပုၼ်ႈ",
+    "မိူၼ်ၵၼ်",
+    "4 ပုၼ်ႈ"
+  ], "How much larger is the positive range of UNSIGNED INT vs SIGNED?"),
 
-  Quiz(
-    177,
-    "MEDIUMINT သိမ်းတူဝ်ၼပ်ႉလႆႈထိုင်ၵႃႈလၢႆ?",
-    [
-      "8 လၢၼ်ႉ (Signed) / 16 လၢၼ်ႉ (Unsigned)",
-      "127",
-      "2 ပီႇလီႇယႅၼ်ႇ",
-      "32,767",
-    ],
-    "What is the range of MEDIUMINT?",
-  ),
+  Quiz(177, "MEDIUMINT သိမ်းတူဝ်ၼပ်ႉလႆႈထိုင်ၵႃႈလၢႆ?", [
+    "8 လၢၼ်ႉ",
+    "127",
+    "2 ပီႇလီႇယႅၼ်ႇ",
+    "32,767"
+  ], "What is the range of MEDIUMINT?"),
 
-  Quiz(
-    178,
-    "သင်သိမ်းငိုၼ်းလူၺ်ႈ FLOAT... ၸၢင်ႈမီးပၼ်ႁႃသင် မိူဝ်ႈၼပ်ႉသွၼ်ႇ?",
-    [
-      "ၵႃႈငိုၼ်းမၢင်ၸိူဝ်း တေလူတ်းႁၢႆ ဢမ်ႇၼၼ် ထႅမ်မႃးဢိတ်းၼိုင်ႈ",
-      "ငိုၼ်းတေပဵၼ် NULL",
-      "Error ၵမ်းလဵဝ်",
-      "ဢမ်ႇမီးသင်",
-    ],
-    "What problem can occur when calculating money stored as FLOAT?",
-  ),
+  Quiz(178, "သင်သိမ်းငိုၼ်းလူၺ်ႈ FLOAT... ပဵၼ်သင်?", [
+    "Rounding Errors",
+    "ငိုၼ်းတေပဵၼ် NULL",
+    "Error ၵမ်းလဵဝ်",
+    "ဢမ်ႇမီးသင်"
+  ], "What problem can occur when calculating money stored as FLOAT?"),
 
-  Quiz(
-    179,
-    "YEAR(4) တင်း YEAR(2) ၼႂ်း MySQL မႂ်ႇ... ပဵၼ်ႁိုဝ်?",
-    [
-      "MySQL မႂ်ႇ ၸႂ်ႉ YEAR(4) ၵူၺ်းယဝ်ႉ",
-      "မိူၼ်ၵၼ်",
-      "YEAR(2) ဝႆးလိူဝ်",
-      "YEAR(4) ၸႃႉလိူဝ်",
-    ],
-    "In recent MySQL, how is YEAR(2) handled?",
-  ),
+  Quiz(179, "MySQL မႂ်ႇ ၸႂ်ႉ YEAR ပိူင်လႂ်?", [
+    "YEAR(4)",
+    "YEAR(2)",
+    "YEAR(1)",
+    "YEAR(8)"
+  ], "In recent MySQL, how is YEAR(2) handled?"),
 
-  Quiz(
-    180,
-    "DATETIME ၸႂ်ႉ Disk Space ၵႃႈလၢႆ (MySQL 5.6.4+)?",
-    ["5 bytes (+ fractional seconds)", "8 bytes", "4 bytes", "2 bytes"],
-    "How much space does DATETIME use in newer MySQL?",
-  ),
+  Quiz(180, "DATETIME ၸႂ်ႉ Disk Space ၵႃႈလၢႆ?", [
+    "5 bytes",
+    "8 bytes",
+    "4 bytes",
+    "2 bytes"
+  ], "How much space does DATETIME use in newer MySQL?"),
 
   Quiz(181, "TIMESTAMP ၸႂ်ႉ Disk Space ၵႃႈလၢႆ?", [
     "4 bytes",
     "8 bytes",
     "5 bytes",
-    "1 byte",
+    "1 byte"
   ], "How much space does TIMESTAMP use?"),
 
-  Quiz(
-    182,
-    "Current Time တႅတ်ႈတေႃးသုတ်း ၼႂ်း MySQL ႁွင်ႉဝႃႈသင်?",
-    ["CURRENT_TIMESTAMP", "NOW()", "SYSDATE()", "တင်းမူတ်းထုၵ်ႇၵူႈၶေႃႈ"],
-    "What functions provide the current date and time?",
-  ),
+  Quiz(182, "Current Time ၼႂ်း MySQL ႁွင်ႉဝႃႈသင်?", [
+    "NOW()",
+    "TIME()",
+    "CLOCK()",
+    "TODAY()"
+  ], "What functions provide the current date and time?"),
 
-  Quiz(
-    183,
-    "PRIMARY KEY ၼိုင်ႈဢၼ် ပႃး Column လႆႈၵႃႈလၢႆ?",
-    [
-      "လၢႆ Column ၵေႃႈလႆႈ (Composite)",
-      "1 Column ၵူၺ်း",
-      "2 Columns ၵူၺ်း",
-      "ဢမ်ႇပႃးသေ Column",
-    ],
-    "How many columns can be part of a single Primary Key?",
-  ),
+  Quiz(183, "PRIMARY KEY ၼိုင်ႈဢၼ် ပႃး Column လႆႈၵႃႈလၢႆ?", [
+    "လၢႆ Column",
+    "1 Column ၵူၺ်း",
+    "2 Columns ၵူၺ်း",
+    "ဢမ်ႇပႃးသေဢၼ်"
+  ], "How many columns can be part of a single Primary Key?"),
 
-  Quiz(
-    184,
-    "UNIQUE Key ၼိုင်ႈဢၼ် ပဵၼ် NULL လႆႈႁႃႉ?",
-    [
-      "လႆႈ (သင်ဢမ်ႇတင်ႈ NOT NULL)",
-      "ဢမ်ႇလႆႈ တႃႇသေႇ",
-      "လႆႈၵူၺ်း 1 ဢၼ်",
-      "လႆႈၵူၺ်း ၼႂ်း Table လဵၵ်ႉ",
-    ],
-    "Can a UNIQUE key contain NULL values?",
-  ),
+  Quiz(184, "UNIQUE Key ၼိုင်ႈဢၼ် ပဵၼ် NULL လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း 1 ဢၼ်",
+    "လႆႈၵူၺ်းၼႂ်း Table လဵၵ်ႉ"
+  ], "Can a UNIQUE key contain NULL values?"),
 
-  Quiz(
-    185,
-    "Foreign Key Constraint ၸွႆႈႁၢမ်ႈသင်?",
-    [
-      "Orphan Records (ၶေႃႈမုၼ်းဢၼ်ဢမ်ႇမီး Parent)",
-      "Duplicate Records",
-      "Null Records",
-      "Long Strings",
-    ],
-    "What does a Foreign Key constraint prevent?",
-  ),
+  Quiz(185, "Foreign Key Constraint ၸွႆႈႁၢမ်ႈသင်?", [
+    "Orphan Records",
+    "Duplicate Records",
+    "Null Records",
+    "Long Strings"
+  ], "What does a Foreign Key constraint prevent?"),
 
-  Quiz(
-    186,
-    "CASCADE မၢႆထိုင်သင် ၼႂ်းၽႃႇသႃႇဢင်းၵိတ်း?",
-    [
-      "ၼမ်ႉတူၵ်းတႃတ်ႇ ဢၼ်လႆလူင်းၸၼ်ႉၸၼ်ႉ",
-      "ၵၢၼ်ပိၵ်ႉ",
-      "ၵၢၼ်သၢင်ႈ",
-      "ၵၢၼ်လႅၵ်ႈ",
-    ],
-    "What does the word 'Cascade' literally imply?",
-  ),
+  Quiz(186, "CASCADE မၢႆထိုင်သင်?", [
+    "လႆလူင်းပဵၼ်ၸၼ်ႉ",
+    "ၵၢၼ်ပိၵ်ႉ",
+    "ၵၢၼ်သၢင်ႈ",
+    "ၵၢၼ်လႅၵ်ႈ"
+  ], "What does the word 'Cascade' literally imply?"),
 
   Quiz(187, "SHOW CREATE TABLE students; ၸွႆႈသင်?", [
-    "တူၺ်း Code SQL ဢၼ်ၸႂ်ႉသၢင်ႈ Table ၼၼ်ႉ",
+    "တူၺ်း Code SQL ဢၼ်သၢင်ႈ Table",
     "တူၺ်းၶေႃႈမုၼ်းၼႂ်း Table",
     "ယႃႉ Table",
-    "မႄး Table",
+    "မႄး Table"
   ], "What does SHOW CREATE TABLE do?"),
 
-  Quiz(
-    188,
-    "DESCRIBE students; မိူၼ်တင်း Command လႂ်?",
-    [
-      "EXPLAIN students;",
-      "SHOW students;",
-      "SELECT students;",
-      "DROP students;",
-    ],
-    "Which command is equivalent to DESCRIBE?",
-  ),
+  Quiz(188, "DESCRIBE students; မိူၼ်တင်း Command လႂ်?", [
+    "EXPLAIN",
+    "SHOW",
+    "SELECT",
+    "DROP"
+  ], "Which command is equivalent to DESCRIBE?"),
 
-  Quiz(
-    189,
-    "PRIMARY KEY ၼိုင်ႈဢၼ် ပဵၼ် Foreign Key တႃႇ Table ၼွၵ်ႈလႆႈႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း 1:1", "လႆႈၵူၺ်းၼႂ်း M:N"],
-    "Can a Primary Key also be a Foreign Key?",
-  ),
+  Quiz(189, "PK ပဵၼ် Foreign Key တႃႇ Table ၼွၵ်ႈလႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်း 1:1",
+    "လႆႈၵူၺ်းၼႂ်း M:N"
+  ], "Can a Primary Key also be a Foreign Key?"),
 
-  Quiz(
-    190,
-    "INDEX ၼႂ်း Database ၸွႆႈသင်?",
-    [
-      "ၸွႆႈႁႂ်ႈသွၵ်ႈႁႃ (Search) ၶေႃႈမုၼ်းဝႆးလိူဝ်",
-      "ၸွႆႈႁႂ်ႈသိမ်းၶေႃႈမုၼ်းလႆႈၼမ်",
-      "ၸွႆႈႁၢမ်ႈ Error",
-      "ၸွႆႈပၼ် Password",
-    ],
-    "What is the purpose of an INDEX in a database?",
-  ),
+  Quiz(190, "INDEX ၼႂ်း Database ၸွႆႈသင်?", [
+    "သွၵ်ႈႁႃဝႆး",
+    "သိမ်းလႆႈၼမ်",
+    "ႁၢမ်ႈ Error",
+    "ပၼ် Password"
+  ], "What is the purpose of an INDEX in a database?"),
 
-  Quiz(
-    191,
-    "CHARACTER SET utf8mb4 ၸွႆႈသင်?",
-    [
-      "ၸွႆႈႁႂ်ႈသိမ်းလိၵ်ႈလႆႈၵူႈၽႃႇသႃႇ (ပႃးတင်းလိၵ်ႈတႆး လႄႈ Emoji)",
-      "ၸွႆႈႁႂ်ႈ DB ဝႆးလိူဝ်",
-      "ၸွႆႈယႃႉ Error",
-      "ၸွႆႈပၼ် Security",
-    ],
-    "What is the benefit of utf8mb4 character set?",
-  ),
+  Quiz(191, "CHARACTER SET utf8mb4 ၸွႆႈသင်?", [
+    "သိမ်း Emoji လႆႈ",
+    "DB ဝႆးလိူဝ်",
+    "ယႃႉ Error",
+    "ပၼ် Security"
+  ], "What is the benefit of utf8mb4 character set?"),
 
-  Quiz(192, "COLLATE utf8mb4_unicode_ci မၢႆထိုင်သင်?", [
-    "လၢႆးတူၺ်း လႄႈ လၢႆးၸႅၵ်ႇ (Sort/Compare) လိၵ်ႈ",
+  Quiz(192, "COLLATE မၢႆထိုင်သင်?", [
+    "လၢႆးၸႅၵ်ႇလိၵ်ႈ",
     "လၢႆးသိမ်းလိၵ်ႈ",
     "လၢႆး Delete",
-    "လၢႆး Update",
+    "လၢႆး Update"
   ], "What does COLLATE specify?"),
 
-  Quiz(
-    193,
-    "AUTO_INCREMENT တႄႇၼပ်ႉတီႈ 100 လႆႈႁႃႉ?",
-    [
-      "လႆႈ (ၸႂ်ႉ ALTER TABLE)",
-      "ဢမ်ႇလႆႈ (တိုၼ်းတႄႇတီႈ 1)",
-      "လႆႈၵူၺ်း ၼႂ်း Table မႂ်ႇ",
-      "လႆႈၵူၺ်း ၼႂ်း Table လူင်",
-    ],
-    "Can AUTO_INCREMENT start from 100?",
-  ),
+  Quiz(193, "AUTO_INCREMENT တႄႇၼပ်ႉတီႈ 100 လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်း DB ၼွၵ်ႈ",
+    "လႆႈၵူၺ်းၼႂ်း Workbench"
+  ], "Can AUTO_INCREMENT start from 100?"),
 
-  Quiz(
-    194,
-    "Schema တင်း Database ၼႂ်း MySQL ပႅၵ်ႇၵၼ်ႁိုဝ်?",
-    [
-      "မိူၼ်ၵၼ် (Synonyms)",
-      "Schema ယႂ်ႇလိူဝ်",
-      "Database ယႂ်ႇလိူဝ်",
-      "ဢမ်ႇၵွင်ႉၵၢႆႇၵၼ်",
-    ],
-    "Are Schema and Database different in MySQL?",
-  ),
+  Quiz(194, "Schema တင်း Database ၼႂ်း MySQL?", [
+    "မိူၼ်ၵၼ်",
+    "Schema ယႂ်ႇလိူဝ်",
+    "Database ယႂ်ႇလိူဝ်",
+    "ဢမ်ႇၵွင်ႉၵၢႆႇၵၼ်"
+  ], "Are Schema and Database different in MySQL?"),
 
   Quiz(195, "Metadata ပဵၼ်သင်?", [
-    "ၶေႃႈမုၼ်း ဢၼ်လၢတ်ႈၼႄလွင်ႈ ၶေႃႈမုၼ်း (Data about data)",
+    "Data about data",
     "ၶေႃႈမုၼ်းယႃႉ",
     "ၶေႃႈမုၼ်းၵဝ်ႇ",
-    "ၶေႃႈမုၼ်းလပ်ႉ",
+    "ၶေႃႈမုၼ်းလပ်ႉ"
   ], "What is Metadata?"),
 
   Quiz(196, "Information Schema ပဵၼ်သင်?", [
-    "Database ဢၼ်သိမ်း Metadata ၶေႃႈမုၼ်း DB တင်းမူတ်း",
-    "Table တွၼ်ႈတႃႇ Admin",
+    "Database သိမ်း Metadata",
+    "Table Admin",
     "Website MySQL",
-    "Error Log",
+    "Error Log"
   ], "What is the Information Schema?"),
 
-  Quiz(
-    197,
-    "RENAME TABLE students TO learners; ၸွႆႈသင်?",
-    ["ပိၼ်ႇၸိုဝ်ႈ Table", "ယႃႉ Table", "သၢင်ႈ Table", "မႄး Column"],
-    "What does RENAME TABLE do?",
-  ),
+  Quiz(197, "RENAME TABLE ၸွႆႈသင်?", [
+    "ပိၼ်ႇၸိုဝ်ႈ Table",
+    "ယႃႉ Table",
+    "သၢင်ႈ Table",
+    "မႄး Column"
+  ], "What does RENAME TABLE do?"),
 
-  Quiz(
-    198,
-    "Storage Engine လႂ် ဢၼ် MySQL ၸႂ်ႉပဵၼ် Default (Version 5.5+)?",
-    ["InnoDB", "MyISAM", "Memory", "CSV"],
-    "What is the default storage engine in modern MySQL?",
-  ),
+  Quiz(198, "Storage Engine Default ပဵၼ်သင်?", [
+    "InnoDB",
+    "MyISAM",
+    "Memory",
+    "CSV"
+  ], "What is the default storage engine in modern MySQL?"),
 
-  Quiz(
-    199,
-    "Engine InnoDB ၵျလိူဝ် MyISAM တီႈလႂ်?",
-    [
-      "ထႅမ်ပႃး Foreign Keys လႄႈ Transactions",
-      "ဝႆးလိူဝ်",
-      "သိမ်းၶေႃႈမုၼ်းလႆႈၼမ်လိူဝ်",
-      "ဢမ်ႇမီးသင်",
-    ],
-    "Why is InnoDB better than MyISAM?",
-  ),
+  Quiz(199, "InnoDB ၵျလိူဝ် MyISAM တီႈလႂ်?", [
+    "Foreign Keys",
+    "ဝႆးလိူဝ်",
+    "သိမ်းလႆႈၼမ်",
+    "ဢမ်ႇမီးသင်"
+  ], "Why is InnoDB better than MyISAM?"),
 
   Quiz(200, "TRUNCATE ပဵၼ် DDL ၵွပ်ႈသင်?", [
-    "ၵွပ်ႈမၼ်းယႃႉ Table သေ သၢင်ႈမႂ်ႇ (Drop and Recreate)",
-    "ၵွပ်ႈမၼ်းဝႆး",
-    "ၵွပ်ႈမၼ်းယႃႉ Row",
-    "ၵွပ်ႈမၼ်းပဵၼ် SQL",
+    "Drop and Recreate",
+    "မၼ်းဝႆး",
+    "ယႃႉ Row",
+    "ပဵၼ် SQL"
   ], "Why is TRUNCATE considered a DDL command?"),
 
-  Quiz(201, "BLOB Data Type ၸႂ်ႉသိမ်းသင်?", [
-    "Binary Large Objects (မိူၼ်ၼင်ႇ ႁၢင်ႈ၊ ၾၢႆႇ)",
+  Quiz(201, "BLOB ၸႂ်ႉသိမ်းသင်?", [
+    "ႁၢင်ႈလႄႈၾၢႆႇ",
     "လိၵ်ႈပွတ်း",
     "တူဝ်ၼပ်ႉ",
-    "ဝၼ်းထီႉ",
+    "ဝၼ်းထီႉ"
   ], "What does the BLOB data type store?"),
 
-  Quiz(
-    202,
-    "JSON Data Type မီးၼႂ်း MySQL တႄႇ Version လႂ်?",
-    ["5.7.8 ၶိုၼ်းၼိူဝ်", "5.5", "5.1", "8.0.1"],
-    "Since which version does MySQL support the JSON data type?",
-  ),
+  Quiz(202, "JSON Data Type မီးတႄႇ Version လႂ်?", [
+    "5.7.8",
+    "5.5",
+    "5.1",
+    "8.0.1"
+  ], "Since which version does MySQL support the JSON data type?"),
 
-  Quiz(203, "ENUM Data Type ၸွႆႈသင်?", [
-    "မၵ်းမၼ်ႈသဵၼ်ႈမၢႆလိၵ်ႈ ဢၼ်ပၼ်လိူၵ်ႈၵူၺ်း (မိူၼ်ၼင်ႇ S, M, L)",
+  Quiz(203, "ENUM ၸွႆႈသင်?", [
+    "မၵ်းမၼ်ႈသဵၼ်ႈမၢႆလိူၵ်ႈ",
     "သိမ်းတူဝ်ၼပ်ႉ",
     "သိမ်းဝၼ်းထီႉ",
-    "သိမ်းႁၢင်ႈ",
+    "သိမ်းႁၢင်ႈ"
   ], "What is the ENUM data type used for?"),
 
   Quiz(204, "SET Data Type ပႅၵ်ႇတင်း ENUM တီႈလႂ်?", [
-    "SET လိူၵ်ႈလႆႈလၢႆၵႃႈၶၼ် (Multiple values)",
-    "ENUM လိူၵ်ႈလႆႈလၢႆၵႃႈၶၼ်",
+    "Multiple values",
+    "Single value",
     "မိူၼ်ၵၼ်",
-    "ENUM ဝႆးလိူဝ်",
+    "ENUM ဝႆးလိူဝ်"
   ], "How does SET differ from ENUM?"),
 
   Quiz(205, "ZEROFILL ၸွႆႈသင်?", [
-    "ထႅမ်သုၼ် (0) ၽၢႆႇၼႃႈ ႁႂ်ႈတဵမ်တၢင်းယၢဝ်း Column",
+    "ထႅမ်သုၼ်ၽၢႆႇၼႃႈ",
     "ယႃႉသုၼ်ပႅတ်ႈ",
     "ႁၢမ်ႈသႂ်ႇသုၼ်",
-    "Reset ID",
+    "Reset ID"
   ], "What does the ZEROFILL attribute do?"),
 
   Quiz(206, "ON UPDATE CASCADE ၸွႆႈသင်?", [
-    "သင်မႄး PK ၼႂ်း Parent... FK ၼႂ်း Child တေမႄးၸွမ်း",
-    "သင်မႄး PK... Child တေႁၢႆ",
+    "Child မႄးၸွမ်း",
+    "Child ႁၢႆ",
     "ႁၢမ်ႈမႄး PK",
-    "ဢမ်ႇႁဵတ်းသင်",
+    "ဢမ်ႇႁဵတ်းသင်"
   ], "What does ON UPDATE CASCADE do?"),
 
-  Quiz(
-    115,
-    "ၼႂ်း Workbench ... AI မၢႆထိုင်သင်?",
-    [
-      "Auto Increment",
-      "Artificial Intelligence",
-      "Access Index",
-      "Attribute Identifier",
-    ],
-    "What does 'AI' mean in MySQL Workbench context?",
-  ),
+  Quiz(207, "BINARY ပႅၵ်ႇတင်း CHAR ၸိူင်ႉႁိုဝ်?", [
+    "သိမ်း Bytes",
+    "ဝႆးလိူဝ်",
+    "ယႂ်ႇလိူဝ်",
+    "မိူၼ်ၵၼ်"
+  ], "How does BINARY differ from CHAR?"),
 
-  Quiz(
-    207,
-    "BINARY Data Type ပႅၵ်ႇတင်း CHAR ၸိူင်ႉႁိုဝ်?",
-    [
-      "သိမ်း Binary strings (bytes) တႅၼ်းလိၵ်ႈ (characters)",
-      "ဝႆးလိူဝ်",
-      "ယႂ်ႇလိူဝ်",
-      "မိူၼ်ၵၼ်",
-    ],
-    "How does BINARY differ from CHAR?",
-  ),
+  Quiz(208, "VARBINARY ပႅၵ်ႇတင်း VARCHAR ၸိူင်ႉႁိုဝ်?", [
+    "သိမ်း Binary strings",
+    "VARCHAR ဝႆးလိူဝ်",
+    "မိူၼ်ၵၼ်",
+    "ဢမ်ႇသိမ်းလိၵ်ႈ"
+  ], "How does VARBINARY differ from VARCHAR?"),
 
-  Quiz(
-    208,
-    "VARBINARY တင်း VARCHAR ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?",
-    [
-      "VARBINARY သိမ်း Variable-length binary strings",
-      "VARCHAR ဝႆးလိူဝ်",
-      "မိူၼ်ၵၼ်",
-      "VARBINARY ဢမ်ႇသိမ်းလိၵ်ႈလႆႈ",
-    ],
-    "How does VARBINARY differ from VARCHAR?",
-  ),
+  Quiz(209, "COMMENT ၼႂ်း CREATE TABLE ၸွႆႈသင်?", [
+    "တႅမ်ႈမၢႆတွင်း",
+    "Code ႁဵတ်းၵၢၼ်",
+    "ပဵၼ် Password",
+    "ယႃႉ Error"
+  ], "What is the purpose of COMMENT in a table definition?"),
 
-  Quiz(
-    209,
-    "COMMENT 'text' ၼႂ်း CREATE TABLE ၸွႆႈသင်?",
-    [
-      "တႅမ်ႈမၢႆတွင်း (Note) လၢတ်ႈၼႄလွင်ႈ Column/Table",
-      "ပဵၼ် Code ႁဵတ်းၵၢၼ်",
-      "ပဵၼ် Password",
-      "ယႃႉ Error",
-    ],
-    "What is the purpose of COMMENT in a table definition?",
-  ),
+  Quiz(210, "STRICT_TRANS_TABLES မၢႆထိုင်သင်?", [
+    "Strict Mode",
+    "ลၢႆး Delete",
+    "လၢႆး Update",
+    "လၢႆး Backup"
+  ], "What does STRICT_TRANS_TABLES refer to?"),
 
-  Quiz(
-    210,
-    "STRICT_TRANS_TABLES မၢႆထိုင်သင်?",
-    [
-      "ပိူင် (Mode) ဢၼ်ၸႅတ်ႈၶေႃႈမုၼ်း ႁႂ်ႈတႅတ်ႈတေႃး (Strict Mode)",
-      "လၢႆး Delete",
-      "လၢႆး Update",
-      "လၢႆး Backup",
-    ],
-    "What does STRICT_TRANS_TABLES refer to?",
-  ),
-
-  Quiz(
-    211,
-    "တူဝ်ၼပ်ႉ 123.45 သိမ်းၼႂ်း DECIMAL(5, 2) လႆႈႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ (တူဝ်ၼပ်ႉၼမ်လွၼ်ႉ)", "လႆႈၵူၺ်း 123", "လႆႈၵူၺ်း 45"],
-    "Can 123.45 be stored in DECIMAL(5, 2)?",
-  ),
-
-  Quiz(
-    212,
-    "တူဝ်ၼပ်ႉ 1234.5 သိမ်းၼႂ်း DECIMAL(5, 2) လႆႈႁႃႉ?",
-    [
-      "ဢမ်ႇလႆႈ (လူဝ်ႇ DECIMAL(6, 2) ၸင်ႇတေလႆႈ)",
-      "လႆႈ",
-      "လႆႈၵူၺ်း 1234",
-      "Error ၵမ်းလဵဝ်",
-    ],
-    "Can 1234.5 be stored in DECIMAL(5, 2)?",
-  ),
-
-  Quiz(
-    213,
-    "Data Type လႂ် ဢၼ်သိမ်းလႆႈၵူၺ်း 'M' ဢမ်ႇၼၼ် 'F' ႁႂ်ႈယွမ်း Disk Space သုတ်း?",
-    ["ENUM('M', 'F')", "VARCHAR(1)", "CHAR(1)", "TINYINT"],
-    "Which data type is most storage-efficient for 'M' or 'F' values?",
-  ),
-
-  Quiz(
-    214,
-    "Primary Key ပဵၼ် AUTO_INCREMENT... ႁဝ်း INSERT ၵႃႈၶၼ်သႂ်ႇႁင်းၵူၺ်းလႆႈႁႃႉ?",
-    [
-      "လႆႈ",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်း ၼႂ်း ID ဢၼ်ဢမ်ႇပႆႇမီး",
-      "လႆႈၵူၺ်း ၼႂ်း Table လူင်",
-    ],
-    "Can you manually insert a value into an AUTO_INCREMENT column?",
-  ),
-
-  Quiz(
-    215,
-    "SERIAL Data Type ၼႂ်း MySQL ပဵၼ်သင်?",
-    [
-      "BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE",
-      "VARCHAR",
-      "DATE",
-      "INT",
-    ],
-    "What does the SERIAL data type represent in MySQL?",
-  ),
-
-  Quiz(
-    216,
-    "CHECK Constraint ၸၢင်ႈၸႂ်ႉ Function 'NOW()' လႆႈႁႃႉ?",
-    [
-      "ဢမ်ႇလႆႈ (တေလႆႈပဵၼ် Constant/Literal values)",
-      "လႆႈ",
-      "လႆႈၵူၺ်းၼႂ်း 8.0.20",
-      "လႆႈၵူၺ်းၼႂ်း 5.7",
-    ],
-    "Can NOW() be used within a CHECK constraint?",
-  ),
-
-  Quiz(
-    217,
-    "Foreign Key ၼိုင်ႈဢၼ် ၵွင်ႉၸူး Primary Key ၼႂ်း Table တူဝ်မၼ်းၵူၺ်း (Self-referencing) လႆႈႁႃႉ?",
-    [
-      "လႆႈ (မိူၼ်ၼင်ႇ Manager_ID ၵွင်ႉၸူး Employee_ID)",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်း ၼႂ်း 1:1",
-      "လႆႈၵူၺ်း ၼႂ်း M:N",
-    ],
-    "Can a table have a Foreign Key referencing its own Primary Key?",
-  ),
-
-  Quiz(
-    218,
-    "Index ၸၢင်ႈႁဵတ်းႁႂ်ႈ INSERT/UPDATE ၸႃႉလိူဝ်ၵဝ်ႇႁႃႉ?",
-    [
-      "ၸႂ်ႈ (ၵွပ်ႈ DB လူဝ်ႇမႄး Index ၸွမ်း)",
-      "ဢမ်ႇၸႂ်ႈ (ဝႆးလိူဝ်တႃႇသေႇ)",
-      "မိူၼ်ၵဝ်ႇ",
-      "ဢမ်ႇၵွင်ႉၵၢႆႇၵၼ်",
-    ],
-    "Does an index slow down INSERT and UPDATE operations?",
-  ),
-
-  Quiz(
-    219,
-    "Command လႂ် ၸွႆႈတူၺ်းဝႃႈ MySQL Version လႂ် ဢၼ်ႁဝ်းၸႂ်ႉယူႇ?",
-    ["SELECT VERSION();", "SHOW VERSION;", "CHECK VERSION;", "GET VERSION;"],
-    "Which command displays the current MySQL version?",
-  ),
-
-  Quiz(
-    220,
-    "AUTO_INCREMENT ၸၢင်ႈပဵၼ် BIGINT လႆႈႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း INT", "လႆႈၵူၺ်း TINYINT"],
-    "Can an AUTO_INCREMENT column be a BIGINT?",
-  ),
-
-  Quiz(
-    221,
-    "VARCHAR(255) တင်း VARCHAR(256) ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ် ၼႂ်း Storage?",
-    [
-      "256 ၸႂ်ႉ 2 bytes တႃႇမၢႆတၢင်းယၢဝ်း (Overhead)",
-      "255 ဝႆးလိူဝ်",
-      "မိူၼ်ၵၼ်",
-      "256 သိမ်းလိၵ်ႈဢမ်ႇလႆႈ",
-    ],
-    "How does VARCHAR(255) storage differ from VARCHAR(256)?",
-  ),
-
-  Quiz(
-    222,
-    "တႃႇသၢင်ႈ Table ဢၼ်မိူၼ်တင်း Table ၵဝ်ႇ (Structure Only)...?",
-    [
-      "CREATE TABLE new_table LIKE old_table;",
-      "CREATE TABLE new_table AS old_table;",
-      "COPY TABLE old_table;",
-      "CLONE TABLE old_table;",
-    ],
-    "How to create a table with the same structure as another?",
-  ),
-
-  Quiz(
-    223,
-    "တႃႇသၢင်ႈ Table မႂ်ႇ ပႃးတင်း ၶေႃႈမုၼ်း လုၵ်ႉတီႈ Table ၵဝ်ႇ...?",
-    [
-      "CREATE TABLE new_table AS SELECT * FROM old_table;",
-      "CREATE TABLE new_table LIKE old_table;",
-      "INSERT INTO new_table SELECT * FROM old_table;",
-      "ဢမ်ႇမီး Command ၼၼ်ႉ",
-    ],
-    "How to create a table and populate it with data from another?",
-  ),
-
-  Quiz(
-    224,
-    "ALTER TABLE students AUTO_INCREMENT = 1000; ၸွႆႈသင်?",
-    [
-      "မၵ်းမၼ်ႈႁႂ်ႈ ID တႄႇၼပ်ႉတီႈ 1000",
-      "မၵ်းမၼ်ႈႁႂ်ႈမီး 1000 ထႅဝ်",
-      "ယႃႉ ID 1000",
-      "Update ID တင်းမူတ်း",
-    ],
-    "What does 'ALTER TABLE ... AUTO_INCREMENT = 1000' do?",
-  ),
-
-  Quiz(
-    225,
-    "TRUNCATE တင်း DROP TABLE ... ဢၼ်လႂ် ဢဝ် Structure ဝႆႉ?",
-    ["TRUNCATE", "DROP", "တင်းသွင်ဢၼ်", "ဢမ်ႇမီးသေဢၼ်"],
-    "Which one keeps the table structure: TRUNCATE or DROP?",
-  ),
-
-  Quiz(
-    226,
-    "Command လႂ် ၸွႆႈတူၺ်း Table တင်းမူတ်း ၼႂ်း Database?",
-    ["SHOW TABLES;", "LIST TABLES;", "GET TABLES;", "SELECT TABLES;"],
-    "Which command lists all tables in the current database?",
-  ),
-
-  Quiz(
-    227,
-    "Default Character Set ၼႂ်း MySQL 8.0 ပဵၼ်သင်?",
-    ["utf8mb4", "latin1", "utf8", "ascii"],
-    "What is the default character set in MySQL 8.0?",
-  ),
-
-  Quiz(
-    228,
-    "Constraint လႂ် ဢၼ်ၸႂ်ႉၸႅတ်ႈဝႃႈ 'Email လူဝ်ႇမီး @'?",
-    ["CHECK (email LIKE '%@%')", "UNIQUE", "NOT NULL", "DEFAULT"],
-    "Which constraint can check if an email contains '@'?",
-  ),
-
-  Quiz(
-    229,
-    "FLOAT(5, 3) သိမ်း 12.34567 တေပဵၼ်ႁိုဝ်?",
-    ["ပဵၼ် 12.346 (Round up)", "Error", "ပဵၼ် 12.345", "ပဵၼ် 12"],
-    "What happens if you store 12.34567 in FLOAT(5, 3)?",
-  ),
-
-  Quiz(
-    230,
-    "သင်လူဝ်ႇသိမ်း ႁၢင်ႈ (Image) ၼႂ်း Database တႄႉတႄႉ... လူဝ်ႇၸႂ်ႉသင်?",
-    ["LONGBLOB", "LONGTEXT", "VARCHAR(MAX)", "DECIMAL"],
-    "Which type is suitable for storing large image files?",
-  ),
-
-  Quiz(
-    231,
-    "Foreign Key ၸၢင်ႈမီးလၢႆဢၼ် ၼႂ်း Table ၼိုင်ႈဢၼ်ႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 1 ဢၼ်", "လႆႈၵူၺ်း ၼႂ်း Junction Table"],
-    "Can a table have multiple Foreign Keys?",
-  ),
-
-  Quiz(232, "Primary Key ၸၢင်ႈပဵၼ် VARCHAR လႆႈႁႃႉ?", [
+  Quiz(211, "123.45 သိမ်းၼႂ်း DECIMAL(5, 2) လႆႈႁႃႉ?", [
     "လႆႈ",
     "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း ၼႂ်း 1NF",
-    "လႆႈၵူၺ်း ၼႂ်း SQL ၵဝ်ႇ",
+    "လႆႈၵူၺ်း 123",
+    "လႆႈၵူၺ်း 45"
+  ], "Can 123.45 be stored in DECIMAL(5, 2)?"),
+
+  Quiz(212, "1234.5 သိမ်းၼႂ်း DECIMAL(5, 2) လႆႈႁႃႉ?", [
+    "ဢမ်ႇလႆႈ",
+    "လႆႈ",
+    "လႆႈၵူၺ်း 1234",
+    "Error ၵမ်းလဵဝ်"
+  ], "Can 1234.5 be stored in DECIMAL(5, 2)?"),
+
+  Quiz(213, "သိမ်း 'M'/'F' ႁႂ်ႈယွမ်း Space သုတ်း?", [
+    "ENUM('M', 'F')",
+    "VARCHAR(1)",
+    "CHAR(1)",
+    "TINYINT"
+  ], "Which data type is most storage-efficient for 'M' or 'F' values?"),
+
+  Quiz(214, "AUTO_INCREMENT သႂ်ႇၵႃႈၶၼ်ႁင်းၵူၺ်းလႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်းၼႂ်း ID ပဝ်ႇ",
+    "လႆႈၵူၺ်းၼႂ်း Table လူင်"
+  ], "Can you manually insert a value into an AUTO_INCREMENT column?"),
+
+  Quiz(215, "SERIAL Data Type ပဵၼ်သင်?", [
+    "BIGINT UNSIGNED UNIQUE",
+    "VARCHAR",
+    "DATE",
+    "INT"
+  ], "What does the SERIAL data type represent in MySQL?"),
+
+  Quiz(216, "CHECK Constraint ၸႂ်ႉ NOW() လႆႈႁႃႉ?", [
+    "ဢမ်ႇလႆႈ",
+    "လႆႈ",
+    "လႆႈၼႂ်း 8.0.20",
+    "လႆႈၼႂ်း 5.7"
+  ], "Can NOW() be used within a CHECK constraint?"),
+
+  Quiz(217, "FK ၵွင်ႉ PK ၼႂ်း Table တူဝ်မၼ်းလႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၼႂ်း 1:1",
+    "လႆႈၼႂ်း M:N"
+  ], "Can a table have a Foreign Key referencing its own Primary Key?"),
+
+  Quiz(218, "Index ႁဵတ်းႁႂ်း INSERT ၸႃႉႁႃႉ?", [
+    "ၸႂ်ႈ",
+    "ဢမ်ႇၸႂ်ႈ",
+    "မိူၼ်ၵဝ်ႇ",
+    "ဢမ်ႇၵွင်ႉၵၢႆႇ"
+  ], "Does an index slow down INSERT and UPDATE operations?"),
+
+  Quiz(219, "Version MySQL?", [
+    "SELECT VERSION();",
+    "SHOW VERSION;",
+    "CHECK VERSION;",
+    "GET VERSION;"
+  ], "Which command displays the current MySQL version?"),
+
+  Quiz(220, "AUTO_INCREMENT ပဵၼ် BIGINT လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း INT",
+    "လႆႈၵူၺ်း TINYINT"
+  ], "Can an AUTO_INCREMENT column be a BIGINT?"),
+
+  Quiz(221, "VARCHAR(255) vs 256?", [
+    "2 bytes overhead",
+    "255 ဝႆးလိူဝ်",
+    "မိူၼ်ၵၼ်",
+    "256 ဢမ်ႇလႆႈ"
+  ], "How does VARCHAR(255) storage differ from VARCHAR(256)?"),
+
+  Quiz(222, "သၢင်ႈ Table ဢၼ်မိူၼ် Structure ၵဝ်ႇ?", [
+    "CREATE TABLE ... LIKE",
+    "CREATE TABLE ... AS",
+    "COPY TABLE",
+    "CLONE TABLE"
+  ], "How to create a table with the same structure as another?"),
+
+  Quiz(223, "သၢင်ႈ Table ဢၼ်ပႃး Data ၵဝ်ႇ?", [
+    "CREATE TABLE ... AS SELECT",
+    "CREATE TABLE ... LIKE",
+    "INSERT INTO ... SELECT",
+    "ဢမ်ႇမီး Command"
+  ], "How to create a table and populate it with data from another?"),
+
+  Quiz(224, "AUTO_INCREMENT = 1000?", [
+    "တႄႇၼပ်ႉ 1000",
+    "မီး 1000 ထႅဝ်",
+    "ယႃႉ ID 1000",
+    "Update ID"
+  ], "What does 'ALTER TABLE ... AUTO_INCREMENT = 1000' do?"),
+
+  Quiz(225, "TRUNCATE vs DROP ဢၼ်လႂ်ဝႆႉ Structure?", [
+    "TRUNCATE",
+    "DROP",
+    "တင်းသွင်",
+    "ဢမ်ႇမီး"
+  ], "Which one keeps the table structure: TRUNCATE or DROP?"),
+
+  Quiz(226, "SHOW TABLES;?", [
+    "တူၺ်း Table တင်းမူတ်း",
+    "လၢတ်ႈၸိုဝ်ႈ DB",
+    "တူၺ်း User",
+    "SELECT Data"
+  ], "Which command lists all tables in the current database?"),
+
+  Quiz(227, "Default Character Set MySQL 8.0?", [
+    "utf8mb4",
+    "latin1",
+    "utf8",
+    "ascii"
+  ], "What is the default character set in MySQL 8.0?"),
+
+  Quiz(228, "Email လူဝ်ႇမီး @?", [
+    "CHECK",
+    "UNIQUE",
+    "NOT NULL",
+    "DEFAULT"
+  ], "Which constraint can check if an email contains '@'?"),
+
+  Quiz(229, "FLOAT(5, 3) 12.34567?", [
+    "12.346",
+    "Error",
+    "12.345",
+    "12"
+  ], "What happens if you store 12.34567 in FLOAT(5, 3)?"),
+
+  Quiz(230, "သိမ်းႁၢင်ႈ (Image)?", [
+    "LONGBLOB",
+    "LONGTEXT",
+    "VARCHAR",
+    "DECIMAL"
+  ], "Which type is suitable for storing large image files?"),
+
+  Quiz(231, "Foreign Key လၢႆဢၼ်?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း 1",
+    "လႆႈၵူၺ်းၼႂ်း Junction"
+  ], "Can a table have multiple Foreign Keys?"),
+
+  Quiz(232, "PK ပဵၼ် VARCHAR?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၼႂ်း 1NF",
+    "လႆႈၼႂ်း SQL ၵဝ်ႇ"
   ], "Can a Primary Key be a VARCHAR?"),
 
-  Quiz(
-    233,
-    "ALTER TABLE students DROP PRIMARY KEY; ႁဵတ်းသင်?",
-    [
-      "ယႃႉပၵ်းၵၢၼ် PK ပႅတ်ႈ (ၵူၺ်းၵႃႈ Column ယင်းမီးယူႇ)",
-      "ယႃႉ Column ID ပႅတ်ႈ",
-      "ယႃႉ Table ပႅတ်ႈ",
-      "Update PK",
-    ],
-    "What does 'ALTER TABLE ... DROP PRIMARY KEY' do?",
-  ),
+  Quiz(233, "DROP PRIMARY KEY?", [
+    "ယႃႉပၵ်းၵၢၼ် PK",
+    "ယႃႉ Column ID",
+    "ယႃႉ Table",
+    "Update PK"
+  ], "What does 'ALTER TABLE ... DROP PRIMARY KEY' do?"),
 
-  Quiz(
-    234,
-    "DDL Command လႂ် ၸွႆႈပၼ်သုၼ်ႇ User (Granting permissions)?",
-    [
-      "GRANT (ပဵၼ် DCL ၵူၺ်းၵႃႈ ၵႆႉဝူၼ်ႉႁူမ်ႈ DDL)",
-      "ALTER",
-      "CREATE",
-      "SELECT",
-    ],
-    "Which command gives permissions to a user?",
-  ),
+  Quiz(234, "GRANT Command?", [
+    "DCL",
+    "ALTER",
+    "CREATE",
+    "SELECT"
+  ], "Which command gives permissions to a user?"),
 
-  Quiz(235, "CREATE TEMPORARY TABLE ... ၸွႆႈသင်?", [
-    "သၢင်ႈ Table ၸူဝ်ႈၶၢဝ်း ဢၼ်တေႁၢႆၵႂႃႇ မိူဝ်ႈပိၵ်ႉ Session",
+  Quiz(235, "TEMPORARY TABLE?", [
+    "ႁၢႆၵႂႃႇမိူဝ်ႈပိၵ်ႉ Session",
     "သၢင်ႈ Table ဝႆး",
-    "သၢင်ႈ Table လပ်ႉ",
-    "သၢင်ႈ Table ဢၼ်ယႃႉဢမ်ႇလႆႈ",
+    "Table လပ်ႉ",
+    "ယႃႉဢမ်ႇလႆႈ"
   ], "What is a TEMPORARY table?"),
 
-  Quiz(
-    236,
-    "INDEX တင်း UNIQUE INDEX ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?",
-    [
-      "UNIQUE INDEX ႁၢမ်ႈၶေႃႈမုၼ်းသွၼ်ႉၵၼ်",
-      "INDEX ဝႆးလိူဝ်",
-      "မိူၼ်ၵၼ်",
-      "UNIQUE INDEX ၸႃႉလိူဝ်",
-    ],
-    "Difference between INDEX and UNIQUE INDEX?",
-  ),
+  Quiz(236, "INDEX vs UNIQUE INDEX?", [
+    "UNIQUE ႁၢမ်ႈသွၼ်ႉ",
+    "INDEX ဝႆးလိူဝ်",
+    "မိူၼ်ၵၼ်",
+    "UNIQUE ၸႃႉလိူဝ်"
+  ], "Difference between INDEX and UNIQUE INDEX?"),
 
-  Quiz(237, "FULLTEXT INDEX ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇသွၵ်ႈႁႃလိၵ်ႈၼႂ်း TEXT Column ႁႂ်ႈဝႆးလိူဝ် (Full-text search)",
-    "တႃႇသိမ်းႁၢင်ႈ",
-    "တႃႇသိမ်း ID",
-    "တႃႇၵွင်ႉ Table",
+  Quiz(237, "FULLTEXT INDEX?", [
+    "သွၵ်ႈႁႃလိၵ်ႈၼႂ်း TEXT",
+    "သိမ်းႁၢင်ႈ",
+    "သိမ်း ID",
+    "ၵွင်ႉ Table"
   ], "What is a FULLTEXT index used for?"),
 
-  Quiz(
-    238,
-    "MySQL 8.0 ၸၢင်ႈ 'Hide' Index လႆႈႁႃႉ (Invisible Index)?",
-    [
-      "လႆႈ (တႃႇၸၢမ်းတူၺ်း Performance ဢွၼ်တၢင်းတေ Delete)",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်း ၼႂ်း InnoDB",
-      "လႆႈၵူၺ်း ၼႂ်း Cloud",
-    ],
-    "What is an Invisible Index in MySQL 8.0?",
-  ),
+  Quiz(238, "Invisible Index?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၼႂ်း InnoDB",
+    "လႆႈၼႂ်း Cloud"
+  ], "What is an Invisible Index in MySQL 8.0?"),
 
-  Quiz(
-    239,
-    "PRIMARY KEY ၸၢင်ႈပဵၼ် Invisible လႆႁႃႉ?",
-    ["ဢမ်ႇလႆႈ", "လႆႈ", "လႆႈၵူၺ်းၼႂ်း 8.0.23", "လႆႈၵူၺ်းၼႂ်း DB လဵၵ်ႉ"],
-    "Can a Primary Key be an Invisible Index?",
-  ),
+  Quiz(239, "PK Invisible?", [
+    "ဢမ်ႇလႆႈ",
+    "လႆႈ",
+    "လႆႈၼႂ်း 8.0.23",
+    "လႆႈၼႂ်း DB လဵၵ်ႉ"
+  ], "Can a Primary Key be an Invisible Index?"),
 
-  Quiz(
-    240,
-    "Command လႂ် ၸွႆႈတူၺ်း Database တင်းမူတ်း?",
-    [
-      "SHOW DATABASES;",
-      "LIST DATABASES;",
-      "GET DATABASES;",
-      "SELECT DATABASES;",
-    ],
-    "Which command lists all databases?",
-  ),
+  Quiz(240, "SHOW DATABASES;?", [
+    "တူၺ်း DB တင်းမူတ်း",
+    "လိူၵ်ႈ DB",
+    "ယႃႉ DB",
+    "သၢင်ႈ DB"
+  ], "Which command lists all databases?"),
 
-  Quiz(
-    241,
-    "CREATE DATABASE `my-db`; ႁဵတ်းသင်လႄႈ လူဝ်ႇၸႂ်ႉ Backticks (`)?",
-    [
-      "ၵွပ်ႈမီး တူဝ်တတ်း (-) ၼႂ်းၸိုဝ်ႈ",
-      "ၵွပ်ႈပဵၼ် MySQL",
-      "ၵွပ်ႈမၼ်းႁၢင်ႈလီ",
-      "ဢမ်ႇလူဝ်ႇၸႂ်ႉၵေႃႈလႆႈ",
-    ],
-    "Why use backticks in 'CREATE DATABASE `my-db`'?",
-  ),
+  Quiz(241, "Backticks (`)?", [
+    "မီးတူဝ်တတ်း (-)",
+    "ပဵၼ် MySQL",
+    "ႁၢင်ႈလီ",
+    "ဢမ်ႇလူဝ်ႇ"
+  ], "Why use backticks in 'CREATE DATABASE `my-db`'?"),
 
-  Quiz(
-    242,
-    "Constraint လႂ် ၸွႆႈမၵ်းမၼ်ႈဝႃႈ 'ၵႃႈၶၼ်တေလႆႈပဵၼ် 1, 2, ဢမ်ႇၼၼ် 3 ၵူၺ်း'?",
-    ["CHECK (col IN (1, 2, 3))", "UNIQUE", "DEFAULT", "NOT NULL"],
-    "Which constraint limits values to 1, 2, or 3?",
-  ),
+  Quiz(242, "1, 2, ဢမ်ႇၼၼ် 3?", [
+    "CHECK",
+    "UNIQUE",
+    "DEFAULT",
+    "NOT NULL"
+  ], "Which constraint limits values to 1, 2, or 3?"),
 
-  Quiz(
-    243,
-    "ALTER TABLE students MODIFY id INT AUTO_INCREMENT; သင် ID မီးယူႇယဝ်ႉ 10...?",
-    [
-      "မၼ်းတေတႄႇၼပ်ႉ 11 တႃႇ Row မႂ်ႇ",
-      "မၼ်းတေ Reset ပဵၼ် 1",
-      "Error",
-      "ဢမ်ႇမီးသင်လႅၵ်ႈလၢႆႈ",
-    ],
-    "What happens if you MODIFY a column to AUTO_INCREMENT when data exists?",
-  ),
+  Quiz(243, "MODIFY id AUTO_INCREMENT?", [
+    "တႄႇ 11",
+    "Reset 1",
+    "Error",
+    "ဢမ်ႇလႅၵ်ႈ"
+  ], "What happens if you MODIFY a column to AUTO_INCREMENT when data exists?"),
 
-  Quiz(
-    244,
-    "Primary Key တင်း Unique Key ... ဢၼ်လႂ်ပဵၼ် Foreign Key တႃႇ Table ၼွၵ်ႈလႆႈ?",
-    ["တင်းသွင်ဢၼ်", "PK ၵူၺ်း", "UK ၵူၺ်း", "ဢမ်ႇမီးသေဢၼ်"],
-    "Can both Primary Key and Unique Key be referenced by a Foreign Key?",
-  ),
+  Quiz(244, "PK/UK Foreign Key?", [
+    "တင်းသွင်",
+    "PK ၵူၺ်း",
+    "UK ၵူၺ်း",
+    "ဢမ်ႇမီး"
+  ], "Can both Primary Key and Unique Key be referenced by a Foreign Key?"),
 
-  Quiz(245, "SET SQL_SAFE_UPDATES = 1; ၸွႆႈသင်?", [
-    "ႁၢမ်ႈ UPDATE/DELETE သင်ဢမ်ႇမီး WHERE Clause ၸွမ်း PK/Key",
-    "ပၼ် Update လႆႈၵူႈတီႈ",
-    "ယႃႉ DB ပႅတ်ႈ",
-    "Backup DB",
+  Quiz(245, "SQL_SAFE_UPDATES = 1?", [
+    "ႁၢမ်ႈ UPDATE No WHERE",
+    "ပၼ် Update",
+    "ယႃႉ DB",
+    "Backup DB"
   ], "What does SQL_SAFE_UPDATES do?"),
 
-  Quiz(
-    246,
-    "DROP DATABASE သင်တႅမ်ႈၸိုဝ်ႈၽိတ်း တေပဵၼ်ႁိုဝ်?",
-    [
-      "Error (Unknown database)",
-      "ဢမ်ႇပဵၼ်သင်",
-      "ယႃႉ DB ဢၼ်မီးယူႇ",
-      "သၢင်ႈ DB မႂ်ႇ",
-    ],
-    "What happens if you DROP a non-existent database?",
-  ),
+  Quiz(246, "DROP DB တႅမ်ႈၸိုဝ်ႈၽိတ်း?", [
+    "Error",
+    "ဢမ်ႇပဵၼ်သင်",
+    "ယႃႉ DB ၵဝ်ႇ",
+    "သၢင်ႈ DB မႂ်ႇ"
+  ], "What happens if you DROP a non-existent database?"),
 
-  Quiz(
-    247,
-    "DROP DATABASE IF EXISTS my_db; ၸွႆႈသင်?",
-    [
-      "ယႃႉသင်မီးယူႇ... သင်ဢမ်ႇမီးၵေႃႈ ဢမ်ႇပၼ် Error",
-      "ယႃႉတႃႇသေႇ",
-      "သၢင်ႈ DB",
-      "Check Connection",
-    ],
-    "Benefit of 'DROP DATABASE IF EXISTS'?",
-  ),
+  Quiz(247, "DROP DB IF EXISTS?", [
+    "ဢမ်ႇပၼ် Error",
+    "ယႃႉတႃႇသေႇ",
+    "သၢင်ႈ DB",
+    "Check Connection"
+  ], "Benefit of 'DROP DATABASE IF EXISTS'?"),
 
-  Quiz(
-    248,
-    "VARCHAR(65535) ပဵၼ် တၢင်းယၢဝ်းၼမ်သုတ်း ၼႂ်း 1 Row ႁႃႉ?",
-    ["ၸႂ်ႈ (မၼ်းပဵၼ် Row Size Limit)", "ဢမ်ႇၸႂ်ႈ", "64KB", "16MB"],
-    "Is VARCHAR(65535) the maximum row size limit?",
-  ),
+  Quiz(248, "VARCHAR(65535)?", [
+    "ၸႂ်ႈ",
+    "ဢမ်ႇၸႂ်ႈ",
+    "64KB",
+    "16MB"
+  ], "Is VARCHAR(65535) the maximum row size limit?"),
 
-  Quiz(
-    249,
-    "Storage Engine လႂ် ၸႂ်ႉသိမ်းၶေႃႈမုၼ်းၼႂ်း RAM ၵူၺ်း (ဝႆးလိူဝ်ပိူၼ်ႈ)?",
-    ["MEMORY", "InnoDB", "MyISAM", "ARCHIVE"],
-    "Which storage engine stores data only in RAM?",
-  ),
+  Quiz(249, "Storage Engine ၼႂ်း RAM?", [
+    "MEMORY",
+    "InnoDB",
+    "MyISAM",
+    "ARCHIVE"
+  ], "Which storage engine stores data only in RAM?"),
 
-  Quiz(
-    250,
-    "ယဝ်ႉယဝ်ႉၶႃႈ Module 3! SQL ၸုမ်းလႂ် ဢၼ်ႁဝ်းတေလဵပ်ႈႁဵၼ်း သိုပ်ႇၵႂႃႇ?",
-    ["DML (INSERT, UPDATE, DELETE)", "DDL ထႅင်ႈ", "DCL", "TCL"],
-    "Which SQL category is next after DDL?",
-  ),
 ];
 List<Quiz> mysqlQuizM4 = [
   // --- Lesson 28: INSERT & INSERT IGNORE (251-262) ---
