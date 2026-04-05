@@ -4814,759 +4814,534 @@ List<Quiz> mysqlQuizM5 = [
 List<Quiz> mysqlQuizM6 = [
   // --- Lesson 52: Views (551-562) ---
   Quiz(551, "View ၼႂ်း MySQL မၢႆထိုင်သင်?", [
-    "Table တိူဝ်ႇၵႄႇ (Virtual Table) ဢၼ်သိမ်းဝႆႉ SELECT Statement",
+    "Table ပွမ် ဢၼ်သိမ်း SELECT Statement",
     "Table ဢၼ်သိမ်းၶေႃႈမုၼ်းတႄႉဝႆႉၼႂ်း Disk",
-    "ၵၢၼ် Backup ၶေႃႈမုၼ်း",
-    "Command တႃႇယႃႉ Database",
+    "ၵၢၼ် Backup ၶေႃႈမုၼ်းလုၵ်ႉၼႂ်း Server",
+    "Command တႃႇယႃႉ Database ပႅတ်ႈတင်းမူတ်း"
   ], "What is a View in MySQL?"),
 
-  Quiz(
-    552,
-    "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ View တွၼ်ႈတႃႇ Security?",
-    [
-      "တွၼ်ႈတႃႇတတ်း Column ဢၼ်လွင်ႈယႂ်ႇပႅတ်ႈ သေပၼ်ပိူၼ်ႈတူၺ်းၵူၺ်းတွၼ်ႈဢၼ်ပၼ်သုၼ်ႇ",
-      "တွၼ်ႈတႃႇသႂ်ႇ Password ပၼ် Table",
-      "တွၼ်ႈတႃႇႁၢမ်ႈပိူၼ်ႈ SELECT Table",
-      "တွၼ်ႈတႃႇယႃႉ User ပႅတ်ႈ",
-    ],
-    "Why use a View for security purposes?",
-  ),
+  Quiz(552, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ View တွၼ်ႈတႃႇ Security?", [
+    "တွၼ်ႈတႃႇတတ်း Column ဢၼ်လွင်ႈယႂ်ႇပႅတ်ႈ",
+    "တွၼ်ႈတႃႇသႂ်ႇ Password ပၼ် Table တႄႉ",
+    "တွၼ်ႈတႃႇႁၢမ်ႈပိူၼ်ႈ SELECT Table တင်းမူတ်း",
+    "တွၼ်ႈတႃႇယႃႉ User ဢၼ်ဢမ်ႇမီးသုၼ်ႇ"
+  ], "Why use a View for security purposes?"),
 
-  Quiz(
-    553,
-    "View ၸၢင်ႈသိမ်းၶေႃႈမုၼ်း (Physical Data) ဝႆႉႁင်းမၼ်းႁႃႉ?",
-    [
-      "ဢမ်ႇသိမ်း (မၼ်းပိုင်ႈဢိင်ၸွမ်း Underlying Tables)",
-      "သိမ်း",
-      "သိမ်းၵူၺ်းတွၼ်ႈ Primary Key",
-      "Error",
-    ],
-    "Does a View store physical data?",
-  ),
+  Quiz(553, "View ၸၢင်ႈသိမ်းၶေႃႈမုၼ်း (Physical Data) ဝႆႉႁင်းမၼ်းႁႃႉ?", [
+    "ဢမ်ႇသိမ်း",
+    "သိမ်း",
+    "သိမ်းၵူၺ်းတွၼ်ႈ Primary Key",
+    "သိမ်းၵူၺ်းမိူဝ်ႈပိတ်း Server"
+  ], "Does a View store physical data?"),
 
-  Quiz(
-    554,
-    "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇသၢင်ႈ View?",
-    ["CREATE VIEW", "MAKE VIEW", "NEW VIEW", "START VIEW"],
-    "Which command is used to create a view?",
-  ),
+  Quiz(554, "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇသၢင်ႈ View?", [
+    "CREATE VIEW",
+    "MAKE VIEW",
+    "NEW VIEW",
+    "START VIEW"
+  ], "Which command is used to create a view?"),
 
-  Quiz(
-    555,
-    "သင် Table တႄႉ (Base Table) ထုၵ်ႇယႃႉပႅတ်ႈ... View တေပဵၼ်သင်?",
-    [
-      "View တေတၢႆ (Broken) သေၸႂ်ႉဢမ်ႇလႆႈ",
-      "View တေသိမ်းၶေႃႈမုၼ်းဝႆႉယူႇ",
-      "View တေမႄးတူဝ်မၼ်းၶိုၼ်း",
-      "Error",
-    ],
-    "What happens to a View if the base table is dropped?",
-  ),
+  Quiz(555, "သင် Table တႄႉ ထုၵ်ႇယႃႉပႅတ်ႈ... View တေပဵၼ်သင်?", [
+    "View တေတၢႆသေၸႂ်ႉဢမ်ႇလႆႈ",
+    "View တေသိမ်းၶေႃႈမုၼ်းဝႆႉယူႇမိူၼ်ၵဝ်ႇ",
+    "View တေမႄးတူဝ်မၼ်းၶိုၼ်းႁင်းမၼ်း",
+    "View တေပဵၼ် Table တႄႉတႅၼ်းတီႈ"
+  ], "What happens to a View if the base table is dropped?"),
 
-  Quiz(
-    556,
-    "CREATE OR REPLACE VIEW ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇမႄး (Update) Logic ၼႂ်း View ဢၼ်မီးဝႆႉယဝ်ႉ",
-      "တႃႇယႃႉ View",
-      "တႃႇသၢင်ႈ Table မႂ်ႇ",
-      "တႃႇပၼ် Permission",
-    ],
-    "What is CREATE OR REPLACE VIEW used for?",
-  ),
+  Quiz(556, "CREATE OR REPLACE VIEW ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇမႄး Logic ၼႂ်း View ဢၼ်မီးဝႆႉယဝ်ႉ",
+    "တႃႇယႃႉ View ပႅတ်ႈလုၵ်ႉၼႂ်း Database",
+    "တႃႇသၢင်ႈ Table မႂ်ႇလုၵ်ႉၼႂ်း View",
+    "တႃႇပၼ် Permission ပၼ် User ၼႂ်း View"
+  ], "What is CREATE OR REPLACE VIEW used for?"),
 
-  Quiz(
-    557,
-    "View ၸွႆႈသင်ၼႂ်းၵၢၼ်တႅမ်ႈ Query ဢၼ်ယုင်ႈယၢင်ႈ?",
-    [
-      "ၸွႆႈႁဵတ်းႁႂ်ႈမၼ်းငၢႆႈ (Simplicity) လူၺ်ႈၵၢၼ်သိမ်း JOIN ၼမ်ၼမ်ဝႆႉ",
-      "ၸွႆႈႁႂ်ႈ Database ဝႆးလိူဝ်ၵဝ်ႇ",
-      "ၸွႆႈယႃႉ Row ဢၼ်သွၼ်ႉၵၼ်",
-      "ဢမ်ႇၸွႆႈသင်",
-    ],
-    "How does a View simplify complex queries?",
-  ),
+  Quiz(557, "View ၸွႆႈသင်ၼႂ်းၵၢၼ်တႅမ်ႈ Query ဢၼ်ယုင်ႈယၢင်ႈ?", [
+    "ၸွႆႈႁဵတ်းႁႂ်ႈမၼ်းငၢႆႈလူၺ်ႈၵၢၼ်သိမ်း JOIN",
+    "ၸွႆႈႁႂ်ႈ Database ႁဵတ်းၵၢၼ်ဝႆးလိူဝ်ၵဝ်ႇ",
+    "ၸွႆႈယႃႉ Row ဢၼ်သွၼ်ႉၵၼ်ပႅတ်ႈႁင်းမၼ်း",
+    "ၸွႆႈ INSERT ၶေႃႈမုၼ်းလၢႆ Table ႁူမ်ႈၵၼ်"
+  ], "How does a View simplify complex queries?"),
 
   Quiz(558, "Underlying Table မၢႆထိုင်သင်?", [
-    "Table တႄႉ ဢၼ်မီးၶေႃႈမုၼ်းသိမ်းဝႆႉ ၽၢႆႇတႂ်ႈ View",
-    "Table ၸူဝ်ႈၶၢဝ်း",
-    "Database Name",
-    "Error",
+    "Table တႄႉ ဢၼ်မီးၶေႃႈမုၼ်းၽၢႆႇတႂ်ႈ View",
+    "Table ၸူဝ်ႈၶၢဝ်း ဢၼ် MySQL သၢင်ႈပၼ်",
+    "ၸိုဝ်ႈ Database ဢၼ်သိမ်း View ဝႆႉ",
+    "Table ဢၼ်မီး Error ၼႂ်းၵၢၼ် SELECT"
   ], "What is an underlying table?"),
 
-  Quiz(
-    559,
-    "ႁဝ်းၸၢင်ႈ UPDATE ၶေႃႈမုၼ်းလုၵ်ႉတီႈ View လႆႈတႃႇသေႇႁႃႉ?",
-    [
-      "ဢမ်ႇလႆႈ (လႆႈၵူၺ်းမၢင်ပိူင် ဢၼ်ဢမ်ႇယုင်ႈယၢင်ႈ)",
-      "လႆႈတႃႇသေႇ",
-      "လႆႈၵူၺ်းၼႂ်း SELECT",
-      "Error",
-    ],
-    "Can you always update data through a View?",
-  ),
+  Quiz(559, "ႁဝ်းၸၢင်ႈ UPDATE ၶေႃႈမုၼ်းလုၵ်ႉတီႈ View လႆႈတႃႇသေႇႁႃႉ?", [
+    "ဢမ်ႇလႆႈ",
+    "လႆႈတႃႇသေႇ",
+    "လႆႈၵူၺ်းၼႂ်း SELECT Statement",
+    "လႆႈၵူၺ်းမိူဝ်ႈၸႂ်ႉ root user"
+  ], "Can you always update data through a View?"),
 
   Quiz(560, "DROP VIEW ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇယႃႉ View ပႅတ်ႈ လုၵ်ႉၼႂ်း Database",
-    "တႃႇယႃႉၶေႃႈမုၼ်း",
-    "တႃႇပိတ်း Database",
-    "Error",
+    "တႃႇယႃႉၶေႃႈမုၼ်းၼႂ်း Underlying Table",
+    "တႃႇပိတ်း Database ၸူဝ်ႈၶၢဝ်း",
+    "တႃႇယႃႉ User ဢၼ်သၢင်ႈ View"
   ], "What does DROP VIEW do?"),
 
-  Quiz(
-    561,
-    "WITH CHECK OPTION ၼႂ်း View ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇႁၢမ်ႈၵၢၼ် INSERT/UPDATE ဢၼ်ဢမ်ႇၵွင်ႉၵၢႆႇတင်း Condition ႁင်း View",
-      "တႃႇၵူတ်ႇထတ်း Password",
-      "တႃႇၼပ်ႉ SUM",
-      "Error",
-    ],
-    "What is the purpose of WITH CHECK OPTION in a View?",
-  ),
+  Quiz(561, "WITH CHECK OPTION ၼႂ်း View ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇႁၢမ်ႈၵၢၼ် INSERT/UPDATE ဢၼ်ၽိတ်း Condition",
+    "တႃႇၵူတ်ႇထတ်း Password ဢွၼ်တၢင်းတေလူ",
+    "တႃႇၼပ်ႉ SUM ၶေႃႈမုၼ်းၼႂ်း View ႁင်းမၼ်း",
+    "တႃႇမၵ်းမၼ်ႈ Primary Key ၼႂ်း View"
+  ], "What is the purpose of WITH CHECK OPTION in a View?"),
 
-  Quiz(
-    562,
-    "View ၸႂ်ႉတီႈယူႇ (Disk Space) ၼမ်ႁႃႉ?",
-    [
-      "ဢမ်ႇၼမ် (ၵွပ်ႈမၼ်းသိမ်းၵူၺ်း Definition)",
-      "ၼမ်ႁႅင်း",
-      "မိူၼ်တင်း Table တႄႉ",
-      "Error",
-    ],
-    "Does a View occupy significant disk space?",
-  ),
+  Quiz(562, "View ၸႂ်ႉတီႈယူႇ (Disk Space) ၼမ်ႁႃႉ?", [
+    "ဢမ်ႇၼမ်",
+    "ၼမ်ႁႅင်း",
+    "မိူၼ်တင်း Table တႄႉ",
+    "ၼမ်လိူဝ် Table တႄႉ 2 ပုၼ်ႈ"
+  ], "Does a View occupy significant disk space?"),
 
   // --- Lesson 53: Stored Procedures (563-574) ---
   Quiz(563, "Stored Procedure မၢႆထိုင်သင်?", [
-    "ၸုမ်း Code SQL ဢၼ်သိမ်းဝႆႉၼႂ်း Database သေႁွင်ႉၸႂ်ႉလႆႈလၢႆပွၵ်ႈ",
-    "ၵၢၼ် Backup Database",
-    "Table ၸူဝ်ႈၶၢဝ်း",
-    "Error",
+    "ၸုမ်း Code SQL ဢၼ်သိမ်းဝႆႉၼႂ်း Database",
+    "ၵၢၼ် Backup Database ၸွမ်းၶၢဝ်းယၢမ်း",
+    "Table ၸူဝ်ႈၶၢဝ်း တွၼ်ႈတႃႇသိမ်း SELECT",
+    "Command တႃႇယႃႉ User Permission"
   ], "What is a Stored Procedure?"),
 
-  Quiz(
-    564,
-    "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇႁွင်ႉ Stored Procedure?",
-    ["CALL", "RUN", "EXECUTE", "START"],
-    "Which command is used to invoke a Stored Procedure?",
-  ),
+  Quiz(564, "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇႁွင်ႉ Stored Procedure?", [
+    "CALL",
+    "RUN",
+    "EXECUTE",
+    "START"
+  ], "Which command is used to invoke a Stored Procedure?"),
 
-  Quiz(
-    565,
-    "Parameter ပိူင် 'OUT' ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇသူင်ႇၵႃႈၶၼ်လုၵ်ႉၼႂ်း Procedure ဢွၵ်ႇမႃးပၼ်ၽၢႆႇၼွၵ်ႈ",
-      "တႃႇသူင်ႇၵႃႈၶၼ်ၶဝ်ႈၵႂႃႇ",
-      "တႃႇယႃႉ Table",
-      "Error",
-    ],
-    "What is an OUT parameter used for?",
-  ),
+  Quiz(565, "Parameter ပိူင် 'OUT' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇသူင်ႇၵႃႈၶၼ်ဢွၵ်ႇမႃးပၼ်ၽၢႆႇၼွၵ်ႈ",
+    "တႃႇသူင်ႇၵႃႈၶၼ်ၶဝ်ႈၵႂႃႇၼႂ်း Procedure",
+    "တႃႇယႃႉ Table ဢၼ်မီးၼႂ်း Procedure",
+    "တႃႇမၵ်းမၼ်ႈ Variable ၼႂ်း SELECT"
+  ], "What is an OUT parameter used for?"),
 
-  Quiz(
-    566,
-    "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ DELIMITER // မိူဝ်ႈသၢင်ႈ Procedure?",
-    [
-      "တွၼ်ႈတႃႇႁၢမ်ႈ MySQL တတ်း Code မိူဝ်ႈႁၼ် ';' ၼႂ်း Procedure",
-      "တွၼ်ႈတႃႇႁႂ်ႈ Code ဝႆး",
-      "တွၼ်ႈတႃႇပၼ် Password",
-      "Error",
-    ],
-    "Why is DELIMITER // used when creating a procedure?",
-  ),
+  Quiz(566, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ DELIMITER // မိူဝ်ႈသၢင်ႈ Procedure?", [
+    "တွၼ်ႈတႃႇႁၢမ်ႈ MySQL တတ်း Code မိူဝ်ႈႁၼ် ';'",
+    "တွၼ်ႈတႃႇႁႂ်ႈ Code ႁဵတ်းၵၢၼ်ဝႆးလိူဝ်ၵဝ်ႇ",
+    "တွၼ်ႈတႃႇပၼ် Password ပၼ် Procedure",
+    "တွၼ်ႈတႃႇသၢင်ႈ Database မႂ်ႇႁင်းမၼ်း"
+  ], "Why is DELIMITER // used when creating a procedure?"),
 
-  Quiz(
-    567,
-    "Stored Procedure ဝႆးလိူဝ် SQL ธรรมဒါ ၵွပ်ႈသင်?",
-    [
-      "ၵွပ်ႈမၼ်းပဵၼ် Pre-compiled Code ၼႂ်း Server",
-      "ၵွပ်ႈမၼ်းပဵၼ်လိၵ်ႈပွတ်း",
-      "ၵွပ်ႈမၼ်းဢမ်ႇမီး WHERE",
-      "Error",
-    ],
-    "Why can Stored Procedures be faster than regular SQL queries?",
-  ),
+  Quiz(567, "Stored Procedure ဝႆးလိူဝ် SQL ธรรมဒါ ၵွပ်ႈသင်?", [
+    "ၵွပ်ႈမၼ်းပဵၼ် Pre-compiled Code",
+    "ၵွပ်ႈမၼ်းပဵၼ်လိၵ်ႈပွတ်းဢွၼ်ႇ",
+    "ၵွပ်ႈမၼ်းဢမ်ႇမီး WHERE clause",
+    "ၵွပ်ႈမၼ်းၸႂ်ႉ RAM ဢေႇလိူဝ်ပိူၼ်ႈ"
+  ], "Why can Stored Procedures be faster than regular SQL queries?"),
 
   Quiz(568, "INOUT Parameter မၢႆထိုင်သင်?", [
-    "ၵႃႈၶၼ်ဢၼ်သူင်ႇၶဝ်ႈလႆႈ လႄႈ ဢဝ်ဢွၵ်ႇလႆႈ တူဝ်လဵဝ်ၵၼ်",
-    "ၵႃႈၶၼ်ဢၼ်ပဝ်ႇဝႆႉ",
-    "Primary Key",
-    "Error",
+    "ၵႃႈၶၼ်ဢၼ်သူင်ႇၶဝ်ႈလႆႈ လႄႈ ဢဝ်ဢွၵ်ႇလႆႈ",
+    "ၵႃႈၶၼ်ဢၼ်ပဝ်ႇဝႆႉတႃႇသေႇ",
+    "Primary Key ၼႂ်း Procedure",
+    "ၵၢၼ် Join Table ၼႂ်း Procedure"
   ], "What is an INOUT parameter?"),
 
-  Quiz(
-    569,
-    "Stored Procedure ၸၢင်ႈမီးလၢႆလၢႆ SQL Statement ႁူမ်ႈၵၼ်လႆႈႁႃႉ?",
-    [
-      "လႆႈ (မိူၼ်ၼင်ႇ INSERT သေ UPDATE ၸွမ်းၵၼ်)",
-      "ဢမ်ႇလႆႈ",
-      "လႆႈၵူၺ်း SELECT",
-      "Error",
-    ],
-    "Can a Stored Procedure contain multiple SQL statements?",
-  ),
+  Quiz(569, "Stored Procedure ၸၢင်ႈမီးလၢႆလၢႆ SQL Statement ႁူမ်ႈၵၼ်လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း SELECT",
+    "လႆႈၵူၺ်း INSERT"
+  ], "Can a Stored Procedure contain multiple SQL statements?"),
 
   Quiz(570, "DROP PROCEDURE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇယႃႉ Procedure ပႅတ်ႈ",
-    "တႃႇယႃႉ Table",
+    "တႃႇယႃႉ Table ပႅတ်ႈ",
     "တႃႇၵိုတ်း Database",
-    "Error",
+    "တႃႇယႃႉ User"
   ], "What does DROP PROCEDURE do?"),
 
-  Quiz(
-    571,
-    "ႁဝ်းၸၢင်ႈၸႂ်ႉ Stored Procedure တွၼ်ႈတႃႇ Security လႆႈၸိူင်ႉႁိုဝ်?",
-    [
-      "ပၼ်သုၼ်ႇ User ႁွင်ႉ CALL ၵူၺ်း လူၺ်ႈဢမ်ႇပၼ် SELECT Table တႄႉ",
-      "သႂ်ႇ Password ပၼ် Procedure",
-      "ယႃႉ User",
-      "Error",
-    ],
-    "How can Stored Procedures enhance security?",
-  ),
+  Quiz(571, "ႁဝ်းၸၢင်ႈၸႂ်ႉ Stored Procedure တွၼ်ႈတႃႇ Security လႆႈၸိူင်ႉႁိုဝ်?", [
+    "ပၼ်သုၼ်ႇ User ႁွင်ႉ CALL ၵူၺ်း",
+    "သႂ်ႇ Password ပၼ် Procedure",
+    "ယႃႉ User ဢၼ်ဢမ်ႇမီးသုၼ်ႇ",
+    "သၢင်ႈ View ႁူမ်ႈတင်း Procedure"
+  ], "How can Stored Procedures enhance security?"),
 
-  Quiz(
-    572,
-    "BEGIN ... END ၼႂ်း Procedure တႅၼ်းသင်?",
-    [
-      "တႅၼ်းၶွပ်ႇ (Block) ႁင်း Code ဢၼ်တေႁဵတ်းၵၢၼ်",
-      "တႅၼ်းၸိုဝ်ႈ Table",
-      "တႅၼ်း ID",
-      "Error",
-    ],
-    "What do BEGIN and END represent in a procedure?",
-  ),
+  Quiz(572, "BEGIN ... END ၼႂ်း Procedure တႅၼ်းသင်?", [
+    "တႅၼ်း Block ႁင်း Code",
+    "တႅၼ်းၸိုဝ်ႈ Table",
+    "တႅၼ်း ID ႁင်း User",
+    "တႅၼ်း Command SELECT"
+  ], "What do BEGIN and END represent in a procedure?"),
 
-  Quiz(
-    573,
-    "Stored Procedure ၸၢင်ႈသူင်ႇၽွၼ်းလႆႈ (Result Set) မႃးမိူၼ် SELECT ႁႃႉ?",
-    ["ၸႂ်ႈ", "ဢမ်ႇၸႂ်ႈ", "လႆးၵူၺ်းတူဝ်ၼပ်ႉ", "Error"],
-    "Can a Stored Procedure return a result set?",
-  ),
+  Quiz(573, "Stored Procedure ၸၢင်ႈသူင်ႇၽွၼ်းလႆႈ (Result Set) မႃးမိူၼ် SELECT ႁႃႉ?", [
+    "ၸႂ်ႈ",
+    "ဢမ်ႇၸႂ်ႈ",
+    "လႆးၵူၺ်းတူဝ်ၼပ်ႉ",
+    "လႆႈၵူၺ်း Error"
+  ], "Can a Stored Procedure return a result set?"),
 
-  Quiz(
-    574,
-    "Parameter 'IN' ၼႂ်း Procedure မိူၼ်တင်းသင်?",
-    [
-      "Input ဢၼ်သူင်ႇၶဝ်ႈၵႂႃႇ",
-      "Output ဢၼ်သူင်ႇဢွၵ်ႇ",
-      "ၸိုဝ်ႈ Database",
-      "Error",
-    ],
-    "What is an IN parameter equivalent to?",
-  ),
+  Quiz(574, "Parameter 'IN' ၼႂ်း Procedure မိူၼ်တင်းသင်?", [
+    "Input ဢၼ်သူင်ႇၶဝ်ႈၵႂႃႇ",
+    "Output ဢၼ်သူင်ႇဢွၵ်ႇ",
+    "ၸိုဝ်ႈ Database",
+    "ၸိုဝ်ႈ Table"
+  ], "What is an IN parameter equivalent to?"),
 
   // --- Lesson 54: Logic & Control (575-586) ---
-  Quiz(
-    575,
-    "DECLARE ၼႂ်း Procedure ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တွၼ်ႈတႃႇမၵ်းမၼ်ႈတူဝ်လႅၵ်ႈလၢႆႈ (Variable)",
-      "တွၼ်ႈတႃႇသၢင်ႈ Table",
-      "တွၼ်ႈတႃႇယႃႉ Row",
-      "Error",
-    ],
-    "What is DECLARE used for in a procedure?",
-  ),
+  Quiz(575, "DECLARE ၼႂ်း Procedure ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တွၼ်ႈတႃႇမၵ်းမၼ်ႈ Variable",
+    "တွၼ်ႈတႃႇသၢင်ႈ Table",
+    "တွၼ်ႈတႃႇယႃႉ Row",
+    "တွၼ်ႈတႃႇ INSERT Data"
+  ], "What is DECLARE used for in a procedure?"),
 
-  Quiz(
-    576,
-    "IF ... THEN ... ELSE ... END IF ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇလိူၵ်ႈတႅတ်ႈတတ်း (Conditional Logic)",
-      "တႃႇၼပ်ႉ Loop",
-      "တႃႇ Join Table",
-      "Error",
-    ],
-    "What is IF-THEN-ELSE used for?",
-  ),
+  Quiz(576, "IF ... THEN ... ELSE ... END IF ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇလိူၵ်ႈတႅတ်ႈတတ်း",
+    "တႃႇၼပ်ႉ Loop",
+    "တႃႇ Join Table",
+    "တႃႇ Sort Data"
+  ], "What is IF-THEN-ELSE used for?"),
 
   Quiz(577, "SET Keyword ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇပၼ်ၵႃႈၶၼ် (Assign value) ပၼ် Variable",
+    "တႃႇပၼ်ၵႃႈၶၼ်ပၼ် Variable",
     "တႃႇသၢင်ႈ Variable",
     "တႃႇ SELECT ၶေႃႈမုၼ်း",
-    "Error",
+    "တႃႇ CREATE Table"
   ], "What is the SET keyword used for?"),
 
-  Quiz(
-    578,
-    "CASE Statement ၵႆႉၸႂ်ႉမိူဝ်ႈလႂ်?",
-    [
-      "မိူဝ်ႈမီးတၢင်းလိူၵ်ႈ (Conditions) ၼမ်ၼမ်",
-      "မိူဝ်ႈၶႂ်ႈယႃႉ Table",
-      "မိူဝ်ႈၶႂ်ႈ Backup",
-      "Error",
-    ],
-    "When is a CASE statement typically used?",
-  ),
+  Quiz(578, "CASE Statement ၵႆႉၸႂ်ႉမိူဝ်ႈလႂ်?", [
+    "မိူဝ်ႈမီး Conditions ၼမ်ၼမ်",
+    "မိူဝ်ႈၶႂ်ႈယႃႉ Table",
+    "မိူဝ်ႈၶႂ်ႈ Backup",
+    "မိူဝ်ႈၶႂ်ႈ Sort Data"
+  ], "When is a CASE statement typically used?"),
 
-  Quiz(
-    579,
-    "DECLARE Variable တေလႆႈဝႆႉတီႈလႂ်?",
-    [
-      "ဝႆႉတီႈၼိူဝ်သုတ်း ဝၢႆးသေ BEGIN",
-      "ဝႆႉတီႈလႂ်ၵေႃႈလႆႈ",
-      "ဝႆႉတီႈလင် END",
-      "Error",
-    ],
-    "Where must DECLARE statements be placed?",
-  ),
+  Quiz(579, "DECLARE Variable တေလႆႈဝႆႉတီႈလႂ်?", [
+    "ဝႆႉတီႈၼိူဝ်သုတ်း ဝၢႆး BEGIN",
+    "ဝႆႉတီႈလႂ်ၵေႃႈလႆႈ",
+    "ဝႆႉတီႈလင် END",
+    "ဝႆႉၼွၵ်ႈ Procedure"
+  ], "Where must DECLARE statements be placed?"),
 
   Quiz(580, "SIGNAL SQLSTATE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇသူင်ႇ Error Message (Custom Error) ဢွၵ်ႇမႃး",
+    "တႃႇသူင်ႇ Error Message",
     "တႃႇပၼ်ၶႅၼ်းလိၵ်ႈ",
     "တႃႇပိတ်း Server",
-    "Error",
+    "တႃႇသၢင်ႈ Table"
   ], "What is SIGNAL SQLSTATE used for?"),
 
-  Quiz(
-    581,
-    "တူဝ်လႅၵ်ႈလၢႆႈ (Variable) တင်း Column ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?",
-    [
-      "Variable သိမ်းၵႃႈၶၼ်ၸူဝ်ႈၶၢဝ်းၼႂ်း Memory, Column သိမ်းၼႂ်း Table",
-      "မိူၼ်ၵၼ်",
-      "Column ဝႆးလိူဝ်",
-      "Error",
-    ],
-    "Difference between a variable and a column?",
-  ),
+  Quiz(581, "Variable တင်း Column ပႅၵ်ႇၵၼ်ၸိူင်ႉႁိုဝ်?", [
+    "Variable သိမ်းၼႂ်း Memory ၸူဝ်ႈၶၢဝ်း",
+    "မိူၼ်ၵၼ်ၵူႈယၢင်ႇ",
+    "Column ဝႆးလိူဝ် Variable",
+    "Variable သိမ်းၼႂ်း Disk"
+  ], "Difference between a variable and a column?"),
 
-  Quiz(
-    582,
-    "IF score >= 80 THEN ... ၼႆႉပဵၼ်သင်?",
-    ["Boolean Expression", "Table Name", "Loop", "Error"],
-    "What is 'score >= 80' in an IF statement?",
-  ),
+  Quiz(582, "IF score >= 80 THEN ... ၼႆႉပဵၼ်သင်?", [
+    "Boolean Expression",
+    "Table Name",
+    "Loop Statement",
+    "Primary Key"
+  ], "What is 'score >= 80' in an IF statement?"),
 
-  Quiz(
-    583,
-    "ELSE ၼႂ်း IF Statement မၢႆထိုင်သင်?",
-    [
-      "တွၼ်ႈဢၼ်တေႁဵတ်းၵၢၼ် သင်သႅၼ်ႇသိုၵ်းၽၢႆႇၼႃႈ ဢမ်ႇမၢၼ်ႇမႅၼ်ႈ (False)",
-      "တွၼ်ႈတႄႇ",
-      "တွၼ်ႈသုတ်း",
-      "Error",
-    ],
-    "What does ELSE represent in an IF statement?",
-  ),
+  Quiz(583, "ELSE ၼႂ်း IF Statement မၢႆထိုင်သင်?", [
+    "တွၼ်ႈတႃႇႁဵတ်းၵၢၼ်သင် Condition ၽိတ်း",
+    "တွၼ်ႈတႃႇတႄႇ Procedure",
+    "တွၼ်ႈတႃႇသုတ်း Procedure",
+    "တွၼ်ႈတႃႇ Error"
+  ], "What does ELSE represent in an IF statement?"),
 
-  Quiz(
-    584,
-    "DEFAULT ၼႂ်း DECLARE ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇပၼ်ၵႃႈၶၼ်တႄႇ (Initial value) သင်ဢမ်ႇပႆႇမီးၵႃႈၶၼ်",
-      "တႃႇယႃႉ Row",
-      "တႃႇပၼ် Password",
-      "Error",
-    ],
-    "What is DEFAULT used for in a DECLARE statement?",
-  ),
+  Quiz(584, "DEFAULT ၼႂ်း DECLARE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇပၼ်ၵႃႈၶၼ်တႄႇ",
+    "တႃႇယႃႉ Row ပႅတ်ႈ",
+    "တႃႇပၼ် Password",
+    "တႃႇသၢင်ႈ ID"
+  ], "What is DEFAULT used for in a DECLARE statement?"),
 
-  Quiz(
-    585,
-    "CASE ... WHEN ... ELSE ... END CASE; ပဵၼ်သင်?",
-    ["Switch Logic", "Loop Logic", "Join Logic", "Error"],
-    "What programming construct is CASE similar to?",
-  ),
+  Quiz(585, "CASE ... WHEN ... ELSE ... END CASE; ပဵၼ်သင်?", [
+    "Switch Logic",
+    "Loop Logic",
+    "Join Logic",
+    "Sort Logic"
+  ], "What programming construct is CASE similar to?"),
 
-  Quiz(
-    586,
-    "ႁဝ်းၸၢင်ႈၸႂ်ႉ IF သွၼ်ႉ IF (Nested IF) လႆႈႁႃႉ?",
-    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 2 ၸၼ်ႉ", "Error"],
-    "Can you use nested IF statements?",
-  ),
+  Quiz(586, "ႁဝ်းၸၢင်ႈၸႂ်ႉ IF သွၼ်ႉ IF (Nested IF) လႆႈႁႃႉ?", [
+    "လႆႈ",
+    "ဢမ်ႇလႆႈ",
+    "လႆႈၵူၺ်း 2 ၸၼ်ႉ",
+    "လႆႈၵူၺ်းၼႂ်း SELECT"
+  ], "Can you use nested IF statements?"),
 
   // --- Lesson 55: WHILE & REPEAT Loops (587-598) ---
   Quiz(587, "WHILE Loop တေႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
-    "မိူဝ်ႈသႅၼ်ႇသိုၵ်း (Condition) တိုၵ်ႉပဵၼ် True ယူႇ",
-    "မိူဝ်ႈသႅၼ်ႇသိုၵ်းပဵၼ် False",
+    "မိူဝ်ႈ Condition တိုၵ်ႉ True",
+    "မိူဝ်ႈ Condition ပဵၼ် False",
     "ႁဵတ်းပွၵ်ႈလဵဝ်ယဝ်ႉၵိုတ်း",
-    "Error",
+    "မိူဝ်ႈမီး Error"
   ], "When does a WHILE loop execute?"),
 
-  Quiz(
-    588,
-    "REPEAT Loop တင်း WHILE Loop ပႅၵ်ႇၵၼ်တီႈလႂ်?",
-    [
-      "REPEAT ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်းၼိုင်ႈပွၵ်ႈ ၸင်ႇၸႅတ်ႈသႅၼ်ႇသိုၵ်း",
-      "WHILE ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း",
-      "မိူၼ်ၵၼ်",
-      "Error",
-    ],
-    "Difference between REPEAT and WHILE loops?",
-  ),
+  Quiz(588, "REPEAT Loop တင်း WHILE Loop ပႅၵ်ႇၵၼ်တီႈလႂ်?", [
+    "REPEAT ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း ၸင်ႇၸႅတ်ႈ",
+    "WHILE ႁဵတ်းၵၢၼ်ဢွၼ်တၢင်း",
+    "မိူၼ်ၵၼ်ၵူႈယၢင်ႇ",
+    "REPEAT ဝႆးလိူဝ် WHILE"
+  ], "Difference between REPEAT and WHILE loops?"),
 
   Quiz(589, "LEAVE Keyword ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇဢွၵ်ႇ (Break) လုၵ်ႉၼႂ်း Loop ၵမ်းလဵဝ်",
+    "တႃႇဢွၵ်ႇလုၵ်ႉၼႂ်း Loop",
     "တႃႇသိုပ်ႇ Loop",
     "တႃႇယႃႉ Table",
-    "Error",
+    "တႃႇ INSERT Data"
   ], "What is the LEAVE keyword used for?"),
 
-  Quiz(
-    590,
-    "ITERATE Keyword ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇၶၢမ်ႈ (Continue) ၵႂႃႇႁဵတ်းပွၵ်ႈၼႃႈၼႂ်း Loop",
-      "တႃႇၵိုတ်း Loop",
-      "တႃႇ INSERT ၶေႃႈမုၼ်း",
-      "Error",
-    ],
-    "What is the ITERATE keyword used for?",
-  ),
+  Quiz(590, "ITERATE Keyword ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇၶၢမ်ႈၵႂႃႇႁဵတ်းပွၵ်ႈၼႃႈ",
+    "တႃႇၵိုတ်း Loop",
+    "တႃႇ INSERT Data",
+    "တႃႇ SELECT Data"
+  ], "What is the ITERATE keyword used for?"),
 
   Quiz(591, "Infinite Loop မၢႆထိုင်သင်?", [
-    "Loop ဢၼ်ႁဵတ်းၵၢၼ်ဢမ်ႇၵိုတ်း သေႁဵတ်းႁႂ်ႈ Server ၶႅင်",
+    "Loop ဢၼ်ႁဵတ်းၵၢၼ်ဢမ်ႇၵိုတ်း",
     "Loop ဢၼ်ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ်",
     "Loop ဢၼ်မီး Error",
-    "Error",
+    "Loop ဢၼ်ဝႆးႁႅင်း"
   ], "What is an infinite loop?"),
 
-  Quiz(
-    592,
-    "ႁဵတ်းသင်လႄႈ လူဝ်ႇသႂ်ႇ SET counter = counter + 1; ၼႂ်း Loop?",
-    [
-      "တႃႇထႅမ်ၵႃႈၶၼ် ႁႂ်ႈသႅၼ်ႇသိုၵ်းထိုင်တီႈၵိုတ်းလႆႈ",
-      "တႃႇပၼ် Password",
-      "တႃႇ SELECT ၶေႃႈမုၼ်း",
-      "Error",
-    ],
-    "Why increment a counter inside a loop?",
-  ),
+  Quiz(592, "ႁဵတ်းသင်လႄႈ လူဝ်ႇသႂ်ႇ SET counter = counter + 1;?", [
+    "တႃႇထႅမ်ၵႃႈၶၼ်ႁႂ်ႈၵိုတ်းလႆႈ",
+    "တႃႇပၼ် Password",
+    "တႃႇ SELECT ၶေႃႈမုၼ်း",
+    "တႃႇယႃႉ Table"
+  ], "Why increment a counter inside a loop?"),
 
-  Quiz(
-    593,
-    "UNTIL ၼႂ်း REPEAT Loop ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇမၵ်းမၼ်ႈသႅၼ်ႇသိုၵ်း တႃႇၵိုတ်း Loop",
-      "တႃႇတႄႇ Loop",
-      "တႃႇ SELECT",
-      "Error",
-    ],
-    "What is UNTIL used for in a REPEAT loop?",
-  ),
+  Quiz(593, "UNTIL ၼႂ်း REPEAT Loop ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇမၵ်းမၼ်ႈတီႈၵိုတ်း",
+    "တႃႇတႄႇ Loop",
+    "တႃႇ SELECT Data",
+    "တႃႇ Error"
+  ], "What is UNTIL used for in a REPEAT loop?"),
 
   Quiz(594, "Loop Label ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇပၼ်ၸိုဝ်ႈ Loop ႁႂ်ႈ LEAVE ဢမ်ႇၼၼ် ITERATE ၸႂ်ႉလႆႈငၢႆႈ",
+    "တႃႇပၼ်ၸိုဝ်ႈ Loop",
     "တႃႇပၼ်ၸိုဝ်ႈ Table",
     "တႃႇပၼ် Password",
-    "Error",
+    "တႃႇသၢင်ႈ ID"
   ], "What is a loop label used for?"),
 
-  Quiz(
-    595,
-    "WHILE Loop တေၵူတ်ႇထတ်းသႅၼ်ႇသိုၵ်း မိူဝ်ႈလႂ်?",
-    [
-      "ဢွၼ်တၢင်းတေႁဵတ်းၵၢၼ် (Pre-test)",
-      "ဝၢႆးသေႁဵတ်းၵၢၼ် (Post-test)",
-      "ဢမ်ႇၵူတ်ႇထတ်း",
-      "Error",
-    ],
-    "When does a WHILE loop check its condition?",
-  ),
+  Quiz(595, "WHILE Loop တေၵူတ်ႇထတ်း Condition မိူဝ်ႈလႂ်?", [
+    "ဢွၼ်တၢင်းတေႁဵတ်းၵၢၼ်",
+    "ဝၢႆးသေႁဵတ်းၵၢၼ်ယဝ်ႉ",
+    "ဢမ်ႇၵူတ်ႇထတ်း",
+    "မိူဝ်ႈ CALL Procedure"
+  ], "When does a WHILE loop check its condition?"),
 
-  Quiz(
-    596,
-    "REPEAT Loop တေၵူတ်ႇထတ်းသႅၼ်ႇသိုၵ်း မိူဝ်ႈလႂ်?",
-    [
-      "ဝၢႆးသေႁဵတ်းၵၢၼ်ယဝ်ႉ (Post-test)",
-      "ဢွၼ်တၢင်းတေႁဵတ်းၵၢၼ်",
-      "ဢမ်ႇၵူတ်ႇထတ်း",
-      "Error",
-    ],
-    "When does a REPEAT loop check its condition?",
-  ),
+  Quiz(596, "REPEAT Loop တေၵူတ်ႇထတ်း Condition မိူဝ်ႈလႂ်?", [
+    "ဝၢႆးသေႁဵတ်းၵၢၼ်ယဝ်ႉ",
+    "ဢွၼ်တၢင်းတေႁဵတ်းၵၢၼ်",
+    "ဢမ်ႇၵူတ်ႇထတ်း",
+    "မိူဝ်ႈ BEGIN"
+  ], "When does a REPEAT loop check its condition?"),
 
   Quiz(597, "Loop ၼႂ်း SQL ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇသၢင်ႈ Dummy Data ဢမ်ႇၼၼ် ႁဵတ်းၵၢၼ်သမ်ႉၵၼ်ၼိူဝ်ၶေႃႈမုၼ်း",
+    "တႃႇႁဵတ်းၵၢၼ်သမ်ႉၵၼ်",
     "တႃႇ Join 2 Tables",
     "တႃႇယႃႉ Database",
-    "Error",
+    "တႃႇ Sort Data"
   ], "Common use case for loops in SQL?"),
 
-  Quiz(
-    598,
-    "ႁဵတ်းသင်လႄႈ ႁဝ်းဢမ်ႇထုၵ်ႇလီၸႂ်ႉ Loop ၼမ်လူၼ်ႉၼႂ်း SQL?",
-    [
-      "ၵွပ်ႈမၼ်းၸႃႉလိူဝ် Set-based operations",
-      "ၵွပ်ႈမၼ်းတႅမ်ႈယၢပ်ႇ",
-      "ၵွပ်ႈမၼ်းပၼ် NULL",
-      "Error",
-    ],
-    "Why avoid overusing loops in SQL?",
-  ),
+  Quiz(598, "ႁဵတ်းသင်လႄႈ ႁဝ်းဢမ်ႇထုၵ်ႇလီၸႂ်ႉ Loop ၼမ်လူၼ်ႉ?", [
+    "ၵွပ်ႈမၼ်ၸႃႉလိူဝ် Set-based",
+    "ၵွပ်ႈမၼ်းတႅမ်ႈယၢပ်ႇ",
+    "ၵွပ်ႈမၼ်းပၼ် NULL",
+    "ၵွပ်ႈ MySQL ဢမ်ႇပၼ်"
+  ], "Why avoid overusing loops in SQL?"),
 
   // --- Lesson 56: Triggers (599-610) ---
   Quiz(599, "Trigger ၼႂ်း MySQL မၢႆထိုင်သင်?", [
-    "Code ဢၼ်တိုၼ်ႇႁဵတ်းၵၢၼ်ႁင်းမၼ်း မိူဝ်ႈမီး Event ၼႂ်း Table",
+    "Code ဢၼ်တိုၼ်ႇႁဵတ်းၵၢၼ်ႁင်းမၼ်း",
     "Command တႃႇ Backup",
     "Table တိူဝ်ႇၵႄႇ",
-    "Error",
+    "Stored Procedure"
   ], "What is a Trigger?"),
 
-  Quiz(
-    600,
-    "Event လႂ် ဢၼ်ၸၢင်ႈတိုၼ်ႇ Trigger လႆႈ?",
-    [
-      "INSERT, UPDATE, DELETE",
-      "SELECT, SHOW, DESCRIBE",
-      "CREATE, DROP, ALTER",
-      "Error",
-    ],
-    "Which events can fire a trigger?",
-  ),
+  Quiz(600, "Event လႂ် ဢၼ်ၸၢင်ႈတိုၼ်ႇ Trigger လႆႈ?", [
+    "INSERT, UPDATE, DELETE",
+    "SELECT, SHOW",
+    "CREATE, DROP",
+    "CALL, RUN"
+  ], "Which events can fire a trigger?"),
 
-  Quiz(
-    601,
-    "BEFORE Trigger ႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?",
-    [
-      "ဢွၼ်တၢင်းၶေႃႈမုၼ်းတေထုၵ်ႇသိမ်း ၶဝ်ႈၼႂ်း Table",
-      "ဝၢႆးသေသိမ်းယဝ်ႉ",
-      "မိူဝ်ႈ Database ပိတ်း",
-      "Error",
-    ],
-    "When does a BEFORE trigger execute?",
-  ),
+  Quiz(601, "BEFORE Trigger ႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
+    "ဢွၼ်တၢင်းၶေႃႈမုၼ်းတေသိမ်း",
+    "ဝၢႆးသေသိမ်းယဝ်ႉ",
+    "မိူဝ်ႈပိတ်း Server",
+    "မိူဝ်ႈ Error"
+  ], "When does a BEFORE trigger execute?"),
 
   Quiz(602, "AFTER Trigger ႁဵတ်းၵၢၼ်မိူဝ်ႈလႂ်?", [
-    "ဝၢႆးသေၶေႃႈမုၼ်းသိမ်းယဝ်ႉတူဝ်ႈ",
+    "ဝၢႆးသေၶေႃႈမုၼ်းသိမ်းယဝ်ႉ",
     "ဢွၼ်တၢင်းတေသိမ်း",
-    "မိူဝ်ႈ CALL Procedure",
-    "Error",
+    "မိူဝ်ႈ CALL",
+    "မိူဝ်ႈ SELECT"
   ], "When does an AFTER trigger execute?"),
 
   Quiz(603, "Audit Log မၢႆထိုင်သင်?", [
-    "ပိုၼ်းၵၢၼ်လႅၵ်ႈလၢႆႈၶေႃႈမုၼ်း (History logs)",
+    "ပိုၼ်းၵၢၼ်လႅၵ်ႈလၢႆႈၶေႃႈမုၼ်း",
     "Password Database",
-    "Table ၸိုဝ်ႈလုၵ်ႈႁဵၼ်း",
-    "Error",
+    "Table လုၵ်ႈႁဵၼ်း",
+    "Backup File"
   ], "What is an Audit Log?"),
 
-  Quiz(
-    604,
-    "OLD Keyword ၼႂ်း Trigger ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇမၢႆထိုင်ၵႃႈၶၼ်ၵဝ်ႇ ဢၼ်မီးယူႇဢွၼ်တၢင်း",
-      "တႃႇမၢႆထိုင်ၵႃႈၶၼ်မႂ်ႇ",
-      "တႃႇယႃႉ Row",
-      "Error",
-    ],
-    "What is the OLD keyword used for in a trigger?",
-  ),
+  Quiz(604, "OLD Keyword ၼႂ်း Trigger ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇမၢႆထိုင်ၵႃႈၶၼ်ၵဝ်ႇ",
+    "တႃႇမၢႆထိုင်ၵႃႈၶၼ်မႂ်ႇ",
+    "တႃႇယႃႉ Row",
+    "တႃႇ SELECT"
+  ], "What is the OLD keyword used for in a trigger?"),
 
-  Quiz(
-    605,
-    "NEW Keyword ၼႂ်း Trigger ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇမၢႆထိုင်ၵႃႈၶၼ်မႂ်ႇ ဢၼ်တေမႃးသိမ်းတႅၼ်း",
-      "တႃႇမၢႆထိုင်ၵႃႈၶၼ်ၵဝ်ႇ",
-      "တႃႇသၢင်ႈ Table",
-      "Error",
-    ],
-    "What is the NEW keyword used for in a trigger?",
-  ),
+  Quiz(605, "NEW Keyword ၼႂ်း Trigger ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇမၢႆထိုင်ၵႃႈၶၼ်မႂ်ႇ",
+    "တႃႇမၢႆထိုင်ၵႃႈၶၼ်ၵဝ်ႇ",
+    "တႃႇသၢင်ႈ Table",
+    "တႃႇ INSERT"
+  ], "What is the NEW keyword used for in a trigger?"),
 
-  Quiz(
-    606,
-    "Trigger ၸၢင်ႈတိုၼ်ႇၸွမ်း SELECT လႆႈႁႃႉ?",
-    ["ဢမ်ႇလႆႈ", "လႆႈ", "လႆႈၵူၺ်းမၢင်ပွၵ်ႈ", "Error"],
-    "Can a trigger fire on a SELECT statement?",
-  ),
+  Quiz(606, "Trigger ၸၢင်ႈတိုၼ်ႇၸွမ်း SELECT လႆႈႁႃႉ?", [
+    "ဢမ်ႇလႆႈ",
+    "လႆႈ",
+    "လႆႈမၢင်ပွၵ်ႈ",
+    "လႆႈၵူၺ်း root"
+  ], "Can a trigger fire on a SELECT statement?"),
 
-  Quiz(
-    607,
-    "FOR EACH ROW ၼႂ်း Trigger မၢႆထိုင်သင်?",
-    [
-      "Trigger တေႁဵတ်းၵၢၼ် ၵူႈထႅဝ် ဢၼ်ထုၵ်ႇလႅၵ်ႈလၢႆႈ",
-      "Trigger ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ်",
-      "Trigger ႁဵတ်းၵၢၼ် 10 ထႅဝ်",
-      "Error",
-    ],
-    "What does FOR EACH ROW mean in a trigger?",
-  ),
+  Quiz(607, "FOR EACH ROW ၼႂ်း Trigger မၢႆထိုင်သင်?", [
+    "ႁဵတ်းၵၢၼ်ၵူႈထႅဝ်ဢၼ်လႅၵ်ႈလၢႆႈ",
+    "ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ်",
+    "ႁဵတ်းၵၢၼ် 10 ထႅဝ်",
+    "ႁဵတ်းၵၢၼ်ၵူၺ်း ID"
+  ], "What does FOR EACH ROW mean in a trigger?"),
 
   Quiz(608, "Data Integrity မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ဝႆႉၶေႃႈမုၼ်း ႁႂ်ႈမၢၼ်ႇမႅၼ်ႈ လႄႈ တႅတ်ႈတေႃး",
+    "ၵၢၼ်ဝႆႉၶေႃႈမုၼ်းႁႂ်ႈမၢၼ်ႇမႅၼ်ႈ",
     "ၵၢၼ်ယႃႉၶေႃႈမုၼ်း",
     "ၵၢၼ် Backup",
-    "Error",
+    "ၵၢၼ် SELECT"
   ], "What is Data Integrity?"),
 
-  Quiz(
-    609,
-    "ႁဵတ်းသင်လႄႈ Trigger ၼမ်လူၼ်ႉ ဢမ်ႇလီတွၼ်ႈတႃႇ Performance?",
-    [
-      "ၵွပ်ႈမၼ်းႁဵတ်းႁႂ်ႈ INSERT/UPDATE ၸႃႉလူင်း",
-      "ၵွပ်ႈမၼ်းတႅမ်ႈယၢပ်ႇ",
-      "ၵွပ်ႈမၼ်းပၼ် Password",
-      "Error",
-    ],
-    "Why are too many triggers bad for performance?",
-  ),
+  Quiz(609, "ႁဵတ်းသင်လႄႈ Trigger ၼမ်လူၼ်ႉဢမ်ႇလီ?", [
+    "ၵွပ်ႈမၼ်းႁဵတ်းႁႂ်ႈၸႃႉလူင်း",
+    "ၵွပ်ႈမၼ်းတႅမ်ႈယၢပ်ႇ",
+    "ၵွပ်ႈမၼ်းပၼ် Password",
+    "ၵွပ်ႈမၼ်းပဵၼ် NULL"
+  ], "Why are too many triggers bad for performance?"),
 
   Quiz(610, "DROP TRIGGER ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇယႃႉ Trigger ပႅတ်ႈ",
     "တႃႇယႃႉ Table",
     "တႃႇပိတ်း Server",
-    "Error",
+    "တႃႇ SELECT"
   ], "What is DROP TRIGGER used for?"),
 
   // --- Lesson 57: Events (611-625) ---
   Quiz(611, "MySQL Event မၢႆထိုင်သင်?", [
-    "ၵၢၼ်တင်ႈၶၢဝ်းယၢမ်း (Scheduler) ႁႂ်ႈ Database ႁဵတ်းၵၢၼ်ႁင်းမၼ်း",
-    "Trigger ဢၼ်တိုၼ်ႇၸွမ်း INSERT",
-    "Stored Procedure ธรรมဒါ",
-    "Error",
+    "ၵၢၼ်တင်ႈၶၢဝ်းယၢမ်းႁင်း DB",
+    "Trigger ၸွမ်း INSERT",
+    "Stored Procedure",
+    "Audit Log"
   ], "What is a MySQL Event?"),
 
-  Quiz(
-    612,
-    "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇပိုတ်ႇ Event Scheduler?",
-    [
-      "SET GLOBAL event_scheduler = ON;",
-      "START EVENTS;",
-      "OPEN SCHEDULER;",
-      "Error",
-    ],
-    "How to enable the MySQL event scheduler?",
-  ),
+  Quiz(612, "Command လႂ် ၸႂ်ႉတႃႇပိုတ်ႇ Scheduler?", [
+    "SET GLOBAL event_scheduler = ON;",
+    "START EVENTS;",
+    "OPEN SCHEDULER;",
+    "SET EVENT = ON;"
+  ], "How to enable the MySQL event scheduler?"),
 
-  Quiz(
-    613,
-    "EVERY 1 DAY ၼႂ်း Event မၢႆထိုင်သင်?",
-    [
-      "ႁႂ်း Event ႁဵတ်းၵၢၼ် ၵူႈဝၼ်း သမ်ႉၶိုၼ်း",
-      "ႁႂ်ႈႁဵတ်းၵၢၼ်ဝၼ်းလဵဝ်ယဝ်ႉၵိုတ်း",
-      "ႁႂ်ႈႁဵတ်းၵၢၼ် 10 မိၼတ်ႉ",
-      "Error",
-    ],
-    "What does EVERY 1 DAY mean in an event?",
-  ),
+  Quiz(613, "EVERY 1 DAY ၼႂ်း Event မၢႆထိုင်သင်?", [
+    "ႁႂ်းႁဵတ်းၵၢၼ်ၵူႈဝၼ်းသမ်ႉၶိုၼ်း",
+    "ႁႂ်ႈႁဵတ်းပွၵ်ႈလဵဝ်ယဝ်ႉၵိုတ်း",
+    "ႁႂ်ႈႁဵတ်း 10 မိၼတ်ႉ",
+    "ႁႂ်ႈႁဵတ်းမိူဝ်ႈ Error"
+  ], "What does EVERY 1 DAY mean in an event?"),
 
   Quiz(614, "Recurring Event မၢႆထိုင်သင်?", [
-    "Event ဢၼ်ႁဵတ်းၵၢၼ်သမ်ႉၶိုၼ်း ၸွမ်းၶၢဝ်းယၢမ်း",
-    "Event ဢၼ်ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ်",
+    "Event ဢၼ်ႁဵတ်းသမ်ႉၶိုၼ်း",
+    "Event ဢၼ်ႁဵတ်းပွၵ်ႈလဵဝ်",
     "Trigger",
-    "Error",
+    "Stored Procedure"
   ], "What is a recurring event?"),
 
   Quiz(615, "One-time Event မၢႆထိုင်သင်?", [
-    "Event ဢၼ်ႁဵတ်းၵၢၼ်ပွၵ်ႈလဵဝ် ၼႂ်းၶၢဝ်းယၢမ်းဢၼ်မၵ်းမၼ်ႈ",
-    "Event ဢၼ်ႁဵတ်းၵၢၼ်ၵူႈဝၼ်း",
+    "Event ဢၼ်ႁဵတ်းပွၵ်ႈလဵဝ်",
+    "Event ဢၼ်ႁဵတ်းၵူႈဝၼ်း",
     "Stored Procedure",
-    "Error",
+    "Trigger"
   ], "What is a one-time event?"),
 
-  Quiz(
-    616,
-    "ON SCHEDULE ၼႂ်း Event ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇမၵ်းမၼ်ႈ ၶၢဝ်းယၢမ်းဢၼ်တေႁဵတ်းၵၢၼ်",
-      "တႃႇမၵ်းမၼ်ႈ Table",
-      "တႃႇမၵ်းမၼ်ႈ ID",
-      "Error",
-    ],
-    "What is ON SCHEDULE used for in an event?",
-  ),
+  Quiz(616, "ON SCHEDULE ၼႂ်း Event ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇမၵ်းမၼ်ႈၶၢဝ်းယၢမ်း",
+    "တႃႇမၵ်းမၼ်ႈ Table",
+    "တႃႇမၵ်းမၼ်ႈ ID",
+    "တႃႇ SELECT Data"
+  ], "What is ON SCHEDULE used for in an event?"),
 
-  Quiz(
-    617,
-    "STARTS Keyword ၼႂ်း Event ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
-    [
-      "တႃႇမၵ်းမၼ်ႈ ဝၼ်းထီႉ လႄႈ ၶၢဝ်းယၢမ်း တႃႇတႄႇႁဵတ်းၵၢၼ်",
-      "တႃႇၵိုတ်း Event",
-      "တႃႇယႃႉ Event",
-      "Error",
-    ],
-    "What is the STARTS keyword used for in an event?",
-  ),
+  Quiz(617, "STARTS Keyword ၼႂ်း Event ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
+    "တႃႇမၵ်းမၼ်ႈဝၼ်းတႄႇ",
+    "တႃႇၵိုတ်း Event",
+    "တႃႇယႃႉ Event",
+    "တႃႇ INSERT"
+  ], "What is the STARTS keyword used for in an event?"),
 
-  Quiz(
-    618,
-    "Event ပႅၵ်ႇၵၼ်တင်း Trigger ၸိူင်ႉႁိုဝ်?",
-    [
-      "Event တိုၼ်ႇၸွမ်း 'ၶၢဝ်းယၢမ်း', Trigger တိုၼ်ႇၸွမ်း 'ၵၢၼ်ႁဵတ်း'",
-      "မိူၼ်ၵၼ်",
-      "Trigger ဝႆးလိူဝ်",
-      "Error",
-    ],
-    "Difference between an Event and a Trigger?",
-  ),
+  Quiz(618, "Event ပႅၵ်ႇၵၼ်တင်း Trigger ၸိူင်ႉႁိုဝ်?", [
+    "Event တိုၼ်ႇၸွမ်းၶၢဝ်းယၢမ်း",
+    "မိူၼ်ၵၼ်ၵူႈယၢင်ႇ",
+    "Trigger ဝႆးလိူဝ်",
+    "Event ၸႃႉလိူဝ်"
+  ], "Difference between an Event and a Trigger?"),
 
-  Quiz(
-    619,
-    "Cleanup Task တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?",
-    [
-      "ၵၢၼ်ယႃႉ Logs ဢၼ်ၵဝ်ႇလိူဝ် 30 ဝၼ်း ၵူႈဝၼ်း",
-      "ၵၢၼ် INSERT လုၵ်ႈႁဵၼ်း",
-      "ၵၢၼ် Join Table",
-      "Error",
-    ],
-    "Example of a cleanup task for an event?",
-  ),
+  Quiz(619, "Cleanup Task တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?", [
+    "ၵၢၼ်ယႃႉ Logs ဢၼ်ၵဝ်ႇ",
+    "ၵၢၼ် INSERT လုၵ်ႈႁဵၼ်း",
+    "ၵၢၼ် Join Table",
+    "ၵၢၼ် SELECT ธรรมဒါ"
+  ], "Example of a cleanup task for an event?"),
 
-  Quiz(
-    620,
-    "INTERVAL ၼႂ်း Event မၢႆထိုင်သင်?",
-    [
-      "ၶၢဝ်းယၢမ်းၵႄႈၵၢင် (မိူၼ်ၼင်ႇ 1 HOUR, 1 MINUTE)",
-      "ၸိုဝ်ႈ Table",
-      "Password",
-      "Error",
-    ],
-    "What does INTERVAL mean in an event context?",
-  ),
+  Quiz(620, "INTERVAL ၼႂ်း Event မၢႆထိုင်သင်?", [
+    "ၶၢဝ်းယၢမ်းၵႄႈၵၢင်",
+    "ၸိုဝ်ႈ Table",
+    "Password",
+    "User ID"
+  ], "What does INTERVAL mean in an event context?"),
 
-  Quiz(
-    621,
-    "ႁဵတ်းသင်လႄႈ Event ၸၢင်ႈႁဵတ်းႁႂ်ႈ Server ၼၵ်း?",
-    [
-      "သင် Event ႁဵတ်းၵၢၼ်ယုင်ႈယၢင်ႈ ၼႂ်းၶၢဝ်းယၢမ်းပွတ်းႁႅင်း (Overlapping)",
-      "ၵွပ်ႈမၼ်းပဵၼ် SQL",
-      "ၵွပ်ႈမၼ်းပၼ် NULL",
-      "Error",
-    ],
-    "Why can events make a server heavy?",
-  ),
+  Quiz(621, "ႁဵတ်းသင်လႄႈ Event ၸၢင်ႈႁဵတ်းႁႂ်ႈ Server ၼၵ်း?", [
+    "သင်ႁဵတ်းၵၢၼ် Overlapping",
+    "ၵွပ်ႈမၼ်းပဵၼ် SQL",
+    "ၵွပ်ႈမၼ်းပၼ် NULL",
+    "ၵွပ်ႈမၼ်းဝႆးလူၼ်ႉ"
+  ], "Why can events make a server heavy?"),
 
   Quiz(622, "ALTER EVENT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇမႄး (Modify) Event ဢၼ်မီးဝႆႉယဝ်ႉ",
+    "တႃႇမႄး Event ဢၼ်မီးယဝ်ႉ",
     "တႃႇသၢင်ႈ Event",
     "တႃႇယႃႉ Event",
-    "Error",
+    "တႃႇ SELECT"
   ], "What is ALTER EVENT used for?"),
 
-  Quiz(
-    623,
-    "DISABLE ၼႂ်း ALTER EVENT ႁဵတ်းသင်?",
-    [
-      "တႃႇၵိုတ်း (Turn off) Event ၸူဝ်ႈၶၢဝ်း လူၺ်ႈဢမ်ႇယႃႉပႅတ်ႈ",
-      "တႃႇယႃႉ Event",
-      "တႃႇ SELECT ၶေႃႈမုၼ်း",
-      "Error",
-    ],
-    "What does DISABLE do in an ALTER EVENT statement?",
-  ),
+  Quiz(623, "DISABLE ၼႂ်း ALTER EVENT ႁဵတ်းသင်?", [
+    "တႃႇၵိုတ်း Event ၸူဝ်ႈၶၢဝ်း",
+    "တႃႇယႃႉ Event",
+    "တႃႇ SELECT ၶေႃႈမုၼ်း",
+    "တႃႇ DELETE Event"
+  ], "What does DISABLE do in an ALTER EVENT statement?"),
 
   Quiz(624, "DROP EVENT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇယႃႉ Event ပႅတ်ႈ လုၵ်ႉၼႂ်း Database",
+    "တႃႇယႃႉ Event ပႅတ်ႈ",
     "တႃႇယႃႉ Table",
     "တႃႇပိတ်း Database",
-    "Error",
+    "တႃႇ INSERT"
   ], "What does DROP EVENT do?"),
 
-  Quiz(
-    625,
-    "ယဝ်ႉယဝ်ႉ Module 6! Advanced Objects ၸွႆႈသင်?",
-    [
-      "ၸွႆႈႁႂ်ႈ Database ႁဵတ်းၵၢၼ်ႁင်းမၼ်း (Automation)",
-      "ၸွႆႈႁႂ်ႈ SELECT ငၢႆႈၵူၺ်း",
-      "ၸွႆႈယႃႉ ID",
-      "Error",
-    ],
-    "End of Module 6! What do advanced objects provide?",
-  ),
+  Quiz(625, "Advanced Objects ၸွႆႈသင်?", [
+    "ၸွႆႈႁႂ်ႈ Database ႁဵတ်းၵၢၼ်ႁင်း",
+    "ၸွႆႈႁႂ်ႈ SELECT ငၢႆႈၵူၺ်း",
+    "ၸွႆႈယႃႉ ID",
+    "ၸွႆႈ Sort Data"
+  ], "What do advanced objects provide?"),
 ];
 List<Quiz> mysqlQuizM7 = [
   // --- Lesson 58: Transactions & ACID (626-637) ---
