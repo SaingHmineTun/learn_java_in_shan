@@ -8046,38 +8046,85 @@ final List<Quiz> csharpQuizM16 = [
   Quiz(2000, "ၸၼ်ႉၵၢၼ်သိုပ်ႇၸိူဝ်ႉၶိူဝ်း (Inheritance) ၸွႆးလွင်ႈသင်?", ["ႁႂ်ႈ Custom Class ႁဝ်းမီး Property မိူၼ် Exception တူဝ်လူင်", "ႁႂ်ႈ Code ဝႆး", "ႁႂ်ႈ Memory ဢေႇ", "ႁႂ်ႈ CPU ၼိမ်"], "What does inheritance help with in custom exceptions?"),
 ];
 final List<Quiz> csharpQuizM17 = [
-  // Lesson 202: Introduction to Delegates (Starting from 2001)
-  Quiz(2001, "Delegate ပဵၼ်သင်?", ["ပဵၼ်တူဝ်ၸိ Method (Function Pointer)", "ပဵၼ်တူဝ်ၼပ်ႉ", "ပဵၼ် Class ဢၼ်သိမ်း Database", "ပဵၼ်တူဝ်ပိုၼ်ႈၶၢဝ်ႇ"], "What is a Delegate?"),
-  Quiz(2002, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇၸႂ်ႉ Delegate?", ["တႃႇသူင်ႇ Method ၵႂႃႇပဵၼ် Parameter လႆႈ", "တႃႇႁႂ်ႈ Code လႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ", "တႃႇလူတ်ႇ Memory", "တႃႇပိတ်း App"], "Why do we need Delegates?"),
-  Quiz(2003, "Delegate ပဵၼ် Type ဢၼ် _____?", ["Type-safe (မၵ်းမၼ်ႈ Signature တႅတ်ႉတေႃး)", "Dynamic-safe", "String-only", "Pointer-unsafe"], "A Delegate is a _____ type?"),
+  // Lesson 202: Introduction to Delegates
+  Quiz(2001, "Delegate ပဵၼ်သင်?", ["ပဵၼ်တူဝ်ၸိ Method", "ပဵၼ်တူဝ်ၼပ်ႉ", "ပဵၼ် Class သိမ်း Database", "ပဵၼ်တူဝ်ပိုၼ်ႈၶၢဝ်ႇ"], "What is a Delegate?"),
+  Quiz(2002, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇၸႂ်ႉ Delegate?", ["သူင်ႇ Method ပဵၼ် Parameter", "ႁႂ်ႈ Code လႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ", "တႃႇလူတ်ႇ Memory", "တႃႇပိၵ်ႉ App"], "Why do we need Delegates?"),
+  Quiz(2003, "Delegate ပဵၼ် Type ဢၼ် _____?", ["Type-safe", "Dynamic-safe", "String-only", "Pointer-unsafe"], "A Delegate is a _____ type?"),
   Quiz(2004, "Signature ၶွင် Method ပွင်ႇဝႃႈသင်?", ["Return Type လႄႈ Parameters", "ၸိုဝ်ႈ Method ၵူၺ်း", "မၢႆထႅဝ်လိၵ်ႈ", "ၸိုဝ်ႈ Class"], "What does a Method Signature mean?"),
-  Quiz(2005, "Delegate မိူၼ်သင်ၼႂ်းလွင်ႈတႄႉ?", ["တူဝ်တႅၼ်း ဢၼ်ႁပ်ႉၵၢၼ်ၵႂႃႇႁဵတ်း", "ပပ်ႉသပ်း", "ၶွမ်း", "ၾူၼ်း"], "What is a Delegate like in real life?"),
-  Quiz(2006, "ၸွင်ႇႁဝ်းၸၢင်ႈသူင်ႇ Method ၵႂႃႇၼႂ်းထႅင်ႈ Method ဢၼ်ၼိုင်ႈလႆႈႁႃႉ?", ["လႆႈ (ၽၢၼ်ႇ Delegate)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း string", "လႆႈၵူၺ်း int"], "Can we pass a Method into another Method?"),
-  Quiz(2007, "Loose Coupling ၸွႆးလွင်ႈသင်?", ["ႁဵတ်းႁႂ်ႈ Code တွၼ်ႈၼိုင်ႈ ဢမ်ႇလူဝ်ႇၵွင်ႉၵၢႆႇတင်း ထႅင်ႈတွၼ်ႈၼိုင်ႈၼမ်လိူဝ်ပူၼ်ႉတီႈ", "ႁႂ်ႈ App ၼၵ်း", "ႁႂ်ႈ Code ယၢဝ်း", "ႁႂ်ႈ CPU ႁႅင်း"], "How does Loose Coupling help?"),
+  Quiz(2005, "Delegate မိူၼ်သင်ၼႂ်းလွင်ႈတႄႉ?", ["တူဝ်တႅၼ်းႁပ်ႉၵၢၼ်", "ပပ်ႉသပ်း", "ၶွမ်း", "ၾူၼ်း"], "What is a Delegate like in real life?"),
+  Quiz(2006, "ၸွင်ႇႁဝ်းၸၢင်ႈသူင်ႇ Method ၵႂႃႇၼႂ်းထႅင်ႈ Method လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း string", "လႆႈၵူၺ်း int"], "Can we pass a Method into another Method?"),
+  Quiz(2007, "Loose Coupling ၸွႆးလွင်ႈသင်?", ["လူတ်းလွင်ႈၵွင်ႉၵၢႆႇၵၼ်", "ႁႂ်ႈ App ၼၵ်း", "ႁႂ်ႈ Code ယၢဝ်း", "ႁႂ်ႈ CPU ႁႅင်း"], "How does Loose Coupling help?"),
   Quiz(2008, "Delegate ၵဵပ်း Reference ၶွင်သင်?", ["Method", "Variable", "Loop", "Array"], "What does a Delegate store a reference to?"),
   Quiz(2009, "တွၼ်ႈတႃႇႁဵတ်း Event ႁဝ်းလူဝ်ႇမီးသင်ပဵၼ်ပိုၼ်ႉထၢၼ်?", ["Delegate", "Interface", "Struct", "Enum"], "What is the foundation for Events?"),
-  Quiz(2010, "Callback ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ႁွင်ႉ Method ၶိုၼ်းမိူဝ်ႈၼႃႈၵၢၼ်သင်သေယိူင်ႈယဝ်ႉတူဝ်ႈ", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သၢင်ႈ Class", "ၵၢၼ်ႁဵတ်း Loop"], "What does Callback mean?"),
+  Quiz(2010, "Callback ပွင်ႇဝႃႈသင်?", ["ႁွင်ႉ Method မိူဝ်ႈၵၢၼ်ယဝ်ႉ", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်သၢင်ႈ Class", "ၵၢၼ်ႁဵတ်း Loop"], "What does Callback mean?"),
 
   // Lesson 203: Declaring and Instantiating
   Quiz(2011, "Keyword လႂ် ၸႂ်ႉတႃႇပိုၼ်ၽၢဝ်ႇ Delegate?", ["delegate", "event", "action", "func"], "Which keyword is used to declare a Delegate?"),
-  Quiz(2012, "ၶၼ်တွၼ်ႈ 1 ၼႂ်းၵၢၼ်ၸႂ်ႉ Delegate ပဵၼ်သင်?", ["ၵၢၼ်ပိုၼ်ၽၢဝ်ႇ (Declaration)", "ၵၢၼ်ႁွင်ႉၸႂ်ႉ (Invocation)", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သၢင်ႈ Loop"], "What is step 1 in using a Delegate?"),
-  Quiz(2013, "Method Group Conversion ပွင်ႇဝႃႈသင်?", ["လၢႆးတႅမ်ႈပွတ်း ဢၼ်ဢဝ်ၸိုဝ်ႈ Method သႂ်ႇပၼ် Delegate လႆႈၵမ်းလဵဝ်", "ၵၢၼ်ပိၼ်ႇ Type", "ၵၢၼ်လူတ်ႇ Method", "ၵၢၼ်သၢင်ႈ Object"], "What is Method Group Conversion?"),
-  Quiz(2014, "Invocation ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ႁွင်ႉၸႂ်ႉ Method ၽၢၼ်ႇတူဝ် Delegate", "ၵၢၼ်တႅမ်ႈ Code", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သၢင်ႈ Class"], "What does Invocation mean?"),
+  Quiz(2012, "ၶၼ်တွၼ်ႈ 1 ၼႂ်းၵၢၼ်ၸႂ်ႉ Delegate ပဵၼ်သင်?", ["ၵၢၼ်ပိုၼ်ၽၢဝ်ႇ", "ၵၢၼ်ႁွင်ႉၸႂ်ႉ", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်သၢင်ႈ Loop"], "What is step 1 in using a Delegate?"),
+  Quiz(2013, "Method Group Conversion ပွင်ႇဝႃႈသင်?", ["လၢႆးတႅမ်ႈပွတ်းတႃႇၸိ Method", "ၵၢၼ်ပိၼ်ႇ Type", "ၵၢၼ်လူတ်ႇ Method", "ၵၢၼ်သၢင်ႈ Object"], "What is Method Group Conversion?"),
+  Quiz(2014, "Invocation ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ႁွင်ႉၸႂ်ႉၽၢၼ်ႇ Delegate", "ၵၢၼ်တႅမ်ႈ Code", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်သၢင်ႈ Class"], "What does Invocation mean?"),
   Quiz(2015, "Single-cast Delegate ၸိၵႂႃႇတီႈ Method တၢင်းၼမ်ၵမ်းလႂ်?", ["Method တူဝ်လဵဝ်ၵူၺ်း", "Method လၢႆဢၼ်", "ဢမ်ႇၸိသင်", "100 ဢၼ်"], "How many methods does a Single-cast Delegate point to?"),
 
-  // ... [Skipping for brevity, but the logic follows the ID sequence] ...
+  // Lesson 204: Multicast Delegates
+  Quiz(2016, "Operator လႂ် ၸႂ်ႉတႃႇထႅမ် Method ၶဝ်ႈၼႂ်း Delegate?", ["+=", "-=", "*=", "/="], "Which operator adds a method to a delegate?"),
+  Quiz(2017, "Operator လႂ် ၸႂ်ႉတႃႇလူတ်ႇ Method ဢွၵ်ႇၼႂ်း Delegate?", ["-=", "+=", "!=", "=="], "Which operator removes a method from a delegate?"),
+  Quiz(2018, "Multicast Delegate ႁွင်ႉ Method ၸွမ်းၼင်ႇသင်?", ["ႁွင်ႉၸွမ်းၶၼ်တွၼ်ႈဢၼ်ထႅမ်", "ႁွင်ႉၸွမ်းၸိုဝ်ႈ A-Z", "ႁွင်ႉသုမ်းၵၼ်", "ႁွင်ႉတူဝ်လင်ဢွၼ်တၢင်း"], "In what order does a Multicast Delegate call methods?"),
+  Quiz(2019, "သင် Method မီး Return Type... Multicast Delegate တေသူင်ႇသင်?", ["သူင်ႇၵႃႈၶၼ်တူဝ်လင်သုတ်း", "သူင်ႇၵူႈတူဝ်", "သူင်ႇ null", "သူင်ႇ Error"], "What does a Multicast Delegate return if methods have a return type?"),
+  Quiz(2020, "Invocation List ပွင်ႇဝႃႈသင်?", ["သဵၼ်ႈမၢႆ Method ၼႂ်း Delegate", "ၸိုဝ်ႈ Variable", "ပွတ်းတွၼ်ႈ Code", "Memory RAM"], "What is an Invocation List?"),
+
+  // Lesson 205: Built-in Delegates (Action)
+  Quiz(2021, "Action Delegate ၸႂ်ႉတွၼ်ႈတႃႇ Method ဢၼ်သူင်ႇသင်?", ["void", "int", "string", "bool"], "Action delegate is used for methods that return what?"),
+  Quiz(2022, "Action ၸၢင်ႈႁပ်ႉ Parameters လႆႈၼမ်သုတ်းၵေႃႇဢၼ်?", ["16 ဢၼ်", "1 ဢၼ်", "8 ဢၼ်", "32 ဢၼ်"], "Maximum parameters an Action delegate can take?"),
+  Quiz(2023, "Action<int, string> ပွင်ႇဝႃႈသင်?", ["ႁပ်ႉ int လႄႈ string သူင်ႇ void", "သူင်ႇ int လႄႈ string", "ႁပ်ႉ void", "Error"], "What does Action<int, string> mean?"),
+  Quiz(2024, "ႁဵတ်းသင်ႁဝ်းၸင်ႇၸႂ်ႉ Built-in Delegates?", ["လူတ်းၵၢၼ်ပိုၼ်ၽၢဝ်ႇ Class", "ႁႂ်ႈ App ၼၵ်း", "တႃႇသိမ်း Data", "တႃႇပိၵ်ႉ App"], "Why use built-in delegates?"),
+  Quiz(2025, "Action ဢၼ်ဢမ်ႇမီး Parameter တႅမ်ႈၸိူင်ႉႁိုဝ်?", ["Action", "Action<>", "Action<void>", "Action(0)"], "How to declare an Action with no parameters?"),
+
+  // Lesson 206: Built-in Delegates (Func)
+  Quiz(2026, "Func Delegate ပႅၵ်ႇတင်း Action ၸိူင်ႉႁိုဝ်?", ["Func တေလႆႈသူင်ႇၵႃႈၶၼ်ဢွၵ်ႇ", "Func ပဵၼ် void", "Func ဝႆးလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်"], "Difference between Func and Action?"),
+  Quiz(2027, "ၼႂ်း Func<int, string>... 'string' ပဵၼ်သင်?", ["Return Type", "Parameter", "Method Name", "Namespace"], "In Func<int, string>, what is 'string'?"),
+  Quiz(2028, "Func<int> ပွင်ႇဝႃႈသင်?", ["ဢမ်ႇႁပ်ႉသင် သူင်ႇ int", "ႁပ်ႉ int သူင်ႇ void", "ႁပ်ႉ int သူင်ႇ int", "Error"], "What does Func<int> mean?"),
+  Quiz(2029, "Func ၸၢင်ႈသူင်ႇ void ဢွၵ်ႇလႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ", "လႆႈ", "မၢင်ပွၵ်ႈ", "လႆႈၵူၺ်း တွၼ်ႈတႃႇ string"], "Can Func return void?"),
+  Quiz(2030, "Func<int, int, int> ႁပ်ႉ Parameters ၵေႃႇဢၼ်?", ["2 ဢၼ်", "3 ဢၼ်", "1 ဢၼ်", "4 ဢၼ်"], "How many parameters in Func<int, int, int>?"),
+
+  // Lesson 207: Built-in Delegates (Predicate)
+  Quiz(2031, "Predicate Delegate သူင်ႇၵႃႈၶၼ်ပဵၼ်သင်တႃႇသေႇ?", ["bool", "int", "string", "void"], "Predicate always returns what?"),
+  Quiz(2032, "Predicate ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵၢၼ်ၵူတ်ႇထတ်းငဝ်းလၢႆး", "ၵၢၼ်ၼပ်ႉသွၼ်ႇ", "ၵၢၼ်ပိုၼ်ႈၶၢဝ်ႇ", "ၵၢၼ်ပိၼ်ႇ Type"], "Predicate is commonly used for what?"),
+  Quiz(2033, "Predicate<T> မိူၼ်တင်း Func ဢၼ်လႂ်?", ["Func<T, bool>", "Func<bool, T>", "Func<T>", "Action<T>"], "Predicate<T> is equivalent to which Func?"),
+  Quiz(2034, "Predicate ႁပ်ႉ Parameters လႆႈၵေႃႇဢၼ်?", ["1 ဢၼ်ၵူၺ်း", "16 ဢၼ်", "ဢမ်ႇမီး", "လၢႆဢၼ်ၵေႃႈလႆႈ"], "How many parameters can Predicate take?"),
+  Quiz(2035, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Predicate ၼႂ်း List.Find() လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း static", "လႆႈၵူၺ်း int"], "Can we use Predicate in List.Find()?"),
+
+  // Lesson 208: Anonymous Methods
+  Quiz(2036, "Anonymous Method ပွင်ႇဝႃႈသင်?", ["Method ဢၼ်ဢမ်ႇမီးၸိုဝ်ႈ", "Method ဢၼ်မီးၸိုဝ်ႈယၢဝ်း", "Method ဢၼ်ပိၵ်ႉဝႆႉ", "Method ဢၼ်ပႅတ်ႈလၢႆ"], "What is an Anonymous Method?"),
+  Quiz(2037, "Keyword လႂ် ၸႂ်ႉတႃႇသၢင်ႈ Anonymous Method?", ["delegate", "method", "void", "func"], "Which keyword creates an Anonymous Method?"),
+  Quiz(2038, "ႁဵတ်းသင်ႁဝ်းၸင်ႇၸႂ်ႉ Anonymous Method?", ["လူတ်းၵၢၼ်သၢင်ႈ Method လၢႆဢၼ်", "ႁႂ်ႈ App ၼၵ်း", "တႃႇပိုၼ်ႈၶၢဝ်ႇ", "တႃႇပိၼ်ႇ Type"], "Why use Anonymous Methods?"),
+  Quiz(2039, "Anonymous Method မီးမႃးၸဵမ်မိူဝ်ႈ C# မၢႆလၢႆ?", ["C# 2.0", "C# 1.0", "C# 8.0", "C# 10.0"], "Anonymous Methods were introduced in which C# version?"),
+  Quiz(2040, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Variable ၽၢႆႇၼွၵ်ႈၼႂ်း Anonymous Method လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း static", "လႆႈၵူၺ်း int"], "Can Anonymous Methods access external variables?"),
+
+  // Lesson 209: Lambda Expressions
+  Quiz(2041, "Operator လႂ် ဢၼ်ပဵၼ်တူဝ်မၢႆ Lambda?", ["=>", "->", "=>=", "=="], "Which operator is the Lambda operator?"),
+  Quiz(2042, "Lambda Expression ပဵၼ်လၢႆးတႅမ်ႈပွတ်းၶွင်သင်?", ["Anonymous Method", "Class", "Interface", "Namespace"], "Lambda Expression is a shorthand for what?"),
+  Quiz(2043, "Statement Lambda ပႅၵ်ႇတင်း Expression Lambda ၸိူင်ႉႁိုဝ်?", ["Statement ၸႂ်ႉ { }", "Expression ဝႆးလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်", "Statement ၸႂ်ႉ void"], "Difference between Statement and Expression Lambda?"),
+  Quiz(2044, "ၼႂ်း (x) => x * x... 'x' ပဵၼ်သင်?", ["Parameter", "Method Name", "Return Value", "Variable"], "In (x) => x * x, what is 'x'?"),
+  Quiz(2045, "LINQ ၵႆႉၸႂ်ႉလၢႆးတႅမ်ႈသင်ၼမ်သုတ်း?", ["Lambda Expressions", "Anonymous Methods", "For loops", "Switch cases"], "LINQ heavily uses which syntax?"),
+
+  // Lesson 210: Introduction to Events
+  Quiz(2046, "Event ပဵၼ်သင် ၼႂ်း C#?", ["ၵၢၼ်ပိုၼ်ႈၶၢဝ်ႇ (Notification)", "ၵၢၼ်သိမ်း Data", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သၢင်ႈ Loop"], "What is an Event in C#?"),
+  Quiz(2047, "Publisher ပွင်ႇဝႃႈသင်?", ["Class ဢၼ်သူင်ႇၶၢဝ်ႇ", "Class ဢၼ်ႁပ်ႉၶၢဝ်ႇ", "Database", "Memory"], "What is a Publisher?"),
+  Quiz(2048, "Subscriber ပွင်ႇဝႃႈသင်?", ["Class ဢၼ်ႁပ်ႉၶၢဝ်ႇ", "Class ဢၼ်သူင်ႇၶၢဝ်ႇ", "Compiler", "Server"], "What is a Subscriber?"),
+  Quiz(2049, "Event ၸွႆးလွင်ႈသင် ၼႂ်းပိူင်သၢင်ႈ Code?", ["Encapsulation", "Inheritance", "Loose Coupling", "Polymorphism"], "Events help with which architectural concept?"),
+  Quiz(2050, "ၸွင်ႇႁဝ်းၸၢင်ႈ Raise Event လုၵ်ႉတီႈၽၢႆႇၼွၵ်ႈ Class လႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ", "လႆႈ", "မၢင်ပွၵ်ႈ", "လႆႈၵူၺ်း static"], "Can we raise an event from outside its class?"),
 
   // Lesson 211: Raising and Subscribing
-  Quiz(2091, "Safe Raising ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၵူတ်ႇထတ်း null ဢွၼ်တၢင်းတေပိုၼ်ႈၶၢဝ်ႇ ႁႂ်ႈ App ဢမ်ႇ Crash", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သူင်ႇ Password", "ၵၢၼ်ႁပ်ႉ Error"], "What is Safe Raising?"),
-  Quiz(2092, " Operator '?.Invoke' ၸွႆးလွင်ႈသင်?", ["ၵူတ်ႇထတ်း null လၢႆးပွတ်း သေၸင်ႇၵွႆႈႁွင်ႉ Method", "တႃႇႁဵတ်း Loop", "တႃႇသူင်ႇ Email", "တႃႇပိတ်း App"], "What does '?.Invoke' help with?"),
-  Quiz(2093, "OnEventName Method (မိူၼ်ၼင်ႇ OnNewsPublished) ထုၵ်ႇလီပဵၼ် _____?", ["protected virtual", "private static", "public abstract", "internal const"], "The OnEventName method should be _____?"),
-  Quiz(2094, "ႁဵတ်းသင်ႁဝ်းၸင်ႇသၢင်ႈ OnEventName Method?", ["တႃႇႁႂ်ႈ Class လုၵ်ႉ (Subclass) ၸၢင်ႈ Override လၢႆးပိုၼ်ႈၶၢဝ်ႇ", "တႃႇႁႂ်ႈ App ၼၵ်း", "တႃႇႁႂ်ႈ Code ယၢဝ်း", "တႃႇႁႂ်ႈ CPU ႁႅင်း"], "Why create an OnEventName method?"),
-  Quiz(2095, "ၸွင်ႇႁဝ်းၸၢင်ႈ Subscribe ၶၢဝ်ႇၼႂ်း Constructor လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း static", "လႆႈၵူၺ်း တွၼ်ႈတႃႇ string"], "Can we subscribe to an event in a constructor?"),
+  Quiz(2091, "Safe Raising ပွင်ႇဝႃႈသင်?", ["ၵူတ်ႇထတ်း null ဢွၼ်တၢင်း", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်သူင်ႇ Password", "ၵၢၼ်ႁပ်ႉ Error"], "What is Safe Raising?"),
+  Quiz(2092, "Operator '?.Invoke' ၸွႆးလွင်ႈသင်?", ["ၵူတ်ႇထတ်း null လၢႆးပွတ်း", "တႃႇႁဵတ်း Loop", "တႃႇသူင်ႇ Email", "တႃႇပိၵ်ႉ App"], "What does '?.Invoke' help with?"),
+  Quiz(2093, "OnEventName Method ထုၵ်ႇလီပဵၼ်သင်?", ["protected virtual", "private static", "public abstract", "internal const"], "The OnEventName method should be _____?"),
+  Quiz(2094, "ႁဵတ်းသင်ႁဝ်းၸင်ႇသၢင်ႈ OnEventName Method?", ["ႁႂ်ႈ Subclass ၸၢင်ႈ Override", "ႁႂ်ႈ App ၼၵ်း", "ႁႂ်ႈ Code ယၢဝ်း", "ႁႂ်ႈ CPU ႁႅင်း"], "Why create an OnEventName method?"),
+  Quiz(2095, "ၸွင်ႇႁဝ်းၸၢင်ႈ Subscribe ၶၢဝ်ႇၼႂ်း Constructor လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း static", "လႆႈၵူၺ်း string"], "Can we subscribe to an event in a constructor?"),
 
   // Final Lesson: Callbacks & Exercise
-  Quiz(2096, "Callback ပွင်ႇဝႃႈသင်?", ["Method ဢၼ်ထုၵ်ႇသူင်ႇၵႂႃႇပဵၼ် Parameter သေတေထုၵ်ႇႁွင်ႉၸႂ်ႉဝၢႆးလင်", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်မႄး Code", "ၵၢၼ်သိုပ်ႇၸိူဝ်ႉၶိူဝ်း"], "What is a Callback?"),
-  Quiz(2097, "Higher-Order Function ပွင်ႇဝႃႈသင်?", ["Method ဢၼ်ႁပ်ႉဢဝ် Method တၢင်ႇဢၼ် မႃးပဵၼ် Parameter", "Method ဢၼ်ယႂ်ႇ", "Method ဢၼ်ဝႆး", "Method null"], "What is a Higher-Order Function?"),
-  Quiz(2098, "Event Broadcasting ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်သူင်ႇၶၢဝ်ႇဢွၵ်ႇၵႂႃႇၸူး Subscribers တင်းမူတ်း ၼႂ်းၵမ်းလဵဝ်", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်ႁဵတ်း Loop", "ၵၢၼ်သၢင်ႈ Object"], "What does Event Broadcasting mean?"),
+  Quiz(2096, "Callback ပွင်ႇဝႃႈသင်?", ["Method ဢၼ်ထုၵ်ႇသူင်ႇပဵၼ် Parameter", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်မႄး Code", "ၵၢၼ်သိုပ်ႇၸိူဝ်ႉၶိူဝ်း"], "What is a Callback?"),
+  Quiz(2097, "Higher-Order Function ပွင်ႇဝႃႈသင်?", ["Method ဢၼ်ႁပ်ႉ Method တၢင်ႇဢၼ်", "Method ဢၼ်ယႂ်ႇ", "Method ဢၼ်ဝႆး", "Method null"], "What is a Higher-Order Function?"),
+  Quiz(2098, "Event Broadcasting ပွင်ႇဝႃႈသင်?", ["သူင်ႇၶၢဝ်ႇၸူး Subscribers တင်းမူတ်း", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်ႁဵတ်း Loop", "ၵၢၼ်သၢင်ႈ Object"], "What does Event Broadcasting mean?"),
   Quiz(2099, "Standard Pattern ၶွင် Event ၸႂ်ႉ Parameters သင်?", ["(object sender, EventArgs e)", "(string msg, int id)", "(bool status)", "(none)"], "What parameters does the standard event pattern use?"),
   Quiz(2100, "Unsubscribing (-=) ၸွႆးႁႄႉၵၢင်ႈလွင်ႈသင်?", ["Memory Leak", "Syntax Error", "NullReferenceException", "DivideByZeroException"], "What does unsubscribing help prevent?"),
 ];
@@ -8355,89 +8402,7 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM15,
   // Migrate to Shan!
   csharpQuizM16,
-final List<Quiz> csharpQuizM17 = [
-  // Lesson 202: Introduction to Delegates
-  Quiz(2001, "Delegate ပဵၼ်သင်?", ["ပဵၼ်တူဝ်ၸိ Method", "ပဵၼ်တူဝ်ၼပ်ႉ", "ပဵၼ် Class သိမ်း Database", "ပဵၼ်တူဝ်ပိုၼ်ႈၶၢဝ်ႇ"], "What is a Delegate?"),
-  Quiz(2002, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇၸႂ်ႉ Delegate?", ["သူင်ႇ Method ပဵၼ် Parameter", "ႁႂ်ႈ Code လႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ", "တႃႇလူတ်ႇ Memory", "တႃႇပိၵ်ႉ App"], "Why do we need Delegates?"),
-  Quiz(2003, "Delegate ပဵၼ် Type ဢၼ် _____?", ["Type-safe", "Dynamic-safe", "String-only", "Pointer-unsafe"], "A Delegate is a _____ type?"),
-  Quiz(2004, "Signature ၶွင် Method ပွင်ႇဝႃႈသင်?", ["Return Type လႄႈ Parameters", "ၸိုဝ်ႈ Method ၵူၺ်း", "မၢႆထႅဝ်လိၵ်ႈ", "ၸိုဝ်ႈ Class"], "What does a Method Signature mean?"),
-  Quiz(2005, "Delegate မိူၼ်သင်ၼႂ်းလွင်ႈတႄႉ?", ["တူဝ်တႅၼ်းႁပ်ႉၵၢၼ်", "ပပ်ႉသပ်း", "ၶွမ်း", "ၾူၼ်း"], "What is a Delegate like in real life?"),
-  Quiz(2006, "ၸွင်ႇႁဝ်းၸၢင်ႈသူင်ႇ Method ၵႂႃႇၼႂ်းထႅင်ႈ Method လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း string", "လႆႈၵူၺ်း int"], "Can we pass a Method into another Method?"),
-  Quiz(2007, "Loose Coupling ၸွႆးလွင်ႈသင်?", ["လူတ်းလွင်ႈၵွင်ႉၵၢႆႇၵၼ်", "ႁႂ်ႈ App ၼၵ်း", "ႁႂ်ႈ Code ယၢဝ်း", "ႁႂ်ႈ CPU ႁႅင်း"], "How does Loose Coupling help?"),
-  Quiz(2008, "Delegate ၵဵပ်း Reference ၶွင်သင်?", ["Method", "Variable", "Loop", "Array"], "What does a Delegate store a reference to?"),
-  Quiz(2009, "တွၼ်ႈတႃႇႁဵတ်း Event ႁဝ်းလူဝ်ႇမီးသင်ပဵၼ်ပိုၼ်ႉထၢၼ်?", ["Delegate", "Interface", "Struct", "Enum"], "What is the foundation for Events?"),
-  Quiz(2010, "Callback ပွင်ႇဝႃႈသင်?", ["ႁွင်ႉ Method မိူဝ်ႈၵၢၼ်ယဝ်ႉ", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်သၢင်ႈ Class", "ၵၢၼ်ႁဵတ်း Loop"], "What does Callback mean?"),
-
-  // Lesson 203: Declaring and Instantiating
-  Quiz(2011, "Keyword လႂ် ၸႂ်ႉတႃႇပိုၼ်ၽၢဝ်ႇ Delegate?", ["delegate", "event", "action", "func"], "Which keyword is used to declare a Delegate?"),
-  Quiz(2012, "ၶၼ်တွၼ်ႈ 1 ၼႂ်းၵၢၼ်ၸႂ်ႉ Delegate ပဵၼ်သင်?", ["ၵၢၼ်ပိုၼ်ၽၢဝ်ႇ", "ၵၢၼ်ႁွင်ႉၸႂ်ႉ", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်သၢင်ႈ Loop"], "What is step 1 in using a Delegate?"),
-  Quiz(2013, "Method Group Conversion ပွင်ႇဝႃႈသင်?", ["လၢႆးတႅမ်ႈပွတ်းတႃႇၸိ Method", "ၵၢၼ်ပိၼ်ႇ Type", "ၵၢၼ်လူတ်ႇ Method", "ၵၢၼ်သၢင်ႈ Object"], "What is Method Group Conversion?"),
-  Quiz(2014, "Invocation ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ႁွင်ႉၸႂ်ႉၽၢၼ်ႇ Delegate", "ၵၢၼ်တႅမ်ႈ Code", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်သၢင်ႈ Class"], "What does Invocation mean?"),
-  Quiz(2015, "Single-cast Delegate ၸိၵႂႃႇတီႈ Method တၢင်းၼမ်ၵမ်းလႂ်?", ["Method တူဝ်လဵဝ်ၵူၺ်း", "Method လၢႆဢၼ်", "ဢမ်ႇၸိသင်", "100 ဢၼ်"], "How many methods does a Single-cast Delegate point to?"),
-
-  // Lesson 204: Multicast Delegates
-  Quiz(2016, "Operator လႂ် ၸႂ်ႉတႃႇထႅမ် Method ၶဝ်ႈၼႂ်း Delegate?", ["+=", "-=", "*=", "/="], "Which operator adds a method to a delegate?"),
-  Quiz(2017, "Operator လႂ် ၸႂ်ႉတႃႇလူတ်ႇ Method ဢွၵ်ႇၼႂ်း Delegate?", ["-=", "+=", "!=", "=="], "Which operator removes a method from a delegate?"),
-  Quiz(2018, "Multicast Delegate ႁွင်ႉ Method ၸွမ်းၼင်ႇသင်?", ["ႁွင်ႉၸွမ်းၶၼ်တွၼ်ႈဢၼ်ထႅမ်", "ႁွင်ႉၸွမ်းၸိုဝ်ႈ A-Z", "ႁွင်ႉသုမ်းၵၼ်", "ႁွင်ႉတူဝ်လင်ဢွၼ်တၢင်း"], "In what order does a Multicast Delegate call methods?"),
-  Quiz(2019, "သင် Method မီး Return Type... Multicast Delegate တေသူင်ႇသင်?", ["သူင်ႇၵႃႈၶၼ်တူဝ်လင်သုတ်း", "သူင်ႇၵူႈတူဝ်", "သူင်ႇ null", "သူင်ႇ Error"], "What does a Multicast Delegate return if methods have a return type?"),
-  Quiz(2020, "Invocation List ပွင်ႇဝႃႈသင်?", ["သဵၼ်ႈမၢႆ Method ၼႂ်း Delegate", "ၸိုဝ်ႈ Variable", "ပွတ်းတွၼ်ႈ Code", "Memory RAM"], "What is an Invocation List?"),
-
-  // Lesson 205: Built-in Delegates (Action)
-  Quiz(2021, "Action Delegate ၸႂ်ႉတွၼ်ႈတႃႇ Method ဢၼ်သူင်ႇသင်?", ["void", "int", "string", "bool"], "Action delegate is used for methods that return what?"),
-  Quiz(2022, "Action ၸၢင်ႈႁပ်ႉ Parameters လႆႈၼမ်သုတ်းၵေႃႇဢၼ်?", ["16 ဢၼ်", "1 ဢၼ်", "8 ဢၼ်", "32 ဢၼ်"], "Maximum parameters an Action delegate can take?"),
-  Quiz(2023, "Action<int, string> ပွင်ႇဝႃႈသင်?", ["ႁပ်ႉ int လႄႈ string သူင်ႇ void", "သူင်ႇ int လႄႈ string", "ႁပ်ႉ void", "Error"], "What does Action<int, string> mean?"),
-  Quiz(2024, "ႁဵတ်းသင်ႁဝ်းၸင်ႇၸႂ်ႉ Built-in Delegates?", ["လူတ်းၵၢၼ်ပိုၼ်ၽၢဝ်ႇ Class", "ႁႂ်ႈ App ၼၵ်း", "တႃႇသိမ်း Data", "တႃႇပိၵ်ႉ App"], "Why use built-in delegates?"),
-  Quiz(2025, "Action ဢၼ်ဢမ်ႇမီး Parameter တႅမ်ႈၸိူင်ႉႁိုဝ်?", ["Action", "Action<>", "Action<void>", "Action(0)"], "How to declare an Action with no parameters?"),
-
-  // Lesson 206: Built-in Delegates (Func)
-  Quiz(2026, "Func Delegate ပႅၵ်ႇတင်း Action ၸိူင်ႉႁိုဝ်?", ["Func တေလႆႈသူင်ႇၵႃႈၶၼ်ဢွၵ်ႇ", "Func ပဵၼ် void", "Func ဝႆးလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်"], "Difference between Func and Action?"),
-  Quiz(2027, "ၼႂ်း Func<int, string>... 'string' ပဵၼ်သင်?", ["Return Type", "Parameter", "Method Name", "Namespace"], "In Func<int, string>, what is 'string'?"),
-  Quiz(2028, "Func<int> ပွင်ႇဝႃႈသင်?", ["ဢမ်ႇႁပ်ႉသင် သူင်ႇ int", "ႁပ်ႉ int သူင်ႇ void", "ႁပ်ႉ int သူင်ႇ int", "Error"], "What does Func<int> mean?"),
-  Quiz(2029, "Func ၸၢင်ႈသူင်ႇ void ဢွၵ်ႇလႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ", "လႆႈ", "မၢင်ပွၵ်ႈ", "လႆႈၵူၺ်း တွၼ်ႈတႃႇ string"], "Can Func return void?"),
-  Quiz(2030, "Func<int, int, int> ႁပ်ႉ Parameters ၵေႃႇဢၼ်?", ["2 ဢၼ်", "3 ဢၼ်", "1 ဢၼ်", "4 ဢၼ်"], "How many parameters in Func<int, int, int>?"),
-
-  // Lesson 207: Built-in Delegates (Predicate)
-  Quiz(2031, "Predicate Delegate သူင်ႇၵႃႈၶၼ်ပဵၼ်သင်တႃႇသေႇ?", ["bool", "int", "string", "void"], "Predicate always returns what?"),
-  Quiz(2032, "Predicate ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵၢၼ်ၵူတ်ႇထတ်းငဝ်းလၢႆး", "ၵၢၼ်ၼပ်ႉသွၼ်ႇ", "ၵၢၼ်ပိုၼ်ႈၶၢဝ်ႇ", "ၵၢၼ်ပိၼ်ႇ Type"], "Predicate is commonly used for what?"),
-  Quiz(2033, "Predicate<T> မိူၼ်တင်း Func ဢၼ်လႂ်?", ["Func<T, bool>", "Func<bool, T>", "Func<T>", "Action<T>"], "Predicate<T> is equivalent to which Func?"),
-  Quiz(2034, "Predicate ႁပ်ႉ Parameters လႆႈၵေႃႇဢၼ်?", ["1 ဢၼ်ၵူၺ်း", "16 ဢၼ်", "ဢမ်ႇမီး", "လၢႆဢၼ်ၵေႃႈလႆႈ"], "How many parameters can Predicate take?"),
-  Quiz(2035, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Predicate ၼႂ်း List.Find() လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း static", "လႆႈၵူၺ်း int"], "Can we use Predicate in List.Find()?"),
-
-  // Lesson 208: Anonymous Methods
-  Quiz(2036, "Anonymous Method ပွင်ႇဝႃႈသင်?", ["Method ဢၼ်ဢမ်ႇမီးၸိုဝ်ႈ", "Method ဢၼ်မီးၸိုဝ်ႈယၢဝ်း", "Method ဢၼ်ပိၵ်ႉဝႆႉ", "Method ဢၼ်ပႅတ်ႈလၢႆ"], "What is an Anonymous Method?"),
-  Quiz(2037, "Keyword လႂ် ၸႂ်ႉတႃႇသၢင်ႈ Anonymous Method?", ["delegate", "method", "void", "func"], "Which keyword creates an Anonymous Method?"),
-  Quiz(2038, "ႁဵတ်းသင်ႁဝ်းၸင်ႇၸႂ်ႉ Anonymous Method?", ["လူတ်းၵၢၼ်သၢင်ႈ Method လၢႆဢၼ်", "ႁႂ်ႈ App ၼၵ်း", "တႃႇပိုၼ်ႈၶၢဝ်ႇ", "တႃႇပိၼ်ႇ Type"], "Why use Anonymous Methods?"),
-  Quiz(2039, "Anonymous Method မီးမႃးၸဵမ်မိူဝ်ႈ C# မၢႆလၢႆ?", ["C# 2.0", "C# 1.0", "C# 8.0", "C# 10.0"], "Anonymous Methods were introduced in which C# version?"),
-  Quiz(2040, "ၸွင်ႇႁဝ်းၸၢင်ႈၸႂ်ႉ Variable ၽၢႆႇၼွၵ်ႈၼႂ်း Anonymous Method လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း static", "လႆႈၵူၺ်း int"], "Can Anonymous Methods access external variables?"),
-
-  // Lesson 209: Lambda Expressions
-  Quiz(2041, "Operator လႂ် ဢၼ်ပဵၼ်တူဝ်မၢႆ Lambda?", ["=>", "->", "=>=", "=="], "Which operator is the Lambda operator?"),
-  Quiz(2042, "Lambda Expression ပဵၼ်လၢႆးတႅမ်ႈပွတ်းၶွင်သင်?", ["Anonymous Method", "Class", "Interface", "Namespace"], "Lambda Expression is a shorthand for what?"),
-  Quiz(2043, "Statement Lambda ပႅၵ်ႇတင်း Expression Lambda ၸိူင်ႉႁိုဝ်?", ["Statement ၸႂ်ႉ { }", "Expression ဝႆးလိူဝ်", "ဢမ်ႇပႅၵ်ႇသင်", "Statement ၸႂ်ႉ void"], "Difference between Statement and Expression Lambda?"),
-  Quiz(2044, "ၼႂ်း (x) => x * x... 'x' ပဵၼ်သင်?", ["Parameter", "Method Name", "Return Value", "Variable"], "In (x) => x * x, what is 'x'?"),
-  Quiz(2045, "LINQ ၵႆႉၸႂ်ႉလၢႆးတႅမ်ႈသင်ၼမ်သုတ်း?", ["Lambda Expressions", "Anonymous Methods", "For loops", "Switch cases"], "LINQ heavily uses which syntax?"),
-
-  // Lesson 210: Introduction to Events
-  Quiz(2046, "Event ပဵၼ်သင် ၼႂ်း C#?", ["ၵၢၼ်ပိုၼ်ႈၶၢဝ်ႇ (Notification)", "ၵၢၼ်သိမ်း Data", "ၵၢၼ်ပိတ်း App", "ၵၢၼ်သၢင်ႈ Loop"], "What is an Event in C#?"),
-  Quiz(2047, "Publisher ပွင်ႇဝႃႈသင်?", ["Class ဢၼ်သူင်ႇၶၢဝ်ႇ", "Class ဢၼ်ႁပ်ႉၶၢဝ်ႇ", "Database", "Memory"], "What is a Publisher?"),
-  Quiz(2048, "Subscriber ပွင်ႇဝႃႈသင်?", ["Class ဢၼ်ႁပ်ႉၶၢဝ်ႇ", "Class ဢၼ်သူင်ႇၶၢဝ်ႇ", "Compiler", "Server"], "What is a Subscriber?"),
-  Quiz(2049, "Event ၸွႆးလွင်ႈသင် ၼႂ်းပိူင်သၢင်ႈ Code?", ["Encapsulation", "Inheritance", "Loose Coupling", "Polymorphism"], "Events help with which architectural concept?"),
-  Quiz(2050, "ၸွင်ႇႁဝ်းၸၢင်ႈ Raise Event လုၵ်ႉတီႈၽၢႆႇၼွၵ်ႈ Class လႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ", "လႆႈ", "မၢင်ပွၵ်ႈ", "လႆႈၵူၺ်း static"], "Can we raise an event from outside its class?"),
-
-  // Lesson 211: Raising and Subscribing
-  Quiz(2091, "Safe Raising ပွင်ႇဝႃႈသင်?", ["ၵူတ်ႇထတ်း null ဢွၼ်တၢင်း", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်သူင်ႇ Password", "ၵၢၼ်ႁပ်ႉ Error"], "What is Safe Raising?"),
-  Quiz(2092, "Operator '?.Invoke' ၸွႆးလွင်ႈသင်?", ["ၵူတ်ႇထတ်း null လၢႆးပွတ်း", "တႃႇႁဵတ်း Loop", "တႃႇသူင်ႇ Email", "တႃႇပိၵ်ႉ App"], "What does '?.Invoke' help with?"),
-  Quiz(2093, "OnEventName Method ထုၵ်ႇလီပဵၼ်သင်?", ["protected virtual", "private static", "public abstract", "internal const"], "The OnEventName method should be _____?"),
-  Quiz(2094, "ႁဵတ်းသင်ႁဝ်းၸင်ႇသၢင်ႈ OnEventName Method?", ["ႁႂ်ႈ Subclass ၸၢင်ႈ Override", "ႁႂ်ႈ App ၼၵ်း", "ႁႂ်ႈ Code ယၢဝ်း", "ႁႂ်ႈ CPU ႁႅင်း"], "Why create an OnEventName method?"),
-  Quiz(2095, "ၸွင်ႇႁဝ်းၸၢင်ႈ Subscribe ၶၢဝ်ႇၼႂ်း Constructor လႆႈႁႃႉ?", ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း static", "လႆႈၵူၺ်း string"], "Can we subscribe to an event in a constructor?"),
-
-  // Final Lesson: Callbacks & Exercise
-  Quiz(2096, "Callback ပွင်ႇဝႃႈသင်?", ["Method ဢၼ်ထုၵ်ႇသူင်ႇပဵၼ် Parameter", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်မႄး Code", "ၵၢၼ်သိုပ်ႇၸိူဝ်ႉၶိူဝ်း"], "What is a Callback?"),
-  Quiz(2097, "Higher-Order Function ပွင်ႇဝႃႈသင်?", ["Method ဢၼ်ႁပ်ႉ Method တၢင်ႇဢၼ်", "Method ဢၼ်ယႂ်ႇ", "Method ဢၼ်ဝႆး", "Method null"], "What is a Higher-Order Function?"),
-  Quiz(2098, "Event Broadcasting ပွင်ႇဝႃႈသင်?", ["သူင်ႇၶၢဝ်ႇၸူး Subscribers တင်းမူတ်း", "ၵၢၼ်ပိၵ်ႉ App", "ၵၢၼ်ႁဵတ်း Loop", "ၵၢၼ်သၢင်ႈ Object"], "What does Event Broadcasting mean?"),
-  Quiz(2099, "Standard Pattern ၶွင် Event ၸႂ်ႉ Parameters သင်?", ["(object sender, EventArgs e)", "(string msg, int id)", "(bool status)", "(none)"], "What parameters does the standard event pattern use?"),
-  Quiz(2100, "Unsubscribing (-=) ၸွႆးႁႄႉၵၢင်ႈလွင်ႈသင်?", ["Memory Leak", "Syntax Error", "NullReferenceException", "DivideByZeroException"], "What does unsubscribing help prevent?"),
-];
+  csharpQuizM17,
   csharpQuizM18,
   csharpQuizM19,
 ];
