@@ -8210,6 +8210,133 @@ final List<Quiz> csharpQuizM18 = [
   Quiz(2199, "IEnumerable ယူႇၼႂ်း Namespace လႂ်?", ["System.Collections.Generic", "System.Linq", "System.IO", "System.Text"], "Which namespace contains IEnumerable?"),
   Quiz(2200, "ၵၢၼ်ႁဵၼ်း LINQ ယဝ်ႉယဝ်ႉ ႁဝ်းတေၸၢင်ႈႁဵတ်းသင်?", ["ၸတ်းၵၢၼ်ၶေႃႈမုၼ်းလႆႈငၢႆႈ လႄႈ ဝႆးလိူဝ်ၵဝ်ႇ", "ပိတ်း App", "တႅမ်ႈ HTML", "ဢမ်ႇႁဵတ်းသင်"], "What can we do after learning LINQ?"),
 ];
+final List<Quiz> csharpQuizM19 = [
+  // Lesson 228: System.IO Namespace & Streams
+  Quiz(2201, "Namespace လႂ် ဢၼ်ၸႂ်ႉတႃႇၸတ်းၵၢၼ် Input လႄႈ Output ၼႂ်း C#?", ["System.IO", "System.Input", "System.File", "System.Streams"], "Which namespace is used for I/O?"),
+  Quiz(2202, "I/O ယေႃႇမႃးလုၵ်ႉတီႈၶေႃႈၵႂၢမ်းလႂ်?", ["Input/Output", "Inside/Outside", "Internal/Object", "Index/Order"], "What does I/O stand for?"),
+  Quiz(2203, "Stream ပွင်ႇဝႃႈသင် ၼႂ်းၵၢၼ်ၸတ်းၵၢၼ်ၶေႃႈမုၼ်း?", ["သဵၼ်ႈတၢင်းလႆၶွင် Byte", "ၵၢၼ်ပိၵ်ႉ File", "ၸိုဝ်ႈ Folder", "Memory RAM"], "What is a Stream?"),
+  Quiz(2204, "ၶေႃႈလႂ်ပဵၼ် Class ဢၼ်ၸႂ်ႉတႃႇၸတ်းၵၢၼ် Path ႁႂ်ႈလွတ်ႈၽေး?", ["Path", "File", "Directory", "Stream"], "Which class manages file paths safely?"),
+  Quiz(2205, "Persistence ၼႂ်းၵၢၼ်သိမ်း Data ပွင်ႇဝႃႈသင်?", ["သိမ်းဝႆႉတႃႇသေႇ", "သိမ်းၸူဝ်ႈၶၢဝ်ႇ", "လူတ်ႇပႅတ်ႈ", "Error"], "What is Data Persistence?"),
+
+  // Lesson 229: Managing Directories
+  Quiz(2206, "Method လႂ် ၸႂ်ႉတႃႇသၢင်ႈ Folder မႂ်ႇ?", ["Directory.CreateDirectory", "Directory.NewFolder", "Directory.Make", "Directory.Add"], "Which method creates a directory?"),
+  Quiz(2207, "သင်လူဝ်ႇၵူတ်ႇထတ်းဝႃႈ Folder မီးဝႆႉယူႇႁႃႉ ၸႂ်ႉသင်?", ["Directory.Exists", "Directory.Has", "Directory.Find", "Directory.Check"], "How to check if a directory exists?"),
+  Quiz(2208, "Directory.Delete(path, true) တူဝ် 'true' ၼၼ်ႉပွင်ႇဝႃႈသင်?", ["Recursive Delete", "Read Only", "Force Close", "Single File"], "What does 'true' mean in Directory.Delete?"),
+  Quiz(2209, "Directory ၼႆႉပဵၼ် Class ပိူင်လႂ်?", ["Static Class", "Instance Class", "Interface", "Abstract"], "What kind of class is Directory?"),
+  Quiz(2210, "Method လႂ် ၸႂ်ႉတႃႇႁႃသဵၼ်ႈမၢႆ File တင်းမူတ်းၼႂ်း Folder?", ["Directory.GetFiles", "Directory.ReadAll", "Directory.List", "Directory.Show"], "How to get all files in a folder?"),
+
+  // Lesson 230: File Paths & Cross-Platform
+  Quiz(2211, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇၸႂ်ႉ Path.Combine?", ["Cross-platform Safety", "Speed Up", "Encryption", "Compression"], "Why use Path.Combine?"),
+  Quiz(2212, "Path Separator ၼႂ်း Windows ပဵၼ်တူဝ်လႂ်?", ["\\", "/", ":", "*"], "What is the path separator in Windows?"),
+  Quiz(2213, "Path Separator ၼႂ်း Android လႄႈ Linux ပဵၼ်တူဝ်လႂ်?", ["/", "\\", "|", "."], "What is the path separator in Android/Linux?"),
+  Quiz(2214, "Method လႂ် ၸႂ်ႉတႃႇလိူၵ်ႈဢဝ်ၵူၺ်း 'ပၢႆလိၵ်ႈ' File?", ["Path.GetExtension", "Path.GetSuffix", "Path.GetType", "Path.GetEnd"], "How to get a file extension?"),
+  Quiz(2215, "Path.GetFileName('C:\\Data\\a.txt') တေသူင်ႇသင်ဢွၵ်ႇမႃး?", ["a.txt", "C:\\Data", ".txt", "a"], "What does Path.GetFileName return?"),
+
+  // Lesson 231: Plain Text Files
+  Quiz(2216, "Method လႂ် တႅမ်ႈလိၵ်ႈတပ်ႉ (Overwrite) ၶဝ်ႈ File ၵမ်းလဵဝ်?", ["File.WriteAllText", "File.AppendText", "File.AddText", "File.Open"], "Which method overwrites file text?"),
+  Quiz(2217, "သင်ၶႂ်ႈထႅမ်လိၵ်ႈသိုပ်ႇဝႆႉ ၽၢႆႇတႂ်ႈသုတ်း ၸႂ်ႉသင်?", ["File.AppendAllText", "File.WriteAllText", "File.NewText", "File.Insert"], "Which method appends text?"),
+  Quiz(2218, "File.ReadAllLines သူင်ႇၵႃႈၶၼ်ပဵၼ်သင်?", ["string[]", "string", "int", "bool"], "What does File.ReadAllLines return?"),
+  Quiz(2219, "File.WriteAllText တေပိၵ်ႉ File ပၼ်ႁင်းၵူၺ်းႁႃႉ?", ["ပိၵ်ႉပၼ်", "ဢမ်ႇပိၵ်ႉ", "မၢင်ပွၵ်ႈ", "Error"], "Does File.WriteAllText close the file automatically?"),
+  Quiz(2220, "Exception လႂ် တေၵိူတ်ႇမိူဝ်ႈ ReadAllText ၼိူဝ် File ဢၼ်ဢမ်ႇမီးယူႇ?", ["FileNotFoundException", "IOException", "NullException", "PathException"], "Which exception occurs if a file is missing?"),
+
+  // Lesson 232: StreamWriter & StreamReader
+  Quiz(2221, "ႁဵတ်းသင်ႁဝ်းၸင်ႇၸႂ်ႉ StreamWriter တႅၼ်း File.WriteAllText?", ["Handling Large Data", "Easy to Code", "Color Text", "Security"], "Why use StreamWriter over File.WriteAllText?"),
+  Quiz(2222, "StreamReader.ReadLine() သူင်ႇသင်ဢွၵ်ႇမႃး မိူဝ်ႈသုတ်း File?", ["null", "Empty String", "0", "False"], "What does ReadLine return at the end of a file?"),
+  Quiz(2223, "Method လႂ် ၼႂ်း StreamWriter ၸႂ်ႉတႃႇယတ်ႉ Data ဢွၵ်ႇ Buffer?", ["Flush()", "Clear()", "Empty()", "Push()"], "Which method flushes the buffer?"),
+  Quiz(2224, "StreamReader ၸႂ်ႉတႃႇသင်?", ["လူၶေႃႈမုၼ်းလၢႆးလႆ", "တႅမ်ႈၶေႃႈမုၼ်း", "လူတ်ႇ Folder", "Rename File"], "What is StreamReader for?"),
+  Quiz(2225, "Buffer ၼႂ်း Stream ၸွႆးလွင်ႈသင်?", ["Performance", "Security", "Formatting", "Storage"], "What is the purpose of a Buffer?"),
+
+  // Lesson 233: Serialization Intro
+  Quiz(2226, "Serialization ပွင်ႇဝႃႈသင်?", ["Object to Data", "Data to Object", "Delete Data", "Encrypt Data"], "What is Serialization?"),
+  Quiz(2227, "Deserialization ပွင်ႇဝႃႈသင်?", ["Data to Object", "Object to Data", "Save Data", "Copy Data"], "What is Deserialization?"),
+  Quiz(2228, "POCO ပွင်ႇဝႃႈသင်?", ["Plain Old CLR Object", "Private Object Class", "Public Only C# Object", "Post Object Class"], "What does POCO stand for?"),
+  Quiz(2229, "Format လႂ် ဢၼ်ၵူၼ်းၸႂ်ႉၼမ်သုတ်း ၼႂ်း Web API ယၢမ်းလဵဝ်?", ["JSON", "XML", "CSV", "Binary"], "Which format is most popular for Web APIs?"),
+  Quiz(2230, "State ၶွင် Object ပွင်ႇဝႃႈသင်?", ["ၵႃႈၶၼ် Data", "ၸိုဝ်ႈ Class", "Method", "Namespace"], "What is the State of an object?"),
+
+  // Lesson 234: System.Text.Json
+  Quiz(2231, "JsonSerializer.Serialize သူင်ႇသင်ဢွၵ်ႇမႃး?", ["JSON String", "Object", "Byte[]", "File"], "What does Serialize return?"),
+  Quiz(2232, "WriteIndented = true ၼႂ်း Options ၸွႆးလွင်ႈသင်?", ["Human Readable", "Compress Data", "Hide Data", "Encryption"], "What does WriteIndented help with?"),
+  Quiz(2233, "JsonSerializer တေသိမ်းပၼ် Property ပိူင်လႂ်?", ["Public Only", "Private Only", "Static Only", "Protected"], "Which properties does JsonSerializer save?"),
+  Quiz(2234, "JSON ၸႂ်ႉတူဝ်လိၵ်ႈလႂ် တႃႇႁေႃႇ Object?", ["{ }", "[ ]", "( )", "< >"], "Which braces wrap a JSON object?"),
+  Quiz(2235, "JSON ၸႂ်ႉတူဝ်လိၵ်ႈလႂ် တႃႇႁေႃႇ List/Array?", ["[ ]", "{ }", "( )", "< >"], "Which braces wrap a JSON array?"),
+
+  // Lesson 235: Saving JSON to Files
+  Quiz(2236, "ၵၢၼ်သိမ်း List ၶဝ်ႈ JSON File လူဝ်ႇၸႂ်ႉ Method လႂ်ႁူမ်ႈၵၼ်?", ["Serialize & WriteAllText", "Deserialize & Read", "Append & Flush", "Join & Save"], "Which methods save a list to JSON?"),
+  Quiz(2237, "ပၢႆလိၵ်ႈ (Extension) ဢၼ်ထုၵ်ႇလီၸႂ်ႉတႃႇ JSON File?", [".json", ".txt", ".xml", ".data"], "Correct extension for JSON files?"),
+  Quiz(2238, "JsonSerializerOptions ၸႂ်ႉတႃႇသင်?", ["Configuring settings", "Running query", "Opening file", "Deleting file"], "What is JsonSerializerOptions for?"),
+  Quiz(2239, "JSON Array တႄႇလူၺ်ႈတူဝ်လိၵ်ႈလႂ်?", ["[", "{", "(", "<"], "JSON Array starts with which character?"),
+  Quiz(2240, "Bulk Storage ၼႂ်း JSON ပွင်ႇဝႃႈသင်?", ["သိမ်း List တူဝ်လဵဝ်", "သိမ်း File လၢႆဢၼ်", "လူတ်ႇပႅတ်ႈ", "Error"], "What is Bulk Storage in JSON?"),
+
+  // Lesson 236: Deserializing Data
+  Quiz(2241, "Method လႂ် ၸႂ်ႉတႃႇပိၼ်ႇ JSON ၶိုၼ်းပဵၼ် Object?", ["JsonSerializer.Deserialize", "JsonSerializer.Serialize", "File.Read", "String.ToClass"], "Which method converts JSON back to object?"),
+  Quiz(2242, "PropertyNameCaseInsensitive ၸွႆးလွင်ႈသင်?", ["Matching Names", "Sorting Data", "Validation", "Encoding"], "What is PropertyNameCaseInsensitive for?"),
+  Quiz(2243, "Generic Method တႅမ်ႈၼႄၽၢၼ်ႇတူဝ်လိၵ်ႈလႂ်?", ["<T>", "(T)", "[T]", "{T}"], "How is a generic method denoted?"),
+  Quiz(2244, "သင် JSON Property ၸိုဝ်ႈ 'age' သေ C# ပဵၼ် 'Age' လူဝ်ႇတင်ႈၵႃႈသင်?", ["CaseInsensitive = true", "Strict = false", "Match = all", "Ignore = none"], "How to match 'age' to 'Age'?"),
+  Quiz(2245, "Deserialize<List<Student>> သူင်ႇသင်ဢွၵ်ႇမႃး?", ["List<Student>", "Student", "string", "bool"], "What does Deserialize<List<Student>> return?"),
+
+  // Lesson 237: Encoding & Shan Script
+  Quiz(2246, "Encoding လႂ် ဢၼ် Standard သုတ်းတႃႇလိၵ်ႈတႆး?", ["UTF-8", "ASCII", "Unicode-16", "ANSI"], "Which encoding is best for Shan script?"),
+  Quiz(2247, "Unicode Escape Sequence ၼႂ်း JSON မီးႁၢင်ႈၽၢင်ၸိူင်ႉႁိုဝ်?", ["\\uXXXX", "&XXXX;", "%XXXX", "0xXXXX"], "Appearance of Unicode Escape Sequence?"),
+  Quiz(2248, "JavaScriptEncoder.Create(UnicodeRanges.All) ၸွႆးလွင်ႈသင်?", ["Preventing Escape", "Speed Up", "Encryption", "Indenting"], "What is JavaScriptEncoder for?"),
+  Quiz(2249, "ASCII ၸၢင်ႈသိမ်းလိၵ်ႈတႆးလႆႈႁႃႉ?", ["ဢမ်ႇလႆႈ", "လႆႈ", "မၢင်ပွၵ်ႈ", "Error"], "Can ASCII store Shan characters?"),
+  Quiz(2250, "BOM ယေႃႇမႃးလုၵ်ႉတီႈသင်?", ["Byte Order Mark", "Bit Object Mode", "Basic Output Map", "Buffer Only Memory"], "What does BOM stand for?"),
+
+  // Lesson 238: Using Statement
+  Quiz(2251, "ႁဵတ်းသင်ႁဝ်းၸင်ႇၸႂ်ႉ 'using'?", ["Automatic Disposal", "Fast Loading", "Error Handling", "Formatting"], "Main reason to use 'using' statement?"),
+  Quiz(2252, "Interface လႂ် ဢၼ်လူဝ်ႇမီး ၸင်ႇၸႂ်ႉ 'using' လႆႈ?", ["IDisposable", "IEnumerable", "IFile", "IStream"], "Which interface is required for 'using'?"),
+  Quiz(2253, "Resource Leak ပွင်ႇဝႃႈသင်?", ["ပိုတ်ႇသေဢမ်ႇပိၵ်ႉ", "File ႁၢႆ", "Data လႅဝ်", "RAM ဢေႇ"], "What is a Resource Leak?"),
+  Quiz(2254, "Dispose() ၸႂ်ႉတႃႇသင်?", ["Freeing Memory", "Saving Data", "Copying File", "Deleting File"], "What is Dispose() for?"),
+  Quiz(2255, "using var (C# 8+) ပိၵ်ႉ Resource မိူဝ်ႈလႂ်?", ["End of Scope", "Immediately", "Never", "On Error"], "When does 'using var' dispose resources?"),
+
+  // Lesson 239: Project Concepts
+  Quiz(2256, "DateTime.Now သူင်ႇသင်ဢွၵ်ႇမႃး?", ["Current Time", "Date Only", "Time Only", "Year Only"], "What does DateTime.Now return?"),
+  Quiz(2257, "File.Exists ၸွႆးလွင်ႈသင် ၼႂ်းၵၢၼ် Load Data?", ["Preventing Error", "Creating File", "Deleting File", "Renaming"], "How does File.Exists help in loading data?"),
+  Quiz(2258, "JSON Storage ၵႆႉၸႂ်ႉတႅၼ်းသင် တွၼ်ႈတႃႇ App လဵၵ်ႉလဵၵ်ႉ?", ["Database", "Memory RAM", "Cloud API", "Compiler"], "What does JSON storage replace in small apps?"),
+  Quiz(2259, "Serialization ၸွႆးလွင်ႈသင် ၼႂ်းၵၢၼ်သူင်ႇ Data ၼိူဝ် Network?", ["Platform Neutral", "Speed Up", "Encryption", "Compression"], "Benefit of serialization for network data?"),
+  Quiz(2260, "UTF-8 ၵိၼ် Memory ၸိူင်ႉႁိုဝ် တွၼ်ႈတႃႇတူဝ်လိၵ်ႈဢၢင်းၵိတ်ႈ?", ["1 Byte per char", "2 Bytes per char", "4 Bytes per char", "Variable"], "Memory usage of UTF-8 for English chars?"),
+
+  // More General System.IO & JSON (2261 - 2300)
+  Quiz(2261, "DirectoryInfo ပႅၵ်ႇတင်း Directory ၸိူင်ႉႁိုဝ်?", ["Instance vs Static", "Faster vs Slower", "Public vs Private", "Safe vs Unsafe"], "Difference between DirectoryInfo and Directory?"),
+  Quiz(2262, "FileInfo ပႅၵ်ႇတင်း File ၸိူင်ႉႁိုဝ်?", ["Instance vs Static", "New vs Old", "System vs User", "Big vs Small"], "Difference between FileInfo and File?"),
+  Quiz(2263, "Method လႂ် ၸႂ်ႉတႃႇၶၢႆႉ Folder?", ["Directory.Move", "Directory.Shift", "Directory.Transfer", "Directory.Set"], "Which method moves a directory?"),
+  Quiz(2264, "Path.GetTempFileName() ႁဵတ်းသင်?", ["Creates temp file", "Gets folder path", "Deletes temp", "Renames file"], "What does Path.GetTempFileName do?"),
+  Quiz(2265, "Path.HasExtension(path) သူင်ႇၵႃႈၶၼ်သင်?", ["bool", "string", "int", "void"], "What does Path.HasExtension return?"),
+  Quiz(2266, "File.Copy(src, dest) တေႁဵတ်းသင်?", ["Duplicate File", "Move File", "Delete File", "Open File"], "What does File.Copy do?"),
+  Quiz(2267, "File.Replace() ၸႂ်ႉတႃႇသင်?", ["Swap files", "Add text", "Delete file", "Rename folder"], "What is File.Replace for?"),
+  Quiz(2268, "Stream.ReadByte() သူင်ႇသင်ဢွၵ်ႇမႃး?", ["int", "string", "bool", "double"], "What does Stream.ReadByte return?"),
+  Quiz(2269, "BinaryWriter ၸႂ်ႉတႃႇသင်?", ["Writing Binary", "Writing Text", "Writing XML", "Writing JSON"], "What is BinaryWriter for?"),
+  Quiz(2270, "BinaryReader ၸႂ်ႉတႃႇသင်?", ["Reading Binary", "Reading JSON", "Reading Text", "Reading XML"], "What is BinaryReader for?"),
+  Quiz(2271, "JSON Null Value ၼႂ်း C# ပဵၼ်သင်?", ["null", "0", "false", "empty"], "JSON Null maps to what in C#?"),
+  Quiz(2272, "JsonInclude Attribute ၸွႆးသင်?", ["Include private", "Exclude public", "Sort names", "Encrypt data"], "What does JsonInclude do?"),
+  Quiz(2273, "JsonIgnore Attribute ၸွႆးသင်?", ["Skip property", "Include all", "Rename field", "Indenting"], "What does JsonIgnore do?"),
+  Quiz(2274, "JsonPropertyName Attribute ၸွႆးသင်?", ["Custom Name", "Check Type", "Sort Order", "Hide Field"], "What does JsonPropertyName do?"),
+  Quiz(2275, "Utf8JsonWriter ပဵၼ်သင်?", ["Fast JSON Writer", "Slow XML Reader", "File Manager", "Path Fixer"], "What is Utf8JsonWriter?"),
+  Quiz(2276, "JsonDocument ၸႂ်ႉတႃႇသင်?", ["Read-only JSON", "Write JSON", "Delete JSON", "Edit Path"], "What is JsonDocument for?"),
+  Quiz(2277, "MemoryStream ၸႂ်ႉတႃႇသင်?", ["RAM Stream", "Disk Stream", "Cloud Stream", "File Stream"], "What is MemoryStream for?"),
+  Quiz(2278, "BufferedStream ၸွႆးလွင်ႈသင်?", ["Speed optimization", "Security lock", "Encoding fix", "Data sorting"], "Benefit of BufferedStream?"),
+  Quiz(2279, "FileMode.CreateNew တေႁဵတ်းသင် သင် File မီးယူႇယဝ်ႉ?", ["Throws error", "Overwrites", "Appends", "Renames"], "Behavior of FileMode.CreateNew if file exists?"),
+  Quiz(2280, "FileAccess.Read ပွင်ႇဝႃႈသင်?", ["Read-only access", "Write-only", "Full control", "No access"], "What does FileAccess.Read mean?"),
+  Quiz(2281, "FileShare.None ပွင်ႇဝႃႈသင်?", ["Lock file", "Share file", "Open file", "Copy file"], "What does FileShare.None do?"),
+  Quiz(2282, "Directory.GetParent(path) သူင်ႇသင်?", ["Parent Folder", "Root Disk", "Child File", "Path String"], "What does Directory.GetParent return?"),
+  Quiz(2283, "Path.GetFullPath(path) သူင်ႇသင်?", ["Absolute Path", "Relative Path", "File Name", "Extension"], "What does Path.GetFullPath return?"),
+  Quiz(2284, "DriveInfo ၸႂ်ႉတႃႇသင်?", ["Checking Disk", "Checking File", "Checking Ram", "Checking CPU"], "What is DriveInfo for?"),
+  Quiz(2285, "DriveInfo.TotalSize သူင်ႇသင်?", ["Disk Capacity", "Free Space", "Used Space", "File Count"], "What does DriveInfo.TotalSize return?"),
+  Quiz(2286, "Path.GetInvalidFileNameChars() သူင်ႇသင်?", ["Forbidden Chars", "Valid Chars", "Numbers", "Letters"], "What does GetInvalidFileNameChars return?"),
+  Quiz(2287, "FileSystemWatcher ၸႂ်ႉတႃႇသင်?", ["Monitor changes", "Scan viruses", "Delete files", "Copy data"], "What is FileSystemWatcher for?"),
+  Quiz(2288, "SearchOption.AllDirectories ၸွႆးသင်?", ["Subfolder search", "Top level only", "Hide files", "Sort result"], "What does SearchOption.AllDirectories do?"),
+  Quiz(2289, "Stream.CanSeek ပွင်ႇဝႃႈသင်?", ["Random access", "Read-only", "Write-only", "Connected"], "What does Stream.CanSeek mean?"),
+  Quiz(2290, "Stream.Position ၸႂ်ႉတႃႇသင်?", ["Track location", "Track size", "Track speed", "Track error"], "What is Stream.Position for?"),
+  Quiz(2291, "JSON Number maps to what C# type by default?", ["double", "string", "bool", "char"], "JSON Number maps to which C# type?"),
+  Quiz(2292, "JSON Boolean maps to what C# type?", ["bool", "int", "string", "double"], "JSON Boolean maps to which C# type?"),
+  Quiz(2293, "SerializeToUtf8Bytes() သူင်ႇသင်?", ["byte[]", "string", "Stream", "Object"], "What does SerializeToUtf8Bytes return?"),
+  Quiz(2294, "JsonNamingPolicy.CamelCase ႁဵတ်းသင်?", ["lowerCaseNames", "UPPERNAMES", "PascalNames", "randomNames"], "What does CamelCase policy do?"),
+  Quiz(2295, "Stream.Seek(offset, origin) ၸွႆးသင်?", ["Jump to position", "Read data", "Write data", "Close stream"], "What does Seek do?"),
+  Quiz(2296, "Path.ChangeExtension(path, '.bak') ႁဵတ်းသင်?", ["Rename ext", "Delete file", "Copy file", "Open file"], "What does ChangeExtension do?"),
+  Quiz(2297, "Directory.GetCurrentDirectory() သူင်ႇသင်?", ["Working Folder", "System Folder", "User Folder", "Root Drive"], "What does GetCurrentDirectory return?"),
+  Quiz(2298, "File.GetAttributes(path) သူင်ႇသင်?", ["Metadata", "Size", "Content", "Owner"], "What does File.GetAttributes return?"),
+  Quiz(2299, "JSON Object တႄႇလူၺ်ႈတူဝ်လိၵ်ႈလႂ်?", ["{", "[", "(", "<"], "JSON Object starts with which character?"),
+  Quiz(2300, "ၵၢၼ်ႁဵၼ်း Module 19 ယဝ်ႉယဝ်ႉ ႁဝ်းတေၸၢင်ႈႁဵတ်းသင်?", ["သိမ်းၶေႃႈမုၼ်း", "ပိၵ်ႉ App", "တႅမ်ႈ HTML", "ဢမ်ႇႁဵတ်းသင်"], "What can we do after Module 19?"),
+];
 
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
@@ -8231,4 +8358,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM16,
   csharpQuizM17,
   csharpQuizM18,
+  csharpQuizM19,
 ];
