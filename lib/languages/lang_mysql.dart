@@ -6232,711 +6232,866 @@ List<Quiz> mysqlQuizM7 = [
 ];
 List<Quiz> mysqlQuizM8 = [
   // --- Lesson 64: The Execution Plan (701-714) ---
-  Quiz(701, "EXPLAIN Command ၼႂ်း SQL ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇတူၺ်းၽႅၼ်ၵၢၼ်ႁဵတ်းၵၢၼ် (Execution Plan) ႁင်း MySQL Optimizer",
-    "တႃႇယႃႉ Database",
-    "တႃႇ INSERT ၶေႃႈမုၼ်း",
-    "တႃႇသၢင်ႈ Table"
-  ], "What is the purpose of the EXPLAIN command?"),
+  Quiz(
+    701,
+    "EXPLAIN Command ၼႂ်း SQL ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇတူၺ်းၽႅၼ်ၵၢၼ်ႁဵတ်းၵၢၼ်",
+      "တႃႇယႃႉ Database ပႅတ်ႈ",
+      "တႃႇ INSERT ၶေႃႈမုၼ်း",
+      "တႃႇသၢင်ႈ Table မႂ်ႇ",
+    ],
+    "What is the purpose of the EXPLAIN command?",
+  ),
 
-  Quiz(702, "ၼႂ်းၽွၼ်းလႆႈ EXPLAIN... Column 'type' ဢၼ်လႂ်ဢၼ် 'ၸႃႉသုတ်း'?", [
-    "ALL (Full Table Scan)",
-    "const",
-    "ref",
-    "range"
-  ], "In EXPLAIN output, which 'type' is the slowest?"),
+  Quiz(
+    702,
+    "ၼႂ်းၽွၼ်းလႆႈ EXPLAIN... Column 'type' ဢၼ်လႂ်ဢၼ် 'ၸႃႉသုတ်း'?",
+    ["ALL", "const", "ref", "range"],
+    "In EXPLAIN output, which 'type' is the slowest?",
+  ),
 
-  Quiz(703, "ၼႂ်းၽွၼ်းလႆႈ EXPLAIN... Column 'type' ဢၼ်လႂ်ဢၼ် 'ဝႆးသုတ်း'?", [
-    "const",
-    "index",
-    "ALL",
-    "range"
-  ], "In EXPLAIN output, which 'type' is the fastest?"),
+  Quiz(
+    703,
+    "ၼႂ်းၽွၼ်းလႆႈ EXPLAIN... Column 'type' ဢၼ်လႂ်ဢၼ် 'ဝႆးသုတ်း'?",
+    ["const", "index", "ALL", "range"],
+    "In EXPLAIN output, which 'type' is the fastest?",
+  ),
 
-  Quiz(704, "Column 'rows' ၼႂ်း EXPLAIN ၼႄသင်?", [
-    "တၢင်းၼမ်ထႅဝ် ဢၼ် MySQL ဝူၼ်ႉဝႃႈတေလႆႈလူ (Scan)",
-    "တၢင်းၼမ် Column တင်းမူတ်း",
-    "တၢင်းၼမ် User ဢၼ်တိုၵ်ႉၸႂ်ႉယူႇ",
-    "Error"
-  ], "What does the 'rows' column in EXPLAIN represent?"),
+  Quiz(
+    704,
+    "Column 'rows' ၼႂ်း EXPLAIN ၼႄသင်?",
+    [
+      "တၢင်းၼမ်ထႅဝ် ဢၼ်တေလႆႈလူ",
+      "တၢင်းၼမ် Column တင်းမူတ်း",
+      "တၢင်းၼမ် User ၼႂ်း System",
+      "တၢင်းၼမ် Database",
+    ],
+    "What does the 'rows' column in EXPLAIN represent?",
+  ),
 
-  Quiz(705, "သင် Column 'key' ပဵၼ် NULL... မၢႆထိုင်သင်?", [
-    "MySQL ဢမ်ႇလႆႈၸႂ်ႉ Index သေဢၼ် တွၼ်ႈတႃႇ Query ၼႆႉ",
-    "MySQL ၸႂ်ႉ Primary Key ယူႇ",
-    "Query ၼႆႉမီး Error",
-    "Error"
-  ], "What does it mean if the 'key' column in EXPLAIN is NULL?"),
+  Quiz(
+    705,
+    "သင် Column 'key' ပဵၼ် NULL... မၢႆထိုင်သင်?",
+    [
+      "ဢမ်ႇလႆႈၸႂ်ႉ Index သေဢၼ်",
+      "ၸႂ်ႉ Primary Key ယူႇ",
+      "Query ၼႆႉမီး Error",
+      "Table ပဝ်ႇဝႆႉတႃႇသေႇ",
+    ],
+    "What does it mean if the 'key' column in EXPLAIN is NULL?",
+  ),
 
-  Quiz(706, "Extra: 'Using filesort' မၢႆထိုင်သင်?", [
-    "MySQL တေလႆႈၸတ်းလႅၼ်ႇၶေႃႈမုၼ်း (Sort) ၽၢႆႇၼွၵ်ႈ Index သေႁဵတ်းႁႂ်ႈၸႃႉ",
-    "MySQL ၸႂ်ႉ Index တႃႇ Sort",
-    "ၵၢၼ် Backup",
-    "Error"
-  ], "What does 'Using filesort' in the Extra column mean?"),
+  Quiz(
+    706,
+    "Extra: 'Using filesort' မၢႆထိုင်သင်?",
+    [
+      "MySQL တေလႆႈ Sort ၽၢႆႇၼွၵ်ႈ Index",
+      "MySQL ၸႂ်ႉ Index တႃႇ Sort",
+      "MySQL Backup ၶေႃႈမုၼ်း",
+      "MySQL ၸႂ်ႉ Primary Key",
+    ],
+    "What does 'Using filesort' in the Extra column mean?",
+  ),
 
-  Quiz(707, "Extra: 'Using temporary' မၢႆထိုင်သင်?", [
-    "MySQL သၢင်ႈ Table ၸူဝ်ႈၶၢဝ်း တွၼ်ႈတႃႇၸတ်းၵၢၼ် Query သေႁဵတ်းႁႂ်ႈၸႃႉ",
-    "MySQL သၢင်ႈ Database မႂ်ႇ",
-    "ၵၢၼ်ပိတ်း Server",
-    "Error"
-  ], "What does 'Using temporary' in the Extra column mean?"),
+  Quiz(
+    707,
+    "Extra: 'Using temporary' မၢႆထိုင်သင်?",
+    [
+      "MySQL သၢင်ႈ Table ၸူဝ်ႈၶၢဝ်း",
+      "MySQL သၢင်ႈ Database မႂ်ႇ",
+      "MySQL ပိတ်း Server ပႅတ်ႈ",
+      "MySQL မႄး Table တႄႉ",
+    ],
+    "What does 'Using temporary' in the Extra column mean?",
+  ),
 
-  Quiz(708, "EXPLAIN ANALYZE (MySQL 8.0+) ပႅၵ်ႇၵၼ်တင်း EXPLAIN ธรรมဒါ ၸိူင်ႉႁိုဝ်?", [
-    "မၼ်းတေႁဵတ်းၵၢၼ် Query တႄႉ သေၼႄၶၢဝ်းယၢမ်းတႄႉပႃး",
-    "မၼ်းဝႆးလိူဝ်",
-    "မၼ်းၸႂ်ႉတႃႇ DELETE",
-    "Error"
-  ], "How is EXPLAIN ANALYZE different from basic EXPLAIN?"),
+  Quiz(
+    708,
+    "EXPLAIN ANALYZE ၼႄသင်လိူဝ် EXPLAIN ธรรมဒါ?",
+    [
+      "ၼႄၶၢဝ်းယၢမ်းႁဵတ်းၵၢၼ်တႄႉ",
+      "ၼႄၸိုဝ်ႈ User",
+      "ၼႄ Password Database",
+      "ၼႄဝၼ်းထီႉ Backup",
+    ],
+    "What does EXPLAIN ANALYZE show beyond regular EXPLAIN?",
+  ),
 
   Quiz(709, "Cost-based Optimizer မၢႆထိုင်သင်?", [
-    "ၵူၼ်းဝၢင်းၽႅၼ် ဢၼ်လိူၵ်ႈသဵၼ်ႈတၢင်း ဢၼ်သဵင်ႈႁႅင်း Server ဢေႇသုတ်း",
-    "ၵူၼ်းၼပ်ႉငိုၼ်း",
-    "Query ဢၼ်ပႅင်း",
-    "Error"
+    "ၵူၼ်းဝၢင်းၽႅၼ် ဢၼ်လိူၵ်ႈသဵၼ်ႈတၢင်း",
+    "ၵူၼ်းၼပ်ႉငိုၼ်းၼႂ်း Server",
+    "Query ဢၼ်ပႅင်းလိူဝ်ပိူၼ်ႈ",
+    "လၢႆးၵၢၼ်ယႃႉ Database",
   ], "What is a Cost-based Optimizer?"),
 
   Quiz(710, "Full Table Scan မၢႆထိုင်သင်?", [
-    "ၵၢၼ်လူၶေႃႈမုၼ်းၵူႈထႅဝ် ၼႂ်း Table တႄႇတေႃႇသုတ်း",
-    "ၵၢၼ်လူ 1 ထႅဝ်",
-    "ၵၢၼ်လူ Index",
-    "Error"
+    "ၵၢၼ်လူၶေႃႈမုၼ်းၵူႈထႅဝ်",
+    "ၵၢၼ်လူ 1 ထႅဝ်ၵူၺ်း",
+    "ၵၢၼ်လူၵူၺ်း Index",
+    "ၵၢၼ်ယႃႉ Table တင်းမူတ်း",
   ], "What is a Full Table Scan?"),
 
-  Quiz(711, "တွၼ်ႈတႃႇႁႄႉၵင်ႈ 'type = ALL'... ႁဝ်းထုၵ်ႇလီႁဵတ်းသင်?", [
-    "သႂ်ႇ Index ပၼ် Column ဢၼ်ၸႂ်ႉၼႂ်း WHERE clause",
-    "ယႃႉ Table ပႅတ်ႈ",
-    "လႅၵ်ႈ Computer မႂ်ႇ",
-    "Error"
-  ], "How to prevent 'type = ALL' in a query?"),
+  Quiz(
+    711,
+    "တွၼ်ႈတႃႇႁႄႉၵင်ႈ 'type = ALL'... ႁဝ်းထုၵ်ႇလီႁဵတ်းသင်?",
+    [
+      "သႂ်ႇ Index ပၼ် Column",
+      "ယႃႉ Table ပႅတ်ႈၵမ်းလဵဝ်",
+      "လႅၵ်ႈ Computer မႂ်ႇ",
+      "ပိတ်း Server ၸူဝ်ႈၶၢဝ်း",
+    ],
+    "How to prevent 'type = ALL' in a query?",
+  ),
 
   Quiz(712, "Query Optimization မၢႆထိုင်သင်?", [
-    "ၵၢၼ်မႄး Query ႁႂ်ႈႁဵတ်းၵၢၼ်ဝႆးသုတ်း လႄႈ ၸႂ်ႉ Resource ဢေႇသုတ်း",
+    "ၵၢၼ်မႄး Query ႁႂ်ႈဝႆးလိူဝ်ၵဝ်ႇ",
     "ၵၢၼ်တႅမ်ႈ Code ႁႂ်ႈယၢဝ်း",
-    "ၵၢၼ်ပၼ် Password",
-    "Error"
+    "ၵၢၼ်ပၼ် Password မႂ်ႇ",
+    "ၵၢၼ် Backup ၶေႃႈမုၼ်း",
   ], "What is query optimization?"),
 
-  Quiz(713, "Index Scan ပႅၵ်ႇၵၼ်တင်း Table Scan ၸိူင်ႉႁိုဝ်?", [
-    "Index Scan လူၵူၺ်းသဵၼ်ႈမၢႆ သေဝႆးလိူဝ် Table Scan",
-    "Table Scan ဝႆးလိူဝ်",
-    "မိူၼ်ၵၼ်",
-    "Error"
-  ], "Difference between Index Scan and Table Scan?"),
+  Quiz(
+    713,
+    "Index Scan ပႅၵ်ႇၵၼ်တင်း Table Scan ၸိူင်ႉႁိုဝ်?",
+    [
+      "Index Scan လူၵူၺ်းသဵၼ်ႈမၢႆ",
+      "Table Scan ဝႆးလိူဝ်ၵဝ်ႇ",
+      "သွင်ဢၼ်ၼႆႉမိူၼ်ၵၼ်",
+      "Index Scan ၸႃႉလိူဝ်ၵဝ်ႇ",
+    ],
+    "Difference between Index Scan and Table Scan?",
+  ),
 
-  Quiz(714, "ႁဝ်းၸၢင်ႈၸႂ်ႉ EXPLAIN တင်း UPDATE လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်းၼႂ်း Version ၵဝ်ႇ",
-    "Error"
-  ], "Can EXPLAIN be used with UPDATE statements?"),
+  Quiz(
+    714,
+    "ႁဝ်းၸၢင်ႈၸႂ်ႉ EXPLAIN တင်း UPDATE လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း MySQL 5.1", "လႆႈၵူၺ်းၼႂ်း MyISAM"],
+    "Can EXPLAIN be used with UPDATE statements?",
+  ),
 
   // --- Lesson 65: B-Trees & Primary Indexes (715-728) ---
   Quiz(715, "B-Tree ၼႂ်း MySQL မၢႆထိုင်သင်?", [
-    "ပိူင်သၢင်ႈတူၼ်ႈမႆႉ ဢၼ်ၸွႆႈႁႃၶေႃႈမုၼ်းလႆႈဝႆး",
-    "ၸိုဝ်ႈ Table",
-    "ၵၢၼ် Backup",
-    "Error"
+    "ပိူင်သၢင်ႈတူၼ်ႈမႆႉ တႃႇႁႃ Data",
+    "ၸိုဝ်ႈ Database Server",
+    "ပၵ်းၵၢၼ် Backup",
+    "လၢႆးတႅမ်ႈ Query လၢႆလၢႆဢၼ်",
   ], "What is a B-Tree in MySQL?"),
 
   Quiz(716, "Clustered Index မၢႆထိုင်သင်?", [
-    "Index ဢၼ်ၸတ်းလႅၼ်ႇၶေႃႈမုၼ်းတႄႉၸွမ်းမၼ်း (Primary Key)",
+    "Index ဢၼ်ၸတ်းလႅၼ်ႇ Data တႄႉ",
     "Index ဢၼ်သိမ်းဝႆႉတၢင်ႇတီႈ",
-    "Secondary Index",
-    "Error"
+    "Secondary Index ธรรมဒါ",
+    "Temporary Index ၸူဝ်ႈၶၢဝ်း",
   ], "What is a Clustered Index?"),
 
-  Quiz(717, "Table ၼိုင်းဢၼ် မီး Clustered Index လႆႈၵႃႈလၢႆဢၼ်?", [
-    "1 ဢၼ်ၵူၺ်း",
-    "2 ဢၼ်",
-    "ဢမ်ႇမီးသုတ်း",
-    "Error"
-  ], "How many Clustered Indexes can a table have?"),
+  Quiz(
+    717,
+    "Table ၼိုင်ႈဢၼ် မီး Clustered Index လႆႈၵႃႈလၢႆဢၼ်?",
+    ["1 ဢၼ်ၵူၺ်း", "2 ဢၼ်", "ဢမ်ႇမီးသုတ်း", "5 ဢၼ်"],
+    "How many Clustered Indexes can a table have?",
+  ),
 
   Quiz(718, "Unique Index ၸွႆႈသင်?", [
-    "ႁႄႉၵင်ႈဢမ်ႇႁႂ်ႈမီးၶေႃႈမုၼ်းသွၼ်ႉၵၼ် ၼႂ်း Column ၼၼ်ႉ",
+    "ႁႄႉၵင်ႈၶေႃႈမုၼ်းသွၼ်ႉၵၼ်",
     "ၸွႆႈႁႂ်ႈ SELECT ၸႃႉလူင်း",
-    "ၸွႆႈပၼ် Password",
-    "Error"
+    "ၸွႆႈပၼ် Password ပၼ် Table",
+    "ၸွႆႈယႃႉ Row ႁင်းမၼ်း",
   ], "What is the benefit of a Unique Index?"),
 
   Quiz(719, "Index Seek မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ပိုတ်ႇၵႂႃႇၸူးၶေႃႈမုၼ်းၵမ်းလဵဝ် လူၺ်ႈၸႂ်ႉ Index",
-    "ၵၢၼ်လူတင်း Table",
-    "ၵၢၼ် Error",
-    "Error"
+    "ၵၢၼ်ပိုတ်ႇၵႂႃႇၸူး Data ၵမ်းလဵဝ်",
+    "ၵၢၼ်လူတင်း Table တင်းမူတ်း",
+    "ၵၢၼ် Backup ၶေႃႈမုၼ်း",
+    "ၵၢၼ် Error ၼႂ်း Index",
   ], "What is an Index Seek?"),
 
   Quiz(720, "Index Overhead မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ဢၼ် INSERT/UPDATE ၸႃႉလူင်း ၵွပ်ႈလူဝ်ႇမႄး Index ၸွမ်း",
-    "ၵၢၼ်ဢၼ် SELECT ဝႆး",
-    "ၵၢၼ်ယႃႉ Table",
-    "Error"
+    "ၵၢၼ် INSERT ၸႃႉလူင်း",
+    "ၵၢၼ် SELECT ဝႆးလိူဝ်ၵဝ်ႇ",
+    "ၵၢၼ်ယႃႉ Table ပႅတ်ႈ",
+    "ၵၢၼ်ပိတ်း Server ႁင်းမၼ်း",
   ], "What is Index Overhead?"),
 
-  Quiz(721, "ႁဵတ်းသင်လႄႈ PRIMARY KEY ဝႆးသုတ်းၼႂ်းၵၢၼ်သွၵ်ႈႁႃ?", [
-    "ၵွပ်ႈမၼ်းပဵၼ် Clustered Index သေၶေႃႈမုၼ်းယူႇၸွမ်းမၼ်း",
-    "ၵွပ်ႈမၼ်းမီး Password",
-    "ၵွပ်ႈမၼ်းပဵၼ်တူဝ်ၼပ်ႉ",
-    "Error"
-  ], "Why is searching by PRIMARY KEY the fastest?"),
+  Quiz(
+    721,
+    "ႁဵတ်းသင်လႄႈ PRIMARY KEY ဝႆးသုတ်း?",
+    [
+      "ၵွပ်ႈမၼ်းပဵၼ် Clustered Index",
+      "ၵွပ်ႈမၼ်းမီး Password လပ်ႉ",
+      "ၵွပ်ႈမၼ်းပဵၼ်တူဝ်ၼပ်ႉ (Number)",
+      "ၵွပ်ႈ MySQL ႁၵ်ႉမၼ်းလိူဝ်ပိူၼ်ႈ",
+    ],
+    "Why is searching by PRIMARY KEY the fastest?",
+  ),
 
   Quiz(722, "Secondary Index မၢႆထိုင်သင်?", [
-    "Index တၢင်ႇဢၼ် ဢၼ်ဢမ်ႇၸႂ်ႈ Primary Key",
-    "Clustered Index",
-    "Table တႄႉ",
-    "Error"
+    "Index ဢၼ်ဢမ်ႇၸႂ်ႈ Primary Key",
+    "Clustered Index ၵူၺ်း",
+    "Table တႄႉ ဢၼ်မီး Data",
+    "Index ဢၼ်ပဝ်ႇဝႆႉ",
   ], "What is a Secondary Index?"),
 
-  Quiz(723, "B-Tree ၸွႆႈႁႂ်ႈၵၢၼ်သွၵ်ႈႁႃပဵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "Logarithmic Time (ဝႆးႁႅင်း)",
-    "Linear Time (ၸႃႉ)",
-    "Random Time",
-    "Error"
-  ], "How does B-Tree affect search complexity?"),
+  Quiz(
+    723,
+    "B-Tree ၸွႆႈႁႂ်ႈၵၢၼ်သွၵ်ႈႁႃပဵၼ်ၸိူင်ႉႁိုဝ်?",
+    [
+      "Logarithmic Time (ဝႆး)",
+      "Linear Time (ၸႃႉ)",
+      "Random Time (သုၼ်ႇလုၼ်ႇ)",
+      "Infinite Time (ဢမ်ႇသုတ်း)",
+    ],
+    "How does B-Tree affect search complexity?",
+  ),
 
-  Quiz(724, "သင်သႂ်ႇ Index ၵူႈ Column... တေပဵၼ်သင်?", [
-    "INSERT/UPDATE တေၸႃႉႁႅင်း လႄႈ သဵင်ႈတီႈယူႇ (Disk) ၼမ်",
-    "SELECT တေၸႃႉ",
-    "Server တေပိတ်း",
-    "Error"
-  ], "What happens if you index every column?"),
+  Quiz(
+    724,
+    "သင်သႂ်ႇ Index ၵူႈ Column... တေပဵၼ်သင်?",
+    [
+      "INSERT တေၸႃႉႁႅင်း",
+      "SELECT တေၸႃႉႁႅင်း",
+      "Server တေပိတ်းၵမ်းလဵဝ်",
+      "Data တေႁၢႆလၢႆပႅတ်ႈ",
+    ],
+    "What happens if you index every column?",
+  ),
 
-  Quiz(725, "Unique Index ပၼ်ႁႂ်ႈမီး NULL လႆႈႁႃႉ?", [
-    "လႆႈ (သင်ဢမ်ႇပႆႇမၵ်းမၼ်ႈ NOT NULL)",
-    "ဢမ်ႇလႆႈ",
-    "လႆးၵူၺ်း 1 ဢၼ်",
-    "Error"
-  ], "Can a Unique Index contain NULL values?"),
+  Quiz(
+    725,
+    "Unique Index ပၼ်ႁႂ်ႈမီး NULL လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 1 ဢၼ်", "လႆႈၵူၺ်း 5 ဢၼ်"],
+    "Can a Unique Index contain NULL values?",
+  ),
 
   Quiz(726, "Root Node ၼႂ်း B-Tree မၢႆထိုင်သင်?", [
-    "ၸၼ်ႉၼိူဝ်သုတ်း ဢၼ်တႄႇၵၢၼ်သွၵ်ႈႁႃ",
+    "ၸၼ်ႉၼိူဝ်သုတ်း",
     "ၸၼ်ႉတႂ်ႈသုတ်း",
     "ၶေႃႈမုၼ်းတႄႉ",
-    "Error"
+    "ၸိုဝ်ႈ Table",
   ], "What is the Root Node in a B-Tree?"),
 
   Quiz(727, "Leaf Node ၼႂ်း B-Tree မၢႆထိုင်သင်?", [
-    "ၸၼ်ႉသုတ်း ဢၼ်သိမ်းၶေႃႈမုၼ်း ဢမ်ႇၼၼ် Pointer ၵႂႃႇၸူး Data",
-    "ၸၼ်ႉတႄႇ",
-    "ၸိုဝ်ႈ Table",
-    "Error"
+    "ၸၼ်ႉသုတ်း ဢၼ်မီး Data",
+    "ၸၼ်ႉတႄႇ ဢၼ်ပိုတ်ႇလူ",
+    "ၸိုဝ်ႈ Table တႄႉ",
+    "Password ႁင်း Index",
   ], "What are Leaf Nodes in a B-Tree?"),
 
-  Quiz(728, "InnoDB သိမ်း Index ဝႆႉၼႂ်း Disk ၸိူင်ႉႁိုဝ်?", [
-    "သိမ်းဝႆႉၼႂ်း ပိူင်သၢင်ႈ B-Tree",
-    "သိမ်းပဵၼ်လိၵ်ႈလၢႆလၢႆ",
-    "ဢမ်ႇသိမ်း",
-    "Error"
-  ], "How does InnoDB store indexes on disk?"),
+  Quiz(
+    728,
+    "InnoDB သိမ်း Index ဝႆႉၸိူင်ႉႁိုဝ်?",
+    [
+      "သိမ်းပဵၼ် B-Tree",
+      "သိမ်းပဵၼ် Plain Text",
+      "ဢမ်ႇသိမ်းဝႆႉၼႂ်း Disk",
+      "သိမ်းဝႆႉၼႂ်း Cloud ၵူၺ်း",
+    ],
+    "How does InnoDB store indexes on disk?",
+  ),
 
   // --- Lesson 66: Composite & Covering Indexes (729-742) ---
   Quiz(729, "Composite Index မၢႆထိုင်သင်?", [
-    "Index ဢၼ်ႁူမ်ႈလၢႆ Column ဝႆႉၼႂ်းဢၼ်လဵဝ်ၵၼ်",
-    "Index 1 Column",
+    "Index ဢၼ်ႁူမ်ႈလၢႆ Column",
+    "Index ဢၼ်မီး 1 Column",
     "Primary Key ၵူၺ်း",
-    "Error"
+    "Index ဢၼ်ယႃႉ Row ပႅတ်ႈ",
   ], "What is a Composite Index?"),
 
-  Quiz(730, "Left-to-Right Rule ၼႂ်း Composite Index မၢႆထိုင်သင်?", [
-    "MySQL တေၸႂ်ႉ Index လႆႈၵေႃႈ တေႃႇမိူဝ်ႈၸႂ်ႉ Column ၽၢႆႇသၢႆႉသုတ်း",
-    "လူလုၵ်ႉၶႂႃမႃးသၢႆႉ",
-    "ဢမ်ႇမီးပၵ်းၵၢၼ်",
-    "Error"
-  ], "What is the Left-to-Right rule in composite indexing?"),
+  Quiz(
+    730,
+    "Left-to-Right Rule မၢႆထိုင်သင်?",
+    [
+      "လူလုၵ်ႉသၢႆႉၵႂႃႇၶႂႃ",
+      "လူလုၵ်ႉၶႂႃမႃးသၢႆႉ",
+      "ဢမ်ႇမီးပၵ်းၵၢၼ်သေယၢင်ႇ",
+      "လူၵူၺ်း Column ၵႄႈၵၢင်",
+    ],
+    "What is the Left-to-Right rule in composite indexing?",
+  ),
 
   Quiz(731, "Covering Index မၢႆထိုင်သင်?", [
-    "Index ဢၼ်မီးၶေႃႈမုၼ်းၵူႈယၢင်ႇ ဢၼ် Query လူဝ်ႇၸႂ်ႉတဵမ်ထူၼ်ႈ",
-    "Index ဢၼ်ၵုမ်ႇ Table တင်းမူတ်း",
-    "ၵၢၼ် Backup",
-    "Error"
+    "Index ဢၼ်မီး Data ၵူႈယၢင်ႇ",
+    "Index ဢၼ်ပိတ်း Table",
+    "Index ဢၼ် Backup Data",
+    "Index တွၼ်ႈတၢင်းၼႃႈ",
   ], "What is a Covering Index?"),
 
-  Quiz(732, "ၽွၼ်းလီႁင်း Covering Index ပဵၼ်သင်?", [
-    "MySQL ဢမ်ႇလူဝ်ႇပိုတ်ႇ Table တႄႉ (Base Table) သေဝႆးလိူဝ်ၵဝ်ႇ",
-    "ၸွႆႈယႃႉ Row",
-    "ၸွႆႈပၼ် Password",
-    "Error"
-  ], "What is the main benefit of a covering index?"),
+  Quiz(
+    732,
+    "ၽွၼ်းလီႁင်း Covering Index ပဵၼ်သင်?",
+    [
+      "ဢမ်ႇလူဝ်ႇလူ Table တႄႉ",
+      "ၸွႆႈယႃႉ Row ဢၼ်သွၼ်ႉ",
+      "ၸွႆႈပၼ် Password Table",
+      "ၸွႆႈ INSERT ဝႆးလိူဝ်ၵဝ်ႇ",
+    ],
+    "What is the main benefit of a covering index?",
+  ),
 
   Quiz(733, "Prefix Indexing ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇသၢင်ႈ Index ၵူၺ်းတွၼ်ႈတၢင်းၼႃႈ (မိူၼ်ၼင်ႇ 10 တူဝ်) ႁင်းလိၵ်ႈယၢဝ်း",
-    "တႃႇသၢင်ႈ Index တွၼ်ႈတၢင်းလင်",
-    "တႃႇယႃႉ Row",
-    "Error"
+    "သၢင်ႈ Index ၵူၺ်းတွၼ်ႈတၢင်းၼႃႈ",
+    "သၢင်ႈ Index တွၼ်ႈတၢင်းလင်",
+    "သၢင်ႈ Index တင်းမူတ်း",
+    "ယႃႉ Index ပွတ်းဢွၼ်ႇ",
   ], "What is Prefix Indexing used for?"),
 
   Quiz(734, "Cardinality မၢႆထိုင်သင်?", [
-    "တၢင်းၼမ်ၶေႃႈမုၼ်း ဢၼ်ပႅၵ်ႇပိူင်ႈၵၼ် ၼႂ်း Column ၼၼ်ႉ",
-    "တၢင်းၼမ် Column",
-    "တၢင်းၼမ် Table",
-    "Error"
+    "တၢင်းၼမ်ၵႃႈၶၼ် ဢၼ်ပႅၵ်ႇၵၼ်",
+    "တၢင်းၼမ် Column တင်းမူတ်း",
+    "တၢင်းၼမ် Table တင်းမူတ်း",
+    "တၢင်းၼမ် User တင်းမူတ်း",
   ], "What does Cardinality mean?"),
 
-  Quiz(735, "High Cardinality Column တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?", [
-    "Email (ၵွပ်ႈမီးၵႃႈၶၼ်ပႅၵ်ႇၵၼ်ၼမ်)",
-    "Gender (M/F)",
-    "Active Status (Yes/No)",
-    "Error"
-  ], "Give an example of a high cardinality column."),
+  Quiz(
+    735,
+    "High Cardinality Column ပဵၼ်သင်?",
+    ["Email Address", "Gender (M/F)", "Active Status (Y/N)", "Boolean Value"],
+    "Give an example of a high cardinality column.",
+  ),
 
-  Quiz(736, "Low Cardinality Column တူဝ်ယင်ႇမၼ်းပဵၼ်သင်?", [
-    "Gender (M/F)",
-    "User ID",
-    "Social Security Number",
-    "Error"
-  ], "Give an example of a low cardinality column."),
+  Quiz(
+    736,
+    "Low Cardinality Column ပဵၼ်သင်?",
+    ["Gender (M/F)", "User ID", "Social Security Number", "Email Address"],
+    "Give an example of a low cardinality column.",
+  ),
 
-  Quiz(737, "သင်သၢင်ႈ Index တီႈ (A, B, C)... Query 'WHERE B = 5' တေၸႂ်ႉ Index ႁႃႉ?", [
-    "ဢမ်ႇၸႂ်ႉ (ၵွပ်ႈဢမ်ႇပႃး A ဢၼ်ယူႇသၢႆႉသုတ်း)",
-    "ၸႂ်ႉ",
-    "ၸႂ်ႉၵူၺ်းၼႂ်း Version မႂ်ႇ",
-    "Error"
-  ], "Will an index on (A, B, C) be used for 'WHERE B = 5'?"),
+  Quiz(
+    737,
+    "Index (A, B, C) ... 'WHERE B = 5' တေၸႂ်ႉ Index ႁႃႉ?",
+    ["ဢမ်ႇၸႂ်ႉ", "ၸႂ်ႉ", "ၸႂ်ႉၵူၺ်းၼႂ်း MySQL 8", "ၸႂ်ႉမၢင်ပွၵ်ႈ"],
+    "Will an index on (A, B, C) be used for 'WHERE B = 5'?",
+  ),
 
-  Quiz(738, "Extra: 'Using index' ၼႂ်း EXPLAIN မၢႆထိုင်သင်?", [
-    "MySQL ၸႂ်ႉ Covering Index (ဢမ်ႇလူဝ်ႇလူ Table တႄႉ)",
-    "MySQL ဢမ်ႇၸႂ်ႉ Index",
-    "Error ၼႂ်း Index",
-    "Error"
-  ], "What does 'Using index' in EXPLAIN Extra column mean?"),
+  Quiz(
+    738,
+    "Extra: 'Using index' ၼႄသင်?",
+    [
+      "ၸႂ်ႉ Covering Index",
+      "ဢမ်ႇၸႂ်ႉ Index သေဢၼ်",
+      "Index မီး Error",
+      "MySQL ၸႃႉလိူဝ်ၵဝ်ႇ",
+    ],
+    "What does 'Using index' in EXPLAIN Extra column mean?",
+  ),
 
-  Quiz(739, "ႁဵတ်းသင်လႄႈ Prefix Index ၸွႆႈယွမ်း Disk Space?", [
-    "ၵွပ်ႈမၼ်းသိမ်းၵူၺ်း တွၼ်ႈပွတ်းဢွၼ်ႇ တၢင်းၼႃႈ",
-    "ၵွပ်ႈမၼ်းယႃႉ Table",
-    "ၵွပ်ႈမၼ်းပဵၼ် NULL",
-    "Error"
-  ], "Why does prefix indexing save disk space?"),
+  Quiz(
+    739,
+    "ႁဵတ်းသင် Prefix Index ၸွႆႈယွမ်း Disk Space?",
+    [
+      "သိမ်းၵူၺ်းတွၼ်ႈပွတ်းဢွၼ်ႇ",
+      "ယႃႉ Table ပႅတ်ႈ",
+      "မၼ်းပဵၼ် NULL",
+      "မၼ်းပဵၼ် Number",
+    ],
+    "Why does prefix indexing save disk space?",
+  ),
 
-  Quiz(740, "MySQL ၸၢင်ႈၸႂ်ႉလၢႆလၢႆ Index ႁူမ်ႈၵၼ်ၼႂ်း 1 Table (Index Merge) လႆႈႁႃႉ?", [
-    "လႆႈ ၵူၺ်းၵႃႈ Composite Index ၵႆႉဝႆးလိူဝ်",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်းၼႂ်း OR",
-    "Error"
-  ], "Can MySQL merge multiple indexes in one query?"),
+  Quiz(
+    740,
+    "MySQL ၸၢင်ႈၸႂ်ႉလၢႆ Index ၼႂ်း 1 Table ႁူမ်ႈၵၼ်လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းၼႂ်း OR", "လႆႈၵူၺ်းၼႂ်း INSERT"],
+    "Can MySQL merge multiple indexes in one query?",
+  ),
 
-  Quiz(741, "ၵၢၼ်ဝႆႉလႅၼ်ႇ Column ၼႂ်း Composite Index လွင်ႈယႂ်ႇႁႃႉ?", [
-    "ယႂ်ႇႁႅင်း (လူဝ်ႇဢဝ်ဢၼ်ၸႂ်ႉၼမ်ဝႆႉသၢႆႉသုတ်း)",
-    "ဢမ်ႇယႂ်ႇ",
-    "ယႂ်ႇၵူၺ်းၼႂ်း ID",
-    "Error"
-  ], "Does column order matter in a composite index?"),
+  Quiz(
+    741,
+    "ၵၢၼ်ဝႆႉလႅၼ်ႇ Column ၼႂ်း Composite Index လွင်ႈယႂ်ႇႁႃႉ?",
+    ["ယႂ်ႇႁႅင်း", "ဢမ်ႇယႂ်ႇ", "ယႂ်ႇၵူၺ်းၼႂ်း ID", "ယႂ်ႇၵူၺ်းၼႂ်း Text"],
+    "Does column order matter in a composite index?",
+  ),
 
-  Quiz(742, "ႁဵတ်းသင်လႄႈ MySQL ဢမ်ႇၸႂ်ႉ Index တီႈ Low Cardinality?", [
-    "ၵွပ်ႈမၼ်းလူတင်း Table ဝႆးလိူဝ် ၵၢၼ်ပိုတ်ႇ Index သေပိုတ်ႇ Table ၶိုၼ်း",
-    "ၵွပ်ႈမၼ်းပဵၼ် Error",
-    "ၵွပ်ႈမၼ်းမီး Password",
-    "Error"
-  ], "Why might MySQL ignore an index on low cardinality columns?"),
+  Quiz(
+    742,
+    "ႁဵတ်းသင် MySQL ဢမ်ႇၸႂ်ႉ Index တီႈ Low Cardinality?",
+    [
+      "လူတင်း Table ဝႆးလိူဝ်",
+      "မၼ်းမီး Error",
+      "မၼ်းမီး Password",
+      "MySQL ဢမ်ႇႁူႉၸိုဝ်ႈမၼ်း",
+    ],
+    "Why might MySQL ignore an index on low cardinality columns?",
+  ),
 
   // --- Lesson 67: Query Refactoring (743-756) ---
   Quiz(743, "Query Refactoring မၢႆထိုင်သင်?", [
-    "ၵၢၼ်မႄးပိူင်သၢင်ႈ Query ႁႂ်ႈဝႆးလိူဝ်ၵဝ်ႇ လူၺ်ႈဢမ်ႇလႅၵ်ႈလၢႆႈၽွၼ်းလႆႈ",
-    "ၵၢၼ်ယႃႉ Query",
-    "ၵၢၼ် INSERT ၶေႃႈမုၼ်း",
-    "Error"
+    "မႄး Query ႁႂ်ႈဝႆး",
+    "ယႃႉ Query ပႅတ်ႈ",
+    "INSERT Data မႂ်ႇ",
+    "သၢင်ႈ Database မႂ်ႇ",
   ], "What is query refactoring?"),
 
-  Quiz(744, "ႁဵတ်းသင်လႄႈ ႁဝ်းဢမ်ႇထုၵ်ႇလီၸႂ်ႉ SELECT *?", [
-    "ၵွပ်ႈမၼ်းၵိၼ် RAM/Network လႄႈ ပိတ်းသုၼ်ႇ Covering Index",
-    "ၵွပ်ႈမၼ်းတႅမ်ႈငၢႆႈလူၼ်ႉ",
-    "ၵွပ်ႈမၼ်းပၼ် Error",
-    "Error"
-  ], "Why is 'SELECT *' considered bad practice?"),
+  Quiz(
+    744,
+    "ႁဵတ်းသင် ႁဝ်းဢမ်ႇထုၵ်ႇလီၸႂ်ႉ SELECT *?",
+    [
+      "ၵိၼ် RAM/Network ၼမ်",
+      "မၼ်းတႅမ်ႈငၢႆႈလူၼ်ႉ",
+      "မၼ်းပၼ် Error",
+      "MySQL ဢမ်ႇပၼ်ၸႂ်ႉ",
+    ],
+    "Why is 'SELECT *' considered bad practice?",
+  ),
 
   Quiz(745, "SARGABLE Query မၢႆထိုင်သင်?", [
-    "Query ဢၼ်တႅမ်ႈဝႆႉၸႅၼ်ႇလႅင်း သေ MySQL ၸၢင်ႈၸႂ်ႉ Index လႆႈ",
+    "Query ဢၼ်ၸၢင်ႈၸႂ်ႉ Index",
     "Query ဢၼ်မီး Error",
     "Query ဢၼ်ၸႃႉ",
-    "Error"
+    "Query ဢၼ်ပဝ်ႇဝႆႉ",
   ], "What is a SARGABLE query?"),
 
-  Quiz(746, "WHERE YEAR(date) = 2026 ပဵၼ် SARGABLE ႁႃႉ?", [
-    "ဢမ်ႇၸႂ်ႈ (ၵွပ်ႈၸႂ်ႉ Function ၵုမ်ႇ Column ဝႆႉ)",
-    "ၸႂ်ႈ",
-    "ၸႂ်ႈၵူၺ်းၼႂ်း MySQL 8",
-    "Error"
-  ], "Is 'WHERE YEAR(date) = 2026' SARGABLE?"),
+  Quiz(
+    746,
+    "WHERE YEAR(date) = 2026 ပဵၼ် SARGABLE ႁႃႉ?",
+    ["ဢမ်ႇၸႂ်ႈ", "ၸႂ်ႈ", "ၸႂ်ႈၵူၺ်းၼႂ်း MySQL 8", "ၸႂ်ႈၵူၺ်းၼႂ်း MyISAM"],
+    "Is 'WHERE YEAR(date) = 2026' SARGABLE?",
+  ),
 
-  Quiz(747, "လၢႆးတႅမ်ႈ DATE ဢၼ်မၢၼ်ႇမႅၼ်ႈ (SARGABLE) ပဵၼ်ၸိူင်ႉႁိုဝ်?", [
-    "WHERE date >= '2026-01-01' AND date <= '2026-12-31'",
-    "WHERE YEAR(date) = 2026",
-    "WHERE date LIKE '2026%'",
-    "Error"
-  ], "How to refactor a date query to be SARGABLE?"),
+  Quiz(
+    747,
+    "လၢႆးတႅမ်ႈ DATE ဢၼ်မၢၼ်ႇ (SARGABLE) ပဵၼ်ၸိူင်ႉႁိုဝ်?",
+    [
+      "WHERE date >= '2026-01-01'",
+      "WHERE YEAR(date) = 2026",
+      "WHERE date LIKE '2026%'",
+      "WHERE date = NULL",
+    ],
+    "How to refactor a date query to be SARGABLE?",
+  ),
 
-  Quiz(748, "ႁဵတ်းသင်လႄႈ ႁဝ်းထုၵ်ႇလီလႅၵ်ႈ Subquery ႁႂ်ႈပဵၼ် JOIN?", [
-    "ၵွပ်ႈ MySQL Optimizer ၸၢင်းဝၢင်းၽႅၼ် JOIN လႆႈလီလိူဝ်",
-    "ၵွပ်ႈ JOIN တႅမ်ႈငၢႆႈလိူဝ်",
-    "ၵွပ်ႈ Subquery ပဵၼ် Error",
-    "Error"
-  ], "Why prefer JOINs over Subqueries?"),
+  Quiz(
+    748,
+    "ႁဵတ်းသင် လိူၵ်ႈ JOIN လိူဝ် Subquery?",
+    [
+      "Optimizer ဝၢင်းၽႅၼ်လႆႈလီ",
+      "JOIN တႅမ်ႈငၢႆႈလိူဝ်",
+      "Subquery ပဵၼ် Error",
+      "JOIN ဝႆးလိူဝ် 100 ပုၼ်ႈ",
+    ],
+    "Why prefer JOINs over Subqueries?",
+  ),
 
-  Quiz(749, "EXISTS တင်း IN ဢၼ်လႂ်ဝႆးလိူဝ် တႃႇ Table ဢၼ်ယႂ်ႇ?", [
-    "EXISTS (ၵွပ်ႈမၼ်းၵိုတ်းၵမ်းလဵဝ် မိူဝ်ႈႁၼ် First Match)",
-    "IN",
-    "မိူၼ်ၵၼ်",
-    "Error"
-  ], "Which is generally faster for large tables: EXISTS or IN?"),
+  Quiz(
+    749,
+    "EXISTS တင်း IN ဢၼ်လႂ်ဝႆးလိူဝ် တႃႇ Table ယႂ်ႇ?",
+    ["EXISTS", "IN", "မိူၼ်ၵၼ်", "ဢမ်ႇမီးဢၼ်ဝႆး"],
+    "Which is generally faster for large tables: EXISTS or IN?",
+  ),
 
-  Quiz(750, "ႁဵတ်းသင်လႄႈ 'OR' ၼႂ်း WHERE ၸၢင်ႈႁဵတ်းႁႂ်ႈ Query ၸႃႉ?", [
-    "ၵွပ်ႈမၼ်းၵႆႉႁဵတ်းႁႂ်ႈ MySQL ဢမ်ႇၸႂ်ႉ Index သေလူ Table Scan",
-    "ၵွပ်ႈမၼ်းပဵၼ်လိၵ်ႈပွတ်း",
-    "ၵွပ်ႈမၼ်းမီး Password",
-    "Error"
-  ], "Why can 'OR' clauses slow down a query?"),
+  Quiz(
+    750,
+    "ႁဵတ်းသင် 'OR' ၼႂ်း WHERE ႁဵတ်းႁႂ်ႈၸႃႉ?",
+    [
+      "မၼ်းလူ Table Scan",
+      "မၼ်းပဵၼ်လိၵ်ႈပွတ်း",
+      "မၼ်းမီး Password",
+      "MySQL ဢမ်ႇႁူႉၸိုဝ်ႈ",
+    ],
+    "Why can 'OR' clauses slow down a query?",
+  ),
 
-  Quiz(751, "UNION ALL တင်း OR... ဢၼ်လႂ်ဝႆးလိူဝ်တွၼ်ႈတႃႇ Index?", [
-    "UNION ALL (ၸၢင်ႈၸႂ်ႉ Index ၸႅၵ်ႇၵၼ်လႆႈ)",
-    "OR",
-    "မိူၼ်ၵၼ်",
-    "Error"
-  ], "Which is better for index usage: UNION ALL or OR?"),
+  Quiz(
+    751,
+    "UNION ALL တင်း OR... Index ဢၼ်လႂ်ဝႆးလိူဝ်?",
+    ["UNION ALL", "OR", "မိူၼ်ၵၼ်", "ဢမ်ႇၸႂ်ႉ Index တင်းသွင်"],
+    "Which is better for index usage: UNION ALL or OR?",
+  ),
 
   Quiz(752, "LIKE '%word' ပဵၼ် SARGABLE ႁႃႉ?", [
-    "ဢမ်ႇၸႂ်ႈ (ၵွပ်ႈမီး '%' ဝႆႉတၢင်းၼႃႈ)",
+    "ဢမ်ႇၸႂ်ႈ",
     "ၸႂ်ႈ",
-    "ၸႂ်ႈၵူၺ်းၼႂ်း MyISAM",
-    "Error"
+    "ၸႂ်ႈၵူၺ်းၼႂ်း Linux",
+    "ၸႂ်ႈၵူၺ်းၼႂ်း Cloud",
   ], "Is 'LIKE %word' SARGABLE?"),
 
   Quiz(753, "LIKE 'word%' ပဵၼ် SARGABLE ႁႃႉ?", [
-    "ၸႂ်ႈ (မၼ်းၸၢင်ႈၸႂ်ႉ Range Scan လႆႈ)",
+    "ၸႂ်ႈ",
     "ဢမ်ႇၸႂ်ႈ",
-    "Error",
-    "NULL"
+    "ၸႂ်ႈၵူၺ်းၼႂ်း Number",
+    "ၸႂ်ႈၵူၺ်းၼႂ်း Primary Key",
   ], "Is 'LIKE word%' SARGABLE?"),
 
-  Quiz(754, "Short-circuiting ၼႂ်း EXISTS မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ၵိုတ်းႁဵတ်းၵၢၼ်ၵမ်းလဵဝ် မိူဝ်ႈလႆႈၶေႃႈတွပ်ႇ",
-    "ၵၢၼ်ယႃႉ Table",
-    "ၵၢၼ် Error",
-    "Error"
-  ], "What is short-circuiting in an EXISTS check?"),
+  Quiz(
+    754,
+    "Short-circuiting ၼႂ်း EXISTS မၢႆထိုင်သင်?",
+    [
+      "ၵိုတ်းၵမ်းလဵဝ်မိူဝ်ႈႁၼ်",
+      "ယႃႉ Table ပႅတ်ႈ",
+      "ၵၢၼ် Error ႁင်းမၼ်း",
+      "ၵၢၼ် SELECT ၶိုၼ်း",
+    ],
+    "What is short-circuiting in an EXISTS check?",
+  ),
 
-  Quiz(755, "သင်ၸဝ်ႈၵဝ်ႇ SELECT Column ဢၼ်မၼ်းမီးၼႂ်း Index ၵူၺ်း... တေပဵၼ်သင်?", [
-    "တေပဵၼ် Covering Index သေဝႆးႁႅင်း",
-    "တေၸႃႉလိူဝ်ၵဝ်ႇ",
-    "Error",
-    "NULL"
-  ], "What happens if you select only columns present in the index?"),
+  Quiz(
+    755,
+    "သင် SELECT Column ဢၼ်မီးၼႂ်း Index ၵူၺ်း...?",
+    ["ပဵၼ် Covering Index", "ၸႃႉလိူဝ်ၵဝ်ႇ", "Error ၵမ်းလဵဝ်", "NULL တႃႇသေႇ"],
+    "What happens if you select only columns present in the index?",
+  ),
 
-  Quiz(756, "Function on Column မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ဢဝ် Function ၵႂႃႇၵုမ်ႇ Column ဝႆႉ သေႁဵတ်းႁႂ်ႈ Index တၢႆ",
-    "ၵၢၼ် SELECT",
-    "ၵၢၼ် INSERT",
-    "Error"
-  ], "What does 'Function on Column' refer to?"),
+  Quiz(
+    756,
+    "Function on Column မၢႆထိုင်သင်?",
+    [
+      "သႂ်ႇ Function ၼိူဝ် Column",
+      "ၵၢၼ် SELECT ธรรมဒါ",
+      "ၵၢၼ် INSERT ၶေႃႈမုၼ်း",
+      "ၵၢၼ်ပၼ် Password",
+    ],
+    "What does 'Function on Column' refer to?",
+  ),
 
   // --- Lesson 68: Join Optimization (757-770) ---
-  Quiz(757, "Join Optimization လွင်ႈယႂ်ႇသုတ်းပဵၼ်သင်?", [
-    "ၵူႈ Column ဢၼ်ၸႂ်ႉၼႂ်း 'ON' တေလႆႈမီး Index",
-    "ၵူႈ Table တေလႆႈမီး 100 ထႅဝ်",
-    "ၵူႈ Column တေလႆႈပဵၼ် VARCHAR",
-    "Error"
-  ], "What is the most important part of Join Optimization?"),
+  Quiz(
+    757,
+    "Join Optimization လွင်ႈယႂ်ႇသုတ်းပဵၼ်သင်?",
+    [
+      "Column ၼႂ်း 'ON' မီး Index",
+      "Table မီး 100 ထႅဝ်",
+      "Column ပဵၼ် VARCHAR",
+      "Table ပဵၼ် MyISAM",
+    ],
+    "What is the most important part of Join Optimization?",
+  ),
 
-  Quiz(758, "သင် JOIN Column ဢၼ်မီး Data Type ပႅၵ်ႇၵၼ်... တေပဵၼ်သင်?", [
-    "MySQL တေၸႂ်ႉ Index ဢမ်ႇလႆႈ (ၵွပ်ႈလူဝ်ႇလႅၵ်ႈ Type)",
-    "မၼ်းတေဝႆးလိူဝ်ၵဝ်ႇ",
-    "မၼ်းတေ Auto-fix",
-    "Error"
-  ], "What happens if joined columns have different data types?"),
+  Quiz(
+    758,
+    "သင် JOIN Column ပႅၵ်ႇ Data Type ၵၼ်...?",
+    [
+      "ၸႂ်ႉ Index ဢမ်ႇလႆႈ",
+      "ဝႆးလိူဝ်ၵဝ်ႇ",
+      "Auto-fix ႁင်းမၼ်း",
+      "Error ၵမ်းလဵဝ်",
+    ],
+    "What happens if joined columns have different data types?",
+  ),
 
   Quiz(759, "Driving Table မၢႆထိုင်သင်?", [
-    "Table ဢွၼ်တၢင်းသုတ်း ဢၼ် MySQL လိူၵ်ႈမႃးတႄႇလူၶေႃႈမုၼ်း",
+    "Table ဢၼ်လူဢွၼ်တၢင်း",
     "Table ဢၼ်ယႂ်ႇသုတ်း",
     "Table ဢၼ်မီး Error",
-    "Error"
+    "Table ဢၼ်ယႃႉပႅတ်ႈ",
   ], "What is a Driving Table?"),
 
-  Quiz(760, "MySQL ၵႆႉလိူၵ်ႈ Driving Table ၸိူင်ႉႁိုဝ်?", [
-    "လိူၵ်ႈ Table ဢၼ် 'ဢေႇသုတ်း' (Smallest) ဢွၼ်တၢင်း",
-    "လိူၵ်ႈ Table ဢၼ်ယႂ်ႇသုတ်း",
-    "လိူၵ်ႈၸွမ်း Alphabet",
-    "Error"
-  ], "How does MySQL typically choose the driving table?"),
+  Quiz(
+    760,
+    "MySQL လိူၵ်ႈ Driving Table ၸိူင်ႉႁိုဝ်?",
+    [
+      "လိူၵ်ႈ Table ဢၼ်ဢေႇသုတ်း",
+      "လိူၵ်ႈ Table ဢၼ်ယႂ်ႇသုတ်း",
+      "လိူၵ်ႈၸွမ်း Alphabet",
+      "လိူၵ်ႈၸွမ်း ID",
+    ],
+    "How does MySQL typically choose the driving table?",
+  ),
 
   Quiz(761, "Nested Loop Join မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ဢဝ် 1 ထႅဝ်လုၵ်ႉ A မႃး သေၵႂႃႇသွၵ်ႈၼႂ်း B",
-    "ၵၢၼ် Join 2 ပွၵ်ႈ",
-    "ၵၢၼ်ယႃႉ Table",
-    "Error"
+    "လူ A သေ သွၵ်ႈၼႂ်း B",
+    "Join 2 ပွၵ်ႈ",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "Backup ၶေႃႈမုၼ်း",
   ], "What is a Nested Loop Join?"),
 
   Quiz(762, "STRAIGHT_JOIN ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇသင်ႇ MySQL ႁႂ်ႈလူ Table ၸွမ်းၼင်ႇဢၼ်ႁဝ်းတႅမ်ႈဝႆႉ",
-    "တႃႇယႃႉ Table",
-    "တႃႇ INSERT",
-    "Error"
+    "လူ Table ၸွမ်းဢၼ်တႅမ်ႈ",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "INSERT Data မႂ်ႇ",
+    "SELECT Password",
   ], "What is STRAIGHT_JOIN used for?"),
 
-  Quiz(763, "Foreign Key Indexing လွင်ႈယႂ်ႇႁႃႉ?", [
-    "ယႂ်ႇႁႅင်း (တွၼ်ႈတႃႇႁႄႉၵင်ႈ Full Table Scan မိူဝ်ႈ Join)",
-    "ဢမ်ႇယႂ်ႇ",
-    "ယႂ်ႇၵူၺ်းၼႂ်း ID",
-    "Error"
-  ], "Is indexing foreign keys important?"),
+  Quiz(
+    763,
+    "Foreign Key Indexing လွင်ႈယႂ်ႇႁႃႉ?",
+    ["ယႂ်ႇႁႅင်း", "ဢမ်ႇယႂ်ႇ", "ယႂ်ႇၼႂ်း ID ၵူၺ်း", "ယႂ်ႇၼႂ်း Text ၵူၺ်း"],
+    "Is indexing foreign keys important?",
+  ),
 
-  Quiz(764, "သင် Join 10 Tables ႁူမ်ႈၵၼ်... တေပဵၼ်သင်?", [
-    "Optimizer တေဝူၼ်ႉယၢပ်ႇ လႄႈ Query တေၸႃႉ",
-    "Query တေဝႆး",
-    "Error",
-    "NULL"
-  ], "What happens if you join 10+ tables together?"),
+  Quiz(
+    764,
+    "သင် Join 10+ Tables ႁူမ်ႈၵၼ်...?",
+    ["Query တေၸႃႉႁႅင်း", "Query တေဝႆးႁႅင်း", "Error ၵမ်းလဵဝ်", "NULL တႃႇသေႇ"],
+    "What happens if you join 10+ tables together?",
+  ),
 
   Quiz(765, "Index Seek ၼႂ်း JOIN ၸွႆႈသင်?", [
-    "ၸွႆႈႁႃထႅဝ်ဢၼ် Match ၵၼ်လႆႈဝႆးသုတ်း",
-    "ၸွႆႈယႃႉ Row",
-    "ၸွႆႈပၼ် Password",
-    "Error"
+    "ႁႃထႅဝ် Match လႆႈဝႆး",
+    "ယႃႉ Row ပႅတ်ႈ",
+    "ပၼ် Password ႁင်းမၼ်း",
+    "Backup ၶေႃႈမုၼ်း",
   ], "How does Index Seek help in a JOIN?"),
 
   Quiz(766, "Inner Loop မၢႆထိုင်သင်?", [
-    "Table ဢၼ်ထုၵ်ႇသွၵ်ႈႁႃ ဝၢႆးသေလူ Driving Table",
+    "Table ဢၼ်ထုၵ်ႇသွၵ်ႈႁႃ",
     "Table တူဝ်တႄႇ",
-    "Error",
-    "NULL"
+    "Database တူဝ်မႄႈ",
+    "သဵၼ်ႈမၢႆ User",
   ], "What is an Inner Loop in a JOIN operation?"),
 
-  Quiz(767, "Type Conversion ၼႂ်း JOIN လွင်ႈယႂ်ႇႁႃႉ?", [
-    "ယႂ်ႇ (လူဝ်ႇမၼ်ႈၸႂ်ဝႃႈ Data Type မိူၼ်ၵၼ်)",
-    "ဢမ်ႇယႂ်ႇ",
-    "Error",
-    "NULL"
-  ], "Is type conversion important in JOIN performance?"),
+  Quiz(
+    767,
+    "Type Conversion ၼႂ်း JOIN လွင်ႈယႂ်ႇႁႃႉ?",
+    ["ယႂ်ႇႁႅင်း", "ဢမ်ႇယႂ်ႇ", "ယႂ်ႇၼႂ်း Linux", "ယႂ်ႇၼႂ်း Windows"],
+    "Is type conversion important in JOIN performance?",
+  ),
 
-  Quiz(768, "Hash Join (MySQL 8.0.18+) ၸွႆႈသင်?", [
-    "ၸွႆႈႁႂ်ႈ JOIN ဝႆးလိူဝ်ၵဝ်ႇ မိူဝ်ႈဢမ်ႇမီး Index",
-    "ၸွႆႈယႃႉ Table",
-    "ၸွႆႈ Backup",
-    "Error"
+  Quiz(768, "Hash Join ၸွႆႈသင်?", [
+    "JOIN ဝႆးမိူဝ်ႈဢမ်ႇမီး Index",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "Backup ၶေႃႈမုၼ်း",
+    "SELECT Password",
   ], "What is Hash Join used for in MySQL?"),
 
-  Quiz(769, "Reducing Joined Rows ၸိူင်ႉႁိုဝ်?", [
-    "ၸႂ်ႉ WHERE တႃႇတတ်းၶေႃႈမုၼ်း ဢွၼ်တၢင်းတေ JOIN",
-    "ၸႂ်ႉ SELECT *",
-    "ၸႂ်ႉ LIMIT 100",
-    "Error"
-  ], "How to reduce the number of rows being joined?"),
+  Quiz(
+    769,
+    "Reducing Joined Rows ၸိူင်ႉႁိုဝ်?",
+    [
+      "ၸႂ်ႉ WHERE တတ်းဢွၼ်တၢင်း",
+      "ၸႂ်ႉ SELECT *",
+      "ၸႂ်ႉ LIMIT 100",
+      "ၸႂ်ႉ ORDER BY",
+    ],
+    "How to reduce the number of rows being joined?",
+  ),
 
   Quiz(770, "Join Buffer ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တွၼ်ႈတႃႇသိမ်းၶေႃႈမုၼ်းၸူဝ်ႈၶၢဝ်း မိူဝ်ႈ JOIN ဢမ်ႇမီး Index",
-    "တွၼ်ႈတႃႇသိမ်း Password",
-    "Error",
-    "NULL"
+    "သိမ်း Data ၸူဝ်ႈၶၢဝ်း",
+    "သိမ်း Password",
+    "သိမ်း User ID",
+    "သိမ်း Database Name",
   ], "What is the Join Buffer used for?"),
 
   // --- Lesson 69: Maintenance & Logs (771-784) ---
   Quiz(771, "ANALYZE TABLE ၸွႆႈသင်?", [
-    "တႃႇ Update Statistics (Cardinality) ႁင်း Index ၶိုၼ်း",
-    "တႃႇယႃႉ Table",
-    "တႃႇ INSERT",
-    "Error"
+    "Update Statistics",
+    "ယႃႉ Table ပႅတ်ႈ",
+    "INSERT Data မႂ်ႇ",
+    "Backup ၶေႃႈမုၼ်း",
   ], "What does ANALYZE TABLE do?"),
 
   Quiz(772, "OPTIMIZE TABLE ၸွႆႈသင်?", [
-    "တႃႇၸတ်းလႅၼ်ႇ Memory (Defragment) ဝၢႆးသေ DELETE ၼမ်ၼမ်",
-    "တႃႇသၢင်ႈ Index",
-    "တႃႇပၼ် Password",
-    "Error"
+    "ၸတ်း Memory (Defragment)",
+    "သၢင်ႈ Index မႂ်ႇ",
+    "ပၼ် Password Table",
+    "SELECT ၶေႃႈမုၼ်း",
   ], "What does OPTIMIZE TABLE do?"),
 
   Quiz(773, "Slow Query Log မၢႆထိုင်သင်?", [
-    "File သိမ်းပိုၼ်း Query ဢၼ်ႁဵတ်းၵၢၼ်ႁိုင်လိူဝ်ၶၢဝ်းယၢမ်းဢၼ်မၵ်းမၼ်ႈ",
-    "File သိမ်း Password",
-    "File သိမ်း Error",
-    "Error"
+    "ပိုၼ်း Query ဢၼ်ၸႃႉ",
+    "ပိုၼ်း Password",
+    "ပိုၼ်း User Login",
+    "ပိုၼ်း Error ၵူၺ်း",
   ], "What is the Slow Query Log?"),
 
   Quiz(774, "long_query_time ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇမၵ်းမၼ်ႈဝႃႈ ႁိုင်ၵႃႈႁိုဝ် ၸင်ႇတေမၢႆဝႆႉၼႂ်း Slow Log",
-    "တႃႇမၵ်းမၼ်ႈ ID",
-    "တႃႇမၵ်းမၼ်ႈ Size",
-    "Error"
+    "မၵ်းမၼ်ႈၶၢဝ်းယၢမ်းတႃႇမၢႆ",
+    "မၵ်းမၼ်ႈ User ID",
+    "မၵ်းမၼ်ႈ File Size",
+    "မၵ်းမၼ်ႈ Password",
   ], "What is long_query_time used for?"),
 
   Quiz(775, "SHOW PROCESSLIST ၸွႆႈသင်?", [
-    "တႃႇတူၺ်းဝႃႈ ၽႂ်တိုၵ်ႉႁဵတ်းသင်ယူႇ (Query လႂ်တိုၵ်ႉ Run ယူႇ)",
-    "တႃႇတူၺ်း Table",
-    "တႃႇတူၺ်း User",
-    "Error"
+    "တူၺ်း Query ဢၼ်တိုၵ်ႉ Run",
+    "တူၺ်း Table",
+    "တူၺ်း Password",
+    "တူၺ်း Backup Date",
   ], "What does SHOW PROCESSLIST show?"),
 
-  Quiz(776, "Fragmentation ၼႂ်း Database မၢႆထိုင်သင်?", [
-    "ႁူးပဝ်ႇၼႂ်း Disk ဢၼ်ၵိုတ်းဝႆႉ ဝၢႆးသေ DELETE ၶေႃႈမုၼ်း",
-    "ၵၢၼ်သၢင်ႈ Table",
-    "ၵၢၼ် Join",
-    "Error"
-  ], "What is fragmentation in a database?"),
+  Quiz(
+    776,
+    "Fragmentation ၼႂ်း DB မၢႆထိုင်သင်?",
+    [
+      "ႁူးပဝ်ႇၼႂ်း Disk",
+      "ၵၢၼ်သၢင်ႈ Table",
+      "ၵၢၼ် Join Data",
+      "ၵၢၼ်ပၼ် Password",
+    ],
+    "What is fragmentation in a database?",
+  ),
 
-  Quiz(777, "Statistics ဢၼ် MySQL ၸႂ်ႉတႃႇ EXPLAIN လုၵ်ႉတီႈလႂ်?", [
-    "တူဝ်ၼပ်ႉဢၼ် ANALYZE TABLE မႄးဝႆႉပၼ်",
-    "လုၵ်ႉတီႈ User",
-    "လုၵ်ႉတီႈ Disk",
-    "Error"
-  ], "Where does MySQL get statistics for the execution plan?"),
+  Quiz(
+    777,
+    "Statistics လုၵ်ႉတီႈလႂ်?",
+    ["ANALYZE TABLE", "User Input", "Disk Space", "CPU Speed"],
+    "Where does MySQL get statistics for the execution plan?",
+  ),
 
   Quiz(778, "KILL [process_id] ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇၵိုတ်း Query ဢၼ်တိုၵ်ႉႁဵတ်းႁႂ်ႈ Server ၼၵ်း ပႅတ်ႈ",
-    "တႃႇယႃႉ Database",
-    "တႃႇ Logout",
-    "Error"
+    "ၵိုတ်း Query ဢၼ်ၼၵ်း",
+    "ယႃႉ Database",
+    "Logout User",
+    "Delete Table",
   ], "What does KILL [process_id] do?"),
 
   Quiz(779, "Maintenance Window မၢႆထိုင်သင်?", [
-    "ၶၢဝ်းယၢမ်းၵူၼ်းၸႂ်ႉဢေႇ ဢၼ်ႁဝ်းၸၢင်ႈမႄး DB လႆႈ",
+    "ၶၢဝ်းယၢမ်းၵူၼ်းၸႂ်ႉဢေႇ",
     "ၼႃႈတၢင်ႇ Computer",
-    "Error",
-    "NULL"
+    "ၶၢဝ်းယၢမ်း SELECT",
+    "ၶၢဝ်းယၢမ်း Backup",
   ], "What is a maintenance window?"),
 
-  Quiz(780, "ႁဵတ်းသင်လႄႈ OPTIMIZE TABLE ၸၢင်ႈႁဵတ်းႁႂ်ႈ App ပႂ်ႉ?", [
-    "ၵွပ်ႈမၼ်းတေ Lock Table တင်းမူတ်း မိူဝ်ႈမၼ်းတႅမ်ႈမႂ်ႇ",
-    "ၵွပ်ႈမၼ်းဝႆး",
-    "ၵွပ်ႈမၼ်းယႃႉ Row",
-    "Error"
-  ], "Why can OPTIMIZE TABLE block an application?"),
+  Quiz(
+    780,
+    "ႁဵတ်းသင် OPTIMIZE TABLE ႁဵတ်းႁႂ်ႈပႂ်ႉ?",
+    ["မၼ်း Lock Table", "မၼ်းဝႆးလူၼ်ႉ", "မၼ်းယႃႉ Row", "မၼ်းပဝ်ႇဝႆႉ"],
+    "Why can OPTIMIZE TABLE block an application?",
+  ),
 
   Quiz(781, "mysqldumpslow ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇလူ Slow Query Log ႁႂ်ႈငၢႆႈလိူဝ်ၵဝ်ႇ",
-    "တႃႇ Backup",
-    "တႃႇ SELECT",
-    "Error"
+    "လူ Slow Log ငၢႆႈငၢႆႈ",
+    "Backup Data",
+    "SELECT ธรรมဒါ",
+    "Update User",
   ], "What is mysqldumpslow used for?"),
 
-  Quiz(782, "InnoDB ဢမ်ႇလူဝ်ႇ OPTIMIZE TABLE ၵူႈဝၼ်း ၵွပ်ႈသင်?", [
-    "ၵွပ်ႈမၼ်းၸတ်းၵၢၼ် Fragmentation လႆးလီယူႇယဝ်ႉ",
-    "ၵွပ်ႈမၼ်းဢမ်ႇမီး Error",
-    "ၵွပ်ႈမၼ်းပဵၼ် NULL",
-    "Error"
-  ], "Why is OPTIMIZE TABLE not always needed for InnoDB?"),
+  Quiz(
+    782,
+    "InnoDB ဢမ်ႇလူဝ်ႇ OPTIMIZE ၵူႈဝၼ်း ၵွပ်ႈသင်?",
+    [
+      "ၸတ်းၵၢၼ်လႆႈလီယူႇယဝ်ႉ",
+      "မၼ်းဢမ်ႇမီး Data",
+      "မၼ်းပဵၼ် NULL",
+      "MySQL ဢမ်ႇပၼ်",
+    ],
+    "Why is OPTIMIZE TABLE not always needed for InnoDB?",
+  ),
 
   Quiz(783, "Log Rotation လွင်ႈယႂ်ႇႁႃႉ?", [
-    "ယႂ်ႇ (တွၼ်ႈတႃႇႁၢမ်ႈ File Log ယႂ်ႇလူၼ်ႉ Disk)",
+    "ယႂ်ႇႁႅင်း",
     "ဢမ်ႇယႂ်ႇ",
-    "Error",
-    "NULL"
+    "ယႂ်ႇၼႂ်း Linux",
+    "ယႂ်ႇၼႂ်း Mac",
   ], "Is log rotation important?"),
 
-  Quiz(784, "Cardinality ဢၼ်ၽိတ်း... ၸၢင်ႈႁဵတ်းသင်?", [
-    "ႁဵတ်းႁႂ်ႈ MySQL လိူၵ်ႈၸႂ်ႉ Index ၽိတ်း သေ Query ၸႃႉ",
-    "ႁဵတ်းႁႂ်ႈ DB ဝႆး",
-    "Error",
-    "NULL"
+  Quiz(784, "Cardinality ဢၼ်ၽိတ်း ၸၢင်ႈႁဵတ်းသင်?", [
+    "MySQL ၸႂ်ႉ Index ၽိတ်း",
+    "DB ဝႆးလိူဝ်ၵဝ်ႇ",
+    "Error ၵမ်းလဵဝ်",
+    "NULL တႃႇသေႇ",
   ], "What can wrong cardinality cause?"),
 
   // --- Lesson 70: Server Tuning (785-800) ---
   Quiz(785, "InnoDB Buffer Pool မၢႆထိုင်သင်?", [
-    "ဢွင်ႈတီႈၼႂ်း RAM ဢၼ်သိမ်း Data လႄႈ Index",
-    "ဢွင်ႈတီႈၼႂ်း Disk",
+    "RAM သိမ်း Data/Index",
+    "Disk သိမ်း Data",
     "File သိမ်း Log",
-    "Error"
+    "User Password",
   ], "What is the InnoDB Buffer Pool?"),
 
-  Quiz(786, "innodb_buffer_pool_size ထုၵ်ႇလီပၼ်ၵႃႈလၢႆ?", [
-    "50% - 80% ႁင်း RAM တင်းမူတ်း (သင်ပဵၼ် DB Server)",
-    "10%",
-    "100%",
-    "Error"
-  ], "What is the recommended size for innodb_buffer_pool_size?"),
+  Quiz(
+    786,
+    "innodb_buffer_pool_size ပၼ်ၵႃႈလၢႆ?",
+    ["50% - 80% ႁင်း RAM", "5% - 10% ႁင်း RAM", "100% ႁင်း RAM", "1GB တႃႇသေႇ"],
+    "What is the recommended size for innodb_buffer_pool_size?",
+  ),
 
-  Quiz(787, "ႁဵတ်းသင်လႄႈ RAM ဝႆးလိူဝ် Disk?", [
-    "ၵွပ်ႈမၼ်းဢမ်ႇမီး Mechanical movement (Electronic speed)",
-    "ၵွပ်ႈမၼ်းပဵၼ်လိၵ်ႈ",
-    "ၵွပ်ႈမၼ်းပႅင်းလိူဝ်",
-    "Error"
+  Quiz(787, "ႁဵတ်းသင် RAM ဝႆးလိူဝ် Disk?", [
+    "Electronic Speed",
+    "မၼ်းပဵၼ်လိၵ်ႈ",
+    "မၼ်းပႅင်းလိူဝ်",
+    "မၼ်းယႂ်ႇလိူဝ်",
   ], "Why is RAM faster than disk?"),
 
   Quiz(788, "Log Buffer ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တွၼ်ႈတႃႇသိမ်း Transaction ဢွၼ်တၢင်းတေတႅမ်ႈလူင်း Disk",
-    "တွၼ်ႈတႃႇသိမ်း SELECT",
-    "Error",
-    "NULL"
+    "သိမ်း Data ဢွၼ်တၢင်း Disk",
+    "သိမ်း SELECT",
+    "သိမ်း Password",
+    "သိမ်း User ID",
   ], "What is the Log Buffer used for?"),
 
   Quiz(789, "sort_buffer_size ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "Memory တွၼ်ႈတႃႇၸတ်းၵၢၼ် Sort ႁင်း User ၵေႃႉပၼ်ၵေႃႉ",
+    "Memory တႃႇ Sort",
     "Memory တႃႇ Backup",
-    "Error",
-    "NULL"
+    "Memory တႃႇ Delete",
+    "Memory တႃႇ Login",
   ], "What is sort_buffer_size used for?"),
 
-  Quiz(790, "သင်ပၼ် Memory ပၼ် Connection ၼမ်လူၼ်ႉၵႂႃႇ... တေပဵၼ်သင်?", [
-    "RAM တေပွတ်း (Exhausted) သေ Server တေ Crash",
-    "Query တေဝႆး",
-    "Error",
-    "NULL"
-  ], "What happens if connection buffers are too large?"),
+  Quiz(
+    790,
+    "သင်ပၼ် Buffer ၼမ်လူၼ်ႉ တေပဵၼ်သင်?",
+    [
+      "RAM သုတ်း သေ Server Crash",
+      "Query ဝႆးလိူဝ်",
+      "Backup ဝႆးလိူဝ်",
+      "SELECT ဝႆးလိူဝ်",
+    ],
+    "What happens if connection buffers are too large?",
+  ),
 
   Quiz(791, "Swapping ၼႂ်း OS မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ဢဝ် Disk မႃးၸႂ်ႉတႅၼ်း RAM (ၸႃႉႁႅင်း)",
-    "ၵၢၼ်လႅၵ်ႈ Computer",
-    "ၵၢၼ် UPDATE",
-    "Error"
+    "Disk ၸႂ်ႉတႅၼ်း RAM",
+    "လႅၵ်ႈ Computer",
+    "UPDATE Data",
+    "Backup Data",
   ], "What is swapping in an OS context?"),
 
   Quiz(792, "Warm-up Period မၢႆထိုင်သင်?", [
-    "ၶၢဝ်းယၢမ်းဢၼ် MySQL ဢဝ်ၶေႃႈမုၼ်းၶိုၼ်း RAM ဝၢႆး Restart",
+    "ဢဝ် Data ၶိုၼ်း RAM",
     "ၶၢဝ်းယၢမ်း SELECT",
-    "Error",
-    "NULL"
+    "ၶၢဝ်းယၢမ်း Error",
+    "ၶၢဝ်းယၢမ်း Backup",
   ], "What is a database warm-up period?"),
 
-  Quiz(793, "innodb_flush_log_at_trx_commit ၸွႆႈသင်?", [
-    "ၸတ်းၵၢၼ် တၢင်းမၼ်ႈၵိုမ်း (Durability) တႅၵ်ႈတင်း တၢင်းဝႆး",
-    "ၸတ်းၵၢၼ် User",
-    "Error",
-    "NULL"
-  ], "What does innodb_flush_log_at_trx_commit control?"),
+  Quiz(
+    793,
+    "innodb_flush_log_at_trx_commit ...?",
+    ["ၸတ်း Durability/Speed", "ၸတ်း User", "ၸတ်း Database", "ၸတ်း Password"],
+    "What does innodb_flush_log_at_trx_commit control?",
+  ),
 
   Quiz(794, "Buffer Pool Hit Rate မၢႆထိုင်သင်?", [
-    "တူဝ်ၼပ်ႉ % ဢၼ် MySQL ႁႃၶေႃႈမုၼ်းႁၼ်ၼႂ်း RAM",
-    "တူဝ်ၼပ်ႉ Error",
-    "Error",
-    "NULL"
+    "% ႁႃႁၼ်ၼႂ်း RAM",
+    "% Error",
+    "% Backup",
+    "% Delete",
   ], "What is the Buffer Pool Hit Rate?"),
 
-  Quiz(795, "Hit Rate ၵႃႈလၢႆ ဢၼ်ထုၵ်ႇလီပဵၼ် (Good Performance)?", [
+  Quiz(795, "Hit Rate ၵႃႈလၢႆ ဢၼ်လီ (Good)?", [
     "95% - 99%",
     "10%",
     "50%",
-    "Error"
+    "75%",
   ], "What is a good Buffer Pool Hit Rate?"),
 
-  Quiz(796, "Query Cache ၼႂ်း MySQL 8.0 ထုၵ်ႇယႃႉပႅတ်ႈ ၵွပ်ႈသင်?", [
-    "ၵွပ်ႈမၼ်းပဵၼ် Bottleneck တႃႇ Multi-core CPUs",
-    "ၵွပ်ႈမၼ်းဝႆးလူၼ်ႉ",
-    "ၵွပ်ႈမၼ်းမီး Error",
-    "Error"
-  ], "Why was Query Cache removed in MySQL 8.0?"),
+  Quiz(
+    796,
+    "MySQL 8 ယႃႉ Query Cache ပႅတ်ႈ ၵွပ်ႈသင်?",
+    [
+      "ပဵၼ် Bottleneck တႃႇ CPU",
+      "မၼ်းဝႆးလူၼ်ႉ",
+      "မၼ်းမီး Error",
+      "User ဢမ်ႇလႆႈၸႂ်ႉ",
+    ],
+    "Why was Query Cache removed in MySQL 8.0?",
+  ),
 
   Quiz(797, "Thread Cache ၸွႆႈသင်?", [
-    "ၸွႆႈသိမ်း Connection ဢၼ်ယဝ်ႉၵႂႃႇယဝ်ႉ တႃႇဢဝ်မႃးၸႂ်ႉၶိုၼ်း",
-    "ၸွႆႈယႃႉ User",
-    "Error",
-    "NULL"
+    "သိမ်း Connection ၵဝ်ႇ",
+    "ယႃႉ User",
+    "INSERT Data",
+    "SELECT Data",
   ], "What is the Thread Cache for?"),
 
-  Quiz(798, "innodb_file_per_table ၸွႆႈသင်?", [
-    "ႁႂ်း Table ၵူႈဢၼ် မီး File .ibd ႁင်းမၼ်း (ၸတ်းၵၢၼ်ငၢႆႈ)",
-    "ႁႂ်ႈ Table ႁူမ်ႈၵၼ်",
-    "Error",
-    "NULL"
-  ], "What is the benefit of innodb_file_per_table?"),
+  Quiz(
+    798,
+    "innodb_file_per_table ၸွႆႈသင်?",
+    ["Table မီး File .ibd ႁင်း", "Table ႁူမ်ႈၵၼ်", "ယႃႉ Table", "Backup Data"],
+    "What is the benefit of innodb_file_per_table?",
+  ),
 
-  Quiz(799, "သင် RAM သုတ်း... MySQL တေႁဵတ်းသင်?", [
-    "OS ၸၢင်ႈသင်ႇ Kill (OOM Killer) ဢမ်ႇၼၼ် ၸႃႉႁႅင်း (Swap)",
-    "မၼ်းတေတႅမ်ႈဝႆးလိူဝ်ၵဝ်ႇ",
-    "Error",
-    "NULL"
-  ], "What happens if MySQL runs out of RAM?"),
+  Quiz(
+    799,
+    "သင် RAM သဵင်ႈၵႂႃႇ MySQL တေပဵၼ်သင်?",
+    ["OS ၸၢင်ႈ Kill", "ဝႆးလိူဝ်ၵဝ်ႇ", "Backup ႁင်းမၼ်း", "UPDATE Data"],
+    "What happens if MySQL runs out of RAM?",
+  ),
 
-  Quiz(800, "ယဝ်ႉယဝ်ႉ MySQL Course! Tuning ၸွႆႈသင်?", [
-    "ၸွႆႈႁႂ်ႈ Database ၸႂ်ႉ Resource လႆႈတဵမ်တီႈ လႄႈ ဝႆးသုတ်း",
-    "ၸွႆႈ INSERT ၵူၺ်း",
-    "ၸွႆႈ SELECT ธรรมဒါ",
-    "Error"
-  ], "Course complete! What is the goal of server tuning?")
+  Quiz(800, "Server Tuning ၸွႆႈသင်?", [
+    "ၸႂ်ႉ Resource တဵမ်တီႈ",
+    "INSERT ၵူၺ်း",
+    "SELECT မူတ်း",
+    "Backup Data",
+  ], "What is the goal of server tuning?"),
 ];
 List<List<Quiz>> mysqlQuizzes = [
   mysqlQuizM1,
