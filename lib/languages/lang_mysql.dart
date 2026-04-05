@@ -166,6 +166,13 @@ final Map<int, Lesson> mysqlLessons = {
   61: Lesson(7, 61),
   62: Lesson(7, 62),
   63: Lesson(7, 63),
+  64: Lesson(8, 64),
+  65: Lesson(8, 65),
+  66: Lesson(8, 66),
+  67: Lesson(8, 67),
+  68: Lesson(8, 68),
+  69: Lesson(8, 69),
+  70: Lesson(8, 70),
 };
 
 List<Quiz> mysqlQuizM1 = [
@@ -5567,254 +5574,299 @@ List<Quiz> mysqlQuizM7 = [
     "ၸုမ်းၵၢၼ်ႁဵတ်းၵၢၼ် SQL ဢၼ်ၼပ်ႉပဵၼ်ၵၢၼ်ဢၼ်လဵဝ်ၵၼ် (All or Nothing)",
     "ၵၢၼ် SELECT ၶေႃႈမုၼ်းလၢႆ Table",
     "ၵၢၼ် Backup ၶေႃႈမုၼ်း",
-    "ၵၢၼ်ယႃႉ Database"
+    "ၵၢၼ်ယႃႉ Database",
   ], "What is a Transaction in SQL?"),
 
-  Quiz(627, "ACID Properties ပႃးတူဝ်လိၵ်ႈသင်လၢႆလၢႆ?", [
-    "Atomicity, Consistency, Isolation, Durability",
-    "Access, Control, Input, Data",
-    "Auto, Commit, Insert, Delete",
-    "Account, Check, ID, Database"
-  ], "What do the ACID properties stand for?"),
+  Quiz(
+    627,
+    "ACID Properties ပႃးတူဝ်လိၵ်ႈသင်လၢႆလၢႆ?",
+    [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Access, Control, Input, Data",
+      "Auto, Commit, Insert, Delete",
+      "Account, Check, ID, Database",
+    ],
+    "What do the ACID properties stand for?",
+  ),
 
   Quiz(628, "Atomicity မၢႆထိုင်သင်?", [
     "ၵၢၼ်ႁဵတ်းၵၢၼ်တေလႆႈယဝ်ႉတင်းမူတ်း ဢမ်ႇၼၼ် ဢမ်ႇယဝ်ႉသေဢၼ်",
     "ၵၢၼ်သိမ်းၶေႃႈမုၼ်းဝႆႉတႃႇသေႇ",
     "ၵၢၼ်ၸႅၵ်ႇ Transaction ဢွၵ်ႇၵၼ်",
-    "ၵၢၼ်ၼပ်ႉ Atom ၼႂ်း Data"
+    "ၵၢၼ်ၼပ်ႉ Atom ၼႂ်း Data",
   ], "What does Atomicity mean?"),
 
   Quiz(629, "Durability မၢႆထိုင်သင်?", [
     "ၶေႃႈမုၼ်းဢၼ် Commit ယဝ်ႉ တေလႆႈယူႇဝႆႉတႃႇသေႇ ဢမ်ႇဝႃႈၾႆးတေတၢႆ",
     "ၵၢၼ်ယႃႉၶေႃႈမုၼ်းပႅတ်ႉ",
     "ၵၢၼ်ၸႅၵ်ႇ User",
-    "ၵၢၼ် SELECT ဝႆးဝႆး"
+    "ၵၢၼ် SELECT ဝႆးဝႆး",
   ], "What does Durability mean?"),
 
-  Quiz(630, "MySQL Engine ဢၼ်လႂ် ဢၼ်ၸႂ်ႉ Transaction လႆႈ?", [
-    "InnoDB",
-    "MyISAM",
-    "MEMORY",
-    "CSV"
-  ], "Which MySQL engine supports transactions?"),
+  Quiz(
+    630,
+    "MySQL Engine ဢၼ်လႂ် ဢၼ်ၸႂ်ႉ Transaction လႆႈ?",
+    ["InnoDB", "MyISAM", "MEMORY", "CSV"],
+    "Which MySQL engine supports transactions?",
+  ),
 
   Quiz(631, "Consistency ၼႂ်း ACID ၸွႆႈသင်?", [
     "မၼ်ႈၸႂ်ဝႃႈၶေႃႈမုၼ်းမၢၼ်ႇမႅၼ်ႈၸွမ်းပၵ်းၵၢၼ် (Constraints) တႃႇသေႇ",
     "ၸွႆႈႁႂ်ႈ SELECT ဝႆး",
     "ၸွႆႈယႃႉ Row",
-    "ၸွႆႈ Backup"
+    "ၸွႆႈ Backup",
   ], "What does Consistency ensure in ACID?"),
 
   Quiz(632, "Isolation ၼႂ်း ACID ၸွႆႈသင်?", [
     "ႁႄႉၵင်ႈဢမ်ႇႁႂ်ႈ Transaction သွင်ဢၼ် ယုင်ႈယၢင်ႈၵၼ်",
     "ၸွႆႈသိမ်းၶေႃႈမုၼ်းၼႂ်း Disk",
     "ၸွႆႈပၼ် Password",
-    "ၸွႆႈ Join Table"
+    "ၸွႆႈ Join Table",
   ], "What does Isolation ensure in ACID?"),
 
-  Quiz(633, "သင် Transaction ၼိုင်ႈဢၼ် ႁဵတ်းၵၢၼ်ယဝ်ႉၵႂႃႇၶိုင်ႈၼိုင်ႈ သေ Error... တေပဵၼ်သင်?", [
-    "တေလႆႈ ROLLBACK ပိၼ်ႇၶိုၼ်းတင်းမူတ်း (Atomicity)",
-    "မၼ်းတေသိမ်းဝႆႉၶိုင်ႈၼိုင်ႈ",
-    "မၼ်းတေ SELECT ၶိုၼ်း",
-    "Error"
-  ], "What happens if a transaction fails halfway?"),
+  Quiz(
+    633,
+    "သင် Transaction ၼိုင်ႈဢၼ် ႁဵတ်းၵၢၼ်ယဝ်ႉၵႂႃႇၶိုင်ႈၼိုင်ႈ သေ Error... တေပဵၼ်သင်?",
+    [
+      "တေလႆႈ ROLLBACK ပိၼ်ႇၶိုၼ်းတင်းမူတ်း (Atomicity)",
+      "မၼ်းတေသိမ်းဝႆႉၶိုင်ႈၼိုင်ႈ",
+      "မၼ်းတေ SELECT ၶိုၼ်း",
+      "Error",
+    ],
+    "What happens if a transaction fails halfway?",
+  ),
 
-  Quiz(634, "ႁဵတ်းသင်လႄႈ Transactions လွင်ႈယႂ်ႇတွၼ်ႈတႃႇ App ၵၢၼ်ငိုၼ်း?", [
-    "တွၼ်ႈတႃႇႁႄႉၵင်ႈငိုၼ်းႁၢႆ မိူဝ်ႈသူင်ႇငိုၼ်းဢမ်ႇယဝ်ႉတူဝ်ႈ",
-    "တွၼ်ႈတႃႇႁႂ်ႈတႅမ်ႈ Code ငၢႆႈ",
-    "တွၼ်ႈတႃႇယႃႉ Database",
-    "Error"
-  ], "Why are transactions important for banking apps?"),
+  Quiz(
+    634,
+    "ႁဵတ်းသင်လႄႈ Transactions လွင်ႈယႂ်ႇတွၼ်ႈတႃႇ App ၵၢၼ်ငိုၼ်း?",
+    [
+      "တွၼ်ႈတႃႇႁႄႉၵင်ႈငိုၼ်းႁၢႆ မိူဝ်ႈသူင်ႇငိုၼ်းဢမ်ႇယဝ်ႉတူဝ်ႈ",
+      "တွၼ်ႈတႃႇႁႂ်ႈတႅမ်ႈ Code ငၢႆႈ",
+      "တွၼ်ႈတႃႇယႃႉ Database",
+      "Error",
+    ],
+    "Why are transactions important for banking apps?",
+  ),
 
-  Quiz(635, "InnoDB ပဵၼ် Default Storage Engine ႁင်း MySQL ၸႂ်ႉႁႃႉ?", [
-    "ၸႂ်ႉ",
-    "ဢမ်ႇၸႂ်ႉ",
-    "ၸႂ်ႉၵူၺ်းၼႂ်း Mac",
-    "Error"
-  ], "Is InnoDB the default storage engine in modern MySQL?"),
+  Quiz(
+    635,
+    "InnoDB ပဵၼ် Default Storage Engine ႁင်း MySQL ၸႂ်ႉႁႃႉ?",
+    ["ၸႂ်ႉ", "ဢမ်ႇၸႂ်ႉ", "ၸႂ်ႉၵူၺ်းၼႂ်း Mac", "Error"],
+    "Is InnoDB the default storage engine in modern MySQL?",
+  ),
 
-  Quiz(636, "Single Unit of Work မၢႆထိုင်သင်?", [
-    "ၵၢၼ်ၼပ်ႉ Transaction ပဵၼ်ၵၢၼ်ဢၼ်လဵဝ်ၵၼ်",
-    "ၵၢၼ်ႁဵတ်းၵၢၼ် 1 Column",
-    "ၵၢၼ် SELECT 1 Row",
-    "Error"
-  ], "What does 'Single Unit of Work' refer to?"),
+  Quiz(
+    636,
+    "Single Unit of Work မၢႆထိုင်သင်?",
+    [
+      "ၵၢၼ်ၼပ်ႉ Transaction ပဵၼ်ၵၢၼ်ဢၼ်လဵဝ်ၵၼ်",
+      "ၵၢၼ်ႁဵတ်းၵၢၼ် 1 Column",
+      "ၵၢၼ် SELECT 1 Row",
+      "Error",
+    ],
+    "What does 'Single Unit of Work' refer to?",
+  ),
 
-  Quiz(637, "ACID Property လႂ် ဢၼ်ၵွင်ႉၵၢႆႇတင်းၵၢၼ် Lock ၶေႃႈမုၼ်း?", [
-    "Isolation",
-    "Atomicity",
-    "Durability",
-    "Error"
-  ], "Which ACID property is related to locking data?"),
+  Quiz(
+    637,
+    "ACID Property လႂ် ဢၼ်ၵွင်ႉၵၢႆႇတင်းၵၢၼ် Lock ၶေႃႈမုၼ်း?",
+    ["Isolation", "Atomicity", "Durability", "Error"],
+    "Which ACID property is related to locking data?",
+  ),
 
   // --- Lesson 59: Transaction Control (638-649) ---
   Quiz(638, "COMMIT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇသိမ်းၶေႃႈမုၼ်းၼႂ်း Transaction ႁႂ်ႈပဵၼ်ဢၼ်တႄႇတႄႉ (Permanent)",
     "တႃႇပိၼ်ႇၶေႃႈမုၼ်းၶိုၼ်း",
     "တႃႇတႄႇ Transaction",
-    "Error"
+    "Error",
   ], "What is the purpose of COMMIT?"),
 
   Quiz(639, "ROLLBACK ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇယႃႉၵၢၼ်ႁဵတ်းၵၢၼ်သေ ပိၼ်ႇၶေႃႈမုၼ်းၶိုၼ်းၸူးတီႈၵဝ်ႇ",
     "တႃႇသိမ်းၶေႃႈမုၼ်း",
     "တႃႇသၢင်ႈ Table",
-    "Error"
+    "Error",
   ], "What is the purpose of ROLLBACK?"),
 
   Quiz(640, "START TRANSACTION ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇတႄႇပိုတ်ႇတွၼ်ႈၵၢၼ်ႁဵတ်း Transaction",
     "တႃႇယႃႉ Database",
     "တႃႇ COMMIT ၶေႃႈမုၼ်း",
-    "Error"
+    "Error",
   ], "What does START TRANSACTION do?"),
 
   Quiz(641, "SAVEPOINT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇမၢႆဝႆႉၵႄႈၵၢင်တၢင်း ၼႂ်း Transaction ဢၼ်ယၢဝ်း",
     "တႃႇပၼ် Password",
     "တႃႇယႃႉ Row",
-    "Error"
+    "Error",
   ], "What is a SAVEPOINT used for?"),
 
   Quiz(642, "ROLLBACK TO SAVEPOINT ႁဵတ်းသင်?", [
     "ပိၼ်ႇၶေႃႈမုၼ်းၶိုၼ်းၵူၺ်းၸူးတီႈဢၼ်မၢႆဝႆႉ",
     "ပိၼ်ႇၶိုၼ်းတင်းမူတ်း",
     "သိမ်းၶေႃႈမုၼ်း",
-    "Error"
+    "Error",
   ], "What does ROLLBACK TO SAVEPOINT do?"),
 
   Quiz(643, "Auto-commit Mode မၢႆထိုင်သင်?", [
     "MySQL တေ COMMIT ၵူႈ Command ႁင်းမၼ်းၵမ်းလဵဝ်",
     "MySQL တေ ROLLBACK တႃႇသေႇ",
     "ၵၢၼ် Backup ႁင်းမၼ်း",
-    "Error"
+    "Error",
   ], "What is auto-commit mode?"),
 
-  Quiz(644, "သင်ၸဝ်ႈၵဝ်ႇ COMMIT ယဝ်ႉ... ROLLBACK တေၸွႆႈလႆႈႁႃႉ?", [
-    "ဢမ်ႇလႆႈယဝ်ႉ (ၶေႃႈမုၼ်းသိမ်းတႄႇယဝ်ႉ)",
-    "လႆႈ",
-    "လႆႈၵူၺ်းၼႂ်း 1 မိၼတ်ႉ",
-    "Error"
-  ], "Can you ROLLBACK after a COMMIT?"),
+  Quiz(
+    644,
+    "သင်ၸဝ်ႈၵဝ်ႇ COMMIT ယဝ်ႉ... ROLLBACK တေၸွႆႈလႆႈႁႃႉ?",
+    [
+      "ဢမ်ႇလႆႈယဝ်ႉ (ၶေႃႈမုၼ်းသိမ်းတႄႇယဝ်ႉ)",
+      "လႆႈ",
+      "လႆႈၵူၺ်းၼႂ်း 1 မိၼတ်ႉ",
+      "Error",
+    ],
+    "Can you ROLLBACK after a COMMIT?",
+  ),
 
   Quiz(645, "Implicit Commit မၢႆထိုင်သင်?", [
     "MySQL သင်ႇ COMMIT ႁင်းမၼ်း မိူဝ်ႈႁဝ်းၸႂ်ႉ Command မိူၼ် CREATE/DROP",
     "ၵၢၼ်တႅမ်ႈ COMMIT ႁင်းတူဝ်",
     "ၵၢၼ် Error",
-    "Error"
+    "Error",
   ], "What is an implicit commit?"),
 
-  Quiz(646, "သင် Internet ၶၢတ်ႇၵႂႃႇ ၵႄႈၵၢင် Transaction... MySQL တေႁဵတ်းသင်?", [
-    "ROLLBACK ႁင်းမၼ်း (Automatic Rollback)",
-    "COMMIT ႁင်းမၼ်း",
-    "ပႂ်ႉတေႃႇပေႃး Internet မႃး",
-    "Error"
-  ], "What does MySQL do if a connection is lost during a transaction?"),
+  Quiz(
+    646,
+    "သင် Internet ၶၢတ်ႇၵႂႃႇ ၵႄႈၵၢင် Transaction... MySQL တေႁဵတ်းသင်?",
+    [
+      "ROLLBACK ႁင်းမၼ်း (Automatic Rollback)",
+      "COMMIT ႁင်းမၼ်း",
+      "ပႂ်ႉတေႃႇပေႃး Internet မႃး",
+      "Error",
+    ],
+    "What does MySQL do if a connection is lost during a transaction?",
+  ),
 
   Quiz(647, "SET autocommit = 0; မၢႆထိုင်သင်?", [
     "ပိတ်း Auto-commit သေလူဝ်ႇတႅမ်ႈ COMMIT ႁင်းတူဝ်",
     "ပိုတ်ႇ Auto-commit",
     "ယႃႉ Database",
-    "Error"
+    "Error",
   ], "What does SET autocommit = 0 do?"),
 
-  Quiz(648, "Transaction လုၵ်းၼိုင်ႈ ၸၢင်ႈမီးလၢႆလၢႆ SAVEPOINT လႆႈႁႃႉ?", [
-    "လႆႈ",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်း 1 ဢၼ်",
-    "Error"
-  ], "Can a transaction have multiple savepoints?"),
+  Quiz(
+    648,
+    "Transaction လုၵ်းၼိုင်ႈ ၸၢင်ႈမီးလၢႆလၢႆ SAVEPOINT လႆႈႁႃႉ?",
+    ["လႆႈ", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်း 1 ဢၼ်", "Error"],
+    "Can a transaction have multiple savepoints?",
+  ),
 
-  Quiz(649, "ၶေႃႈမုၼ်းၼႂ်း Transaction တေၼႄပၼ် User တၢင်ႇၵေႃႉမိူဝ်ႈလႂ်?", [
-    "ဝၢႆးသေသင်ႇ COMMIT ယဝ်ႉ",
-    "မိူဝ်ႈ UPDATE ယဝ်ႉၵမ်းလဵဝ်",
-    "မိူဝ်ႈ START TRANSACTION",
-    "Error"
-  ], "When do transaction changes become visible to other users?"),
+  Quiz(
+    649,
+    "ၶေႃႈမုၼ်းၼႂ်း Transaction တေၼႄပၼ် User တၢင်ႇၵေႃႉမိူဝ်ႈလႂ်?",
+    [
+      "ဝၢႆးသေသင်ႇ COMMIT ယဝ်ႉ",
+      "မိူဝ်ႈ UPDATE ယဝ်ႉၵမ်းလဵဝ်",
+      "မိူဝ်ႈ START TRANSACTION",
+      "Error",
+    ],
+    "When do transaction changes become visible to other users?",
+  ),
 
   // --- Lesson 60: Isolation Levels (650-661) ---
   Quiz(650, "Dirty Read မၢႆထိုင်သင်?", [
     "ၵၢၼ်လူႁၼ်ၶေႃႈမုၼ်း ဢၼ်ပိူၼ်ႈတိုၵ်ႉမႄးယူႇ သေဢမ်ႇပႆႇ Commit",
     "ၵၢၼ်လူၶေႃႈမုၼ်းဢၼ်မၢၼ်ႇ",
     "ၵၢၼ်ယႃႉ Table",
-    "Error"
+    "Error",
   ], "What is a Dirty Read?"),
 
-  Quiz(651, "Default Isolation Level ႁင်း MySQL (InnoDB) ပဵၼ်ဢၼ်လႂ်?", [
-    "REPEATABLE READ",
-    "READ COMMITTED",
-    "SERIALIZABLE",
-    "READ UNCOMMITTED"
-  ], "What is the default isolation level in MySQL?"),
+  Quiz(
+    651,
+    "Default Isolation Level ႁင်း MySQL (InnoDB) ပဵၼ်ဢၼ်လႂ်?",
+    ["REPEATABLE READ", "READ COMMITTED", "SERIALIZABLE", "READ UNCOMMITTED"],
+    "What is the default isolation level in MySQL?",
+  ),
 
-  Quiz(652, "SERIALIZABLE Isolation Level လီၸိူင်ႉႁိုဝ်?", [
-    "မၼ်ႈၵိုမ်းသုတ်း လႄႈ ႁႄႉၵင်ႈလႆႈၵူႈပၼ်ႁႃ (ၵူၺ်းၵႃႈ ၸႃႉ)",
-    "ဝႆးသုတ်း",
-    "ပၼ် Dirty Read",
-    "Error"
-  ], "What is the characteristic of the SERIALIZABLE isolation level?"),
+  Quiz(
+    652,
+    "SERIALIZABLE Isolation Level လီၸိူင်ႉႁိုဝ်?",
+    [
+      "မၼ်ႈၵိုမ်းသုတ်း လႄႈ ႁႄႉၵင်ႈလႆႈၵူႈပၼ်ႁႃ (ၵူၺ်းၵႃႈ ၸႃႉ)",
+      "ဝႆးသုတ်း",
+      "ပၼ် Dirty Read",
+      "Error",
+    ],
+    "What is the characteristic of the SERIALIZABLE isolation level?",
+  ),
 
   Quiz(653, "Phantom Read ပဵၼ်မိူဝ်ႈလႂ်?", [
     "မိူဝ်ႈလူႁၼ် 'ထႅဝ်မႂ်ႇ' ဢွၵ်ႇမႃး ၵွပ်ႈမီးပိူၼ်ႈမႃး INSERT ၵႄႈၵၢင်တၢင်း",
     "မိူဝ်ႈလူဢမ်ႇလႆႈ",
     "မိူဝ်ႈ Error",
-    "Error"
+    "Error",
   ], "When does a Phantom Read occur?"),
 
-  Quiz(654, "Isolation Level လႂ် ဢၼ်ပၼ်ႁႂ်ႈပဵၼ် Dirty Read?", [
-    "READ UNCOMMITTED",
-    "READ COMMITTED",
-    "REPEATABLE READ",
-    "Error"
-  ], "Which isolation level allows dirty reads?"),
+  Quiz(
+    654,
+    "Isolation Level လႂ် ဢၼ်ပၼ်ႁႂ်ႈပဵၼ် Dirty Read?",
+    ["READ UNCOMMITTED", "READ COMMITTED", "REPEATABLE READ", "Error"],
+    "Which isolation level allows dirty reads?",
+  ),
 
   Quiz(655, "Deadlock ပဵၼ်မိူဝ်ႈလႂ်?", [
     "မိူဝ်ႈ Transaction သွင်ဢၼ် ပႂ်ႉ Lock ၵၼ်ၵႂႃႇမႃး တေႃႇပေႃးၶႅင်",
     "မိူဝ်ႈ COMMIT ယဝ်ႉ",
     "မိူဝ်ႈ SELECT ၼမ်",
-    "Error"
+    "Error",
   ], "When does a Deadlock occur?"),
 
   Quiz(656, "Non-repeatable Read မၢႆထိုင်သင်?", [
     "လူထႅဝ်လဵဝ်ၵၼ် သွင်ပွၵ်ႈ ၵူၺ်းၵႃႈၵႃႈၶၼ်လႅၵ်ႈလၢႆႈၵႂႃႇ",
     "လူဢမ်ႇႁၼ်",
     "လူလႆႈတႃႇသေႇ",
-    "Error"
+    "Error",
   ], "What is a Non-repeatable Read?"),
 
-  Quiz(657, "ႁဵတ်းသင်လႄႈ SERIALIZABLE ၸၢင်ႈႁဵတ်းႁႂ်ႈ App ၸႃႉ?", [
-    "ၵွပ်ႈမၼ်းတေ Lock Table ၼမ်လိူဝ်ပိူၼ်ႈ သေပိူၼ်ႈလႆႈပႂ်ႉ",
-    "ၵွပ်ႈမၼ်းပဵၼ် Command မႂ်ႇ",
-    "ၵွပ်ႈမၼ်းယႃႉ Row",
-    "Error"
-  ], "Why can SERIALIZABLE slow down an app?"),
+  Quiz(
+    657,
+    "ႁဵတ်းသင်လႄႈ SERIALIZABLE ၸၢင်ႈႁဵတ်းႁႂ်ႈ App ၸႃႉ?",
+    [
+      "ၵွပ်ႈမၼ်းတေ Lock Table ၼမ်လိူဝ်ပိူၼ်ႈ သေပိူၼ်ႈလႆႈပႂ်ႉ",
+      "ၵွပ်ႈမၼ်းပဵၼ် Command မႂ်ႇ",
+      "ၵွပ်ႈမၼ်းယႃႉ Row",
+      "Error",
+    ],
+    "Why can SERIALIZABLE slow down an app?",
+  ),
 
   Quiz(658, "Concurrency Control မၢႆထိုင်သင်?", [
     "ၵၢၼ်ၸတ်းၵၢၼ် ႁႂ်ႈ User လၢႆၵေႃႉ ၸႂ်ႉ DB ႁူမ်ႈၵၼ်လႆႈ လွတ်ႈၽေး",
     "ၵၢၼ် Backup",
     "ၵၢၼ် DELETE",
-    "Error"
+    "Error",
   ], "What is concurrency control?"),
 
-  Quiz(659, "SET TRANSACTION ISOLATION LEVEL ... ၸႂ်ႉမိူဝ်ႈလႂ်?", [
-    "ဢွၼ်တၢင်းတေ START TRANSACTION",
-    "ဝၢႆးသေ COMMIT",
-    "မိူဝ်ႈ Error",
-    "Error"
-  ], "When should you set the transaction isolation level?"),
+  Quiz(
+    659,
+    "SET TRANSACTION ISOLATION LEVEL ... ၸႂ်ႉမိူဝ်ႈလႂ်?",
+    ["ဢွၼ်တၢင်းတေ START TRANSACTION", "ဝၢႆးသေ COMMIT", "မိူဝ်ႈ Error", "Error"],
+    "When should you set the transaction isolation level?",
+  ),
 
-  Quiz(660, "MySQL InnoDB ၵႄႈပၼ်ႁႃ Phantom Read ၼႂ်း REPEATABLE READ လႆႈႁႃႉ?", [
-    "လႆႈ (ၸႂ်ႉ Next-key locking)",
-    "ဢမ်ႇလႆႈ",
-    "လႆႈၵူၺ်းမၢင်ပွၵ်ႈ",
-    "Error"
-  ], "Does MySQL InnoDB handle Phantom Reads in REPEATABLE READ?"),
+  Quiz(
+    660,
+    "MySQL InnoDB ၵႄႈပၼ်ႁႃ Phantom Read ၼႂ်း REPEATABLE READ လႆႈႁႃႉ?",
+    ["လႆႈ (ၸႂ်ႉ Next-key locking)", "ဢမ်ႇလႆႈ", "လႆႈၵူၺ်းမၢင်ပွၵ်ႈ", "Error"],
+    "Does MySQL InnoDB handle Phantom Reads in REPEATABLE READ?",
+  ),
 
   Quiz(661, "Read Phenomena မၢႆထိုင်သင်?", [
     "ပၼ်ႁႃၵၢၼ်လူၶေႃႈမုၼ်း ဢၼ်ပဵၼ်လႆႈၼႂ်း Concurrency",
     "ၵၢၼ်လူလိၵ်ႈ",
     "ၵၢၼ် SELECT ธรรมဒါ",
-    "Error"
+    "Error",
   ], "What is Read Phenomena?"),
 
   // --- Lesson 61: Access Control (662-673) ---
@@ -5822,169 +5874,209 @@ List<Quiz> mysqlQuizM7 = [
     "တႃႇသၢင်ႈ User မႂ်ႇ ၼႂ်း Database",
     "တႃႇသၢင်ႈ Table",
     "တႃႇပၼ် Permission",
-    "Error"
+    "Error",
   ], "What is CREATE USER used for?"),
 
   Quiz(663, "GRANT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇပၼ်သုၼ်ႇ (Privileges) ပၼ် User",
     "တႃႇယႃႉ User",
     "တႃႇပိတ်း Database",
-    "Error"
+    "Error",
   ], "What is the purpose of GRANT?"),
 
   Quiz(664, "REVOKE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇသိပ်းသုၼ်ႇ (Remove privileges) ၶိုၼ်း",
     "တႃႇပၼ်သုၼ်ႇ",
     "တႃႇသၢင်ႈ User",
-    "Error"
+    "Error",
   ], "What is the purpose of REVOKE?"),
 
-  Quiz(665, "'user'@'localhost' မၢႆထိုင်သင်?", [
-    "User ၼႆႉ Login ၶဝ်ႈလႆႈၵူၺ်း ၼႂ်း Server တူဝ်မၼ်း",
-    "ၶဝ်ႈလႆႈၵူႈတီႈ",
-    "ၶဝ်ႈဢမ်ႇလႆႈ",
-    "Error"
-  ], "What does '@localhost' mean in a username?"),
+  Quiz(
+    665,
+    "'user'@'localhost' မၢႆထိုင်သင်?",
+    [
+      "User ၼႆႉ Login ၶဝ်ႈလႆႈၵူၺ်း ၼႂ်း Server တူဝ်မၼ်း",
+      "ၶဝ်ႈလႆႈၵူႈတီႈ",
+      "ၶဝ်ႈဢမ်ႇလႆႈ",
+      "Error",
+    ],
+    "What does '@localhost' mean in a username?",
+  ),
 
   Quiz(666, "'user'@'%' မၢႆထိုင်သင်?", [
     "User ၼႆႉ Login ၶဝ်ႈလႆႈလုၵ်ႉတီႈ Computer ၵူႈတီႈ (Remote)",
     "ၶဝ်ႈလႆႈၵူၺ်းၼႂ်း Server",
     "Password",
-    "Error"
+    "Error",
   ], "What does '@%' mean in a username?"),
 
-  Quiz(667, "Principle of Least Privilege မၢႆထိုင်သင်?", [
-    "ပၼ်သုၼ်ႇဢေႇသုတ်း ဢၼ်ၶဝ်လူဝ်ႇၸႂ်ႉၵူၺ်း",
-    "ပၼ်သုၼ်ႇၵူႈယၢင်ႇ",
-    "ယႃႉသုၼ်ႇတင်းမူတ်း",
-    "Error"
-  ], "What is the Principle of Least Privilege?"),
+  Quiz(
+    667,
+    "Principle of Least Privilege မၢႆထိုင်သင်?",
+    [
+      "ပၼ်သုၼ်ႇဢေႇသုတ်း ဢၼ်ၶဝ်လူဝ်ႇၸႂ်ႉၵူၺ်း",
+      "ပၼ်သုၼ်ႇၵူႈယၢင်ႇ",
+      "ယႃႉသုၼ်ႇတင်းမူတ်း",
+      "Error",
+    ],
+    "What is the Principle of Least Privilege?",
+  ),
 
-  Quiz(668, "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇယႃႉ User?", [
-    "DROP USER",
-    "DELETE USER",
-    "REMOVE USER",
-    "Error"
-  ], "Which command is used to delete a user?"),
+  Quiz(
+    668,
+    "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇယႃႉ User?",
+    ["DROP USER", "DELETE USER", "REMOVE USER", "Error"],
+    "Which command is used to delete a user?",
+  ),
 
   Quiz(669, "SHOW GRANTS FOR ... ၸွႆႈသင်?", [
     "တႃႇတူၺ်းဝႃႈ User ၵေႃႉၼၼ်ႉ မီးသုၼ်ႇသင်ဝႆႉ",
     "တႃႇသၢင်ႈ User",
     "တႃႇပၼ် Password",
-    "Error"
+    "Error",
   ], "What does SHOW GRANTS do?"),
 
-  Quiz(670, "FLUSH PRIVILEGES ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
-    "တႃႇသင်ႇႁႂ်ႈ MySQL ဢဝ်သုၼ်ႇမႂ်ႇမႃးၸႂ်ႉၵမ်းလဵဝ်",
-    "တႃႇယႃႉ Database",
-    "တႃႇ SELECT",
-    "Error"
-  ], "What is the purpose of FLUSH PRIVILEGES?"),
+  Quiz(
+    670,
+    "FLUSH PRIVILEGES ၸႂ်ႉတွၼ်ႈတႃႇသင်?",
+    [
+      "တႃႇသင်ႇႁႂ်ႈ MySQL ဢဝ်သုၼ်ႇမႂ်ႇမႃးၸႂ်ႉၵမ်းလဵဝ်",
+      "တႃႇယႃႉ Database",
+      "တႃႇ SELECT",
+      "Error",
+    ],
+    "What is the purpose of FLUSH PRIVILEGES?",
+  ),
 
-  Quiz(671, "Privileges တူဝ်ယင်ႇမၼ်းမီးသင်လၢႆလၢႆ?", [
-    "SELECT, INSERT, UPDATE, DELETE, DROP, etc.",
-    "LOGIN, LOGOUT",
-    "START, STOP",
-    "Error"
-  ], "Give examples of database privileges."),
+  Quiz(
+    671,
+    "Privileges တူဝ်ယင်ႇမၼ်းမီးသင်လၢႆလၢႆ?",
+    [
+      "SELECT, INSERT, UPDATE, DELETE, DROP, etc.",
+      "LOGIN, LOGOUT",
+      "START, STOP",
+      "Error",
+    ],
+    "Give examples of database privileges.",
+  ),
 
-  Quiz(672, "IDENTIFIED BY ၼႂ်း CREATE USER ၸႂ်ႉတႃႇသင်?", [
-    "တႃႇမၵ်းမၼ်ႈ Password",
-    "တႃႇမၵ်းမၼ်ႈ ID",
-    "တႃႇမၵ်းမၼ်ႈ Host",
-    "Error"
-  ], "What is IDENTIFIED BY used for?"),
+  Quiz(
+    672,
+    "IDENTIFIED BY ၼႂ်း CREATE USER ၸႂ်ႉတႃႇသင်?",
+    ["တႃႇမၵ်းမၼ်ႈ Password", "တႃႇမၵ်းမၼ်ႈ ID", "တႃႇမၵ်းမၼ်ႈ Host", "Error"],
+    "What is IDENTIFIED BY used for?",
+  ),
 
-  Quiz(673, "ႁဵတ်းသင်လႄႈ ႁဝ်းဢမ်ႇထုၵ်ႇလီၸႂ်ႉ User 'root' ၼႂ်း App?", [
-    "ၵွပ်ႈမၼ်းမီးသုၼ်ႇၼမ်လူၼ်ႉ သေၸၢင်ႈထုၵ်ႇယႃႉ DB လႆႈငၢႆႈ",
-    "ၵွပ်ႈ root ၸႃႉလိူဝ်ပိူၼ်ႈ",
-    "ၵွပ်ႈ root ဢမ်ႇမီး Password",
-    "Error"
-  ], "Why avoid using the 'root' user in an application?"),
+  Quiz(
+    673,
+    "ႁဵတ်းသင်လႄႈ ႁဝ်းဢမ်ႇထုၵ်ႇလီၸႂ်ႉ User 'root' ၼႂ်း App?",
+    [
+      "ၵွပ်ႈမၼ်းမီးသုၼ်ႇၼမ်လူၼ်ႉ သေၸၢင်ႈထုၵ်ႇယႃႉ DB လႆႈငၢႆႈ",
+      "ၵွပ်ႈ root ၸႃႉလိူဝ်ပိူၼ်ႈ",
+      "ၵွပ်ႈ root ဢမ်ႇမီး Password",
+      "Error",
+    ],
+    "Why avoid using the 'root' user in an application?",
+  ),
 
   // --- Lesson 62: Security & RBAC (674-685) ---
   Quiz(674, "Encryption မၢႆထိုင်သင်?", [
     "ၵၢၼ်သႂ်ႇသေႃးၶေႃႈမုၼ်း ႁႂ်ႈပဵၼ် Code လပ်ႉ",
     "ၵၢၼ် Backup",
     "ၵၢၼ် SELECT",
-    "Error"
+    "Error",
   ], "What is encryption?"),
 
-  Quiz(675, "Hashing ပႅၵ်ႇၵၼ်တင်း Encryption ၸိူင်ႉႁိုဝ်?", [
-    "Hashing ပဵၼ် One-way (ပိၼ်ႇၶိုၼ်းဢမ်ႇလႆႈ)",
-    "Encryption ပဵၼ် One-way",
-    "မိူၼ်ၵၼ်",
-    "Error"
-  ], "How is hashing different from encryption?"),
+  Quiz(
+    675,
+    "Hashing ပႅၵ်ႇၵၼ်တင်း Encryption ၸိူင်ႉႁိုဝ်?",
+    [
+      "Hashing ပဵၼ် One-way (ပိၼ်ႇၶိုၼ်းဢမ်ႇလႆႈ)",
+      "Encryption ပဵၼ် One-way",
+      "မိူၼ်ၵၼ်",
+      "Error",
+    ],
+    "How is hashing different from encryption?",
+  ),
 
   Quiz(676, "Role-Based Access Control (RBAC) မၢႆထိုင်သင်?", [
     "ၵၢၼ်ၸတ်းၵၢၼ်သုၼ်ႇ ၸွမ်းၼင်ႇၸၼ်ႉထၢၼ်ႈ/ၼႃႈၵၢၼ် (Roles)",
     "ၵၢၼ်သႂ်ႇ Password",
     "ၵၢၼ် DELETE User",
-    "Error"
+    "Error",
   ], "What is RBAC?"),
 
   Quiz(677, "CREATE ROLE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇသၢင်ႈၸုမ်းသုၼ်ႇ (Role) ဢၼ်တေဢဝ် User သႂ်ႇၶဝ်ႈ",
     "တႃႇသၢင်ႈ User",
     "တႃႇသၢင်ႈ Table",
-    "Error"
+    "Error",
   ], "What is CREATE ROLE used for?"),
 
   Quiz(678, "SHA2 ၼႂ်း MySQL ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇႁဵတ်း Hashing ၶေႃႈမုၼ်း (မိူၼ်ၼင်ႇ Password)",
     "တႃႇ SELECT",
     "တႃႇ Join",
-    "Error"
+    "Error",
   ], "What is SHA2 used for in MySQL?"),
 
   Quiz(679, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇၸႂ်ႉ Role?", [
     "တွၼ်ႈတႃႇၸတ်းၵၢၼ် User ၼမ်ၼမ် လႆႈငၢႆႈ လႄႈ မၼ်ႈၵိုမ်း",
     "တွၼ်ႈတႃႇႁႂ်ႈ DB ဝႆး",
     "တွၼ်ႈတႃႇ Backup",
-    "Error"
+    "Error",
   ], "Why use roles in a database?"),
 
   Quiz(680, "SQL Injection မၢႆထိုင်သင်?", [
     "လၢႆးၵၢၼ် Hack ဢၼ်လၵ်ႉသူင်ႇ Command SQL ၽိတ်းပိူင်ၶဝ်ႈမႃး",
     "ၵၢၼ် INSERT ธรรมဒါ",
     "ၵၢၼ် SELECT",
-    "Error"
+    "Error",
   ], "What is SQL Injection?"),
 
-  Quiz(681, "SET DEFAULT ROLE ... ၸွႆႈသင်?", [
-    "တႃႇပိုတ်ႇၸႂ်ႉ Role ပၼ် User ၼၼ်ႉ တႃႇသေႇမိူဝ်ႈ Login",
-    "တႃႇယႃႉ Role",
-    "တႃႇပၼ် Password",
-    "Error"
-  ], "What is the purpose of SET DEFAULT ROLE?"),
+  Quiz(
+    681,
+    "SET DEFAULT ROLE ... ၸွႆႈသင်?",
+    [
+      "တႃႇပိုတ်ႇၸႂ်ႉ Role ပၼ် User ၼၼ်ႉ တႃႇသေႇမိူဝ်ႈ Login",
+      "တႃႇယႃႉ Role",
+      "တႃႇပၼ် Password",
+      "Error",
+    ],
+    "What is the purpose of SET DEFAULT ROLE?",
+  ),
 
   Quiz(682, "AES_ENCRYPT ၸႂ်ႉတွၼ်ႈတႃႇသင်?", [
     "တႃႇသႂ်ႇသေႃးၶေႃႈမုၼ်း ဢၼ်ၸၢင်ႈပိၼ်ႇဢဝ်ၶိုၼ်း (Two-way)",
     "တႃႇ Hash Password",
     "တႃႇ DROP Table",
-    "Error"
+    "Error",
   ], "What is AES_ENCRYPT used for?"),
 
   Quiz(683, "Plain Text မၢႆထိုင်သင်?", [
     "ၶေႃႈမုၼ်းဢၼ်လူလႆႈလၢႆလၢႆ (ဢမ်ႇပႆႇသႂ်ႇသေႃး)",
     "ၶေႃႈမုၼ်းလပ်ႉ",
     "ID",
-    "Error"
+    "Error",
   ], "What is plain text?"),
 
-  Quiz(684, "ႁဝ်းထုၵ်ႇလီသိမ်း Password ပဵၼ် Plain Text ႁႃႉ?", [
-    "ဢမ်ႇထုၵ်ႇလီ (တေလႆႈ Hash တႃႇသေႇ)",
-    "ထုၵ်ႇလီ",
-    "လႆႈၵူၺ်းၼႂ်း Test DB",
-    "Error"
-  ], "Should passwords be stored as plain text?"),
+  Quiz(
+    684,
+    "ႁဝ်းထုၵ်ႇလီသိမ်း Password ပဵၼ် Plain Text ႁႃႉ?",
+    [
+      "ဢမ်ႇထုၵ်ႇလီ (တေလႆႈ Hash တႃႇသေႇ)",
+      "ထုၵ်ႇလီ",
+      "လႆႈၵူၺ်းၼႂ်း Test DB",
+      "Error",
+    ],
+    "Should passwords be stored as plain text?",
+  ),
 
   Quiz(685, "RBAC ၸွႆႈသင်ၼႂ်းၵၢၼ် Audit?", [
     "ၸွႆႈႁူႉလႆႈငၢႆႈဝႃႈ ၽႂ်မီးသုၼ်ႇသင် ၸွမ်းၼင်ႇ Role ၶဝ်",
     "ၸွႆႈ SELECT ဝႆး",
     "ၸွႆႈယႃႉ Row",
-    "Error"
+    "Error",
   ], "How does RBAC help in auditing?"),
 
   // --- Lesson 63: Backup & Recovery (686-700) ---
@@ -5992,106 +6084,151 @@ List<Quiz> mysqlQuizM7 = [
     "တႃႇထုတ်ႇ (Export) ၶေႃႈမုၼ်းဢွၵ်ႇပဵၼ် File .sql",
     "တႃႇ SELECT ၶေႃႈမုၼ်း",
     "တႃႇယႃႉ Database",
-    "Error"
+    "Error",
   ], "What is mysqldump used for?"),
 
   Quiz(687, "Logical Backup မၢႆထိုင်သင်?", [
     "ၵၢၼ် Backup ဢၼ်သိမ်းပဵၼ် SQL Commands (Text)",
     "ၵၢၼ် Copy File Database တႄႉ",
     "ၵၢၼ် DELETE",
-    "Error"
+    "Error",
   ], "What is a logical backup?"),
 
-  Quiz(688, "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇ Import (Recovery) ၶေႃႈမုၼ်း?", [
-    "mysql -u user -p db_name < backup.sql",
-    "mysqldump ...",
-    "CREATE TABLE ...",
-    "Error"
-  ], "Which command is used to restore a database?"),
+  Quiz(
+    688,
+    "Command လႂ် ဢၼ်ၸႂ်ႉတႃႇ Import (Recovery) ၶေႃႈမုၼ်း?",
+    [
+      "mysql -u user -p db_name < backup.sql",
+      "mysqldump ...",
+      "CREATE TABLE ...",
+      "Error",
+    ],
+    "Which command is used to restore a database?",
+  ),
 
   Quiz(689, "ႁဵတ်းသင်လႄႈ ႁဝ်းလူဝ်ႇ Backup?", [
     "တႃႇႁႄႉၵင်ႈၶေႃႈမုၼ်းႁၢႆ မိူဝ်ႈ Server လူႉ ႁိုဝ် ၵူၼ်းယႃႉၽိတ်း",
     "တႃႇႁႂ်ႈ DB ဝႆး",
     "တႃႇပၼ် Password",
-    "Error"
+    "Error",
   ], "Why is backup necessary?"),
 
-  Quiz(690, "Offsite Storage ၼႂ်းၵၢၼ် Backup မၢႆထိုင်သင်?", [
-    "ၵၢၼ်သိမ်း Backup ဝႆႉတီႈတၢင်ႇ (မိူၼ် Cloud) ဢၼ်ဢမ်ႇၸႂ်ႈ Server တူဝ်လဵဝ်ၵၼ်",
-    "ၵၢၼ်သိမ်းဝႆႉၼႂ်း PC",
-    "ၵၢၼ်သိမ်းၼႂ်း RAM",
-    "Error"
-  ], "What is offsite storage for backups?"),
+  Quiz(
+    690,
+    "Offsite Storage ၼႂ်းၵၢၼ် Backup မၢႆထိုင်သင်?",
+    [
+      "ၵၢၼ်သိမ်း Backup ဝႆႉတီႈတၢင်ႇ (မိူၼ် Cloud) ဢၼ်ဢမ်ႇၸႂ်ႈ Server တူဝ်လဵဝ်ၵၼ်",
+      "ၵၢၼ်သိမ်းဝႆႉၼႂ်း PC",
+      "ၵၢၼ်သိမ်းၼႂ်း RAM",
+      "Error",
+    ],
+    "What is offsite storage for backups?",
+  ),
 
-  Quiz(691, "Physical Backup ပႅၵ်ႇၵၼ်တင်း Logical ၸိူင်ႉႁိုဝ်?", [
-    "Physical Backup ပဵၼ်ၵၢၼ် Copy File ၶေႃႈမုၼ်းတႄႉ (ဝႆးလိူဝ်)",
-    "Logical ဝႆးလိူဝ်",
-    "မိူၼ်ၵၼ်",
-    "Error"
-  ], "Difference between physical and logical backup?"),
+  Quiz(
+    691,
+    "Physical Backup ပႅၵ်ႇၵၼ်တင်း Logical ၸိူင်ႉႁိုဝ်?",
+    [
+      "Physical Backup ပဵၼ်ၵၢၼ် Copy File ၶေႃႈမုၼ်းတႄႉ (ဝႆးလိူဝ်)",
+      "Logical ဝႆးလိူဝ်",
+      "မိူၼ်ၵၼ်",
+      "Error",
+    ],
+    "Difference between physical and logical backup?",
+  ),
 
-  Quiz(692, "--all-databases ၼႂ်း mysqldump ၸွႆႈသင်?", [
-    "တႃႇ Backup ၵူႈ Database ဢၼ်မီးၼႂ်း Server",
-    "တႃႇ Backup Table လဵဝ်",
-    "တႃႇယႃႉ Database",
-    "Error"
-  ], "What does --all-databases do in mysqldump?"),
+  Quiz(
+    692,
+    "--all-databases ၼႂ်း mysqldump ၸွႆႈသင်?",
+    [
+      "တႃႇ Backup ၵူႈ Database ဢၼ်မီးၼႂ်း Server",
+      "တႃႇ Backup Table လဵဝ်",
+      "တႃႇယႃႉ Database",
+      "Error",
+    ],
+    "What does --all-databases do in mysqldump?",
+  ),
 
-  Quiz(693, "ႁဝ်းထုၵ်ႇလီၸၢမ်း (Test) Restore Backup ယူႇတႃႇသေႇႁႃႉ?", [
-    "ထုၵ်ႇလီ (တွၼ်ႈတႃႇမၼ်ႈၸႂ်ဝႃႈ Backup ၸႂ်ႉလႆႈတႄႉ)",
-    "ဢမ်ႇလူဝ်ႇၸၢမ်း",
-    "ၸၢမ်းၵူၺ်းမိူဝ်ႈ DB လူႉ",
-    "Error"
-  ], "Should you regularly test your backups?"),
+  Quiz(
+    693,
+    "ႁဝ်းထုၵ်ႇလီၸၢမ်း (Test) Restore Backup ယူႇတႃႇသေႇႁႃႉ?",
+    [
+      "ထုၵ်ႇလီ (တွၼ်ႈတႃႇမၼ်ႈၸႂ်ဝႃႈ Backup ၸႂ်ႉလႆႈတႄႉ)",
+      "ဢမ်ႇလူဝ်ႇၸၢမ်း",
+      "ၸၢမ်းၵူၺ်းမိူဝ်ႈ DB လူႉ",
+      "Error",
+    ],
+    "Should you regularly test your backups?",
+  ),
 
-  Quiz(694, "mysqldump တေလႆႈတႅမ်ႈၼႂ်းလႂ်?", [
-    "Terminal / Command Prompt (OS Shell)",
-    "MySQL Shell / Workbench",
-    "Flutter Code",
-    "Error"
-  ], "Where should you run the mysqldump command?"),
+  Quiz(
+    694,
+    "mysqldump တေလႆႈတႅမ်ႈၼႂ်းလႂ်?",
+    [
+      "Terminal / Command Prompt (OS Shell)",
+      "MySQL Shell / Workbench",
+      "Flutter Code",
+      "Error",
+    ],
+    "Where should you run the mysqldump command?",
+  ),
 
   Quiz(695, "Restore မၢႆထိုင်သင်?", [
     "ၵၢၼ်ဢဝ်ၶေႃႈမုၼ်းၼႂ်း Backup သႂ်ႇၶိုၼ်းၼႂ်း Database",
     "ၵၢၼ် DELETE",
     "ၵၢၼ် SELECT",
-    "Error"
+    "Error",
   ], "What is a database restore?"),
 
   Quiz(696, "INCREMENTAL Backup မၢႆထိုင်သင်?", [
     "ၵၢၼ် Backup ၵူၺ်းတွၼ်ႈဢၼ်လႅၵ်ႈလၢႆႈမႂ်ႇ ဝၢႆးသေ Full Backup",
     "ၵၢၼ် Backup တင်းမူတ်း",
     "ၵၢၼ်ယႃႉ Row",
-    "Error"
+    "Error",
   ], "What is an incremental backup?"),
 
   Quiz(697, "Full Backup မၢႆထိုင်သင်?", [
     "ၵၢၼ် Backup ၶေႃႈမုၼ်းတင်းမူတ်း ဢၼ်မီးယူႇ",
     "ၵၢၼ် Backup 1 ထႅဝ်",
     "ၵၢၼ် Backup ၵူၺ်း Structure",
-    "Error"
+    "Error",
   ], "What is a full backup?"),
 
-  Quiz(698, "ၶိူင်ႈမၢႆ '>' ၼႂ်း mysqldump တႅၼ်းသင်?", [
-    "Redirect Output (သူင်ႇၶေႃႈမုၼ်းဢွၵ်ႇၵႂႃႇသိမ်းၼႂ်း File)",
-    "သူင်ႇၶဝ်ႈ",
-    "ယႃႉ File",
-    "Error"
-  ], "What does the '>' symbol do in mysqldump?"),
+  Quiz(
+    698,
+    "ၶိူင်ႈမၢႆ '>' ၼႂ်း mysqldump တႅၼ်းသင်?",
+    [
+      "Redirect Output (သူင်ႇၶေႃႈမုၼ်းဢွၵ်ႇၵႂႃႇသိမ်းၼႂ်း File)",
+      "သူင်ႇၶဝ်ႈ",
+      "ယႃႉ File",
+      "Error",
+    ],
+    "What does the '>' symbol do in mysqldump?",
+  ),
 
-  Quiz(699, "ၶိူင်ႈမၢႆ '<' ၼႂ်း mysql command တႅၼ်းသင်?", [
-    "Redirect Input (သူင်ႇၶေႃႈမုၼ်းလုၵ်ႉၼႂ်း File ၶဝ်ႈ Database)",
-    "သူင်ႇဢွၵ်ႇ",
-    "SELECT",
-    "Error"
-  ], "What does the '<' symbol do in the mysql command?"),
+  Quiz(
+    699,
+    "ၶိူင်ႈမၢႆ '<' ၼႂ်း mysql command တႅၼ်းသင်?",
+    [
+      "Redirect Input (သူင်ႇၶေႃႈမုၼ်းလုၵ်ႉၼႂ်း File ၶဝ်ႈ Database)",
+      "သူင်ႇဢွၵ်ႇ",
+      "SELECT",
+      "Error",
+    ],
+    "What does the '<' symbol do in the mysql command?",
+  ),
 
-  Quiz(700, "ယဝ်ႉယဝ်ႉ Module 7! Maintenance ၸွႆႈသင်?", [
-    "ၸွႆႈႁႄႉၵင်ႈၶေႃႈမုၼ်း လႄႈ ၸွႆႈဢဝ်ၶိုၼ်းမိူဝ်ႈမီးပၼ်ႁႃ",
-    "ၸွႆႈ INSERT ၵူၺ်း",
-    "ၸွႆႈ SELECT ဝႆး",
-    "Error"
-  ], "End of Module 7! What is the goal of maintenance?")
+  Quiz(
+    700,
+    "ယဝ်ႉယဝ်ႉ Module 7! Maintenance ၸွႆႈသင်?",
+    [
+      "ၸွႆႈႁႄႉၵင်ႈၶေႃႈမုၼ်း လႄႈ ၸွႆႈဢဝ်ၶိုၼ်းမိူဝ်ႈမီးပၼ်ႁႃ",
+      "ၸွႆႈ INSERT ၵူၺ်း",
+      "ၸွႆႈ SELECT ဝႆး",
+      "Error",
+    ],
+    "End of Module 7! What is the goal of maintenance?",
+  ),
 ];
 List<List<Quiz>> mysqlQuizzes = [
   mysqlQuizM1,
@@ -6100,5 +6237,5 @@ List<List<Quiz>> mysqlQuizzes = [
   mysqlQuizM4,
   mysqlQuizM5,
   mysqlQuizM6,
-  mysqlQuizM7
+  mysqlQuizM7,
 ];
