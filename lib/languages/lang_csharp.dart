@@ -688,6 +688,18 @@ final Map<int, Lesson> csharpLessons = {
   237: Lesson(19, 237),
   238: Lesson(19, 238),
   239: Lesson(19, 239),
+  240: Lesson(20, 240),
+  241: Lesson(20, 241),
+  242: Lesson(20, 242),
+  243: Lesson(20, 243),
+  244: Lesson(20, 244),
+  245: Lesson(20, 245),
+  246: Lesson(20, 246),
+  247: Lesson(20, 247),
+  248: Lesson(20, 248),
+  249: Lesson(20, 249),
+  250: Lesson(20, 250),
+  251: Lesson(20, 251),
 };
 
 final List<Quiz> csharpQuizM1 = [
