@@ -8535,7 +8535,6 @@ final List<Quiz> csharpQuizM20 = [
   Quiz(2499, "async Method ၸၢင်ႈမီး Parameters ပဵၼ် out ႁႃႉ?", ["ဢမ်ႇလႆႈ", "လႆႈယူႇ", "လႆႈၵူၺ်း int", "လႆႈၵူၺ်း string"], "Can async methods have 'out' parameters?"),
   Quiz(2500, "ၵၢၼ်ႁဵၼ်း Module 20 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["တႅမ်ႈ App ဢၼ်လႅၼ်ႈလူၺ်ႈလီ", "ပိတ်း App ၵမ်းလဵဝ်", "တႅမ်ႈ HTML လၢႆး Async", "ဢမ်ႇႁဵတ်းသင်သေယိူင်ႈ"], "What can we do after learning Module 20?"),
 ];
-
 final List<Quiz> csharpQuizM21 = [
   // Lesson 252: History of Desktop Development
   Quiz(2521, "WinForms တႄႇမီးမႃးၼႂ်းပီလႂ်?", ["2002", "2006", "1995", "2010"], "When was WinForms first released?"),
