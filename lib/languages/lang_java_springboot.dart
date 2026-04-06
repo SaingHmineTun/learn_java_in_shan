@@ -29,6 +29,14 @@ const Map<int, Map<int, String>> javaSpringbootModules = {
     12: "Data Seeding with data.sql",
     13: "Custom Query Methods",
   },
+  3: {
+    14: "The Service Layer Pattern",
+    15: "Dependency Injection (Autowired)",
+    16: "Business Logic & CRUD Operations",
+    17: "Error Handling & Optional",
+    18: "Data Transfer Objects (DTOs)",
+    19: "Advanced Searching Logic"
+  }
 };
 
 final Map<int, Lesson> javaSpringbootLessons = {
