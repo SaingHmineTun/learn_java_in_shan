@@ -8696,6 +8696,133 @@ final List<Quiz> csharpQuizM21 = [
   Quiz(2649, "ClickOnce Deployment ปွင်ႇဝႃႈသင်?", ["လၢႆး Install App ဢၼ် Update ႁင်းၵူၺ်းလႆႈငၢႆႈငၢႆႈ", "ၵၢၼ်ၼဵၵ်းပုမ်ႇ 1 ပွၵ်ႈ", "ၵၢၼ် Delete Project", "ၵၢၼ်ပိတ်း Computer"], "What is ClickOnce Deployment?"),
   Quiz(2650, "Module 21 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["သၢင်ႈ Desktop App ဢၼ်ၸႂ်ႉလႆႈတႄႉတႄႉ", "ပိတ်း App တင်းမူတ်း", "တႅမ်ႈ HTML ၵူၺ်း", "ဢမ်ႇႁဵတ်းသင်သေယိူင်ႈ"], "What can we do after finishing Module 21?"),
 ];
+final List<Quiz> csharpQuizM22 = [
+  // Lesson 266: Introduction to Databases
+  Quiz(2651, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇၸႂ်ႉ Database တႅၼ်းၵၢၼ်သိမ်း Data ဝႆႉၼႂ်း RAM?", ["တွၼ်ႈတႃႇႁႂ်ႈၶေႃႈမုၼ်းယူႇတႃႇသေႇ (Persistent Data) ဢမ်ႇႁၢႆမိူဝ်ႈပိတ်း App", "တွၼ်ႈတႃႇႁႂ်ႈ App လႅၼ်ႈဝႆးလိူဝ်ၵဝ်ႇ 10 ပွၵ်ႈ", "တွၼ်ႈတႃႇလူတ်းၵႃႈၶၼ်ၵၢၼ်သိုဝ်ႉ RAM", "တွၼ်ႈတႃႇႁႂ်ႈတႅမ်ႈ Code ငၢႆႈလိူဝ်ၵဝ်ႇ"], "Why do we need a database instead of RAM?"),
+  Quiz(2652, "SQL Server ပဵၼ် Software ပိူင်လႂ်?", ["RDBMS (Relational Database Management System)", "Operating System", "Programming Language", "Web Server"], "What type of software is SQL Server?"),
+  Quiz(2653, "လွင်ႈလီၶွင် SQL Server မိူဝ်ႈတႅပ်းၸွမ်တင်း Excel ပဵၼ်သင်?", ["ၸတ်းၵၢၼ်ၶေႃႈမုၼ်းဢၼ်ယႂ်ႇၼႃႇ လႄႈ ၵူၼ်းၸႂ်ႉၼမ်လႆႈလီလိူဝ်", "တႅမ်ႈႁၢင်ႈ Graph လႆႈႁၢင်ႈလီလိူဝ်", "ဢမ်ႇလူဝ်ႇၸႂ်ႉ Password တႃႇၶဝ်ႈတူၺ်း", "ၸႂ်ႉလႆႈၵူၺ်းၼႂ်းၾူၼ်း"], "Benefit of SQL Server over Excel?"),
+  Quiz(2654, "RDBMS ပွင်ႇဝႃႈသင်?", ["System ၸတ်းၵၢၼ် Database ဢၼ်မီးလွင်ႈၵွင်ႉၵၢႆႇၵႄႈ Tables", "System တွၼ်ႈတႃႇတႅမ်ႈ Website", "System ၸတ်းၵၢၼ် Memory RAM", "System တွၼ်ႈတႃႇသူင်ႇ Email"], "What does RDBMS stand for?"),
+  Quiz(2655, "Persistent Data ပွင်ႇဝႃႈသင်?", ["ၶေႃႈမုၼ်းဢၼ်ယူႇတႃႇသေႇ ဢမ်ႇႁၢႆၵႂႃႇမိူဝ်ႈပိတ်း App", "ၶေႃႈမုၼ်းဢၼ်လႅၵ်ႈပိၼ်ႇယူႇတႃႇသေႇ", "ၶေႃႈမုၼ်းဢၼ်မီးလွင်ႈလွတ်ႈၽေးသုတ်း", "ၶေႃႈမုၼ်းဢၼ်တႅမ်ႈလူၺ်ႈ C#"], "What is Persistent Data?"),
+
+  // Lesson 267: Relational Database Concepts
+  Quiz(2656, "Table ၼႂ်း Database မိူၼ်တင်းသင်?", ["တီႈၵဵပ်းၶေႃႈမုၼ်းၸုမ်းလဵဝ်ၵၼ် ဢၼ်မီး Rows လႄႈ Columns", "တီႈတႅမ်ႈ Code Logic ၶွင် App", "ၼႃႈတႃ UI တွၼ်ႈတႃႇ User ၼဵၵ်း", "တီႈၵဵပ်း Files Image တင်းမူတ်း"], "What is a Table in a database?"),
+  Quiz(2657, "Primary Key (PK) မီးၼႃႈၵၢၼ်သင်?", ["ပဵၼ်တူဝ်မၢႆၾၢင်ဢၼ်ဢမ်ႇမိူၼ်ၽႂ် တႃႇၸႅၵ်ႇထႅဝ်ၶေႃႈမုၼ်း", "ပဵၼ်တူဝ်မၵ်းမၼ်ႈသီၶွင် Table", "ပဵၼ်တူဝ်ၵွင်ႉၸူး Website ၽၢႆႇၼွၵ်ႈ", "ပဵၼ်တူဝ်ပိတ်း Database"], "Purpose of a Primary Key?"),
+  Quiz(2658, "Foreign Key (FK) ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၸႂ်ႉတႃႇၵွင်ႉ Tables သွင်ဢၼ်ၶဝ်ႈၸွမ်ၵၼ်", "ၸႂ်ႉတႃႇမၵ်းမၼ်ႈၸိုဝ်ႈ Column", "ၸႂ်ႉတႃႇယႃႉ Database ဢွၵ်ႇပႅတ်ႈ", "ၸႂ်ႉတႃႇတႅမ်ႈ Code C#"], "Purpose of a Foreign Key?"),
+  Quiz(2659, "Columns (Fields) ၼႂ်း Table မၵ်းမၼ်ႈသင်?", ["မၵ်းမၼ်ႈပိူင်သၢင်ႈၶေႃႈမုၼ်းဝႃႈ တေသိမ်းသင်ပႃး", "မၵ်းမၼ်ႈလမ်ႇတပ်ႉၶွင်ၵူၼ်းႁဵတ်းၵၢၼ်", "မၵ်းမၼ်ႈတၢင်းယႂ်ႇၶွင် File Database", "မၵ်းမၼ်ႈၸိုဝ်ႈၶွင် Server"], "What do Columns define?"),
+  Quiz(2660, "Normalization ၼႂ်း Database ပွင်ႇဝႃႈသင်?", ["လၢႆးၸတ်း Tables ယႃႇႁႂ်ႈမီးၶေႃႈမုၼ်းသွၼ်ႉၵၼ်ၼမ်", "လၢႆးပိၼ်ႇလိၵ်ႈတႆးပဵၼ်လိၵ်ႈဢင်းၵိတ်း", "လၢႆးသႂ်ႇ Password ႁႂ်းၵႅၼ်ႇၶႅင်", "လၢႆးမႄး Error ၼႂ်း SQL"], "What is Normalization?"),
+
+  // Lesson 268: Setting up SQL Server
+  Quiz(2661, "SQL Server Version လႂ်ဢၼ် Microsoft ပၼ်ၸႂ်ႉ Free တွၼ်ႈတႃႇတႅမ်ႈ App လဵၵ်ႉလဵၵ်ႉ?", ["SQL Server Express", "SQL Server Enterprise", "SQL Server Standard", "SQL Server Ultimate"], "Which SQL Server version is free for small apps?"),
+  Quiz(2662, "LocalDB ပႅၵ်ႇတင်း Express ၸိူင်ႉႁိုဝ်?", ["LocalDB လဵၵ်ႉသုတ်း လႄႈ ဢမ်ႇၵိၼ် RAM ၼမ်မိူဝ်ႈဢမ်ႇၸႂ်ႉ", "LocalDB ဝႆးလိူဝ် Express 10 ပွၵ်ႈ", "LocalDB ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Server ယႂ်ႇယႂ်ႇ", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်"], "Difference between LocalDB and Express?"),
+  Quiz(2663, "Authentication လႂ်ဢၼ်ၸႂ်ႉ Login Windows ႁဝ်းတႃႇၶဝ်ႈ Database?", ["Windows Authentication", "SQL Server Authentication", "Biometric Authentication", "No Authentication"], "Which authentication uses Windows Login?"),
+  Quiz(2664, "Connection String ပဵၼ်သင်?", ["လိၵ်ႈဢၼ်လၢတ်ႈၼႄ 'တီႈယူႇ' (Address) ၶွင် Database", "သဵၼ်ႈတၢင်း Internet ဢၼ်ဝႆးသုတ်း", "Code တွၼ်ႈတႃႇယႃႉ Virus", "ၸိုဝ်ႈၶွင် Developer"], "What is a Connection String?"),
+  Quiz(2665, "Database Engine ပွင်ႇဝႃႈသင်?", ["သုၼ်ႇၵၢင် Software ဢၼ်မီးၼႃႈၵၢၼ်သိမ်း လႄႈ သွၵ်ႈ Data", "ၼႃႈတႃ UI ဢၼ် User ႁၼ်", "တူဝ်ၸွႆးတႅမ်ႈ Code C#", "ပိူင်ၸတ်းၵၢၼ် Graphics"], "What is a Database Engine?"),
+
+  // Lesson 269: SQL Server Management Studio (SSMS)
+  Quiz(2666, "SSMS မီးၼႃႈၵၢၼ်သင်?", ["ပဵၼ် 'ၼႃႈတႃ' (UI) တႃႇၸတ်းၵၢၼ် Database", "ပဵၼ်တူဝ် Engine ဢၼ်သိမ်း Data တႄႉတႄႉ", "ပဵၼ်တူဝ် Compiler တွၼ်ႈတႃႇ C#", "ပဵၼ် Website တႃႇ Download Font တႆး"], "What is the purpose of SSMS?"),
+  Quiz(2667, "Object Explorer ၼႂ်း SSMS ၸႂ်ႉႁဵတ်းသင်?", ["သွၵ်ႈႁႃ လႄႈ ပိုတ်ႇတူၺ်း Databases, Tables တင်းမူတ်း", "တႅမ်ႈ Code SQL ၵူၺ်း", "ၼႄၽွၼ်းလႆႈ (Results) ဝၢႆးသေ Execute", "မႄးသီၶွင် Visual Studio"], "Purpose of Object Explorer in SSMS?"),
+  Quiz(2668, "Shortcut Key လႂ်ဢၼ်ၸႂ်ႉတႃႇသင်ႇႁႂ်ႈ SQL Code လႅၼ်ႈ (Execute)?", ["F5", "F12", "Ctrl + S", "Alt + F4"], "Shortcut to execute SQL code?"),
+  Quiz(2669, "Query Editor ပွင်ႇဝႃႈသင်?", ["ၼႃႈလိၵ်ႈပႅတ်ႈလၢႆ တႃႇႁႂ်ႈႁဝ်းတႅမ်ႈလိၵ်ႈ SQL သင်ႇၵၢၼ်", "တီႈမႄးႁၢင်ႈၽၢင်ၶွင် Table", "တီႈၼႄ Error ၶွင် Windows", "တီႈသိမ်း Connection String"], "What is the Query Editor?"),
+  Quiz(2670, "သင်ၶႂ်ႈသၢင်ႈ Database မႂ်ႇၼႂ်း SSMS တေလႆႈၼဵၵ်းၶႂႃ (Right Click) တီႈလႂ်?", ["Folder 'Databases'", "Folder 'Security'", "Server Name", "Folder 'Tables'"], "Where to right-click to create a new database?"),
+
+  // Lesson 270: Basic SQL Commands (CRUD)
+  Quiz(2671, "ၶေႃႈသင်ႇ SQL လႂ်ဢၼ်ၸႂ်ႉတႃႇ 'လူ' (Read) ၶေႃႈမုၼ်း?", ["SELECT", "INSERT", "UPDATE", "DELETE"], "SQL command for Reading data?"),
+  Quiz(2672, "ၶေႃႈသင်ႇ INSERT INTO ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သႂ်ႇၶေႃႈမုၼ်းမႂ်ႇၶဝ်ႈၵႂႃႇၼႂ်း Table", "မႄးၶေႃႈမုၼ်းဢၼ်မီးဝႆႉယူႇယဝ်ႉ", "ယႃႉၶေႃႈမုၼ်းဢွၵ်ႇပႅတ်ႈ", "သွၵ်ႈႁႃၶေႃႈမုၼ်း"], "Purpose of INSERT INTO?"),
+  Quiz(2673, "သင်ႁဝ်းလိုမ်းသႂ်ႇ WHERE ၼႂ်း DELETE တေပဵၼ်သင်?", ["မၼ်းတေယႃႉၶေႃႈမုၼ်းတင်းမူတ်းၼႂ်း Table ၼၼ်ႉပႅတ်ႈ", "မၼ်းတေဢမ်ႇယႃႉသင်သေယိူင်ႈ", "မၼ်းတေယႃႉၵူၺ်းထႅဝ်ဢွၼ်တၢင်းသုတ်း", "App တေ Crash ၵမ်းလဵဝ်"], "What happens if WHERE is omitted in DELETE?"),
+  Quiz(2674, "တူဝ်မၢႆ '*' ၼႂ်း SELECT * FROM Students ပွင်ႇဝႃႈသင်?", ["ဢဝ်ၵူႈ Columns တင်းမူတ်းၼႂ်း Table မႃးၼႄ", "ဢဝ်ၵူၺ်း Column ဢၼ်မီးတူဝ်ၼပ်ႉ", "ယႃႉ Table Students ဢွၵ်ႇပႅတ်ႈ", "သွၵ်ႈႁႃလုၵ်ႈႁဵၼ်းၵေႃႉဢၼ်ၵတ်ႉၶႅၼ်ႇသုတ်း"], "What does '*' mean in a SELECT statement?"),
+  Quiz(2675, "ၶေႃႈသင်ႇ UPDATE ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["လႅၵ်ႈပိၼ်ႇ/မႄး ၶေႃႈမုၼ်းဢၼ်မီးဝႆႉယူႇယဝ်ႉ", "သၢင်ႈ Table မႂ်ႇ", "လူဢဝ်ၶေႃႈမုၼ်းမႃးၼႄ", "ပိတ်း Database Connection"], "Purpose of the UPDATE command?"),
+
+  // Lesson 271: Introduction to ORM and EF Core
+  Quiz(2676, "ORM (Object-Relational Mapping) ပွင်ႇဝႃႈသင်?", ["Software ဢၼ်ပိၼ်ႇၶေႃႈမုၼ်းၵႄႈ C# Classes လႄႈ Database Tables", "Software တွၼ်ႈတႃႇတႅမ်ႈ Game 3D", "Software တွၼ်ႈတႃႇမႄးႁၢင်ႈ Photo", "Software တွၼ်ႈတႃႇၵုမ်းၵၢၼ် Keyboard"], "What is ORM?"),
+  Quiz(2677, "Entity Framework Core (EF Core) ပဵၼ်သင်?", ["ORM Standard ၶွင် Microsoft တွၼ်ႈတႃႇ .NET", "Programming Language မႂ်ႇ", "Database Engine မိူၼ် SQL Server", "ၼႃႈတႃ UI တွၼ်ႈတႃႇ Windows"], "What is EF Core?"),
+  Quiz(2678, "လွင်ႈလီၶွင်ၵၢၼ်ၸႂ်ႉ EF Core ပဵၼ်သင်?", ["ႁဝ်းဢမ်ႇလူဝ်ႇတႅမ်ႈ SQL Code ၼမ်ၼႃႇ ၼႂ်း C#", "ႁဵတ်းႁႂ်ႈ App ႁဝ်းဢမ်ႇလူဝ်ႇၸႂ်ႉ Database", "ႁဵတ်းႁႂ်ႈ App လႅၼ်ႈဝႆးလိူဝ် Assembly Code", "ႁဵတ်းႁႂ်ႈၶွမ်းႁဝ်းဢမ်ႇႁႅင်းၵေႃႈၸႂ်ႉလႆႈ"], "Benefit of using EF Core?"),
+  Quiz(2679, "Entity ၼႂ်း EF Core ပွင်ႇဝႃႈသင်?", ["C# Class ဢၼ်ပဵ笥တူဝ်တႅၼ်းၶွင် Table ၼႂ်း Database", "တုမ်ႇ (Button) ၼႂ်း WPF", "မၢႆ ID ၶွင် Developer", "သဵၼ်ႈတၢင်း Internet"], "What is an Entity in EF Core?"),
+  Quiz(2680, "Provider ၼႂ်း EF Core မီးၼႃႈၵၢၼ်သင်?", ["ၸွႆးႁႂ်ႈ EF Core လၢတ်ႈၵႂၢမ်းၸွမ် Database ၼိုင်ႈပိူင် (မိူၼ် SQL Server)", "ၸွႆးႁႂ်ႈ C# ပိၼ်ႇပဵၼ် Python", "ၸွႆး Install Windows မႂ်ႇ", "ၸွႆးမႄး Font တႆး"], "Role of a Provider in EF Core?"),
+
+  // Lesson 272: Installing EF Core NuGet Packages
+  Quiz(2681, "NuGet Package လႂ်ဢၼ်လူဝ်ႇၸႂ်ႉ တႃႇၵွင်ႉၸူး SQL Server?", ["Microsoft.EntityFrameworkCore.SqlServer", "Microsoft.EntityFrameworkCore.Tools", "Newtonsoft.Json", "System.IO"], "Package for SQL Server in EF Core?"),
+  Quiz(2682, "NuGet ပဵၼ်သင်?", ["တီႈၵဵပ်း (Library) ၶွင် .NET ဢၼ်မီး Package ၸွႆးထႅမ်ၼမ်ၼႃႇ", "ၸိုဝ်ႈၶွင် Database Engine", "တူဝ်တႅမ်ႈ Code ၼိူဝ် Website", "ပိူင်ၸတ်းၵၢၼ် Memory"], "What is NuGet?"),
+  Quiz(2683, "Package 'Tools' ၼႂ်း EF Core ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၸႂ်ႉတႃႇသင်ႇၶေႃႈသင်ႇ မိူၼ်ၼင်ႇ Add-Migration ၼႂ်း Console", "ၸႂ်ႉတႃႇမႄးႁၢင်ႈ Icon App", "ၸႂ်ႉတႃႇၼပ်ႉသွၼ်ႇမၢႆတူဝ်", "ၸႂ်ႉတႃႇပိတ်း Visual Studio"], "Purpose of EF Core Tools package?"),
+  Quiz(2684, "လၢႆး Install NuGet Package ဢၼ်ငၢႆႈသုတ်းၼႂ်း Visual Studio ပဵၼ်သင်?", ["ၼဵၵ်းၶႂႃၼိူဝ် Project သေလိူၵ်ႈ 'Manage NuGet Packages'", "တႅမ်ႈ Code C# ႁင်းၵူၺ်း", "Download လုၵ်ႉတီႈ Facebook", "Copy ၾိုင််းမႃးဝၢင်းၼႂ်း Desktop"], "Easiest way to install NuGet packages?"),
+  Quiz(2685, "Package Manager Console ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["တႅမ်ႈၶေႃႈသင်ႇ PowerShell တႃႇ Install Packages လႄႈ Migrations", "တႅမ်ႈ Code HTML", "ၼႄၽွၼ်းလႆႈၶွင် Calculator", "မၵ်းမၼ်ႈသီၶွင် Windows"], "Purpose of Package Manager Console?"),
+
+  // Lesson 273: Creating the DbContext
+  Quiz(2686, "DbContext ၼႂ်း EF Core ပဵၼ်သင်?", ["Class ပိူင်လူင် ဢၼ်မီးၼႃႈၵၢၼ်ၸတ်းၵၢၼ် Database Connection", "Table ၼႂ်း SQL Server", "တူဝ်တႅၼ်းၶွင် User", "ၾိုင််း Image ၶွင် App"], "What is DbContext?"),
+  Quiz(2687, "DbSet<T> ၼႂ်း DbContext ပွင်ႇဝႃႈသင်?", ["တူဝ်တႅၼ်းၶွင် Table ၼႂ်း Database ဢၼ်ႁဝ်းၸၢင်ႈ CRUD လႆႈ", "သဵၼ်ႈတၢင်းၵွင်ႉ Internet", "မၢႆ ID ၶွင် Database", "ပၵ်းၵၢၼ် (Rule) ၶွင် C#"], "What is DbSet?"),
+  Quiz(2688, "Method 'OnConfiguring' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈ Connection String လႄႈ Database Provider", "သၢင်ႈ Class မႂ်ႇ", "ၼႄ MessageBox", "ပိတ်း Application"], "Purpose of OnConfiguring method?"),
+  Quiz(2689, "Method 'SaveChanges()' မီးၼႃႈၵၢၼ်သင်?", ["သူင်ႇၵၢၼ်လႅၵ်ႈပိၼ်ႇတင်းမူတ်း ၵႂႃႇသိမ်းၼႂ်း Database တႄႉတႄႉ", "Delete ၶေႃႈမုၼ်းတင်းမူတ်း", "ပိုတ်ႇ SSMS ႁင်းၵူၺ်း", "မႄး Syntax Error ႁင်းၵူၺ်း"], "What does SaveChanges() do?"),
+  Quiz(2690, "ႁဵတ်းသင်ႁဝ်းၸင်ႇထုၵ်ႇလီၸႂ်ႉ 'using' block မိူဝ်ႈသၢင်ႈ DbContext?", ["တွၼ်ႈတႃႇႁႂ်ႈမၼ်းပိတ်း Connection ႁင်းၵူၺ်းမိူဝ်ႈၸႂ်ႉယဝ်ႉ", "တွၼ်ႈတႃႇႁႂ်ႈ App လႅၼ်ႈဝႆး", "တွၼ်ႈတႃႇႁႂ်ႈ Database ယႂ်ႇလိူဝ်ၵဝ်ႇ", "ဢမ်ႇလူဝ်ႇၸႂ်ႉၵေႃႈလႆႈ ဢမ်ႇလမ်ႇလွင်ႈသင်"], "Why use 'using' with DbContext?"),
+
+  // Lesson 274: Modeling Data (Entities)
+  Quiz(2691, "EF Core မၢႆတွင်း Property 'Id' ၼႂ်း Class ပဵၼ်သင် ႁင်းၵူၺ်း?", ["Primary Key (PK)", "Foreign Key (FK)", "Normal Column", "Table Name"], "What does EF Core assume 'Id' property is?"),
+  Quiz(2692, "Attribute '[Required]' ၼႂ်း Data Annotations ပွင်ႇဝႃႈသင်?", ["ဢမ်ႇပၼ်ဝႆႉပဝ်ႇ (NOT NULL) ၼႂ်း Database", "ပဵၼ် Primary Key", "ပဵၼ်တူဝ်ၼပ်ႉ (Integer) တႃႇသေႇ", "မီးၵႃႈၶၼ် 0 တႃႇသေႇ"], "What does [Required] mean?"),
+  Quiz(2693, "Attribute '[MaxLength(50)]' ၸွႆးလွင်ႈသင်?", ["မၵ်းမၼ်ႈတူဝ်လိၵ်ႈ ႁႂ်ႈယၢဝ်းသုတ်းလႆႈ 50 တူဝ်", "မၵ်းမၼ်ႈဢႃႇယု ႁႂ်ႈလိူဝ် 50 ပီ", "မၵ်းမၼ်ႈ Table ႁႂ်ႈမီး 50 Rows", "မၵ်းမၼ်ႈ Windows ႁႂ်ႈယႂ်ႇ 50 Pixel"], "What does [MaxLength(50)] do?"),
+  Quiz(2694, "C# 'string' တေပဵၼ် Data Type သင် ၼႂ်း SQL Server (Default)?", ["nvarchar(max)", "int", "bit", "datetime"], "Default SQL type for C# string?"),
+  Quiz(2695, "Data Annotation ပွင်ႇဝႃႈသင်?", ["Attribute '[ ]' ဢၼ်ၸႂ်ႉမၵ်းမၼ်ႈပၵ်းၵၢၼ်ထႅမ်ၼိူဝ် Property", "ၵၢၼ်တႅမ်ႈ Code ၼႂ်း SQL", "ၵၢၼ်ၼႄႁၢင်ႈ Photo", "ၵၢၼ်ပိတ်း Database"], "What is a Data Annotation?"),
+
+  // Lesson 275: EF Core Migrations
+  Quiz(2696, "Migration ပဵၼ်သင်?", ["ၵၢၼ်သူင်ႇပိူင်ၽႅၼ် (Model) လုၵ်ႉတီႈ C# ၵႂႃႇသၢင်ႈ Table ၼႂ်း Database", "ၵၢၼ် Delete Database ဢွၵ်ႇပႅတ်ႈ", "ၵၢၼ် Download Visual Studio", "ၵၢၼ်ပိၼ်ႇ App ပဵၼ် Website"], "What is a Migration?"),
+  Quiz(2697, "ၶေႃႈသင်ႇ 'Add-Migration' ၸႂ်ႉႁဵတ်းသင်?", ["သၢင်ႈၾိုင််း Code တွၼ်ႈတႃႇမၢႆတွင်းၵၢၼ်လႅၵ်ႈပိၼ်ႇ Model", "Update Database ၵမ်းလဵဝ်", "သၢင်ႈ Class မႂ်ႇ", "ယႃႉ Table ပႅတ်ႈ"], "What does Add-Migration do?"),
+  Quiz(2698, "ၶေႃႈသင်ႇ 'Update-Database' ၸႂ်ႉႁဵတ်းသင်?", ["ဢဝ် Migration ၵႂႃႇလႅၼ်ႈၼိူဝ် SQL Server တႄႉတႄႉ", "Delete ၶေႃႈမုၼ်းတင်းမူတ်း", "ပိုတ်ႇ SSMS", "သၢင်ႈ Project မႂ်ႇ"], "What does Update-Database do?"),
+  Quiz(2699, "Method 'Up()' ၼႂ်းၾိုင််း Migration မီးၼႃႈၵၢၼ်သင်?", ["သၢင်ႈ ဢမ်ႇၼၼ် မႄး Tables မိူဝ်ႈ Update Database", "ယႃႉ Tables ဢွၵ်ႇမိူဝ်ႈ Rollback", "ပိတ်း Connection", "ၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "What is the Up() method for?"),
+  Quiz(2700, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇ Migrations?", ["တွၼ်ႈတႃႇႁႂ်ႈ C# Model လႄႈ SQL Schema မိူၼ်ၵၼ်တႃႇသေႇ", "တွၼ်ႈတႃႇႁႂ်ႈ App လႅၼ်ႈဝႆး", "တွၼ်ႈတႃႇႁႂ်ႈ Computer ဢမ်ႇႁႅင်း", "ဢမ်ႇလူဝ်ႇၵေႃႈလႆႈ တႅမ်ႈ SQL ႁင်းၵူၺ်းငၢႆႈလိူဝ်"], "Why do we need migrations?"),
+
+  // Lesson 276: CRUD with EF Core
+  Quiz(2701, "Method လႂ်ဢၼ်ၸႂ်ႉထႅမ် Object မႂ်ႇၶဝ်ႈၵႂႃႇ?", ["context.Students.Add(student)", "context.Students.Insert(student)", "context.Students.Create(student)", "context.Students.New(student)"], "Method to add a new object in EF Core?"),
+  Quiz(2702, "LINQ Method လႂ်ဢၼ်ၸႂ်ႉတွၼ်ႈတႃႇသွၵ်ႈႁႃ Primary Key (Id) ဢၼ်ဝႆးသုတ်း?", ["Find()", "First()", "Where()", "Last()"], "Fastest method to find by ID?"),
+  Quiz(2703, "တွၼ်ႈတႃႇ 'မႄး' (Update) ၶေႃႈမုၼ်း ႁဝ်းလူဝ်ႇႁဵတ်းၸိူင်ႉႁိုဝ်?", ["လူ (Read) မၼ်းမႃးသေ လႅၵ်ႈၵႃႈၶၼ် Property ယဝ်ႉသင်ႇ SaveChanges()", "တႅမ်ႈ Code SQL Update ႁင်းၵူၺ်း", "Delete မၼ်းပႅတ်ႈသေ သၢင်ႈမႂ်ႇ", "ၼဵၵ်း F5 ၼႂ်း SSMS"], "How to update data in EF Core?"),
+  Quiz(2704, "Method လႂ်ဢၼ်ၸႂ်ႉယႃႉ (Delete) Object?", ["Remove()", "Delete()", "Clear()", "Drop()"], "Method to delete an object?"),
+  Quiz(2705, "ToList() ၼႂ်း LINQ မီးၼႃႈၵၢၼ်သင်?", ["သင်ႇႁႂ်ႈ EF Core သူင်ႇ SQL ၵႂႃႇထၢမ် Database တႄႉတႄႉ", "Delete List ဢွၵ်ႇပႅတ်ႈ", "ပိတ်း Application", "မၵ်းမၼ်ႈသီၶွင် List"], "What does ToList() do?"),
+
+  // Lesson 277: Relationships (One-to-Many)
+  Quiz(2706, "One-to-Many Relationship ပွင်ႇဝႃႈသင်?", ["ပိူင်သၢင်ႈၵၢၼ်ၵွင်ႉၵၢႆႇ ဢၼ်သုၼ်ႇၼိုင်ႈ (One) မီးလၢႆလၢႆဢၼ် (Many)", "ၵၢၼ်ၵွင်ႉ Class 1 ဢၼ် ၸူး Table 1 ဢၼ်", "ၵၢၼ်ၵွင်ႉ User 1 ၵေႃႉ ၸူး Computer 1 ၶိူင်ႈ", "ၵၢၼ်ပိတ်း Database"], "What is a One-to-Many relationship?"),
+  Quiz(2707, "Navigation Property ၼႂ်း EF Core ၸႂ်ႉႁဵတ်းသင်?", ["ၸႂ်ႉတႃႇ 'ပၼ်ႇ' (Navigate) ၵႂႃႇၸူး Table ဢၼ်ၵွင်ႉၵၢႆႇၵၼ်", "ၸႂ်ႉတႃႇၼႄတၢင်းၼိူဝ် Map", "ၸႂ်ႉတႃႇမႄးသီ UI", "ၸႂ်ႉတႃႇၼပ်ႉသွၼ်ႇမၢႆတူဝ်"], "What is a Navigation Property?"),
+  Quiz(2708, "Eager Loading ၼႂ်း EF Core ၸႂ်ႉ Method သင်?", ["Include()", "Join()", "Add()", "Select()"], "Which method is used for Eager Loading?"),
+  Quiz(2709, "Foreign Key (FK) ၼႂ်း One-to-Many ထုၵ်ႇလီယူႇၼႂ်း Table လႂ်?", ["Table ၽၢႆႇ 'Many' (မိူၼ်ၼင်ႇ Students)", "Table ၽၢႆႇ 'One' (မိူၼ်ၼင်ႇ Villages)", "ယူႇၼႂ်းတင်းသွင် Tables", "ဢမ်ႇလူဝ်ႇမီး FK ၵေႃႈလႆႈ"], "Where should the Foreign Key be in a One-to-Many relationship?"),
+  Quiz(2710, "ႁဵတ်းသင် EF Core ၸင်ႇဢမ်ႇလူၶေႃႈမုၼ်းဢၼ်ၵွင်ႉၵၢႆႇၵၼ် (Related Data) မႃးၸွမ်ၵမ်းလဵဝ် (Default)?", ["တွၼ်ႈတႃႇႁႂ်ႈ App လႅၼ်ႈဝႆး လႄႈ ဢမ်ႇၵိၼ် Memory ၼမ်ပူၼ်ႉတီႈ", "ယွၼ်ႉမၼ်းႁဵတ်းဢမ်ႇလႆႈ", "ယွၼ်ႉ Database ပိၵ်ႉဝႆႉ", "ယွၼ်ႉမၼ်းပဵၼ် Bug"], "Why doesn't EF Core load related data by default?"),
+
+  // Mixed & Advanced (2711 - 2750)
+  Quiz(2711, "SQL Command လႂ်ဢၼ်ၸႂ်ႉတွၼ်ႈတႃႇ 'မၵ်းမၼ်ႈ' Database ဢၼ်တေၸႂ်ႉ?", ["USE", "GO", "SET", "SELECT"], "SQL command to select which database to use?"),
+  Quiz(2712, "DataType 'bit' ၼႂ်း SQL မိူၼ်တင်းသင်ၼႂ်း C#?", ["bool", "int", "string", "double"], "SQL 'bit' is equivalent to which C# type?"),
+  Quiz(2713, "AsNoTracking() ၼႂ်း EF Core ၸွႆးလွင်ႈသင်?", ["ႁဵတ်းႁႂ်ႈၵၢၼ် 'လူ' (Read) ၶေႃႈမုၼ်းဝႆးလိူဝ်ၵဝ်ႇ", "ႁဵတ်းႁႂ်ႈ Save Data လႆႈဝႆးလိူဝ်", "ယႃႉၶေႃႈမုၼ်းဢွၵ်ႇပႅတ်ႈ", "ပိတ်း Database"], "Benefit of AsNoTracking()?"),
+  Quiz(2714, "Database 'LocalDB' သိမ်းၾိုင််းမၼ်းဝႆႉ Extension သင်?", [".mdf", ".db", ".txt", ".exe"], "Extension for LocalDB files?"),
+  Quiz(2715, "FirstOrDefault() ပႅၵ်ႇတင်း ToList() ၸိူင်ႉႁိုဝ်?", ["FirstOrDefault ဢဝ်ၵူၺ်း 1 ဢၼ်၊ ToList ဢဝ်မႃးတင်းမူတ်း", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်", "FirstOrDefault ၸႃႉလိူဝ်", "ToList ဢဝ်မႃးၵူၺ်း 1 ဢၼ်"], "Difference between FirstOrDefault and ToList?"),
+  Quiz(2716, "In-Memory Database ၼႂ်း EF Core ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၸႂ်ႉတႃႇၸၢမ်း (Unit Testing) လူၺ်ႈဢမ်ႇလူဝ်ႇ SQL Server တႄႉ", "ၸႂ်ႉသိမ်း Data တႃႇသေႇ", "ၸႂ်ႉတႅမ်ႈ Website", "ၸႂ်ႉၼႄ Photo"], "Purpose of EF Core In-Memory database?"),
+  Quiz(2717, "Migration 'Snapshot' ပွင်ႇဝႃႈသင်?", ["ၾိုင််းဢၼ်မၢႆတွင်းဝႃႈ Database ယၢမ်းလဵဝ်မီးႁၢင်ႈၸိူင်ႉႁိုဝ်", "ၶႅပ်းႁၢင်ႈ (Photo) ၶွင် Database", "ၵၢၼ် Restart Database", "ၸိုဝ်ႈၶွင် Server"], "What is a Migration Snapshot?"),
+  Quiz(2718, "Attribute '[NotMapped]' ၸွႆးလွင်ႈသင်?", ["သင်ႇဢမ်ႇႁႂ်ႈ EF Core သၢင်ႈ Column တွၼ်ႈတႃႇ Property ၼၼ်ႉ", "မၵ်းမၼ်ႈပဵၼ် Primary Key", "ႁဵတ်းႁႂ်ႈ Column ၼၼ်ႉယႂ်ႇလိူဝ်ပိူၼ်ႈ", "ပိတ်း Table"], "What does [NotMapped] do?"),
+  Quiz(2719, "Concurrency Conflict ပွင်ႇဝႃႈသင်?", ["မိူဝ်ႈၵူၼ်း 2 ၵေႃႉမႄး Data ထႅဝ်လဵဝ်ၵၼ် ၼႂ်းယၢမ်းလဵဝ်ၵၼ်", "မိူဝ်ႈ Internet ၸႃႉ", "မိူဝ်ႈ Password ၽိတ်း", "မိူဝ်ႈ App Crash"], "What is a Concurrency Conflict?"),
+  Quiz(2720, "Lazy Loading ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်လူ Related Data ၵေႃႈတေႃႇမိူဝ်ႈႁဝ်းႁွင်ႉၸႂ်ႉမၼ်းတႄႉ", "ၵၢၼ်လူ Data ဢၼ်ၸႃႉၼႃႇ", "ၵၢၼ်ပိတ်း Database ႁင်းၵူၺ်း", "ၵၢၼ်ယႃႉ Data ဢွၵ်ႇပႅတ်ႈ"], "What is Lazy Loading?"),
+  Quiz(2721, "NuGet Package manager ယူႇၼႂ်း Menu လႂ်?", ["Tools", "View", "Project", "Build"], "Which menu contains NuGet Package Manager?"),
+  Quiz(2722, "Script-Migration ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သၢင်ႈ SQL Script လုၵ်ႉတီႈ Migrations တွၼ်ႈတႃႇဢဝ်ၵႂႃႇလႅၼ်ႈႁင်းၵူၺ်း", "တႅမ်ႈ Code JavaScript", "ယႃႉ Database", "မႄး C# Syntax"], "What is Script-Migration for?"),
+  Quiz(2723, "DB Context Factory ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၸႂ်ႉသၢင်ႈ DbContext ၼႂ်း App ဢၼ်မီးလၢႆ Threads", "ၸႂ်ႉသၢင်ႈ Tables ႁင်းၵူၺ်း", "ၸႂ်ႉမႄးသီ UI", "ၸႂ်ႉပိတ်း Computer"], "Purpose of DbContext Factory?"),
+  Quiz(2724, "SQL Query 'JOIN' မိူၼ်တင်း Method လႂ်ၼႂ်း EF Core?", ["Include()", "Add()", "Remove()", "Find()"], "Which EF Core method is like a SQL JOIN?"),
+  Quiz(2725, "Database Schema ပွင်ႇဝႃႈသင်?", ["ပိူင်သၢင်ႈတင်းမူတ်းၶွင် Database (Tables, Columns, Relationships)", "ၸိုဝ်ႈၶွင် User", "သီၶွင် SSMS", "တၢင်းဝႆး Internet"], "What is a Database Schema?"),
+  Quiz(2726, "Relationship 'Many-to-Many' လူဝ်ႇမီးသင်ပႃး?", ["လူဝ်ႇမီး Table တူဝ်ၵၢင် (Join Table)", "ဢမ်ႇလူဝ်ႇမီးသင်", "လူဝ်ႇမီး Primary Key 2 ဢၼ်ၼႂ်း Table လဵဝ်", "လူဝ်ႇမီး SQL Server 2 ၶိူင်ႈ"], "What is required for a Many-to-Many relationship?"),
+  Quiz(2727, "Fluent API ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈပၵ်းၵၢၼ် Database ၼႂ်း Method OnModelCreating", "တႅမ်ႈ Code Website", "ၸၢမ်း Internet Speed", "မႄး Font တႆး"], "Purpose of Fluent API?"),
+  Quiz(2728, "HasKey() ၼႂ်း Fluent API ၸႂ်ႉမၵ်းမၼ်ႈသင်?", ["Primary Key", "Foreign Key", "Table Name", "Column Color"], "What does HasKey() define?"),
+  Quiz(2729, "ToTable() ၼႂ်း Fluent API ၸွႆးသင်?", ["မၵ်းမၼ်ႈၸိုဝ်ႈ Table ႁင်းၵူၺ်း ႁႂ်ႈပႅၵ်ႇတင်းၸိုဝ်ႈ Class", "ပိၼ်ႇ Table ႁႂ်ႈပဵၼ် List", "ယႃႉ Table ပႅတ်ႈ", "ပိတ်း Database"], "What does ToTable() do?"),
+  Quiz(2730, "Seed Data ပွင်ႇဝႃႈသင်?", ["ၶေႃႈမုၼ်းငဝ်ႈႁၢၵ်ႈ ဢၼ်ႁဝ်းထႅမ်ဝႆႉၵမ်းလဵဝ်မိူဝ်ႈသၢင်ႈ Database", "ၶေႃႈမုၼ်းဢၼ်ၵိူတ်ႇမႃးႁင်းၵူၺ်း", "ၶေႃႈမုၼ်းဢၼ်ၽိတ်းပိူင်", "ၶေႃႈမုၼ်းဢၼ်ထုၵ်ႇယႃႉပႅတ်ႈ"], "What is Seed Data?"),
+  Quiz(2731, "Raw SQL Query ၼႂ်း EF Core ၸႂ်ႉလႆႈႁႃႉ?", ["ၸႂ်ႉလႆႈ (ၽၢၼ်ႇ FromSqlRaw)", "ၸႂ်ႉဢမ်ႇလႆႈသေပွၵ်ႈ", "ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း WinForms", "ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Linux"], "Can you use raw SQL in EF Core?"),
+  Quiz(2732, "Transactions ၼႂ်း Database ၸွႆးလွင်ႈသင်?", ["ႁႂ်ႈၼႄႉၸႂ်ဝႃႈ ၵၢၼ်လႅၵ်ႈပိၼ်ႇလၢႆဢၼ် တေယဝ်ႉတင်းမူတ်း ဢမ်ႇၼၼ် ဢမ်ႇယဝ်ႉသေဢၼ်", "ႁဵတ်းႁႂ်ႈ App လႅၼ်ႈဝႆး", "သူင်ႇငိုၼ်းၽၢၼ်ႇ Internet", "ပိတ်း App ႁင်းၵူၺ်း"], "Benefit of Database Transactions?"),
+  Quiz(2733, "SQL 'COUNT()' မိူၼ်တင်း LINQ Method လႂ်?", ["Count()", "Sum()", "Max()", "Min()"], "SQL COUNT() is equivalent to which LINQ method?"),
+  Quiz(2734, "SQL 'AVG()' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ႁႃၵႃႈၶၼ်ၵၢင် (Average)", "ႁႃၵႃႈၶၼ်ဢၼ်ယႂ်ႇသုတ်း", "ၼပ်ႉတူဝ်ၼပ်ႉတင်းမူတ်း", "ယႃႉၶေႃႈမုၼ်း"], "Purpose of SQL AVG()?"),
+  Quiz(2735, "Shadow Property ၼႂ်း EF Core ပဵၼ်သင်?", ["Property ဢၼ်မီးၼႂ်း Database ၵူၺ်း ၵူၺ်းၵႃႈဢမ်ႇမီးၼႂ်း C# Class", "Property ဢၼ်မီးငဝ်း", "Property ဢၼ်ဢမ်ႇၸၢင်ႈၸႂ်ႉလႆႈ", "Property ဢၼ်ပဵၼ်သီလမ်"], "What is a Shadow Property?"),
+  Quiz(2736, "HasData() ၼႂ်း OnModelCreating ၸွႆးသင်?", ["ၸႂ်ႉတွၼ်ႈတႃႇ Seed Data ၶဝ်ႈၼႂ်း Database", "ၸႂ်ႉယႃႉ Data", "ၸႂ်ႉၵူတ်ႇထတ်း Password", "ၸႂ်ႉၼႄ Photo"], "Purpose of HasData()?"),
+  Quiz(2737, "Table Splitting ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ဢဝ် Table 1 ဢၼ် ၸႅၵ်ႇပဵၼ် Class 2 ဢၼ်ၼႂ်း C#", "ၵၢၼ်ယႃႉ Table ပဵၼ် 2 သုၼ်ႇ", "ၵၢၼ်မႄးၸိုဝ်ႈ Table", "ၵၢၼ်ပိတ်း Database"], "What is Table Splitting?"),
+  Quiz(2738, "OwnsOne() ၼႂ်း Fluent API ၸွႆးသင်?", ["မၵ်းမၼ်ႈ Complex Type ဢၼ်ယူႇၼႂ်း Table လဵဝ်ၵၼ်", "မၵ်းမၼ်ႈ Primary Key", "မၵ်းမၼ်ႈ Foreign Key", "မၵ်းမၼ်ႈ Table Name"], "Purpose of OwnsOne()?"),
+  Quiz(2739, "Database Side Effect ပွင်ႇဝႃႈသင်?", ["မိူဝ်ႈ Database ႁဵတ်းသင်သေယိူင်ႈႁင်းၵူၺ်း (မိူၼ် Trigger/Constraint)", "မိူဝ်ႈ App Crash", "မိူဝ်ႈ Internet ၸႃႉ", "မိူဝ်ႈ Computer ႁႅင်း"], "What is a database side effect?"),
+  Quiz(2740, "Value Converter ၸွႆးလွင်ႈသင်?", ["ပိၼ်ႇ Data လုၵ်ႉတီႈ C# ႁႂ်ႈပဵၼ်ႁၢင်ႈဢၼ် Database ႁပ်ႉလႆႈ", "ပိၼ်ႇ C# ပဵၼ် Java", "ပိၼ်ႇ Image ပဵၼ် Text", "ပိတ်း Connection"], "Purpose of a Value Converter?"),
+  Quiz(2741, "ၸိုဝ်ႈ Default ၶွင် Migration Table ၼႂ်း SQL ပဵၼ်သင်?", ["__EFMigrationsHistory", "Migrations", "Table_History", "EF_Data"], "Default name of EF migration history table?"),
+  Quiz(2742, "Any() ၼႂ်း LINQ ၸွႆးသင်?", ["ၵူတ်ႇထတ်းဝႃႈမီးၶေႃႈမုၼ်းသေဢၼ်ႁႃႉ (True/False)", "ဢဝ်ၶေႃႈမုၼ်းတင်းမူတ်း", "ယႃႉၶေႃႈမုၼ်း", "မႄးၶေႃႈမုၼ်း"], "Purpose of Any() in LINQ?"),
+  Quiz(2743, "Sum() ၼႂ်း LINQ ၸွႆးသင်?", ["ႁူမ်ႈၵႃႈၶၼ်တူဝ်ၼပ်ႉတင်းမူတ်း", "ႁႃၵႃႈၶၼ်ၵၢင်", "ၼပ်ႉထႅဝ်တင်းမူတ်း", "ပိတ်း App"], "Purpose of Sum() in LINQ?"),
+  Quiz(2744, "OrderByDescending() ၸွႆးလွင်ႈသင်?", ["ၸတ်းလမ်ႇတပ်ႉလုၵ်ႉတီႈ ယႂ်ႇ ၵႂႃႇ ဢေႇ", "ၸတ်းလမ်ႇတပ်ႉလုၵ်ႉတီႈ ဢေႇ ၵႂႃႇ ယႂ်ႇ", "ၸတ်းလမ်ႇတပ်ႉႁင်းၵူၺ်း", "ဢမ်ႇၸတ်းသင်သေယိူင်ႈ"], "Purpose of OrderByDescending()?"),
+  Quiz(2745, "Take(5) ၼႂ်း LINQ ပွင်ႇဝႃႈသင်?", ["ဢဝ်ၵူၺ်း 5 ထႅဝ် (Rows) ဢွၼ်တၢင်းသုတ်း", "ယႃႉပႅတ်ႈ 5 ထႅဝ်", "မႄးၶေႃႈမုၼ်း 5 ထႅဝ်", "Skip ၵႂႃႇ 5 ထႅဝ်"], "What does Take(5) do?"),
+  Quiz(2746, "Skip(10) ၼႂ်း LINQ ပွင်ႇဝႃႈသင်?", ["ၶၢမ်ႈ (Skip) ၵႂႃႇ 10 ထႅဝ်ဢွၼ်တၢင်းသုတ်း", "ဢဝ်ၵူၺ်း 10 ထႅဝ်", "ယႃႉ 10 ထႅဝ်", "မႄး 10 ထႅဝ်"], "What does Skip(10) do?"),
+  Quiz(2747, "Entity State 'Modified' ပွင်ႇဝႃႈသင်?", ["Object ၼၼ်ႉထုၵ်ႇလႅၵ်ႈပိၼ်ႇဝႆႉ သေတေလႆႈ Update", "Object ၼၼ်ႉပဵၼ်တူဝ်မႂ်ႇ", "Object ၼၼ်ႉတေလႆႈယႃႉ", "Object ၼၼ်ႉဢမ်ႇမီးၵၢၼ်လႅၵ်ႈပိၼ်ႇ"], "What does 'Modified' entity state mean?"),
+  Quiz(2748, "Entity State 'Added' ပွင်ႇဝႃႈသင်?", ["Object ၼၼ်ႉတေလႆႈထႅမ် (Insert) ၶဝ်ႈမႂ်ႇ", "Object ၼၼ်ႉတေလႆႈယႃႉ", "Object ၼၼ်ႉတေလႆႈ Update", "Object ၼၼ်ႉယူႇၼႂ်း Database ယဝ်ႉ"], "What does 'Added' entity state mean?"),
+  Quiz(2749, "Database.EnsureCreated() ၸွႆးသင်?", ["သၢင်ႈ Database ၵမ်းလဵဝ်သင်မၼ်းပႆႇမီး (ဢမ်ႇၸႂ်ႉ Migrations)", "ယႃႉ Database", "မႄး Database", "ပိတ်း Database"], "Purpose of Database.EnsureCreated()?"),
+  Quiz(2750, "Module 22 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["သၢင်ႈ System ဢၼ်ၵဵပ်းၶေႃႈမုၼ်းလႆႈတႃႇသေႇ ၼႂ်း Database", "တႅမ်ႈ HTML ၵူၺ်း", "ပိတ်း Computer ၵမ်းလဵဝ်", "ဢမ်ႇႁဵတ်းသင်လႆႈသေယိူင်ႈ"], "What can we do after Module 22?"),
+];
 
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
@@ -8720,4 +8847,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM19,
   csharpQuizM20,
   csharpQuizM21,
+  csharpQuizM22,
 ];
