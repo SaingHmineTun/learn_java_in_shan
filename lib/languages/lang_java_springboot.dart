@@ -36,6 +36,14 @@ const Map<int, Map<int, String>> javaSpringbootModules = {
     17: "Error Handling & Optional",
     18: "Data Transfer Objects (DTOs)",
     19: "Advanced Searching Logic"
+  },
+  4: {
+    20: "Introduction to REST & @RestController",
+    21: "GET Mapping (Reading Data)",
+    22: "POST Mapping (Creating Data)",
+    23: "PUT Mapping (Updating Data)",
+    24: "DELETE Mapping (Removing Data)",
+    25: "Testing with Postman or Thunder Client"
   }
 };
 
