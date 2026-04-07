@@ -62,7 +62,7 @@ const Map<int, Map<int, String>> javaSpringbootModules = {
     37: "Writing the Dockerfile for Spring Boot",
     38: "Docker Compose for Multi-Container (App + MySQL)",
     39: "Setting up Remote MySQL (Aiven or Neon)",
-    40: "Setting up Remote MySQL (Aiven or Neon)",
+    40: "Deploying Spring Boot to the Cloud (Render/Railway)",
     41: "Final Review & Postman Production Testing"
   }
 };
@@ -101,6 +101,14 @@ final Map<int, Lesson> javaSpringbootLessons = {
   31: Lesson(5, 31),
   32: Lesson(5, 32),
   33: Lesson(5, 33),
+  34: Lesson(6, 34),
+  35: Lesson(6, 35),
+  36: Lesson(6, 36),
+  37: Lesson(6, 37),
+  38: Lesson(6, 38),
+  39: Lesson(6, 39),
+  40: Lesson(6, 40),
+  41: Lesson(6, 41),
 
 };
 
