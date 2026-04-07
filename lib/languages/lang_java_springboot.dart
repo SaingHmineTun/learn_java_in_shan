@@ -93,6 +93,14 @@ final Map<int, Lesson> javaSpringbootLessons = {
   23: Lesson(4, 23),
   24: Lesson(4, 24),
   25: Lesson(4, 25),
+  26: Lesson(5, 26),
+  27: Lesson(5, 27),
+  28: Lesson(5, 28),
+  29: Lesson(5, 29),
+  30: Lesson(5, 30),
+  31: Lesson(5, 31),
+  32: Lesson(5, 32),
+  33: Lesson(5, 33),
 
 };
 
