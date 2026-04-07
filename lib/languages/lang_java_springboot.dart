@@ -44,6 +44,26 @@ const Map<int, Map<int, String>> javaSpringbootModules = {
     23: "PUT Mapping (Updating Data)",
     24: "DELETE Mapping (Removing Data)",
     25: "Testing with Postman or Thunder Client"
+  },
+  5: {
+    26: "Bean Validation with Hibernate Validator",
+    27: "Triggering Validation in Controller",
+    28: "Pagination & Sorting (Advanced Search)",
+    29: "Custom Error Response Object",
+    30: "Global Exception Handling with @RestControllerAdvice",
+    31: "Handling MethodArgumentNotValidException",
+    32: "Custom Business Exceptions",
+    33: "API Documentation with Swagger (SpringDoc)"
+  },
+  6: {
+    34: "Profiles & Configuration (Dev vs Prod)",
+    35: "Building the Executable JAR with Maven",
+    36: "Introduction to Docker & Containers",
+    37: "Writing the Dockerfile for Spring Boot",
+    38: "Docker Compose for Multi-Container (App + MySQL)",
+    39: "Setting up Remote MySQL (Aiven or Neon)",
+    40: "Setting up Remote MySQL (Aiven or Neon)",
+    41: "Final Review & Postman Production Testing"
   }
 };
 
@@ -1779,7 +1799,6 @@ final List<Quiz> serviceModule3Quiz = [
     "Which layer should hold advanced search logic?",
   ),
 ];
-
 final List<Quiz> restApiModule4Quiz = [
   // --- Lesson 4.1: Introduction to REST & @RestController (251-265) ---
   Quiz(
