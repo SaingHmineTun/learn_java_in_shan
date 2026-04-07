@@ -13,10 +13,10 @@ const languages = [
   "csharp",
   "haskell",
   "javafx",
+  "java_springboot",
   "python_tkinter",
   "git",
-  "mysql"
-
+  "mysql",
 ];
 const fullName = {
   "basic": "Computer Basic",
@@ -35,5 +35,6 @@ const fullName = {
   "python_tkinter": "Python Tkinter",
   "javafx": "JavaFX",
   "git": "Git & Github",
-  "mysql": "MySQL"
+  "mysql": "MySQL",
+  "java_springboot": "Spring Boot",
 };

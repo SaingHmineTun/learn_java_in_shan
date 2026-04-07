@@ -17,6 +17,11 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFFE76F00), // Java Orange
           'icon': DevIcons.javaPlain,
         };
+      case 'java_springboot':
+        return {
+          'color': const Color(0xFF09F018), // Java Orange
+          'icon': DevIcons.javaPlain,
+        };
       case 'python_tkinter': // Adding Tkinter here or as a separate case
       case 'python':
         return {

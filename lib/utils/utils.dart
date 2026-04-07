@@ -4,6 +4,7 @@ import 'package:tmkacademy/languages/lang_cpp.dart';
 import 'package:tmkacademy/languages/lang_csharp.dart';
 import 'package:tmkacademy/languages/lang_git.dart';
 import 'package:tmkacademy/languages/lang_haskell.dart';
+import 'package:tmkacademy/languages/lang_java_springboot.dart';
 import 'package:tmkacademy/languages/lang_javafx.dart';
 import 'package:tmkacademy/languages/lang_ts.dart';
 
@@ -36,6 +37,7 @@ const Map<String, Map<int, String>> topics = {
   "git": gitTopics,
   "cpp": cppTopics,
   "mysql": mysqlTopics,
+  "java_springboot": javaSpringbootTopics
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -56,6 +58,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "git": gitModules,
   "cpp": cppModules,
   "mysql": mysqlModules,
+  "java_springboot": javaSpringbootModules,
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -76,6 +79,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "git": gitLessons,
   "cpp": cppLessons,
   "mysql": mysqlLessons,
+  "java_springboot": javaSpringbootLessons
 };
 
 class Lesson {
