@@ -371,6 +371,7 @@ const Map<int, Map<int, String>> csharpModules = {
     277: "Relationships in EF Core: One-to-Many (Village to Students)",
     278: "Exercise: Building a 'Shan Community Registry' Database",
   },
+  //   23: "Web Apps: ASP.NET Core MVC or Web API Basics",
   23: {
     279: "Introduction to Web Development with .NET: Why ASP.NET Core?",
     280:
