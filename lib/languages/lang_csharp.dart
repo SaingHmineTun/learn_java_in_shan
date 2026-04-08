@@ -391,62 +391,63 @@ const Map<int, Map<int, String>> csharpModules = {
   },
   24: {
     292: "The MAUI Manifesto: One Codebase for Android, iOS, and Windows",
-    293: "Setting up the Emulator: Running Your First App on an Android Device",
-    294: "XAML for Mobile: Understanding the 'Visual Tree' and Hot Reload",
-    295:
+    293: "Setting Up the .NET MAUI Environment",
+    294: "Setting up the Emulator: Running Your First App on an Android Device",
+    295: "XAML for Mobile: Understanding the 'Visual Tree' and Hot Reload",
+    296:
         "Responsive Layouts: Master the Grid and FlexLayout for Different Screens",
-    296: "The Shell Architecture: Simplified Navigation and Flyout Menus",
-    297: "Advanced Controls: Using CollectionView for High-Performance Lists",
-    298: "Data Binding in Mobile: The MVVM Pattern for Decoupled UI",
-    299:
+    297: "The Shell Architecture: Simplified Navigation and Flyout Menus",
+    298: "Advanced Controls: Using CollectionView for High-Performance Lists",
+    299: "Data Binding in Mobile: The MVVM Pattern for Decoupled UI",
+    300:
         "Handling User Input: Entries, Editors, and Validation in Mobile Forms",
-    300: "Images and Icons: Managing Assets for Multiple Screen Densities",
-    301:
+    301: "Images and Icons: Managing Assets for Multiple Screen Densities",
+    302:
         "Platform Features I: Accessing Device Info and Connectivity (Is Online?)",
-    302: "Platform Features II: Using the Camera and Photo Gallery in C#",
-    303:
-        "Local Storage: Using SQLite with EF Core for Offline-First Mobile Apps",
+    303: "Platform Features II: Using the Camera and Photo Gallery in C#",
     304:
+        "Local Storage: Using SQLite with EF Core for Offline-First Mobile Apps",
+    305:
         "Consuming Web APIs: Fetching Shan News from the Internet (HttpClient)",
-    305: "Theming: Creating a 'Shan Style' with Colors, Fonts, and Dark Mode",
-    306: "Gestures: Handling Taps, Swipes, and Pinches on Touchscreens",
-    307: "Lifecycle Management: What Happens when the App goes to Background?",
-    308: "Publishing: Generating the .apk and .aab for Android Distribution",
-    309: "Project: 'Shan Learn' - A Multi-platform Vocabulary App",
+    306: "Theming: Creating a 'Shan Style' with Colors, Fonts, and Dark Mode",
+    307: "Gestures: Handling Taps, Swipes, and Pinches on Touchscreens",
+    308: "Lifecycle Management: What Happens when the App goes to Background?",
+    309: "Publishing: Generating the .apk and .aab for Android Distribution",
+    310: "Project: 'Shan Learn' - A Multi-platform Vocabulary App",
   },
   25: {
-    310:
+    311:
         "Project Discovery: Defining User Personas (Students, Elders, Translators)",
-    311: "Architecting the Solution: Choosing between SQLite and SQL Server",
-    312:
+    312: "Architecting the Solution: Choosing between SQLite and SQL Server",
+    313:
         "The Data Schema: Mapping Shan (Tai), English, and Burmese Definitions",
-    313: "Setting up the 'MvvmToolkit' for Professional State Management",
-    314:
-        "Building the Search Engine: Implementing 'Fuzzy Search' for Shan Script",
+    314: "Setting up the 'MvvmToolkit' for Professional State Management",
     315:
-        "The Dictionary UI: Creating a Split-View Layout (Search vs. Definition)",
+        "Building the Search Engine: Implementing 'Fuzzy Search' for Shan Script",
     316:
+        "The Dictionary UI: Creating a Split-View Layout (Search vs. Definition)",
+    317:
         "Input Methods: Handling Virtual Keyboards for Tai Heritage and NamKhone",
-    317: "Rich Text Rendering: Displaying Sample Sentences and Grammar Notes",
-    318: "The Translator Tab: Integrating Basic String Mapping and API Stubs",
-    319:
+    318: "Rich Text Rendering: Displaying Sample Sentences and Grammar Notes",
+    319: "The Translator Tab: Integrating Basic String Mapping and API Stubs",
+    320:
         "Local Cache & History: Saving Recently Searched Words for Offline Use",
-    320: "Final Debugging: Performance Profiling and Memory Leak Hunting",
-    321: "The Grand Launch: Packaging the App and Writing User Documentation",
+    321: "Final Debugging: Performance Profiling and Memory Leak Hunting",
+    322: "The Grand Launch: Packaging the App and Writing User Documentation",
   },
   26: {
-    322: "The Art of Debugging: Using Breakpoints, Watch, and Call Stack",
-    323: "Advanced Debugging: Conditional Breakpoints and Data Tips",
-    324: "Introduction to Unit Testing: Why We Write Code to Test Code",
-    325: "MSTest vs. xUnit: Choosing a Testing Framework for .NET",
-    326: "Writing Your First Unit Test: The AAA Pattern (Arrange, Act, Assert)",
-    327: "Test-Driven Development (TDD) Basics for Shan App Features",
-    328: "Mocking Dependencies: Testing Logic without a Real Database",
-    329: "Code Refactoring: Cleaning Up Your Project Before Release",
-    330: "Logging and Crash Reporting: Using Serilog to Track Errors",
-    331: "Application Packaging: Creating MSIX and Setup.exe Installers",
-    332: "GitHub Actions Introduction: Automated Testing and Building (CI/CD)",
-    333: "Final Graduation: Deploying Your Shan Dictionary to the World",
+    323: "The Art of Debugging: Using Breakpoints, Watch, and Call Stack",
+    324: "Advanced Debugging: Conditional Breakpoints and Data Tips",
+    325: "Introduction to Unit Testing: Why We Write Code to Test Code",
+    326: "MSTest vs. xUnit: Choosing a Testing Framework for .NET",
+    327: "Writing Your First Unit Test: The AAA Pattern (Arrange, Act, Assert)",
+    328: "Test-Driven Development (TDD) Basics for Shan App Features",
+    329: "Mocking Dependencies: Testing Logic without a Real Database",
+    330: "Code Refactoring: Cleaning Up Your Project Before Release",
+    331: "Logging and Crash Reporting: Using Serilog to Track Errors",
+    332: "Application Packaging: Creating MSIX and Setup.exe Installers",
+    333: "GitHub Actions Introduction: Automated Testing and Building (CI/CD)",
+    334: "Final Graduation: Deploying Your Shan Dictionary to the World",
   },
 };
 
