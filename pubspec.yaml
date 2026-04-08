@@ -41,6 +41,7 @@ flutter:
     - assets/lessons/javafx/
     - assets/lessons/cpp/
     - assets/lessons/mysql/
+    - assets/lessons/java_springboot/
     - assets/images/
   fonts:
     - family: AJ05
