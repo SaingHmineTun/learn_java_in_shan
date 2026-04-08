@@ -729,6 +729,19 @@ final Map<int, Lesson> csharpLessons = {
   276: Lesson(22, 276),
   277: Lesson(22, 277),
   278: Lesson(22, 278),
+  279: Lesson(23, 279),
+  280: Lesson(23, 280),
+  281: Lesson(23, 281),
+  282: Lesson(23, 282),
+  283: Lesson(23, 283),
+  284: Lesson(23, 284),
+  285: Lesson(23, 285),
+  286: Lesson(23, 286),
+  287: Lesson(23, 287),
+  288: Lesson(23, 288),
+  289: Lesson(23, 289),
+  290: Lesson(23, 290),
+  291: Lesson(23, 291),
 };
 
 final List<Quiz> csharpQuizM1 = [
