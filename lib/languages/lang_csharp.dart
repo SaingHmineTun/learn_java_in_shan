@@ -8837,6 +8837,133 @@ final List<Quiz> csharpQuizM22 = [
   Quiz(2749, "Database.EnsureCreated() ၸွႆးသင်?", ["သၢင်ႈ Database ၵမ်းလဵဝ်သင်မၼ်းပႆႇမီး (ဢမ်ႇၸႂ်ႉ Migrations)", "ယႃႉ Database", "မႄး Database", "ပိတ်း Database"], "Purpose of Database.EnsureCreated()?"),
   Quiz(2750, "Module 22 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["သၢင်ႈ System ဢၼ်ၵဵပ်းၶေႃႈမုၼ်းလႆႈတႃႇသေႇ ၼႂ်း Database", "တႅမ်ႈ HTML ၵူၺ်း", "ပိတ်း Computer ၵမ်းလဵဝ်", "ဢမ်ႇႁဵတ်းသင်လႆႈသေယိူင်ႈ"], "What can we do after Module 22?"),
 ];
+final List<Quiz> csharpQuizM23 = [
+  // Lesson 279: Introduction to Web Development with .NET
+  Quiz(2751, "ASP.NET Core ပဵၼ် Framework တွၼ်ႈတႃႇသၢင်ႈသင်?", ["Modern Web Applications လႄႈ Services (APIs)", "Desktop Game 3D ၵူၺ်း", "Operating System မိူၼ် Windows", "Hardware Driver တွၼ်ႈတႃႇ Printer"], "What is ASP.NET Core used for?"),
+  Quiz(2752, "လွင်ႈလီၶွင် ASP.NET Core ဢၼ်ဝႃႈ Cross-Platform ပွင်ႇဝႃႈသင်?", ["လႅၼ်ႈလႆႈတင်းၼိူဝ် Windows, Linux, လႄႈ macOS", "လႅၼ်ႈလႆႈၵူၺ်းၼႂ်း Windows Version မႂ်ႇ", "ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Browser Chrome", "ပဵၼ် Website ဢၼ်လႅၵ်ႈပိၼ်ႇသီလႆႈ"], "What does Cross-Platform mean in ASP.NET Core?"),
+  Quiz(2753, "Kestrel ၼႂ်း ASP.NET Core ပဵၼ်သင်?", ["Web Server လဵၵ်ႉๆ ဢၼ်ပႃးဝႆႉၼႂ်း App တႃႇႁပ်ႉ Request", "ၸိုဝ်ႈ Programming Language မႂ်ႇ", "တူဝ်မႄး Syntax Error", "Database Engine မိူၼ် SQL Server"], "What is Kestrel?"),
+  Quiz(2754, "Open Source ၼႂ်း ASP.NET Core ပွင်ႇဝႃႈသင်?", ["Code မၼ်းပိုတ်ႇဝႆႉ ၽႂ်ၵေႃႈလူ လႄႈ ၸွႆးၵၼ်မႄးလႆႈ Free", "တေလႆႈသိုဝ်ႉလၢႆႇၸိၼ်ႇ (License) ၵႃႈၶၼ်แพง", "ၸႂ်ႉလႆႈၵူၺ်းမိူဝ်ႈပိုတ်ႇ Internet", "ဢမ်ႇပၼ်ၽႂ်တူၺ်း Code ၽၢႆႇၼႂ်း"], "What is Open Source?"),
+  Quiz(2755, "Client ၼႂ်းလုၵ်ႈၾႃႉ Web ပွင်ႇဝႃႈသင်?", ["User ဢၼ်ၸႂ်ႉ Browser (မိူၼ် Chrome) သူင်ႇ Request", "ၶွမ်းဢၼ်သိမ်း Database ဝႆႉ", "ၵူၼ်းတႅမ်ႈ Code (Developer)", "တူဝ်သူင်ႇ Signal Internet"], "What is a Client in Web Development?"),
+
+  // Lesson 280: Understanding HTTP
+  Quiz(2756, "HTTP Request ပွင်ႇဝႃႈသင်?", ["ၶေႃႈယွၼ်း/ၶေႃႈထၢမ် ဢၼ် Browser သူင်ႇၵႂႃႇၸူး Server", "ၶေႃႈတွပ်ႇ ဢၼ် Server သူင်ႇမႃး", "ၵၢၼ်ပိတ်း Website", "ၵၢၼ် Download File"], "What is an HTTP Request?"),
+  Quiz(2757, "HTTP Verb 'GET' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["လူ ဢမ်ႇၼၼ် ဢဝ်ၶေႃႈမုၼ်းမႃးၼႄ", "သူင်ႇၶေႃႈမုၼ်းမႂ်ႇၵႂႃႇသိမ်း", "ယႃႉၶေႃႈမုၼ်းဢွၵ်ႇပႅတ်ႈ", "မႄးၶေႃႈမုၼ်းတင်းမူတ်း"], "Purpose of HTTP GET?"),
+  Quiz(2758, "HTTP Verb 'POST' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သူင်ႇၶေႃႈမုၼ်းမႂ်ႇ (မိူၼ်ၼင်ႇ Submit Form) ၵႂႃႇသၢင်ႈ", "လူၶေႃႈမုၼ်းၵူၺ်း", "ပိတ်း Browser", "Restart Server"], "Purpose of HTTP POST?"),
+  Quiz(2759, "မၢႆတူဝ်ပိုၼ်တ်း (Status Code) '404 Not Found' ပွင်ႇဝႃႈသင်?", ["ႁႃၼႃႈ Website ဢၼ်ယွၼ်းမႃးၼၼ်ႉဢမ်ႇႁၼ်", "ၵၢၼ်ယဝ်ႉတူဝ်ႈလီ (OK)", "Server မီးပၼ်ႁႃ (Error)", "User ဢမ်ႇပႆႇလႆႈ Login"], "What does 404 Not Found mean?"),
+  Quiz(2760, "မၢႆတူဝ်ပိုၼ်တ်း (Status Code) '200 OK' ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်သူင်ႇ Request လႄႈ Response ယဝ်ႉတူဝ်ႈလီ", "Website ႁၢႆၵႂႃႇယဝ်ႉ", "Password ၽိတ်း", "Internet ၸႃႉၼႃႇ"], "What does 200 OK mean?"),
+
+  // Lesson 281: MVC Pattern
+  Quiz(2761, "သုၼ်ႇလႂ်ၼႂ်း MVC ဢၼ်မီးၼႃႈၵၢၼ်လၢတ်ႈတေႃႇတင်း Database?", ["Model", "View", "Controller", "Router"], "Which part of MVC talks to the database?"),
+  Quiz(2762, "View ၼႂ်း MVC မီးၼႃႈၵၢၼ်သင်?", ["ၼႄႁၢင်ႈ (UI) တွၼ်ႈတႃႇ User ႁၼ်", "ၸတ်းၵၢၼ် Logic", "သိမ်း Password", "ၵူတ်ႇထတ်း Error"], "What is the role of the View?"),
+  Quiz(2763, "Controller ၼႂ်း MVC မိူၼ်တင်းသင်?", ["ၵူၼ်းၵႄႈၵၢင် ဢၼ်ႁပ်ႉ Request သေသင်ႇၵၢၼ် Model လႄႈ View", "တီႈၵဵပ်း Data", "ၼႃႈတႃ Website ဢၼ် User ႁၼ်", "တူဝ်ပိၼ်ႇလိၵ်းတႆး"], "What is a Controller in MVC?"),
+  Quiz(2764, "Separation of Concerns ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၸႅၵ်ႇ Code ဢွၵ်ႇပဵၼ်သုၼ်ႇๆ ၸွမ်းၼင်ႇၼႃႈၵၢၼ်ၽႂ်မၼ်း", "ၵၢၼ်ပူတ်း App ဢွၵ်ႇပႅတ်ႈ", "ၵၢၼ်ႁူမ်ႈ Code တင်းမူတ်းဝႆႉၼႂ်းၾၢႆႇလဵဝ်", "ၵၢၼ်မၢႆတွင်းၸိုဝ်ႈ User"], "What is Separation of Concerns?"),
+  Quiz(2765, "Business Logic ၵႆႉယူႇၼႂ်းသုၼ်ႇလႂ်ၶွင် MVC?", ["Model (ဢမ်ႇၼၼ် Service Layer)", "View ၵူၺ်း", "CSS File", "wwwroot Folder"], "Where does Business Logic usually live?"),
+
+  // Lesson 282: Setting Up Project
+  Quiz(2766, "Folder 'wwwroot' ၼႂ်း ASP.NET Core ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵဵပ်း Static Files မိူၼ် CSS, JS, លႄႈ ၶႅပ်းႁၢင်ႈ", "ၵဵပ်း C# Classes", "ၵဵပ်း Database", "ၵဵပ်း Logs ၶွင် Windows"], "Purpose of wwwroot folder?"),
+  Quiz(2767, "ၾၢႆႇ 'Program.cs' မီးၼႃႈၵၢၼ်သင်?", ["ပဵၼ် 'ႁူဝ်ၸႂ်' ဢၼ်မၵ်းမၼ်ႈဝႃႈ App တေလႅၼ်ႈၸိူင်ႉႁိုဝ်", "ပဵၼ်တူဝ်ၼႄ HTML", "ပဵၼ်တူဝ်သိမ်း Password", "ပဵၼ်တီႈတႅမ်ႈ CSS"], "Role of Program.cs?"),
+  Quiz(2768, "URL 'https://localhost:5001' ၼၼ်ႉ localhost ပွင်ႇဝႃႈသင်?", ["တူဝ်တႅၼ်းၶွမ်းႁဝ်း (Server ၼႂ်းၶွမ်းႁဝ်း)", "Server ၶွင် Microsoft", "Website တႄႉတႄႉၼိူဝ် Internet", "ၸိုဝ်ႈ Browser"], "What is localhost?"),
+  Quiz(2769, "Template လႂ်ဢၼ်ထုၵ်ႇလီလိူၵ်ႈ တႃႇသၢင်ႈ MVC App ၼႂ်း VS 2022?", ["ASP.NET Core Web App (Model-View-Controller)", "Console App", "Class Library", "Empty Project"], "Which template to choose for MVC?"),
+  Quiz(2770, "Port ၼႂ်း URL (မိူၼ်ၼင်ႇ :7001) ပွင်ႇဝႃႈသင်?", ["'ႁူးတၢင်းၶဝ်ႈ' ဢၼ်ၸႅၵ်ႇဝႆႉတႃႇ App ၼိုင်ႈဢၼ် ၼႂ်း Server", "မၢႆ ID ၶွင် Developer", "တၢင်းဝႆး Internet", "မၢႆ Version ၶွင် Windows"], "What is a Port in a URL?"),
+
+  // Lesson 283: Routing
+  Quiz(2771, "Default Route Pattern ၼႂ်း MVC ပဵၼ်ၸိူင်ႉႁိုဝ်?", ["{controller}/{action}/{id?}", "{action}/{controller}", "{id}/{controller}", "/home/page"], "Default MVC route pattern?"),
+  Quiz(2772, "ၼႂ်း URL '/Student/Details/5' ၼၼ်ႉ 'Details' ပွင်ႇဝႃႈသင်?", ["ၸိုဝ်ႈ Action (Method)", "ၸိုဝ်ႈ Controller", "မၢႆ ID", "ၸိုဝ်ႈ Database"], "What is 'Details' in /Student/Details/5?"),
+  Quiz(2773, "တူဝ်မၢႆ '?' ၼႂ်း {id?} ပွင်ႇဝႃႈသင်?", ["Optional (တေမီး ဢမ်ႇၼၼ် ဢမ်ႇမီးၵေႃႈလႆႈ)", "တေလႆႈမီးတႃႇသေႇ", "ပဵၼ် Error", "ၸႂ်ႉတႃႇသွၵ်ႈႁႃ"], "What does '?' mean in {id?}?"),
+  Quiz(2774, "Attribute Routing ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈ URL ႁင်းၵူၺ်း (Custom URL) ၼိူဝ် Controller/Action", "မၵ်းမၼ်ႈသီ UI", "မၵ်းမၼ်ႈ Password", "မၵ်းမၼ်ႈမၢႆ Version"], "What is Attribute Routing for?"),
+  Quiz(2775, "Segment ၼႂ်း URL ပွင်ႇဝႃႈသင်?", ["သုၼ်ႇၶွင် URL ဢၼ်ၸႅၵ်ႇဝႆႉလူၺ်ႈတူဝ် '/'", "တူဝ်လိၵ်ႈ Unicode တႆး", "မၢႆ Port", "Error Code"], "What is a URL Segment?"),
+
+  // Lesson 284: Controllers and Actions
+  Quiz(2776, "Action Method တေလႆႈတွပ်ႇၶိုၼ်း (Return) ပဵၼ်သင်?", ["IActionResult", "string ၵူၺ်း", "void", "bool"], "Return type for an Action method?"),
+  Quiz(2777, "Method 'View()' ၼႂ်း Action ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သူင်ႇၼႃႈတႃ HTML (View) ၵႂႃႇၼႄ Browser", "သူင်ႇ JSON Data", "Redirect ၵႂႃႇ Website တၢင်ႇဢၼ်", "ပိတ်း App"], "Purpose of return View()?"),
+  Quiz(2778, "Action Method တေလႆႈမီး Access Modifier ပဵၼ်သင်?", ["public", "private", "protected", "internal"], "Access modifier for Action methods?"),
+  Quiz(2779, "RedirectToAction() ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သူင်ႇ User ၵႂႃႇၸူး Action တၢင်ႇဢၼ် (မိူၼ်ၼင်ႇ ဝၢႆး Save Data)", "ၼႄၼႃႈ Error", "ပိၼ်ႇလိၵ်းတႆး", "Download File"], "Purpose of RedirectToAction?"),
+  Quiz(2780, "Method 'Json()' ၼႂ်း Controller ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သူင်ႇၶေႃႈမုၼ်းပဵၼ် JSON တွၼ်ႈတႃႇ API", "သူင်ႇ HTML", "သူင်ႇ CSS", "သူင်ႇ Image"], "Purpose of return Json()?"),
+
+  // Lesson 285: Razor Views
+  Quiz(2781, "တူဝ်မၢႆ '@' ၼႂ်း Razor View ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["တႄႇတႅမ်ႈ Code C# ၼႂ်း HTML", "တႅမ်ႈ Email", "မၵ်းမၼ်ႈ Primary Key", "သူင်ႇ Message"], "What is '@' used for in Razor?"),
+  Quiz(2782, "Extension ၶွင်ၾၢႆႇ Razor View ပဵၼ်သင်?", [".cshtml", ".html", ".razor.cs", ".php"], "Razor View file extension?"),
+  Quiz(2783, "ႁဝ်းၸၢင်ႈၸႂ်ႉ Loop 'foreach' ၼႂ်း Razor View လႆႈႁႃႉ?", ["လႆႈ, တွၼ်ႈတႃႇၼႄသဵၼ်ႈမၢႆ Data တင်းမူတ်း", "ဢမ်ႇလႆႈ, HTML ဢမ်ႇပွင်ႇၸႂ် Loop", "လႆႈၵူၺ်းၼႂ်း C# Class", "လႆႈၵူၺ်းၼႂ်း JavaScript"], "Can we use foreach in Razor?"),
+  Quiz(2784, "ViewBag ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သူင်ႇၶေႃႈမုၼ်းလဵၵ်ႉๆ ၼွႆႉๆ လုၵ်ႉတီႈ Controller ၵႂႃႇၸူး View", "သိမ်း Data ၼႂ်း Database", "မႄး Error ၼႂ်း C#", "ၵဵပ်းၶႅပ်းႁၢင်ႈ"], "What is ViewBag for?"),
+  Quiz(2785, "Dynamic HTML ပွင်ႇဝႃႈသင်?", ["HTML ဢၼ်မီးၶေႃႈမုၼ်းလႅၵ်ႈပိၼ်ႇၸွမ်း Code (မိူၼ်ၼင်ႇ သဵၼ်ႈမၢႆပွႆး)", "HTML ဢၼ်လႅၼ်ႈဝႆး", "HTML ဢၼ်မီး Animation", "HTML ဢၼ်ဢမ်ႇလႅၵ်ႈပိၼ်ႇသင်လႆႈ"], "What is Dynamic HTML?"),
+
+  // Lesson 286: Layouts and Partial Views
+  Quiz(2786, "Method '@RenderBody()' ၼႂ်း Layout ၸႂ်ႉႁဵတ်းသင်?", ["ပဵၼ် 'တီႈဝၢင်း' ဢၼ်တေဢဝ်ၶေႃႈမုၼ်းလုၵ်ႉတီႈ View မႃးၼႄ", "ၼႄ Header ၵူၺ်း", "ၼႄ Footer ၵူၺ်း", "ပိတ်း Website"], "Purpose of @RenderBody()?"),
+  Quiz(2787, "_Layout.cshtml ၵႆႉသိမ်းသင်ဝႆႉ?", ["Header, Footer, ลႄႈ CSS Links ဢၼ်ၸႂ်ႉၸွမ်ၵၼ်", "Business Logic ၵူၺ်း", "Password ၶွင် User", "SQL Code"], "What does _Layout usually contain?"),
+  Quiz(2788, "Partial View ပွင်ႇဝႃႈသင်?", ["ၾၢႆႇ Razor လဵၵ်ႉๆ ဢၼ်ၸၢင်ႈဢဝ်ၵႂႃႇၸႂ်ႉသမ်ႉ (မိူၼ် Menu)", "ၼႃႈတႃ Website ဢၼ်ပႆႇယဝ်ႉ", "Error Message", "Database Table"], "What is a Partial View?"),
+  Quiz(2789, "ၾၢႆႇ '_ViewStart.cshtml' ၸႂ်ႉႁဵတ်းသင်?", ["သင်ႇႁႂ်ႈၵူႈ View တင်းမူတ်းၸႂ်ႉ Layout ႁင်းၵူၺ်းမၼ်း", "တႄႇလႅၼ်ႈ App", "Login User", "သၢင်ႈ Database"], "Purpose of _ViewStart?"),
+  Quiz(2790, "ႁဵတ်းသင်ႁဝ်းၸင်ႇလူဝ်ႇၸႂ်ႉ Layout?", ["တွၼ်ႈတႃႇႁႂ်ႈၵူႈၼႃႈလိၵ်ႈမီးႁၢင်ႈ (UI) မိူၼ်ၵၼ်ငၢႆႈငၢႆႈ", "တွၼ်ႈတႃႇႁႂ်ႈ App လႅၼ်ႈဝႆး", "တွၼ်ႈတႃႇႁႂ်ႈ Hack ဢမ်ႇလႆႈ", "တွၼ်ႈတႃႇႁႂ်ႈတႅမ်ႈ Code ၼမ်လိူဝ်ၵဝ်ႇ"], "Why use Layouts?"),
+
+  // Lesson 287: Form Handling and Model Binding
+  Quiz(2791, "Model Binding ၼႂ်း ASP.NET Core ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ဢဝ်ၶေႃႈမုၼ်းလုၵ်ႉတီႈ Form ၵႂႃႇပဵၼ် C# Object ႁင်းၵူၺ်း", "ၵၢၼ်ၵွင်ႉ Internet", "ၵၢၼ်တႅမ်ႈ Code HTML", "ၵၢၼ်မႄး Font တႆး"], "What is Model Binding?"),
+  Quiz(2792, "Tag Helper 'asp-for' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵွင်ႉ Input Field ၸူး Property ၼႂ်း Model", "မၵ်းမၼ်ႈသီလိၵ်ႈ", "သၢင်ႈ Link ၵႂႃႇ Google", "မၵ်းမၼ်ႈ Password"], "What is asp-for used for?"),
+  Quiz(2793, "HTTP Method လႂ်ဢၼ်ၸႂ်ႉတွၼ်ႈတႃႇသူင်ႇ Data လုၵ်ႉတီႈ Form ၵႂႃႇသိမ်း?", ["POST", "GET", "HEAD", "OPTIONS"], "Which HTTP method is used for submitting forms?"),
+  Quiz(2794, "ModelState.IsValid ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵူတ်ႇထတ်းဝႃႈ Data ဢၼ်သူင်ႇမႃး မႅၼ်ႈၸွမ်းပၵ်းၵၢၼ်ႁႃႉ?", "ၵူတ်ႇထတ်း Internet", "ၵူတ်ႇထတ်းမၢႆ Port", "ၵူတ်ႇထတ်းၸိုဝ်ႈ Server"], "Purpose of ModelState.IsValid?"),
+  Quiz(2795, "Attribute '[HttpPost]' ၼိူဝ် Action ၸွႆးသင်?", ["မၵ်းမၼ်ႈႁႂ်ႈ Action ၼၼ်ႉႁပ်ႉၵူၺ်း Request ဢၼ်ပဵၼ် POST", "ႁဵတ်းႁႂ်ႈ Action လႅၼ်ႈဝႆး", "ပိတ်း Action ၼၼ်ႉ", "မၵ်းမၼ်ႈပဵၼ် Primary Key"], "Purpose of [HttpPost]?"),
+
+  // Lesson 288: Web APIs
+  Quiz(2796, "Web API ပႅၵ်ႇတင်း MVC Controller ၸိူင်ႉႁိုဝ်?", ["API တွပ်ႇၶိုၼ်းပဵၼ် Data (JSON), MVC တွပ်ႇပဵၼ် HTML", "API ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Linux", "MVC ဢမ်ႇၸႂ်ႉ HTTP", "API ဢမ်ႇမီး Controller"], "Difference between API and MVC?"),
+  Quiz(2797, "ၽႂ်ပဵၼ် 'User' ၶွင် Web API တႄႉတႄႉ?", ["Software (Mobile App, JavaScript, etc.)", "ၵူၼ်းဢၼ်လူ Website ธรรมဒႃႇ", "Browser Chrome ၵူၺ်း", "Microsoft Team"], "Who is the 'User' of a Web API?"),
+  Quiz(2798, "Base Class လႂ်ဢၼ် API Controller ထုၵ်ႇလီ Inherit?", ["ControllerBase", "Controller", "ViewComponent", "Object"], "Base class for API controllers?"),
+  Quiz(2799, "Attribute '[ApiController]' ၸွႆးလွင်ႈသင်?", ["မၵ်းမၼ်ႈပၵ်းၵၢၼ် Automatic တွၼ်ႈတႃႇ API (မိူၼ် Model Validation)", "ႁဵတ်းႁႂ်ႈ API ၵွင်ႉ Database ႁင်းၵူၺ်း", "မႄး Error ႁင်းၵူၺ်း", "ပိတ်း Security"], "Purpose of [ApiController]?"),
+  Quiz(2800, "REST API ၵႆႉၸႂ်ႉ Protocolသင်?", ["HTTP", "FTP", "SMTP", "TCP"], "What protocol does REST API use?"),
+
+  // Lesson 289: JSON Data
+  Quiz(2801, "JSON ပွင်ႇဝႃႈသင်?", ["JavaScript Object Notation", "Java System Online", "Joint Software Online Network", "Just Standard Object Note"], "What does JSON stand for?"),
+  Quiz(2802, "Serialization ၼႂ်း Web API ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ပိၼ်ႇ Object (C#) ႁႂ်ႈပဵၼ် String (JSON) တႃႇသူင်ႇၵႂႃႇ", "ၵၢၼ်ယႃႉ Data", "ၵၢၼ် Download Image", "ၵၢၼ် Restart Server"], "What is Serialization?"),
+  Quiz(2803, "JSON ၸႂ်ႉသင်တွၼ်ႈတႃႇမၵ်းမၼ်ႈၶေႃႈမုၼ်း?", ["Key-Value Pairs", "SQL Commands", "HTML Tags", "C# Methods"], "What does JSON use for data?"),
+  Quiz(2804, "ႁဵတ်းသင် Web API ၸင်ႇလိူၵ်ႈၸႂ်ႉ JSON တႅၼ်း XML?", ["လဵၵ်ႉသေ, ဝႆးလိူဝ်, លႄႈ လူငၢႆႈလိူဝ်", "ယွၼ်ႉ JSON ပဵၼ်သီလမ်", "ယွၼ်ႉ XML ၸႂ်ႉဢမ်ႇလႆႈယဝ်ႉ", "ယွၼ်ႉ JSON ႁဵတ်းလုၺ်ႈ Microsoft"], "Why use JSON over XML?"),
+  Quiz(2805, "Deserialization ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ပိၼ်ႇ String (JSON) ဢၼ်ႁပ်ႉမႃး ႁႂ်ႈပဵၼ် Object (C#) ၶိုၼ်း", "ၵၢၼ်ပိတ်း Connection", "ၵၢၼ်သၢင်ႈ Class မႂ်ႇ", "ၵၢၼ်ၼႄ HTML"], "What is Deserialization?"),
+
+  // Lesson 290: Middleware and Pipeline
+  Quiz(2806, "Middleware ၼႂ်း ASP.NET Core ပဵၼ်သင်?", ["Code သုၼ်ႇလဵၵ်ႉๆ ဢၼ်ၸတ်းၵၢၼ် Request လႄႈ Response ၼႂ်း Pipeline", "Hardware ဢၼ်ဝၢင်းၼႂ်း Server", "ၸိုဝ်ႈ User ဢၼ်ပဵၼ် Admin", "တူဝ်ၼႄ Graphic"], "What is Middleware?"),
+  Quiz(2807, "လမ်ႇတပ်ႉ (Order) ၵၢၼ်ဝၢင်း Middleware ၼႂ်း Program.cs လမ်ႇလွင်ႈႁႃႉ?", ["လမ်ႇလွင်ႈၼႃႇ, သင်ဝၢင်းၽိတ်း App တေ Error ဢမ်ႇၼၼ် ႁဵတ်းၵၢၼ်ၽိတ်း", "ဢမ်ႇလမ်ႇလွင်ႈ, ဝၢင်းလၢႆးလႂ်ၵေႃႈလႆႈ", "လမ်ႇလွင်ႈၵူၺ်းမိူဝ်ႈၸႂ်ႉ Linux", "မၵ်းမၼ်ႈႁင်းၵူၺ်းယူႇယဝ်ႉ"], "Is Middleware order important?"),
+  Quiz(2808, "app.UseStaticFiles() ၸွႆးလွင်ႈသင်?", ["တွၼ်ႈတႃႇႁႂ်ႈ App ၼႄၾၢႆႇမိူၼ်ၼင်ႇ Images, CSS, JS လႆႈ", "တွၼ်ႈတႃႇၵွင်ႉ Database", "တွၼ်ႈတႃႇ Login", "တွၼ်ႈတႃႇ Create Table"], "Purpose of UseStaticFiles()?"),
+  Quiz(2809, "Short-circuiting ၼႂ်း Middleware ပွင်ႇဝႃႈသင်?", ["မိူဝ်ႈ Middleware တွပ်ႇၶိုၼ်းၵမ်းလဵဝ် လူၺ်ႈဢမ်ႇသူင်ႇ Request သိုပ်ႇၵႂႃႇ", "မိူဝ်ႈၾႆးၾႃႉတူၵ်း", "မိူဝ်ႈ Code လႅၼ်ႈဝႆးပူၼ်ႉတီႈ", "မိူဝ်ႈပိတ်း Server"], "What is Short-circuiting?"),
+  Quiz(2810, "Request Pipeline ပွင်ႇဝႃႈသင်?", ["သဵၼ်ႈတၢင်းဢၼ် Request လႅၼ်ႈၽၢၼ်ႇ Middleware တင်းမူတ်း", "သဵၼ်ႈတၢင်း Internet ဢၼ်ဝႆး", "သဵၼ်ႈတၢင်းၵွင်ႉ SQL", "ၸိုဝ်ႈ Folder ၼႂ်း C#"], "What is the Request Pipeline?"),
+
+  // Mixed & Advanced (2811 - 2850)
+  Quiz(2811, "Swagger ၼႂ်း ASP.NET Core ၸႂ်ႉႁဵတ်းသင်?", ["ၼႃႈတႃ UI တွၼ်ႈတႃႇၸၢမ်း (Test) API လႆႈငၢႆႈငၢႆႈ", "တူဝ် Compile Code", "တီႈသိမ်း Password", "တူဝ်မႄး Font"], "What is Swagger used for?"),
+  Quiz(2812, "Dependency Injection (DI) ၼႂ်း ASP.NET Core ၸွႆးသင်?", ["ၸွႆးၸတ်းၵၢၼ် Objects ဢၼ် App လူဝ်ႇၸႂ်ႉ ႁႂ်ႈမႄးငၢႆႈ (Maintainable)", "ၸွႆး Hack Website", "ၸွႆး Download Game", "ၸွႆးပိတ်း Windows"], "Benefit of Dependency Injection?"),
+  Quiz(2813, "appsettings.json ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵဵပ်း Connection String လႄႈ ၵၢၼ် Setup တၢင်ႇၸိူဝ်း", "ၵဵပ်း C# Logic", "ၵဵပ်း HTML Code", "ၵဵပ်း CSS Code"], "Purpose of appsettings.json?"),
+  Quiz(2814, "Action Result 'Ok()' ၼႂ်း API တွပ်ႇ Status Code သင်?", ["200", "404", "500", "201"], "Status code for Ok()?"),
+  Quiz(2815, "Action Result 'NotFound()' တွပ်ႇ Status Code သင်?", ["404", "200", "401", "403"], "Status code for NotFound()?"),
+  Quiz(2816, "Action Result 'BadRequest()' တွပ်ႇ Status Code သင်?", ["400", "200", "500", "404"], "Status code for BadRequest()?"),
+  Quiz(2817, "Query String ၼႂ်း URL ပဵၼ်ႁၢင်ႈၸိူင်ႉႁိုဝ်?", ["?name=sai&age=20", "/sai/20", "#sai20", "@sai20"], "Example of a Query String?"),
+  Quiz(2818, "Attribute '[Required]' ၼိူဝ် Model Property ၸွႆးသင် ၼႂ်း Form?", ["မၵ်းမၼ်ႈဝႃႈ User တေလႆႈတႅမ်ႈၶေႃႈမုၼ်း သႂ်ႇတႃႇသေႇ", "မၵ်းမၼ်ႈသီ UI", "မၵ်းမၼ်ႈပဵၼ် Primary Key", "ပိတ်း Input ၼၼ်ႉ"], "Purpose of [Required] in forms?"),
+  Quiz(2819, "HTML Tag လႂ်ဢၼ်ၸႂ်ႉတွၼ်ႈတႃႇသူင်ႇ Data?", ["<form>", "<div>", "<span>", "<h1>"], "Tag used to submit data?"),
+  Quiz(2820, "Input type='submit' ၼႂ်း Form ၸွႆးသင်?", ["တုမ်ႇတွၼ်ႈတႃႇသူင်ႇၶေႃႈမုၼ်း (Submit) တင်းမူတ်း", "တုမ်ႇ Restart ၶွမ်း", "တုမ်ႇ ပိတ်း Browser", "တုမ်ႇ Play Video"], "Purpose of submit button?"),
+  Quiz(2821, "ViewData ပႅၵ်ႇတင်း ViewBag ၸိူင်ႉႁိုဝ်?", ["ViewData ၸႂ်ႉ Dictionary (Key/Value), ViewBag ၸႂ်ႉ Dynamic", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်", "ViewData သိမ်းၼႂ်း SQL", "ViewBag ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း API"], "Difference between ViewData and ViewBag?"),
+  Quiz(2822, "Strongly-typed View ပွင်ႇဝႃႈသင်?", ["View ဢၼ်မၵ်းမၼ်ႈ @model တႅတ်ႉတေႃး (မိူၼ် @model Student)", "View ဢၼ်မီး Password ၵႅၼ်ႇၶႅင်", "View ဢၼ်တႅမ်ႈယၢဝ်းၼႃႇ", "View ဢၼ်ပိတ်းဢမ်ႇလႆႈ"], "What is a Strongly-typed View?"),
+  Quiz(2823, "Tag Helper 'asp-action' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈၸိုဝ်ႈ Action ဢၼ်ၶႂ်ႈသူင်ႇ User ၵႂႃႇ", "မၵ်းမၼ်ႈသီ Button", "မၵ်းမၼ်ႈ Font", "မၵ်းမၼ်ႈ ID"], "Purpose of asp-action?"),
+  Quiz(2824, "Tag Helper 'asp-controller' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈၸိုဝ်ႈ Controller ဢၼ်ၶႂ်ႈသူင်ႇ User ၵႂႃႇ", "မၵ်းမၼ်ႈၸိုဝ်ႈ User", "မၵ်းမၼ်ႈ Password", "မၵ်းမၼ်ႈ Database Name"], "Purpose of asp-controller?"),
+  Quiz(2825, "Razor Code Block တႄႇလူၺ်ႈသင်?", ["@{ ... }", "@( ... )", "@[ ... ]", "@< ... >"], "How does a Razor code block start?"),
+  Quiz(2826, "HTTP Verb 'DELETE' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ယႃႉၶေႃႈမုၼ်းဢွၵ်ႇပႅတ်ႈ", "လူၶေႃႈမုၼ်း", "သၢင်ႈၶေႃႈမုၼ်းမႂ်ႇ", "မႄးၶေႃႈမုၼ်း"], "Purpose of HTTP DELETE?"),
+  Quiz(2827, "HTTP Verb 'PUT' ၵႆႉၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မႄး (Update) ၶေႃႈမုၼ်းတင်းမူတ်း", "လူၶေႃႈမုၼ်းၵူၺ်း", "ယႃႉၶေႃႈမုၼ်း", "သၢင်ႈ Database"], "Purpose of HTTP PUT?"),
+  Quiz(2828, "StatusCode '500' ပွင်ႇဝႃႈသင်?", ["Internal Server Error (Server မီးပၼ်ႁႃၽၢႆႇၼႂ်း)", "ၵၢၼ်ယဝ်ႉတူဝ်ႈလီ", "Password ၽိတ်း", "Internet ႁၢႆ"], "What does 500 mean?"),
+  Quiz(2829, "Stateless ၼႂ်း HTTP ပွင်ႇဝႃႈသင်?", ["Server ဢမ်ႇမၢႆတွင်းဝႃႈ ၽႂ်ယွၼ်းသင်ဝႆႉမိူဝ်ႈၵႆႈ", "Server ဢမ်ႇမီး Data", "Server ဢမ်ႇမီး Version", "Server ပိတ်းဝႆႉ"], "What does Stateless mean?"),
+  Quiz(2830, "Middleware 'app.UseHttpsRedirection()' ၸွႆးသင်?", ["ပိၼ်ႇ URL လုၵ်ႉတီႈ http ႁႂ်ႈပဵၼ် https ႁင်းၵူၺ်း", "ပိတ်း Website", "Restart SQL Server", "မႄး Error C#"], "Purpose of UseHttpsRedirection()?"),
+  Quiz(2831, "ValidationSummary ၼႂ်း Razor View ၸွႆးသင်?", ["ၼႄသဵၼ်ႈမၢႆ Error တင်းမူတ်းဢၼ် User တႅမ်ႈၽိတ်းၼႂ်း Form", "ၼႄသဵၼ်ႈမၢႆလုၵ်ႈႁဵၼ်း", "ၼႄ Logo ႁူင်းႁဵၼ်း", "ၼႄမၢႆ Version"], "Purpose of ValidationSummary?"),
+  Quiz(2832, "DataType 'DateTime' ၼႂ်း C# တေၼႄၼႂ်း HTML Input ပဵၼ်သင်?", ["type='datetime-local' ဢမ်ႇၼၼ် 'date'", "type='text'", "type='number'", "type='checkbox'"], "HTML input type for C# DateTime?"),
+  Quiz(2833, "HTTPS ပႅၵ်ႇတင်း HTTP ၸိူင်ႉႁိုဝ်?", ["HTTPS မီးၵၢၼ်လူတ်းလႅၼ် (Encryption) တႃႇလွင်ႈလွတ်ႈၽေး", "HTTP ဝႆးလိူဝ် 10 ပွၵ်ႈ", "HTTPS ၸႂ်ႉလႆႈၵူၺ်းၼႂ်း Mobile", "ဢမ်ႇပႅၵ်ႇသင်ၵၼ်"], "Difference between HTTP and HTTPS?"),
+  Quiz(2834, "Client-side Validation ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၵူတ်ႇထတ်း Data တီႈ Browser ၵမ်းလဵဝ် (JavaScript)", "ၵၢၼ်ၵူတ်ႇထတ်း Data ၼႂ်း Server", "ၵၢၼ်ၵူတ်ႇထတ်း Password ၼႂ်း Database", "ၵၢၼ်မႄး Error Windows"], "What is Client-side Validation?"),
+  Quiz(2835, "Server-side Validation ပွင်ႇဝႃႈသင်?", ["ၵၢၼ်ၵူတ်ႇထတ်း Data မိူဝ်ႈသူင်ႇထိုင် Server ယဝ်ႉ (ModelState)", "ၵၢၼ်ၵူတ်ႇထတ်းတီႈ Keyboard", "ၵၢၼ်ၵူတ်ႇထတ်း Internet", "ၵၢၼ်ၵူတ်ႇထတ်း Version Browser"], "What is Server-side Validation?"),
+  Quiz(2836, "Payload ၼႂ်း HTTP Request ပွင်ႇဝႃႈသင်?", ["ၶေႃႈမုၼ်း (Data) ဢၼ်သူင်ႇပႃးၵႂႃႇၼႂ်း Body", "ၸိုဝ်ႈၶွင် Browser", "မၢႆ IP Address", "သီၶွင် Website"], "What is an HTTP Payload?"),
+  Quiz(2837, "URL 'api/student/1' ၼၼ်ႉ '1' ၵႆႉပဵၼ်သင်?", ["Parameter (ID) ၶွင်ၶေႃႈမုၼ်းဢၼ်ၶႂ်ႈလႆး", "ၸိုဝ်ႈ Controller", "ၸိုဝ်ႈ Action", "မၢႆ Port"], "What is '1' in api/student/1?"),
+  Quiz(2838, "Method 'context.Request.Path' ၸွႆးသင်?", ["ၸွႆးႁူႉဝႃႈ User ၶႂ်ႈၵႂႃႇတီႈ URL လႂ်", "ၸွႆးယႃႉ File", "ၸွႆး Create Table", "ၸွႆးပိတ်း Server"], "What does context.Request.Path do?"),
+  Quiz(2839, "Razor directive '@using' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ႁွင်ႉၸႂ်ႉ Namespace ၼႂ်း View တႃႇႁႂ်ႈႁူႉၸၵ်း Models", "ႁွင်ႉၸႂ်ႉ CSS", "ႁွင်ႉၸႂ်ႉ Image", "ႁွင်ႉၸႂ်ႉ Password"], "Purpose of @using in Razor?"),
+  Quiz(2840, "Razor directive '@model' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈဝႃႈ View ၼႆႉ တေႁပ်ႉ Data ပဵၼ် Class လႂ်", "မၵ်းမၼ်ႈသီ UI", "မၵ်းမၼ်ႈ Primary Key", "မၵ်းမၼ်ႈ SQL String"], "Purpose of @model in Razor?"),
+  Quiz(2841, "ၸိုဝ်ႈ Class 'HomeController' တေမီး URL ပိုၼ်ႉထၢၼ်ပဵၼ်သင်?", ["/Home", "/Index", "/Main", "/Start"], "What is the base URL for HomeController?"),
+  Quiz(2842, "ASP.NET Core Runtime ပွင်ႇဝႃႈသင်?", ["Software ဢၼ်လူဝ်ႇမီးၼႂ်း Server တွၼ်ႈတႃႇလႅၼ်ႈ .NET App", "တူဝ်တႅမ်ႈ Code", "တူဝ်သိမ်း Data", "တူဝ်မႄး Font"], "What is ASP.NET Core Runtime?"),
+  Quiz(2843, "Kestrel Web Server လႅၼ်ႈလႆႈၼိူဝ် OS လႂ်?", ["Windows, Linux, လႄႈ macOS (Cross-platform)", "Windows ၵူၺ်း", "Android ၵူၺ်း", "Linux ၵူၺ်း"], "Where can Kestrel run?"),
+  Quiz(2844, "Default Status Code ၶွင် 'return View()' ပဵၼ်သင်?", ["200 (OK)", "404", "500", "302"], "Default status code for View()?"),
+  Quiz(2845, "Enum Value 'EntityState.Unchanged' ပွင်ႇဝႃႈသင်?", ["ၶေႃႈမုၼ်းဢမ်ႇမီးၵၢၼ်လႅၵ်ႈပိၼ်ႇသင်", "ၶေႃႈမုၼ်းမႂ်ႇ", "ၶေႃႈမုၼ်းထုၵ်ႇယႃႉ", "ၶေႃႈမုၼ်းထုၵ်ႇမႄး"], "What does Unchanged state mean?"),
+  Quiz(2846, "IIS Express ၼႂ်း Visual Studio ပဵၼ်သင်?", ["Web Server တႃႇၸၢမ်း (Test) App ၼႂ်းၶွမ်း Developer", "တူဝ် Install Windows", "တူဝ် Hack Database", "တူဝ်မႄး Photo"], "What is IIS Express?"),
+  Quiz(2847, "HTML Attribute 'name' ၼႂ်း Input လမ်ႇလွင်ႈၸိူင်ႉႁိုဝ် တႃႇ Model Binding?", ["တေလႆႈမိူၼ်တင်းၸိုဝ်ႈ Property ၼႂ်း C# Class", "တေလႆႈပဵၼ်မၢႆတူဝ်", "တေလႆႈမိူၼ်တင်း Password", "ဢမ်ႇလမ်ႇလွင်ႈသင်"], "Why is 'name' attribute important for Model Binding?"),
+  Quiz(2848, "Razor Expression '@(1 + 2)' တေၼႄၽွၼ်းလႆႈပဵၼ်သင်?", ["3", "1+2", "@1+2", "Error"], "What will @(1 + 2) display?"),
+  Quiz(2849, "Script Tag ၼႂ်း HTML ၵႆႉဝၢင်းဝႆႉတီႈလႂ် ၼႂ်း Layout?", ["ၽၢႆႇတႂ်ႈ RenderBody() ဢမ်ႇၼၼ် ၼႂ်း <head>", "ၼႂ်း Database", "ၼႂ်း Program.cs", "ၼႂ်း Controller"], "Where is <script> tag usually placed in Layout?"),
+  Quiz(2850, "Module 23 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["သၢင်ႈ Website လႄႈ Web API တွၼ်ႈတႃႇ Shan Community", "တႅမ်ႈ Console App ၵူၺ်း", "ပိတ်း Computer ၵမ်းလဵဝ်", "ဢမ်ႇႁဵတ်းသင်လႆႈသေယိူင်ႈ"], "What can we do after Module 23?"),
+];
 
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
@@ -8862,4 +8989,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM20,
   csharpQuizM21,
   csharpQuizM22,
+  csharpQuizM23,
 ];
