@@ -13,6 +13,7 @@ import '../languages/lang_css.dart';
 import '../languages/lang_dart.dart';
 import '../languages/lang_html.dart';
 import '../languages/lang_java.dart';
+import '../languages/lang_jetpack_compose.dart';
 import '../languages/lang_js.dart';
 import '../languages/lang_kotlin.dart';
 import '../languages/lang_mysql.dart';
@@ -37,7 +38,8 @@ const Map<String, Map<int, String>> topics = {
   "git": gitTopics,
   "cpp": cppTopics,
   "mysql": mysqlTopics,
-  "java_springboot": javaSpringbootTopics
+  "java_springboot": javaSpringbootTopics,
+  "jetpack_compose": jetpackComposeTopics,
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -59,6 +61,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "cpp": cppModules,
   "mysql": mysqlModules,
   "java_springboot": javaSpringbootModules,
+  "jetpack_compose": jetpackComposeModules,
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -79,7 +82,8 @@ final Map<String, Map<int, Lesson>> lessons = {
   "git": gitLessons,
   "cpp": cppLessons,
   "mysql": mysqlLessons,
-  "java_springboot": javaSpringbootLessons
+  "java_springboot": javaSpringbootLessons,
+  "jetpack_compose": jetpackComposeLessons,
 };
 
 class Lesson {

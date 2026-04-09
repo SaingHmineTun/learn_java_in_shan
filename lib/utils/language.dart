@@ -15,6 +15,7 @@ const languages = [
   "javafx",
   "java_springboot",
   "python_tkinter",
+  "jetpack_compose",
   "git",
   "mysql",
 ];
@@ -27,6 +28,7 @@ const fullName = {
   "html": "HTML",
   "css": "CSS",
   "js": "Javascript",
+  "jetpack_compose": "Jetpack Compose",
   "ts": "Typescript",
   "c": "C",
   "cpp": "C++",

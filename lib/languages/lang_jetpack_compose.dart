@@ -1,3 +1,5 @@
+import '../utils/utils.dart';
+
 const Map<int, String> jetpackComposeTopics = {
   1: "Proverb of the Day",
   2: "Shan Numeral Calculator",
@@ -24,4 +26,19 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     9: "Scaffolding (The App Frame)",
     10: "Final Assembly"
   }
+};
+
+final Map<int, Lesson> jetpackComposeLessons = {
+  1: Lesson(
+      1, 1
+  ),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(1, 5),
+  6: Lesson(1, 6),
+  7: Lesson(1, 7),
+  8: Lesson(1, 8),
+  9: Lesson(1, 9),
+  10: Lesson(1, 10),
 };

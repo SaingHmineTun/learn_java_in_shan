@@ -22,6 +22,11 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFF09F018), // Java Orange
           'icon': DevIcons.javaPlain,
         };
+      case "jetpack_compose":
+        return {
+          'color': const Color(0xFF09F018), // Java Orange
+          'icon': DevIcons.androidPlain,
+        };
       case 'python_tkinter': // Adding Tkinter here or as a separate case
       case 'python':
         return {
@@ -133,6 +138,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 15),
               Text(
                 fullName[lang] ?? lang,
+                textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
