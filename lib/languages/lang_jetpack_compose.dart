@@ -25,13 +25,22 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     8: "The Power of Preview",
     9: "Scaffolding (The App Frame)",
     10: "Final Assembly"
+  },
+  2: {
+    11: "Understanding State (Remember & MutableState)",
+    12: "Designing the Grid Layout",
+    13: "Reusable Components (The Calculator Button)",
+    14: "Handling Click Events (Callbacks)",
+    15: "String Manipulation (Shan to Arabic)",
+    16: "Math Logic Implementation",
+    17: "Adaptive UI (Landscape vs Portrait)",
+    18: "Customizing Themes (Calculator Skins)",
+    19: "Module 2 Final Assembly"
   }
 };
 
 final Map<int, Lesson> jetpackComposeLessons = {
-  1: Lesson(
-      1, 1
-  ),
+  1: Lesson(1, 1),
   2: Lesson(1, 2),
   3: Lesson(1, 3),
   4: Lesson(1, 4),
