@@ -26,8 +26,6 @@ const Map<int, String> csharpTopics = {
   22: "Database: SQL Server Integration with Entity Framework Core",
   23: "Web Apps: ASP.NET Core MVC or Web API Basics",
   24: "Mobile/Multi-platform: Introduction to .NET MAUI",
-  25: "Building a Shan Language Desktop Dictionary/Translator",
-  26: "Debugging, Testing, and Deploying your C# App",
 };
 
 const Map<int, Map<int, String>> csharpModules = {
@@ -414,40 +412,6 @@ const Map<int, Map<int, String>> csharpModules = {
     308: "Lifecycle Management: What Happens when the App goes to Background?",
     309: "Publishing: Generating the .apk and .aab for Android Distribution",
     310: "Project: 'Shan Learn' - A Multi-platform Vocabulary App",
-  },
-  25: {
-    311:
-        "Project Discovery: Defining User Personas (Students, Elders, Translators)",
-    312: "Architecting the Solution: Choosing between SQLite and SQL Server",
-    313:
-        "The Data Schema: Mapping Shan (Tai), English, and Burmese Definitions",
-    314: "Setting up the 'MvvmToolkit' for Professional State Management",
-    315:
-        "Building the Search Engine: Implementing 'Fuzzy Search' for Shan Script",
-    316:
-        "The Dictionary UI: Creating a Split-View Layout (Search vs. Definition)",
-    317:
-        "Input Methods: Handling Virtual Keyboards for Tai Heritage and NamKhone",
-    318: "Rich Text Rendering: Displaying Sample Sentences and Grammar Notes",
-    319: "The Translator Tab: Integrating Basic String Mapping and API Stubs",
-    320:
-        "Local Cache & History: Saving Recently Searched Words for Offline Use",
-    321: "Final Debugging: Performance Profiling and Memory Leak Hunting",
-    322: "The Grand Launch: Packaging the App and Writing User Documentation",
-  },
-  26: {
-    323: "The Art of Debugging: Using Breakpoints, Watch, and Call Stack",
-    324: "Advanced Debugging: Conditional Breakpoints and Data Tips",
-    325: "Introduction to Unit Testing: Why We Write Code to Test Code",
-    326: "MSTest vs. xUnit: Choosing a Testing Framework for .NET",
-    327: "Writing Your First Unit Test: The AAA Pattern (Arrange, Act, Assert)",
-    328: "Test-Driven Development (TDD) Basics for Shan App Features",
-    329: "Mocking Dependencies: Testing Logic without a Real Database",
-    330: "Code Refactoring: Cleaning Up Your Project Before Release",
-    331: "Logging and Crash Reporting: Using Serilog to Track Errors",
-    332: "Application Packaging: Creating MSIX and Setup.exe Installers",
-    333: "GitHub Actions Introduction: Automated Testing and Building (CI/CD)",
-    334: "Final Graduation: Deploying Your Shan Dictionary to the World",
   },
 };
 
@@ -8965,6 +8929,159 @@ final List<Quiz> csharpQuizM23 = [
   Quiz(2849, "Script Tag ၼႂ်း HTML ၵႆႉဝၢင်းဝႆႉတီႈလႂ် ၼႂ်း Layout?", ["ၽၢႆႇတႂ်ႈ RenderBody() ဢမ်ႇၼၼ် ၼႂ်း <head>", "ၼႂ်း Database", "ၼႂ်း Program.cs", "ၼႂ်း Controller"], "Where is <script> tag usually placed in Layout?"),
   Quiz(2850, "Module 23 ယဝ်ႉယဝ်ႉ ႁဝ်းႁဵတ်းသင်လႆႈ?", ["သၢင်ႈ Website လႄႈ Web API တွၼ်ႈတႃႇ Shan Community", "တႅမ်ႈ Console App ၵူၺ်း", "ပိတ်း Computer ၵမ်းလဵဝ်", "ဢမ်ႇႁဵတ်းသင်လႆႈသေယိူင်ႈ"], "What can we do after Module 23?"),
 ];
+final List<Quiz> csharpQuizM24 = [
+// Lesson 297: The Shell Architecture
+Quiz(2851, "ၼႂ်း .NET MAUI... တူဝ်လႂ်ပဵၼ် 'လုပ်ႇၶႅတ်း' (Skeleton) ဢၼ်ၸတ်းၵၢၼ် Navigation လႄႈ Menu တင်းမူတ်းၶွင် App?", ["AppShell", "ContentPage", "NavigationPage", "FlyoutItem"], "What is the main skeleton for navigation in .NET MAUI?"),
+Quiz(2852, "Flyout Menu ၼႂ်း Shell ပဵၼ် Menu ဢၼ်လႅၼ်ႈဢွၵ်ႇမႃးၽၢႆႇလႂ်?", ["ၽၢႆႇသၢႆႉ (Left)", "ၽၢႆႇၶႂႃ (Right)", "ၽၢႆႇၼိူဝ် (Top)", "ၽၢႆႇတႂ်ႈ (Bottom)"], "Where does the Flyout Menu appear in Shell?"),
+
+// Lesson 298: CollectionView for High-Performance Lists
+Quiz(2853, "သင်ႁဝ်းမီးၶေႃႈမုၼ်း 1,000 ၶေႃႈ... ႁဵတ်းသင် CollectionView ၸင်ႇလီလိူဝ် StackLayout?", ["ယွၼ်ႉမၼ်းမီး Virtualization သေလူတ်းၵၢၼ်ၸႂ်ႉ RAM", "ယွၼ်ႉမၼ်းၼႄႁၢင်ႈလႆႈသီလႅင်ၵူၺ်း", "ယွၼ်ႉမၼ်းတႅမ်ႈ Code ငၢႆႈလိူဝ်", "ယွၼ်ႉမၼ်းဢမ်ႇလူဝ်ႇၸႂ်ႉ Binding"], "Why is CollectionView better than StackLayout for large data?"),
+Quiz(2854, "Property လႂ်ဢၼ်ၸႂ်ႉတွၼ်ႈတႃႇမၵ်းမၼ်ႈ 'ႁၢင်ႈၽၢင်' ၶွင် Item ၼိုင်ႈဢၼ်ၼႂ်း CollectionView?", ["ItemTemplate", "ItemsSource", "EmptyView", "SelectionMode"], "Which property defines the layout for each item in a list?"),
+
+// Lesson 299: MVVM Pattern
+Quiz(2855, "ၼႂ်းပိူင်သၢင်ႈ MVVM... သုၼ်ႇလႂ်မီးၼႃႈၵၢၼ် 'သိမ်း Logic လႄႈ ႁၢင်ႈႁႅၼ်း Data'?", ["ViewModel", "Model", "View", "Code-behind"], "Which part of MVVM handles logic and data preparation?"),
+Quiz(2856, "Interface လႂ်ဢၼ်ၸွႆးလၢတ်ႈၼႄ View ဝႃႈ Property ၼႂ်း ViewModel လႅၵ်ႈပိၼ်ႇယဝ်ႉ?", ["INotifyPropertyChanged", "ICommand", "IObservable", "IDataBinding"], "Which interface notifies the View of property changes?"),
+
+// Lesson 300: Handling User Input
+Quiz(2857, "သင်ၶႂ်ႈႁပ်ႉၶေႃႈမုၼ်း 'မၢႆၾူၼ်း' လုၵ်ႉတီႈ User... ႁဝ်းထုၵ်ႇလီမၵ်းမၼ်ႈ Keyboard သႅၼ်းလႂ်?", ["Telephone", "Email", "Numeric", "Default"], "Which keyboard type is best for phone number entry?"),
+Quiz(2858, "Property လႂ်ၼႂ်း Entry ဢၼ်ၸွႆးသိမ်းတူဝ်လိၵ်ႈ ႁႂ်ႈပဵၼ်တူဝ်မၢႆလပ်ႉ (●●●)?", ["IsPassword", "IsHidden", "IsSecure", "IsReadOnly"], "Which property masks entry text for passwords?"),
+
+// Lesson 301: Images and Icons
+Quiz(2859, "ၾၢႆႇႁၢင်ႈသႅၼ်းလႂ် ဢၼ်ယืดလႆႈလူၺ်ႈဢမ်ႇလူႉ (Resolution Independent) လႄႈ ၸႅၵ်းလီၵူႈၸေႃး?", ["SVG", "PNG", "JPG", "BMP"], "Which image format is resolution independent?"),
+Quiz(2860, "Property 'Aspect' လႂ် ဢၼ်တေယืดႁၢင်ႈႁႂ်ႈတဵမ်ၵွင်ႇ ၵူၺ်းၵႃႈႁၢင်ႈၸၢင်ႈၶၢတ်ႇ?", ["AspectFill", "AspectFit", "Center", "Fill"], "Which aspect mode fills the container but may clip the image?"),
+
+// Lesson 302: Device Info and Connectivity
+Quiz(2861, "Connectivity.Current.NetworkAccess ၸႂ်ႉတွၼ်ႈတႃႇၵူတ်ႇထတ်းသင်?", ["ၵူတ်ႇထတ်းငဝ်းလၢႆး Internet", "ၵူတ်ႇထတ်း Battery", "ၵူတ်ႇထတ်း Storage", "ၵူတ်ႇထတ်း Camera"], "What does Connectivity.Current.NetworkAccess check?"),
+Quiz(2862, "DeviceInfo.Idiom ၸွႆးလၢတ်ႈၼႄသင်?", ["ပဵၼ်ၾူၼ်း (Phone) ႁႃႉ? တႅပ်ႉလႅတ်ႉ (Tablet) ႁႃႉ?", "ပဵၼ် Android ႁႃႉ? iOS ႁႃႉ?", "ၸိုဝ်ႈသႅၼ်းၾူၼ်း", "မၢႆ Version ၶွင် OS"], "What does DeviceInfo.Idiom tell us?"),
+
+// Lesson 303: Camera and Gallery
+Quiz(2863, "Method လႂ်ဢၼ်ၸႂ်ႉတွၼ်ႈတႃႇပိုတ်ႇၵွင်ႇသေ 'ထႆႇႁၢင်ႈ' မႂ်ႇ?", ["CapturePhotoAsync", "PickPhotoAsync", "SavePhotoAsync", "GetImageAsync"], "Which method opens the camera to take a new photo?"),
+Quiz(2864, "သင် User ၶႂ်ႈလိူၵ်ႈႁၢင်ႈဢၼ်မီးဝႆႉယဝ်ႉၼႂ်းၾူၼ်း... ႁဝ်းလူဝ်ႇၸႂ်ႉ Method လႂ်?", ["PickPhotoAsync", "CapturePhotoAsync", "OpenGalleryAsync", "BrowseImageAsync"], "Which method allows picking an existing photo?"),
+
+// Lesson 304: Local Storage with SQLite
+Quiz(2865, "Database Engine လဵၵ်ႉๆ ဢၼ်သိမ်းၶေႃႈမုၼ်းပဵၼ်ၾၢႆႇဝႆႉၼႂ်းၾူၼ်းပဵၼ်ၸိုဝ်ႈသင်?", ["SQLite", "SQL Server", "MySQL", "PostgreSQL"], "What is the lightweight database engine used in mobile apps?"),
+Quiz(2866, "FileSystem.AppDataDirectory ၸွႆးမၵ်းမၼ်ႈသင်?", ["Folder တီႈသိမ်း Data လပ်ႉၶွင် App", "Folder Gallery ၶွင်ၾူၼ်း", "Folder Download", "Folder SD Card"], "What is FileSystem.AppDataDirectory used for?"),
+
+// Lesson 305: Consuming Web APIs
+Quiz(2867, "HttpClient Class ယူႇၼႂ်း Namespace လႂ်?", ["System.Net.Http", "System.IO", "System.Text", "System.Collections"], "Which namespace contains the HttpClient class?"),
+Quiz(2868, "ၵၢၼ်ပိၼ်ႇလိၵ်ႈ JSON ႁႂ်ႈပဵၼ် C# Objects ႁွင်ႉဝႃႈသင်?", ["Deserialization", "Serialization", "Encryption", "Compilation"], "What is converting JSON back to C# objects called?"),
+
+// Lesson 306: Theming and Shan Style
+Quiz(2869, "Markup Extension လႂ်ဢၼ်ၸႂ်ႉတွၼ်ႈတႃႇလႅၵ်ႈသီၸွမ်း Light/Dark Mode?", ["AppThemeBinding", "StaticResource", "DynamicResource", "Binding"], "Which extension handles light and dark mode colors?"),
+Quiz(2870, "ႁဝ်းလူဝ်ႇၵႂႃႇ Register Custom Font (မိူၼ်ၼင်ႇ PangLong) ၼႂ်းၾၢႆႇလႂ်?", ["MauiProgram.cs", "App.xaml.cs", "MainPage.xaml", "AppShell.xaml"], "Where do we register custom fonts in .NET MAUI?"),
+
+// Lesson 307: Gestures
+Quiz(2871, "သင်ၶႂ်ႈႁႂ်ႈ Label ၼဵၵ်းလႆႈ... ႁဝ်းလူဝ်ႇထႅမ်သင်ၶဝ်ႈၵႂႃႇၼႂ်း GestureRecognizers?", ["TapGestureRecognizer", "ClickGesture", "TouchGesture", "PressGesture"], "How do you make a Label clickable?"),
+Quiz(2872, "PinchGesture ၸႂ်ႉတွၼ်ႈတႃႇႁဵတ်းသင်?", ["ယืด (Zoom) ႁၢင်ႈၶဝ်ႈ/ဢွၵ်ႇ", "ပတ်ႉ (Swipe) ၼႃႈၸေႃး", "လၢၵ်ႈ (Drag) Object", "ၼဵၵ်း (Click) တုမ်ႇ"], "What is the PinchGesture used for?"),
+
+// Lesson 308: App Lifecycle
+Quiz(2873, "App Lifecycle Event လႂ် ဢၼ်တေႁဵတ်းၵၢၼ်မိူဝ်ႈ User ၼဵၵ်းဢွၵ်ႇ App ၵႂႃႇယူႇ Background?", ["OnSleep", "OnStart", "OnResume", "OnStop"], "Which event triggers when an app enters the background?"),
+Quiz(2874, "OnResume တေႁဵတ်းၵၢၼ်ယၢမ်းလႂ်?", ["မိူဝ်ႈ User ဝၢႆႇမႃးပိုတ်ႇ App ၶိုၼ်းလုၵ်ႉတီႈ Background", "မိူဝ်ႈတႄႇပိုတ်ႇ App ပွၵ်ႈဢွၼ်တၢင်း", "မိူဝ်ႈ App တိုၵ်ႉတေပိတ်း", "မိူဝ်ႈၾူၼ်းပိတ်းၾႆး"], "When does OnResume trigger?"),
+
+// Lesson 309: Publishing Android Apps
+Quiz(2875, "ၾၢႆႇသႅၼ်းလႂ် ဢၼ် Google Play Store ယွၼ်းဝႆႉတွၼ်ႈတႃႇသူင်ႇ App ၶိုၼ်ႈ?", [".aab", ".apk", ".exe", ".ipa"], "What format does Google Play Store require for distribution?"),
+Quiz(2876, "Keystore File ၸႂ်ႉတွၼ်ႈတႃႇႁဵတ်းသင်?", ["သႅၼ်ႇ (Sign) တႃႇၼႄႉၼႃဝႃႈၽႂ်ပဵၼ်ၸဝ်ႈၶွင် App", "သိမ်း Password ၶွင် User", "ပဵၼ် Database ၶွင် App", "တွၼ်ႈတႃႇ Debug Code"], "What is the purpose of a Keystore file?"),
+
+// Lesson 310: Final Project Concepts
+Quiz(2877, "ObservableCollection ပႅၵ်ႇပိူင်တင်း List ธรรมดา ၸိူင်ႉႁိုဝ်?", ["မၼ်းတေ Update UI ႁင်းၵူၺ်း မိူဝ်ႈထႅမ်/ယႃႉ Data", "မၼ်းသိမ်း Data လႆႈၼမ်လိူဝ်", "မၼ်းဢမ်ႇလူဝ်ႇၸႂ်ႉ RAM", "မၼ်းပဵၼ် Database ၼႂ်းၾူၼ်း"], "Difference between ObservableCollection and List?"),
+Quiz(2878, "BindingContext ၸွႆးမၵ်းမၼ်ႈသင်?", ["မၵ်းမၼ်ႈ ViewModel တႃႇၵွင်ႉၸူး View", "မၵ်းမၼ်ႈသီၶွင် App", "မၵ်းမၼ်ႈၸိုဝ်ႈ App", "မၵ်းမၼ်ႈ Connection String"], "What does BindingContext define?"),
+
+// General .NET MAUI Mastery
+Quiz(2879, "Hot Reload ၼႂ်း .NET MAUI ၸွႆး Developer ၸိူင်ႉႁိုဝ်?", ["လႅၵ်ႈပိၼ်ႇ UI လႆႈၵမ်းလဵဝ်လူၺ်ႈဢမ်ႇလူဝ်ႇ Stop Debugging", "ၸွႆးႁႂ်ႈၾူၼ်းဢမ်ႇႁူႉလိူတ်ႇ", "ၸွႆးလူတ်းတၢင်းယႂ်ႇ App", "ၸွႆးတႅမ်ႈ Code ႁင်းၵူၺ်း"], "How does Hot Reload help developers?"),
+Quiz(2880, "XAML ပဵၼ်ၶေႃႈၵႂၢမ်းယေႃႈၶွင်သင်?", ["eXtensible Application Markup Language", "eXtra App Maker Language", "eXtensive Android Mobile Layout", "eXtreme Application Markup Language"], "What does XAML stand for?"),
+
+// Additional Advanced Controls & Layouts
+Quiz(2881, "Grid Layout ၼႂ်း MAUI ၸတ်းၵၢၼ် View ၸိူင်ႉႁိုဝ်?", ["ပဵၼ်ထႅဝ်ၼွၼ်း (Rows) လႄႈ ထႅဝ်တင်ႈ (Columns)", "ဝၢင်းသမ်ႉၵၼ်ၵူၺ်း", "ပဵၼ်ထႅဝ်တင်ႈလူင်းမႃးတိၵ်းๆ", "ပဵၼ်တူဝ်လိၵ်ႈလႅၼ်ႈၵႂႃႇမႃး"], "How does a Grid layout organize views?"),
+Quiz(2882, "VerticalStackLayout ဝၢင်း Control ၸိူင်ႉႁိုဝ်?", ["ဝၢင်းၶပ်ႉၵၼ်လူင်းမႃး ၼိုင်ႈဢၼ်တႂ်ႈၼိုင်ႈဢၼ်", "ဝၢင်းၶပ်ႉၵၼ်ၵႂႃႇၽၢႆႇၶႂႃ", "ဝၢင်းသမ်ႉၵၼ်တီႈလဵဝ်", "ဝၢင်းပဵၼ်လွၵ်းတႃတႅပ်ႉ"], "How does VerticalStackLayout arrange controls?"),
+
+// Data Binding Deep Dive
+Quiz(2883, "Mode='TwoWay' ၼႂ်း Binding ပွင်ႇဝႃႈသင်?", ["Data လႅၵ်ႈပိၼ်ႇလႆႈတင်း View လႄႈ ViewModel", "Data လုၵ်ႉတီႈ ViewModel ၵႂႃႇ View ၵူၺ်း", "Data လုၵ်ႉတီႈ View ၵႂႃႇ ViewModel ၵူၺ်း", "Data ဢမ်ႇလႅၵ်ႈပိၼ်ႇလႆႈ"], "What does TwoWay binding mode mean?"),
+Quiz(2884, "ICommand ၸႂ်ႉတွၼ်ႈတႃႇသင်ၼႂ်း MVVM?", ["တွၼ်ႈတႃႇၵွင်ႉ Button Click ၸူး Method ၼႂ်း ViewModel", "တွၼ်ႈတႃႇၼႄတူဝ်လိၵ်ႈ", "တွၼ်ႈတႃႇသိမ်း Data ၼႂ်း SQLite", "တွၼ်ႈတႃႇလႅၵ်ႈသီ App"], "What is ICommand used for in MVVM?"),
+
+// Platform Specifics
+Quiz(2885, "Folder 'Platforms' ၼႂ်း Project MAUI ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သိမ်း Code ဢၼ်မၵ်းမၼ်ႈၵူၺ်းတွၼ်ႈတႃႇ Android ဢမ်ႇၼၼ် iOS", "သိမ်းၶႅပ်းႁၢင်ႈ", "သိမ်း Database", "သိမ်း Font"], "What is the 'Platforms' folder for?"),
+Quiz(2886, "Device.RuntimePlatform ပဵၼ် Feature ၵဝ်ႇ၊ ယၢမ်းလဵဝ်ႁဝ်းၸႂ်ႉသင်တႅၼ်း?", ["DeviceInfo.Platform", "Device.OS", "System.Platform", "OS.Current"], "What replaced Device.RuntimePlatform?"),
+
+// Resources and Styles
+Quiz(2887, "StaticResource ပႅၵ်ႇတင်း DynamicResource ၸိူင်ႉႁိုဝ်?", ["Static ႁွင်ႉပွၵ်ႈလဵဝ်၊ Dynamic လႅၵ်ႈၸွမ်းယၢမ်းလႅၼ်ႈ (Runtime)", "Static လႅၵ်ႈလႆႈတႃႇသေႇ", "Dynamic ႁွင်ႉပွၵ်ႈလဵဝ်ၵူၺ်း", "ဢမ်ႇပႅၵ်ႇၵၼ်သင်"], "Difference between StaticResource and DynamicResource?"),
+Quiz(2888, "Style TargetType='Button' ပွင်ႇဝႃႈသင်?", ["Style ၼႆႉတေၸႂ်ႉၵူၺ်းတင်း Button", "Style ၼႆႉတေၸႂ်ႉတင်း Label", "Style ၼႆႉတေၸႂ်ႉတင်းၵူႈတူဝ်", "Style ၼႆႉတေၸႂ်ႉတင်း Image"], "What does TargetType='Button' mean?"),
+
+// Navigation Deep Dive
+Quiz(2889, "Shell.Current.GoToAsync('//main') ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၵႂႃႇၼႃႈလိၵ်ႈ Main လူၺ်ႈၸႂ်ႉ Route", "ပိတ်း App", "လႅၵ်ႈသီၼႃႈလိၵ်ႈ", "သူင်ႇ Email"], "What is GoToAsync used for?"),
+Quiz(2890, "ၼႂ်း Route 'studentdetails?id=101', id=101 ႁွင်ႉဝႃႈသင်?", ["Query Parameter", "Page Name", "Route Path", "Method Name"], "In 'studentdetails?id=101', what is 'id=101'?"),
+
+// Web API Consumption
+Quiz(2891, "IsSuccessStatusCode ၼႂ်း HttpResponseMessage ပွင်ႇဝႃႈသင်?", ["Request ဢွင်ႇမၢၼ် (Status Code 200-299)", "Request ၽိတ်းပိူင် (404)", "Server လု", "Internet ၶတ်း"], "What does IsSuccessStatusCode mean?"),
+Quiz(2892, "JsonSerializer.Serialize ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ပိၼ်ႇ C# Object ႁႂ်ႈပဵၼ်လိၵ်ႈ JSON", "ပိၼ်ႇ JSON ႁႂ်ႈပဵၼ် C# Object", "ပိၼ်ႇ Image ႁႂ်ႈပဵၼ် String", "ယႃႉ Code"], "What does JsonSerializer.Serialize do?"),
+
+// Advanced Gestures
+Quiz(2893, "SwipeDirection.Left ပွင်ႇဝႃႈသင်?", ["User ပတ်ႉၼိဝ်ႉၵႂႃႇၽၢႆႇသၢႆႉ", "User ပတ်ႉၼိဝ်ႉၵႂႃႇၽၢႆႇၶႂႃ", "User ပတ်ႉၼိဝ်ႉၶိုၼ်ႈၼိူဝ်", "User ပတ်ႉၼိဝ်ႉလူင်းတႂ်ႈ"], "What does SwipeDirection.Left represent?"),
+Quiz(2894, "PanGestureRecognizer ၸွႆး Developer ႁဵတ်းသင်?", ["ၸွႆးႁူႉလွင်ႈလၢၵ်ႈ (Drag) ၼိဝ်ႉၵႂႃႇမႃးၼိူဝ်ၸေႃး", "ၸွႆးထႆႇႁၢင်ႈ", "ၸွႆးပိုတ်ႇ Website", "ၸွႆးပိုတ်ႇ Keyboard"], "What does PanGestureRecognizer track?"),
+
+// Data Storage
+Quiz(2895, "SQLiteAsyncConnection ၸွႆးသင်?", ["ပိုတ်ႇ Database ၼိူဝ် Thread ၽၢႆႇလင် ဢမ်ႇႁႂ်ႈ UI ၶၢတ်ႇ", "ႁဵတ်းႁႂ်ႈ Internet ဝႆး", "သူင်ႇ Data ၶဝ်ႈ Cloud", "ပိတ်း Database"], "Benefit of SQLiteAsyncConnection?"),
+Quiz(2896, "Primary Key ၼႂ်း SQLite ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈႁႂ်ႈ Data ၼၼ်ႉဢမ်ႇသမ်ႉၵၼ် (Unique)", "မၵ်းမၼ်ႈသီ", "မၵ်းမၼ်ႈၸိုဝ်ႈ Folder", "မၵ်းမၼ်ႈ Version App"], "Purpose of a Primary Key in SQLite?"),
+
+// Lifecycle & Performance
+Quiz(2897, "OnStart ႁဵတ်းၵၢၼ်ယၢမ်းလႂ်?", ["မိူဝ်ႈတႄႇပိုတ်ႇ App ပွၵ်ႈဢွၼ်တၢင်းသုတ်း", "မိူဝ်ႈ User ၼဵၵ်း Home", "မိူဝ်ႈ User ပိတ်းၾူၼ်း", "မိူဝ်ႈ App Update"], "When does OnStart trigger?"),
+Quiz(2898, "ႁဵတ်းသင်ႁဝ်းလူဝ်ႇၸႂ်ႉ 'Using' block မိူဝ်ႈၸႂ်ႉ HttpClient?", ["တွၼ်ႈတႃႇပွႆႇ (Release) Resources မိူဝ်ႈၸႂ်ႉယဝ်ႉ", "တွၼ်ႈတႃႇႁႂ်ႈ Code ယၢဝ်း", "တွၼ်ႈတႃႇႁႂ်ႈ Internet ၶတ်း", "တွၼ်ႈတႃႇသိမ်း Password"], "Why use 'using' block with HttpClient?"),
+
+// Final Project Review
+Quiz(2899, "Project 'Shan Learn' ၸႂ်ႉ Frameworkသင်?", [".NET MAUI", "React Native", "Flutter", "SwiftUI"], "Which framework is used for the 'Shan Learn' project?"),
+Quiz(2900, "ၵၢၼ်သၢင်ႈ App ၸွႆးထႅမ် Community တႆး ႁွင်ႉဝႃႈသင်?", ["Shan Community Application Development", "Game Development", "Web Design", "Hardware Repair"], "What is developing apps for the Shan community called?"),
+
+// Additional 50 quizzes following the same pattern to reach 100 total
+Quiz(2901, "Entry.Placeholder ပွင်ႇဝႃႈသင်?", ["လိၵ်ႈဢၼ်ၼႄဝႆႉၸၢင်ๆ မိူဝ်ႈပႆႇတႅမ်ႈသင်", "လိၵ်ႈဢၼ် User တႅမ်ႈဝႆႉ", "လိၵ်ႈ Error", "ၸိုဝ်ႈ Label"], "What is Entry.Placeholder?"),
+Quiz(2902, "Property 'HorizontalOptions' ၸတ်းၵၢၼ်သင်?", ["ၸတ်းၵၢၼ်ဝၢင်းတူဝ်ၽၢႆႇၼွၼ်း (Left, Center, Right, Fill)", "ၸတ်းၵၢၼ်သီ", "ၸတ်းၵၢၼ်တၢင်းသုင်", "ၸတ်းၵၢၼ် Font"], "What does HorizontalOptions control?"),
+Quiz(2903, "x:Name ၼႂ်း XAML ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈၸိုဝ်ႈ Control တႃႇႁွင်ႉၸႂ်ႉၼႂ်း C#", "မၵ်းမၼ်ႈသီ", "မၵ်းမၼ်ႈ FontSize", "မၵ်းမၼ်ႈ Binding"], "What is x:Name for?"),
+Quiz(2904, "Entry.Completed Event တေႁဵတ်းၵၢၼ်ယၢမ်းလႂ်?", ["မိူဝ်ႈ User ၼဵၵ်း Enter/Done ၼိူဝ် Keyboard", "မိူဝ်ႈတႄႇတႅမ်ႈလိၵ်ႈ", "မိူဝ်ႈယႃႉလိၵ်ႈ", "မိူဝ်ႈ Keyboard ပိတ်း"], "When does Entry.Completed trigger?"),
+Quiz(2905, "Editor.AutoSize='TextChanges' ၸွႆးသင်?", ["ယืดတၢင်းသုင် Editor ၸွမ်းတူဝ်လိၵ်ႈ ႁင်းၵူၺ်းမၼ်း", "လႅၵ်ႈပိၼ်ႇသီတူဝ်လိၵ်ႈ", "ၵူတ်ႇထတ်း Spelling", "ပိတ်း Keyboard"], "What does Editor.AutoSize='TextChanges' do?"),
+Quiz(2906, "Image.IsLoading ပွင်ႇဝႃႈသင်?", ["ငဝ်းလၢႆးဝႃႈ ၶႅပ်းႁၢင်ႈတိုၵ်ႉလူ (Load) ယူႇႁႃႉ", "ငဝ်းလၢႆးဝႃႈ ၶႅပ်းႁၢင်ႈလုယဝ်ႉ", "ငဝ်းလၢႆးဝႃႈ ၶႅပ်းႁၢင်ႈႁၢႆ", "ငဝ်းလၢႆးဝႃႈ ၶႅပ်းႁၢင်ႈယႂ်ႇပူၼ်ႉ"], "What is Image.IsLoading?"),
+Quiz(2907, "ActivityIndicator ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၼႄဝႃႈ App တိုၵ်ႉႁဵတ်းၵၢၼ်ယူႇ (Loading Spinner)", "ၼႄၶႅပ်းႁၢင်ႈ", "ၼႄ Button", "ၼႄ Menu"], "Purpose of ActivityIndicator?"),
+Quiz(2908, "IsRunning='True' ၼႂ်း ActivityIndicator ပွင်ႇဝႃႈသင်?", ["ႁႂ်ႈ Animation ပၼ်ႇလႅၼ်ႈယူႇ", "ႁႂ်ႈ App ပိတ်း", "ႁႂ်ႈ Internet ၶတ်း", "ႁႂ်ႈ Keyboard ပိုတ်ႇ"], "What does IsRunning='True' do in ActivityIndicator?"),
+Quiz(2909, "RefreshView ၸွႆး Developer ႁဵတ်းသင်?", ["ၸွႆးႁႂ်ႈ User 'Pull to Refresh' လႆႈ (ၸၼ်လူင်းတႃႇ Update)", "ၸွႆးႁႂ်ႈ App ဝႆး", "ၸွႆးႁႂ်ႈ Battery တဵမ်", "ၸွႆးႁႂ်ႈ Camera ၸႅၵ်း"], "What functionality does RefreshView provide?"),
+Quiz(2910, "Stepper Control ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["တုမ်ႇၼဵၵ်း '+' လႄႈ '-' တႃႇထႅမ်/လူတ်းမၢႆတူဝ်", "တုမ်ႇတႃႇတႅမ်ႈလိၵ်ႈ", "တုမ်ႇတႃႇထႆႇႁၢင်ႈ", "တုမ်ႇတႃႇပိတ်း App"], "What is a Stepper control used for?"),
+Quiz(2911, "Slider.Value ၸွႆးမၵ်းမၼ်ႈသင်?", ["မၢႆတူဝ် (Number) တီႈလႅၼ်း Slider တိုၵ်ႉယူႇ", "သီၶွင် Slider", "တၢင်းယၢဝ်း Slider", "ၸိုဝ်ႈ Slider"], "What does Slider.Value represent?"),
+Quiz(2912, "Switch Control ၼႄငဝ်းလၢႆးသင်?", ["On ဢမ်ႇၼၼ် Off (Boolean)", "တူဝ်လိၵ်ႈ", "ၶႅပ်းႁၢင်ႈ", "သဵၼ်ႈမၢႆ Data"], "What states does a Switch control show?"),
+Quiz(2913, "CheckBox.IsChecked ပွင်ႇဝႃႈသင်?", ["ငဝ်းလၢႆးဝႃႈ User လိူၵ်ႈ (Check) ဝႆႉႁႃႉ", "ငဝ်းလၢႆးဝႃႈ Internet မီးႁႃႉ", "ငဝ်းလၢႆးဝႃႈ Battery မီးႁႃႉ", "ငဝ်းလၢႆးဝႃႈ App လုႁႃႉ"], "What is CheckBox.IsChecked?"),
+Quiz(2914, "DatePicker ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ႁႂ်ႈ User လိူၵ်ႈ ဝၼ်း/လိူၼ်/ပီ (Date)", "ႁႂ်ႈ User လိူၵ်ႈ ဝိၼႃတီႇ", "ႁႂ်ႈ User လိူၵ်ႈ သီ", "ႁႂ်ႈ User လိူၵ်ႈ ၸိုဝ်ႈ"], "What is DatePicker for?"),
+Quiz(2915, "TimePicker ၼႄ Format ယၢမ်းၸိူင်ႉႁိုဝ်?", ["ၼႃႇလီႇ လႄႈ မိၼတ်ႉ (Time)", "ဝၼ်း လႄႈ လိူၼ်", "ပီ လႄႈ ဝၼ်း", "သီ လႄႈ ႁၢင်ႈ"], "What format does TimePicker show?"),
+Quiz(2916, "AbsoluteLayout ဝၢင်း Control ၸိူင်ႉႁိုဝ်?", ["ဝၢင်းၸွမ်း Coordinate (X, Y) ဢၼ်တႅတ်ႉတေႃး", "ဝၢင်းၶပ်ႉၵၼ်လူၺ်ႈ Stack", "ဝၢင်းပဵၼ် Grid", "ဝၢင်းႁင်းၵူၺ်းမၼ်း"], "How does AbsoluteLayout position controls?"),
+Quiz(2917, "FlexLayout လႅၵ်ႈပိၼ်ႇၸွမ်းသင်?", ["တၢင်းယႂ်ႇၼႃႈၸေႃး (Responsive)", "သီ App", "Version OS", "Battery"], "What does FlexLayout adapt to?"),
+Quiz(2918, "Property 'Padding' ၼႂ်း Layout ပွင်ႇဝႃႈသင်?", ["တၢင်းႁၢင်ႇလုၵ်ႉတီႈၶွပ်ႇ ၶဝ်ႈမႃးၽၢႆႇၼႂ်း", "တၢင်းႁၢင်ႇလုၵ်ႉတီႈၶွပ်ႇ ဢွၵ်ႇၵႂႃႇၽၢႆႇၼွၵ်ႈ", "သီၶွပ်ႇ", "တၢင်းၼႃၶွပ်ႇ"], "What is Padding in a layout?"),
+Quiz(2919, "Property 'Margin' ၼႂ်း Layout ပွင်ႇဝႃႈသင်?", ["တၢင်းႁၢင်ႇလုၵ်ႉတီႈၶွပ်ႇ ဢွၵ်ႇၵႂႃႇၽၢႆႇၼွၵ်ႈ", "တၢင်းႁၢင်ႇလုၵ်ႉတီႈၶွပ်ႇ ၶဝ်ႈမႃးၽၢႆႇၼႂ်း", "သီ Background", "တၢင်းသုင် Font"], "What is Margin in a layout?"),
+Quiz(2920, "Frame.HasShadow='True' ၸွႆးသင်?", ["ၼႄ 'ၵေႃႇ' (Shadow) ၽၢႆႇတႂ်ႈ Frame ႁႂ်ႈႁၢင်ႈလီ", "ႁႂ်ႈ Frame ႁၢႆၵႂႃႇ", "ႁႂ်ႈ Frame ပဵၼ်သီလမ်", "ႁႂ်ႈ Frame ယႂ်ႇၶိုၼ်ႈ"], "What does Frame.HasShadow='True' do?"),
+Quiz(2921, "ContentView ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သၢင်ႈ Custom Control ဢၼ်ၸႂ်ႉသမ်ႉလႆႈ (Reusable)", "သၢင်ႈၼႃႈလိၵ်ႈမႂ်ႇ", "သၢင်ႈ Database", "သၢင်ႈ Icon"], "What is ContentView used for?"),
+Quiz(2922, "ScrollView ၸႂ်ႉယၢမ်းလႂ်?", ["မိူဝ်ႈ Content ယႂ်ႇလိူဝ်ၼႃႈၸေႃး သေလူဝ်ႇပၼ်ႇ (Scroll) တူၺ်း", "မိူဝ်ႈၶႂ်ႈပိတ်း App", "မိူဝ်ႈၶႂ်ႈထႆႇႁၢင်ႈ", "မိူဝ်ႈၶႂ်ႈလႅၵ်ႈသီ"], "When should you use ScrollView?"),
+Quiz(2923, "SearchBar.SearchCommand ၸွႆးသင်?", ["ၵွင်ႉၵၢၼ် 'ၶူၼ်ႉႁႃ' (Search) ၸူး ViewModel", "ၵွင်ႉၵၢၼ် 'ပိတ်း' App", "ၵွင်ႉၵၢၼ် 'သူင်ႇ' Email", "ၵွင်ႉၵၢၼ် 'လူ' Data"], "What is SearchBar.SearchCommand for?"),
+Quiz(2924, "WebView Control ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ၼႄ Website ၼႂ်း App", "ၼႄ Database", "ၼႄ Video", "ၼႄ Camera"], "What is the WebView control used for?"),
+Quiz(2925, "Source='[https://google.com](https://google.com)' ၼႂ်း WebView ပွင်ႇဝႃႈသင်?", ["URL Website ဢၼ်တေၼႄ", "ၸိုဝ်ႈ App", "Password Internet", "သီ Website"], "What is Source in WebView?"),
+Quiz(2926, "Button.ImageSource ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သႂ်ႇႁၢင်ႈ (Icon) ၼိူဝ်တုမ်ႇ Button", "သႂ်ႇလိၵ်ႈ", "လႅၵ်ႈသီ", "သႂ်ႇ Animation"], "How do you add an icon to a button?"),
+Quiz(2927, "ImageButton ပႅၵ်ႇတင်း Button ธรรมဒႃႇ ၸိူင်ႉႁိုဝ်?", ["မၼ်းပဵၼ်ၶႅပ်းႁၢင်ႈဢၼ်ၼဵၵ်းလႆႈ ၵမ်းလဵဝ်", "မၼ်းၼႄလိၵ်ႈလႆႈၼမ်လိူဝ်", "မၼ်းဢမ်ႇလူဝ်ႇၸႂ်ႉ Command", "မၼ်းလုငၢႆႈလိူဝ်"], "Difference between ImageButton and regular Button?"),
+Quiz(2928, "Property 'CornerRadius' ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["ႁဵတ်းႁႂ်ႈၶွပ်ႇ (Corner) မၼ်း 'မူၼ်း' (Round)", "ႁဵတ်းႁႂ်ႈမၼ်းပဵၼ်သီလႅင်", "ႁဵတ်းႁႂ်ႈမၼ်းယႂ်ႇ", "ႁဵတ်းႁႂ်ႈမၼ်းၵႅၼ်ႇ"], "What does CornerRadius do?"),
+Quiz(2929, "Border Control ၼႂ်း MAUI ၸွႆးသင်?", ["သႂ်ႇၶွပ်ႇ လႄႈ ႁၢင်ႈၽၢင် (Style) ႁႂ်ႈ Control တၢင်ႇဢၼ်", "သႂ်ႇလိၵ်ႈ", "သႂ်ႇ Database", "သႂ်ႇ Navigation"], "What is the Border control for?"),
+Quiz(2930, "Shapes (Ellipse, Rectangle) ၼႂ်း MAUI ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["တႅမ်ႈႁၢင်ႈ (Drawing) ၼႂ်း UI ႁင်းၵူၺ်း", "ၼႄ Data", "ၵွင်ႉ Internet", "သိမ်း Password"], "What are Shapes used for in MAUI?"),
+Quiz(2931, "Shadow Property ၸွႆးသင်?", ["သႂ်ႇၵေႃႇ (Shadow) ႁႂ်ႈ UI မီးမိူၼ် 3D", "ႁႂ်ႈ UI လပ်းၵႂႃႇ", "ႁႂ်ႈ UI လႅၼ်ႈလႆႈ", "ႁႂ်ႈ UI ၸႃႉလူင်း"], "What does the Shadow property do?"),
+Quiz(2932, "Brush (SolidColorBrush) ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈ 'သီ' တွၼ်ႈတႃႇထႃ (Fill/Stroke) ႁၢင်ႈတႅမ်ႈ", "မၵ်းမၼ်ႈ Font", "မၵ်းမၼ်ႈ Image", "မၵ်းမၼ်ႈ Layout"], "What is a Brush used for?"),
+Quiz(2933, "GradientBrush ၼႄသီၸိူင်ႉႁိုဝ်?", ["သီလၢႆသီ ဢၼ်လႅၵ်ႈ (Fade) ၸူးၵၼ်", "သီလဵဝ်ၵူၺ်း", "ဢမ်ႇမီးသီ", "သီလမ်"], "How does a GradientBrush display color?"),
+Quiz(2934, "VisualStateManager ၸွႆး Developer ႁဵတ်းသင်?", ["လႅၵ်ႈပိၼ်ႇ UI ၸွမ်းငဝ်းလၢႆး (မိူၼ်ၼင်ႇ မိူဝ်ႈၼဵၵ်း, မိူဝ်ႈ Disable)", "ၸတ်းၵၢၼ် Database", "ၸတ်းၵၢၼ် Navigation", "ၸတ်းၵၢၼ် Internet"], "What does VisualStateManager manage?"),
+Quiz(2935, "CommonStates 'Disabled' ပွင်ႇဝႃႈသင်?", ["ငဝ်းလၢႆးမိူဝ်ႈ Control ၼၼ်ႉၸႂ်ႉၵၢၼ်ဢမ်ႇလႆႈ", "ငဝ်းလၢႆးမိူဝ်ႈ App ပိတ်း", "ငဝ်းလၢႆးမိူဝ်ႈ Internet ၶတ်း", "ငဝ်းလၢႆးမိူဝ်ႈတႄႇပိုတ်ႇ App"], "What does the 'Disabled' visual state mean?"),
+Quiz(2936, "Setter Property='BackgroundColor' Value='Red' ပွင်ႇဝႃႈသင်?", ["မၵ်းမၼ်ႈသီ Background ႁႂ်ႈပဵၼ်သီလႅင်", "မၵ်းမၼ်ႈသီ Font", "မၵ်းမၼ်ႈတၢင်းၵႂၢင်ႈ", "မၵ်းမၼ်ႈ Binding"], "What does this Setter do?"),
+Quiz(2937, "ResourceWrapper ဢမ်ႇမီး၊ ႁဝ်းၸႂ်ႉသင်တႅၼ်း?", ["ResourceDictionary", "ResourceList", "ResourceTable", "ResourceFile"], "What is used to store resources in XAML?"),
+Quiz(2938, "MergedDictionaries ၸွႆးသင်?", ["ႁူမ်ႈၾၢႆႇ Resources (XAML) လၢႆၾၢႆႇ ၶဝ်ႈၸွမ်ၵၼ်", "ႁူမ်ႈ Code C#", "ႁူမ်ႈ Database", "ႁူမ်ႈ Images"], "What is MergedDictionaries used for?"),
+Quiz(2939, "ControlTemplate ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["မၵ်းမၼ်ႈႁၢင်ႈၽၢင် (Structure) ၶွင် Custom Control", "မၵ်းမၼ်ႈ Data", "မၵ်းမၼ်ႈ သီ", "မၵ်းမၼ်ႈ Route"], "What is ControlTemplate for?"),
+Quiz(2940, "TemplateBinding ၸႂ်ႉယၢမ်းလႂ်?", ["ၸႂ်ႉၼႂ်း ControlTemplate တႃႇၵွင်ႉၸူး Property ၶွင် Parent", "ၸႂ်ႉၼႂ်း ViewModel", "ၸႂ်ႉၼႂ်း SQLite", "ၸႂ်ႉၼႂ်း API"], "When is TemplateBinding used?"),
+Quiz(2941, "MessagingCenter ပဵၼ် Feature ၵဝ်ႇ၊ ယၢမ်းလဵဝ်ၸႂ်ႉသင်တႅၼ်း?", ["WeakReferenceMessenger", "AppMessenger", "SharedMessenger", "EventMessenger"], "What replaced MessagingCenter?"),
+Quiz(2942, "WeakReferenceMessenger ၸွႆးသင်?", ["သူင်ႇ Message/Data ၶၢမ်ႈၼႃႈလိၵ်ႈ (Decoupled Communication)", "သူင်ႇ Email", "သူင်ႇ SMS", "သူင်ႇ Image"], "What is WeakReferenceMessenger for?"),
+Quiz(2943, "Dependency Injection (DI) ၼႂ်း MAUI ၸတ်းၵၢၼ်တီႈလႂ်?", ["MauiProgram.cs (builder.Services)", "App.xaml.cs", "MainPage.xaml", "AndroidManifest.xml"], "Where is DI configured in .NET MAUI?"),
+Quiz(2944, "AddSingleton ၼႂ်း DI ပွင်ႇဝႃႈသင်?", ["သၢင်ႈ Object ၼၼ်ႉပွၵ်ႈလဵဝ် သေၸႂ်ႉၸွမ်ၵၼ်တင်း App", "သၢင်ႈ Object မႂ်ႇ ၵူႈပွၵ်ႈဢၼ်ႁွင်ႉၸႂ်ႉ", "ပိတ်း Object", "ယႃႉ Object"], "What does AddSingleton do?"),
+Quiz(2945, "AddTransient ၼႂ်း DI ပွင်ႇဝႃႈသင်?", ["သၢင်ႈ Object မႂ်ႇ ၵူႈပွၵ်ႈဢၼ်ႁွင်ႉၸႂ်ႉ (Fresh Instance)", "သၢင်ႈပွၵ်ႈလဵဝ်ၵူၺ်း", "ပိတ်း Object", "သိမ်း Object ၼႂ်း Database"], "What does AddTransient do?"),
+Quiz(2946, "CommunityToolkit.Mvvm ပဵၼ်သင်?", ["NuGet Package ဢၼ်ၸွႆးတႅမ်ႈ MVVM ႁႂ်ႈငၢႆႈ လႄႈ ဝႆး", "ၸိုဝ်ႈ Website", "ၸိုဝ်ႈ Browser", "ၸိုဝ်ႈ Operating System"], "What is CommunityToolkit.Mvvm?"),
+Quiz(2947, "[ObservableProperty] ၼႂ်း Toolkit ၸွႆးသင်?", ["သၢင်ႈ Code INotifyPropertyChanged ႁႂ်ႈႁင်းၵူၺ်း (Auto-generate)", "သၢင်ႈ Database", "သၢင်ႈ UI", "သၢင်ႈ API"], "What does [ObservableProperty] do?"),
+Quiz(2948, "[RelayCommand] ၼႂ်း Toolkit ၸွႆးသင်?", ["သၢင်ႈ ICommand ႁႂ်ႈႁင်းၵူၺ်း (Auto-generate)", "သူင်ႇ Email", "သၢင်ႈ Font", "ပိတ်း App"], "What does [RelayCommand] do?"),
+Quiz(2949, "Preferences.Default.Get('key', 'default') ၸႂ်ႉတွၼ်ႈတႃႇသင်?", ["သိမ်း/လူ ၶေႃႈမုၼ်းလဵၵ်ႉๆ (မိူၼ် Settings) ဝႆႉၼႂ်းၾူၼ်း", "သိမ်း Image", "သိမ်း Video", "သိမ်း Database ယႂ်ႇๆ"], "What is Preferences for?"),
+Quiz(2950, "ၵၢၼ်သၢင်ႈ App ၸွမ်တင်း C# လႄႈ .NET MAUI ႁဵတ်းႁႂ်ႈၶူးပဵၼ်သင်?", ["Full-Stack Mobile Developer", "Hardware Engineer", "Graphic Designer", "Accountant"], "What does completing this course make you?")
+];
 
 final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM1,
@@ -8991,4 +9108,5 @@ final List<List<Quiz>> csharpQuizzes = [
   csharpQuizM21,
   csharpQuizM22,
   csharpQuizM23,
+  csharpQuizM24,
 ];
