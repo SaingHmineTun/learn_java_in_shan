@@ -55,6 +55,7 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     34: "Navigation with Arguments (Data Passing)",
     35: "Module 4 Final Assembly & Search Feature",
   },
+  //  5: "Shan Note Pro",
   5: {
     36: "Introduction to MVVM Architecture",
     37: "ViewModel & StateFlow Deep Dive",
