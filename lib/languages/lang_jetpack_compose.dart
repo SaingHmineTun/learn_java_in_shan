@@ -3,14 +3,12 @@ import '../utils/utils.dart';
 const Map<int, String> jetpackComposeTopics = {
   1: "Proverb of the Day",
   2: "Shan Numeral Calculator",
-  3: "Shan ↔ Dai Dehong Converter",
-  4: "Shan Custom Keyboard",
-  5: "Cultural Media Player",
-  6: "Shan History Quiz",
-  7: "Global News Live",
-  8: "Shan Diary Vault",
-  9: "Shan Calendar",
-  10: "The App Gallery"
+  3: "Tai Nuea Converter",
+  4: "English Idioms",
+  5: "Shan Note Pro",
+  6: "Shan Music Player",
+  7: "International News Explorer",
+  8: "Launch to Play Store",
 };
 
 const Map<int, Map<int, String>> jetpackComposeModules = {
@@ -24,7 +22,7 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     7: "Shan Typography & Fonts",
     8: "The Power of Preview",
     9: "Scaffolding (The App Frame)",
-    10: "Final Assembly"
+    10: "Final Assembly",
   },
   2: {
     11: "Understanding State (Remember & MutableState)",
@@ -35,7 +33,7 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     16: "Math Logic Implementation",
     17: "Adaptive UI (Landscape vs Portrait)",
     18: "Customizing Themes (Calculator Skins)",
-    19: "Module 2 Final Assembly"
+    19: "Module 2 Final Assembly",
   },
   3: {
     20: "Java-Kotlin Interoperability",
@@ -45,7 +43,7 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     24: "Two-Way Conversion (Switcher)",
     25: "Copy to Clipboard & Haptic Feedback",
     26: "Sharing with Android Intents",
-    27: "Module 3 Final Assembly & Refinement"
+    27: "Module 3 Final Assembly & Refinement",
   },
   4: {
     28: "The \"Lazy\" Architecture",
@@ -55,10 +53,60 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     32: "Smooth UX with Animations",
     33: "Intro to Jetpack Navigation",
     34: "Navigation with Arguments (Data Passing)",
-    35: "Module 4 Final Assembly & Search Feature"
-
-
-  }
+    35: "Module 4 Final Assembly & Search Feature",
+  },
+  5: {
+    36: "Introduction to MVVM Architecture",
+    37: "ViewModel & StateFlow Deep Dive",
+    38: "Dependency Injection (DI) Basics",
+    39: "Room Database: The Foundation",
+    40: "Repository Pattern & Coroutines",
+    41: "CRUD Operations (Create & Read)",
+    42: "CRUD Operations (Update & Delete)",
+    43: "Advanced Search & Category Filtering",
+    44: "Image Attachments (Local Storage)",
+    45: "Rich Text Interop (Markdown/HTML)",
+    46: "Data Export & Sharing",
+    47: "Module 5 Final Refinement & Polishing",
+  },
+  6: {
+    48: "Introduction to Media3 ExoPlayer",
+    49: "Media Service & Foreground Service",
+    50: "Audio State Management with ViewModel",
+    51: "Designing the Now Playing Screen",
+    52: "Custom Seekbar & Time Progress",
+    53: "Horizontal Pager for Album Art",
+    54: "Dynamic Background & Glassmorphism",
+    55: "Scanning Audio Files from Storage",
+    56: "Playlist Management with Room",
+    57: "Audio Focus & Interruption Handling",
+    58: "Sleep Timer & Playback Speed",
+    59: "Module 6 Final Assembly & Optimization",
+  },
+  7: {
+    60: "Introduction to REST APIs & JSON",
+    61: "Retrofit Setup & Interface",
+    62: "Gson/Kotlinx Serialization",
+    63: "Networking with Coroutines",
+    64: "Handling Network States (Loading, Error, Success)",
+    65: "Image Loading with Coil",
+    66: "Pagination (Infinite Scroll)",
+    67: "Caching with Room (Offline-First)",
+    68: "API Authentication (Headers & Tokens)",
+    69: "Intro to Firebase Cloud Messaging (FCM)",
+    70: "WebViews in Compose",
+    71: "Module 7 Final Assembly & API Testing",
+  },
+  8: {
+    72: "App Icon Design & Adaptive Icons",
+    73: "Splash Screen API",
+    74: "Optimization & Code Shrinking (R8/ProGuard)",
+    75: "Signing the App (Keystore & Alias)",
+    76: "Android App Bundle (AAB) vs APK",
+    77: "Setting Up Google Play Console",
+    78: "Beta Testing & Internal Tracks",
+    79: "Final Capstone Presentation & Graduation",
+  },
 };
 
 final Map<int, Lesson> jetpackComposeLessons = {
