@@ -31,7 +31,7 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     12: "Designing the Grid Layout",
     13: "Reusable Components (The Calculator Button)",
     14: "Handling Click Events (Callbacks)",
-    15: "String Manipulation (Shan to Arabic)",
+    15: "String Manipulation (Shan to English)",
     16: "Math Logic Implementation",
     17: "Adaptive UI (Landscape vs Portrait)",
     18: "Customizing Themes (Calculator Skins)",
