@@ -46,6 +46,18 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     25: "Copy to Clipboard & Haptic Feedback",
     26: "Sharing with Android Intents",
     27: "Module 3 Final Assembly & Refinement"
+  },
+  4: {
+    28: "The \"Lazy\" Architecture",
+    29: "Building the Idiom Card (UI Design)",
+    30: "LazyColumn Implementation",
+    31: "Click-to-Expand Logic (Local State)",
+    32: "Smooth UX with Animations",
+    33: "Intro to Jetpack Navigation",
+    34: "Navigation with Arguments (Data Passing)",
+    35: "Module 4 Final Assembly & Search Feature"
+
+
   }
 };
 
