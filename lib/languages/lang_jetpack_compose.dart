@@ -36,6 +36,16 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     17: "Adaptive UI (Landscape vs Portrait)",
     18: "Customizing Themes (Calculator Skins)",
     19: "Module 2 Final Assembly"
+  },
+  3: {
+    20: "Java-Kotlin Interoperability",
+    21: "Designing the Dual-Editor UI",
+    22: "Advanced TextField (State & Events)",
+    23: "Real-time Conversion Logic",
+    24: "Two-Way Conversion (Switcher)",
+    25: "Copy to Clipboard & Haptic Feedback",
+    26: "Sharing with Android Intents",
+    27: "Module 3 Final Assembly & Refinement"
   }
 };
 
