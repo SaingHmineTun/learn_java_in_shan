@@ -46,6 +46,27 @@ fun NoteScreen(viewModel: NoteViewModel) {
         }
     }
 }
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            ShanNoteProTheme {
+                val vm: NoteViewModel = viewModel()
+                Scaffold(modifier = Modifier.fillMaxSize(), floatingActionButton = {
+                    FloatingActionButton(onClick = {
+                        vm.addNote(Note("title", "content"))
+                    }) {
+                        Icon(Icons.Default.Add, contentDescription = "Add")
+                    }
+                }) { innerPadding ->
+                    NoteScreen(modifier = Modifier.padding(innerPadding), viewModel = vm)
+                }
+            }
+        }
+    }
+}
 ```
 
 ---
