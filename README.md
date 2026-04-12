@@ -16,7 +16,7 @@ A Flutter mobile application designed to teach multiple programming languages wi
 
 ## ✨ Features
 
-- **Multiple Programming Languages**: Currently supports 11 programming languages
+- **Multiple Programming Languages**: Currently supports 15+ programming languages
 - **Structured Learning Path**: Organized into modules covering fundamental to advanced topics
 - **Interactive Content**: Engaging lessons with practical examples
 - **Offline Access**: Lessons stored locally for offline learning
@@ -38,6 +38,11 @@ The application currently supports the following programming languages:
 9. **TypeScript** - JavaScript with type safety
 10. **C** - Foundational systems programming language
 11. **Haskell** - Functional programming language
+12. **Jetpack Compose** - Modern Android UI toolkit
+13. **C++** - Intermediate to advanced C++ programming
+14. **C#** - Object-oriented programming language for .NET framework
+15. **MySQL** - Database management and SQL query language
+16. **Python with Tkinter** - Python GUI programming using Tkinter
 
 ## 📱 Screenshots
 
@@ -101,9 +106,7 @@ After successfully completing the final test for each module with a score of 80%
 ## 🙏 Acknowledgements
 
 - Created by ထုင်ႉမၢဝ်းၶမ်း (TMK Muse)
-- Coffee-themed UI inspired by warm learning environments
 - Uses custom Shan language content for accessibility
-- Special thanks to the Flutter community for excellent documentation and resources
 
 ## 📞 Contact
 
