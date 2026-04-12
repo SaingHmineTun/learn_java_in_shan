@@ -83,7 +83,7 @@ class PdfExporter {
       final converter = HTMLToPdf();
 
       final String introMd = await rootBundle.loadString(
-        'lessons/introduction.md',
+        'assets/lessons/introduction.md',
       );
 
       List<pw.Widget> introWidgets = await converter.convertMarkdown(
@@ -132,7 +132,7 @@ class PdfExporter {
       for (int id in lessonIds) {
         try {
           final String lessonMd = await rootBundle.loadString(
-            'lessons/$language/lesson$id.md',
+            'assets/lessons/$language/lesson$id.md',
           );
           List<pw.Widget> lessonWidgets = await converter.convertMarkdown(
             _prepareMd(lessonMd),
