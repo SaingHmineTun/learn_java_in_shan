@@ -14,6 +14,10 @@ dependencies:
   url_launcher: ^6.3.2
   printing: ^5.14.2
   dev_icons: ^1.0.0
+  pdf: ^3.11.3
+  markdown: ^7.3.0
+  htmltopdfwidgets: ^2.0.1
+
 
 dev_dependencies:
   flutter_test:
@@ -24,6 +28,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/fonts/
+    - assets/lessons/
     - assets/lessons/java/
     - assets/lessons/python/
     - assets/lessons/basic/
