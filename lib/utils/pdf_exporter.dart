@@ -4,6 +4,8 @@ import 'package:htmltopdfwidgets/htmltopdfwidgets.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
+import 'language.dart';
+
 class PdfExporter {
   // Brand Colors
   static const PdfColor kBrandGold = PdfColor.fromInt(0xFFFFD700);
@@ -160,16 +162,67 @@ class PdfExporter {
                 italic: ttfItalicFont,
               ),
               header: (context) => pw.Container(
-                alignment: pw.Alignment.centerRight,
-                decoration: pw.BoxDecoration(
-                  border: const pw.Border(
+                alignment: pw.Alignment.center,
+                decoration: const pw.BoxDecoration(
+                  border: pw.Border(
                     bottom: pw.BorderSide(color: PdfColors.grey300, width: 0.5),
                   ),
                 ),
                 margin: const pw.EdgeInsets.only(bottom: 10),
-                child: pw.Text(
-                  "Lesson $id | TMK Academy",
-                  style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey),
+                padding: const pw.EdgeInsets.only(bottom: 5), // Added small padding for better look
+                child: pw.Row(
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Left Side: Book Name
+                    pw.Text(
+                      "${fullName[language]}", // This will show "Learn JAVA" or "Learn PYTHON"
+                      style: pw.TextStyle(
+                        font: ttfBoldFont, // Use your bold font for the book name
+                        fontSize: 8,
+                        color: kBrandOrange, // Using your brand color for the left side
+                      ),
+                    ),
+                    // Right Side: Lesson Info
+                    pw.Text(
+                      "Lesson $id | TMK Academy",
+                      style: const pw.TextStyle(
+                        fontSize: 8,
+                        color: PdfColors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              footer: (context) => pw.Container(
+                margin: const pw.EdgeInsets.only(top: 10),
+                decoration: const pw.BoxDecoration(
+                  border: pw.Border(
+                    top: pw.BorderSide(color: PdfColors.grey300, width: 0.5),
+                  ),
+                ),
+                padding: const pw.EdgeInsets.only(top: 5),
+                child: pw.Row(
+                  mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Left Side: Your Name in Shan
+                    pw.Text(
+                      "ၸၢႆးမၢဝ်း (ထုင်ႉမၢဝ်းၶမ်း)",
+                      style: pw.TextStyle(
+                        font: ttfBoldFont,
+                        fontSize: 8,
+                        color: PdfColors.grey700,
+                      ),
+                    ),
+                    // Right Side: Dynamic Page Number
+                    pw.Text(
+                      "${context.pageNumber} / ${context.pagesCount}",
+                      style: pw.TextStyle(
+                        font: ttfFont,
+                        fontSize: 8,
+                        color: PdfColors.grey700,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               // We pass the widgets directly into the build list
