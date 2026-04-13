@@ -32,10 +32,16 @@ class PdfExporter {
       final fontData = await rootBundle.load("assets/fonts/aj05.ttf");
       final ttfFont = pw.Font.ttf(fontData);
 
+      final italicFontData = await rootBundle.load("assets/fonts/aj05_bold.ttf");
+      final ttfItalicFont = pw.Font.ttf(italicFontData);
+
       final boldFontData = await rootBundle.load("assets/fonts/aj03.ttf");
-      final boldTtfFont = pw.Font.ttf(boldFontData);
+      final ttfBoldFont = pw.Font.ttf(boldFontData);
 
       final monoFont = pw.Font.courier();
+
+      final emojiData = await rootBundle.load("assets/fonts/noto_emoji.ttf");
+      final ttfEmojiFont = pw.Font.ttf(emojiData);
 
       final logoData = await rootBundle.load("assets/images/tmklogo.png");
       final logoImage = pw.MemoryImage(logoData.buffer.asUint8List());
@@ -43,15 +49,15 @@ class PdfExporter {
       // 2. Define the Custom Style
       final myTagStyle = HtmlTagStyle(
         h1Style: pw.TextStyle(
-          font: boldTtfFont,
+          font: ttfBoldFont,
           fontSize: 22,
-          color: kBrandGold,
+          color: kBrandOrange,
           fontWeight: pw.FontWeight.bold,
         ),
         h2Style: pw.TextStyle(
-          font: boldTtfFont,
+          font: ttfBoldFont,
           fontSize: 20,
-          color: kBrandGold,
+          color: kBrandOrange,
           fontWeight: pw.FontWeight.bold,
         ),
         paragraphStyle: pw.TextStyle(
@@ -61,7 +67,7 @@ class PdfExporter {
         ),
 
         // IDE-style Code Block Rendering
-        codeBlockBackgroundColor: kBrandDark,
+        codeBlockBackgroundColor: PdfColor.fromHex("#d3d6e6"),
         codeDecoration: pw.BoxDecoration(
           color: kBrandDark,
           borderRadius: const pw.BorderRadius.all(pw.Radius.circular(8)),
@@ -70,7 +76,6 @@ class PdfExporter {
         codeStyle: pw.TextStyle(
           font: monoFont, // Forced Courier for syntax symbols
           fontSize: 10,
-          color: kBrandBlue,
         ),
         quoteBarColor: kBrandGold,
       );
@@ -78,7 +83,6 @@ class PdfExporter {
       final pdf = pw.Document();
       final converter = HTMLToPdf();
 
-      // 3. Process Introduction
       onProgress(0.1, "Formatting Introduction...");
       final String introMd = await rootBundle.loadString(
         'assets/lessons/introduction.md',
@@ -87,13 +91,17 @@ class PdfExporter {
       List<pw.Widget> introWidgets = await converter.convertMarkdown(
         _prepareMd(introMd),
         tagStyle: myTagStyle,
-        fontFallback: [monoFont],
+        fontFallback: [monoFont, ttfEmojiFont],
       );
 
       pdf.addPage(
         pw.MultiPage(
           pageFormat: PdfPageFormat.a4,
-          theme: pw.ThemeData.withFont(base: ttfFont, bold: boldTtfFont),
+          theme: pw.ThemeData.withFont(
+            base: ttfFont,
+            bold: ttfBoldFont,
+            italic: ttfItalicFont,
+          ),
           build: (context) => [
             pw.Row(
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
@@ -143,13 +151,17 @@ class PdfExporter {
           List<pw.Widget> lessonWidgets = await converter.convertMarkdown(
             _prepareMd(lessonMd),
             tagStyle: myTagStyle,
-            fontFallback: [monoFont],
+            fontFallback: [monoFont, ttfEmojiFont],
           );
 
           pdf.addPage(
             pw.MultiPage(
               pageFormat: PdfPageFormat.a4,
-              theme: pw.ThemeData.withFont(base: ttfFont, bold: boldTtfFont),
+              theme: pw.ThemeData.withFont(
+                base: ttfFont,
+                bold: ttfBoldFont,
+                italic: ttfItalicFont,
+              ),
               header: (context) => pw.Align(
                 alignment: pw.Alignment.centerRight,
                 child: pw.Text(
