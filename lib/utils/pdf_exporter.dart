@@ -1,16 +1,17 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:htmltopdfwidgets/htmltopdfwidgets.dart';
-import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
 class PdfExporter {
+  // Brand Colors
   static const PdfColor kBrandGold = PdfColor.fromInt(0xFFFFD700);
   static const PdfColor kBrandOrange = PdfColor.fromInt(0xFFFF8C00);
   static const PdfColor kBrandBlue = PdfColor.fromInt(0xFF00FFFF);
   static const PdfColor kBrandDark = PdfColor.fromInt(0xFF0D0D0E);
 
+  // Sanitize Markdown string for PDF compatibility
   static String _prepareMd(String text) {
     return text
         .replaceAll('\r\n', '\n')
@@ -21,22 +22,25 @@ class PdfExporter {
 
   static Future<void> generateLessonsPdf(
     String language,
-    List<int> lessonIds,
-  ) async {
+    List<int> lessonIds, {
+    required Function(double progress, String status) onProgress,
+  }) async {
     try {
+      // 1. Initial Assets Loading
+      onProgress(0.05, "Loading TMK Fonts & Branding...");
+
       final fontData = await rootBundle.load("assets/fonts/aj05.ttf");
       final ttfFont = pw.Font.ttf(fontData);
 
       final boldFontData = await rootBundle.load("assets/fonts/aj03.ttf");
       final boldTtfFont = pw.Font.ttf(boldFontData);
 
-      // Load a standard Monospace font to ensure code is visible
       final monoFont = pw.Font.courier();
 
       final logoData = await rootBundle.load("assets/images/tmklogo.png");
       final logoImage = pw.MemoryImage(logoData.buffer.asUint8List());
 
-      // Define the style object based on your confirmed constructor
+      // 2. Define the Custom Style
       final myTagStyle = HtmlTagStyle(
         h1Style: pw.TextStyle(
           font: boldTtfFont,
@@ -56,32 +60,26 @@ class PdfExporter {
           lineSpacing: 2,
         ),
 
-        // --- REFINED CODE BLOCK ---
-        codeBlockBackgroundColor: PdfColor.fromHex("#c8cbcc"),
-
-        // Using codeDecoration with valid PDF properties
+        // IDE-style Code Block Rendering
+        codeBlockBackgroundColor: kBrandDark,
         codeDecoration: pw.BoxDecoration(
           color: kBrandDark,
           borderRadius: const pw.BorderRadius.all(pw.Radius.circular(8)),
-          border: pw.Border.all(
-            color: PdfColors.cyan900,
-            // A solid, dark cyan for the border instead of opacity
-            width: 1.5,
-          ),
+          border: pw.Border.all(color: PdfColors.cyan900, width: 1.5),
         ),
-
         codeStyle: pw.TextStyle(
-          font: pw.Font.courier(),
-          // Ensures brackets and semicolons are visible
+          font: monoFont, // Forced Courier for syntax symbols
           fontSize: 10,
+          color: kBrandBlue,
         ),
-
-        // --- REFINED BLOCKQUOTE ---
         quoteBarColor: kBrandGold,
       );
+
       final pdf = pw.Document();
       final converter = HTMLToPdf();
 
+      // 3. Process Introduction
+      onProgress(0.1, "Formatting Introduction...");
       final String introMd = await rootBundle.loadString(
         'assets/lessons/introduction.md',
       );
@@ -129,11 +127,19 @@ class PdfExporter {
         ),
       );
 
-      for (int id in lessonIds) {
+      // 4. Loop through Lessons with Progress Updates
+      for (int i = 0; i < lessonIds.length; i++) {
+        int id = lessonIds[i];
+
+        // Update progress UI
+        double progressVal = 0.1 + ((i + 1) / lessonIds.length) * 0.8;
+        onProgress(progressVal, "Adding Lesson $id of ${lessonIds.length}...");
+
         try {
           final String lessonMd = await rootBundle.loadString(
             'assets/lessons/$language/lesson$id.md',
           );
+
           List<pw.Widget> lessonWidgets = await converter.convertMarkdown(
             _prepareMd(lessonMd),
             tagStyle: myTagStyle,
@@ -147,7 +153,7 @@ class PdfExporter {
               header: (context) => pw.Align(
                 alignment: pw.Alignment.centerRight,
                 child: pw.Text(
-                  "Lesson $id",
+                  "Lesson $id | TMK Academy",
                   style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey),
                 ),
               ),
@@ -159,11 +165,16 @@ class PdfExporter {
         }
       }
 
+      // 5. Save and Download
+      onProgress(0.95, "Generating PDF file...");
       await Printing.layoutPdf(
         onLayout: (PdfPageFormat format) async => pdf.save(),
-        name: 'TMK_Lessons.pdf',
+        name: 'TMK_Lessons_${language.toUpperCase()}.pdf',
       );
+
+      onProgress(1.0, "Download Complete!");
     } catch (e) {
+      onProgress(0, "Error: ${e.toString()}");
       debugPrint("Final PDF Error: $e");
     }
   }

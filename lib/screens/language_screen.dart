@@ -11,23 +11,63 @@ class LanguageScreen extends StatelessWidget {
   final Map<int, String> currentTopics;
 
   LanguageScreen({super.key, required this.language})
-      : currentTopics = topics[language] ?? {};
+    : currentTopics = topics[language] ?? {};
 
-  // Update your _downloadPdf function
-  void _downloadPdf(BuildContext context) async {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        backgroundColor: kBrandOrange,
-        content: Text("Generating PDF for $language..."),
-        duration: const Duration(seconds: 2),
-      ),
+  void _startDownload(BuildContext context) {
+      final List<int> lessonIds = lessons[language]!.keys.toList();
+
+    showDialog(
+      context: context,
+      barrierDismissible: false, // User cannot tap away
+      builder: (context) {
+        double currentProgress = 0;
+        String currentStatus = "Starting...";
+
+        return StatefulBuilder(
+          builder: (context, setState) {
+            // Trigger the exporter
+            if (currentProgress == 0 && currentStatus == "Starting...") {
+              PdfExporter.generateLessonsPdf(
+                language,
+                lessonIds, // Your lesson IDs
+                onProgress: (progress, status) {
+                  setState(() {
+                    currentProgress = progress;
+                    currentStatus = status;
+                  });
+                  if (progress >= 1.0) {
+                    Navigator.pop(context); // Auto-close when done
+                  }
+                },
+              );
+            }
+
+            return AlertDialog(
+              title: Text(
+                "Generating Lessons",
+                style: TextStyle(color: Colors.orange),
+              ),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  LinearProgressIndicator(
+                    value: currentProgress,
+                    backgroundColor: Colors.grey[200],
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.orange),
+                  ),
+                  SizedBox(height: 20),
+                  Text(currentStatus, style: TextStyle(fontSize: 12)),
+                  Text(
+                    "${(currentProgress * 100).toInt()}%",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
     );
-
-    // Extract lesson IDs from your currentTopics keys
-    final List<int> lessonIds = lessons[language]!.keys.toList();
-
-    // Call the Exporter
-    await PdfExporter.generateLessonsPdf(language.toLowerCase(), lessonIds);
   }
 
   // --- Responsive Download Button ---
@@ -36,26 +76,36 @@ class LanguageScreen extends StatelessWidget {
 
     return isWide
         ? Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
-      child: TextButton.icon(
-        onPressed: () => _downloadPdf(context),
-        icon: const Icon(Icons.picture_as_pdf_rounded, color: kBrandOrange, size: 20),
-        label: const Text(
-          "PDF Download",
-          style: TextStyle(color: kBrandOrange, fontWeight: FontWeight.bold, fontSize: 14),
-        ),
-        style: TextButton.styleFrom(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-          backgroundColor: kBrandOrange.withOpacity(0.05),
-        ),
-      ),
-    )
+            padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+            child: TextButton.icon(
+              onPressed: () => _startDownload(context),
+              icon: const Icon(
+                Icons.picture_as_pdf_rounded,
+                color: kBrandOrange,
+                size: 20,
+              ),
+              label: const Text(
+                "PDF Download",
+                style: TextStyle(
+                  color: kBrandOrange,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                ),
+              ),
+              style: TextButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                backgroundColor: kBrandOrange.withOpacity(0.05),
+              ),
+            ),
+          )
         : IconButton(
-      onPressed: () => _downloadPdf(context),
-      icon: const Icon(Icons.picture_as_pdf_rounded, color: kBrandOrange),
-      tooltip: "Download as PDF",
-    );
+            onPressed: () => _startDownload(context),
+            icon: const Icon(Icons.picture_as_pdf_rounded, color: kBrandOrange),
+            tooltip: "Download as PDF",
+          );
   }
 
   // --- Final Test Card ---
@@ -92,12 +142,21 @@ class LanguageScreen extends StatelessWidget {
             const SizedBox(height: 8),
             const Text(
               "Final Test",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white, letterSpacing: 1.1),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Colors.white,
+                letterSpacing: 1.1,
+              ),
             ),
             const SizedBox(height: 4),
             Text(
               "All Modules Mix",
-              style: TextStyle(fontSize: 12, color: kBrandGold.withOpacity(0.9), fontWeight: FontWeight.w600),
+              style: TextStyle(
+                fontSize: 12,
+                color: kBrandGold.withOpacity(0.9),
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ],
         ),
@@ -111,7 +170,9 @@ class LanguageScreen extends StatelessWidget {
       borderRadius: BorderRadius.circular(20),
       onTap: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (ctx) => ModuleScreen(language: language, moduleId: id)),
+          MaterialPageRoute(
+            builder: (ctx) => ModuleScreen(language: language, moduleId: id),
+          ),
         );
       },
       child: Container(
@@ -120,7 +181,11 @@ class LanguageScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: kBrandBlue.withOpacity(0.2), width: 1.5),
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.2), blurRadius: 10, offset: const Offset(0, 4)),
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
           ],
         ),
         child: Column(
@@ -128,13 +193,25 @@ class LanguageScreen extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(color: kBrandBlue.withOpacity(0.1), shape: BoxShape.circle),
-              child: const Icon(Icons.menu_book_rounded, color: kBrandBlue, size: 30),
+              decoration: BoxDecoration(
+                color: kBrandBlue.withOpacity(0.1),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.menu_book_rounded,
+                color: kBrandBlue,
+                size: 30,
+              ),
             ),
             const SizedBox(height: 12),
             Text(
               "Module $id",
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: kBrandGold, letterSpacing: 1.2),
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 14,
+                color: kBrandGold,
+                letterSpacing: 1.2,
+              ),
             ),
             const SizedBox(height: 6),
             Padding(
@@ -144,7 +221,11 @@ class LanguageScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontSize: 11, color: kBrandWhite, height: 1.3),
+                style: const TextStyle(
+                  fontSize: 11,
+                  color: kBrandWhite,
+                  height: 1.3,
+                ),
               ),
             ),
           ],
@@ -164,7 +245,10 @@ class LanguageScreen extends StatelessWidget {
         iconTheme: const IconThemeData(color: kBrandWhite),
         title: Text(
           'Learn ${fullName[language]}',
-          style: const TextStyle(color: kBrandGold, fontWeight: FontWeight.bold),
+          style: const TextStyle(
+            color: kBrandGold,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         actions: [
           _buildDownloadButton(context), // Added Responsive PDF Button
@@ -185,7 +269,11 @@ class LanguageScreen extends StatelessWidget {
                     const SizedBox(width: 12),
                     const Text(
                       "လိူၵ်ႈၵၢၼ်ႁဵၼ်း / Modules",
-                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: kBrandWhite),
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: kBrandWhite,
+                      ),
                     ),
                   ],
                 ),
@@ -206,7 +294,11 @@ class LanguageScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         if (index < currentTopics.length) {
                           int id = currentTopics.keys.elementAt(index);
-                          return _buildModuleCard(context, id, currentTopics[id]!);
+                          return _buildModuleCard(
+                            context,
+                            id,
+                            currentTopics[id]!,
+                          );
                         } else {
                           return _buildFinalTest(context);
                         }
