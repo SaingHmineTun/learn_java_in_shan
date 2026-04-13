@@ -46,7 +46,21 @@ The application currently supports the following programming languages:
 
 ## 📱 Screenshots
 
-*Note: Actual screenshots would be added here showing the app interface*
+*Home Screen*
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/8d796eca-f7a3-4f36-980c-db06ea480180" />
+
+*Modules Screen*
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/4c63769a-710d-4219-8451-5b8601080b5a" />
+
+*Lessons Screen*
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/f30fa943-4348-476a-ad0e-4699435d0db3" />
+
+*Learning Screen*
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/a423c2ee-839f-43ea-8322-307e0c383e5d" />
+
+
+
+
 
 
 ## 🚀 Usage
