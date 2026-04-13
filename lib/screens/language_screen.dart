@@ -14,59 +14,21 @@ class LanguageScreen extends StatelessWidget {
     : currentTopics = topics[language] ?? {};
 
   void _startDownload(BuildContext context) {
-      final List<int> lessonIds = lessons[language]!.keys.toList();
+    // Check if lessons exist for the language to avoid null errors
+    if (lessons[language] == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("No lessons found for this language")),
+      );
+      return;
+    }
+
+    final List<int> lessonIds = lessons[language]!.keys.toList();
 
     showDialog(
       context: context,
-      barrierDismissible: false, // User cannot tap away
-      builder: (context) {
-        double currentProgress = 0;
-        String currentStatus = "Starting...";
-
-        return StatefulBuilder(
-          builder: (context, setState) {
-            // Trigger the exporter
-            if (currentProgress == 0 && currentStatus == "Starting...") {
-              PdfExporter.generateLessonsPdf(
-                language,
-                lessonIds, // Your lesson IDs
-                onProgress: (progress, status) {
-                  setState(() {
-                    currentProgress = progress;
-                    currentStatus = status;
-                  });
-                  if (progress >= 1.0) {
-                    Navigator.pop(context); // Auto-close when done
-                  }
-                },
-              );
-            }
-
-            return AlertDialog(
-              title: Text(
-                "Generating Lessons",
-                style: TextStyle(color: Colors.orange),
-              ),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  LinearProgressIndicator(
-                    value: currentProgress,
-                    backgroundColor: Colors.grey[200],
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.orange),
-                  ),
-                  SizedBox(height: 20),
-                  Text(currentStatus, style: TextStyle(fontSize: 12)),
-                  Text(
-                    "${(currentProgress * 100).toInt()}%",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
+      barrierDismissible: false,
+      builder: (context) =>
+          DownloadProgressDialog(language: language, lessonIds: lessonIds),
     );
   }
 
@@ -310,6 +272,92 @@ class LanguageScreen extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class DownloadProgressDialog extends StatefulWidget {
+  final String language;
+  final List<int> lessonIds;
+
+  const DownloadProgressDialog({
+    super.key,
+    required this.language,
+    required this.lessonIds,
+  });
+
+  @override
+  State<DownloadProgressDialog> createState() => _DownloadProgressDialogState();
+}
+
+class _DownloadProgressDialogState extends State<DownloadProgressDialog> {
+  double currentProgress = 0.0;
+  String currentStatus = "Initializing...";
+
+  @override
+  void initState() {
+    super.initState();
+    _startExport();
+  }
+
+  void _startExport() {
+    PdfExporter.generateLessonsPdf(
+      widget.language,
+      widget.lessonIds,
+      onProgress: (progress, status) {
+        if (!mounted) return;
+        setState(() {
+          currentProgress = progress;
+          currentStatus = status;
+        });
+
+        // Close dialog automatically on completion
+        if (progress >= 1.0) {
+          Future.delayed(const Duration(milliseconds: 500), () {
+            if (mounted) Navigator.pop(context);
+          });
+        }
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      backgroundColor: kBrandSurface,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      title: const Text(
+        "Generating PDF",
+        style: TextStyle(color: kBrandGold, fontWeight: FontWeight.bold),
+      ),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const SizedBox(height: 10),
+          LinearProgressIndicator(
+            value: currentProgress,
+            backgroundColor: kBrandBlue.withOpacity(0.1),
+            valueColor: const AlwaysStoppedAnimation<Color>(kBrandOrange),
+            minHeight: 10,
+            borderRadius: BorderRadius.circular(5),
+          ),
+          const SizedBox(height: 20),
+          Text(
+            currentStatus,
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: kBrandWhite, fontSize: 13),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            "${(currentProgress * 100).toInt()}%",
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+              color: kBrandBlue,
+            ),
+          ),
+        ],
       ),
     );
   }
