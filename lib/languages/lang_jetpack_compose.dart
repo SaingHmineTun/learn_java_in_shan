@@ -70,6 +70,7 @@ const Map<int, Map<int, String>> jetpackComposeModules = {
     46: "Data Export & Sharing",
     47: "Module 5 Final Refinement & Polishing",
   },
+  // 6: "Shan Music Player",
   6: {
     48: "Introduction to Media3 ExoPlayer",
     49: "Media Service & Foreground Service",
