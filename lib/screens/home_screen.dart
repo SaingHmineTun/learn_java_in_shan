@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tmkacademy/screens/language_screen.dart';
 import 'package:tmkacademy/utils/language.dart';
 import '../utils/colors.dart';
+import '../utils/utils.dart';
 import 'about_screen.dart';
 import 'donation_screen.dart';
 
@@ -99,13 +100,17 @@ class HomeScreen extends StatelessWidget {
     final Color accentColor = style['color'];
     final IconData langIcon = style['icon'];
 
+    // Get counts from your utility maps
+    final int moduleCount = topics[lang]?.length ?? 0;
+    final int lessonCount = lessons[lang]?.length ?? 0;
+
     return Card(
       elevation: 8,
       shadowColor: Colors.black54,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       color: kBrandSurface,
       child: InkWell(
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(20),
         onTap: () {
           Navigator.push(
             context,
@@ -115,60 +120,85 @@ class HomeScreen extends StatelessWidget {
           );
         },
         child: Container(
+          padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(24),
-            border: Border.all(color: accentColor.withOpacity(0.3), width: 1),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: accentColor.withOpacity(0.2), width: 1),
             gradient: LinearGradient(
-              colors: [accentColor.withOpacity(0.1), Colors.transparent],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+              colors: [accentColor.withOpacity(0.05), Colors.transparent],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
             ),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: Row(
             children: [
+              // Left Side: Icon
               Container(
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: accentColor.withOpacity(0.1),
-                  shape: BoxShape.circle,
+                  borderRadius: BorderRadius.circular(15),
                 ),
-                child: Icon(langIcon, size: 45, color: accentColor),
+                child: Icon(langIcon, size: 32, color: accentColor),
               ),
-              const SizedBox(height: 15),
-              Text(
-                fullName[lang] ?? lang,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: kBrandWhite,
-                  letterSpacing: 1.2,
+              const SizedBox(width: 15),
+
+              // Right Side: Info
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      fullName[lang] ?? lang,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: kBrandWhite,
+                        height: 1.2,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Row(
+                      children: [
+                        _buildStatChip(
+                          Icons.grid_view_rounded,
+                          "$moduleCount Modules",
+                        ),
+                        const SizedBox(width: 8),
+                        _buildStatChip(
+                          Icons.book_rounded,
+                          "$lessonCount Lessons",
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 8),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 4,
-                ),
-                decoration: BoxDecoration(
-                  color: accentColor.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Text(
-                  "တႄႇသွၼ်", // Start Lesson
-                  style: TextStyle(
-                    color: kBrandWhite,
-                    fontSize: 11,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+              Icon(
+                Icons.chevron_right_rounded,
+                color: kBrandWhite.withOpacity(0.3),
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  // Helper for the small info chips
+  Widget _buildStatChip(IconData icon, String label) {
+    return Row(
+      children: [
+        Icon(icon, size: 10, color: kBrandGold),
+        const SizedBox(width: 4),
+        Text(
+          label,
+          style: TextStyle(fontSize: 10, color: kBrandWhite.withOpacity(0.6)),
+        ),
+      ],
     );
   }
 
@@ -292,9 +322,9 @@ class HomeScreen extends StatelessWidget {
                   children: languages
                       .map(
                         (lang) => SizedBox(
-                          width: 165,
+                          width: 320,
                           child: AspectRatio(
-                            aspectRatio: 0.85,
+                            aspectRatio: 2.8,
                             child: _buildLanguageCard(context, lang),
                           ),
                         ),

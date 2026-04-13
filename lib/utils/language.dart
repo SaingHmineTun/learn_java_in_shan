@@ -28,7 +28,7 @@ const fullName = {
   "html": "HTML",
   "css": "CSS",
   "js": "Javascript",
-  "jetpack_compose": "Jetpack Compose",
+  "jetpack_compose": "Android Jetpack Compose",
   "ts": "Typescript",
   "c": "C",
   "cpp": "C++",
@@ -38,5 +38,5 @@ const fullName = {
   "javafx": "JavaFX",
   "git": "Git & Github",
   "mysql": "MySQL",
-  "java_springboot": "Spring Boot",
+  "java_springboot": "Java Spring Boot",
 };

@@ -125,9 +125,15 @@ class LanguageScreen extends StatelessWidget {
       ),
     );
   }
-
-  // --- Module Card ---
   Widget _buildModuleCard(BuildContext context, int id, String content) {
+
+    final moduleLessons = modules[language]![id];
+
+    final int lessonCount = moduleLessons!.length ;
+    final String lessonRange = lessonCount > 0
+        ? "${moduleLessons.keys.first} - ${moduleLessons.keys.last}"
+        : "No lessons";
+
     return InkWell(
       borderRadius: BorderRadius.circular(20),
       onTap: () {
@@ -154,7 +160,7 @@ class LanguageScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              padding: const EdgeInsets.all(12),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: kBrandBlue.withOpacity(0.1),
                 shape: BoxShape.circle,
@@ -162,10 +168,10 @@ class LanguageScreen extends StatelessWidget {
               child: const Icon(
                 Icons.menu_book_rounded,
                 color: kBrandBlue,
-                size: 30,
+                size: 24,
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 8),
             Text(
               "Module $id",
               style: const TextStyle(
@@ -175,21 +181,28 @@ class LanguageScreen extends StatelessWidget {
                 letterSpacing: 1.2,
               ),
             ),
-            const SizedBox(height: 6),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Text(
-                content,
-                textAlign: TextAlign.center,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  fontSize: 11,
-                  color: kBrandWhite,
-                  height: 1.3,
-                ),
+            const SizedBox(height: 4),
+
+            Text(
+              content,
+              textAlign: TextAlign.center,
+              maxLines: 1, // Reduced maxlines to make room for stats
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                fontSize: 11,
+                color: kBrandWhite,
+                height: 1.1,
               ),
             ),
+
+            const SizedBox(height: 4),
+            // --- NEW: Lesson Stats ---
+            Text(
+              "$lessonCount Lessons ($lessonRange)",
+              style: const TextStyle(color: kBrandOrange, fontSize: 10, fontWeight: FontWeight.bold),
+            ),
+
+            const SizedBox(height: 8),
           ],
         ),
       ),
