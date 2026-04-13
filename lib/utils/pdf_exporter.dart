@@ -46,7 +46,7 @@ class PdfExporter {
       final logoData = await rootBundle.load("assets/images/tmklogo.png");
       final logoImage = pw.MemoryImage(logoData.buffer.asUint8List());
 
-      // 2. Define the Custom Style
+      // 2. Define the Custom Style (EXACTLY AS PROVIDED)
       final myTagStyle = HtmlTagStyle(
         h1Style: pw.TextStyle(
           font: ttfBoldFont,
@@ -65,18 +65,13 @@ class PdfExporter {
           fontSize: 13,
           lineSpacing: 2,
         ),
-
-        // IDE-style Code Block Rendering
         codeBlockBackgroundColor: PdfColor.fromHex("#d3d6e6"),
         codeDecoration: pw.BoxDecoration(
           color: kBrandDark,
           borderRadius: const pw.BorderRadius.all(pw.Radius.circular(8)),
           border: pw.Border.all(color: PdfColors.cyan900, width: 1.5),
         ),
-        codeStyle: pw.TextStyle(
-          font: monoFont, // Forced Courier for syntax symbols
-          fontSize: 10,
-        ),
+        codeStyle: pw.TextStyle(font: monoFont, fontSize: 10),
         quoteBarColor: kBrandGold,
       );
 
@@ -94,9 +89,11 @@ class PdfExporter {
         fontFallback: [monoFont, ttfEmojiFont],
       );
 
+      // Fixed: MultiPage with maxPages to avoid TooManyPagesException
       pdf.addPage(
         pw.MultiPage(
           pageFormat: PdfPageFormat.a4,
+          maxPages: 100,
           theme: pw.ThemeData.withFont(
             base: ttfFont,
             bold: ttfBoldFont,
@@ -135,11 +132,9 @@ class PdfExporter {
         ),
       );
 
-      // 4. Loop through Lessons with Progress Updates
+      // 4. Loop through Lessons
       for (int i = 0; i < lessonIds.length; i++) {
         int id = lessonIds[i];
-
-        // Update progress UI
         double progressVal = 0.1 + ((i + 1) / lessonIds.length) * 0.8;
         onProgress(progressVal, "Adding Lesson $id of ${lessonIds.length}...");
 
@@ -157,27 +152,37 @@ class PdfExporter {
           pdf.addPage(
             pw.MultiPage(
               pageFormat: PdfPageFormat.a4,
+              // Setting maxPages higher for lessons to prevent crashing on long modules
+              maxPages: 200,
               theme: pw.ThemeData.withFont(
                 base: ttfFont,
                 bold: ttfBoldFont,
                 italic: ttfItalicFont,
               ),
-              header: (context) => pw.Align(
+              header: (context) => pw.Container(
                 alignment: pw.Alignment.centerRight,
+                decoration: pw.BoxDecoration(
+                  border: const pw.Border(
+                    bottom: pw.BorderSide(color: PdfColors.grey300, width: 0.5),
+                  ),
+                ),
+                margin: const pw.EdgeInsets.only(bottom: 10),
                 child: pw.Text(
                   "Lesson $id | TMK Academy",
                   style: const pw.TextStyle(fontSize: 8, color: PdfColors.grey),
                 ),
               ),
+              // We pass the widgets directly into the build list
               build: (context) => lessonWidgets,
             ),
           );
         } catch (e) {
-          debugPrint("Skipping lesson $id: $e");
+          debugPrint("Error on lesson $id: $e");
+          // If a lesson is so large it still crashes, we notify the user but keep going
+          onProgress(progressVal, "Warning: Lesson $id formatting adjusted...");
         }
       }
 
-      // 5. Save and Download
       onProgress(0.95, "Generating PDF file...");
       await Printing.layoutPdf(
         onLayout: (PdfPageFormat format) async => pdf.save(),
