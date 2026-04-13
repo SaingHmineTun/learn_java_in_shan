@@ -7,13 +7,11 @@ import 'package:printing/printing.dart';
 import 'language.dart';
 
 class PdfExporter {
-  // Brand Colors
   static const PdfColor kBrandGold = PdfColor.fromInt(0xFFFFD700);
   static const PdfColor kBrandOrange = PdfColor.fromInt(0xFFFF8C00);
   static const PdfColor kBrandBlue = PdfColor.fromInt(0xFF00FFFF);
   static const PdfColor kBrandDark = PdfColor.fromInt(0xFF0D0D0E);
 
-  // Sanitize Markdown string for PDF compatibility
   static String _prepareMd(String text) {
     return text
         .replaceAll('\r\n', '\n')
@@ -28,13 +26,14 @@ class PdfExporter {
     required Function(double progress, String status) onProgress,
   }) async {
     try {
-      // 1. Initial Assets Loading
       onProgress(0.05, "Loading TMK Fonts & Branding...");
 
       final fontData = await rootBundle.load("assets/fonts/aj05.ttf");
       final ttfFont = pw.Font.ttf(fontData);
 
-      final italicFontData = await rootBundle.load("assets/fonts/aj05_bold.ttf");
+      final italicFontData = await rootBundle.load(
+        "assets/fonts/aj05_bold.ttf",
+      );
       final ttfItalicFont = pw.Font.ttf(italicFontData);
 
       final boldFontData = await rootBundle.load("assets/fonts/aj03.ttf");
@@ -45,10 +44,16 @@ class PdfExporter {
       final emojiData = await rootBundle.load("assets/fonts/noto_emoji.ttf");
       final ttfEmojiFont = pw.Font.ttf(emojiData);
 
-      final logoData = await rootBundle.load("assets/images/tmklogo.png");
+      final logoData = await rootBundle.load("assets/images/tmklogo_black.png");
       final logoImage = pw.MemoryImage(logoData.buffer.asUint8List());
 
-      // 2. Define the Custom Style (EXACTLY AS PROVIDED)
+      // Cover Image (Assuming you have course-specific images or a generic one)
+      // Example: assets/images/cover_java.png
+      final coverData = await rootBundle.load(
+        "assets/images/app_icon_transparent.png",
+      );
+      final coverImage = pw.MemoryImage(coverData.buffer.asUint8List());
+
       final myTagStyle = HtmlTagStyle(
         h1Style: pw.TextStyle(
           font: ttfBoldFont,
@@ -80,6 +85,72 @@ class PdfExporter {
       final pdf = pw.Document();
       final converter = HTMLToPdf();
 
+      // --- 1. COVER PAGE ---
+      onProgress(0.08, "Creating Cover Page...");
+      pdf.addPage(
+        pw.Page(
+          pageFormat: PdfPageFormat.a4,
+          build: (context) => pw.Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: pw.BoxDecoration(
+              border: pw.Border.all(color: kBrandOrange, width: 5),
+            ),
+            child: pw.Column(
+              mainAxisAlignment: pw.MainAxisAlignment.center,
+              children: [
+                pw.Spacer(flex: 2),
+                pw.Image(logoImage, width: 200),
+                pw.Text(
+                  fullName[language] ?? language.toUpperCase(),
+                  textAlign: pw.TextAlign.center,
+                  style: pw.TextStyle(
+                    font: ttfBoldFont,
+                    fontSize: 40,
+                    color: kBrandOrange,
+                  ),
+                ),
+                pw.Padding(
+                  padding: const pw.EdgeInsets.symmetric(
+                    vertical: 20,
+                    horizontal: 40,
+                  ),
+                  child: pw.Image(coverImage, height: 200),
+                ),
+                pw.Text(
+                  "TMK ACADEMY",
+                  style: pw.TextStyle(
+                    font: ttfBoldFont,
+                    fontSize: 18,
+                    color: kBrandOrange,
+                    letterSpacing: 2,
+                  ),
+                ),
+                pw.SizedBox(height: 10),
+                pw.Text(
+                  "ၸၢႆးမၢဝ်း (ထုင်ႉမၢဝ်းၶမ်း)",
+                  style: pw.TextStyle(
+                    font: ttfBoldFont,
+                    fontSize: 14,
+                    color: PdfColors.grey700,
+                  ),
+                ),
+                pw.Spacer(flex: 3),
+                pw.Text(
+                  "www.tmkacademy.com",
+                  style: const pw.TextStyle(
+                    fontSize: 10,
+                    color: PdfColors.grey,
+                  ),
+                ),
+                pw.SizedBox(height: 20),
+              ],
+            ),
+          ),
+        ),
+      );
+
+      // --- 2. INTRODUCTION ---
       onProgress(0.1, "Formatting Introduction...");
       final String introMd = await rootBundle.loadString(
         'assets/lessons/introduction.md',
@@ -91,7 +162,6 @@ class PdfExporter {
         fontFallback: [monoFont, ttfEmojiFont],
       );
 
-      // Fixed: MultiPage with maxPages to avoid TooManyPagesException
       pdf.addPage(
         pw.MultiPage(
           pageFormat: PdfPageFormat.a4,
@@ -134,7 +204,7 @@ class PdfExporter {
         ),
       );
 
-      // 4. Loop through Lessons
+      // --- 3. LESSONS LOOP ---
       for (int i = 0; i < lessonIds.length; i++) {
         int id = lessonIds[i];
         double progressVal = 0.1 + ((i + 1) / lessonIds.length) * 0.8;
@@ -154,7 +224,6 @@ class PdfExporter {
           pdf.addPage(
             pw.MultiPage(
               pageFormat: PdfPageFormat.a4,
-              // Setting maxPages higher for lessons to prevent crashing on long modules
               maxPages: 200,
               theme: pw.ThemeData.withFont(
                 base: ttfFont,
@@ -169,20 +238,18 @@ class PdfExporter {
                   ),
                 ),
                 margin: const pw.EdgeInsets.only(bottom: 10),
-                padding: const pw.EdgeInsets.only(bottom: 5), // Added small padding for better look
+                padding: const pw.EdgeInsets.only(bottom: 5),
                 child: pw.Row(
                   mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                   children: [
-                    // Left Side: Book Name
                     pw.Text(
-                      "${fullName[language]}", // This will show "Learn JAVA" or "Learn PYTHON"
+                      "${fullName[language]}",
                       style: pw.TextStyle(
-                        font: ttfBoldFont, // Use your bold font for the book name
+                        font: ttfBoldFont,
                         fontSize: 8,
-                        color: kBrandOrange, // Using your brand color for the left side
+                        color: kBrandOrange,
                       ),
                     ),
-                    // Right Side: Lesson Info
                     pw.Text(
                       "Lesson $id | TMK Academy",
                       style: const pw.TextStyle(
@@ -204,7 +271,6 @@ class PdfExporter {
                 child: pw.Row(
                   mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                   children: [
-                    // Left Side: Your Name in Shan
                     pw.Text(
                       "ၸၢႆးမၢဝ်း (ထုင်ႉမၢဝ်းၶမ်း)",
                       style: pw.TextStyle(
@@ -213,7 +279,6 @@ class PdfExporter {
                         color: PdfColors.grey700,
                       ),
                     ),
-                    // Right Side: Dynamic Page Number
                     pw.Text(
                       "${context.pageNumber} / ${context.pagesCount}",
                       style: pw.TextStyle(
@@ -225,13 +290,11 @@ class PdfExporter {
                   ],
                 ),
               ),
-              // We pass the widgets directly into the build list
               build: (context) => lessonWidgets,
             ),
           );
         } catch (e) {
           debugPrint("Error on lesson $id: $e");
-          // If a lesson is so large it still crashes, we notify the user but keep going
           onProgress(progressVal, "Warning: Lesson $id formatting adjusted...");
         }
       }
