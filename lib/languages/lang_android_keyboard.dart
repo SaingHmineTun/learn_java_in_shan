@@ -34,8 +34,9 @@ final Map<int, Map<int, String>> akModules = {
     16: "Long-Press Logic: Implementing Pop-up Character Windows",
     17: "Advanced Touch Logic for Popups",
     18: "Shift and Caps Lock State: Managing Capitalization Logic",
-    19: "Spacebar Swipe Logic: Implementing Cursor Control",
-    20: "Haptic and Audio Feedback: Programming Vibration and Sounds",
+    19: "Advanced Shift Logic (Double-Tap for Caps Lock)",
+    20: "Spacebar Swipe Logic: Implementing Cursor Control",
+    21: "Haptic and Audio Feedback: Programming Vibration and Sounds",
   },
   4: {
     20: "The Reordering Engine: Logic for Leading Vowels",
