@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:htmltopdfwidgets/htmltopdfwidgets.dart';
+import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
@@ -18,6 +19,42 @@ class PdfExporter {
         .replaceAll('\r', '\n')
         .replaceAll('\uFE0F', '')
         .replaceAll(RegExp(r'[^\u0000-\uFFFF]'), '');
+  }
+
+  // 1. Add this helper function at the bottom of your PdfExporter class
+  static String _splitLongCodeBlocks(String md) {
+    final lines = md.split('\n');
+    final result = <String>[];
+    bool inCodeBlock = false;
+    int codeLineCount = 0;
+    String? language;
+
+    for (var line in lines) {
+      if (line.startsWith('```')) {
+        if (!inCodeBlock) {
+          inCodeBlock = true;
+          codeLineCount = 0;
+          language = line.substring(3).trim();
+          result.add(line);
+        } else {
+          inCodeBlock = false;
+          result.add(line);
+        }
+      } else if (inCodeBlock) {
+        codeLineCount++;
+        // IF THE CODE BLOCK EXCEEDS 40 LINES, WE FORCE A SPLIT
+        if (codeLineCount > 40) {
+          result.add('```'); // Close current block
+          result.add('\n*(Code continued on next page)*\n');
+          result.add('```$language'); // Re-open new block
+          codeLineCount = 0;
+        }
+        result.add(line);
+      } else {
+        result.add(line);
+      }
+    }
+    return result.join('\n');
   }
 
   static Future<void> generateLessonsPdf(
@@ -47,8 +84,6 @@ class PdfExporter {
       final logoData = await rootBundle.load("assets/images/tmklogo_black.png");
       final logoImage = pw.MemoryImage(logoData.buffer.asUint8List());
 
-      // Cover Image (Assuming you have course-specific images or a generic one)
-      // Example: assets/images/cover_java.png
       final coverData = await rootBundle.load(
         "assets/images/app_icon_transparent.png",
       );
@@ -73,12 +108,11 @@ class PdfExporter {
           lineSpacing: 2,
         ),
         codeBlockBackgroundColor: PdfColor.fromHex("#d3d6e6"),
-        codeDecoration: pw.BoxDecoration(
+        codeStyle: pw.TextStyle(
+          font: monoFont,
+          fontSize: 10,
           color: kBrandDark,
-          borderRadius: const pw.BorderRadius.all(pw.Radius.circular(8)),
-          border: pw.Border.all(color: PdfColors.cyan900, width: 1.5),
         ),
-        codeStyle: pw.TextStyle(font: monoFont, fontSize: 10),
         quoteBarColor: kBrandGold,
       );
 
@@ -155,7 +189,6 @@ class PdfExporter {
       final String introMd = await rootBundle.loadString(
         'assets/lessons/introduction.md',
       );
-
       List<pw.Widget> introWidgets = await converter.convertMarkdown(
         _prepareMd(introMd),
         tagStyle: myTagStyle,
@@ -208,12 +241,15 @@ class PdfExporter {
       for (int i = 0; i < lessonIds.length; i++) {
         int id = lessonIds[i];
         double progressVal = 0.1 + ((i + 1) / lessonIds.length) * 0.8;
-        onProgress(progressVal, "Adding Lesson $id of ${lessonIds.length}...");
+        onProgress(progressVal, "Adding Lesson $id...");
+        print("Adding Lesson $id...");
 
         try {
-          final String lessonMd = await rootBundle.loadString(
+          String lessonMd = await rootBundle.loadString(
             'assets/lessons/$language/lesson$id.md',
           );
+
+          lessonMd = _splitLongCodeBlocks(lessonMd);
 
           List<pw.Widget> lessonWidgets = await converter.convertMarkdown(
             _prepareMd(lessonMd),
@@ -224,7 +260,8 @@ class PdfExporter {
           pdf.addPage(
             pw.MultiPage(
               pageFormat: PdfPageFormat.a4,
-              maxPages: 200,
+              // Emergency Brake: Prevents infinite loops on server
+              maxPages: 40,
               theme: pw.ThemeData.withFont(
                 base: ttfFont,
                 bold: ttfBoldFont,
@@ -290,12 +327,13 @@ class PdfExporter {
                   ],
                 ),
               ),
+              // Spreading widgets directly allows the MultiPage engine to split content
               build: (context) => lessonWidgets,
             ),
           );
         } catch (e) {
-          debugPrint("Error on lesson $id: $e");
-          onProgress(progressVal, "Warning: Lesson $id formatting adjusted...");
+          debugPrint("Skipped lesson $id: $e");
+          onProgress(progressVal, "Note: Lesson $id split across pages...");
         }
       }
 
@@ -308,7 +346,6 @@ class PdfExporter {
       onProgress(1.0, "Download Complete!");
     } catch (e) {
       onProgress(0, "Error: ${e.toString()}");
-      debugPrint("Final PDF Error: $e");
     }
   }
 }
