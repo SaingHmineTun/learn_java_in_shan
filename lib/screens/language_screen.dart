@@ -32,7 +32,6 @@ class LanguageScreen extends StatelessWidget {
     );
   }
 
-  // --- Responsive Download Button ---
   Widget _buildDownloadButton(BuildContext context) {
     bool isWide = MediaQuery.of(context).size.width > 700;
 
@@ -125,11 +124,11 @@ class LanguageScreen extends StatelessWidget {
       ),
     );
   }
-  Widget _buildModuleCard(BuildContext context, int id, String content) {
 
+  Widget _buildModuleCard(BuildContext context, int id, String content) {
     final moduleLessons = modules[language]![id];
 
-    final int lessonCount = moduleLessons!.length ;
+    final int lessonCount = moduleLessons!.length;
     final String lessonRange = lessonCount > 0
         ? "${moduleLessons.keys.first} - ${moduleLessons.keys.last}"
         : "No lessons";
@@ -199,7 +198,11 @@ class LanguageScreen extends StatelessWidget {
             // --- NEW: Lesson Stats ---
             Text(
               "$lessonCount Lessons ($lessonRange)",
-              style: const TextStyle(color: kBrandOrange, fontSize: 10, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                color: kBrandOrange,
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+              ),
             ),
 
             const SizedBox(height: 8),
@@ -307,6 +310,7 @@ class DownloadProgressDialog extends StatefulWidget {
 class _DownloadProgressDialogState extends State<DownloadProgressDialog> {
   double currentProgress = 0.0;
   String currentStatus = "Initializing...";
+  bool _isUserCancelled = false; // Add this flag
 
   @override
   void initState() {
@@ -318,6 +322,7 @@ class _DownloadProgressDialogState extends State<DownloadProgressDialog> {
     PdfExporter.generateLessonsPdf(
       widget.language,
       widget.lessonIds,
+      isCancelled: () => _isUserCancelled,
       onProgress: (progress, status) {
         if (!mounted) return;
         setState(() {
@@ -372,6 +377,26 @@ class _DownloadProgressDialogState extends State<DownloadProgressDialog> {
           ),
         ],
       ),
+      // --- ADDED CANCEL BUTTON ---
+      actions: [
+        Center(
+          child: TextButton(
+            onPressed: () {
+              setState(() {
+                _isUserCancelled = true;
+              });
+              Navigator.pop(context); // Close the dialog immediately
+            },
+            child: const Text(
+              "CANCEL",
+              style: TextStyle(
+                color: Colors.redAccent,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

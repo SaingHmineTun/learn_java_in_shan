@@ -60,6 +60,7 @@ class PdfExporter {
     String language,
     List<int> lessonIds, {
     required Function(double progress, String status) onProgress,
+    required bool Function() isCancelled, // Add this line
   }) async {
     try {
       onProgress(0.05, "Loading TMK Fonts & Branding...");
@@ -75,7 +76,9 @@ class PdfExporter {
       final boldFontData = await rootBundle.load("assets/fonts/aj03.ttf");
       final ttfBoldFont = pw.Font.ttf(boldFontData);
 
-      final monoFontData = await rootBundle.load("assets/fonts/roboto_mono.ttf");
+      final monoFontData = await rootBundle.load(
+        "assets/fonts/roboto_mono.ttf",
+      );
       final monoFont = pw.Font.ttf(monoFontData);
 
       final emojiData = await rootBundle.load("assets/fonts/noto_emoji.ttf");
@@ -203,7 +206,7 @@ class PdfExporter {
             base: ttfFont,
             bold: ttfBoldFont,
             italic: ttfItalicFont,
-            fontFallback: [monoFont, ttfEmojiFont]
+            fontFallback: [monoFont, ttfEmojiFont],
           ),
           build: (context) => [
             pw.Row(
@@ -240,6 +243,10 @@ class PdfExporter {
 
       // --- 3. LESSONS LOOP ---
       for (int i = 0; i < lessonIds.length; i++) {
+        if (isCancelled()) {
+          debugPrint("PDF Generation Cancelled by user.");
+          return;
+        }
         int id = lessonIds[i];
         double progressVal = 0.1 + ((i + 1) / lessonIds.length) * 0.8;
         onProgress(progressVal, "Adding Lesson $id...");
@@ -267,7 +274,7 @@ class PdfExporter {
                 base: ttfFont,
                 bold: ttfBoldFont,
                 italic: ttfItalicFont,
-                fontFallback: [monoFont, ttfEmojiFont]
+                fontFallback: [monoFont, ttfEmojiFont],
               ),
               header: (context) => pw.Container(
                 alignment: pw.Alignment.center,
@@ -338,6 +345,7 @@ class PdfExporter {
           onProgress(progressVal, "Note: Lesson $id split across pages...");
         }
       }
+      if (isCancelled()) return;
 
       onProgress(0.95, "Generating PDF file...");
       await Printing.layoutPdf(
