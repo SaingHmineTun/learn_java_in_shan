@@ -20,7 +20,7 @@ final Map<int, Map<int, String>> akModules = {
   },
   2: {
     7: "Designing the English QWERTY Layout with ConstraintLayout",
-    8: "Designing the Myanmar Unicode and Zawgyi XML Layouts",
+    8: "Designing the Myanmar Unicode and Unicode XML Layouts",
     9: "Designing the Shan XML Layout for TMK Keyboard Pro",
     10: "Advanced StateList Drawables: Creating Custom Pro Key Shapes",
     11: "Dynamic Theming Engine: Switching Blue and Gold Themes",
