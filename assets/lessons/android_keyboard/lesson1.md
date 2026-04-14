@@ -1,9 +1,3 @@
-မႄးၼႄၶိုၼ်းၶႃႈ! ပဵၼ်လွင်ႈတၢင်းဢၼ်လီတႄႉတႄႉ ဢၼ်ၸဝ်ႈၵဝ်ႇတူၺ်းႁၼ်ဝႃႈ ႁဝ်းလူဝ်ႇၾၢႆႇ **`candidate_view.xml`** တႃႇႁဵတ်းႁၢင်ႈ (UI) လိၵ်ႈလႅတ်း (Suggestions) ၼၼ်ႉၶႃႈ။
-
-တွၼ်ႈတႃႇ Lesson 1 ၼႆႉ ႁဝ်းတေလႆႈသၢင်ႈၾၢႆႇ XML တင်း 2 ဢၼ် ၼင်ႇႁိုဝ် `onCreateInputView` လႄႈ `onCreateCandidatesView` တေမီး View တႃႇပိုတ်ႇဢွၵ်ႇမႃးၶႃႈ။
-
----
-
 ## **Lesson 1: Understanding InputMethodService in XML: Handling Layouts**
 
 ### **Overview (ႁူဝ်ၶေႃႈ)**
