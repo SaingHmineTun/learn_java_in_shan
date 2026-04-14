@@ -41,7 +41,8 @@ class PdfExporter {
         }
       } else if (inCodeBlock) {
         codeLineCount++;
-        if (codeLineCount > 35) { // 35 lines is the "Safe Zone" for A4
+        if (codeLineCount > 35) {
+          // 35 lines is the "Safe Zone" for A4
           result.add('```'); // Close it
           result.add('\n\n'); // Break
           result.add('```$currentLang'); // Re-open
@@ -74,7 +75,8 @@ class PdfExporter {
       final boldFontData = await rootBundle.load("assets/fonts/aj03.ttf");
       final ttfBoldFont = pw.Font.ttf(boldFontData);
 
-      final monoFont = pw.Font.courier();
+      final monoFontData = await rootBundle.load("assets/fonts/roboto_mono.ttf");
+      final monoFont = pw.Font.ttf(monoFontData);
 
       final emojiData = await rootBundle.load("assets/fonts/noto_emoji.ttf");
       final ttfEmojiFont = pw.Font.ttf(emojiData);
@@ -201,6 +203,7 @@ class PdfExporter {
             base: ttfFont,
             bold: ttfBoldFont,
             italic: ttfItalicFont,
+            fontFallback: [monoFont, ttfEmojiFont]
           ),
           build: (context) => [
             pw.Row(
@@ -264,6 +267,7 @@ class PdfExporter {
                 base: ttfFont,
                 bold: ttfBoldFont,
                 italic: ttfItalicFont,
+                fontFallback: [monoFont, ttfEmojiFont]
               ),
               header: (context) => pw.Container(
                 alignment: pw.Alignment.center,
