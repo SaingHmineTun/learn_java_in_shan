@@ -21,20 +21,19 @@ class PdfExporter {
         .replaceAll(RegExp(r'[^\u0000-\uFFFF]'), '');
   }
 
-  // 1. Add this helper function at the bottom of your PdfExporter class
   static String _splitLongCodeBlocks(String md) {
     final lines = md.split('\n');
     final result = <String>[];
     bool inCodeBlock = false;
     int codeLineCount = 0;
-    String? language;
+    String currentLang = "";
 
     for (var line in lines) {
-      if (line.startsWith('```')) {
+      if (line.trimLeft().startsWith('```')) {
         if (!inCodeBlock) {
           inCodeBlock = true;
           codeLineCount = 0;
-          language = line.substring(3).trim();
+          currentLang = line.trim().substring(3);
           result.add(line);
         } else {
           inCodeBlock = false;
@@ -42,11 +41,10 @@ class PdfExporter {
         }
       } else if (inCodeBlock) {
         codeLineCount++;
-        // IF THE CODE BLOCK EXCEEDS 40 LINES, WE FORCE A SPLIT
-        if (codeLineCount > 40) {
-          result.add('```'); // Close current block
-          result.add('\n*(Code continued on next page)*\n');
-          result.add('```$language'); // Re-open new block
+        if (codeLineCount > 35) { // 35 lines is the "Safe Zone" for A4
+          result.add('```'); // Close it
+          result.add('\n\n'); // Break
+          result.add('```$currentLang'); // Re-open
           codeLineCount = 0;
         }
         result.add(line);
@@ -249,7 +247,7 @@ class PdfExporter {
             'assets/lessons/$language/lesson$id.md',
           );
 
-          lessonMd = _splitLongCodeBlocks(lessonMd);
+          lessonMd = _splitLongCodeBlocks(_prepareMd(lessonMd));
 
           List<pw.Widget> lessonWidgets = await converter.convertMarkdown(
             _prepareMd(lessonMd),
@@ -261,7 +259,7 @@ class PdfExporter {
             pw.MultiPage(
               pageFormat: PdfPageFormat.a4,
               // Emergency Brake: Prevents infinite loops on server
-              maxPages: 40,
+              maxPages: 50,
               theme: pw.ThemeData.withFont(
                 base: ttfFont,
                 bold: ttfBoldFont,
