@@ -3,116 +3,72 @@
 ---
 
 ### **Overview (ႁူဝ်ၶေႃႈ)**
-ပေႃးဝႃႈ `CandidateView` ပဵၼ်တွၼ်ႈၼိူဝ်ယဝ်ႉ၊ **Input View** ၵေႃႈပဵၼ် "ႁူဝ်ၸႂ်" ၶွင် Keyboard ႁဝ်းၶႃႈယဝ်ႉ။ 
-မၼ်းပဵၼ်တွၼ်ႈဢၼ်မီးတုမ်ႇ (Keys) တင်းသဵင်ႈယဝ်ႉၶႃႈ။ 
-ၼႂ်းတွၼ်ႈသွၼ်ၼႆႉ ႁဝ်းတေမႃးၸႂ်ႉ **`onCreateInputView()`** တႃႇပိုတ်ႇ (Inflate) ႁၢင်ႈၾၢင်ၶီးပွတ်ႇ လႄႈ တႄႇတင်ႈ **`KeyboardView`** ႁႂ်ႈမၼ်းႁူႉၸၵ်းၾၢႆႇတုမ်ႇၼဵၵ်ႉ XML ႁဝ်းၶႃႈ။
+တွၼ်ႈသွၼ်ၼႆႉ ပဵၼ်တွၼ်ႈ "ႁူဝ်ၸႂ်" ၶွင် Keyboard ႁဝ်းတႄႇႁဵတ်းၵၢၼ်ယဝ်ႉၶႃႈ။ **Input View** ပဵၼ်တွၼ်ႈဢၼ်မီးတုမ်ႇၼဵၵ်ႉ (Keys) တင်းသဵင်ႈၶႃႈ။ 
+ၼႂ်းပိူင် Modern XML ၼႆႉ ႁဝ်းတေၸႂ်ႉ **`onCreateInputView()`** တႃႇပိုတ်ႇ (Inflate) ၾၢႆႇ `keyboard_root.xml` ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉၼၼ်ႉ သေ ၸတ်းၵၢၼ်လွင်ႈတႄႇတင်ႈ (Initialization) ၶႃႈယဝ်ႉ။
 
 ---
 
-### **1. ၵၢၼ်သၢင်ႈ Main Input Layout (XML)**
+### **1. ၵၢၼ်ပိုတ်ႇ View ၼႂ်း Service (Inflater Logic)**
 
-ႁဝ်းတေလႆႈမီးၾၢႆႇ XML တႃႇႁႄႉ (Container) တုမ်ႇၼိပ်ႉႁဝ်းဝႆႉ။ ၼႂ်းပိူင် Traditional ၼႆႉ ႁဝ်းၸႂ်ႉ `KeyboardView` ဢၼ်ပဵၼ် Standard View ၶွင် Android ၶႃႈ။
+ၼႂ်း Android Service ၼၼ်ႉ ႁဝ်းဢမ်ႇၸၢင်ႈၸႂ်ႉ `setContentView()` မိူၼ်ၼႂ်း Activity ၶႃႈ။ ႁဝ်းတေလႆႈၸႂ်ႉ **`layoutInflater`** တႃႇလႅၵ်ႈၾၢႆႇ XML ႁႂ်ႈပဵၼ် Object View ဢၼ်တေၼႄၼႃႈၸေႃးလႆႈၶႃႈ။
 
-#### **Step 1: res/layout/keyboard_main.xml**
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <android.inputmethodservice.KeyboardView
-        android:id="@+id/keyboard_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:keyBackground="@drawable/key_background"
-        android:keyTextColor="#FFFFFF"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp"
-        android:focusable="true"
-        android:clickable="true" />
-
-</LinearLayout>
-```
+#### **Key Steps (ၶၼ်တွၼ်ႈ):**
+1.  **Inflate Root:** ပိုတ်ႇၾၢႆႇ Root (Linear/ConstraintLayout) ဢၼ်ႁေႃႇ Keyboard ဝႆႉ။
+2.  **Find Containers:** ႁႃ FrameLayout ဢၼ်ႁဝ်းတေဝၢင်း Keys ၶဝ်ႈၵႂႃႇ။
+3.  **Return View:** သူင်ႇ View ဢၼ်ပိုတ်ႇယဝ်ႉၼၼ်ႉ ပၼ် Android System ၼင်ႇႁိုဝ်မၼ်းတေၼႄပၼ်ၵူၼ်းၸႂ်ႉၶႃႈ။
 
 ---
 
-### **2. ၵၢၼ် Inflate လႄႈ Setup ၼႂ်း Service (Kotlin)**
+### **2. The Implementation (Code)**
 
-ၼႂ်း `ShanKeyboardService.kt` ႁဝ်းတေလႆႈႁွင်ႉၸႂ်ႉ `layoutInflater` သေ ၵွင်ႉမၼ်းသႂ်ႇၸွမ်း `OnKeyboardActionListener` တႃႇႁူႉဝႃႈ ၵူၼ်းၸႂ်ႉၼိပ်ႉတုမ်ႇလႂ်ၶႃႈ။
-
-#### **Step 2: Update `ShanKeyboardService.kt`**
+မႄးထႅမ်သႂ်ႇ Logic ၼႂ်း **`ShanKeyboardService.kt`** ၸဝ်ႈၵဝ်ႇ ႁႂ်ႈၵုမ်းထိင်းလႆႈလွင်ႈလႅၵ်ႈ Layouts ၼင်ႇၼႆၶႃႈ:
 
 ```kotlin
-class ShanKeyboardService : InputMethodService(), KeyboardView.OnKeyboardActionListener {
+class ShanKeyboardService : InputMethodService() {
 
-    private lateinit var keyboardView: KeyboardView
-    private lateinit var englishKeyboard: Keyboard
+    private lateinit var keysContainer: FrameLayout
 
     override fun onCreateInputView(): View {
-        // 1. Inflate Layout ပိုၼ်ႉထၢၼ်
-        val view = layoutInflater.inflate(R.layout.keyboard_main, null)
-        keyboardView = view.findViewById(R.id.keyboard_view)
-
-        // 2. သၢင်ႈ Keyboard Object (ဢဝ်မႃးတီႈ XML ဢၼ်ႁဝ်းတေတႅမ်ႈၼႂ်း Module 2)
-        englishKeyboard = Keyboard(this, R.xml.keys_english)
-
-        // 3. တမ်းၵႃႈပၼ် KeyboardView
-        keyboardView.keyboard = englishKeyboard
-        keyboardView.setOnKeyboardActionListener(this)
-
-        return view
-    }
-
-    // --- တွၼ်ႈၸတ်းၵၢၼ် မိူဝ်ႈၼိပ်ႉတုမ်ႇ ---
-    override fun onKey(primaryCode: Int, keyCodes: IntArray?) {
-        val ic = currentInputConnection ?: return
+        // 1. Inflate Root Layout (The Shell)
+        val root = layoutInflater.inflate(R.layout.keyboard_root, null)
         
-        when (primaryCode) {
-            Keyboard.KEYCODE_DELETE -> {
-                ic.deleteSurroundingText(1, 0)
-            }
-            Keyboard.KEYCODE_SHIFT -> {
-                // Logic တွၼ်ႈတႃႇ Shift တေသွၼ်ၼႂ်း Module 3
-            }
-            else -> {
-                // သူင်ႇတူဝ်လိၵ်ႈၶဝ်ႈၵႂႃႇၼႂ်း App တၢင်ႇဢၼ်
-                ic.commitText(primaryCode.toChar().toString(), 1)
-            }
-        }
+        // 2. Setup Container for Keys
+        keysContainer = root.findViewById(R.id.keys_container)
+        
+        // 3. Load Default Layout (e.g., Shan Layout)
+        // ႁဝ်းတေလႆႈသၢင်ႈ layout_shn.xml ၼႂ်း Module 2 ၶႃႈ
+        loadLayout(R.layout.layout_shn)
+        
+        return root
     }
 
-    // Override methods တၢင်ႇဢၼ် (ထုၵ်ႇလႆႈမီးဝႆႉ ၸွမ်းၼင်ႇ Interface)
-    override fun onPress(p0: Int) {}
-    override fun onRelease(p0: Int) {}
-    override fun onText(p0: CharSequence?) {}
-    override fun swipeLeft() {}
-    override fun swipeRight() {}
-    override fun swipeDown() {}
-    override fun swipeUp() {}
+    // Helper Function တႃႇလႅၵ်ႈ Keyboard (EN, MM, SHN)
+    fun loadLayout(layoutId: Int) {
+        keysContainer.removeAllViews() // လၢင်ႉ View ဢၼ်ၵဝ်ႇပႅတ်ႈ
+        val newKeysView = layoutInflater.inflate(layoutId, null)
+        keysContainer.addView(newKeysView)
+        
+        // TODO: Register click listeners for individual buttons
+    }
 }
 ```
 
+
+
 ---
 
-### **3. ႁဵတ်းသင်ၸင်ႇလူဝ်ႇ Inflater Logic?**
+### **3. Why use FrameLayout for Keys?**
 
-
-
-* **Dynamic Loading:** မၼ်းၸွႆႈႁႂ်ႈႁဝ်းလႅၵ်ႈ Layout (မိူၼ်ၼင်ႇ လႅၵ်ႈလိၵ်ႈတႆး ပဵၼ် ဢင်းၵိတ်ႉ) လႆႈၽၢႆၶႃႈ။
-* **Decoupling:** ႁဝ်းၸၢင်ႈမႄးႁၢင်ႈ (UI) ၼႂ်း XML ႁင်းၵူၺ်း သေ ဢမ်ႇလူဝ်ႇမႄး Code Kotlin ၼမ်ၶႃႈ။
-* **InputConnection:** တွၼ်ႈၼႆႉပဵၼ်တီႈဢၼ်ႁဝ်း "ၵွင်ႉ" တုမ်ႇၼိပ်ႉႁဝ်း ၸူး `currentInputConnection` တႃႇသူင်ႇလိၵ်ႈၶႃႈယဝ်ႉ။
+* **Hot-Swapping:** ႁဝ်းၸၢင်ႈလႅၵ်ႈလိၵ်ႈတႆး ပဵၼ် ဢင်းၵိတ်ႉ ဢမ်ႇၼၼ် မၢၼ်ႈ လႆႈၵမ်းလဵဝ် (Instant switch)။
+* **Separation of Concerns:** ႁဝ်းတႅမ်ႈ XML ၸႅၵ်ႇၵၼ် (layout_en.xml, layout_shn.xml) ၼင်ႇႁိုဝ်တေဢမ်ႇသုၵ်ႉယုင်ႈၶႃႈ။
+* **Memory Efficiency:** ႁဝ်းပိုတ်ႇ View ဢၼ်လူဝ်ႇၸႂ်ႉၵွၺ်း၊ ဢမ်ႇလူဝ်ႇပိုတ်ႇဝႆႉတင်းหมด ၼင်ႇႁိုဝ် Keyboard တေဢမ်ႇၼၵ်းၶႃႈ။
 
 ---
 
 ### **ႁူဝ်ႁုပ်ႈ (Summary)**
 
-* **`onCreateInputView`**: ပဵၼ် Method တႃႇတႄႇပိုတ်ႇႁၢင်ႈၶီးပွတ်ႇ။
-* **`KeyboardView`**: ပဵၼ် Widget ဢၼ်တေၼႄ Keys ၸွမ်းၼင်ႇ XML Resource ဢၼ်ႁဝ်းပၼ်မၼ်း။
-* **`OnKeyboardActionListener`**: ပဵၼ် Interface ဢၼ်တေပႂ်ႉၵူတ်ႇထတ်း (Listen) ၵၢၼ်ၼိပ်ႉတုမ်ႇ။
+* **`onCreateInputView`**: ပဵၼ်တီႈတႄႇတင်ႈ UI။
+* **`layoutInflater`**: ပဵၼ်ၶိူင်ႈၸႂ်ႉ တႃႇလႅၵ်ႈ XML ပဵၼ် View။
+* **Container Logic**: ၸႂ်ႉ `FrameLayout` တႃႇပဵၼ် "တီႈဝၢင်း" ႁၢင်ႈၾၢင်ၶီးပွတ်ႇ ၸွမ်းၼင်ႇၵူၼ်းၸႂ်ႉလူဝ်ႇ။
 
 ---
-
-**Are you ready to move to Lesson 6: "Keyboard Window & Insets: Managing Screen Heights & Overlay"???** (ႁဝ်းတေမႃးၸတ်းၵၢၼ် လွင်ႈတင်းသုင်ၶီးပွတ်ႇ ႁႂ်ႈမၼ်းပိုတ်ႇဢွၵ်ႇမႃးလႆႈၶႅမ်ႉလႅပ်ႈ ၵူႈၼႃႈၸေႃးၶႃႈ!)

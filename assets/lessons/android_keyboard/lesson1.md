@@ -1,93 +1,93 @@
+မႄးၼႄၶိုၼ်းၶႃႈ! ပဵၼ်လွင်ႈတၢင်းဢၼ်လီတႄႉတႄႉ ဢၼ်ၸဝ်ႈၵဝ်ႇတူၺ်းႁၼ်ဝႃႈ ႁဝ်းလူဝ်ႇၾၢႆႇ **`candidate_view.xml`** တႃႇႁဵတ်းႁၢင်ႈ (UI) လိၵ်ႈလႅတ်း (Suggestions) ၼၼ်ႉၶႃႈ။
+
+တွၼ်ႈတႃႇ Lesson 1 ၼႆႉ ႁဝ်းတေလႆႈသၢင်ႈၾၢႆႇ XML တင်း 2 ဢၼ် ၼင်ႇႁိုဝ် `onCreateInputView` လႄႈ `onCreateCandidatesView` တေမီး View တႃႇပိုတ်ႇဢွၵ်ႇမႃးၶႃႈ။
+
+---
+
 ## **Lesson 1: Understanding InputMethodService in XML: Handling Layouts**
 
----
-
 ### **Overview (ႁူဝ်ၶေႃႈ)**
-ၼႂ်းပိူင် XML Traditional ၼႆႉ **InputMethodService** ပဵၼ် "ၶိူင်ႈဢိၼ်ႇၵျိၼ်ႇ" (Engine) ပိုၼ်ႉထၢၼ် ဢၼ် Android System ၸႂ်ႉတႃႇပိုတ်ႇၶီးပွတ်ႇၶႃႈ။ 
-လွင်ႈႁဵတ်းၵၢၼ်မၼ်း တေၸႅၵ်ႇဢွၵ်ႇပဵၼ် 2 တွၼ်ႈယႂ်ႇသေ ႁဝ်းတေလႆႈၸႂ်ႉ `LayoutInflater` တႃႇဢဝ်ႁၢင်ႈ (UI) ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉၼႂ်း XML ၼၼ်ႉ ၽႅၼ်ႇဢွၵ်ႇမႃးၼႃႈၸေႃးၶႃႈ။
+ၼႂ်းပိူင် Modern XML Layout ၼႆႉ **InputMethodService** တေႁွင်ႉၸႂ်ႉ XML ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉသေ ပိုတ်ႇဢွၵ်ႇမႃးပဵၼ် 2 တွၼ်ႈ။ ႁဝ်းလူဝ်ႇသၢင်ႈၾၢႆႇ XML ၸႅၵ်ႇၵၼ် ၼင်ႇႁိုဝ်တေၸတ်းၵၢၼ်လႆႈငၢႆႈၶႃႈ။
 
 ---
 
-### **1. တွၼ်ႈ Input View လႄႈ Candidate View**
+### **1. The XML Foundation (ႁၢင်ႈၾၢင် XML)**
 
-ၶီးပွတ်ႇၼိုင်ႈဢၼ် တေမီးႁၢင်ႈၾၢင် 2 တွၼ်ႈ ဢၼ်ႁဝ်းတေလႆႈၵုမ်းထိင်းၼႂ်း XML ၶႃႈ:
+ႁဝ်းတေလႆႈသၢင်ႈၾၢႆႇ XML 2 ၾၢႆႇၼင်ႇၼႆၶႃႈ:
 
-* **Input View:** ပဵၼ်တွၼ်ႈတၢင်းတႂ်ႈ ဢၼ်မီးတုမ်ႇၼဵၵ်ႉ (Keys) ၵူႈလွင်ႈလွင်ႈ။ ႁဝ်းႁွင်ႉဝႃႈ `InputView`။
-* **Candidate View:** ပဵၼ်တွၼ်ႈတၢင်းၼိူဝ် ဢၼ်တေၼႄလိၵ်ႈလႅတ်း (Suggestions)။ ႁဝ်းႁွင်ႉဝႃႈ `CandidateView`။
-
-
-
----
-
-### **2. The Code Structure (ႁၢင်ႈၾၢင် Code)**
-
-တွၼ်ႈတႃႇတႄႇတႅမ်ႈ **TMK Keyboard Pro** ၼၼ်ႉ ႁဝ်းတေလႆႈတႅမ်ႈ Code ပိုၼ်ႉထၢၼ်ၼႂ်း `ShanKeyboardService.kt` သေ ႁွင်ႉၸႂ်ႉ XML Layout ၼင်ႇၼႆၶႃႈ:
-
-#### **Step 1: Create `res/layout/keyboard_main.xml`**
-ဢၼ်ၼႆႉ ပဵၼ် "ထႅင်ႇ" (Container) တႃႇဝၢင်း Keyboard ႁဝ်းၶႃႈ။
-
+#### **A. res/layout/keyboard_root.xml**
+ဢၼ်ၼႆႉ ပဵၼ် "ထႅင်ႇ" တႃႇဝၢင်းတုမ်ႇၼဵၵ်ႉ (Keys) ၶႃႈ။
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#1A1A1A">
 
-    <android.inputmethodservice.KeyboardView
-        android:id="@+id/keyboard_view"
+    <FrameLayout
+        android:id="@+id/keys_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:focusable="true"
-        android:clickable="true" />
-
+        android:layout_height="wrap_content" />
 </LinearLayout>
 ```
 
-#### **Step 2: Create `res/layout/candidate_view.xml`**
-ဢၼ်ၼႆႉ ပဵၼ်တွၼ်ႈတႃႇၼႄ လိၵ်ႈလႅတ်း (Suggestions) ၶႃႈ။
-
+#### **B. res/layout/candidate_view.xml**
+ဢၼ်ၼႆႉ ပဵၼ် "ႁွင်ႈ" တႃႇၼႄလိၵ်ႈလႅတ်း (Suggestions) ၶႃႈ။
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="45dp"
     android:background="#2C2C2C"
-    android:gravity="center"
-    android:orientation="horizontal">
+    android:scrollbars="none">
 
-    <TextView
-        android:id="@+id/suggestion_text"
+    <LinearLayout
+        android:id="@+id/candidate_container"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TMK Suggestions"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp" />
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp" />
+</HorizontalScrollView>
 ```
 
-#### **Step 3: Update `ShanKeyboardService.kt`**
-ယၢမ်းလဵဝ် ႁဝ်းတေဢဝ် XML ၸိူဝ်းၼၼ်ႉ မႃး `inflate` ၸႂ်ႉၼႂ်း Service ႁဝ်းၶႃႈ။
+---
+
+### **2. Implementation in Kotlin (The Service)**
+
+ၼႂ်း `ShanKeyboardService.kt` ႁဝ်းတေၸႂ်ႉ `layoutInflater` တႃႇပိုတ်ႇ (Inflate) ၾၢႆႇ XML တင်း 2 ဢၼ်ၼၼ်ႉၶႃႈ။
 
 ```kotlin
 package it.saimao.tmkkeyboardpro
 
 import android.inputmethodservice.InputMethodService
 import android.view.View
+import android.widget.FrameLayout
+import android.widget.LinearLayout
 
 class ShanKeyboardService : InputMethodService() {
 
+    private lateinit var keysContainer: FrameLayout
+    private lateinit var candidateContainer: LinearLayout
+
     // 1. တွၼ်ႈပိုတ်ႇႁၢင်ႈၶီးပွတ်ႇ (Input View)
     override fun onCreateInputView(): View {
-        // ႁဝ်းၸႂ်ႉ layoutInflater တႃႇပိုတ်ႇ XML ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉ
-        val view = layoutInflater.inflate(R.layout.keyboard_main, null)
-        return view
+        val root = layoutInflater.inflate(R.layout.keyboard_root, null)
+        keysContainer = root.findViewById(R.id.keys_container)
+        return root
     }
 
     // 2. တွၼ်ႈပိုတ်ႇ Suggestion Bar (Candidate View)
     override fun onCreateCandidatesView(): View {
         val view = layoutInflater.inflate(R.layout.candidate_view, null)
+        candidateContainer = view.findViewById(R.id.candidate_container)
+        
+        // ၸႂ်ႉတႃႇၼႄ Suggestion Bar ဢွၵ်ႇမႃး
+        setCandidatesViewShown(true)
+        
         return view
     }
 }
@@ -97,8 +97,8 @@ class ShanKeyboardService : InputMethodService() {
 
 ### **ႁူဝ်ႁုပ်ႈ (Summary)**
 
-* **InputMethodService:** ပဵၼ် Class ပိုၼ်ႉထၢၼ် တႃႇႁဵတ်းၶီးပွတ်ႇ။
-* **LayoutInflater:** ပဵၼ်ၶိူင်ႈၸႂ်ႉ တႃႇဢဝ် XML လႅၵ်ႈပဵၼ် View ဢွၵ်ႇၼႃႈၸေႃး။
-* **Two Parts:** Keyboard မီး 2 တွၼ်ႈ (Input View လႄႈ Candidate View) ဢၼ်ၸတ်းၵၢၼ်ဝႆႉၼႂ်း XML တၢင်ႇၾၢႆႇၵၼ်။
+* **keyboard_root.xml**: ပဵၼ်တွၼ်ႈတၢင်းတႂ်ႈ (Keys area)။
+* **candidate_view.xml**: ပဵၼ်တွၼ်ႈတၢင်းၼိူဝ် (Suggestions area)။
+* **Decoupling**: ၵၢၼ်ၸႅၵ်ႇ XML ၼႆႉ ႁဵတ်းႁႂ်ႈႁဝ်းမႄးႁၢင်ႈ (UI) တွၼ်ႈၼိူဝ် လႄႈ တွၼ်ႈတႂ်ႈ ၸႅၵ်ႇၵၼ်လႆႈငၢႆႈငၢႆႈၶႃႈ။
 
 ---
