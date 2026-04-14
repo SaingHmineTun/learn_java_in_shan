@@ -69,69 +69,128 @@ class LanguageScreen extends StatelessWidget {
           );
   }
 
-  // --- Final Test Card ---
   Widget _buildFinalTest(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(20),
-      onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (ctx) => QuizScreen(language: language, moduleNumber: 0),
-          ),
-        );
-      },
+    return Padding(
+      padding: const EdgeInsets.all(4), // Prevent shadow clipping
       child: Container(
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [kBrandOrange, kBrandDark],
-          ),
-          borderRadius: BorderRadius.circular(20),
-          boxShadow: [
-            BoxShadow(
-              color: kBrandOrange.withOpacity(0.3),
-              blurRadius: 12,
-              offset: const Offset(0, 6),
-            ),
-          ],
+          borderRadius: BorderRadius.circular(24),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.emoji_events_rounded, color: kBrandGold, size: 42),
-            const SizedBox(height: 8),
-            const Text(
-              "Final Test",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-                color: Colors.white,
-                letterSpacing: 1.1,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(24),
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (ctx) => QuizScreen(language: language, moduleNumber: 0),
+                  ),
+                );
+              },
+              child: Stack(
+                children: [
+                  // 1. Solid Gradient Background
+                  Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          kBrandOrange,
+                          Color(0xFFE65100),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  // 2. Background Pattern (Clipped)
+                  Positioned(
+                    right: -15,
+                    top: -15,
+                    child: Icon(
+                      Icons.emoji_events_rounded,
+                      size: 100,
+                      color: Colors.white.withOpacity(0.07),
+                    ),
+                  ),
+
+                  // 3. Content
+                  Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // Glossy Icon Container
+                        Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.12),
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: Colors.white.withOpacity(0.2),
+                              width: 1,
+                            ),
+                          ),
+                          child: const Icon(
+                            Icons.emoji_events_rounded,
+                            color: kBrandGold,
+                            size: 36,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        const Text(
+                          "FINAL TEST",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 16,
+                            color: Colors.white,
+                            letterSpacing: 1.5,
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        // Achievement Tag
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                          decoration: BoxDecoration(
+                            color: kBrandGold.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: kBrandGold.withOpacity(0.3), width: 0.5),
+                          ),
+                          child: const Text(
+                            "MASTER QUIZ",
+                            style: TextStyle(
+                              fontSize: 9,
+                              color: kBrandGold,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 4),
-            Text(
-              "All Modules Mix",
-              style: TextStyle(
-                fontSize: 12,
-                color: kBrandGold.withOpacity(0.9),
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
   }
 
   Widget _buildModuleCard(BuildContext context, int id, String content) {
-    final moduleLessons = modules[language]![id];
+    // 1. Safe data fetching
+    final moduleData = modules[language];
+    final Map<int, String>? moduleLessons = moduleData != null ? moduleData[id] : null;
 
-    final int lessonCount = moduleLessons!.length;
-    final String lessonRange = lessonCount > 0
-        ? "${moduleLessons.keys.first} - ${moduleLessons.keys.last}"
-        : "No lessons";
+    // 2. Safe calculation of count and range
+    final int lessonCount = moduleLessons?.length ?? 0;
+
+    // Logic to get the first and last lesson ID safely
+    String lessonRange = "No lessons";
+    if (lessonCount > 0) {
+      final keys = moduleLessons!.keys.toList()..sort(); // Sort keys to ensure correct range
+      lessonRange = "Lesson ${keys.first} - ${keys.last}";
+    }
 
     return InkWell(
       borderRadius: BorderRadius.circular(20),
@@ -143,6 +202,7 @@ class LanguageScreen extends StatelessWidget {
         );
       },
       child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8), // Added side padding for long content
         decoration: BoxDecoration(
           color: kBrandSurface,
           borderRadius: BorderRadius.circular(20),
@@ -172,46 +232,53 @@ class LanguageScreen extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              "Module $id",
+              "MODULE $id",
               style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
+                fontWeight: FontWeight.w900,
+                fontSize: 12,
                 color: kBrandGold,
                 letterSpacing: 1.2,
               ),
             ),
             const SizedBox(height: 4),
 
+            // Module Title
             Text(
               content,
               textAlign: TextAlign.center,
-              maxLines: 1, // Reduced maxlines to make room for stats
+              maxLines: 2, // Allowed 2 lines for better readability
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                 fontSize: 11,
                 color: kBrandWhite,
-                height: 1.1,
+                fontWeight: FontWeight.w500,
+                height: 1.2,
               ),
             ),
 
-            const SizedBox(height: 4),
-            // --- NEW: Lesson Stats ---
-            Text(
-              "$lessonCount Lessons ($lessonRange)",
-              style: const TextStyle(
-                color: kBrandOrange,
-                fontSize: 10,
-                fontWeight: FontWeight.bold,
+            const SizedBox(height: 6),
+
+            // Stats Section
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+              decoration: BoxDecoration(
+                color: kBrandOrange.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Text(
+                "$lessonCount Lessons ($lessonRange)",
+                style: const TextStyle(
+                  color: kBrandOrange,
+                  fontSize: 9,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-
-            const SizedBox(height: 8),
           ],
         ),
       ),
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
