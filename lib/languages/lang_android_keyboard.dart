@@ -48,11 +48,10 @@ final Map<int, Map<int, String>> akModules = {
   },
   5: {
     28: "Custom Emoji Keyboard: Building a Grid-based XML Picker",
-    29: "Predictive Text Engine: Tries and Frequency Lists",
-    30: "Recent Emoji History: Persistent Storage with SharedPreferences",
-    31: "Voice Input Bridge: Integrating Android Speech-to-Text",
-    32: "Clipboard Manager: Saving and Pasting Multiple Snippets",
-    33: "Special Symbols Layer: Designing the Symbols XML Layout",
+    29: "Recent Emoji History: Persistent Storage with SharedPreferences",
+    30: "Voice Input Bridge: Integrating Android Speech-to-Text",
+    31: "Clipboard Manager: Saving and Pasting Multiple Snippets",
+    32: "Special Symbols Layer: Designing the Symbols XML Layout",
   },
   6: {
     34: "Settings UI: Material 3 Design for Theme and Language Selection",
