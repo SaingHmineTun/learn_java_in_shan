@@ -52,6 +52,7 @@ final Map<int, Map<int, String>> akModules = {
     30: "Voice Input Bridge: Integrating Android Speech-to-Text",
     31: "Clipboard Manager: Saving and Pasting Multiple Snippets",
     32: "Special Symbols Layer: Designing the Symbols XML Layout",
+    33: "Multi-Layer Symbols: Designing the Advanced Symbols Layout"
   },
   6: {
     34: "Settings UI: Material 3 Design for Theme and Language Selection",
