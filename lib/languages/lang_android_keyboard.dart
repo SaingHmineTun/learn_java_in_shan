@@ -59,7 +59,7 @@ final Map<int, Map<int, String>> akModules = {
     35: "Setup Wizard: Guiding Users to Enable and Select Keyboard",
     36: "Custom Font Downloader: Managing Fonts Within the App",
     37: "Keyboard Preview Tool: Real-time Testing inside Settings",
-    38: "App Localization: Translating Settings UI into Shan and Myanmar",
+    38: "App Localization: Translating Settings UI into English, Shan and Myanmar",
     39: "User Analytics and Feedback: Safe Bug Reporting Systems",
   },
   7: {
