@@ -1,12 +1,11 @@
 final Map<int, String> akTopics = {
-  1: "The Core Foundation",
+  1: "InputMethodService & XML Infrastructure",
   2: "UI Design & Keyboard Resources",
   3: "Core Input & Event Handling",
-  4: "English Intelligence",
-  5: "Shan & Myanmar Script Engine",
-  6: "Emojis & Sensory Feedback",
-  7: "The \"Control Center\"",
-  8: "Final Polish & Community Release",
+  4: "Shan & Myanmar Language Intelligence",
+  5: "Emoji, Symbols & Specialized Inputs",
+  6: "Settings, Onboarding & Localization",
+  7: "Polish, Performance & Publishing",
 };
 
 final Map<int, Map<int, String>> akModules = {
@@ -63,19 +62,10 @@ final Map<int, Map<int, String>> akModules = {
     39: "User Analytics and Feedback: Safe Bug Reporting Systems",
   },
   7: {
-    40: "Memory Profiling: Keeping the Service under 50MB",
-    41: "View Recycler Logic: Optimizing Layout Swapping Speed",
-    42: "Avoiding Memory Leaks: Proper Use of WeakReference",
-    43: "Battery Optimization: Reducing CPU Usage During Idle Typing",
-    44: "Asset Compression: Optimizing Dictionaries and Fonts",
-    45: "Testing on Low-End Devices: Ensuring Smooth Performance",
-  },
-  8: {
-    46: "ProGuard and R8: Obfuscating Code for Security",
-    47: "APK vs AAB: Preparing for Google Play Store Release",
-    48: "The About Page: Developer Credits and TMK Group Links",
-    49: "Marketing for the Shan Community: Promotional Posters",
-    50: "Donation and Monetization: Buy Me a Coffee Setup",
-    51: "The Road Ahead: Planning Future Batches and Features",
-  },
+    40: "Performance Tuning & View Recycling",
+    41: "Battery & Resource Efficiency",
+    42: "ProGuard & R8: Security & Size Optimization",
+    43: "Final Beta Testing & Stability Fixes",
+    44: "Play Console & Publishing"
+  }
 };
