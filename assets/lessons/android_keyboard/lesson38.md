@@ -102,7 +102,7 @@ Locale ဢၼ်ႁဝ်းလိူၵ်ႈၶႃႈ။
 // ... ၼႂ်း SettingsFragment Class ...
 
 private fun showLanguageSelector() {
-    val langs = arrayOf("English", "Shan (တႆး)", "Myanmar (ဗမာ)")
+    val langs = arrayOf("English", "Shan", "Myanmar")
     val langTags = arrayOf("en", "shn", "my")
 
     // ဢၢၼ်ႇတူၺ်း Locale ယၢမ်းလဵဝ်

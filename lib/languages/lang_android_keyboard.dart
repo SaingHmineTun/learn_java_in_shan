@@ -1,6 +1,6 @@
 import '../utils/utils.dart';
 
-final Map<int, String> akTopics = {
+const Map<int, String> akTopics = {
   1: "InputMethodService & XML Infrastructure",
   2: "UI Design & Keyboard Resources",
   3: "Core Input & Event Handling",
@@ -10,7 +10,7 @@ final Map<int, String> akTopics = {
   7: "Polish, Performance & Publishing",
 };
 
-final Map<int, Map<int, String>> akModules = {
+const Map<int, Map<int, String>> akModules = {
   1: {
     1: "Understanding InputMethodService in XML: Handling layouts",
     2: "Manifest Magic: System Registration, Permissions & Intent Filters",

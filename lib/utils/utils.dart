@@ -8,6 +8,7 @@ import 'package:tmkacademy/languages/lang_java_springboot.dart';
 import 'package:tmkacademy/languages/lang_javafx.dart';
 import 'package:tmkacademy/languages/lang_ts.dart';
 
+import '../languages/lang_android_keyboard.dart';
 import '../languages/lang_basic.dart';
 import '../languages/lang_css.dart';
 import '../languages/lang_dart.dart';
@@ -40,6 +41,7 @@ const Map<String, Map<int, String>> topics = {
   "mysql": mysqlTopics,
   "java_springboot": javaSpringbootTopics,
   "jetpack_compose": jetpackComposeTopics,
+  "android_keyboard": akTopics
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -62,6 +64,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "mysql": mysqlModules,
   "java_springboot": javaSpringbootModules,
   "jetpack_compose": jetpackComposeModules,
+  "android_keyboard": akModules
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -84,6 +87,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "mysql": mysqlLessons,
   "java_springboot": javaSpringbootLessons,
   "jetpack_compose": jetpackComposeLessons,
+  "android_keyboard": akLessons
 };
 
 class Lesson {
