@@ -1,3 +1,5 @@
+import '../utils/utils.dart';
+
 final Map<int, String> akTopics = {
   1: "InputMethodService & XML Infrastructure",
   2: "UI Design & Keyboard Resources",
@@ -68,4 +70,51 @@ final Map<int, Map<int, String>> akModules = {
     43: "Final Beta Testing & Stability Fixes",
     44: "Play Console & Publishing"
   }
+};
+
+final Map<int, Lesson> akLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(1, 5),
+  6: Lesson(1, 6),
+  7: Lesson(2, 7),
+  8: Lesson(2, 8),
+  9: Lesson(2, 9),
+  10: Lesson(2, 10),
+  11: Lesson(2, 11),
+  12: Lesson(2, 12),
+  13: Lesson(2, 13),
+  14: Lesson(3, 14),
+  15: Lesson(3, 15),
+  16: Lesson(3, 16),
+  17: Lesson(3, 17),
+  18: Lesson(3, 18),
+  19: Lesson(3, 19),
+  20: Lesson(3, 20),
+  21: Lesson(3, 21),
+  22: Lesson(4, 22),
+  23: Lesson(4, 23),
+  24: Lesson(4, 24),
+  25: Lesson(4, 25),
+  26: Lesson(4, 26),
+  27: Lesson(4, 27),
+  28: Lesson(5, 28),
+  29: Lesson(5, 29),
+  30: Lesson(5, 30),
+  31: Lesson(5, 31),
+  32: Lesson(5, 32),
+  33: Lesson(5, 33),
+  34: Lesson(6, 34),
+  35: Lesson(6, 35),
+  36: Lesson(6, 36),
+  37: Lesson(6, 37),
+  38: Lesson(6, 38),
+  39: Lesson(6, 39),
+  40: Lesson(7, 40),
+  41: Lesson(7, 41),
+  42: Lesson(7, 42),
+  43: Lesson(7, 43),
+  44: Lesson(7, 44),
 };
