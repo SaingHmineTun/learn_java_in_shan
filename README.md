@@ -119,7 +119,7 @@ After successfully completing the final test for each module with a score of 80%
 
 ## 🙏 Acknowledgements
 
-- Created by ထုင်ႉမၢဝ်းၶမ်း (TMK Muse)
+- Created by ၸၢႆးမၢဝ်း (ထုင်ႉမၢဝ်းၶမ်း) /Sai Mao (TMK Muse)
 - Uses custom Shan language content for accessibility
 
 ## 📞 Contact
