@@ -43,6 +43,7 @@ The application currently supports the following programming languages:
 14. **C#** - Object-oriented programming language for .NET framework
 15. **MySQL** - Database management and SQL query language
 16. **Python with Tkinter** - Python GUI programming using Tkinter
+17. **Android Shan Keyboard** - Develop Shan Keyboard using Kotlin & XML
 
 ## 📱 Screenshots
 
