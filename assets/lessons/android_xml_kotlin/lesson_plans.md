@@ -162,4 +162,112 @@ Here is a structured **8-lesson breakdown** for Module 1, designed to take a stu
 * **Case Sensitivity:** XML is very strict. Remind them that `textView` is not the same as `TextView`.
 * **Import Statements:** Show them how to use `Alt + Enter` (or `Option + Enter` on Mac) to auto-import Kotlin classes.
 
-Since you'll be teaching this to students, would you like me to create a "Troubleshooting Guide" for the most common Android Studio installation errors?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+This is where the magic happens for the students! In Module 1, they learned how to make things "work"; in Module 2, they learn how to make things "look professional." Since you want a comprehensive plan starting from **Lesson 9**, we will dive deep into the visual engine of Android.
+
+---
+
+## **Module 2: Mastering UI & Modern Design**
+
+### **Lesson 9: Advanced ConstraintLayout Techniques**
+* **The "Flat" Hierarchy:** Why `ConstraintLayout` is better than nesting layouts (performance benefits).
+* **Bias and Ratios:** How to position views at 30% of the screen or maintain a 16:9 aspect ratio for images.
+* **Chains:** Creating horizontal or vertical groups of views that share space equally (Spread, Inside, and Packed).
+* **Guidelines & Barriers:** Using invisible helper lines to align views dynamically when text length changes.
+
+### **Lesson 10: The Material Design Component (MDC) Library**
+* **Introduction to Material 3:** Brief overview of Google’s design system.
+* **Material Buttons:** Using different styles (Contained, Outlined, Text, and Icon buttons).
+* **Material CardView:** Adding elevation, shadows, and rounded corners to make UI elements "pop."
+* **Input Styling:** Using `TextInputLayout` and `TextInputEditText` for professional floating labels and error states.
+
+### **Lesson 11: Working with Resources (Dimens & Colors)**
+* **Hardcoding vs. Referencing:** Why we never type "24dp" or "#FF0000" directly in the layout.
+* **`colors.xml`:** Defining a brand palette (Primary, Secondary, Surface colors).
+* **`dimens.xml`:** Managing consistent spacing (margins/padding) across the entire app.
+* **Night Mode Support:** A quick introduction to how `values-night` folders allow for "Dark Mode" styling.
+
+### **Lesson 12: Drawables & Vector Assets**
+* **Vector Assets:** Importing icons from the Material Icon library (SVG/XML).
+* **Custom Shape XML:** Creating custom buttons with gradients, rounded corners (using `<corners>`), and strokes (using `<stroke>`).
+* **Layer Lists:** How to stack multiple drawables to create complex backgrounds.
+* **Tinting:** Changing icon colors programmatically and via XML.
+
+### **Lesson 13: Images and ScaleTypes**
+* **ImageView Deep Dive:** Understanding the difference between `centerCrop`, `fitCenter`, and `centerInside`.
+* **Aspect Ratio:** Ensuring images don't look stretched on different screen sizes.
+* **Placeholder Graphics:** Using `tools:src` to see what a layout looks like in the preview without it being in the final app.
+
+### **Lesson 14: Scrolling Content with ScrollView**
+* **The Viewport Problem:** What happens when the UI is taller than the phone screen?
+* **ScrollView vs. HorizontalScrollView:** When and how to wrap your layouts.
+* **ConstraintLayout + ScrollView:** The "Single Child" rule—why ScrollView can only hold one direct child (usually a `ConstraintLayout`).
+
+### **Lesson 15: Introduction to State Drawables**
+* **Selectables:** Making a button change color when pressed (`selector` XML).
+* **Enabled/Disabled States:** Designing a "Grayed Out" button state for when a form is incomplete.
+* **Ripple Effects:** Adding the modern Android "Ink Splash" feedback to clicks.
+
+### **Lesson 16: Main Project Lab – Smart Home Controller**
+* **The Requirement:** Design a sophisticated dashboard with "Smart Widgets."
+* **The Implementation:** 1. Use a **CardView** for each device (AC, Lights, TV).
+    2. Incorporate **Vector Icons** for each device type.
+    3. Use **Custom Shapes** for "On/Off" status indicators.
+    4. Apply a **Sapphire Blue and Gold** theme (using your TMK branding colors) to the background and primary buttons.
+    5. Ensure the layout is fully responsive using **Chains and Guidelines**.
+
+---
+
+### **Teacher’s Strategy: The "Design Challenge"**
+For this module, I recommend a **"No-Logic Challenge."** Tell the students: *"Don't worry about the Kotlin code today. Focus 100% on making the XML look identical to a professional design screenshot."* This builds their "pixel-perfect" muscle, which is a highly valued skill for junior developers.
+
+Would you like me to provide a "Starter Color Palette" (XML code) that you can give to your students to ensure all their projects look modern and cohesive?
