@@ -1,6 +1,6 @@
-# Learn Programming in Shan
+# TMK Academy
 
-A Flutter mobile application designed to teach multiple programming languages with content presented in the Shan language. This educational platform aims to make programming education accessible to Shan speakers and learners.
+A Flutter project designed to teach multiple programming languages with content presented in the Shan language. This educational platform aims to make programming education accessible to Shan speakers and learners.
 
 ## 📋 Table of Contents
 - [Features](#features)
