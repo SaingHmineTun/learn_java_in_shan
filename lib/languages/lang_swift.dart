@@ -63,6 +63,7 @@ const swiftModules = {
     39: "Optional Mapping: Transforming Values Inside an Optional",
     40: "Best Practices for Zero-Crash Optional Handling"
   },
+  // 6: "Modeling Data (Structs vs. Classes)",
   6: {
     41: "Structs: The Lightweight Foundation of Swift Data",
     42: "Classes: Understanding Reference Types and Inheritance",
