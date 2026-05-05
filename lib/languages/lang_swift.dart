@@ -41,6 +41,7 @@ const swiftModules = {
     23: "Labeled Statements: Managing Complex Nested Loops",
     24: "Checking API Availability: The #available Block (Crucial for iOS versioning)"
   },
+  //   4: "Functions & Closures",
   4: {
     25: "Function Anatomy: Parameters, Return Types, and Argument Labels",
     26: "Variadic, In-Out, and Default Parameters",
@@ -51,6 +52,7 @@ const swiftModules = {
     31: "Trailing Closure Syntax: The Foundation of SwiftUI Layouts",
     32: "Escaping vs. Non-Escaping Closures (Critical for Concurrency)"
   },
+  // 5: "Swift's \"Secret Sauce\": Optionals",
   5: {
     33: "The 'Optional' Concept: Why Swift Doesn't Allow Nulls",
     34: "Forced Unwrapping: When and Why (Not) to Use the ! Operator",
