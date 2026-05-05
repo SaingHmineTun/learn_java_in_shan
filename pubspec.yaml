@@ -50,6 +50,8 @@ flutter:
     - assets/lessons/java_springboot/
     - assets/lessons/jetpack_compose/
     - assets/lessons/android_keyboard/
+    - assets/lessons/android_xml_kotlin/
+    - assets/lessons/swift/
     - assets/images/
   fonts:
     - family: AJ05

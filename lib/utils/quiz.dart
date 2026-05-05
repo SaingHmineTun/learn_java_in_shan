@@ -9,6 +9,7 @@ import 'package:tmkacademy/languages/lang_html.dart';
 import 'package:tmkacademy/languages/lang_java_springboot.dart';
 import 'package:tmkacademy/languages/lang_js.dart';
 import 'package:tmkacademy/languages/lang_mysql.dart';
+import 'package:tmkacademy/languages/lang_swift.dart';
 import 'package:tmkacademy/languages/lang_ts.dart';
 
 import '../languages/lang_basic.dart';
@@ -46,5 +47,6 @@ final Map<String, List<List<Quiz>>> quizzes = {
   "git": gitQuizzes,
   "cpp": cppQuizzes,
   "mysql": mysqlQuizzes,
-  "java_springboot": javaSpringbootQuizzes
+  "java_springboot": javaSpringbootQuizzes,
+  "swift": swiftQuizzes,
 };
