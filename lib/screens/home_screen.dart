@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFF09F018), // Java Orange
           'icon': DevIcons.javaPlain,
         };
-      case "jetpack_compose" || "android_keyboard":
+      case "jetpack_compose" || "android_keyboard" || "android_xml_kotlin":
         return {
           'color': const Color(0xFF09F018), // Java Orange
           'icon': DevIcons.androidPlain,

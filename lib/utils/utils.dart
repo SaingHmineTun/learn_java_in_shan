@@ -1,4 +1,5 @@
 // TOPIC SECTION (Module 1 - Introduction)
+import 'package:tmkacademy/languages/lang_android_xml_kotlin.dart';
 import 'package:tmkacademy/languages/lang_c.dart';
 import 'package:tmkacademy/languages/lang_cpp.dart';
 import 'package:tmkacademy/languages/lang_csharp.dart';
@@ -40,6 +41,7 @@ const Map<String, Map<int, String>> topics = {
   "git": gitTopics,
   "cpp": cppTopics,
   "mysql": mysqlTopics,
+  "android_xml_kotlin": axKotlinTopics,
   "swift": swiftTopics,
   "java_springboot": javaSpringbootTopics,
   "jetpack_compose": jetpackComposeTopics,
@@ -52,6 +54,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "basic": basicModules,
   "dart": dartModules,
   "html": htmlModules,
+  "android_xml_kotlin": axKotlinModules,
   "css": cssModules,
   "js": jsModules,
   "kotlin": kotlinModules,
@@ -91,6 +94,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "swift": swiftLessons,
   "java_springboot": javaSpringbootLessons,
   "jetpack_compose": jetpackComposeLessons,
+  "android_xml_kotlin": axKotlinLessons,
   "android_keyboard": akLessons,
 };
 
