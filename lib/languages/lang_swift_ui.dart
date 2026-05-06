@@ -1,0 +1,93 @@
+const swiftUiTopics = {
+  1: "Declarative UI Foundations",
+  2: "State & Interactivity",
+  3: "Dynamic Lists & Navigation",
+  4: "Adaptive Layouts & Grids",
+  5: "Networking & JSON",
+  6: "Animation & Transitions",
+  7: "Persistence with SwiftData",
+  8: "The Capstone: Modular Architecture"
+};
+
+const Map<int, Map<int, String>> swiftUiModules = {
+  1: {
+    1: "The SwiftUI Mindset: Declarative vs Imperative",
+    2: "Xcode Essentials: Canvas, Previews, and the Inspector",
+    3: "The 'Big Three' Layout Stacks: VStack, HStack, and ZStack",
+    4: "Modifiers: Understanding the Wrapper Pattern & Order of Operations",
+    5: "Images & SF Symbols: Resizing and Rendering Modes",
+    6: "Spacers, Dividers, and Layout Priority",
+    7: "View Composition: Refactoring into Reusable Subviews",
+    8: "Project 1: Thung Mao Kham Identity App"
+  },
+  2: {
+    9: "Introduction to Property Wrappers: Why @State?",
+    10: "Two-Way Binding with TextFields and Sliders",
+    11: "The @Binding Wrapper: Sharing State with Child Views",
+    12: "Computed Properties in SwiftUI Views",
+    13: "Conditional Rendering: if/else and Switch in Stacks",
+    14: "Buttons and Haptic Feedback",
+    15: "Basic Animations: withAnimation and .animation()",
+    16: "Project 2: Interactive Unit Converter & Calculator"
+  },
+  3: {
+    17: "The List View: SwiftUI's Powerhouse for Collections",
+    18: "Iterating with ForEach and the Identifiable Protocol",
+    19: "NavigationStack: Mastering Push and Pop Transitions",
+    20: "Master-Detail Flow: Passing Data Between Screens",
+    21: "Customizing List Styles and Insets",
+    22: "Swipe Actions and Context Menus",
+    23: "Searchable Interfaces: Adding the .searchable() Modifier",
+    24: "Project 3: Programming Course Catalog & Resource Library"
+  },
+  4: {
+    25: "LazyVGrid and LazyHGrid: Creating Responsive Grids",
+    26: "ScrollView Mastery: Horizontal and Vertical Scrolling",
+    27: "Safe Area Insets and Keyboard Avoidance",
+    28: "GeometryReader: Building Proportion-based Layouts",
+    29: "Adaptive Layouts: Supporting iPhone, iPad, and Split View",
+    30: "Using DisclosureGroups and OutlineGroups for Hierarchy",
+    31: "Visual Effects: Blur, Shadows, and Materials",
+    32: "Project 4: Software Portfolio Gallery & Grid Dashboard"
+  },
+  5: {
+    33: "Introduction to Concurrency: Async/Await in SwiftUI",
+    34: "Networking with URLSession & JSON Decoding",
+    35: "The Observable Pattern: @Observable and @Published",
+    36: "Handling API States: Loading, Success, and Error Views",
+    37: "Image Caching and AsyncImage",
+    38: "Dependency Injection for API Services",
+    39: "Task Modifiers and View Life Cycle (.onAppear / .task)",
+    40: "Project 5: Real-time Crypto & Market Tracker"
+  },
+  6: {
+    41: "Implicit vs Explicit Animations",
+    42: "Advanced Transitions and MatchedGeometryEffect",
+    43: "Drawing Custom Shapes with Paths and CGPath",
+    44: "The Canvas API for High-Performance Graphics",
+    45: "Gesture Recognizers: Tap, Drag, and Magnification",
+    46: "Combining Gestures and Animations for UI Interaction",
+    47: "Building Custom Progress Indicators",
+    48: "Project 6: Fitness Dashboard with Animated Progress Rings"
+  },
+  7: {
+    49: "Introduction to SwiftData: Models and Containers",
+    50: "CRUD Operations: Creating and Reading Data with @Query",
+    51: "Relationship Mapping (One-to-One and One-to-Many)",
+    52: "Data Filtering and Sorting at the Database Level",
+    53: "Schema Versions and Data Migration",
+    54: "CloudKit Integration: Syncing Data Across Devices",
+    55: "Handling Preview Data for SwiftData Models",
+    56: "Project 7: Personal Coding Log & Task Manager"
+  },
+  8: {
+    57: "Modular Architecture: Organizing Large SwiftUI Projects",
+    58: "Advanced Environment Objects and Dependency Injection",
+    59: "Building Custom View Modifiers and ViewExtensions",
+    60: "Accessibility (A11y): Making Apps Usable for Everyone",
+    61: "Localization: Supporting Multiple Languages in SwiftUI",
+    62: "App Store Optimization (ASO) and App Icons",
+    63: "Final Refactoring: Clean Code for Teaching and Production",
+    64: "Project 8: Student Management Dashboard (The Capstone)"
+  }
+};
