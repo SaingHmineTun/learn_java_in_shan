@@ -30,6 +30,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     15: "Basic Animations: withAnimation and .animation()",
     16: "Project 2: Interactive Unit Converter & Calculator"
   },
+  // 3: "Dynamic Lists & Navigation",
   3: {
     17: "The List View: SwiftUI's Powerhouse for Collections",
     18: "Iterating with ForEach and the Identifiable Protocol",
