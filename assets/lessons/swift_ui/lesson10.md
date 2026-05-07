@@ -62,7 +62,7 @@ struct BindingLessonView: View {
 
 ---
 
-### **Summary (သူးပ်းႁူဝ်တွၼ်ႈႁဵၼ်း)**
+### **Summary**
 
 | Concept | Explanation (Shan)                                               |
 | :--- |:-----------------------------------------------------------------|

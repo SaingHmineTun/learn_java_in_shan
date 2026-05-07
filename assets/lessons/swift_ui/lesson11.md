@@ -73,7 +73,7 @@ struct ParentBindingView: View {
 
 ---
 
-### **Summary (သူးပ်းႁူဝ်တွၼ်ႈႁဵၼ်း)**
+### **Summary**
 
 | Property Wrapper | Usage (Shan) | Owner |
 | :--- | :--- | :--- |
