@@ -65,6 +65,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     39: "Task Modifiers and View Life Cycle (.onAppear / .task)",
     40: "Project 5: Real-time Crypto & Market Tracker",
   },
+  // 6: "Animation & Transitions",
   6: {
     41: "Implicit vs Explicit Animations",
     42: "Advanced Transitions and MatchedGeometryEffect",
