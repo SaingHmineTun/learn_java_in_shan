@@ -8,6 +8,7 @@ import 'package:tmkacademy/languages/lang_haskell.dart';
 import 'package:tmkacademy/languages/lang_java_springboot.dart';
 import 'package:tmkacademy/languages/lang_javafx.dart';
 import 'package:tmkacademy/languages/lang_swift.dart';
+import 'package:tmkacademy/languages/lang_swift_ui.dart';
 import 'package:tmkacademy/languages/lang_ts.dart';
 
 import '../languages/lang_android_keyboard.dart';
@@ -43,6 +44,7 @@ const Map<String, Map<int, String>> topics = {
   "mysql": mysqlTopics,
   "android_xml_kotlin": axKotlinTopics,
   "swift": swiftTopics,
+  "swift_ui": swiftUiTopics,
   "java_springboot": javaSpringbootTopics,
   "jetpack_compose": jetpackComposeTopics,
   "android_keyboard": akTopics,
@@ -60,6 +62,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "kotlin": kotlinModules,
   "c": cModules,
   "swift": swiftModules,
+  "swift_ui": swiftUiModules,
   "haskell": haskellModules,
   "ts": tsModules,
   "csharp": csharpModules,
@@ -92,6 +95,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "cpp": cppLessons,
   "mysql": mysqlLessons,
   "swift": swiftLessons,
+  "swift_ui": swiftUiLessons,
   "java_springboot": javaSpringbootLessons,
   "jetpack_compose": jetpackComposeLessons,
   "android_xml_kotlin": axKotlinLessons,

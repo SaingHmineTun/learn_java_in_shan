@@ -52,6 +52,7 @@ flutter:
     - assets/lessons/android_keyboard/
     - assets/lessons/android_xml_kotlin/
     - assets/lessons/swift/
+    - assets/lessons/swift_ui/
     - assets/images/
   fonts:
     - family: AJ05

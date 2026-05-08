@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFFE76F00), // Java Orange
           'icon': DevIcons.javaPlain,
         };
-      case 'swift':
+      case 'swift' || 'swift_ui':
         return {
           'color': const Color(0xFFF7A41D), // Swift Orange
           'icon': DevIcons.swiftPlain,

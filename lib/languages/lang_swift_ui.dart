@@ -1,3 +1,5 @@
+import '../utils/utils.dart';
+
 const swiftUiTopics = {
   1: "Declarative UI Foundations",
   2: "State & Interactivity",
@@ -6,7 +8,7 @@ const swiftUiTopics = {
   5: "Networking & JSON",
   6: "Animation & Transitions",
   7: "Persistence with SwiftData",
-  8: "The Capstone: Modular Architecture"
+  8: "The Capstone: Modular Architecture",
 };
 
 const Map<int, Map<int, String>> swiftUiModules = {
@@ -18,7 +20,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     5: "Images & SF Symbols: Resizing and Rendering Modes",
     6: "Spacers, Dividers, and Layout Priority",
     7: "View Composition: Refactoring into Reusable Subviews",
-    8: "Project 1: Thung Mao Kham Identity App"
+    8: "Project 1: Thung Mao Kham Identity App",
   },
   2: {
     9: "Introduction to Property Wrappers: Why @State?",
@@ -28,7 +30,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     13: "Conditional Rendering: if/else and Switch in Stacks",
     14: "Buttons and Haptic Feedback",
     15: "Basic Animations: withAnimation and .animation()",
-    16: "Project 2: Interactive Unit Converter & Calculator"
+    16: "Project 2: Interactive Unit Converter & Calculator",
   },
   // 3: "Dynamic Lists & Navigation",
   3: {
@@ -39,7 +41,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     21: "Customizing List Styles and Insets",
     22: "Swipe Actions and Context Menus",
     23: "Searchable Interfaces: Adding the .searchable() Modifier",
-    24: "Project 3: Programming Course Catalog & Resource Library"
+    24: "Project 3: Programming Course Catalog & Resource Library",
   },
   4: {
     25: "LazyVGrid and LazyHGrid: Creating Responsive Grids",
@@ -49,7 +51,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     29: "Adaptive Layouts: Supporting iPhone, iPad, and Split View",
     30: "Using DisclosureGroups and OutlineGroups for Hierarchy",
     31: "Visual Effects: Blur, Shadows, and Materials",
-    32: "Project 4: Software Portfolio Gallery & Grid Dashboard"
+    32: "Project 4: Software Portfolio Gallery & Grid Dashboard",
   },
   5: {
     33: "Introduction to Concurrency: Async/Await in SwiftUI",
@@ -59,7 +61,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     37: "Image Caching and AsyncImage",
     38: "Dependency Injection for API Services",
     39: "Task Modifiers and View Life Cycle (.onAppear / .task)",
-    40: "Project 5: Real-time Crypto & Market Tracker"
+    40: "Project 5: Real-time Crypto & Market Tracker",
   },
   6: {
     41: "Implicit vs Explicit Animations",
@@ -69,7 +71,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     45: "Gesture Recognizers: Tap, Drag, and Magnification",
     46: "Combining Gestures and Animations for UI Interaction",
     47: "Building Custom Progress Indicators",
-    48: "Project 6: Fitness Dashboard with Animated Progress Rings"
+    48: "Project 6: Fitness Dashboard with Animated Progress Rings",
   },
   7: {
     49: "Introduction to SwiftData: Models and Containers",
@@ -79,7 +81,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     53: "Schema Versions and Data Migration",
     54: "CloudKit Integration: Syncing Data Across Devices",
     55: "Handling Preview Data for SwiftData Models",
-    56: "Project 7: Personal Coding Log & Task Manager"
+    56: "Project 7: Personal Coding Log & Task Manager",
   },
   8: {
     57: "Modular Architecture: Organizing Large SwiftUI Projects",
@@ -89,6 +91,33 @@ const Map<int, Map<int, String>> swiftUiModules = {
     61: "Localization: Supporting Multiple Languages in SwiftUI",
     62: "App Store Optimization (ASO) and App Icons",
     63: "Final Refactoring: Clean Code for Teaching and Production",
-    64: "Project 8: Student Management Dashboard (The Capstone)"
-  }
+    64: "Project 8: Student Management Dashboard (The Capstone)",
+  },
+};
+
+final swiftUiLessons = {
+  1: Lesson(1, 1),
+  2: Lesson(1, 2),
+  3: Lesson(1, 3),
+  4: Lesson(1, 4),
+  5: Lesson(1, 5),
+  6: Lesson(1, 6),
+  7: Lesson(1, 7),
+  8: Lesson(1, 8),
+  9: Lesson(2, 9),
+  10: Lesson(2, 10),
+  11: Lesson(2, 11),
+  12: Lesson(2, 12),
+  13: Lesson(2, 13),
+  14: Lesson(2, 14),
+  15: Lesson(2, 15),
+  16: Lesson(2, 16),
+  17: Lesson(3, 17),
+  18: Lesson(3, 18),
+  19: Lesson(3, 19),
+  20: Lesson(3, 20),
+  21: Lesson(3, 21),
+  22: Lesson(3, 22),
+  23: Lesson(3, 23),
+  24: Lesson(3, 24),
 };
