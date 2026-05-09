@@ -88,15 +88,25 @@ const Map<int, Map<int, String>> swiftUiModules = {
     56: "Project 7: Personal Coding Log & Task Manager",
   },
   8: {
-    57: "Modular Architecture: Organizing Large SwiftUI Projects",
-    58: "Advanced Environment Objects and Dependency Injection",
-    59: "Building Custom View Modifiers and ViewExtensions",
-    60: "Accessibility (A11y): Making Apps Usable for Everyone",
-    61: "Localization: Supporting Multiple Languages in SwiftUI",
-    62: "App Store Optimization (ASO) and App Icons",
-    63: "Final Refactoring: Clean Code for Teaching and Production",
-    64: "Project 8: Student Management Dashboard (The Capstone)",
+    57: "The Form View and Sectioning UI",
+    58: "TextEditor vs TextField: Multi-line Input",
+    59: "Pickers: Segmented, Menu, and Navigation Styles",
+    60: "DatePickers and ColorPickers",
+    61: "Steppers and Sliders for Numerical Input",
+    62: "Real-time Field Validation using Combine or Observation",
+    63: "Handling Focus States and Keyboard Toolbars",
+    64: "Project 8: User Profile & Settings Dashboard"
   },
+  9: {
+    65: "App Icons and Launch Screens: The First Impression",
+    66: "Asset Management and Catalog Optimization",
+    67: "Localization: Supporting Multiple Languages (Shan, Burmese, English)",
+    68: "Accessibility (A11y): Designing for Everyone",
+    69: "App Store Connect: Certificates, Identifiers, and Profiles",
+    70: "Preparing Metadata: Screenshots, Descriptions, and ASO",
+    71: "TestFlight: Beta Testing and External Feedback",
+    72: "Project 9: Final Portfolio App & App Store Submission Guide"
+  }
 };
 
 final swiftUiLessons = {
