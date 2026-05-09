@@ -76,6 +76,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     47: "Building Custom Progress Indicators",
     48: "Project 6: Fitness Dashboard with Animated Progress Rings",
   },
+  // 7: "Persistence with SwiftData",
   7: {
     49: "Introduction to SwiftData: Models and Containers",
     50: "CRUD Operations: Creating and Reading Data with @Query",
