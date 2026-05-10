@@ -105,10 +105,11 @@ const Map<int, Map<int, String>> swiftUiModules = {
     66: "Asset Management and Catalog Optimization",
     67: "Localization: Supporting Multiple Languages (Shan, Burmese, English)",
     68: "Accessibility (A11y): Designing for Everyone",
-    69: "App Store Connect: Certificates, Identifiers, and Profiles",
-    70: "Preparing Metadata: Screenshots, Descriptions, and ASO",
-    71: "TestFlight: Beta Testing and External Feedback",
-    72: "Project 9: Final Portfolio App & App Store Submission Guide"
+    69: "Creating the Installable File (.ipa): Archiving & Exporting",
+    70: "App Store Connect: Certificates, Identifiers, and Profiles",
+    71: "Preparing Metadata: Screenshots, Descriptions, and ASO",
+    72: "TestFlight: Beta Testing and External Feedback",
+    73: "Project 9: Final Portfolio App & App Store Submission Guide"
   }
 };
 
