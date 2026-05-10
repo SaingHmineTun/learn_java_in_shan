@@ -18,6 +18,29 @@ class PdfExporter {
         .replaceAll('\r\n', '\n')
         .replaceAll('\r', '\n')
         .replaceAll('\uFE0F', '')
+
+        // 1. For "esai" (ေ) - Reversing Consonant + Vowel to Vowel + Consonant
+        // ဗျည်း + (ဆင့်ဗျည်း) + (ဗျည်းတွဲ) + ေ  --> ေ + ဗျည်း + (ဆင့်ဗျည်း) + (ဗျည်းတွဲ)
+        .replaceAllMapped(
+        RegExp(r'([\u1000-\u1021\u1075-\u1081\u1022\u108f\u1029\u106e\u106f\u1086\u1090\u1091\u1092\u1097])((?:\u1039[\u1000-\u1021])?)((?:[\u103b-\u103e\u1087]*)?)\u1031'),
+            (match) => '\u1031${match.group(1)}${match.group(2)}${match.group(3)}'
+        )
+
+        // 2. For "asai" (ႄ) - Reversing Consonant + Vowel to Vowel + Consonant
+        // ဗျည်း + (ဆင့်ဗျည်း) + (ဗျည်းတွဲ) + ႄ  --> ႄ + ဗျည်း + (ဆင့်ဗျည်း) + (ဗျည်းတွဲ)
+        // မှတ်ချက်- သင့် code အရ \u1084 ကို \uaa2c နဲ့ အစားထိုးတာ ဖြစ်ပုံရပါတယ်
+        .replaceAllMapped(
+        RegExp(r'([\u1000-\u1021\u1075-\u1081\u1022\u108f\u1029\u106e\u106f\u1086\u1090\u1091\u1092\u1097])((?:\u1039[\u1000-\u1021])?)((?:[\u103b-\u103e\u1087]*)?)\u1084'),
+            (match) => '\u1084${match.group(1)}${match.group(2)}${match.group(3)}'
+        )
+
+        // 3. သ + ြ  --> ြ + သ (တြႃး၊ ၽြႃး စသည့် ရှမ်းစာလုံးပေါင်းအတွက်)
+        .replaceAllMapped(
+        RegExp(r'([\u1000-\u1021\u1075-\u1081\u1022\u108f\u1029\u106e\u106f\u1086\u1090\u1091\u1092\u1097])(\u103c)'),
+            (match) => '${match.group(2)}${match.group(1)}'
+        )
+
+        // Non-BMP characters ဖယ်ရှားခြင်း
         .replaceAll(RegExp(r'[^\u0000-\uFFFF]'), '');
   }
 
