@@ -20,7 +20,7 @@ class QuizScreen extends StatefulWidget {
 
 class _QuizScreenState extends State<QuizScreen> {
   // --- Quiz Logic Variables ---
-  int totalQuizNumber = 10;
+  int totalQuizNumber = 20;
   int currentQuizIndex = 0;
   late List<Quiz> sessionQuizzes;
 
@@ -43,10 +43,10 @@ class _QuizScreenState extends State<QuizScreen> {
       sourceList = quizzes[widget.language]!
           .expand((module) => module)
           .toList();
-      totalQuizNumber = 20;
+      totalQuizNumber = 50;
     } else {
       sourceList = quizzes[widget.language]![widget.moduleNumber - 1];
-      totalQuizNumber = 10;
+      totalQuizNumber = 20;
     }
 
     userResults = List.filled(totalQuizNumber, null);
