@@ -26,7 +26,7 @@ Launch Screen ပဵၼ်ၼႃႈၸေႃးဢၼ်ဢွၵ်ႇမႃး
 
 **တႃႇ App Icon:**
 
-1. ၵႂႃႇတီႈ **Assets** ၼႂ်း Xcode။
+1. ၵႂႃႇတီႈ **Assets.xcassets** ၼႂ်း Xcode။
 2. လိူၵ်ႈ **AppIcon**။
 3. လၢၵ်ႈ (Drag) ႁၢင်ႈ 1024x1024 px သႂ်ႇၼႂ်းလွၵ်း **1024 (All Sizes)**။ 
 
