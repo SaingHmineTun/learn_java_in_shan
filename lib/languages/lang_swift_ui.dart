@@ -8,7 +8,8 @@ const swiftUiTopics = {
   5: "Networking & JSON",
   6: "Animation & Transitions",
   7: "Persistence with SwiftData",
-  8: "The Capstone: Modular Architecture",
+  8: "User Input, Forms, and Validation",
+  9: "Final Polish & App Store Submission",
 };
 
 const Map<int, Map<int, String>> swiftUiModules = {
@@ -87,6 +88,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     55: "Handling Preview Data for SwiftData Models",
     56: "Project 7: Personal Coding Log & Task Manager",
   },
+
   8: {
     57: "The Form View and Sectioning UI",
     58: "TextEditor vs TextField: Multi-line Input",
@@ -97,6 +99,7 @@ const Map<int, Map<int, String>> swiftUiModules = {
     63: "Handling Focus States and Keyboard Toolbars",
     64: "Project 8: User Profile & Settings Dashboard"
   },
+  // 9: Final Polish & App Store Submission
   9: {
     65: "App Icons and Launch Screens: The First Impression",
     66: "Asset Management and Catalog Optimization",
