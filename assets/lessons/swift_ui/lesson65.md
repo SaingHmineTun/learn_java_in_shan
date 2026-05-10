@@ -33,7 +33,7 @@ Launch Screen ပဵၼ်ၼႃႈၸေႃးဢၼ်ဢွၵ်ႇမႃး
 **တႃႇ Launch Screen:**
 
 1. ၵႂႃႇတီႈ **Project Settings** -> **General** -> **Development Info**။
-2. လိူၵ်ႈ **Launch Screen File** (ၵမ်ႉၼမ်ပဵၼ် LaunchScreen.storyboard)။
+2. လိူၵ်ႈ **Launch Screen File** (ၵမ်ႈၼမ်ပဵၼ် LaunchScreen.storyboard)။
 3. ၼႂ်း Storyboard, ထႅမ် `UIImageView` သေ သႂ်ႇ Logo ၸဝ်ႈၵဝ်ႇဝႆႉၵၢင်ၼႃႈၸေႃး။
 
 ---
