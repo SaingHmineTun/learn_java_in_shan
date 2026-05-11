@@ -178,59 +178,65 @@ public class BookDAO implements BaseDAO<Book> {
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?><?import javafx.scene.control.*?><?import javafx.scene.image.ImageView?><?import javafx.scene.image.Image?><?import javafx.scene.layout.*?>
 
 <VBox spacing="25" styleClass="content-pane" stylesheets="@../css/style.css"
-    xmlns:fx="http://javafx.com/fxml" fx:controller="top.saimao.controller.BookController">
+    xmlns:fx="http://javafx.com/fxml" fx:controller="it.saimao.controller.BookController">
 
     <padding>
-        <Insets top="30" right="30" bottom="30" left="30"/>
+        <Insets top="30" right="30" bottom="30" left="30" />
     </padding>
 
-    <Label text="ၸတ်းၵၢၼ်ပပ်ႉလိၵ်ႈ (Book Inventory)" styleClass="title-label"/>
+    <Label text="ၸတ်းၵၢၼ်ပပ်ႉလိၵ်ႈ (Book Inventory)" styleClass="title-label" />
 
     <HBox spacing="20" styleClass="toolbar-pane" alignment="CENTER_LEFT">
 
         <VBox spacing="10" alignment="CENTER">
-            <ImageView fx:id="imgBook" fitWidth="100" fitHeight="130" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgBook" fitWidth="100" fitHeight="130" pickOnBounds="true"
+                preserveRatio="true">
                 <image>
-                    <Image url="@../images/default_book.png"/>
+                    <Image url="@../images/default_book.png" />
                 </image>
             </ImageView>
-            <Button text="Change" onAction="#handleSelectImage" styleClass="update-button" prefWidth="80"/>
+            <Button text="Change" onAction="#handleSelectImage" styleClass="update-button"
+                prefWidth="80" />
         </VBox>
 
         <GridPane hgap="10" vgap="10" HBox.hgrow="ALWAYS">
-            <TextField fx:id="txtTitle" promptText="Book Title" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="250"/>
-            <TextField fx:id="txtAuthor" promptText="Author" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="200"/>
-            <TextField fx:id="txtCategory" promptText="Category" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-            <TextField fx:id="txtIsbn" promptText="ISBN" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-            <TextField fx:id="txtPublisher" promptText="Publisher" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
-            <TextField fx:id="txtQty" promptText="Total Qty" GridPane.columnIndex="2" GridPane.rowIndex="1" prefWidth="80"/>
+            <TextField fx:id="txtTitle" promptText="Book Title" GridPane.columnIndex="0"
+                GridPane.rowIndex="0" prefWidth="250" />
+            <TextField fx:id="txtAuthor" promptText="Author" GridPane.columnIndex="1"
+                GridPane.rowIndex="0" prefWidth="200" />
+            <TextField fx:id="txtCategory" promptText="Category" GridPane.columnIndex="0"
+                GridPane.rowIndex="1" />
+            <TextField fx:id="txtIsbn" promptText="ISBN" GridPane.columnIndex="1"
+                GridPane.rowIndex="1" />
+            <TextField fx:id="txtPublisher" promptText="Publisher" GridPane.columnIndex="2"
+                GridPane.rowIndex="0" />
+            <TextField fx:id="txtQty" promptText="Total Qty" GridPane.columnIndex="2"
+                GridPane.rowIndex="1" prefWidth="80" />
         </GridPane>
 
         <VBox spacing="10" alignment="CENTER">
-            <Button text="ADD" onAction="#handleAddBook" styleClass="add-button" prefWidth="100"/>
-            <Button text="UPDATE" onAction="#handleUpdateBook" styleClass="update-button" prefWidth="100"/>
-            <Button text="DELETE" onAction="#handleDeleteBook" styleClass="delete-button" prefWidth="100"/>
+            <Button text="ADD" onAction="#handleAddBook" styleClass="add-button" prefWidth="100" />
+            <Button text="UPDATE" onAction="#handleUpdateBook" styleClass="update-button"
+                prefWidth="100" />
+            <Button text="DELETE" onAction="#handleDeleteBook" styleClass="delete-button"
+                prefWidth="100" />
         </VBox>
     </HBox>
 
     <TableView fx:id="bookTable" VBox.vgrow="ALWAYS">
         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
         </columnResizePolicy>
         <columns>
-            <TableColumn fx:id="colId" text="ID" maxWidth="50"/>
-            <TableColumn fx:id="colTitle" text="Title"/>
-            <TableColumn fx:id="colAuthor" text="Author"/>
-            <TableColumn fx:id="colCategory" text="Category"/>
-            <TableColumn fx:id="colQty" text="Total"/>
-            <TableColumn fx:id="colAvailable" text="Available"/>
+            <TableColumn fx:id="colId" text="ID" maxWidth="50" />
+            <TableColumn fx:id="colTitle" text="Title" />
+            <TableColumn fx:id="colAuthor" text="Author" />
+            <TableColumn fx:id="colCategory" text="Category" />
+            <TableColumn fx:id="colQty" text="Total" />
+            <TableColumn fx:id="colAvailable" text="Available" />
         </columns>
     </TableView>
 </VBox>

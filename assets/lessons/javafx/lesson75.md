@@ -10,54 +10,54 @@
 
 ```java
 
-    public ObservableList<Transaction> findAll() {
-        ObservableList<Transaction> list = FXCollections.observableArrayList();
-        // ၸႂ်ႉ SELECT * တွၼ်ႈတႃႇဢဝ် Columns တင်းသဵင်ႈ လုၵ်ႉတီႈ Tables ဢၼ် Join ဝႆႉ
-        String sql = "SELECT t.*, u.*, m.*, b.* " +
-                "FROM transactions t " +
-                "JOIN users u ON t.user_id = u.id " +
-                "JOIN members m ON t.member_id = m.id " +
-                "JOIN books b ON t.book_id = b.id " +
-                "ORDER BY t.id DESC";
+public ObservableList<Transaction> findAll() {
+    ObservableList<Transaction> list = FXCollections.observableArrayList();
+    // ၸႂ်ႉ SELECT * တွၼ်ႈတႃႇဢဝ် Columns တင်းသဵင်ႈ လုၵ်ႉတီႈ Tables ဢၼ် Join ဝႆႉ
+    String sql = "SELECT t.*, u.*, m.*, b.* " +
+            "FROM transactions t " +
+            "JOIN users u ON t.user_id = u.id " +
+            "JOIN members m ON t.member_id = m.id " +
+            "JOIN books b ON t.book_id = b.id " +
+            "ORDER BY t.id DESC";
 
-        try (Connection conn = DBConnection.getInstance().getConnection();
-             Statement st = conn.createStatement();
-             ResultSet rs = st.executeQuery(sql)) {
+    try (Connection conn = DBConnection.getInstance().getConnection();
+         Statement st = conn.createStatement();
+         ResultSet rs = st.executeQuery(sql)) {
 
-            while (rs.next()) {
-                // 1. Create Real User Object
-                User u = new User();
-                u.setId(rs.getInt("u.id")); // မၢႆတွင်း: သင် Column Name မိူၼ်ၵၼ် လူဝ်ႇၸႂ်ႉ Alias
-                u.setUsername(rs.getString("username"));
-                u.setRole(top.saimao.model.UserRole.valueOf(rs.getString("role")));
+        while (rs.next()) {
+            // 1. Create Real User Object
+            User u = new User();
+            u.setId(rs.getInt("u.id")); // မၢႆတွင်း: သင် Column Name မိူၼ်ၵၼ် လူဝ်ႇၸႂ်ႉ Alias
+            u.setUsername(rs.getString("username"));
+            u.setRole(it.saimao.model.UserRole.valueOf(rs.getString("role")));
 
-                // 2. Create Real Member Object
-                Member m = new Member(
-                        rs.getInt("m.id"),
-                        rs.getString("full_name"),
-                        rs.getString("phone"),
-                        rs.getString("image_path")
-                );
+            // 2. Create Real Member Object
+            Member m = new Member(
+                    rs.getInt("m.id"),
+                    rs.getString("full_name"),
+                    rs.getString("phone"),
+                    rs.getString("image_path")
+            );
 
-                // 3. Create Real Book Object
-                Book b = new Book(
-                        rs.getInt("b.id"), rs.getString("title"), rs.getString("author"),
-                        rs.getString("category"), rs.getString("isbn"), rs.getString("publisher"),
-                        rs.getInt("total_qty"), rs.getInt("available_qty"), rs.getString("b.image_path")
-                );
+            // 3. Create Real Book Object
+            Book b = new Book(
+                    rs.getInt("b.id"), rs.getString("title"), rs.getString("author"),
+                    rs.getString("category"), rs.getString("isbn"), rs.getString("publisher"),
+                    rs.getInt("total_qty"), rs.getInt("available_qty"), rs.getString("b.image_path")
+            );
 
-                // 4. Add to Transaction with Real Objects
-                list.add(new Transaction(
-                        rs.getInt("t.id"), u, m, b,
-                        rs.getDate("issue_date").toLocalDate(),
-                        rs.getString("status")
-                ));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+            // 4. Add to Transaction with Real Objects
+            list.add(new Transaction(
+                    rs.getInt("t.id"), u, m, b,
+                    rs.getDate("issue_date").toLocalDate(),
+                    rs.getString("status")
+            ));
         }
-        return list;
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
+    return list;
+}
 ```
 
 ---
@@ -67,42 +67,43 @@
 ႁဝ်းတေၸႂ်ႉ `style.css` ဢၼ်ၸဝ်ႈၵဝ်ႇမီးဝႆႉၼၼ်ႉ တွၼ်ႈတႃႇႁႂ်ႈ App ႁဝ်းမီးလွင်ႈ Consistent ၵၼ်ၶႃႈ။
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?xml version="1.0" encoding="UTF-8"?><?import javafx.scene.control.*?><?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/style.css" 
-            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
-            fx:controller="top.saimao.controller.TransactionController">
-   <children>
-      <VBox spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" 
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/style.css"
+    xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="it.saimao.controller.TransactionController">
+    <children>
+        <VBox spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0"
             AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
-         <children>
-            <Label styleClass="title-label" text="သဵၼ်ႈမၢႆၵၢၼ်ယိမ်ပပ်ႉ (Transaction History)" />
-            
-            <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="toolbar-pane">
-               <children>
-                  <TextField fx:id="txtSearch" prefWidth="300.0" promptText="ႁႃလူၺ်ႈၸိုဝ်ႈ Member ဢမ်ႇၼၼ် ပပ်ႉ..." styleClass="search-field" />
-                  <Region HBox.hgrow="ALWAYS" />
-                  <Button onAction="#handleRefresh" styleClass="update-button" text="Refresh" />
-               </children>
-            </HBox>
-            
-            <TableView fx:id="transactionTable" VBox.vgrow="ALWAYS">
-              <columns>
-                <TableColumn fx:id="colId" prefWidth="50" text="ID" />
-                <TableColumn fx:id="colMember" prefWidth="200" text="Member Name" />
-                <TableColumn fx:id="colBook" prefWidth="200" text="Book Title" />
-                <TableColumn fx:id="colDate" prefWidth="150" text="Issue Date" />
-                <TableColumn fx:id="colStatus" prefWidth="100" text="Status" />
-              </columns>
-               <columnResizePolicy>
-                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy>
-            </TableView>
-         </children>
-      </VBox>
-   </children>
+            <children>
+                <Label styleClass="title-label" text="သဵၼ်ႈမၢႆၵၢၼ်ယိမ်ပပ်ႉ (Transaction History)" />
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="toolbar-pane">
+                    <children>
+                        <TextField fx:id="txtSearch" prefWidth="300.0"
+                            promptText="ႁႃလူၺ်ႈၸိုဝ်ႈ Member ဢမ်ႇၼၼ် ပပ်ႉ..."
+                            styleClass="search-field" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Button onAction="#handleRefresh" styleClass="update-button"
+                            text="Refresh" />
+                    </children>
+                </HBox>
+
+                <TableView fx:id="transactionTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colId" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="colMember" prefWidth="200" text="Member Name" />
+                        <TableColumn fx:id="colBook" prefWidth="200" text="Book Title" />
+                        <TableColumn fx:id="colDate" prefWidth="150" text="Issue Date" />
+                        <TableColumn fx:id="colStatus" prefWidth="100" text="Status" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>
 ```
 

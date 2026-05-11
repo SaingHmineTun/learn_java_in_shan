@@ -6,25 +6,26 @@
 ဢွၼ်တၢင်းသုတ်း ႁဝ်းလူဝ်ႇ Method တွၼ်ႈတႃႇသိမ်းသဵၼ်ႈမၢႆၵၢၼ်ယိမ် ၶဝ်ႈၼႂ်း Table `transactions` ဢၼ်ၸဝ်ႈၵဝ်ႇတႅမ်ႈဝႆႉၼၼ်ႉၶႃႈ။
 
 ```java
-package top.saimao.dao;
+package it.saimao.dao;
 
-import top.saimao.connection.DBConnection;
+import it.saimao.connection.DBConnection;
+
 import java.sql.*;
 import java.time.LocalDate;
 
 public class TransactionDAO {
-    
+
     public boolean saveIssue(int userId, int memberId, int bookId) {
         String sql = "INSERT INTO transactions (user_id, member_id, book_id, issue_date, status) VALUES (?, ?, ?, ?, 'BORROWED')";
-        
+
         try (Connection conn = DBConnection.getInstance().getConnection();
              PreparedStatement ps = conn.prepareStatement(sql)) {
-            
+
             ps.setInt(1, userId);
             ps.setInt(2, memberId);
             ps.setInt(3, bookId);
             ps.setDate(4, Date.valueOf(LocalDate.now())); // ဝၼ်းမိူဝ်ႈၼႆႉ
-            
+
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();

@@ -29,13 +29,14 @@
 ႁဝ်းတေတႅမ်ႈ Service တွၼ်ႈတႃႇႁဵတ်းၾၢႆႇ PDF ၶႃႈ။
 
 ```java
-package top.saimao.service;
+package it.saimao.service;
 
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
-import top.saimao.model.Transaction;
+
+import it.saimao.model.Transaction;
 
 import java.io.FileOutputStream;
 

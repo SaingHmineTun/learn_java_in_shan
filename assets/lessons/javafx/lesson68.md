@@ -14,7 +14,7 @@
 <?import javafx.geometry.Insets?><?import javafx.scene.control.*?><?import javafx.scene.layout.*?>
 
 <VBox spacing="25" styleClass="content-pane" stylesheets="@../css/style.css"
-    xmlns:fx="http://javafx.com/fxml" fx:controller="top.saimao.controller.MemberController">
+    xmlns:fx="http://javafx.com/fxml" fx:controller="it.saimao.controller.MemberController">
 
     <padding>
         <Insets top="30" right="30" bottom="30" left="30" />

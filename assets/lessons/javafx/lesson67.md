@@ -43,12 +43,12 @@ public interface BaseDAO<T> {
 မိူဝ်ႈႁဝ်းသၢင်ႈ `MemberDAO`၊ ႁဝ်းတေ Implement `BaseDAO` သေ တႅၼ်ႈ `<T>` လူၺ်ႈ `<Member>` ၶႃႈ။
 
 ```java
-package top.saimao.dao;
+package it.saimao.dao;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import top.saimao.model.Member;
-import top.saimao.utils.Database;
+import it.saimao.model.Member;
+import it.saimao.utils.Database;
 
 import java.sql.*;
 

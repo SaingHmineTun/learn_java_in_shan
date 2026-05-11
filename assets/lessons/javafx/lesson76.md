@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="650.0" prefWidth="1000.0" stylesheets="@../css/style.css"
     xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="top.saimao.controller.TransactionController">
+    fx:controller="it.saimao.controller.TransactionController">
     <children>
         <VBox spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0"
             AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
