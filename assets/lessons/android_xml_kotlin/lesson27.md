@@ -69,7 +69,7 @@
 
 ---
 
-### **Advice for Students (ၶေႃႈသႅပ်ႇပၼ်လုၵ်ႈႁဵၼ်း):**
+### **Advice for Students:**
 
 'တၢင်းၵႂၢင်ႈ (`layout_width`) ၶွင် CardView ၼႂ်း Item Row ၼၼ်ႉ လူဝ်ႇပဵၼ် **`match_parent`** တႃႇသေႇ။
 ၵူၺ်းၵႃႈ တၢင်းသုင် (`layout_height`) သမ်ႉလူဝ်ႇပဵၼ် **`wrap_content`** ယဝ်ႉ။' 
