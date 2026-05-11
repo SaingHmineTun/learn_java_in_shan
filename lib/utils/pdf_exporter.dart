@@ -64,8 +64,8 @@ class PdfExporter {
         }
       } else if (inCodeBlock) {
         codeLineCount++;
-        if (codeLineCount > 35) {
-          // 35 lines is the "Safe Zone" for A4
+        if (codeLineCount > 25) {
+          // 25 lines is the "Safe Zone" for A4
           result.add('```'); // Close it
           result.add('\n\n'); // Break
           result.add('```$currentLang'); // Re-open
