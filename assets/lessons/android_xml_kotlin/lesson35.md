@@ -59,7 +59,7 @@ class GameFragment : Fragment() {
 
 ---
 
-### **Advice for Students (ၶေႃႈသႅပ်ႇပၼ်လုၵ်ႈႁဵၼ်း):**
+### **Advice for Students:**
 
 '**ယႃႇပေဢဝ် View (မိူၼ်ၼင်ႇ TextView, Button) ဢမ်ႇၼၼ် Context ၵႂႃႇသိမ်းဝႆႉၼႂ်း ViewModel ၶႃႈ!**' ယွၼ်ႉ ViewModel ယူႇႁိုင်လိူဝ် Activity လႄႈ သင်မၼ်းသိမ်း View ၶွင် Activity ဢၼ်တၢႆၵႂႃႇယဝ်ႉၼၼ်ႉဝႆႉၸိုင် မၼ်းတေႁဵတ်းႁႂ်ႈ Memory Leak ၸိူင်ႉၼင်ႇႁဝ်းႁဵၼ်းမႃးၼႂ်း Lesson 34 ယဝ်ႉ။
 ViewModel မီးၼႃႈတီႈၵုမ်း **Data** ၵူၺ်းၶႃႈ။"

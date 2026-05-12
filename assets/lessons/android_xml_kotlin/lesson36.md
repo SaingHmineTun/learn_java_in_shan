@@ -59,7 +59,7 @@ viewModel.score.observe(viewLifecycleOwner) { newScore ->
 
 ---
 
-### **Advice for Students (ၶေႃႈသႅပ်ႇပၼ်လုၵ်ႈႁဵၼ်း):**
+### **Advice for Students:**
 
 'LiveData ႁဵတ်းႁႂ်ႈႁဝ်းဢမ်ႇလူဝ်ႇမႆႈၸႂ် လွင်ႈပုမ်ႇတဵၵ်း ယဝ်ႉလူဝ်ႇလႆႈၵႂႃႇသင်ႇ Update TextView ၵူႈပွၵ်ႈယဝ်ႉ။' 
 ႁဝ်းၵူၺ်းလူဝ်ႇမႄးၶေႃႈမုၼ်းၼႂ်း ViewModel၊ ယဝ်ႉ UI တေလႅၵ်ႈလၢႆႈၸွမ်းႁင်းၵွႆးယဝ်ႉ။ 
