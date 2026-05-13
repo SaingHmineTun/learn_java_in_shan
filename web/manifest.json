@@ -1,11 +1,11 @@
 {
-    "name": "learn_java_in_shan",
-    "short_name": "learn_java_in_shan",
+    "name": "TMK Academy",
+    "short_name": "tmk_academy",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Learn Programming in Shan!",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
