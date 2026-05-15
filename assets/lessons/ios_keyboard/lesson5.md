@@ -20,33 +20,112 @@
 2. ၼဵၵ်ႉ **+ Capability** သေလိူၵ်ႈ **App Groups**။
 3. သႂ်ႇၸိုဝ်ႈဝႃႈ `group.it.saimao.tmk_keyboard` (ႁႂ်ႈမိူၼ်ၵၼ်တင်း 2 Targets)။
 
-### 3. လၢႆးၸႂ်ႉ Shared UserDefaults
+### 3. Implementation: ၵၢၼ်ၵုမ်းထိင်း Data ၼႂ်း Main App
+တီႈၼႂ်း Main App (SwiftUI) ၼႆႉ ႁဝ်းတေတႅမ်ႈ Code တႃႇပၼ် User လိူၵ်ႈၽႃႇသႃႇ (Language) ယဝ်ႉ။
 
-တီႈၼႂ်း Code ၼၼ်ႉ ႁဝ်းတေဢမ်ႇၸၢင်ႈၸႂ်ႉ `UserDefaults.standard` လႆႈ။ ႁဝ်းတေလႆႈၸႂ်ႉ **Suite Name** ဢၼ်ပဵၼ်ၸိုဝ်ႈ App Group ႁဝ်းၼၼ်ႉယဝ်ႉ။
-
-**ၵၢၼ်ၵဵပ်း Data (ၼႂ်း Main App):**
+**MainAppView.swift**
 
 ```swift
-let sharedDefaults = UserDefaults(suiteName: "group.it.saimao.tmk_keyboard")
-sharedDefaults?.set("Shan", forKey: "SelectedLanguage")
-sharedDefaults?.synchronize() // တဵၵ်းႁႂ်ႈမၼ်း Save ၵမ်းလဵဝ်
+import SwiftUI
+
+struct MainAppView: View {
+    @State private var selectedLanguage: String = "Shan"
+    
+    // ၸိုဝ်ႈ App Group ႁဝ်း
+    let sharedSuite = "group.it.saimao.tmk_keyboard"
+    
+    var body: some View {
+        Form {
+            Section(header: Text("Keyboard Settings")) {
+                Picker("Default Language", selection: $selectedLanguage) {
+                    Text("English").tag("English")
+                    Text("Myanmar").tag("Myanmar")
+                    Text("Shan").tag("Shan")
+                }
+                .onChange(of: selectedLanguage) { newValue in
+                    saveToSharedContainer(lang: newValue)
+                }
+            }
+        }
+    }
+    
+    func saveToSharedContainer(lang: String) {
+        // ၸႂ်ႉ SuiteName တႅၼ်း UserDefaults.standard
+        if let sharedDefaults = UserDefaults(suiteName: sharedSuite) {
+            sharedDefaults.set(lang, forKey: "SelectedLanguage")
+            sharedDefaults.synchronize()
+            print("Saved \(lang) to App Group")
+        }
+    }
+}
 
 ```
 
-**ၵၢၼ်လူတ်ႇ Data (ၼႂ်း Keyboard Extension):**
+---
+
+### 3. Implementation: ၵၢၼ်လူတ်ႇ Data ၼႂ်း Keyboard Extension
+
+ၵမ်းၼႆႉ တီႈၼႂ်း Keyboard, ႁဝ်းတေလႆႈလူတ်ႇ Data ၼၼ်ႉမႃး တႃႇတေၼႄ Layout ႁႂ်ႈမၼ်းတႅတ်ႈတေႃးယဝ်ႉ။
+
+**KeyboardView.swift**
 
 ```swift
-let sharedDefaults = UserDefaults(suiteName: "group.it.saimao.tmk_keyboard")
-let currentLang = sharedDefaults?.string(forKey: "SelectedLanguage") ?? "English"
+import SwiftUI
+
+struct KeyboardView: View {
+    var controller: UIInputViewController
+    
+    // လူတ်ႇ Data လုၵ်ႉတီႈ App Group
+    private var currentLanguage: String {
+        let sharedSuite = "group.it.saimao.tmk_keyboard"
+        let sharedDefaults = UserDefaults(suiteName: sharedSuite)
+        return sharedDefaults?.string(forKey: "SelectedLanguage") ?? "English"
+    }
+    
+    var body: some View {
+        VStack {
+            // ၼႄၸိုဝ်ႈၽႃႇသႃႇ ဢၼ်လူတ်ႇမႃးလႆႈ
+            Text("Mode: \(currentLanguage)")
+                .font(.caption)
+            
+            HStack {
+                if currentLanguage == "Shan" {
+                    shanLayout
+                } else if currentLanguage == "Myanmar" {
+                    myanmarLayout
+                } else {
+                    englishLayout
+                }
+            }
+        }
+        .frame(height: 200)
+    }
+    
+    // Sample Layouts
+    var shanLayout: some View {
+        Button("ၵ") { controller.textDocumentProxy.insertText("ၵ") }
+            .buttonStyle(.borderedProminent)
+    }
+    
+    var englishLayout: some View {
+        Button("A") { controller.textDocumentProxy.insertText("A") }
+            .buttonStyle(.bordered)
+    }
+    
+    var myanmarLayout: some View {
+        Button("က") { controller.textDocumentProxy.insertText("က") }
+            .buttonStyle(.borderedProminent)
+            .tint(.orange)
+    }
+}
 
 ```
 
-### 4. တႃႇၸႂ်ႉၼႂ်း TMK Keyboard
+---
 
-တွၼ်ႈတႃႇ TMK Keyboard ႁဝ်းၼၼ်ႉ ႁဝ်းတေၸႂ်ႉ App Group တႃႇၵုမ်းထိင်း:
+### 4. Why this is important for TMK Keyboard?
 
-* **SelectedLanguage:** တူၺ်းဝႃႈ User လိူၵ်ႈဝႆႉ English, Myanmar, ဢမ်ႇၼၼ် Shan။
-* **KeyboardTheme:** သီ Keyboard (Dark, Light, ဢမ်ႇၼၼ် Custom colors)။
-* **HapticFeedback:** ပိုတ်ႇ/ပိၵ်ႉ လွင်ႈသၼ်ႇ မိူဝ်ႈတႅမ်ႈလိၵ်ႈ။
+* **Persistence:** မိူဝ်ႈ User ပိၵ်ႉ iPhone သေပိုတ်ႇမႃးၶိုၼ်းၼၼ်ႉ Keyboard တေတွင်းဝႆႉဝႃႈ ၽႃႇသႃႇသင် ဢၼ်ၶဝ်ၸႂ်ႉၵမ်းလိုၼ်းသုတ်း ၼႆယဝ်ႉ။
+* **User Experience:** User ဢမ်ႇလူဝ်ႇမႃးလႅၵ်ႈ Layout ၵူႈပွၵ်ႈ၊ မၼ်းတေ "Sync" တင်း Settings ဢၼ်မီးဝႆႉၼႂ်း App လူင်ၼၼ်ႉၵမ်းလဵဝ်ယဝ်ႉ။
 
 ---
