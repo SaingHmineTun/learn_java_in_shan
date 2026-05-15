@@ -38,14 +38,21 @@
 
 ### 5. Shared App Groups (The Bridge)
 
-ယွၼ်ႉ Targets တင်းသွင်ဢၼ်ၼႆႉ ယူႇဝႆႉၵေႃႉတီႈတီႈ ၼႆလႄႈ ပေႃးႁဝ်းၶႂ်ႈပၼ် Main App တင်း Keyboard သူင်ႇ Data ၸူးၵၼ် (မိူၼ်ၼင်ႇ User လႅၵ်ႈ Theme ဝႆႉ) ႁဝ်းတေလႆႈသႂ်ႇ **App Groups** ယဝ်ႉ:
+ယွၼ်ႉ Targets တင်းသွင်ဢၼ်ၼႆႉ ယူႇဝႆႉၵေႃႉတီႈတီႈ ၼႆလႄႈ ပေႃးႁဝ်းၶႂ်ႈပၼ် Main App တင်း Keyboard သူင်ႇ Data ၸူးၵၼ် 
+(မိူၼ်ၼင်ႇ User လႅၵ်ႈ Theme ဝႆႉ) ႁဝ်းတေလႆႈသႂ်ႇ **App Groups** ယဝ်ႉ:
 
 1. လိူၵ်ႈ Project (တူဝ်သီၾႃႉ တီႈၼိူဝ်သုတ်း)။
-2. ၵႂႃႇတီႈ **Signing & Capabilities**။
-3. ၼိပ်ႉ **+ Capability** သေလိူၵ်ႈ **App Groups**။
-4. သႂ်ႇၸိုဝ်ႈဝႃႈ `group.com.tmk.keyboard` (သႂ်ႇမိူၼ်ၵၼ်တင်း 2 Targets)။
+2. ယဝ်ႉလိူၵ်ႈ **target** ၽႂ်မၼ်းသေ ၵႂႃႇတီႈ **Signing & Capabilities**။
+3. ၼဵၵ်ႉ **+ Capability** သေလိူၵ်ႈ **App Groups**။
+4. သႂ်ႇၸိုဝ်ႈဝႃႈ `group.it.saimao.tmk_keyboard` (သႂ်ႇမိူၼ်ၵၼ်တင်း 2 Targets)။
 
-### 6. Verification
+### 6. Running the app
+
+သင်ႁဝ်း ၶႂ်ႈၸၢမ်း run တူၺ်း app ၼႆၸိုင် ဢွၼ်တၢင်းသုတ်ႉတေႉၵေႃႈ ႁဝ်းၼဵၵ်ႉပၼ် run တီႈ XCode ယဝ်ႉ
+App ႁဝ်းၼႆႉ ၵွပ်ႈပဵၼ် `Extension` ဝႆႉလႄႈ မၼ်းတေထၢမ် `Choose an app to run` ၼႆယဝ်ႉ။
+တီႈၼႆႈ ႁဝ်းၶိုၼ်းလိူၵ်ႈပၼ် `Note` ဢၼ်ၸၢင်ႊႁပ်ႉပၼ် User Input လႆႈႁေလႄႈ
+
+### 7. Verification
 
 ပေႃးႁဝ်း Run App ၼႆႉၼိူဝ် Simulator ၸိုင်:
 
