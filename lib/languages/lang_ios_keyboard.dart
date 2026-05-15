@@ -23,8 +23,6 @@ const iosKeyboardModules = {
     11: "The Row-Based Layout Architecture",
     12: "Persistent Layout Memory",
     13: "The Space Bar Language Switcher",
-    14: "Dynamic Height Management",
-    15: "Shift & Symbols Logic",
-    16: "Layout Preview & Debugging"
+    14: "Shift & Symbols Logic",
   }
 };
