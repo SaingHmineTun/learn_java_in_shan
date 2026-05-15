@@ -27,7 +27,7 @@ const iosKeyboardModules = {
   },
   3: {
     15: "Persistent Settings Architecture",
-    16: "Implementing the Normalization Engine (Preventing Broken Characters)",
+    16: "Handwriting Logic (Visual to Logical Normalization)",
     17: "Character Stacking Logic (Handling Virama & Stacked Consonants)",
     18: "Auto-Correction for Common Typos (Smart Input Logic)",
     19: "The Ghost Character Problem (Zero Width Space & Joiners)",
