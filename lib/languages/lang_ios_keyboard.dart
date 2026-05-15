@@ -22,7 +22,7 @@ const iosKeyboardModules = {
     10: "Designing the Modular Key Component",
     11: "The Row-Based Layout Architecture",
     12: "Persistent Layout Memory",
-    13: "Lesson 5: The Space Bar Language Switcher",
+    13: "The Space Bar Language Switcher",
     14: "Dynamic Height Management",
     15: "Shift & Symbols Logic",
     16: "Layout Preview & Debugging"
