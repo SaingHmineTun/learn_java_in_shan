@@ -24,5 +24,13 @@ const iosKeyboardModules = {
     12: "Persistent Layout Memory",
     13: "The Space Bar Language Switcher",
     14: "Shift & Symbols Logic",
+  },
+  3: {
+    15: "Persistent Settings Architecture",
+    16: "Implementing the Normalization Engine (Preventing Broken Characters)",
+    17: "Character Stacking Logic (Handling Virama & Stacked Consonants)",
+    18: "Auto-Correction for Common Typos (Smart Input Logic)",
+    19: "The Ghost Character Problem (Zero Width Space & Joiners)",
+    20: "Integrating the Engine with UI (Connecting the Logic to KeyPress)"
   }
 };
