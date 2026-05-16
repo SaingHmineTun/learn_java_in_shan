@@ -219,7 +219,3 @@ struct MaoKeyboardView: View {
 
 * ႁဝ်းမီး Palette သီတဵမ်ထူၼ်ႈတင်း **10 Premium Themes** ၶဝ်ႈၵႂႃႇၼႂ်း System ပၵ်းပိူင်။
 * `TMKKeyView` ပဵၼ် **Pure Component** ဢၼ်မီး Performance သုင် (Fast Rendering) ယွၼ်ႉမၼ်းႁပ်ႉဢဝ် Theme Object မႃးၵမ်းလဵဝ် ဢမ်ႇလူဝ်ႇမီး Dependency ၶွင်ႉဝႆႉၼႂ်းတူဝ်မၼ်းၶႃႈ။
-
-**တွၼ်ႈသွၼ် 20: Keys Long-Press Popups (Shift Alternate Characters Display)** ႁဝ်းတေမႃးသၢင်ႈ Custom Popup Preview View Display မိူဝ်ႈ User ၼဵၵ်ႉပုမ်ႇ Key ၶၢင်ႉဝႆႉ ႁႂ်ႈမၼ်းၼႄတူဝ်လိၵ်ႈ Alternate ၸၼ်ႉသုင်ၶႃႈ။
-
-**ၸွင်ႉၸဝ်ႈၵဝ်ႇ ပိုင်ႇၸႂ်တႃႇသိုပ်ႇၵႂႃႇယဝ်ႉႁိုဝ်ၶႃႈ?**
