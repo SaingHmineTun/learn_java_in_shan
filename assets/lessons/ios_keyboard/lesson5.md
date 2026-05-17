@@ -18,7 +18,7 @@
 
 1. ၵႂႃႇတီႈ Xcode > Project Settings > **Signing & Capabilities**။
 2. ၼဵၵ်ႉ **+ Capability** သေလိူၵ်ႈ **App Groups**။
-3. သႂ်ႇၸိုဝ်ႈဝႃႈ `group.it.saimao.tmk_keyboard` (ႁႂ်ႈမိူၼ်ၵၼ်တင်း 2 Targets)။
+3. သႂ်ႇၸိုဝ်ႈဝႃႈ `group.it.saimao.tmk-keyboard` (ႁႂ်ႈမိူၼ်ၵၼ်တင်း 2 Targets)။
 
 ### 3. Implementation: ၵၢၼ်ၵုမ်းထိင်း Data ၼႂ်း Main App
 တီႈၼႂ်း Main App (SwiftUI) ၼႆႉ ႁဝ်းတေတႅမ်ႈ Code တႃႇပၼ် User လိူၵ်ႈၽႃႇသႃႇ (Language) ယဝ်ႉ။
@@ -32,7 +32,7 @@ struct MainAppView: View {
     @State private var selectedLanguage: String = "Shan"
     
     // ၸိုဝ်ႈ App Group ႁဝ်း
-    let sharedSuite = "group.it.saimao.tmk_keyboard"
+    let sharedSuite = "group.it.saimao.tmk-keyboard"
     
     var body: some View {
         Form {
@@ -77,7 +77,7 @@ struct KeyboardView: View {
     
     // လူတ်ႇ Data လုၵ်ႉတီႈ App Group
     private var currentLanguage: String {
-        let sharedSuite = "group.it.saimao.tmk_keyboard"
+        let sharedSuite = "group.it.saimao.tmk-keyboard"
         let sharedDefaults = UserDefaults(suiteName: sharedSuite)
         return sharedDefaults?.string(forKey: "SelectedLanguage") ?? "English"
     }

@@ -30,7 +30,7 @@ class KeyboardManager: ObservableObject {
     @Published var isKeyboardEnabled: Bool = false
     @Published var isFullAccessEnabled: Bool = false
     
-    let bundleID = "it.saimao.TMK-Keyboard.TMKKeyboardExtension" // Bundle ID ၶွင် Extension ၸဝ်ႈၵဝ်ႇ
+    let bundleID = "it.saimao.tmk-keyboard.tmk-keyboard-extension" // Bundle ID ၶွင် Extension ၸဝ်ႈၵဝ်ႇ
     
     init() {
         checkStatus()
@@ -43,7 +43,7 @@ class KeyboardManager: ObservableObject {
         }
         
         // ၵူတ်ႇထတ်းဝႃႈ ပၼ်ဝႆႉ Full Access ယဝ်ႉႁိုဝ် (ၸႂ်ႉ App Group တႃႇ Check)
-        let sharedDefaults = UserDefaults(suiteName: "group.it.saimao.tmk_keyboard")
+        let sharedDefaults = UserDefaults(suiteName: "group.it.saimao.tmk-keyboard")
         isFullAccessEnabled = sharedDefaults?.bool(forKey: "HasFullAccess") ?? false
     }
 }
@@ -141,7 +141,7 @@ struct StepRow: View {
 **KeyboardViewController.swift (Add to viewDidLoad)**
 
 ```swift
-let sharedDefaults = UserDefaults(suiteName: "group.it.saimao.tmk_keyboard")
+let sharedDefaults = UserDefaults(suiteName: "group.it.saimao.tmk-keyboard")
 sharedDefaults?.set(self.hasFullAccess, forKey: "HasFullAccess")
 
 ```
