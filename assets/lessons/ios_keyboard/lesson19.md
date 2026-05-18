@@ -181,7 +181,7 @@ enum TMKThemeType: String, CaseIterable {
 ```swift
 import SwiftUI
 
-struct MaoKeyboardView: View {
+struct KeyboardView: View {
     @StateObject var viewModel = KeyboardViewModel()
     
     var body: some View {

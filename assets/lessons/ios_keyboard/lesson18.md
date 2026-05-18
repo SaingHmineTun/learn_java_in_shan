@@ -16,7 +16,6 @@
 ```swift
 import SwiftUI
 
-// ✅ Protocol တွၼ်ႈတႃႇပဵၼ် Blueprint ၶွင်ၵူႈ Theme
 protocol TMKTheme {
     var id: String { get }
     var name: String { get }
@@ -25,6 +24,7 @@ protocol TMKTheme {
     var keyboardBackground: Color { get }
     var keyBackground: Color { get }
     var keyForeground: Color { get }
+    var keyPressedBackground: Color { get }
     
     // Special Keys (Delete, Shift, Symbols)
     var specialKeyBackground: Color { get }

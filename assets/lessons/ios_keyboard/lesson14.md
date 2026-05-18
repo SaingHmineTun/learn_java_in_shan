@@ -1,4 +1,4 @@
-တွၼ်ႈသွၼ် 14: **Shift, Symbols with Emoji Support**
+## တွၼ်ႈသွၼ် 14: **Shift, Symbols with Emoji Support**
 
 ၼႂ်းတွၼ်ႈသွၼ်ၼႆႉ ႁဝ်းတေမႃးႁဵတ်းႁႂ်ႈ Keyboard ႁဝ်းမီးလၢႆးလႅၵ်ႈၵႄႈၵၢင် တူဝ်လိၵ်ႈ (ABC)၊ တူဝ်ၼပ်ႉ (123) လႄႈ Emoji (😊) ႁႂ်ႈမၼ်းတဵမ်ထူၼ်ႈၼႆယဝ်ႉ။
 

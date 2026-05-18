@@ -10,7 +10,7 @@
 
 ```swift
 class KeyboardManager: ObservableObject {
-    private let sharedSuite = "group.it.saimao.tmk_keyboard"
+    private let sharedSuite = "group.it.saimao.tmk-keyboard"
     
     // Setting Keys
     private let keyHandwriting = "TMK_Handwriting"

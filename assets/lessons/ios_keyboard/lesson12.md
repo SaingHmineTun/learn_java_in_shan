@@ -37,7 +37,7 @@ class KeyboardViewModel: ObservableObject {
     // 2. Shift State (ဢၼ်ၼႆႉႁဝ်းဢမ်ႇ Save ယွၼ်ႉလူဝ်ႇႁႂ်ႈမၼ်း Reset ၵူႈပွၵ်ႈ)
     @Published var isShifted: Bool = false
     
-    private let sharedSuite = "group.it.saimao.tmk_keyboard"
+    private let sharedSuite = "group.it.saimao.tmk-keyboard"
     private let layoutKey = "TMK_Persistent_Layout"
 
     init() {
@@ -103,7 +103,6 @@ struct KeyboardView: View {
                 }
             }
         }
-        .frame(height: 250) // Height ဢၼ်ႁဝ်း Fix ဝႆႉၼၼ်ႉ
     }
 }
 

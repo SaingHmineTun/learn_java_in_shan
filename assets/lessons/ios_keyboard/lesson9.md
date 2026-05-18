@@ -31,10 +31,9 @@ enum TMKLayout: String {
 import SwiftUI
 
 class KeyboardViewModel: ObservableObject {
-    // 1. မၢႆဝႆႉဝႃႈ ယၢမ်းလဵဝ်ပဵၼ် Layout သင် (Default ပဵၼ် English)
     @Published var currentLayout: TMKLayout = .english
     
-    private let sharedSuite = "group.it.saimao.tmk_keyboard"
+    private let sharedSuite = "group.it.saimao.tmk-keyboard"
     
     init() {
         loadSavedLayout()
@@ -84,7 +83,6 @@ class KeyboardViewModel: ObservableObject {
 struct KeyboardView: View {
     var controller: UIInputViewController
     
-    // ✅ သိုပ်ႇတေႃႇတင်း ViewModel
     @StateObject private var viewModel = KeyboardViewModel()
     
     var body: some View {
