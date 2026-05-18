@@ -35,9 +35,10 @@ const iosKeyboardModules = {
     21: "Standard Key Press Preview Overlay (Instant Visual Feedback on Tap)",
     22: "Keys Long-Press Popups - Part 1 (Alternate Character Extraction Matrix)",
     23: "Keys Long-Press Popups - Part 2 (Horizontal Slide & Selection Calculation)",
-    24: "Smart Font Converter Engine on Enter Key Long-Press",
-    25: "Advanced Gesture Interaction (Swipe to Move Cursor / Trackpad Mode)",
-    26: "Voice Input Engine Integration (Speech-to-Text for Myanmar & English)",
-    27: "High-Performance Word Suggestions (Text-File Word Matching)"
+    24: "Advanced Gesture Interaction (Swipe to Move Cursor / Trackpad Mode)",
+    25: "Voice Input Engine Integration (Speech-to-Text for Myanmar & English)",
+    26: "High-Performance Word Suggestions (Text-File Word Matching)",
+    27: "Smart Font Converter Engine on Enter Key Long-Press",
+
   }
 };
