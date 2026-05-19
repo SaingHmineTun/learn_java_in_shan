@@ -17,6 +17,7 @@ dependencies:
   pdf: ^3.11.3
   markdown: ^7.3.0
   htmltopdfwidgets: ^2.0.1
+  flutter_svg: ^2.3.0
 
 
 dev_dependencies:
@@ -53,7 +54,9 @@ flutter:
     - assets/lessons/android_xml_kotlin/
     - assets/lessons/swift/
     - assets/lessons/swift_ui/
+    - assets/lessons/ios_keyboard/
     - assets/images/
+    - assets/icons/
   fonts:
     - family: AJ05
       fonts:

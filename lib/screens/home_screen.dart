@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tmkacademy/screens/language_screen.dart';
 import 'package:tmkacademy/utils/language.dart';
 import '../utils/colors.dart';
+import '../utils/custom_svg_icon.dart';
 import '../utils/utils.dart';
 import 'about_screen.dart';
 import 'donation_screen.dart';
@@ -22,6 +23,14 @@ class HomeScreen extends StatelessWidget {
         return {
           'color': const Color(0xFFF7A41D), // Swift Orange
           'icon': DevIcons.swiftPlain,
+        };
+      case 'ios_keyboard':
+        return {
+          'color': const Color(0xFF007AFF), // Premium iOS System Blue
+          'icon': CustomSvgIcon(
+            path: 'assets/icons/ios_keyboard.svg',
+            size: 32.0,
+          ),
         };
       case 'java_springboot':
         return {
@@ -103,7 +112,14 @@ class HomeScreen extends StatelessWidget {
   Widget _buildLanguageCard(BuildContext context, String lang) {
     final style = _getLanguageStyle(lang);
     final Color accentColor = style['color'];
-    final IconData langIcon = style['icon'];
+    final langIcon = style['icon'];
+    final Widget icon;
+    if (langIcon is IconData) {
+      icon = Icon(langIcon, size: 32, color: accentColor);
+    } else {
+      // Custom SVG Icon
+      icon = langIcon;
+    }
 
     // Get counts from your utility maps
     final int moduleCount = topics[lang]?.length ?? 0;
@@ -144,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                   color: accentColor.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Icon(langIcon, size: 32, color: accentColor),
+                child: icon,
               ),
               const SizedBox(width: 15),
 

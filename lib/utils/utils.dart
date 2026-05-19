@@ -5,6 +5,7 @@ import 'package:tmkacademy/languages/lang_cpp.dart';
 import 'package:tmkacademy/languages/lang_csharp.dart';
 import 'package:tmkacademy/languages/lang_git.dart';
 import 'package:tmkacademy/languages/lang_haskell.dart';
+import 'package:tmkacademy/languages/lang_ios_keyboard.dart';
 import 'package:tmkacademy/languages/lang_java_springboot.dart';
 import 'package:tmkacademy/languages/lang_javafx.dart';
 import 'package:tmkacademy/languages/lang_swift.dart';
@@ -48,6 +49,7 @@ const Map<String, Map<int, String>> topics = {
   "java_springboot": javaSpringbootTopics,
   "jetpack_compose": jetpackComposeTopics,
   "android_keyboard": akTopics,
+  "ios_keyboard": iosKeyboardTopics,
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -74,6 +76,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "java_springboot": javaSpringbootModules,
   "jetpack_compose": jetpackComposeModules,
   "android_keyboard": akModules,
+  "ios_keyboard": iosKeyboardModules,
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -100,6 +103,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "jetpack_compose": jetpackComposeLessons,
   "android_xml_kotlin": axKotlinLessons,
   "android_keyboard": akLessons,
+  "ios_keyboard": iosKeyboardLessons,
 };
 
 class Lesson {
