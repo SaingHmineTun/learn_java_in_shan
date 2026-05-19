@@ -2,79 +2,61 @@
 
 ## Lesson 6: Building the Keyboard Window: Embedding `ComposeView`
 
-ၼႂ်းၵၢၼ်တႅမ်ႈ Android App ပိူင်ၵဝ်ႇၼၼ်ႉ ႁဝ်းၵႆႉၸႂ်ႉ XML ၾၢႆႇ Layout တႃႇၼႄ UI ၼႂ်း `onCreateInputView()` ယဝ်ႉ။ 
-ၵူၺ်းၵႃႊ တႃႇတေၸႂ်ႉ **Jetpack Compose** ၼၼ်ႉ ႁဝ်းလူဝ်ႇလႆႈၸႂ်ႉ တူဝ်ၵွင်ႉဢၼ်ၸိုဝ်ႈဝႃႈ **`ComposeView`** ဢၼ်ပဵၼ် Traditional Android `View` သေတႃႉ 
-မၼ်းမီးၼႃႈတီႈ ႁပ်ႉႁူႉလႄႈ သၢင်ႈပၼ် ပိုၼ်ႉတီႈတႅမ်ႈ Code Composable ၶႃႈယဝ်ႉ။
+ၼႂ်းၵၢၼ်တႅမ်ႈ Android Custom Keyboard ၼၼ်ႉ ႁဝ်းဢမ်ႇလႆႈၸႂ်ႉ XML Layout ၼႂ်း `onCreateInputView()` မိူၼ်ၼင်ႇဢႅပ်ႉပိူင်ၵဝ်ႇယဝ်ႉ။ 
+ႁဝ်းတေမႃးၸႂ်ႉ **`ComposeView`** ဢၼ်ပဵၼ် ၶူဝ်ၵၢႆႇ (Bridge) တႃႇဢဝ် UI Component ၶွင် Jetpack Compose (မိူၼ်ၼင်ႇ `Box` လႄႈ `Text`) သွတ်ႇၶဝ်ႈၵႂႃႇၼႂ်း System Window ယဝ်ႉ။
 
 ---
 
-### 1. ၵၢၼ်မႄးထႅမ် `onCreateInputView()` ၼႂ်း `MaoKeyboardService`
+### 1. Code တွၼ်ႈ `onCreateInputView()` ၼႂ်း `MaoKeyboardService.kt`
 
-ႁဝ်းတေမႃးပိုတ်ႇၾၢႆႇ `MaoKeyboardService.kt` ၶိုၼ်းသေ မႄးထႅမ်ပၼ် Code ၼႂ်း Callback `onCreateInputView()` ၼင်ႇၼႆၶႃႈ:
+ႁဝ်းတေမႃးဢဝ် `ComposeView` သႂ်ႇၶဝ်ႈၵႂႃႇ ၽၢႆႇတႂ်ႈတွၼ်ႈ Bind DecorView ၼင်ႇၼႆၶႃႈ:
 
 ```kotlin
-package it.saimao.tmkkeyboardpro
-
-import android.view.View
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.material3.Text
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.ComposeView
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-
-class MaoKeyboardService : InputMethodService(), 
-    LifecycleOwner, ViewModelStoreOwner, SavedStateRegistryOwner {
-    
     override fun onCreateInputView(): View {
-        // 1. သၢင်ႈ ComposeView လူၺ်ႈ Programmatically
-        val composeView = ComposeView(this)
-        
-        // 2. ၵွင်ႉၸူး (Bind) Lifecycle Tree ဢၼ်ႁဝ်းသၢင်ႈဝႆႉ ၼႂ်း Lesson 5
-        bindWithViewTree(composeView)
-        
-        // 3. သႂ်ႇ Content Jetpack Compose ၶဝ်ႈၵႂႃႇ
-        composeView.setContent {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(260.dp) // သႅၼ်းသုင် Keyboard ပိုၼ်ႉထၢၼ်
-                    .background(Color(0xFF121212)), // Background သီလမ် (Dark Theme)
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "မႂ်ႇသူင်ႇၶႃႈ - TMK Keyboard",
-                    color = Color.White,
-                    fontSize = 20.sp
-                )
+        // 1. 🌟 တွၼ်ႈယႂ်ႇသုတ်း: Bind Owners ဝႆႉတီႈ Root DecorView ဝႆႉထႃႈ ဢွၼ်တၢင်းသုတ်း
+        window?.window?.decorView?.let { root ->
+            root.setViewTreeLifecycleOwner(this)
+            root.setViewTreeViewModelStoreOwner(this)
+            root.setViewTreeSavedStateRegistryOwner(this)
+        }
+
+        // 2. သၢင်ႈ ComposeView လႄႈ return ဢွၵ်ႇၵႂႃႇပၼ် System
+        return ComposeView(this).apply {
+            setContent {
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(250.dp) // သႅၼ်းသုင် Keyboard ပိုၼ်ႉထၢၼ် (Portrait)
+                        .background(Color.Black),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "TMK Keyboard",
+                        color = Color.White,
+                        fontSize = 20.sp
+                    )
+                }
             }
         }
-        
-        // 4. Return တူဝ် composeView ဢွၵ်ႇၵႂႃႇပၼ် System Window
-        return composeView
     }
-}
 
 ```
 
 ---
 
-### 2. ၶေႃႈသပ်းလႅင်း (Breakdown) လွင်ႈႁဵတ်းၵၢၼ် Code
+### 2. ၶေႃႈသႅၼ်းၸิၼႄ (Breakdown) လွင်ႈႁဵတ်းၵၢၼ် Code
 
-* **`ComposeView(this)`**: ယွၼ်ႉဝႃႈ ၼႂ်း Service ႁဝ်းဢမ်ႇမီး XML Layout လႄႈ ႁဝ်းၸင်ႇသၢင်ႈ `ComposeView` ၼႂ်း Memory ယဝ်ႉ။
-* **`bindWithViewTree(composeView)`**: ၼႆႉပဵၼ် Method ဢၼ်ႁဝ်းတႅမ်ႈဝႆႉၼႂ်း Lesson 5 ယဝ်ႉ။ မၼ်းတေဢဝ် Lifecycle ၵႂႃႇပၼ် `composeView` ဢွၼ်တၢင်း ပႆႇတေႇ `setContent` ယဝ်ႉ။ သင်ဝႃႈ ဢမ်ႇသႂ်ႇတူဝ်ၼႆႉသေ ၵႂႃႇသူင်ႇ `setContent` ၵမ်းသိုဝ်ႈၼႆ ဢႅပ်ႉတေ Crash ၵမ်းသိုဝ်ႈယဝ်ႉ။
-* **`Modifier.height(260.dp)`**: ၼႂ်းၵၢၼ်တႅမ်ႈ Keyboard ၼၼ်ႉ သႅၼ်းသုင် (Height) ၶွင် Root Composable (ၼႂ်း Code ၼႆႉပဵၼ် `Box`) မၼ်းပဵၼ် တူဝ်တေၵႂႃႇမၢႆဝႆႉဝႃႈ Keyboard ႁဝ်း တေၵႂႃႇၵိၼ်ပိုၼ်ႉတီႈ တီႈၼႃႈၸေႃး (Screen) တၢၼ်ႇလႂ်ၼႆယဝ်ႉ။ သႅၼ်း `260.dp` ပဵၼ်သႅၼ်းဢၼ်တႅတ်ႈတေႃး သုတ်း တႃႇ Keyboard ၼႃႈၸေႃး Standard ယဝ်ႉ။
+* **`ComposeView(this)`**: ၼႆႉပဵၼ်ၵၢၼ် Instant ဢဝ် View တူဝ်မၼ်းၶိုၼ်းမႃးၼႂ်း Memory ၵမ်းသိုဝ်ႈ ၸွမ်းၼိုင်ႈၵၢၼ်သူင်ႇ `Context` ၶွင် Service ၶဝ်ႈၵႂႃႇယဝ်ႉ။
+* **`setContent { ... }`**: ၼႂ်းဝူင်း `setContent` ၼႆႉ ႁဝ်းၸၢင်ႈတႅမ်ႈ Code ၸႂ်ႉ Material 3 Composable (မိူၼ်ၼင်ႇ `Box`, `Text`, `Row`, `Column`) လႆႈၵူႈဢၼ် မိူၼ်ၼင်ႇ ၼႂ်းဢႅပ်ႉဢၼ်မီး Activity Standard ၵူႈပိူင်ယဝ်ႉ။
+* **`Modifier.height(250.dp)`**: သႅၼ်းသုင် (Height) ၶွင် Root Composable (ၼႂ်း Code ၼႆႉပဵၼ် `Box`) မၼ်းပဵၼ် တူဝ်တေၵႂႃႇမၢႆဝႆႉဝႃႈ Keyboard ႁဝ်း တေၵႂႃႇၵိၼ်ပိုၼ်ႉတီႈ ၼႃႈၸေႃး (Screen) တၢၼ်ႇလႂ်ၶႃႈ။ သႅၼ်း `250.dp` ပဵၼ်သႅၼ်းဢၼ်တႅတ်ႈတေႃးသုတ်း တႃႇ Keyboard ၼႃႈၸေႃး Standard ၶႃႈ။
 
 ---
 
 ### 3. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
 
-* `onCreateInputView()` တေႁဵတ်းၵၢၼ် **ပွၵ်ႈလဵဝ်ၵူၺ်း** မိူဝ်ႈ System တေတေႇပိုတ်ႇ UI Keyboard လႄႈ `ComposeView` တေထုၵ်ႇ သၢင်ႈဝႆႉၼႂ်း Memory ၸွမ်းသၢႆၸႂ် Service ယဝ်ႉ။
-* ႁဝ်းၸၢင်ႈၸႂ်ႉ Material 3 Composable (မိူၼ်ၼင်ႇ `Text`, `Box`, `Button`) ၼႂ်း Keyboard လႆႈၵူႈဢၼ် မိူၼ်ၼင်ႇ ၼႂ်းဢႅပ်ႉ ဢၼ်မီး Activity ၼၼ်ႉယဝ်ႉ။
+* `onCreateInputView()` တေႁဵတ်းၵၢၼ် **ပွၵ်ႈလဵဝ်ၵူၺ်း** မိူဝ်ႈ System တေစတင် ပိုတ်ႇ UI Keyboard၊ ၵေႃႈလႄႈ `ComposeView` တေထုၵ်ႇ သၢင်ႈဝႆႉၼႂ်း Memory ႁိုင်ႁိုင် ၸွမ်းသၢႆၸႂ် Service ၶႃႈ။
+* ယွၼ်ႉႁဝ်း Bind Owners ဝႆႉတီႈ `decorView` ဢွၼ်တၢင်းသုတ်းလႄႈ မိူဝ်ႈ `ComposeView` စတင် Attached ၶဝ်ႈ Window မၼ်းတေႁၼ် Lifecycle ၵမ်းသိုဝ်ႈ သေ လႅၼ်ႈ UI လႆႈၵတ်ႉၵတ်ႉ ဢမ်ႇ Crash ယဝ်ႉၶႃႈ။
 
 ---
+
+ယဝ်ႉတူဝ်ႈၵႂႃႇယဝ်ႉၶႃႈ တႃႇ Lesson 6! သိုပ်ႇသူင်ႇပၼ် Lesson 7 ၵမ်းသိုဝ်ႈလႆႈယဝ်ႉၶႃႈလႄႈ?
