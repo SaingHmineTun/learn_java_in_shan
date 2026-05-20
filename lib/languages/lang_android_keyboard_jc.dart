@@ -2,8 +2,7 @@ const akjcTopics = {
   1: "Foundations of Android Input Methods",
   2: "Designing the Keyboard Layout with Jetpack Compose",
   3: "State Management & Touch Interaction",
-  4: "Communicating with the Input Connection",
-  5: "Advanced Features & Community Tools",
+  4: "Core Intelligent Engine & Input Method Lifecycle",
 };
 
 const akjcModules = {
@@ -35,5 +34,15 @@ const akjcModules = {
     21: "Advanced Touch Feedback: Key Previews and Popups",
     22: "App Setting (Select Theme, Enable Key Sound/Vibrate/Handwriting",
     23: "Implementing the Keyboard Onboarding Wizard Flow (Enable & Select Validation)"
+  },
+  4: {
+    24: "Pure Jetpack Compose Emoji & Numeric Layout Engines",
+    25: "The Master Controller Routing Framework (The State Machine)",
+    26: "Cursor Motion & Selection Coordinates Tracker",
+    27: "Hardware Keyboard Interoperability Integration",
+    28: "EditorInfo Attributes Dynamic Routing (Smart InputTypes)",
+    29: "Suggestion Bar & Predictive Word Candidate Row Component",
+    30: "Speech-to-Text Speech Recognition Integration (Voice Input)",
+    31: "Batch Edit Lifecycle Commit & Frame Rate Optimization"
   }
 };
