@@ -4,7 +4,6 @@ const akjcTopics = {
   3: "State Management & Touch Interaction",
   4: "Communicating with the Input Connection",
   5: "Advanced Features & Community Tools",
-  6: "Deployment, Optimization & UX"
 };
 
 const akjcModules = {
@@ -26,5 +25,15 @@ const akjcModules = {
     13: "Implementing the Handwriting Engine for Shan",
     14: "Implementing the Handwriting Engine for Myanmar",
     15: "Displaying Custom Shan/Myanmar Typography on Keys"
+  },
+  3: {
+    16: "Fixing Android 15 Edge-to-Edge Overlaps using Window Insets",
+    17: "Designing the Dynamic Theme Architecture Data Structure",
+    18: "Creating the 10 Keyboard Themes ( E-Vowel Themes to Dark Modes)",
+    19: "Managing Theme States via Shared Preferences",
+    20: "Touch Feedback: Key Sound and Vibrate",
+    21: "Advanced Touch Feedback: Key Previews and Popups",
+    22: "App Setting (Select Theme, Enable Key Sound/Vibrate/Handwriting",
+    23: "Implementing the Keyboard Onboarding Wizard Flow (Enable & Select Validation)"
   }
 };
