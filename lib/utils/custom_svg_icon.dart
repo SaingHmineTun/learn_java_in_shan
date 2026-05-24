@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomSvgIcon extends StatelessWidget {
-  final String path;
+  final String filename;
   final double size;
   final Color? color;
 
   const CustomSvgIcon({
     super.key,
-    required this.path,
-    this.size = 24.0,
+    required this.filename,
+    this.size = 32.0,
     this.color,
   });
 
@@ -19,7 +19,7 @@ class CustomSvgIcon extends StatelessWidget {
       width: size,
       height: size,
       child: SvgPicture.asset(
-        path,
+        "assets/icons/$filename",
         // The colorFilter pipeline ensures clean color masking without
         // losing pixel coordinates or vector sharp edges
         colorFilter: color != null

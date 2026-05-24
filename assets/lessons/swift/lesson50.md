@@ -1,9 +1,10 @@
 ## Lesson 50: Extensions: Adding Functionality to Existing Types
 
-**Extensions** ၸွႆးႁႂ်ႈႁဝ်းသႂ်ႇ Method, Computed Properties, လႄႈ Initializers မႂ်ႇမႂ်ႇ ၶဝ်ႈၵႂႃႇၼႂ်း Type ဢၼ်မီးဝႆႉယဝ်ႉ (Existing Type)။ လွင်ႈၶိုၵ်ႉတွၼ်းမၼ်းတႄႉ ပဵၼ်ဝႃႈ **ႁဝ်းဢမ်ႇလူဝ်ႇမီး Code ငဝ်ႈတႄႇ (Source Code)** မၼ်းၵေႃႈ ႁဝ်းမႄးလႆႈၶႃႈ။
+**Extensions** ၸွႆးႁႂ်ႈႁဝ်းသႂ်ႇ Method ၊ Computed Properties လႄႈ Initializers မႂ်ႇမႂ်ႇ ၶဝ်ႈၵႂႃႇၼႂ်း Type ဢၼ်မီးဝႆႉၼၼ်ႉယဝ်ႉ (Existing Type)။ 
+လွင်ႈၶိုၵ်းတွၼ်းမၼ်းတေႉၵေႃႈ **ႁဝ်းဢမ်ႇလူဝ်ႇမီး Code ငဝ်ႈတႄႇ (Source Code)** မၼ်း တွၼ်ႈတႃႇ မူၼ်ႉမႄးတႅမ်ႈမၼ်းယဝ်ႉ။
 
 ### 1. Syntax ၵၢၼ်ၸႂ်ႉတိုဝ်း
-ႁဝ်းၸႂ်ႉ Keyword `extension` သေၸွမ်းလူၺ်ႈၸိုဝ်ႈ Type ဢၼ်ႁဝ်းၶႂ်ႈမႄးၶႃႈ။
+ႁဝ်းၸႂ်ႉ Keyword `extension` လႄႈ ၸႂ်ႉၸွမ်းၸိုဝ်ႈ Type ဢၼ်ႁဝ်းၶႂ်ႈမႄးယဝ်ႉ။
 
 ```swift
 extension Int {
@@ -20,7 +21,7 @@ print(number.squared()) // Output: 25
 ---
 
 ### 2. ၵၢၼ်ၸႂ်ႉ Extension တွၼ်ႈတႃႇ Protocol
-ႁဝ်းၸၢင်ႈၸႂ်ႉ Extension တွၼ်ႈတႃႇႁဵတ်းႁႂ်ႈ Type ၼၼ်ႉ "ႁဵတ်းၸွမ်း" (Conform) Protocol မဵဝ်းမဵဝ်း ႁႂ်ႈ Code ႁဝ်းသႅၼ်ႈသႂ်လိူဝ်ၵဝ်ႇၶႃႈ။
+ႁဝ်းၸၢင်ႈၸႂ်ႉ Extension တွၼ်ႈတႃႇႁဵတ်းႁႂ်ႈ Type ၼၼ်ႉ "ႁဵတ်းၸွမ်း" (Conform) Protocol မဵဝ်းမဵဝ်း ႁႂ်ႈ Code ႁဝ်းသႅၼ်ႈသႂ်လိူဝ်ၵဝ်ႇယဝ်ႉ။
 
 ```swift
 struct ShanUser {

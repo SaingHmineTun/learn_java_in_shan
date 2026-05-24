@@ -1,5 +1,5 @@
-import 'package:dev_icons/dev_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:simple_icons/simple_icons.dart';
 import 'package:tmkacademy/screens/language_screen.dart';
 import 'package:tmkacademy/utils/language.dart';
 import '../utils/colors.dart';
@@ -10,100 +10,136 @@ import 'donation_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-
   Map<String, dynamic> _getLanguageStyle(String lang) {
-    switch (lang.toLowerCase()) {
-      case 'javafx':
+    switch (lang.toLowerCase().trim()) {
+
+    // --- JAVA ECOSYSTEM ---
       case 'java':
+      case 'javafx':
         return {
-          'color': const Color(0xFFE76F00), // Java Orange
-          'icon': DevIcons.javaPlain,
-        };
-      case 'swift' || 'swift_ui':
-        return {
-          'color': const Color(0xFFF7A41D), // Swift Orange
-          'icon': DevIcons.swiftPlain,
-        };
-      case 'ios_keyboard':
-        return {
-          'color': const Color(0xFF007AFF), // Premium iOS System Blue
-          'icon': CustomSvgIcon(
-            path: 'assets/icons/ios_keyboard.svg',
-            size: 32.0,
-          ),
+          'color': const Color(0xFFED8B00), // Official Java Corporate Orange
+          'icon': SimpleIcons.openjdk,
         };
       case 'java_springboot':
         return {
-          'color': const Color(0xFF09F018), // Java Orange
-          'icon': DevIcons.javaPlain,
+          'color': const Color(0xFF6DB33F), // Official Spring Boot Leaf Green
+          'icon': SimpleIcons.springboot,
         };
-      case "jetpack_compose" || "android_keyboard" || "android_xml_kotlin":
+
+    // --- APPLE ECOSYSTEM ---
+      case 'swift':
+      case 'swift_ui':
         return {
-          'color': const Color(0xFF09F018), // Java Orange
-          'icon': DevIcons.androidPlain,
+          'color': const Color(0xFFF05138), // Official Swift Flame Orange
+          'icon': SimpleIcons.swift,
         };
-      case 'python_tkinter': // Adding Tkinter here or as a separate case
+      case 'ios_keyboard':
+        return {
+          'color': const Color(0xFF007AFF), // Premium Apple iOS System Blue
+          'icon': CustomSvgIcon(filename: 'ios_keyboard.svg'),
+        };
+
+    // --- ANDROID ECOSYSTEM ---
+      case 'android_keyboard':
+      case 'android_xml_kotlin':
+        return {
+          'color': const Color(0xFF3DDC84), // Official Android Robot Green
+          'icon': SimpleIcons.android,
+        };
+      case 'jetpack_compose':
+        return {
+          'color': const Color(0xFF4285F4), // Jetpack Compose Tech Blue
+          'icon': SimpleIcons.jetpackcompose,
+        };
+
+    // --- PYTHON ECOSYSTEM ---
       case 'python':
+      case 'python_tkinter':
         return {
-          'color': const Color(0xFF3776AB), // Python Blue
-          'icon': DevIcons.pythonPlain,
+          'color': const Color(0xFF3776AB), // Official Python Steel Blue
+          'icon': SimpleIcons.python,
         };
+
+    // --- DATA & TOOLS ---
       case 'mysql':
         return {
-          'color': const Color(0xFF4479A1), // MySQL Blue
-          'icon': DevIcons.mysqlPlain,
+          'color': const Color(0xFF4479A1), // Official MySQL Marine Blue
+          'icon': SimpleIcons.mysql,
         };
       case 'git':
         return {
-          'color': const Color(0xFFF05032), // Git Orange-Red
-          'icon': DevIcons.gitPlain,
+          'color': const Color(0xFFF05032), // Official Git Vermillion Red
+          'icon': SimpleIcons.git,
         };
-      case 'haskell':
+
+    // --- C LANGUAGE FAMILY ---
+      case 'c':
         return {
-          'color': const Color(0xFF5E5086), // Haskell Purple
-          'icon': DevIcons.haskellPlain,
+          'color': const Color(0xFFA8B9CC), // Official C Slate Blue
+          'icon': SimpleIcons.c,
         };
-      case 'basic':
+      case 'cpp':
         return {
-          'color': const Color(0xFFAA00FF),
-          'icon': Icons.terminal_rounded,
-          // DevIcons ဢမ်ႇမီး Basic၊ ၸႂ်ႉ Terminal ဝႆႉမိူၼ်ၵဝ်ႇၶႃႈ
+          'color': const Color(0xFF00599C), // Official C++ Iso Blue
+          'icon': SimpleIcons.cplusplus,
         };
-      case 'kotlin':
-        return {'color': const Color(0xFF7F52FF), 'icon': DevIcons.kotlinPlain};
-      case 'dart':
-        return {'color': const Color(0xFF00B0FF), 'icon': DevIcons.dartPlain};
+      case 'csharp':
+        return {
+          'color': const Color(0xFF512BD4), // Official Microsoft C# / .NET Deep Purple
+          'icon': SimpleIcons.dotnet,
+        };
+
+    // --- WEB CORE ---
       case 'html':
-        return {'color': const Color(0xFFE44D26), 'icon': DevIcons.html5Plain};
+        return {
+          'color': const Color(0xFFE34F26), // Official HTML5 Orange-Red
+          'icon': SimpleIcons.html5,
+        };
       case 'css':
-        return {'color': const Color(0xFF1572B6), 'icon': DevIcons.css3Plain};
+        return {
+          'color': const Color(0xFF1572B6), // Official CSS3 Blue
+          'icon': SimpleIcons.css3,
+        };
       case 'js':
       case 'javascript':
         return {
-          'color': const Color(0xFFF7DF1E),
-          'icon': DevIcons.javascriptPlain,
+          'color': const Color(0xFFF7DF1E), // Official JavaScript Amber Yellow
+          'icon': SimpleIcons.javascript,
         };
       case 'ts':
       case 'typescript':
         return {
-          'color': const Color(0xFF3178C6), // Official TypeScript Blue
-          'icon': DevIcons.typescriptPlain,
+          'color': const Color(0xFF3178C6), // Official TypeScript Ocean Blue
+          'icon': SimpleIcons.typescript,
         };
-      case 'c':
-        return {'color': const Color(0xFFA8B9CC), 'icon': DevIcons.cPlain};
-      case 'cpp':
+
+    // --- MODERN LANGUAGES ---
+      case 'kotlin':
         return {
-          'color': const Color(0xFF4E9A06), // C++ Green
-          'icon': DevIcons.cplusplusPlain,
+          'color': const Color(0xFF7F52FF), // Official Kotlin Purple-Violet
+          'icon': SimpleIcons.kotlin,
         };
-      case 'csharp':
+      case 'dart':
         return {
-          'color': const Color(0xFF512BD4), // .NET / C# Purple
-          'icon': DevIcons.csharpPlain,
+          'color': const Color(0xFF00B4AB), // Official Dart Teal
+          'icon': SimpleIcons.dart,
         };
+      case 'haskell':
+        return {
+          'color': const Color(0xFF5E5086), // Official Haskell Deep Purple
+          'icon': SimpleIcons.haskell,
+        };
+
+    // --- LEGACY / FALLBACK LANGUAGES ---
+      case 'basic':
+        return {
+          'color': const Color(0xFF4D4D4D), // Dark Gray Terminal Profile
+          'icon': SimpleIcons.gnubash, // Terminal environment look since BASIC has no branding icon
+        };
+
       default:
         return {
-          'color': kBrandGold, // ၸႂ်ႉ Constant ၶေႃႈၸဝ်ႈၶူးမိူၼ်ၵဝ်ႇ
+          'color': kBrandGold, // Consistent Fallback Profile Accent
           'icon': Icons.code_rounded,
         };
     }

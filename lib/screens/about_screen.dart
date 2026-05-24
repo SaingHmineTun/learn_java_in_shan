@@ -1,5 +1,5 @@
-import 'package:dev_icons/dev_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:simple_icons/simple_icons.dart';
 import 'package:tmkacademy/utils/colors.dart'; // Brand Palette
 import 'package:url_launcher/url_launcher.dart';
 
@@ -99,19 +99,23 @@ class AboutScreen extends StatelessWidget {
               child: Container(
                 constraints: const BoxConstraints(maxWidth: 600),
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 30,
+                  ),
                   child: Column(
                     children: [
                       _buildContactCard(
-                        icon: DevIcons.googlePlain,
+                        icon: SimpleIcons.google,
                         iconColor: kBrandOrange,
                         label: "EMAIL ADDRESS",
                         value: "tmk.muse@gmail.com",
                         onTap: _sendEmail,
                       ),
                       _buildContactCard(
-                        icon: DevIcons.facebookPlain,
-                        iconColor: const Color(0xFF1877F2), // Standard FB Blue
+                        icon: SimpleIcons.facebook,
+                        iconColor: const Color(0xFF1877F2),
+                        // Standard FB Blue
                         label: "FACEBOOK PAGE",
                         value: "ထုင်ႉမၢဝ်းၶမ်း",
                         onTap: () => _launchUrl(
@@ -119,7 +123,7 @@ class AboutScreen extends StatelessWidget {
                         ),
                       ),
                       _buildContactCard(
-                        icon: DevIcons.githubOriginal,
+                        icon: SimpleIcons.github,
                         iconColor: kBrandWhite,
                         label: "PROJECT REPOSITORY",
                         value: "Get GitHub Source Code",
@@ -128,7 +132,7 @@ class AboutScreen extends StatelessWidget {
                         ),
                       ),
                       _buildContactCard(
-                        icon: DevIcons.chromePlain,
+                        icon: SimpleIcons.googlechrome,
                         iconColor: kBrandBlue,
                         label: "DEVELOPER WEBSITE",
                         value: "www.saimao.top",
@@ -173,10 +177,7 @@ class AboutScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: kBrandSurface,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: kBrandBlue.withOpacity(0.1),
-          width: 1,
-        ),
+        border: Border.all(color: kBrandBlue.withOpacity(0.1), width: 1),
       ),
       child: Material(
         color: Colors.transparent,
