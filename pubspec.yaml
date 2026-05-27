@@ -58,6 +58,7 @@ flutter:
     - assets/lessons/swift/
     - assets/lessons/swift_ui/
     - assets/lessons/ios_keyboard/
+    - assets/lessons/android_keyboard_jc/
     - assets/images/
     - assets/icons/
   fonts:

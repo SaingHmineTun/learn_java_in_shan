@@ -22,7 +22,8 @@ const languages = [
   "jetpack_compose",
   "git",
   "mysql",
-  "android_keyboard"
+  "android_keyboard",
+  "android_keyboard_jc",
 ];
 const fullName = {
   "basic": "Computer Basic",
@@ -48,5 +49,6 @@ const fullName = {
   "git": "Git & Github",
   "mysql": "MySQL",
   "java_springboot": "Java Spring Boot",
-  "android_keyboard": "Android Keyboard"
+  "android_keyboard": "Android Keyboard",
+  "android_keyboard_jc": "Android Keyboard with Jetpack Compose"
 };

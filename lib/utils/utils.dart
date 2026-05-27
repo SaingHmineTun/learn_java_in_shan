@@ -1,4 +1,5 @@
 // TOPIC SECTION (Module 1 - Introduction)
+import 'package:tmkacademy/languages/lang_android_keyboard_jc.dart';
 import 'package:tmkacademy/languages/lang_android_xml_kotlin.dart';
 import 'package:tmkacademy/languages/lang_c.dart';
 import 'package:tmkacademy/languages/lang_cpp.dart';
@@ -50,6 +51,7 @@ const Map<String, Map<int, String>> topics = {
   "jetpack_compose": jetpackComposeTopics,
   "android_keyboard": akTopics,
   "ios_keyboard": iosKeyboardTopics,
+  "android_keyboard_jc": akjcTopics,
 };
 
 const Map<String, Map<int, Map<int, String>>> modules = {
@@ -77,6 +79,7 @@ const Map<String, Map<int, Map<int, String>>> modules = {
   "jetpack_compose": jetpackComposeModules,
   "android_keyboard": akModules,
   "ios_keyboard": iosKeyboardModules,
+  "android_keyboard_jc": akjcModules
 };
 
 final Map<String, Map<int, Lesson>> lessons = {
@@ -104,6 +107,7 @@ final Map<String, Map<int, Lesson>> lessons = {
   "android_xml_kotlin": axKotlinLessons,
   "android_keyboard": akLessons,
   "ios_keyboard": iosKeyboardLessons,
+  "android_keyboard_jc": akjcLessons,
 };
 
 class Lesson {

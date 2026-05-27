@@ -37,6 +37,7 @@ class HomeScreen extends StatelessWidget {
 
     // --- ANDROID ECOSYSTEM ---
       case 'android_keyboard':
+      case 'android_keyboard_jc':
       case 'android_xml_kotlin':
         return {
           'color': const Color(0xFF3DDC84), // Official Android Robot Green
