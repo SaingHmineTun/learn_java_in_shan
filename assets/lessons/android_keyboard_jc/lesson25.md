@@ -129,7 +129,7 @@ object Keys {
 
 ---
 
-### Core Architecture Mapping
+### မၢႆတွင်း (Core Architecture Mapping)
 
 * **Predictable State Transitions (FSM Architecture):** ၵၢၼ်တတ်းၸႅၵ်ႇ Logic ဢွၵ်ႇပဵၼ် Methods `switchScreenTo()` ลႄႈ `switchLanguageTo()` ၸွႆႈႁႄႉၵင်ႈ **Race Conditions (လွင်ႈလႅၼ်ႈၶေႃႈမုၼ်း သွၼ်ႉၵၼ်)** လႆႈ 100% ၶႃႈ။ State ႁဝ်းတေလႅၼ်ႈပဵၼ် Deterministic Linear Pathway ၵူၺ်း၊ မၼ်းတေလူတ်ႇယွၼ်ႇလွင်ႈပဵၼ် Memory Leak ลႄႈ Bugs ၶွင် Keyboard UI လႆႈၵျႅၼ်ႇၶႅၼ်ႇသုတ်းၶႃႈ။
 * **Redundant Operations Filtering (Cache Guarding):** តူဝ် `if (currentScreen.value == targetScreen) return` မၼ်းပဵၼ် Tool ဢၼ်ၸွႆႈၵုမ်းထိန်း Performance လီသုတ်းၶႃႈ။ သင် User ၼဵၵ်းပုမ်ႇ "123" သမ်ႉထႅင်ႈ လၢႆလၢႆပွၵ်ႈ ၼႂ်းၼႃႈ Numeric Layout, တူဝ် Service တေ Filter Filter ပႅတ်ႈ ၵမ်းလဵဝ် သေ တေဢမ်ႇသူင်ႇ Request ၵႂႃႇၸူး Compose Layer ႁႂ်ႈလႆႈ Recompose လၢႆလၢႆ ႁဵတ်းႁႂ်ႈ CPU/RAM ၵတ်းယဵၼ် လႅၼ်ႈလႆႈ Ultra-Fast သုတ်းသုတ်းၶႃႈ။

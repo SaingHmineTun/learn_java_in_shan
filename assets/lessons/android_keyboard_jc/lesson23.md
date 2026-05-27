@@ -196,7 +196,7 @@ class MainActivity : ComponentActivity() {
 
 ---
 
-### 3. ၶေႃႈသႅၼ်းၸิၼႄ (Core Takeaways for Wizard Flow)
+### 3. မၢႆတွင်း (Core Takeaways for Wizard Flow)
 
 * **`imm.showInputMethodPicker()`**: တူဝ်ၼႆႉ မၼ်းပဵၼ် Native Android API ဢၼ်တေ Auto-Pop Up တႅမ်ႈ Dialog လိူၵ်ႈ Keyboard (IME Switcher Selector) ၶဝ်ႈမႃးၼႄၼိူဝ် ၼႃႈၸေႃးၵမ်းသိုဝ်ႈ ၶၼ်ၽတ်ႉၽႅဝ်း သုတ်းသုတ်းၶႃႈ။
 * **`onResume()` Native Bridge Sync**: ၵၢၼ်ၸႂ်ႉ `onResume()` မၼ်းပဵၼ် တွၼ်ႈလၵ်းလၵ်းၶႃႈ။ မိူဝ်ႈ User ၵႂႃႇၼဵၵ်းပိုတ်ႇ Keyboard ၼႂ်း System Settings ယဝ်ႉ၊ သေ ပိၼ်ႇၶိုၼ်းမႃး (Back) ၼႂ်း App, `onResume()` တေ Auto-Trigger `updateKeyboardStates()` သေ လႅၵ်ႈ Step UI ၵႂႃႇ Step 2 ဢမ်ႇၼၼ် Settings Screen ၵမ်းသိုဝ်ႈ ႁင်းမၼ်း တႅတ်ႈတေႃး 100% ၶႃႈ။

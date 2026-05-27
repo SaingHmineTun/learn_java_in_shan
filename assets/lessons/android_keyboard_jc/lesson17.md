@@ -147,7 +147,7 @@ fun KeyboardKey(
 
 ---
 
-### 3. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 3. မၢႆတွင်း (Core Takeaways)
 
 * **Encapsulated Design Logic:** တူဝ် Component `KeyboardKey` ယၢမ်းလဵဝ် မၼ်းပဵၼ် Architecture ဢၼ်ၵျႅၼ်ႇၶႅၼ်ႇသုတ်းယဝ်ႉၶႃႈ။ မၼ်းႁပ်ႉႁူႉၵူၺ်း `theme` တူဝ်လဵဝ်၊ သေ လွင်ႈလႅၵ်ႈလၢႆႈသီ (Pressed State) ဢမ်ႇၼၼ် Geometry Properties (Border Width, Radius) တင်းသဵင်ႈ တေသုၼ်ႉလႅၼ်ႈႁင်းမၼ်းဝႆႉၽၢႆႇၼႂ်း။
 * **Declarative Key Invocation:** မိူဝ်ႈဢဝ်ၵႂႃႇၸႂ်ႉၼႂ်း Layout, Code ႁဝ်းတေသႅၼ်းသႅတ်ႈ မိူၼ်ၼင်ႇ:

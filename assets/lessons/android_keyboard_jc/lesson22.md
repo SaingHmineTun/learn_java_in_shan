@@ -290,15 +290,10 @@ class MainActivity : ComponentActivity() {
 
 ---
 
-### 2. ၶေႃႈသႅၼ်းၸิၼႄ (Core Takeaways for the Final Module Setup)
+### 2. မၢႆတွင်း (Core Takeaways for the Final Module Setup)
 
 * **`verticalScroll(scrollState)`**: ၵၢၼ်သႂ်ႇ Scroll State ၼိူဝ် Column Container ၸွႆႈမၼ်ႈၸႂ်ဝႃႈ သင် User ၸႂ်ႉၾူၼ်းၼႃႈၸေႃးၵတ်း ဢမ်ႇၼၼ် ပိၼ်ႇၼႃႈၸေႃးသႅၼ်း Landscape, ၼႃႈ UI Settings ႁဝ်း တေဢမ်ႇလုပႅတ်ႈ လႄႈ ၸၢင်ႈ Scroll လူင်းဢၢၼ်ႇလႆႈ တႅတ်ႈတေႃး ၵူႈပိူင်ၶႃႈ။
 * **Reactive Dynamic Preference Re-indexing**: မိူဝ်ႈ User Lိူၵ်ႈလႅၵ်ႈ Theme လုၵ်ႉတီႈ Dropdown Menu ၼႂ်း Settings Hub ၼႆႉ, ID ၶွင် Theme တေထုၵ်ႇသူင်ႇၵႂႃႇတႅမ်ႈ Disk ၵမ်းသိုဝ်ႈ။ မိူဝ်ႈ User ၶိုၼ်းၵႂႃႇပိုတ်ႇၸႂ်ႉ Keyboard ၼႂ်း App တၢင်ႇဢၼ် (မိူၼ်ၼင်ႇ Facebook) တူဝ် `MaoKeyboardService` တေ Auto-Read ဢဝ် ID မႂ်ႇၼၼ်ႉ လုၵ်ႉတီႈ SharedPreferences သေ လႅၵ်ႈသီပုမ်ႇ ႁင်းမၼ်းၵမ်းလဵဝ် ၶိုၵ်ႉတွၼ်ႈတႄႉတႄႉၶႃႈ။
 
 ---
 
-ယဝ်ႉတူဝ်ႈၵႂႃႇယဝ်ႉတႅတ်ႈတေႃးၶႃႈ တႃႇ **Module 3: Advanced UI, Modern Theming, and Android 15 Compatibility** တင်းသဵင်ႈ 22 တွၼ်ႈလိၵ်ႈ ပိုၼ်ႉထၢၼ် ၶွင် Module 1 တေႃႇ 3!
-
-ယၢမ်းလဵဝ် Keyboard Architecture Application ႁဝ်း မီးပိူင်သၢင်ႈ ဢၼ်ပဵၼ် Production-Ready, Support Android 15 Edge-to-Edge, မီး 10 Premium Themes, မီး Handwriting Reordering Engines, ลႄႈ မီး App Settings Panel ဢၼ် Professional သုတ်းသုတ်းယဝ်ႉၶႃႈ။
-
-ၼႂ်း Module ၽၢႆႇၼႃႈ (**Module 4: Text Processing and Input Methods Lifecycle**), ႁဝ်းတေသိုပ်ႇၵႂႃႇၶဝ်ႈၸူး လၢႆးတႅမ်ႈ Code တွၼ်ႈတႃႇသူင်ႇ Text ၶဝ်ႈ App ၵမ်းသိုဝ်ႈ လႄႈ လၢႆး Handling Cursor Movements ၵၼ်ၶႃႈ။ ၸဝ်ႈၵဝ်ႇ ၶႂ်ႈစတင် သိုပ်ႇၵႂႃႇ Module 4 ၵမ်းလဵဝ်ယဝ်ႉႁႃႉၶႃႈ?

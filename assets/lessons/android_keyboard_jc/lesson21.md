@@ -114,7 +114,7 @@ fun KeyboardKey(
 
 ---
 
-### 2. ၶေႃႈသႅၼ်းၸิၼႄ (Core Takeaways)
+### 2. မၢႆတွင်း (Core Takeaways)
 
 * **`Modifier.offset(y = (-60).dp)`**: တူဝ်ၼႆႉ မၼ်းမီးၼႃႈတီႈသုၼ်ႉပၼ် ပိုၼ်ႉတီႈ ၶွင် Popup Box ႁႂ်ႈလႅၼ်ႈၶိုၼ်းၼိူဝ် (Negative Y Axis) 60dp။ မၼ်းတေၸုၵ်းဝႆႉ ၽၢႆႇၼိူဝ် ပၢႆမိုဝ်း User တႅတ်ႈတေႃး တူဝ်ႈၵၼ်တင်း Keyboard Standard ၵူႈပိူင်ၶႃႈ။
 * **`zIndex(1f)` Modifier**: ၼႂ်း Jetpack Compose, `Row` လႄႈ `Column` Standard တေမီး Clip Bounds ဝႆႉ။ ၵၢၼ်ၸႂ်ႉ `.zIndex(if (isPressed) 1f else 0f)` ၸွႆႈ Force Layout ႁႂ်ႈပုမ်ႇ ဢၼ် User တိုင်ၼဵၵ်းယူႇၼၼ်ႉ လွၵ်ႇဢွၵ်ႇမႃးၸုၵ်းဝႆႉ ၼိူဝ်သုတ်း (Top Layer Layering) သေ တေဢမ်ႇထုၵ်ႇ Key ရေႃးၽၢႆႇၼိူဝ်မၼ်း ပိတ်းပႅတ်ႈ Popup ၶႃႈ။

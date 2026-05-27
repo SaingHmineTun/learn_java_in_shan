@@ -64,7 +64,7 @@ Keyboard ႁဝ်းၼႆႉ မၼ်းမီး တူဝ်လိၵ်ႈ
 
 ---
 
-### 3. ၶေႃႈသႅၼ်းၸိၼႄ (Breakdown) Parameters ၼႂ်း `<subtype>`
+### 3. ၶေႃႈသပ်းလႅင်း (Breakdown) Parameters ၼႂ်း `<subtype>`
 
 `<subtype>` မၼ်းပဵၼ် ၵၢၼ်မၢႆဝႆႉ ၽႃႇသႃႇ (Languages) ဢၼ်မီးၼႂ်း Keyboard ႁဝ်းယဝ်ႉ။ ၼႂ်း Code ၽၢႆႇၼိူဝ် ႁဝ်းလႆႈသၢင်ႈဝႆႉ 3 ဢၼ်:
 
@@ -83,7 +83,7 @@ Keyboard ႁဝ်းၼႆႉ မၼ်းမီး တူဝ်လိၵ်ႈ
 
 ---
 
-### 4. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 4. မၢႆတွင်း (Core Takeaways)
 
 * ၾၢႆႇ `method.xml` မၼ်းႁဵတ်းၵၢၼ်ပဵၼ် ၶူဝ်ၵၢႆႇ (Bridge) တႃႇၼႄ System Settings ႁႂ်ႈႁူႉၸႅင်ႈဝႃႈ Keyboard ႁဝ်းၼႆႉ မီးၽႃႇသႃႇသင်ၽွင်ႈ။
 * သင်ဝႃႈ ဢမ်ႇသႂ်ႇ `<subtype>` ဝႆႉၼႆ User တေဢမ်ႇၸၢင်ႈ လႅၵ်ႈလၢႆႈၽႃႇသႃႇ ၸွမ်းပိူင် Android Language & Input Settings လႆႈယဝ်ႉ။

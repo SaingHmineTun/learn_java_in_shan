@@ -102,7 +102,7 @@ System တေသူင်ႇ Key Events ၶဝ်ႈၸူး Callback Standard 
 
 ---
 
-### Core Architecture Takeaways
+### မၢႆတွင်း (Core Architecture Takeaways)
 
 * **`updateInputViewShown()` Dynamic Automation Sync:** ၵၢၼ်ၸႂ်ႉ `onConfigurationChanged` ႁူမ်ႈတင်း `updateInputViewShown()` မၼ်းပဵၼ် **Bulletproof Integration** ၶႃႈ။ မိူဝ်ႈ User တိုၵ်ႉတႅမ်ႈလိၵ်ႈယူႇသေ ၼဵၵ်းပိုတ်ႇ Switch Bluetooth Keyboard, တူဝ် Android Framework တေ Auto-Detect, သေ Trigger Re-evaluate ႁဵတ်းႁႂ်ႈ Soft UI Panel ႁဝ်း လႅၼ်ႈလူင်း (Auto-Dismiss Hide) ၵမ်းလဵဝ် ၶၼ်ၽတ်ႉၽႅဝ်း သွတ်ႈသႅတ်ႈ သုတ်းသုတ်းၶႃႈ။
 * **Screen Estate Preservation Matrix:** လၢႆးဝၢင်း Layout Algorithm ၼႆႉ တေႁဵတ်းႁႂ်ႈ Keyboard **TMK Keyboard Pro** ႁဝ်း မီး Behavior ၵျႅၼ်ႇၶႅၼ်ႇ မိူၼ် App Top-Tier Level standard ပိူၼ်ႈ၊ ယွၼ်ႉမၼ်းၵုမ်းထိန်း ဢမ်ႇပၼ်မီး Views တူဝ်လုၵ်ႉလွၵ်ႇ သွၼ်ႉၵၼ် ႁႂ်ႈၵိၼ်ပိုၼ်ႉတီႈ ၼႃႈၸေႃး (OLED Friendly UI Management) ၶႃႈယဝ်ႉ။

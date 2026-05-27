@@ -58,7 +58,7 @@
 
 ---
 
-### 3. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 3. မၢႆတွင်း (Core Takeaways)
 
 * သင်ဝႃႈ ဢမ်ႇသႂ်ႇ permission `BIND_INPUT_METHOD` ဝႆႉၼႆ Android System တေလႅၼ်ႈမႃး ပိၵ်ႉပႅတ်ႈ (Ignore) Keyboard Service ႁဝ်း လႄႈ တေဢမ်ႇပိုတ်ႇၼႄပၼ် ၼႂ်းသဵၼ်ႈမၢႆ Keyboard Settings ယဝ်ႉ။
 * ၵၢၼ်သႂ်ႇ `intent-filter` လႄႈ `meta-data` မၼ်းပဵၼ် ၵၢၼ်ၵွင်ႉသၢႆ သိုပ်ႇပၼ် ၼႂ်းၵႄႈ Code Service တင်း Android System framework ယဝ်ႉ။

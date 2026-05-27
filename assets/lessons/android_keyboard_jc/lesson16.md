@@ -91,7 +91,7 @@ Column(
 
 ---
 
-### 3. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 3. မၢႆတွင်း (Core Takeaways)
 
 * **Edge-to-Edge Standard:** တႄႇၸဝ်ႈၵဝ်ႇတႅမ်ႈ Project ၼႂ်းပီ 2026 ၼႆႉ ၾူၼ်း Android 15/16 တင်းသဵင်ႈ တိုၼ်းတေသုၼ်ႉ Layout ၶဝ်ႈၵႂႃႇၽၢႆႇတႂ်ႈ System Bars ဝႆႉထႃႈ ၵူႈပိူင်ယဝ်ႉ။ ၵၢၼ် Setup Window Insets မၼ်းပဵၼ် လွင်ႈလူဝ်ႇလႆႈႁဵတ်း (Mandatory) တႃႇမၼ်ႈၸႂ်ဝႃႈ Keyboard ႁဝ်း ၸႂ်ႉလႆႈ ၵူႈၾူၼ်း ၶႃႈ။
 * **ViewCompat Power:** ၵၢၼ်ၸႂ်ႉ `ViewCompat.setOnApplyWindowInsetsListener` တီႈတူဝ် `decorView` မၼ်းပဵၼ် လၢႆးဢၼ်သၢင်ႈ ပိုၼ်ႉထၢၼ် Window ႁႂ်ႈမၼ်ႈၵႅၼ်ႇသုတ်း လႄႈ ႁႄႉၵင်ႈပၼ်ႁႃ UI Flashing (လွင်ႈ UI တိၼ်ႇၵႂႃႇတိၼ်ႇမႃး မိူဝ်ႈစတင်ပိုတ်ႇ) လႆႈလီသုတ်းၶႃႈ။

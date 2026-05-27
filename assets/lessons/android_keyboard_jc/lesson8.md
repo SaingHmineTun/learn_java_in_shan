@@ -84,9 +84,9 @@ fun KeyboardKey(
 
 ---
 
-### 4. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 4. မၢႆတွင်း (Core Takeaways)
 
-* ၵၢၼ်သၢင်ႈ Reusable Component ၸွႆႈႁႂ်ႈ Code Layout Keyboard ႁဝ်း သႅၼ်းသႅတ်ႈ လႄႈ မႄးငၢႆႈ (Maintainable) ၶႃႈ။
+* ၵၢၼ်သၢင်ႈ Reusable Component ၸွႆႈႁႂ်ႈ Code Layout Keyboard ႁဝ်း မႄးငၢႆႈ (Maintainable) ယဝ်ႉ။
 * ၼႂ်း Lesson 9 ႁဝ်းတေဢဝ် တူဝ် `KeyboardKey` ၼႆႉ ၵႂႃႇဝၢင်းသႂ်ႇၼႂ်း `Row` လႄႈ `Column` တႃႇသၢင်ႈပဵၼ် ၵွင်ၶီးပွတ်ႇ ယဝ်ႉ။
 
 ---

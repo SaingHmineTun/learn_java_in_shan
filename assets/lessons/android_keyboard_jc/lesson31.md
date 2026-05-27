@@ -111,7 +111,7 @@
 
 ---
 
-### Core Performance Analytics Wins
+### မၢႆတွင်း (Core Performance Analytics Wins)
 
 * **Elimination of UI Micro-Stuttering:** ၵၢၼ်ၸႂ်ႉ `beginBatchEdit()` ၸွႆႈၵုမ်းထိန်း **Render Pipeline Hierarchy** လႆႈငၢႆႈၶႃႈ။ App ၼွၵ်ႈတေဢမ်ႇလႆႈၸႂ်ႉ CPU Calculate Measure/Draw Layout လၢႆလၢႆၵမ်း။ ၼႆႉတေလူတ်ႇယွၼ်ႇ Frame Rendering Drop လႆႈ 100%၊ ႁဵတ်းႁႂ်ႈ Keyboard **TMK Keyboard Pro** ႁဝ်း မီး Feeling Typing Smooth လႅၼ်ႈၽတ်ႉၽႅဝ်း Ultra-Responsive သႅၼ်း Gboard တႅတ်ႈတေႃး 100% ၶႃႈ။
 * **Thread-Safe Input State Guard (Finally Block):** ၵၢၼ်ဝၢင်း `ic.endBatchEdit()` ဝႆႉၼႂ်း `finally { ... }` block မၼ်းပဵၼ် **The High-Grade App Defensive Programming** ၶႃႈ။ မၼ်းမၼ်ႈၸႂ်ဝႃႈ ဢမ်ႇဝႃႈ Logic ၽၢႆႇၼႂ်းတေမီး Runtime Exception ဢမ်ႇၼၼ် Error သေလႅင်ၵေႃႈယဝ်ႉ၊ တူဝ် `endBatchEdit()` တိုၼ်းတေထုၵ်ႇ Force Execute ၵူႈပွၵ်ႈ 100%၊ ႁႄႉၵင်ႈဢမ်ႇပၼ် တူဝ် Active App ၼွၵ်ႈ ထုၵ်ႇ Lock Layout Freezing (လွင်ႈၸေႃးၶႅင်) ၶႃႈယဝ်ႉ။

@@ -194,7 +194,7 @@ class MaoKeyboardService : InputMethodService() {
 
 ---
 
-### Core Architecture Wins
+### မၢႆတွင်း (Core Architecture Wins)
 
 * **Seamless Runtime Localisation:** ၵၢၼ်ၸႂ်ႉ `language.value` Selector Matrix ၸွႆႈမၼ်ႈၸႂ်ဝႃႈ Engine တေသူင်ႇ Locale တႅတ်ႈတေႃး 100% ၶႃႈ။ User တေဢမ်ႇလႆႈမီး Friction လႅၵ်ႈလၢႆႈ Settings ၼွၵ်ႈ, System တေ Auto-Listen ၸွမ်းၼင်ႇ Keyboard Language State ဢၼ်လႅၼ်ႈယူႇၼိူဝ်ၸေႃးၵမ်းလဵဝ်ၶႃႈ။
 * **Declarative Stateful Masking:** ၵၢၼ်ၸႂ်ႉ `if (isListening)` တီႈ `SuggestionBar` ၸွႆႈၵုမ်းထိန်း Layout Performance လီသုတ်းၶႃႈ။ မိူဝ်ႈ System ႁွင်ႉ `startListening()`, တူဝ် Words 3 Candidates တေထုၵ်ႇ Mask (Hide) ပႅတ်ႈပွၵ်ႈလဵဝ် သေ ၼႄပဵၼ် "🎙️ Listening..." ဝႆႉ၊ ပၼ် UX Feedback ဢၼ် Professional သုတ်းသုတ်း ၸိူၼ်းမိုဝ်းပၼ်ႇၶႃႈယဝ်ႉ။

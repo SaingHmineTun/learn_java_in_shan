@@ -96,7 +96,7 @@ fun KeyboardKey(
 
 ---
 
-### 5. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 5. မၢႆတွင်း (Core Takeaways)
 
 * ၵၢၼ်ၸႂ်ႉ Embedded `FontFamily` ၼႂ်း Keyboard ၸွႆႈႁႂ်ႈ UI ၶဝ်ႈၸူး ပိူင်သၢင်ႈ Typography ဢၼ်မၼ်ႈၵႅၼ်ႇ လႄႈ တူဝ်လိၵ်ႈ ဢမ်ႇပႅတ်ႈ ဢမ်ႇဝႃႈ User တေၸႂ်ႉၾူၼ်း Version လႂ် ၶႃႈယဝ်ႉ။
 

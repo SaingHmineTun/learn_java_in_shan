@@ -190,7 +190,7 @@ object MyanmarKeyboardEngine {
 
 ---
 
-### 2. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 2. မၢႆတွင်း (Core Takeaways)
 
 * **`isConsonant` & `isMedial` Range:** ၼႂ်း Kotlin, ႁဝ်းၸၢင်ႈၸႂ်ႉ `code in 4096..4129` တႃႇထတ်းသၢင်ႈ Range ၶွင် Unicode Character ၵမ်းသိုဝ်ႈ ဢဝ်လွင်ႈတႅမ်ႈ Code မၼ်းသႅၼ်းသႅတ်ႈ လႄႈ ဢၢၼ်ႇပွင်ႇၸႂ်ငၢႆႈလိူဝ် Java ၶႃႈ။
 * **E-Vowel Reordering Rule (`reorderEVowel`):** လၢႆးႁဵတ်းၵၢၼ်မၼ်း မိူၼ်ၵၼ်တင်းတွၼ်ႈလိၵ်ႈတႆးၶႃႈ။ မိူဝ်ႈမၼ်းတတ်းၸႅၵ်ႇႁၼ် `hasZWSP` ပဵၼ် `true` (ယွၼ်ႉၼဵၵ်း `ေ` ဝႆႉဢွၼ်တၢင်း) ၼၼ်ႉ မၼ်းတေၸိၵ်းပႅတ်ႈ 2 Characters သေ ဢဝ်တူဝ်မႄႈလိၵ်ႈ ဢမ်ႇၼၼ် တူဝ် Medial ဢၼ် User ၼဵၵ်းမႂ်ႇၼၼ်ႉ သွတ်ႇသႂ်ႇဝႆႉ ၽၢႆႇၼႃႈ `ေ` ၵမ်းသိုဝ်ႈ ႁင်းမၼ်းၶႃႈ။

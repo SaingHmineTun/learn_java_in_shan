@@ -98,7 +98,7 @@ fun KeyboardGridContainer(
 
 ---
 
-### 4. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 4. မၢႆတွင်း (Core Takeaways)
 
 * ၵၢၼ်ဝၢင်း Layout Keyboard တင်း Jetpack Compose ၼၼ်ႉ ဢမ်ႇလူဝ်ႇၸႂ်ႉ `TableLayout` ဢမ်ႇၼၼ် XML Grid ၵဝ်ႇယဝ်ႉ။ ၸႂ်ႉ `Row/Column` ႁူမ်ႈတင်း `Weight` ၸွႆႈႁႂ်ႈ UI ႁဝ်းလႅၵ်ႈလၢႆႈသႅၼ်းလႆႈ Dynamic သုတ်းယဝ်ႉ။
 * ၼႂ်း Lesson 10 ႁဝ်းတေဢဝ် ပိူင်သၢင်ႈ Rows/Grid ၼႆႉ ၵႂႃႇသေ တေႇတႅမ်ႈပဵၼ် **English QWERTY Layout** ဢၼ်မီး သၢႆၸႂ် Shift State (Uppercase/Lowercase) တႄႉတႄႉမၼ်းယဝ်ႉၶႃႈ။

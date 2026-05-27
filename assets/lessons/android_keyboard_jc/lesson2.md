@@ -84,7 +84,7 @@ class MaoKeyboardService : InputMethodService() {
 
 ---
 
-### 3. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 3. မၢႆတွင်း (Core Takeaways)
 
 * `onCreateInputView()` မၼ်းႁဵတ်းၵၢၼ် **ပွၵ်ႈလဵဝ်ၵူၺ်း** မိူဝ်ႈတေ သၢင်ႈ UI ၼႆလႄႈ တေဢမ်ႇႁွင်ႉၸႂ်ႉ မၼ်းၵူႈပွၵ်ႈ မိူဝ်ႈပိုတ်ႇ Keyboard။
 * လွင်ႈပၼ်သၢႆၸႂ် (State Management) ၶွင် Keyboard ၼၼ်ႉ ႁဝ်းလူဝ်ႇလႆႈ ၵုမ်းထိင်း ၼႂ်း `onStartInput()` ၵူႈပွၵ်ႈယဝ်ႉ။ ယွၼ်ႉမၼ်းပဵၼ် တူဝ်တေမႃးပၼ် ၶေႃႈမုၼ်းဝႃႈ ႁဝ်းလူဝ်ႇလႆႈၼႄ ၶီးပွတ်ႇ သႅၼ်းလႂ် ၼႆယဝ်ႉ။

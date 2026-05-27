@@ -105,9 +105,9 @@ fun EnglishLayout(
 
 ---
 
-### 3. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 3. မၢႆတွင်း (Core Takeaways)
 
-* **Conditional Layout Modification:** ၼႂ်း Compose, ႁဝ်းဢမ်ႇလူဝ်ႇ ပိုတ်ႇသၢင်ႈ 2 Files ၶေႃၶေႃလႄႈ ႁဝ်းၸၢင်ႈၸႂ်ႉ `if (isShifted)` တႃႇလႅၵ်ႈလၢႆႈ တူဝ်လိၵ်ႈ (String List) ၼႂ်း File လဵဝ်ၵၼ်လႆႈၵမ်းသိုဝ်ႈယဝ်ႉ။
-* **Spacer Weight:** ၵၢၼ်ၸႂ်ႉ `Spacer(Modifier.weight(0.5f))` မၼ်းပဵၼ် လၢႆးဝၢင်း Layout ႁႂ်ႈ Row 2 မၼ်း ၶဝ်ႈၵႄႈၵၢင် (Centered Indent) တႅတ်ႈတေႃး ၸွမ်းပိူင်သၢင်ႈ ၶွင်ၸဝ်ႈၵဝ်ႇၶႃႈ။
+* **Conditional Layout Modification:** ၼႂ်း Compose ၼႆႉ ႁဝ်းဢမ်ႇလူဝ်ႇ ပိုတ်ႇသၢင်ႈ 2 Files ၶေႃၶေႃလႄႈ ႁဝ်းၸၢင်ႈၸႂ်ႉ `if (isShifted)` တႃႇလႅၵ်ႈလၢႆႈ တူဝ်လိၵ်ႈ (String List) ၼႂ်း File လဵဝ်ၵၼ်လႆႈၵမ်းသိုဝ်ႈယဝ်ႉ။
+* **Spacer Weight:** ၵၢၼ်ၸႂ်ႉ `Spacer(Modifier.weight(0.5f))` မၼ်းပဵၼ် လၢႆးဝၢင်း Layout ႁႂ်ႈ Row 2 ဢၼ် ၶဝ်ႈၵႄႈၵၢင် (Centered Indent) တႅတ်ႈတေႃး ၸွမ်းပိူင်သၢင်ႈ ၶွင်ၸဝ်ႈၵဝ်ႇယဝ်ႉ။
 
 ---

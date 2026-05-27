@@ -307,7 +307,7 @@ fun SuggestionBar(
 
 ---
 
-### ၶေႃႈသႅၼ်းၸิၼႄ (Core Performance Takeaways)
+### မၢႆတွင်း (Core Performance Takeaways)
 
 * **RAM Cached Sequence Stream:** ၵၢၼ်ၸႂ်ႉ `BufferedReader` ႁူမ်ႈတင်း `dictionaryCache` (HashMap) ဝႆႉၼႂ်း Coroutines Global Context `loadDictionaries` ၸွႆႈႁႂ်ႈ Keyboard ႁဝ်းလႅၼ်ႈလႆႈ Ultra-Fast ၶႃႈ။ Android System တေဢမ်ႇၵႂႃႇဢၢၼ်ႇ Storage Disk ၵူႈပွၵ်ႈ User ၼဵၵ်းပုမ်ႇ, မၼ်းၵူၺ်း Filter Object ၼႂ်း RAM (Cache), ႁဵတ်းႁႂ်ႈ လွၵ်းလိူၵ်ႈ Candidates တိုင် 3 ၶေႃႈၵႂၢမ်း လႅၼ်ႈဢွၵ်ႇမႃး Real-time Instantaneous ၸိူၼ်းမိုဝ်းပၼ်ႇၶႃႈယဝ်ႉ။
 * **Declarative Grid Weights Alignment:** ၵၢၼ်ၸႂ်ႉ `Modifier.weight(1f)` တီႈပုမ်ႇ Texts တင်း 3 ၸွႆႈၵုမ်းထိန်း Geometry Alignment ႁႂ်ႈမီးသႅၼ်းတူဝ်ႈၵၼ် (Balanced View Grid Layout)၊ သေ ႁပ်ႉႁူႉလွင်ႈ Responsive ႁၢင်ႈလီ ဢမ်ႇဝႃႈ User တေပိၼ်ႇၼႃႈၸေႃးသႅၼ်း Landscape ဢမ်ႇၼၼ် Portrait ၶႃႈ။

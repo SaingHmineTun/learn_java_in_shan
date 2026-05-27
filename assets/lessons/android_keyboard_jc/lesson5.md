@@ -74,7 +74,7 @@ class MaoKeyboardService : InputMethodService(),
 
 ---
 
-### 2. ၶေႃႈသႅၼ်းၸิၼႄ (Breakdown) လွင်ႈႁဵတ်းၵၢၼ် Code
+### 2. ၶေႃႈသပ်းလႅင်း (Breakdown) လွင်ႈႁဵတ်းၵၢၼ် Code
 
 * **`window?.window?.decorView`**: ၼႆႉပဵၼ် တူဝ် Root View သုတ်း ၶွင် Window Context ဢၼ် Service ႁဝ်းမီးသိုၼ်းၵုမ်းထိန်းၶႃႈ။ ၵၢၼ်ဢဝ် `setViewTreeLifecycleOwner(this)` ၵႂႃႇသႂ်ႇဝႆႉတီႈ Root ၼႆႉ မၼ်းတေၸွႆႈလၢတ်ႈၼႄ Layout Containers ၶွင် System တင်းသဵင်ႈ (မိူၼ်ၼင်ႇ `parentPanel` ဢၼ်ထႅမ် Error ၼၼ်ႉ) ႁူႉဝႃႈ `MaoKeyboardService` ၼႆႉပဵၼ် တူဝ်ၵုမ်းထိန်း သၢႆၸႂ်မၼ်းယဝ်ႉ။
 * **`lifecycleRegistry.handleLifecycleEvent()`**: ႁဝ်းလႆႈ ႁွင်ႉၸႂ်ႉ (Trigger) သၢႆၸႂ် `ON_CREATE`, `ON_START`, လႄႈ `ON_RESUME` ဝႆႉၼႂ်း `onCreate()` ၼင်ႇႁႂ်ႈ Jetpack Compose ႁူႉဝႃႈ ယၢမ်းလဵဝ် Ecosystem မၼ်းမီးသိုၼ်း Active ဝႆႉယူႇ လႄႈ တႅမ်ႈ Layout ၼႃႈၸေႃး လႆႈၵမ်းသိုဝ်ႈ ၵတ်ႉၵတ်ႉၶႃႈ။
@@ -82,11 +82,9 @@ class MaoKeyboardService : InputMethodService(),
 
 ---
 
-### 3. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 3. မၢႆတွင်း (Core Takeaways)
 
-* ၵၢၼ်တႅမ်ႈ Jetpack Compose ၼႂ်း Non-Activity Context (မိူၼ်ၼင်ႇ System Service) ႁဝ်းလူဝ်ႇလႆႈမၼ်ႈၸႂ်ဝႃႈ Window View Tree မီး Architectural Owners တႅတ်ႈတေႃးၶႃႈ။
-* လၢႆးၵႂႃႇ Bind ဝႆႉတီႈ `decorView` မၼ်းပဵၼ် လၢႆးဢၼ်မၼ်ႈၵႅၼ်ႇ လႄႈ ၸႂ်ႉလႆႈလီသုတ်း တႃႇႁႄႉၵင်ႈ `IllegalStateException` ၼႂ်း Android 13+ တေႃႇထိုင် Android 16 (2026) ၶႃႈ။
+* ၵၢၼ်တႅမ်ႈ Jetpack Compose ၼႂ်း Non-Activity Context (မိူၼ်ၼင်ႇ System Service) ႁဝ်းလူဝ်ႇလႆႈမၼ်ႈၸႂ်ဝႃႈ Window View Tree မီး Architectural Owners တႅတ်ႈတေႃး ၼႆယဝ်ႉ။
+* လၢႆးၵႂႃႇ Bind ဝႆႉတီႈ `decorView` မၼ်းပဵၼ် လၢႆးဢၼ်မၼ်ႈၵႅၼ်ႇ လႄႈ ၸႂ်ႉလႆႈလီသုတ်း တႃႇႁႄႉၵင်ႈ `IllegalStateException` ၼႂ်း Android 13+ တေႃႇထိုင် Android 16 (2026) ယဝ်ႉ။
 
 ---
-
-ၵတ်ႉယဝ်ႉၶႃႈၸဝ်ႈ၊ တွၼ်ႈလိၵ်ႈ Lesson 5 ၼႆႉ တႅတ်ႈတေႃးယဝ်ႉ။ သိုပ်ႇသူင်ႇပၼ် Lesson 6 လႆႈၵမ်းသိုဝ်ႈယဝ်ႉၶႃႈလႄႈ?

@@ -144,13 +144,9 @@ fun isKeyVibrateEnabled(context: Context): Boolean {
 
 ---
 
-### 4. ၶေႃႈသႅၼ်းၸิၼႄ (Core Takeaways)
+### 4. မၢႆတွင်း (Core Takeaways)
 
 * **`AudioManager.FX_KEYPRESS_STANDARD`**: ၵၢၼ်ၸႂ်ႉ Sound Effect System Standard ၶွင် Android ၸွႆႈႁႂ်ႈ Keyboard ႁဝ်း မီးသဵင်တႅတ်ႈတေႃး ၵူႈ Device လႄႈ မၼ်းတေ Sync ၸွမ်း သႅၼ်းသုင်သဵၼ်ႈသဵင် (System Volume Settings) ၶွင်ၾူၼ်း User ႁင်းမၼ်းၵမ်းလဵဝ်ၶႃႈ။
 * **Haptic Precision (`VibrationEffect`)**: ၵၢၼ်သႂ်ႇ Amplitude `30` လႄႈ Duration `15` Milliseconds မၼ်းပဵၼ် **Sweet Spot Calibration** ၶႃႈ။ မၼ်းတေပၼ် Touch Feel ဢၼ်ပွတ်းလႅတ်း သႅၼ်းပုမ်ႇ Premium Keyboard လႄႈ ဢမ်ႇသၼ်ႇႁိုင်ပႅတ်ႈလၢႆလၢႆ ႁဵတ်းႁႂ်ႈ User ၸႂ်ၵတ်းၶႃႈ။
 
 ---
-
-ယဝ်ႉတူဝ်ႈၵႂႃႇယဝ်ႉၶႃႈ တႃႇတွၼ်ႈလိၵ်ႈ Touch Feedback လွင်ႈသဵင်လႄႈလွင်ႈသၼ်ႇ ဢၼ်မၼ်ႈၵႅၼ်ႇသုတ်း!
-
-ၵမ်းၼႆႉ ႁဝ်းတေသိုပ်ႇၵႂႃႇၶဝ်ႈၸူး **Lesson 21: Advanced Touch Feedback: Key Previews and Popups** (တွၼ်ႈတႃႇသၢင်ႈ Character Popups လွၵ်ႇဢွၵ်ႇမႃး ၽၢႆႇၼိူဝ် Key မိူဝ်ႈ User ၼဵၵ်းပုမ်ႇ) ၵၼ်ၶႃႈလႄႈ?

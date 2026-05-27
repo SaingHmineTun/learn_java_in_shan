@@ -162,7 +162,7 @@ object Keys {
 
 ---
 
-### Core Infrastructure Wins
+### မၢႆတွင်း (Core Infrastructure Wins)
 
 * **Declarative Memory Allocation:** ၵၢၼ်ၸႂ်ႉ Compose State Architecture တီႈ `currentScreen` ႁဵတ်းႁႂ်ႈ Keyboard Frame Rate ႁဝ်းၼิ่ง လႄႈ ၽတ်ႉၽႅဝ်းသုတ်းၶႃႈ။ မိူဝ်ႈ User ၼဵၵ်းပုမ်ႇ "123" inside `ShanLayout`, မၼ်းတေသူင်ႇ Action `KEY_NUMERIC_LAYOUT` ၵမ်းသိုဝ်ႈ၊ သေ ႁဵတ်းႁႂ်ႈ `currentScreen.value` လႅၵ်ႈလၢႆႈ။ Compose Runtime တေ Auto-Swap ဢဝ် `NumericLayout` မႃး Render တႅၼ်းၵမ်းလဵဝ် တႄႇဢမ်ႇလူဝ်ႇႁွင်ႉ `setContentView()` ဢမ်ႇၼၼ် Inflate Views standard ၵဝ်ႇ ဢၼ်ၵိၼ်ႁႅင်း CPU ၼၼ်ႉၶႃႈ။
 * **Automated Reset State Bridge:** ၵၢၼ်ဝၢင်း `currentScreen.value = KeyboardScreen.TEXT` ဝႆႉၼႂ်း `onStartInputView()` မၼ်းပဵၼ် **UX Best Practice** ၶႃႈ။ မၼ်းၸွႆႈမၼ်ႈၸႂ်ဝႃႈ သင် User ပိတ်း Keyboard ၵႂႃႇ မိူဝ်ႈတိုၵ်ႉလိူၵ်ႈ Emoji ဝႆႉယူႇ၊ သေ မိူဝ်ႈၶိုၼ်းၵႂႃႇပိုတ်ႇတႅမ်ႈလိၵ်ႈထႅင်ႈပွၵ်ႈၼႂ်း App တၢင်ႇဢၼ်, Keyboard ႁဝ်းတေ Auto-Show ၼႃႈတႅမ်ႈလိၵ်ႈ (abc Text Layout) ဢွၼ်တၢင်းသုတ်း ၵူႈပွၵ်ႈ 100% ၶႃႈ။

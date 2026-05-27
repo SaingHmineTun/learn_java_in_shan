@@ -44,7 +44,7 @@
 
 ---
 
-### 2. ၶေႃႈသႅၼ်းၸิၼႄ (Breakdown) လွင်ႈႁဵတ်းၵၢၼ် Code
+### 2. ၶေႃႈသပ်းလႅင်း (Breakdown) လွင်ႈႁဵတ်းၵၢၼ် Code
 
 * **`ComposeView(this)`**: ၼႆႉပဵၼ်ၵၢၼ် Instant ဢဝ် View တူဝ်မၼ်းၶိုၼ်းမႃးၼႂ်း Memory ၵမ်းသိုဝ်ႈ ၸွမ်းၼိုင်ႈၵၢၼ်သူင်ႇ `Context` ၶွင် Service ၶဝ်ႈၵႂႃႇယဝ်ႉ။
 * **`setContent { ... }`**: ၼႂ်းဝူင်း `setContent` ၼႆႉ ႁဝ်းၸၢင်ႈတႅမ်ႈ Code ၸႂ်ႉ Material 3 Composable (မိူၼ်ၼင်ႇ `Box`, `Text`, `Row`, `Column`) လႆႈၵူႈဢၼ် မိူၼ်ၼင်ႇ ၼႂ်းဢႅပ်ႉဢၼ်မီး Activity Standard ၵူႈပိူင်ယဝ်ႉ။
@@ -52,11 +52,9 @@
 
 ---
 
-### 3. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 3. မၢႆတွင်း (Core Takeaways)
 
-* `onCreateInputView()` တေႁဵတ်းၵၢၼ် **ပွၵ်ႈလဵဝ်ၵူၺ်း** မိူဝ်ႈ System တေစတင် ပိုတ်ႇ UI Keyboard၊ ၵေႃႈလႄႈ `ComposeView` တေထုၵ်ႇ သၢင်ႈဝႆႉၼႂ်း Memory ႁိုင်ႁိုင် ၸွမ်းသၢႆၸႂ် Service ၶႃႈ။
-* ယွၼ်ႉႁဝ်း Bind Owners ဝႆႉတီႈ `decorView` ဢွၼ်တၢင်းသုတ်းလႄႈ မိူဝ်ႈ `ComposeView` စတင် Attached ၶဝ်ႈ Window မၼ်းတေႁၼ် Lifecycle ၵမ်းသိုဝ်ႈ သေ လႅၼ်ႈ UI လႆႈၵတ်ႉၵတ်ႉ ဢမ်ႇ Crash ယဝ်ႉၶႃႈ။
+* `onCreateInputView()` တေႁဵတ်းၵၢၼ် **ပွၵ်ႈလဵဝ်ၵူၺ်း** မိူဝ်ႈ System တေႇၸ ပိုတ်ႇ UI Keyboard ယဝ်ႉ။ ၵွပ်ႈၼႆလႄႈ `ComposeView` တေထုၵ်ႇ သၢင်ႈဝႆႉၼႂ်း Memory ႁိုင်ႁိုင် ၸွမ်းသၢႆၸႂ် Service ယဝ်ႉ။
+* ယွၼ်ႉႁဝ်း Bind Owners ဝႆႉတီႈ `decorView` ဢွၼ်တၢင်းသုတ်းလႄႈ မိူဝ်ႈ `ComposeView` ၸေႇၸ Attached ၶဝ်ႈ Window မၼ်းတေႁၼ် Lifecycle ၵမ်းသိုဝ်ႈ သေ လႅၼ်ႈ UI ပၼ်လူၺ်ႈ ဢမ်ႇ Crash ယဝ်ႉ။
 
 ---
-
-ယဝ်ႉတူဝ်ႈၵႂႃႇယဝ်ႉၶႃႈ တႃႇ Lesson 6! သိုပ်ႇသူင်ႇပၼ် Lesson 7 ၵမ်းသိုဝ်ႈလႆႈယဝ်ႉၶႃႈလႄႈ?

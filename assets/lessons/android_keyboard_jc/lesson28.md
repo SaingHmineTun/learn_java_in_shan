@@ -149,11 +149,7 @@ class MaoKeyboardService : InputMethodService() {
 
 ---
 
-### ၶေႃႈသႅၼ်းၸิၼႄ (Core Performance & UX Wins)
+### မၢႆတွင်း (Core Performance & UX Wins)
 
 * **Seamless User Experience Pipeline:** ၵၢၼ်ၸႂ်ႉ Bitmask Lookup `attribute.inputType and EditorInfo.TYPE_MASK_CLASS` ၸွႆႈႁႂ်ႈ App Keyboard ႁဝ်းမီး Quality ၵတ်ႉၶႅၼ်ႇသုတ်းၶႃႈ။ User တေဢမ်ႇလႆႈမီး Friction ၼႂ်းၵၢၼ် လၢၵ်ႈလႅၵ်ႈ Layout ႁင်းၶေႃယဝ်ႉၶႃႈ။ မိူဝ်ႈၶဝ် ၶဝ်ႈ Field PIN Code Bank, တူဝ် `MaoKeyboardService` တေ Auto-Jump ၼႄ `NumericLayout` ဝႆႉထႃႈ ၶၼ်ၽတ်ႉၽႅဝ်း သွတ်ႈသႅတ်ႈ သုတ်းသုတ်း ၸိူၼ်းမိုဝ်းပၼ်ႇၶႃႈယဝ်ႉ။
 * **Contextual Password Guard Shield:** ၵၢၼ် Auto-Switch ၽႃႇသႃႇပဵၼ် English ၵမ်းသိုဝ်ႈ မိူဝ်ႈထူပ်ႇ `TYPE_TEXT_VARIATION_PASSWORD` မၼ်းပဵၼ် **The Top-Grade App Architecture Security Check** ၶႃႈ။ မၼ်းတေႁႄႉၵင်ႈ ဢမ်ႇပၼ် User တႅမ်ႈ Password ၽိတ်း (ယွၼ်ႉဝႃႈ လိၵ်ႈတႆး/လိၵ်ႈမၢၼ်ႈ မီး Engine တူဝ်သွၼ်ႉ ဢၼ်ၸၢင်ႈႁဵတ်းႁႂ်ႈ String Value လႅၵ်ႈလၢႆႈ)၊ သေ ႁပ်ႉႁူႉ Security ၸွမ်း Google Play Store Guidelines တႅတ်ႈတေႃးၶႃႈ။
-
-ယဝ်ႉတူဝ်ႈၵႂႃႇယဝ်ႉတႅတ်ႈတေႃးၶႃႈ တႃႇ **Lesson 28: EditorInfo Attributes Dynamic Routing (Smart InputTypes)** ဢၼ် Perfect လႄႈ Bulletproof သုတ်းသုတ်း!
-
-ႁဝ်းမႃးစတင် သိုပ်ႇၶဝ်ႈၸူး **Lesson 29: Suggestion Bar & Predictive Word Candidate Row Component** (တႃႇသၢင်ႈ လွၵ်းလိူၵ်ႈလိၵ်ႈလႅတ်း ၽၢႆႇၼိူဝ် ၶီးပွတ်ႇ ႁႂ်ႈတႅမ်ႈလိၵ်ႈလႆႈၽတ်ႉ) ၵၼ် ၵမ်းလဵဝ်လႄႈၶႃႈၸဝ်ႈ?

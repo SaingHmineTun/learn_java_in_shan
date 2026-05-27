@@ -115,7 +115,7 @@ class MaoKeyboardService : InputMethodService() {
 
 ---
 
-### Core Architecture Takeaways
+### မၢႆတွင်း (Core Architecture Takeaways)
 
 * **`onUpdateSelection` Runtime Sync:** Callback ၼႆႉ မၼ်းပဵၼ် တူဝ် Bridge ၵျႅၼ်ႇၵၼ်း ၵႄႈၵၢင် App ႁဝ်း လႄႈ App ၼွၵ်ႈ (မိူၼ်ၼင်ႇ Line) ၶႃႈ။ မိူဝ်ႈ User ဢဝ်မိုဝ်းၵႂႃႇၼဵၵ်း တီႈ TextField ၵႄႈၵၢင်တူဝ်လိၵ်ႈ, `onUpdateSelection` တေ Auto-Fire ၵမ်းလဵဝ် သေ Update တူဝ် Variable `cursorPosition` ႁဝ်း ႁႂ်ႈတႅတ်ႈတေႃး ၸွမ်း Real Position ၵမ်းလဵဝ် ၶၼ်ၽတ်ႉၽႅဝ်းၶႃႈ။
 * **The Grapheme Cluster Challenge Note:** ယွၼ်ႉ Android ၼပ်ႉ `cursorPosition + 1` ปဵၼ် 1 UTF-16 Code Unit Standard, မိူဝ်ႈ User ၼဵၵ်း Move Cursor ➡ ၽိတ်းဝႆႉ တီႈၵႄႈၵၢင်တူဝ်လိၵ်ႈတႆး ဢၼ်ပႃးမႄး/တူဝ်သွၼ်ႉ (မိူၼ်ၼင်ႇ "ၵ" + "ေ"), Cursor မၼ်းၸၢင်ႈတႅၵ်ႇလု (Split Inside Cluster) ၶႃႈ။ လွၵ်းၵၢၼ် ၵႄႈ Cluster Deletion & Navigation ၼႆႉ ႁဝ်းတေသိုပ်ႇၵႂႃႇ တႅမ်ႈ Engine ၵုမ်းထိန်းမၼ်း ႁႂ်ႈ Advanced သုတ်းသုတ်း ၼႂ်းတွၼ်ႈလိၵ်ႈ BatchEdit (Lesson 31) ၶႃႈယဝ်ႉ။

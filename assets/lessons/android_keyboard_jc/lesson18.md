@@ -214,7 +214,7 @@ object KeyboardThemesRepository {
 
 ---
 
-### 2. Core Takeaways
+### 2. မၢႆတွင်း (Core Takeaways)
 
 * **OLED Black Power (`#000000`):** ၼႂ်းတွၼ်ႈ Theme `midnight_oled` ၼၼ်ႉ ႁဝ်းပၼ် Background ပဵၼ် Black တႅတ်ႈတေႃး 100%။ လၢႆးၼႆႉ တိူဝ်ႉၸွႆႈႁႂ်ႈ ၼႃႈၸေႃး OLED ပိတ်းပႅတ်ႈ Light Pixels သေ ႁဵတ်းႁႂ်ႈ ၾူၼ်း User ဢမ်ႇၵိၼ် Battery လႄႈ ၵုမ်းထိန်းသၢႆတႃ လီတႄႉတႄႉၶႃႈ။
 * **Geometry Variations (`borderRadius`):** တီႈၼႆႈ ႁဝ်းႁၼ်လႆႈဝႃႈ Theme `material_dark` မီး `borderRadius = CornerRadius(12f)` (မူၼ်းယႂ်ႇသႅၼ်း Modern)၊ သေ Theme `midnight_oled` မီး `borderRadius = CornerRadius(4f)` (သႅၼ်းလႅတ်းၵျႅၼ်ႇၶႅၼ်ႇ)။ ၼႆႉမၼ်းၼႄဝႃႈ Data Structure ႁဝ်း မၼ်းမီး Control သိုဝ်ႈသိုဝ်ႈ ၼိူဝ် ၵူႈ Layout ၶႃႈ။

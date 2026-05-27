@@ -125,7 +125,7 @@ object ShanKeyboardEngine {
 
 ---
 
-### 4. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 4. မၢႆတွင်း (Core Takeaways)
 
 * ၵၢၼ်သၢင်ႈ Handwriting Engine မၼ်းပဵၼ်ၵၢၼ် ၵွင်ႉသၢႆ ၼႂ်းၵႄႈ Visual Representation (လၢႆး User ႁၼ်) တင်း Data Layer Standard (Unicode Standard) ယဝ်ႉ။
 * ၼႂ်း Lesson 14 ႁဝ်းတေဢဝ် ပိူင်သၢင်ႈ Logic ၼႆႉ ၵႂႃႇၸႂ်ႉသိုပ်ႇတႅမ်ႈပဵၼ် **Handwriting Engine တႃႇလိၵ်ႈမၼ်း (Myanmar Language)** ၶႃႈယဝ်ႉ။

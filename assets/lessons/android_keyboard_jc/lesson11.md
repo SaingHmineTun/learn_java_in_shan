@@ -109,7 +109,7 @@ fun MyanmarLayout(
 
 ---
 
-### 2. ၶေႃႈထတ်းသၢင်ႈ (Core Takeaways)
+### 2. မၢႆတွင်း (Core Takeaways)
 
 * **Punctuation Toggle State:** ၼႂ်း Row 4 ၶွင်ၸဝ်ႈၵဝ်ႇ, တူဝ် Punctuation မၼ်းလႅၵ်ႈလၢႆႈၼိူဝ် Normal (`။`) លႄႈ Shifted (`၊`)။ ၼႂ်း Compose ႁဝ်းၸႂ်ႉ `if (isShifted) "၊" else "။"` ဝႆႉတီႈ label လႄႈ `onKeyClick` ၵမ်းလဵဝ် ႁႂ်ႈမၼ်း Dynamic သုတ်းၶႃႈ။
 * **The Subscript Sign `္` (Virama):** တီႈ Row 2 ၶွင် Shifted Layout မီးတူဝ်လၵ်းမၢႆ `္` (Myanmar Sign Virama `\u1039`)။ တူဝ်ၼႆႉမၼ်းပဵၼ် တူဝ်တေၸႂ်ႉတႅမ်ႈ တူဝ်သျၼ်ႉၸပ်းၵၼ် (Stacked/Pali Characters) ဢၼ်ႁဝ်းတေလႆႈသူင်ႇဢွၼ်တၢင်း တေတႅမ်ႈတူဝ်လိၵ်ႈ ၽၢႆႇတႂ်ႈၶႃႈ။

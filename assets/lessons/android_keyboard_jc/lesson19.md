@@ -125,7 +125,7 @@ class MaoKeyboardService : InputMethodService(), ... {
 
 ---
 
-### 3. Core Takeaways
+### 3. မၢႆတွင်း (Core Takeaways)
 
 * **`.apply()` vs `.commit()**`: ၼႂ်း SharedPreferences Editor, ႁဝ်းၸႂ်ႉ `.apply()`။ မၼ်းပွင်ႇဝႃႈ Android တေၵႂႃႇတႅမ်ႈ Disk Storage ဝႆႉၽၢႆႇလင်ပဵၼ် Asynchronous Process ႁင်းမၼ်း။ ၼႆႉတေႁႄႉၵင်ႈပၼ်ႁႃ UI Lag ၼိူဝ် ၼႃႈ Keyboard ၶႃႈ။
 * **Single Source of Truth:** တူဝ် `currentTheme` State ဝႆႉၼႂ်း Service Context တူဝ်လဵဝ်ၵူၺ်း။ မိူဝ်ႈႁဝ်းႁွင်ႉ `switchTheme()` ပႅတ်ႈ, UI တေ Recompose လႅၵ်ႈသီတိုင် 10 Themes လႆႈ ၶၼ်ၽတ်ႉၽႅဝ်း သုတ်းသုတ်းၶႃႈ။
