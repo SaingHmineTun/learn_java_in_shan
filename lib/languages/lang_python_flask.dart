@@ -10,6 +10,7 @@ const Map<int, String> flaskTopics = {
 };
 
 const Map<int, Map<int, String>> flaskModules = {
+  // 1: "Introduction & Environment Setup",
   1: {
     1: "What is Flask?",
     2: "Python Environment Mastery",
@@ -18,6 +19,7 @@ const Map<int, Map<int, String>> flaskModules = {
     5: "Running the Server",
     6: "Configuration Management"
   },
+  // 2: "Routing and Request Handling",
   2: {
     7: "Basic Routing",
     8: "Dynamic URL Rules",
