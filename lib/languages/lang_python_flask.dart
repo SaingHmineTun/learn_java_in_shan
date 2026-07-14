@@ -28,6 +28,7 @@ const Map<int, Map<int, String>> flaskModules = {
     11: "The Request Object (Body & JSON)",
     12: "Crafting Responses"
   },
+  // 3: "Templates and Static Files"
   3: {
     13: "Introduction to Jinja2",
     14: "Jinja2 Control Structures",
