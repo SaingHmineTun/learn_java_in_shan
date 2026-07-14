@@ -84,7 +84,7 @@ public class Main {
 
 ---
 
-### ႁူဝ်ယေႃႈ Properties Methods
+### Properties Methods
 
 | Method | Parameters | Action in Shan |
 | --- | --- | --- |
