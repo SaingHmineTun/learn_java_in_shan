@@ -65,12 +65,12 @@ public class Main {
 
 ---
 
-### ႁူဝ်ယေႃႈ Components
+### ႁူဝ်ယွႆႈလွင်ႈ Components
 
-| Class | Function in Shan |
-| --- | --- |
+| Class | Function in Shan                                                 |
+| --- |------------------------------------------------------------------|
 | `JLabel` | ၼႄတူဝ်လိၵ်ႈ (Text) ဢမ်ႇၼၼ် ၶႅပ်းႁၢင်ႈ (Icon) ဢၼ် user မႄးဢမ်ႇလႆႈ |
-| `JButton` | ႁဵတ်းပိူၵ်ႉတွၼ်ႈတႃႇၼဵၵ်း (Clickable Button) |
-| `frame.add(c)` | ဢဝ် Component ၵႂႃႇၸပ်းသႂ်ႇၼႂ်းၼႃႈၸေႃး `JFrame` |
+| `JButton` | ႁဵတ်းပုမ်ႇတွၼ်ႈတႃႇၼဵၵ်း (Clickable Button)                       |
+| `frame.add(c)` | ဢဝ် Component ၵႂႃႇၸပ်းသႂ်ႇၼႂ်းၼႃႈၸေႃး `JFrame`                   |
 
-> **မၢႆတွင်း (Note):** ၼႂ်း code ၼႆႉ ႁဝ်းလႆႈလတ်းၸႂ်ႉ `FlowLayout` ၵႂႃႇၵမ်းၼိုင်ႈ တွၼ်ႈတႃႇႁႂ်ႈ `JLabel` လႄႈ `JButton` မၼ်းယူႇလႅၼ်းၵၼ်လီလီ။ ပေႃးႁဝ်းဢမ်ႇၸႂ်ႉ Layout ၼႆ Component ႁဝ်းတေၵႂႃႇထပ်းၵၼ်ဝႆႉၶႃႈ။ ၼႂ်း Lesson 4 ႁဝ်းတေမႃးႁဵၼ်းတူၺ်းဝႃႈ ပေႃးဢမ်ႇၸႂ်ႉ Layout (Null Layout) မၼ်းတေပဵၼ်ၸိူင်ႉႁိုဝ်။
+> **မၢႆတွင်း (Note):** ၼႂ်း code ၼႆႉ ႁဝ်းလႆႈၸႂ်ႉ `FlowLayout` ၵႂႃႇၵမ်းၼိုင်ႈ တွၼ်ႈတႃႇႁႂ်ႈ `JLabel` လႄႈ `JButton` မၼ်းယူႇ ၸပ်းၵၼ်လီလီ။ ပေႃးႁဝ်းဢမ်ႇၸႂ်ႉ Layout ၼႆ Component ႁဝ်းတေၵႂႃႇထပ်းၵၼ်ဝႆႉၶႃႈ။ ၼႂ်း Lesson 4 ႁဝ်းတေမႃးႁဵၼ်းတူၺ်းဝႃႈ ပေႃးဢမ်ႇၸႂ်ႉ Layout (Null Layout) မၼ်းတေပဵၼ်ၸိူင်ႉႁိုဝ်။
