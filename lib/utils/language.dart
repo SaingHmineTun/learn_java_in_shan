@@ -16,6 +16,7 @@ const languages = [
   "ios_keyboard",
   "haskell",
   "javafx",
+  "java_swing",
   "java_springboot",
   "python_tkinter",
   "android_xml_kotlin",
@@ -50,5 +51,6 @@ const fullName = {
   "mysql": "MySQL",
   "java_springboot": "Java Spring Boot",
   "android_keyboard": "Android Keyboard",
-  "android_keyboard_jc": "Android Keyboard with Jetpack Compose"
+  "android_keyboard_jc": "Android Keyboard with Jetpack Compose",
+  "java_swing": "Java Swing"
 };

@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
     switch (lang.toLowerCase().trim()) {
       case 'java':
       case 'javafx':
+      case 'java_swing':
         return {
           'color': const Color(0xFFED8B00), // Official Java Corporate Orange
           'icon': SimpleIcons.openjdk,
