@@ -19,6 +19,7 @@ const languages = [
   "java_swing",
   "java_springboot",
   "python_tkinter",
+  "pygame",
   "android_xml_kotlin",
   "jetpack_compose",
   "git",
@@ -52,5 +53,6 @@ const fullName = {
   "java_springboot": "Java Spring Boot",
   "android_keyboard": "Android Keyboard",
   "android_keyboard_jc": "Android Keyboard with Jetpack Compose",
-  "java_swing": "Java Swing"
+  "java_swing": "Java Swing",
+  "pygame": "PyGame"
 };

@@ -60,6 +60,7 @@ flutter:
     - assets/lessons/ios_keyboard/
     - assets/lessons/android_keyboard_jc/
     - assets/lessons/java_swing/
+    - assets/lessons/pygame/
     - assets/images/
     - assets/icons/
   fonts:

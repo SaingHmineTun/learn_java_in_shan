@@ -10,6 +10,7 @@ import 'donation_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
   Map<String, dynamic> _getLanguageStyle(String lang) {
     switch (lang.toLowerCase().trim()) {
       case 'java':
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
           'color': const Color(0xFF6DB33F), // Official Spring Boot Leaf Green
           'icon': SimpleIcons.springboot,
         };
-        case 'swift':
+      case 'swift':
       case 'swift_ui':
         return {
           'color': const Color(0xFFF05138), // Official Swift Flame Orange
@@ -36,7 +37,7 @@ class HomeScreen extends StatelessWidget {
           'icon': CustomSvgIcon(filename: 'ios_keyboard.svg'),
         };
 
-    // --- ANDROID ECOSYSTEM ---
+      // --- ANDROID ECOSYSTEM ---
       case 'android_keyboard':
       case 'android_keyboard_jc':
       case 'android_xml_kotlin':
@@ -50,15 +51,16 @@ class HomeScreen extends StatelessWidget {
           'icon': SimpleIcons.jetpackcompose,
         };
 
-    // --- PYTHON ECOSYSTEM ---
+      // --- PYTHON ECOSYSTEM ---
       case 'python':
+      case "pygame":
       case 'python_tkinter':
         return {
           'color': const Color(0xFF3776AB), // Official Python Steel Blue
           'icon': SimpleIcons.python,
         };
 
-    // --- DATA & TOOLS ---
+      // --- DATA & TOOLS ---
       case 'mysql':
         return {
           'color': const Color(0xFF4479A1), // Official MySQL Marine Blue
@@ -70,7 +72,7 @@ class HomeScreen extends StatelessWidget {
           'icon': SimpleIcons.git,
         };
 
-    // --- C LANGUAGE FAMILY ---
+      // --- C LANGUAGE FAMILY ---
       case 'c':
         return {
           'color': const Color(0xFFA8B9CC), // Official C Slate Blue
@@ -83,11 +85,12 @@ class HomeScreen extends StatelessWidget {
         };
       case 'csharp':
         return {
-          'color': const Color(0xFF512BD4), // Official Microsoft C# / .NET Deep Purple
+          'color': const Color(0xFF512BD4),
+          // Official Microsoft C# / .NET Deep Purple
           'icon': SimpleIcons.dotnet,
         };
 
-    // --- WEB CORE ---
+      // --- WEB CORE ---
       case 'html':
         return {
           'color': const Color(0xFFE34F26), // Official HTML5 Orange-Red
@@ -111,7 +114,7 @@ class HomeScreen extends StatelessWidget {
           'icon': SimpleIcons.typescript,
         };
 
-    // --- MODERN LANGUAGES ---
+      // --- MODERN LANGUAGES ---
       case 'kotlin':
         return {
           'color': const Color(0xFF7F52FF), // Official Kotlin Purple-Violet
@@ -128,11 +131,13 @@ class HomeScreen extends StatelessWidget {
           'icon': SimpleIcons.haskell,
         };
 
-    // --- LEGACY / FALLBACK LANGUAGES ---
+      // --- LEGACY / FALLBACK LANGUAGES ---
       case 'basic':
         return {
-          'color': const Color(0xFF4D4D4D), // Dark Gray Terminal Profile
-          'icon': SimpleIcons.gnubash, // Terminal environment look since BASIC has no branding icon
+          'color': const Color(0xFF4D4D4D),
+          // Dark Gray Terminal Profile
+          'icon': SimpleIcons.gnubash,
+          // Terminal environment look since BASIC has no branding icon
         };
 
       default:
