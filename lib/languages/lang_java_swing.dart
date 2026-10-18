@@ -145,4 +145,14 @@ final Map<int, Lesson> javaSwingLessons = {
   46: Lesson(7, 46),
   47: Lesson(7, 47),
   48: Lesson(7, 48),
+  49: Lesson(8, 49),
+  50: Lesson(8, 50),
+  51: Lesson(8, 51),
+  52: Lesson(8, 52),
+  53: Lesson(8, 53),
+  54: Lesson(8, 54),
+  55: Lesson(8, 55),
+  56: Lesson(8, 56),
+  57: Lesson(8, 57),
+  58: Lesson(8, 58)
 };
