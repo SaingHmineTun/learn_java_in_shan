@@ -1,164 +1,145 @@
-## 5: Keyboard Polling
+## 1: Core Engine & Bouncing Ball Setup
 
-မႂ်ႇသုင်ႇၶႃႈ! ၼႂ်း Lesson 5 ၼႆႉ ႁဝ်းတေလဵပ်ႈႁဵၼ်း **Keyboard Polling** ၶႃႈ।
-
-မိူဝ်ႈႁဝ်း တေႁဵတ်း Movement ႁႂ်ႈ Player တူင်ႉၼိုင် (Move Paddles) ႁႂ်ႈ Smooth ၼၼ်ႉ၊ လွၵ်းလၢႆး Event Queue (`pygame.KEYDOWN`) ၼႂ်း Lesson 2 ၼၼ်ႉ ဢမ်ႇသၢင်ႇထုၵ်ႇၶႃႈ။ 
-ပေႃးၸႂ်ႉ Event Queue၊ Paddle ႁဝ်း တေတူင်ႉၼိုင်လႆႈ ၼိုင်ႈၵမ်းၵူၺ်းသေ မီး Pause Latency သေ ၼဵၵ်းထႅင်ႈၵမ်း မၼ်းၸင်ႇသိုပ်ႇလႅၼ်ႈ (မိူၼ်ႁဝ်း တႅမ်ႈလိၵ်ႈ Typing ၼၼ်ႉ) ၶႃႈ။
-တွၼ်ႈတႃႇ တူင်ႉၼိုင် Smooth လႆႈလီၼၼ် ႁဝ်းတေလႆႈၸႂ်ႉ **Keyboard Polling** လူၺ်ႈ Function **`pygame.key.get_pressed()`** ၶႃႈ!
+မႂ်ႇသုင်ၶႃႈ! ၼႂ်း Lesson 1 ၼႆႉ ႁဝ်းတေတႄႇလဵပ်ႈႁဵၼ်း **libGDX Engine Setup** လႄႈ ၵေႃႇသၢင်ႈ **Bouncing Ball Loop** ၶႃႈ।
+မိူဝ်ႈႁဝ်း တေႁဵတ်း Game ႁႂ်ႈမီး Smooth Movement ၼၼ်ႉ၊ ႁဝ်းတေလႆႈၸႂ်ႉ Standard Game Loop Lifecycle မႃး ထိင်း Element ၸိူဝ်းမီးၼႂ်း Game ၶႃႈ।
+libGDX မီး `ApplicationAdapter` ဢၼ်မီး Functions လၢႆလၢႆဢၼ် မိူၼ်ၼင်ႇ `create()`, `render()`, လႄႈ `dispose()` တႃႇႁႂ်ႈႁဝ်း
+ထိင်း Memory လႄႈ Graphics Performance လႆႈလီငၢမ်ႈ ၶႃႈ।
 
 ---
 
-### 1. `pygame.key.get_pressed()` ပဵၼ်သင်?
+### 1. `Gdx.graphics.getDeltaTime()` လႄႈ `ShapeRenderer` ပဵၼ်သင်?
 
-`pygame.key.get_pressed()` ပဵၼ် Function ဢၼ် Return ပၼ် Boolean Sequence Tuple ဢၼ်မီး သၢႆမၢႆ Key တင်းသဵင်ႈ တီႈ Keyboard ၶႃႈ။
-
-* **Check Continuous Key Hold:** မၼ်းတေ ၵူတ်ႇထတ်း (Check) တႃႇသေႇ ၼႂ်း ၵူႈ Frame ဝႃႈ တီႈ Frame ၼႆႉ Key ၼၼ်ႉ `True` (တဵၵ်းဝႆႉ) ဢမ်ႇၼၼ် `False` (လွတ်ႈဝႆႉ) ၶႃႈ।
+* **`Gdx.graphics.getDeltaTime()`**: ပဵၼ် Function ဢၼ် Return ပၼ် ၶၢဝ်းယၢမ်း (Time in Seconds) ၼႂ်းလွၵ်းသွင် Frame ၶႃႈ। မၼ်းတေ ၵူတ်ႇထတ်း တႃႇသေႇ ၼႂ်း ၵူႈ Frame တႃႇႁႂ်ႈ Velocity Movement ႁဝ်း ၽဵင်ႇၵၼ် ယူႇတီႈ Monitor Refresh Rate ၵူႈ Device ၶႃႈ।
+* **`ShapeRenderer`**: ပဵၼ် Class ဢၼ်ၸႂ်ႉ draw Primitive Shapes (Circle, Rectangle, Line) လူၺ်ႈ Hardware Acceleration (OpenGL) ၶႃႈ।
 * **Syntax usage:**
-```python
-keys = pygame.key.get_pressed()
-if keys[pygame.K_w]:
-    # Move left paddle up
-if keys[pygame.K_s]:
-    # Move left paddle down
 
-```
+```java
+// Delta Time
+float dt = Gdx.graphics.getDeltaTime();
 
+// Movement Physics
+x += velocityX * dt;
+y += velocityY * dt;
 
-
----
-
-### 2. Player Movement Math & Screen Clamping
-
-မိူဝ်ႈႁဝ်း ဢဝ် Input မႃး Update `rect.y` ၼၼ်ႉ၊ ႁဝ်းတေလႆႈၸႂ်ႉ Delta Time (`dt`) သေ Clamping ႁႄႉဝႆႉ ဢမ်ႇႁႂ်ႈ Paddle လွတ်ႈဢွၵ်ႇ ၼႃႈၸေႃႈ (Screen Boundaries) ၶႃႈ:
-
-```python
-# Movement Speed (Pixels per second)
-PADDLE_SPEED = 400
-
-# Left Paddle Inputs (W / S keys)
-if keys[pygame.K_w]:
-    player1_rect.y -= PADDLE_SPEED * dt
-if keys[pygame.K_s]:
-    player1_rect.y += PADDLE_SPEED * dt
-
-# Keep Paddle inside Screen Canvas Boundaries (Clamping)
-if player1_rect.top < 0:
-    player1_rect.top = 0
-if player1_rect.bottom > SCREEN_HEIGHT:
-    player1_rect.bottom = SCREEN_HEIGHT
+// Draw Primitive Circle
+shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+shapeRenderer.circle(x, y, radius);
+shapeRenderer.end();
 
 ```
 
 ---
 
-### Step-by-Step: ၵၢၼ် တႅမ်ႈ Player Paddle Controls
+### 2. Ball Movement Math & Screen Clamping
 
-ႁဝ်းမႃးၸၢမ်း တႅမ်ႈ Control Math တွၼ်ႈတႃႇ Player 1 (W/S) လႄႈ Player 2 (UP/DOWN) သႂ်ႇ Step 2 (Update Logic) ၼႂ်း `main.py` ၶႃႈ:
+မိူဝ်ႈႁဝ်း ဢဝ် Delta Time (`dt`) မႃး Update Position `x`, `y` ၼၼ်ႉ၊ ႁဝ်းတေလႆႈၸႂ်ႉ Bounce Check ႁႄႉဝႆႉ ဢမ်ႇႁႂ်ႈ Ball လွတ်ႈဢွၵ်ႇ ၼႃႈၸေႃႈ (Screen Canvas Boundaries) ၶႃႈ:
 
-```python
-import pygame
-import sys
+```java
+// Movement Speed (Pixels per second)
+float velocityX = 350f;
+float velocityY = 350f;
 
-# 1. Initialize PyGame
-pygame.init()
+// Update Logic
+x += velocityX * dt;
+y += velocityY * dt;
 
-# 2. Setup Screen Canvas
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption("Pong - Lesson 5: Keyboard Polling")
+// Bounce Logic (X-Axis Boundary)
+if (x - radius <= 0 || x + radius >= Gdx.graphics.getWidth()) {
+    velocityX *= -1;
+}
 
-# 3. Colors & Clock
-COLOR_BG = (15, 15, 35)
-COLOR_WHITE = (255, 255, 255)
-clock = pygame.time.Clock()
-
-# Game Objects (PyGame Rects)
-player1_rect = pygame.Rect(20, 250, 15, 100)
-player2_rect = pygame.Rect(765, 250, 15, 100)
-PADDLE_SPEED = 450.0  # Pixels per second
-
-running = True
-
-# ==========================================
-# CORE GAME LOOP
-# ==========================================
-while running:
-    # STEP 0: Delta Time
-    dt = clock.tick(60) / 1000.0
-
-    # STEP 1: Event Handling
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                running = False
-
-    # STEP 2: UPDATE GAME LOGIC & KEYBOARD POLLING
-    keys = pygame.key.get_pressed()
-
-    # Player 1 Controls (W / S)
-    if keys[pygame.K_w]:
-        player1_rect.y -= PADDLE_SPEED * dt
-    if keys[pygame.K_s]:
-        player1_rect.y += PADDLE_SPEED * dt
-
-    # Player 2 Controls (Arrow Up / Arrow Down)
-    if keys[pygame.K_UP]:
-        player2_rect.y -= PADDLE_SPEED * dt
-    if keys[pygame.K_DOWN]:
-        player2_rect.y += PADDLE_SPEED * dt
-
-    # Screen Clamping - Player 1
-    if player1_rect.top < 0:
-        player1_rect.top = 0
-    if player1_rect.bottom > SCREEN_HEIGHT:
-        player1_rect.bottom = SCREEN_HEIGHT
-
-    # Screen Clamping - Player 2
-    if player2_rect.top < 0:
-        player2_rect.top = 0
-    if player2_rect.bottom > SCREEN_HEIGHT:
-        player2_rect.bottom = SCREEN_HEIGHT
-
-    # STEP 3: RENDER / DRAW FRAME
-    screen.fill(COLOR_BG)
-
-    # Net Line
-    pygame.draw.aaline(screen, COLOR_WHITE, (SCREEN_WIDTH // 2, 0), (SCREEN_WIDTH // 2, SCREEN_HEIGHT))
-
-    # Draw Both Paddles
-    pygame.draw.rect(screen, COLOR_WHITE, player1_rect)
-    pygame.draw.rect(screen, COLOR_WHITE, player2_rect)
-
-    # Center Ball Placeholder
-    pygame.draw.circle(screen, COLOR_WHITE, (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2), 10)
-
-    # Flip Buffer
-    pygame.display.flip()
-
-# 4. Cleanup & Exit Program
-pygame.quit()
-sys.exit()
+// Bounce Logic (Y-Axis Boundary)
+if (y - radius <= 0 || y + radius >= Gdx.graphics.getHeight()) {
+    velocityY *= -1;
+}
 
 ```
 
-1. **Open main.py File:**
-   Replace paddle position values with `pygame.Rect` objects and add the keyboard polling logic.
+---
 
+### Step-by-Step: ၵၢၼ် တႅမ်ႈ Bouncing Ball Engine
 
-2. **Run Script:**
-   Execute `python main.py` in your terminal.
+ႁဝ်းမႃးၸၢမ်း တႅမ်ႈ Core Engine Update Logic ၼႂ်း `BouncingBallGame.java` ၶႃႈ:
 
+```java
+package com.tmk.game;
 
-3. **Test Controls:**
-   Press and hold `W`/`S` keys to control the left paddle, and `UP`/`DOWN` arrow keys for the right paddle.
+import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
+public class BouncingBallGame extends ApplicationAdapter {
+    private ShapeRenderer shapeRenderer;
+    
+    // Position & Ball properties
+    private float x, y;
+    private float radius = 25f;
+    
+    // Velocity (Pixels per second)
+    private float velocityX = 350f;
+    private float velocityY = 350f;
+
+    @Override
+    public void create() {
+        // 1. Initialize ShapeRenderer
+        shapeRenderer = new ShapeRenderer();
+        
+        // Center Ball in Window Canvas
+        x = Gdx.graphics.getWidth() / 2f;
+        y = Gdx.graphics.getHeight() / 2f;
+    }
+
+    @Override
+    public void render() {
+        // STEP 0: Delta Time
+        float dt = Gdx.graphics.getDeltaTime();
+
+        // STEP 1: UPDATE GAME LOGIC
+        x += velocityX * dt;
+        y += velocityY * dt;
+
+        // Bounce Logic - X Axis (Left / Right Boundaries)
+        if (x - radius <= 0 || x + radius >= Gdx.graphics.getWidth()) {
+            velocityX *= -1;
+        }
+        
+        // Bounce Logic - Y Axis (Bottom / Top Boundaries)
+        if (y - radius <= 0 || y + radius >= Gdx.graphics.getHeight()) {
+            velocityY *= -1;
+        }
+
+        // STEP 2: CLEAR SCREEN (TMK Brand Green Color #1e3a1e)
+        Gdx.gl.glClearColor(0.11f, 0.22f, 0.11f, 1f);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+        // STEP 3: RENDER / DRAW FRAME (TMK Yellow Color #ffcc00)
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+        shapeRenderer.setColor(new Color(1.0f, 0.8f, 0.0f, 1.0f));
+        shapeRenderer.circle(x, y, radius);
+        shapeRenderer.end();
+    }
+
+    @Override
+    public void dispose() {
+        // STEP 4: CLEANUP & FREE MEMORY
+        shapeRenderer.dispose();
+    }
+}
+
+```
+
+1. **ပိုတ်ႇ File BouncingBallGame.java:**
+   တႅမ်ႈ သႂ်ႇ Variables ပိုၼ်ႉထၢၼ် လႄႈ Setup `ShapeRenderer` ၼႂ်း Lifecycle Methods။
+2. **Run Program:**
+   Run Project ၼႂ်း IDE ဢမ်ၼ်ၼၼ် လုၵ်ႉတီႈ Terminal သေ ၸႂ်ႉ Command `./gradlew desktop:run` ၶႃႈ।
+3. **ၵူတ်ႇထတ်း တူၺ်း ၵၢၼ်တူင်ႉၼိုင်:**
+   တူၺ်း လုၵ်ႈၼိဝ်ႉတိုင်ႇ (Ball) ဢၼ်လႅၼ်ႈ လႄႈ Bounce ၼႂ်း 4 ၽၢႆႇ Canvas Boundaries ၶႃႈ।
 
 ---
 
-### ၶေႃႈမၢႆတွင်း ၵဵဝ်ႇလူၺ်ႈ Float Precision in Rects
+### ၶေႃႈမၢႆတွင်း ၵဵဝ်ႇလူၺ်ႈ Float Precision in Coordinates
 
-`pygame.Rect` Attributes ၸိူဝ်းပဵၼ် `x`, `y`, `top`, `bottom` တေ Auto-Convert သႂ်ႇ တူဝ်ၼပ်ႉ **Integers (Whole numbers)** တႃႇသေႇ ၶႃႈ။
-မိူဝ်ႈႁဝ်း Multiply ၸွမ်း `dt` (ဥပမာ: `450 * 0.016 = 7.2`), PyGame တေ ဢဝ် `7` Pixels မႃး Update သႂ်ႇ Rect Positioning, ႁဵတ်းႁႂ်ႈ Movement Smooth တေႉတေႉ ၶႃႈ!
+libGDX ၸႂ်ႉ တူဝ်ၼပ်ႉ **Float (Floating-point numbers)** တႃႇထိင်း Positioning `x`, `y` တင်းသဵင်ႈ ၶႃႈ।
+မိူဝ်ႈႁဝ်း Multiply ၸွမ်း `dt` (ဥပမာ: `350 * 0.016 = 5.6`), Engine တေ ဢဝ် `5.6` Pixels မႃး Update သႂ်ႇ OpenGL Vector Context ႁဵတ်းႁႂ်ႈ Movement Smooth တေႉတေႉ လႄႈ ၽဵင်ႇၵၼ် ၵူႈ Device ၶႃႈ!

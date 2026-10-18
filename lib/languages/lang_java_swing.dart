@@ -8,6 +8,7 @@ const Map<int, String> javaSwingTopics = {
   5: "Menus, Dialogs & Navigation",
   6: "Input Events & Custom Graphics",
   7: "Multithreading & Data Persistence",
+  8: "Database with Java Swing"
 };
 
 const Map<int, Map<int, String>> javaSwingModules = {
@@ -80,6 +81,19 @@ const Map<int, Map<int, String>> javaSwingModules = {
     47: "Saving App Preferences Locally",
     48: "Project: Offline Contact Manager App",
   },
+  // 8: "Database with Java Swing"
+  8: {
+    49: "Database 101: What is a Database & SQLite?",
+    50: "Mastering SQL: Writing Basic CRUD Queries",
+    51: "JDBC: Connecting Java Swing to SQLite",
+    52: "Creating Tables Programmatically",
+    53: "Prepared Statements: Safe Data Insertion",
+    54: "Reading Data: ResultSet & Mapping to JTable",
+    55: "Updating Records: Modifying Data Safely",
+    56: "Deleting Records & Confirm Dialogs",
+    57: "Search & Filter: Real-time Data Querying",
+    58: "Project: Full-Featured Student Management System"
+  }
 };
 
 final Map<int, Lesson> javaSwingLessons = {
